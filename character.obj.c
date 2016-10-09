@@ -58,7 +58,7 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
     t_boolean character_flip_x = d_false, character_flip_y = d_false, status_flip_x, status_flip_y;
     double offset_x, offset_y, mask_R, mask_G, mask_B, mask_A, zoom = 1.0, speed_x, speed_y, speed_z;
     int index_status = 0, index_component;
-    if (d_call(json, m_json_get_string, &string_supply, "s", "format"))
+    if (d_call(json, m_json_get_string, &string_supply, "s", "format")) {
         if (f_string_strcmp(string_supply, "character") == 0)
             if ((d_call(json, m_json_get_string, &string_supply, "s", "ID"))) {
                 mask_R = 255.0;
@@ -130,6 +130,9 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
                 }
                 d_call(self, m_drawable_set_zoom, zoom);
             }
+        /* character initialization */
+        d_call(self, m_character_move_down, NULL, d_false);
+    }
     return self;
 }
 
