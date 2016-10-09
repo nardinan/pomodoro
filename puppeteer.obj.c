@@ -25,19 +25,13 @@ struct s_puppeteer_attributes *p_puppeteer_alloc(struct s_object *self) {
 
 struct s_object *f_puppeteer_new(struct s_object *self, struct s_object *factory, t_entity_validator validator) {
     struct s_puppeteer_attributes *attributes = p_puppeteer_alloc(self);
-    attributes->factory = d_retain(factory);
-    d_call(self, m_puppeteer_initialize_characters, validator);
-    return self;
-}
-
-d_define_method(puppeteer, initialize_characters)(struct s_object *self, t_entity_validator validator) {
-    d_using(puppeteer);
-    struct s_factory_attributes *factory_attributes = d_cast(puppeteer_attributes->factory, factory);
+    struct s_factory_attributes *factory_attributes = d_cast(factory, factory);
     struct s_puppeteer_character *current_character;
     struct s_object *json;
     char *name_buffer, *link_buffer;
     t_boolean controllable;
     int character_index = 0;
+    attributes->factory = d_retain(factory);
     while ((d_call(factory_attributes->json_configuration, m_json_get_string, &name_buffer, "sds", "characters", character_index, "label"))) {
         controllable = d_false;
         d_call(factory_attributes->json_configuration, m_json_get_string, &link_buffer, "sds", "characters", character_index, "link");
@@ -46,16 +40,17 @@ d_define_method(puppeteer, initialize_characters)(struct s_object *self, t_entit
             strncpy(current_character->label, name_buffer, d_entity_label_size);
             current_character->controllable = controllable;
             current_character->character = f_character_new(d_new(character), current_character->label, validator);
-            if ((json = d_call(puppeteer_attributes->factory, m_factory_get_json, link_buffer))) {
-                d_call(current_character->character, m_character_load, json, puppeteer_attributes->factory);
+            if ((json = d_call(attributes->factory, m_factory_get_json, link_buffer))) {
+                d_call(current_character->character, m_character_load, json, attributes->factory);
                 d_call(current_character->character, m_controllable_set, controllable);
                 d_delete(json);
             }
-            f_list_append(&(puppeteer_attributes->characters), (struct s_list_node *)current_character, e_list_insert_head);
+            f_list_append(&(attributes->characters), (struct s_list_node *)current_character, e_list_insert_head);
         } else
             d_die(d_error_malloc);
         ++character_index;
     }
+
     return self;
 }
 
@@ -108,8 +103,7 @@ d_define_method(puppeteer, delete)(struct s_object *self, struct s_puppeteer_att
 }
 
 d_define_class(puppeteer) {
-    d_hook_method(puppeteer, e_flag_private, initialize_characters),
-        d_hook_method(puppeteer, e_flag_public, get_character),
+    d_hook_method(puppeteer, e_flag_public, get_character),
         d_hook_method(puppeteer, e_flag_public, hide_characters),
         d_hook_method(puppeteer, e_flag_public, show_character),
         d_hook_delete(puppeteer),
