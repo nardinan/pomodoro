@@ -24,7 +24,7 @@ struct s_factory_attributes *p_factory_alloc(struct s_object *self) {
 }
 
 struct s_object *f_factory_new(struct s_object *self, struct s_object *resources_png, struct s_object *resources_ttf, struct s_object *resources_json,
-        struct s_object *resources_ogg, struct s_object *environment) {
+        struct s_object *resources_ogg, struct s_object *resources_lisp, struct s_object *environment) {
     struct s_factory_attributes *attributes = p_factory_alloc(self);
     struct s_object *font;
     struct s_object *stream;
@@ -35,6 +35,7 @@ struct s_object *f_factory_new(struct s_object *self, struct s_object *resources
     attributes->resources_ttf = d_retain(resources_ttf);
     attributes->resources_json = d_retain(resources_json);
     attributes->resources_ogg = d_retain(resources_ogg);
+    attributes->resources_lisp = d_retain(resources_lisp);
     attributes->environment = d_retain(environment);
     if ((attributes->font_system = f_fonts_new(d_new(fonts)))) {
         if ((stream = d_call(attributes->resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common)))
@@ -133,10 +134,28 @@ d_define_method(factory, get_media)(struct s_object *self, const char *label) {
     return result;
 }
 
+d_define_method(factory, get_json)(struct s_object *self, const char *label) {
+    d_using(factory);
+    struct s_object *stream;
+    struct s_object *result = NULL;
+    if ((stream = d_call(factory_attributes->resources_json, m_resources_get_stream_strict, label, e_resources_type_common)))
+        result = f_json_new_stream(d_new(json), stream);
+    return result;
+}
+
 d_define_method(factory, get_font)(struct s_object *self, int ID, int style, int *height) {
     d_using(factory);
     *height = (intptr_t)d_call(factory_attributes->font_system, m_fonts_get_height, ID);
     d_cast_return(d_call(factory_attributes->font_system, m_fonts_get_font, ID, style));
+}
+
+d_define_method(factory, get_script)(struct s_object *self, const char *label) {
+    d_using(factory);
+    struct s_object *stream;
+    struct s_object *result = NULL;
+    if ((stream = d_call(factory_attributes->resources_lisp, m_resources_get_stream_strict, label, e_resources_type_common)))
+        result = f_lisp_new(d_new(lisp), stream, STDOUT_FILENO);
+    return result;
 }
 
 d_define_method(factory, delete)(struct s_object *self, struct s_factory_attributes *attributes) {
@@ -144,6 +163,7 @@ d_define_method(factory, delete)(struct s_object *self, struct s_factory_attribu
     d_delete(attributes->resources_ttf);
     d_delete(attributes->resources_json);
     d_delete(attributes->resources_ogg);
+    d_delete(attributes->resources_lisp);
     d_delete(attributes->environment);
     d_delete(attributes->font_system);
     if (attributes->json_configuration)
@@ -155,7 +175,9 @@ d_define_class(factory) {
     d_hook_method(factory, e_flag_public, get_bitmap),
         d_hook_method(factory, e_flag_public, get_animation),
         d_hook_method(factory, e_flag_public, get_media),
+        d_hook_method(factory, e_flag_public, get_json),
         d_hook_method(factory, e_flag_public, get_font),
+        d_hook_method(factory, e_flag_public, get_script),
         d_hook_delete(factory),
         d_hook_method_tail
 };

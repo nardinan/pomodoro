@@ -42,7 +42,7 @@ int pomodoro_load_call(struct s_object *environment) {
         d_assert(resources_json = f_resources_new_template(d_new(resources), resources_path, template_json, ".json"));
         d_assert(resources_ogg = f_resources_new_template(d_new(resources), resources_path, template_ogg, ".wav.ogg"));
         d_assert(resources_lisp = f_resources_new_template(d_new(resources), resources_path, template_lisp, ".lisp"));
-        d_assert(factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, environment));
+        d_assert(factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, resources_lisp, environment));
         d_assert(puppeteer = f_puppeteer_new(d_new(puppeteer), factory));
         if ((png_stream = d_call(resources_png, m_resources_get_stream, "default_background", e_resources_type_common)))
             if ((background = f_bitmap_new(d_new(bitmap), png_stream, environment)))

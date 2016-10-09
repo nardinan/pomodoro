@@ -26,17 +26,17 @@ d_declare_class(factory) {
     struct s_attributes head;
     struct s_object *environment;
     struct s_object *font_system;
-    struct s_object *resources_png, *resources_ttf, *resources_json, *resources_ogg;
+    struct s_object *resources_png, *resources_ttf, *resources_json, *resources_ogg, *resources_lisp;
     struct s_object *json_configuration;
 } d_declare_class_tail(factory);
 struct s_factory_attributes *p_factory_alloc(struct s_object *self);
 extern struct s_object *f_factory_new(struct s_object *self, struct s_object *resources_png, struct s_object *resources_ttf, struct s_object *resources_json,
-        struct s_object *resources_ogg, struct s_object *environment);
+        struct s_object *resources_ogg, struct s_object *resources_lisp, struct s_object *environment);
 d_declare_method(factory, get_bitmap)(struct s_object *self, const char *label);
 d_declare_method(factory, get_animation)(struct s_object *self, const char *label);
 d_declare_method(factory, get_media)(struct s_object *self, const char *label);
-d_declare_method(factory, get_ogg)(struct s_object *self, const char *label);
 d_declare_method(factory, get_json)(struct s_object *self, const char *label);
 d_declare_method(factory, get_font)(struct s_object *self, int ID, int style, int *height);
+d_declare_method(factory, get_script)(struct s_object *self, const char *label);
 d_declare_method(factory, delete)(struct s_object *self, struct s_factory_attributes *attributes);
 #endif
