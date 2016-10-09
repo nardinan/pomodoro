@@ -23,14 +23,14 @@ struct s_puppeteer_attributes *p_puppeteer_alloc(struct s_object *self) {
     return result;
 }
 
-struct s_object *f_puppeteer_new(struct s_object *self, struct s_object *factory) {
+struct s_object *f_puppeteer_new(struct s_object *self, struct s_object *factory, t_entity_validator validator) {
     struct s_puppeteer_attributes *attributes = p_puppeteer_alloc(self);
     attributes->factory = d_retain(factory);
-    d_call(self, m_puppeteer_initialize_characters, NULL);
+    d_call(self, m_puppeteer_initialize_characters, validator);
     return self;
 }
 
-d_define_method(puppeteer, initialize_characters)(struct s_object *self) {
+d_define_method(puppeteer, initialize_characters)(struct s_object *self, t_entity_validator validator) {
     d_using(puppeteer);
     struct s_factory_attributes *factory_attributes = d_cast(puppeteer_attributes->factory, factory);
     struct s_puppeteer_character *current_character;
@@ -45,7 +45,7 @@ d_define_method(puppeteer, initialize_characters)(struct s_object *self) {
         if ((current_character = (struct s_puppeteer_character *) d_malloc(sizeof(struct s_puppeteer_character)))) {
             strncpy(current_character->label, name_buffer, d_entity_label_size);
             current_character->controllable = controllable;
-            current_character->character = f_character_new(d_new(character), current_character->label, NULL);
+            current_character->character = f_character_new(d_new(character), current_character->label, validator);
             if ((json = d_call(puppeteer_attributes->factory, m_factory_get_json, link_buffer))) {
                 d_call(current_character->character, m_character_load, json, puppeteer_attributes->factory);
                 d_call(current_character->character, m_controllable_set, controllable);
@@ -72,6 +72,30 @@ d_define_method(puppeteer, get_character)(struct s_object *self, const char *key
     return result;
 }
 
+d_define_method(puppeteer, hide_characters)(struct s_object *self) {
+    d_using(puppeteer);
+    struct s_factory_attributes *factory_attributes = d_cast(puppeteer_attributes->factory, factory);
+    struct s_puppeteer_character *current_character;
+    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
+        d_call(factory_attributes->environment, m_environment_del_drawable, current_character->character, d_puppeteer_default_layer, 
+                e_environment_surface_primary);
+    return self;
+}
+
+d_define_method(puppeteer, show_character)(struct s_object *self, const char *key, double position_x) {
+    d_using(puppeteer);
+    struct s_factory_attributes *factory_attributes = d_cast(puppeteer_attributes->factory, factory);
+    struct s_puppeteer_character *current_character;
+    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
+        if (f_string_strcmp(key, current_character->label) == 0) {
+            d_call(current_character->character, m_drawable_set_position_x, position_x);
+            d_call(factory_attributes->environment, m_environment_add_drawable, current_character->character, d_puppeteer_default_layer, 
+                    e_environment_surface_primary);
+            break;
+        }
+    return self;
+}
+
 d_define_method(puppeteer, delete)(struct s_object *self, struct s_puppeteer_attributes *attributes) {
     struct s_puppeteer_character *current_character;
     d_delete(attributes->factory);
@@ -86,6 +110,8 @@ d_define_method(puppeteer, delete)(struct s_object *self, struct s_puppeteer_att
 d_define_class(puppeteer) {
     d_hook_method(puppeteer, e_flag_private, initialize_characters),
         d_hook_method(puppeteer, e_flag_public, get_character),
+        d_hook_method(puppeteer, e_flag_public, hide_characters),
+        d_hook_method(puppeteer, e_flag_public, show_character),
         d_hook_delete(puppeteer),
         d_hook_method_tail
 };

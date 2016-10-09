@@ -27,6 +27,20 @@ struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json,
 struct s_object *factory;
 struct s_object *puppeteer;
 struct s_object *background;
+t_boolean pomodoro_temporary_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y,
+        double *new_zoom) {
+    if (*new_x > d_pomodoro_width) {
+        *new_x = current_x;
+        *new_y = current_y;
+        *new_zoom = current_zoom;
+        return d_false;
+    }
+    if (*new_x > d_pomodoro_height)
+        return d_false;
+    *new_y = 550.0;
+    return d_true;
+}
+
 int pomodoro_load_call(struct s_object *environment) {
     struct s_exception *exception;
     struct s_object *resources_path = f_string_new_constant(d_new(string), d_pomodoro_resources),
@@ -43,7 +57,7 @@ int pomodoro_load_call(struct s_object *environment) {
         d_assert(resources_ogg = f_resources_new_template(d_new(resources), resources_path, template_ogg, ".wav.ogg"));
         d_assert(resources_lisp = f_resources_new_template(d_new(resources), resources_path, template_lisp, ".lisp"));
         d_assert(factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, resources_lisp, environment));
-        d_assert(puppeteer = f_puppeteer_new(d_new(puppeteer), factory));
+        d_assert(puppeteer = f_puppeteer_new(d_new(puppeteer), factory, pomodoro_temporary_validator));
         if ((png_stream = d_call(resources_png, m_resources_get_stream, "default_background", e_resources_type_common)))
             if ((background = f_bitmap_new(d_new(bitmap), png_stream, environment)))
                 d_call(environment, m_environment_add_drawable, background, 0, e_environment_surface_primary);
@@ -57,8 +71,10 @@ int pomodoro_load_call(struct s_object *environment) {
         d_exception_dump(stderr, exception);
         d_raise;
     } d_endtry;
+    d_call(puppeteer, m_puppeteer_show_character, "luca", 200.0);
+    d_call(puppeteer, m_puppeteer_show_character, "andrea", 300.0);
     /* test area code */
-    d_call(environment, m_environment_add_drawable, d_call(puppeteer, m_puppeteer_get_character, "luca"), 5, e_environment_surface_primary);
+    //d_call(environment, m_environment_add_drawable, d_call(puppeteer, m_puppeteer_get_character, "luca"), 5, e_environment_surface_primary);
     /*struct s_object *code_stream = d_call(resources_lisp, m_resources_get_stream, "default_lisp", e_resources_type_common);
     struct s_object *lisp_object = f_lisp_new(d_new(lisp), code_stream, STDOUT_FILENO);
     d_call(lisp_object, m_lisp_run, NULL);
