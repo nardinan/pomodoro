@@ -1,7 +1,6 @@
-objects = miranda.o pomodoro.o factory.obj.o bubble.obj.o character.obj.o
+objects = miranda.o pomodoro.o factory.obj.o bubble.obj.o character.obj.o puppeteer.obj.o
 project = pomodoro
 name = pomodoro
-# these python variables are hardly system dependent. Anyway, you need at least python 3.x
 cc = clang -g $(debug)
 cflags = -fPIC -Wall -Wno-variadic-macros -Wno-pointer-arith -Wno-pointer-to-int-cast -c
 lflags = -Wall
@@ -25,6 +24,9 @@ bubble.obj.o: bubble.obj.c bubble.obj.h factory.obj.h miranda.h
 
 character.obj.o: character.obj.c character.obj.h factory.obj.h miranda.h
 	$(cc) $(cflags) character.obj.c
+
+puppeteer.o: puppeteer.obj.c puppeteer.obj.h character.obj.h
+	$(cc) $(cflags) puppeteer.obj.c
 
 clean:
 	rm -f *.o
