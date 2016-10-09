@@ -15,6 +15,7 @@
 		{"font":"kingthings_font", 	"size":70}
 	],
 	"characters":[
-		{"label":"luca",	"link":"luca_character", "controllable":true}
+		{"label":"luca",	"link":"luca_character", 		"controllable":false},
+		{"label":"andrea",	"link":"andrea_character", 		"controllable":true}
 	]
 }
