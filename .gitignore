@@ -1,0 +1,2 @@
+*.o     # exclude object files
+*.bin   # exclude executable
