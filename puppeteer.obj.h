@@ -34,5 +34,6 @@ extern struct s_object *f_puppeteer_new(struct s_object *self, struct s_object *
 d_declare_method(puppeteer, get_character)(struct s_object *self, const char *key);
 d_declare_method(puppeteer, hide_characters)(struct s_object *self);
 d_declare_method(puppeteer, show_character)(struct s_object *self, const char *key, double position_x);
+d_declare_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x);
 d_declare_method(puppeteer, delete)(struct s_object *self, struct s_puppeteer_attributes *attributes);
 #endif

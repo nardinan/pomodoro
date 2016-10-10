@@ -80,14 +80,20 @@ d_define_method(puppeteer, hide_characters)(struct s_object *self) {
 d_define_method(puppeteer, show_character)(struct s_object *self, const char *key, double position_x) {
     d_using(puppeteer);
     struct s_factory_attributes *factory_attributes = d_cast(puppeteer_attributes->factory, factory);
-    struct s_puppeteer_character *current_character;
-    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
-        if (f_string_strcmp(key, current_character->label) == 0) {
-            d_call(current_character->character, m_drawable_set_position_x, position_x);
-            d_call(factory_attributes->environment, m_environment_add_drawable, current_character->character, d_puppeteer_default_layer, 
-                    e_environment_surface_primary);
-            break;
-        }
+    struct s_object *current_character;
+    if ((current_character = d_call(self, m_puppeteer_get_character, key))) {
+        d_call(current_character, m_drawable_set_position_x, position_x);
+        d_call(factory_attributes->environment, m_environment_add_drawable, current_character, d_puppeteer_default_layer, e_environment_surface_primary);
+    }
+    return self;
+}
+
+d_define_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x) {
+    d_using(puppeteer);
+    struct s_factory_attributes *factory_attributes = d_cast(puppeteer_attributes->factory, factory);
+    struct s_object *current_character;
+    if ((current_character = d_call(self, m_puppeteer_get_character, key)))
+        d_call(current_character, m_character_move, destination_x);
     return self;
 }
 
@@ -106,6 +112,7 @@ d_define_class(puppeteer) {
     d_hook_method(puppeteer, e_flag_public, get_character),
         d_hook_method(puppeteer, e_flag_public, hide_characters),
         d_hook_method(puppeteer, e_flag_public, show_character),
+        d_hook_method(puppeteer, e_flag_public, move_character),
         d_hook_delete(puppeteer),
         d_hook_method_tail
 };

@@ -27,6 +27,7 @@ struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json,
 struct s_object *factory;
 struct s_object *puppeteer;
 struct s_object *background;
+int index_loop = 0;
 t_boolean pomodoro_temporary_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y,
         double *new_zoom) {
     if (*new_x > d_pomodoro_width) {
@@ -94,7 +95,8 @@ int pomodoro_load_call(struct s_object *environment) {
 }
 
 int pomodoro_loop_call(struct s_object *environment) {
-    //if ((++index_loop) == 100)
+    if ((++index_loop) == 100)
+        d_call(puppeteer, m_puppeteer_move_character, "luca", 100.0);
       //  d_call(entity, m_character_say, "la verita per Bart Simpsons non e' la fuori. Ma siamo sicuri di questo? Io non ne sono affatto certo!", 5);
     return d_true;
 }
@@ -115,7 +117,7 @@ int main (int argc, char *argv[]) {
     struct s_exception *exception;
     struct s_object *environment;
     d_pool_init;
-    v_log_level = e_log_level_high;
+    v_log_level = e_log_level_medium;
     d_pool_begin("main context") {
         /* wait the unlock */
         d_try {

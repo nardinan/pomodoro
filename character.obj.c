@@ -203,6 +203,17 @@ d_define_method(character, say)(struct s_object *self, const char *message, time
     return self;
 }
 
+d_define_method(character, move)(struct s_object *self, double destination_x) {
+    d_using(character);
+    double position_x, position_y;
+    d_call(self, m_drawable_get_position, &position_x, &position_y);
+    character_attributes->destination_x = destination_x;
+    character_attributes->source_x = position_x;
+    if (destination_x != position_x)
+        d_call(self, (destination_x > position_x)?m_character_move_right:m_character_move_left, NULL, d_true);
+    return self;
+}
+
 d_define_method_override(character, draw)(struct s_object *self, struct s_object *environment) {
     d_using(character);
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
@@ -211,6 +222,11 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
     double position_x, position_y, bubble_position_x, bubble_position_y;
     struct s_object *result = d_call_owner(self, entity, m_drawable_draw, environment); /* recall the father's draw method */
     d_call(self, m_drawable_get_position, &position_x, &position_y);
+    if (((character_attributes->source_x < character_attributes->destination_x) && (position_x >= character_attributes->destination_x)) ||
+            ((character_attributes->source_x > character_attributes->destination_x) && (position_x <= character_attributes->destination_x))) {
+        d_call(self, (character_attributes->destination_x > character_attributes->source_x)?m_character_move_right:m_character_move_left, NULL, d_false);
+        character_attributes->source_x = character_attributes->destination_x;
+    }
     if (character_attributes->bubble) {
         drawable_attributes_bubble = d_cast(character_attributes->bubble, drawable);
         bubble_position_x = position_x + (character_attributes->bubble_offset_x * drawable_attributes_self->zoom);
@@ -247,6 +263,7 @@ d_define_class(character) {
         d_hook_method(character, e_flag_public, move_up),
         d_hook_method(character, e_flag_public, move_down),
         d_hook_method(character, e_flag_public, say),
+        d_hook_method(character, e_flag_public, move),
         d_hook_method_override(character, e_flag_public, drawable, draw),
         d_hook_delete(character),
         d_hook_method_tail

@@ -42,7 +42,7 @@ d_declare_class(character) {
     struct s_attributes head;
     enum e_character_directions direction;
     struct s_object *bubble;
-    double bubble_offset_x, bubble_offset_y;
+    double bubble_offset_x, bubble_offset_y, destination_x, source_x;
     t_boolean movement, set;
 } d_declare_class_tail(character);
 struct s_character_attributes *p_character_alloc(struct s_object *self, const char *key, t_entity_validator validator);
@@ -53,6 +53,7 @@ d_declare_method(character, move_right)(struct s_object *self, struct s_controll
 d_declare_method(character, move_up)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, move_down)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, say)(struct s_object *self, const char *message, time_t timeout);
+d_declare_method(character, move)(struct s_object *self, double destination_x);
 d_declare_method(character, draw)(struct s_object *self, struct s_object *environment);
 d_declare_method(character, delete)(struct s_object *self, struct s_character_attributes *attributes);
 #endif
