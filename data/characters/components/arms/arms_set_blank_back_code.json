@@ -1,0 +1,9 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"arms_set_blank_back_code_frame0",  "time":0.1},
+		{"drawable":"arms_set_blank_back_code_frame1",  "time":0.1},
+		{"drawable":"arms_set_blank_back_code_frame2",  "time":0.1}
+	]
+}

@@ -88,9 +88,24 @@ d_define_method(puppeteer, show_character)(struct s_object *self, const char *ke
     return self;
 }
 
+d_define_method(puppeteer, say_character)(struct s_object *self, const char *key, const char *message, time_t timeout) {
+    d_using(puppeteer);
+    struct s_object *current_character;
+    if ((current_character = d_call(self, m_puppeteer_get_character, key)))
+        d_call(current_character, m_character_say, message, timeout);
+    return self;
+}
+
+d_define_method(puppeteer, set_character)(struct s_object *self, const char *key, const char *entry) {
+    d_using(puppeteer);
+    struct s_object *current_character;
+    if ((current_character = d_call(self, m_puppeteer_get_character, key)))
+        d_call(current_character, m_entity_set_component, entry);
+    return self;
+}
+
 d_define_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x) {
     d_using(puppeteer);
-    struct s_factory_attributes *factory_attributes = d_cast(puppeteer_attributes->factory, factory);
     struct s_object *current_character;
     if ((current_character = d_call(self, m_puppeteer_get_character, key)))
         d_call(current_character, m_character_move, destination_x);
@@ -112,6 +127,8 @@ d_define_class(puppeteer) {
     d_hook_method(puppeteer, e_flag_public, get_character),
         d_hook_method(puppeteer, e_flag_public, hide_characters),
         d_hook_method(puppeteer, e_flag_public, show_character),
+        d_hook_method(puppeteer, e_flag_public, say_character),
+        d_hook_method(puppeteer, e_flag_public, set_character),
         d_hook_method(puppeteer, e_flag_public, move_character),
         d_hook_delete(puppeteer),
         d_hook_method_tail

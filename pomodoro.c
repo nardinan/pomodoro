@@ -74,6 +74,7 @@ int pomodoro_load_call(struct s_object *environment) {
     } d_endtry;
     d_call(puppeteer, m_puppeteer_show_character, "luca", 200.0);
     d_call(puppeteer, m_puppeteer_show_character, "andrea", 300.0);
+    d_call(puppeteer, m_puppeteer_show_character, "andrii", 600.0);
     /* test area code */
     //d_call(environment, m_environment_add_drawable, d_call(puppeteer, m_puppeteer_get_character, "luca"), 5, e_environment_surface_primary);
     /*struct s_object *code_stream = d_call(resources_lisp, m_resources_get_stream, "default_lisp", e_resources_type_common);
@@ -96,8 +97,11 @@ int pomodoro_load_call(struct s_object *environment) {
 
 int pomodoro_loop_call(struct s_object *environment) {
     if ((++index_loop) == 100)
-        d_call(puppeteer, m_puppeteer_move_character, "luca", 100.0);
-      //  d_call(entity, m_character_say, "la verita per Bart Simpsons non e' la fuori. Ma siamo sicuri di questo? Io non ne sono affatto certo!", 5);
+        d_call(puppeteer, m_puppeteer_move_character, "andrii", 1400.0);
+    if (index_loop == 450)
+        d_call(puppeteer, m_puppeteer_say_character, "luca", "Ma di che stamo a parla'? Secondo me qua bisogna costruire tutto!", 5);
+    if (index_loop == 550)
+        d_call(puppeteer, m_puppeteer_set_character, "andrii", "back_code");
     return d_true;
 }
 
