@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#include "puppeteer.obj.h"
+#include "director.obj.h"
 #define d_pomodoro_title "Pomodoro"
 #define d_pomodoro_resources "./data"
 #define d_pomodoro_resources_default_png 	"./data/placeholders/default_png.png"
@@ -25,7 +25,6 @@
 #define d_pomodoro_resources_default_lisp   "./data/placeholders/default_lisp.lisp"
 struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json, *resources_lisp;
 struct s_object *factory;
-struct s_object *puppeteer;
 struct s_object *background;
 int index_loop = 0;
 t_boolean pomodoro_temporary_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y,
@@ -58,10 +57,11 @@ int pomodoro_load_call(struct s_object *environment) {
         d_assert(resources_ogg = f_resources_new_template(d_new(resources), resources_path, template_ogg, ".wav.ogg"));
         d_assert(resources_lisp = f_resources_new_template(d_new(resources), resources_path, template_lisp, ".lisp"));
         d_assert(factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, resources_lisp, environment));
-        d_assert(puppeteer = f_puppeteer_new(d_new(puppeteer), factory, pomodoro_temporary_validator));
+        d_assert(director = f_director_new(d_new(director), factory));
         if ((png_stream = d_call(resources_png, m_resources_get_stream, "default_background", e_resources_type_common)))
             if ((background = f_bitmap_new(d_new(bitmap), png_stream, environment)))
                 d_call(environment, m_environment_add_drawable, background, 0, e_environment_surface_primary);
+        d_call(director, m_director_run_script, "initialize_script");
         d_delete(template_png);
         d_delete(template_ttf);
         d_delete(template_json);
@@ -72,36 +72,11 @@ int pomodoro_load_call(struct s_object *environment) {
         d_exception_dump(stderr, exception);
         d_raise;
     } d_endtry;
-    d_call(puppeteer, m_puppeteer_show_character, "luca", 200.0);
-    d_call(puppeteer, m_puppeteer_show_character, "andrea", 300.0);
-    d_call(puppeteer, m_puppeteer_show_character, "andrii", 600.0);
-    /* test area code */
-    //d_call(environment, m_environment_add_drawable, d_call(puppeteer, m_puppeteer_get_character, "luca"), 5, e_environment_surface_primary);
-    /*struct s_object *code_stream = d_call(resources_lisp, m_resources_get_stream, "default_lisp", e_resources_type_common);
-    struct s_object *lisp_object = f_lisp_new(d_new(lisp), code_stream, STDOUT_FILENO);
-    d_call(lisp_object, m_lisp_run, NULL);
-    d_delete(lisp_object);
-
-    entity = f_character_new(d_new(character), "amedeo", NULL);
-    struct s_object *base_stream, *base_json;
-    if ((base_stream = d_call(resources_json, m_resources_get_stream, "luca_character", e_resources_type_common))) {
-        base_json = f_json_new_stream(d_new(json), base_stream);
-        d_call(entity, m_character_load, base_json, factory);
-        d_call(entity, m_controllable_set, d_true);
-        d_call(entity, m_drawable_set_position, (double)200.0, (double)550.0);
-        d_call(environment, m_environment_add_drawable, entity, 5, e_environment_surface_primary);
-        d_delete(base_json);
-    }*/
     return d_true;
 }
 
 int pomodoro_loop_call(struct s_object *environment) {
-    if ((++index_loop) == 100)
-        d_call(puppeteer, m_puppeteer_move_character, "andrii", 1400.0);
-    if (index_loop == 450)
-        d_call(puppeteer, m_puppeteer_say_character, "luca", "Ma di che stamo a parla'? Secondo me qua bisogna costruire tutto!", 5);
-    if (index_loop == 550)
-        d_call(puppeteer, m_puppeteer_set_character, "andrii", "back_code");
+    d_call(director, m_director_update, NULL);
     return d_true;
 }
 
@@ -112,7 +87,7 @@ int pomodoro_quit_call(struct s_object *environment) {
     d_delete(resources_json);
     d_delete(resources_ogg);
     d_delete(resources_lisp);
-    d_delete(puppeteer);
+    d_delete(director);
     d_delete(factory);
     return d_true;
 }
