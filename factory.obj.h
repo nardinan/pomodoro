@@ -34,6 +34,9 @@ extern struct s_object *f_factory_new(struct s_object *self, struct s_object *re
         struct s_object *resources_ogg, struct s_object *resources_lisp, struct s_object *environment);
 d_declare_method(factory, get_bitmap)(struct s_object *self, const char *label);
 d_declare_method(factory, get_animation)(struct s_object *self, const char *label);
+d_declare_method(factory, get_particle_structure)(struct s_object *self, struct s_object *json, struct s_particle_configuration_core *configuration, 
+        const char *prefix);
+d_declare_method(factory, get_particle)(struct s_object *self, const char *label);
 d_declare_method(factory, get_media)(struct s_object *self, const char *label);
 d_declare_method(factory, get_json)(struct s_object *self, const char *label);
 d_declare_method(factory, get_font)(struct s_object *self, int ID, int style, int *height);

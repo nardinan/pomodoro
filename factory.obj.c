@@ -127,10 +127,90 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
     return result;
 }
 
+d_define_method(factory, get_particle_structure)(struct s_object *self, struct s_object *json, struct s_particle_configuration_core *configuration,
+        const char *prefix) {
+    memset(configuration, 0, sizeof(struct s_particle_configuration_core));
+    d_call(json, m_json_get_double, &(configuration->position_x), "ss", prefix, "position_x");
+    d_call(json, m_json_get_double, &(configuration->position_y), "ss", prefix, "position_y");
+    d_call(json, m_json_get_double, &(configuration->zoom), "ss", prefix, "zoom");
+    d_call(json, m_json_get_double, &(configuration->angle), "ss", prefix, "angle");
+    d_call(json, m_json_get_double, &(configuration->gravity_x), "ss", prefix, "gravity_x");
+    d_call(json, m_json_get_double, &(configuration->gravity_y), "ss", prefix, "gravity_y");
+    d_call(json, m_json_get_double, &(configuration->direction_angle), "ss", prefix, "direction_angle");
+    d_call(json, m_json_get_double, &(configuration->speed_linear), "ss", prefix, "speed_linear");
+    d_call(json, m_json_get_double, &(configuration->speed_direction_angle), "ss", prefix, "speed_direction_angle");
+    d_call(json, m_json_get_double, &(configuration->speed_zoom), "ss", prefix, "speed_zoom");
+    d_call(json, m_json_get_double, &(configuration->speed_angle), "ss", prefix, "speed_angle");
+    d_call(json, m_json_get_double, &(configuration->mask_R), "ss", prefix, "mask_R");
+    d_call(json, m_json_get_double, &(configuration->mask_G), "ss", prefix, "mask_G");
+    d_call(json, m_json_get_double, &(configuration->mask_B), "ss", prefix, "mask_B");
+    d_call(json, m_json_get_double, &(configuration->mask_A), "ss", prefix, "mask_A");
+    d_call(json, m_json_get_double, &(configuration->speed_R), "ss", prefix, "speed_R");
+    d_call(json, m_json_get_double, &(configuration->speed_G), "ss", prefix, "speed_G");
+    d_call(json, m_json_get_double, &(configuration->speed_B), "ss", prefix, "speed_B");
+    d_call(json, m_json_get_double, &(configuration->speed_A), "ss", prefix, "speed_A");
+    d_call(json, m_json_get_double, &(configuration->lifetime), "ss", prefix, "lifetime");
+    return self;
+}
+
+d_define_method(factory, get_particle)(struct s_object *self, const char *label) {
+    d_using(factory);
+    struct s_object *stream;
+    struct s_object *bitmap;
+    struct s_object *json;
+    struct s_object *result = NULL;
+    struct s_particle_configuration particle_configuration;
+    enum e_drawable_flips flip;
+    double particles, emission_rate;
+    char *string_supply;
+    t_boolean core_flip_x = d_false, core_flip_y = d_false;
+    memset(&(particle_configuration), 0, sizeof(s_particle_configuration));
+    if ((stream = d_call(factory_attributes->resources_json, m_resources_get_stream_strict, label, e_resources_type_common)))
+        if ((json = f_json_new_stream(d_new(json), stream))) {
+            if (d_call(json, m_json_get_string, &string_supply, "s", "format"))
+                if (f_string_strcmp(string_supply, "particle") == 0) {
+                    d_call(json, m_json_get_double, &particles, "s", "particles");
+                    d_call(json, m_json_get_double, &emission_rate, "s", "emission_rate");
+                    d_call(json, m_json_get_boolean, &core_flip_x, "s", "flip_x");
+                    d_call(json, m_json_get_boolean, &core_flip_y, "s", "flip_y");
+                    d_call(json, m_json_get_string, &string_supply, "s", "blend");
+                    particle_configuration.blend = e_drawable_blend_none;
+                    if (f_string_strcmp(string_supply, "add") == 0)
+                        particle_configuration.blend = e_drawable_blend_add;
+                    else if (f_string_strcmp(string_supply, "alpha") == 0)
+                        particle_configuration.blend = e_drawable_blend_alpha;
+                    else if (f_string_strcmp(string_supply, "mod") == 0)
+                        particle_configuration.blend = e_drawable_blend_mod;
+                    particle_configuration.particles = particles;
+                    particle_configuration.emission_rate = emission_rate;
+                    d_call(self, m_factory_get_particle_structure, json, &(particle_configuration.minimum), "minimum");
+                    d_call(self, m_factory_get_particle_structure, json, &(particle_configuration.maximum), "maximum");
+                    if ((d_call(json, m_json_get_string, &string_supply, "s", "drawable")))
+                        if ((bitmap = d_call(self, m_factory_get_bitmap, string_supply, factory_attributes->environment))) {
+                            if ((core_flip_x) && (core_flip_y))
+                                flip = e_drawable_flip_both;
+                            else if (core_flip_x)
+                                flip = e_drawable_flip_horizontal;
+                            else if (core_flip_y)
+                                flip = e_drawable_flip_vertical;
+                            else
+                                flip = e_drawable_flip_none;
+                            d_call(bitmap, m_drawable_flip, flip);
+                            if (!(result = f_particle_new(d_new(particle), bitmap, factory_attributes->environment, &(particle_configuration))))
+                                d_die(d_error_malloc);
+                            d_delete(bitmap);
+                        }
+                }
+            d_delete(json);
+        }
+    return result;
+}
+
 d_define_method(factory, get_media)(struct s_object *self, const char *label) {
     struct s_object *result = NULL;
     if (!(result = d_call(self, m_factory_get_bitmap, label)))
-        result = d_call(self, m_factory_get_animation, label);
+        if (!(result = d_call(self, m_factory_get_animation, label)))
+            result = d_call(self, m_factory_get_particle, label);
     return result;
 }
 
@@ -174,6 +254,8 @@ d_define_method(factory, delete)(struct s_object *self, struct s_factory_attribu
 d_define_class(factory) {
     d_hook_method(factory, e_flag_public, get_bitmap),
         d_hook_method(factory, e_flag_public, get_animation),
+        d_hook_method(factory, e_flag_private, get_particle_structure),
+        d_hook_method(factory, e_flag_public, get_particle),
         d_hook_method(factory, e_flag_public, get_media),
         d_hook_method(factory, e_flag_public, get_json),
         d_hook_method(factory, e_flag_public, get_font),
