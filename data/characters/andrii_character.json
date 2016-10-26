@@ -35,14 +35,14 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_back",
+				"drawable":"shirt_set_blank_back",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":false,
 				"flip_y":false,
-				"mask_R":220,
-				"mask_G":220,
-				"mask_B":220,
+				"mask_R":250,
+				"mask_G":250,
+				"mask_B":250,
 				"mask_A":255
 			},
 			"arms":{
@@ -92,14 +92,14 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_back",
+				"drawable":"shirt_set_blank_back",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":false,
 				"flip_y":false,
-				"mask_R":220,
-				"mask_G":220,
-				"mask_B":220,
+				"mask_R":250,
+				"mask_G":250,
+				"mask_B":250,
 				"mask_A":255
 			},
 			"arms":{
@@ -160,14 +160,14 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_front",
+				"drawable":"shirt_set_blank_front",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":true,
 				"flip_y":false,
-				"mask_R":220,
-				"mask_G":220,
-				"mask_B":220,
+				"mask_R":250,
+				"mask_G":250,
+				"mask_B":250,
 				"mask_A":255
 			},
 			"arms":{
@@ -229,14 +229,14 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_side_walk",
+				"drawable":"shirt_set_blank_side_walk",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":false,
 				"flip_y":false,
-				"mask_R":220,
-				"mask_G":220,
-				"mask_B":220,
+				"mask_R":250,
+				"mask_G":250,
+				"mask_B":250,
 				"mask_A":255
 			},
 			"arms":{
@@ -298,14 +298,14 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_side_walk",
+				"drawable":"shirt_set_blank_side_walk",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":true,
 				"flip_y":false,
-				"mask_R":220,
-				"mask_G":220,
-				"mask_B":220,
+				"mask_R":250,
+				"mask_G":250,
+				"mask_B":250,
 				"mask_A":255
 			},
 			"arms":{
@@ -366,14 +366,14 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_side_walk_frame0",
+				"drawable":"shirt_set_blank_side_walk_frame0",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":true,
 				"flip_y":false,
-				"mask_R":220,
-				"mask_G":220,
-				"mask_B":220,
+				"mask_R":250,
+				"mask_G":250,
+				"mask_B":250,
 				"mask_A":255
 			},
 			"arms":{
@@ -434,14 +434,14 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_side_walk_frame0",
+				"drawable":"shirt_set_blank_side_walk_frame0",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":false,
 				"flip_y":false,
-				"mask_R":220,
-				"mask_G":220,
-				"mask_B":220,
+				"mask_R":250,
+				"mask_G":250,
+				"mask_B":250,
 				"mask_A":255
 			},
 			"arms":{
