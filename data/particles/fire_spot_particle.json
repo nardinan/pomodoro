@@ -1,6 +1,6 @@
 {
 	"format":"particle",
-	"ID":"fire_place",
+	"ID":"fire_spot",
 	"particles":400,
 	"emission_rate":150,
 	"drawable":"dust_particle",
