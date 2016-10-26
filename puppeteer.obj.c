@@ -170,7 +170,6 @@ d_define_method(puppeteer, show_character)(struct s_object *self, const char *ke
 }
 
 d_define_method(puppeteer, enable_control)(struct s_object *self, const char *key) {
-    d_using(puppeteer);
     struct s_object *current_character;
     d_call(self, m_puppeteer_disable_control, NULL);
     if ((current_character = d_call(self, m_puppeteer_get_character, key)))
@@ -187,7 +186,6 @@ d_define_method(puppeteer, disable_control)(struct s_object *self) {
 }
 
 d_define_method(puppeteer, say_character)(struct s_object *self, const char *key, const char *message, time_t timeout) {
-    d_using(puppeteer);
     struct s_object *current_character;
     if ((current_character = d_call(self, m_puppeteer_get_character, key)))
         d_call(current_character, m_character_say, message, timeout);
@@ -195,7 +193,6 @@ d_define_method(puppeteer, say_character)(struct s_object *self, const char *key
 }
 
 d_define_method(puppeteer, set_character)(struct s_object *self, const char *key, const char *entry) {
-    d_using(puppeteer);
     struct s_object *current_character;
     if ((current_character = d_call(self, m_puppeteer_get_character, key)))
         d_call(current_character, m_entity_set_component, entry);
@@ -203,7 +200,6 @@ d_define_method(puppeteer, set_character)(struct s_object *self, const char *key
 }
 
 d_define_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x) {
-    d_using(puppeteer);
     struct s_object *current_character;
     if ((current_character = d_call(self, m_puppeteer_get_character, key)))
         d_call(current_character, m_character_move, destination_x);
@@ -224,7 +220,6 @@ d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *scrip
 }
 
 d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer_action *action) {
-    d_using(puppeteer);
     struct s_object *result = NULL;
     switch (action->type) {
         case e_puppeteer_action_hide:               /* no parameters */
@@ -252,6 +247,10 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
         case e_puppeteer_action_set:                /* key (character), entry (animation) */
             d_log(e_log_level_medium, "action [set] (character %s | animation %s)", action->key, action->parameters.entry);
             result = d_call(self, m_puppeteer_set_character, action->key, action->parameters.entry);
+            break;
+        case e_puppeteer_action_move:               /* key (character), destination_x */
+            d_log(e_log_level_medium, "action [move] (character %s | destination %.02f)", action->key, action->parameters.destination_x);
+            result = d_call(self, m_puppeteer_move_character, action->key, action->parameters.destination_x);
             break;
     }
     return result;

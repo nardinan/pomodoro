@@ -27,7 +27,7 @@ typedef enum e_puppeteer_actions {
     e_puppeteer_action_disable_control,
     e_puppeteer_action_say,
     e_puppeteer_action_set,
-    e_puppeteer_action_move,
+    e_puppeteer_action_move
 } e_puppeteer_action;
 typedef struct s_puppeteer_action_say {
     char message[d_string_buffer_size];
