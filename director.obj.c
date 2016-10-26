@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "director.obj.h"
-#define d_pomodoro_width_offset 30
+#define d_pomodoro_width_offset 50
 struct s_object *director = NULL;
 void p_link_director(enum e_director_actions type, ...) {
     va_list parameters_list;
@@ -74,6 +74,7 @@ struct s_object *f_director_new(struct s_object *self, struct s_object *factory)
     struct s_director_attributes *attributes = p_director_alloc(self);
     attributes->factory = d_retain(factory);
     d_assert(attributes->puppeteer = f_puppeteer_new(d_new(puppeteer), factory, f_director_validator));
+    d_assert(attributes->effecteer = f_effecteer_new(d_new(effecteer), factory));
     return self;
 }
 
@@ -123,6 +124,7 @@ d_define_method(director, linker)(struct s_object *self, struct s_object *script
     d_call(script, m_lisp_extend_environment, "director_wait", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_sleep));
     d_call(script, m_lisp_extend_environment, "director_script", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_script));
     d_call(director_attributes->puppeteer, m_puppeteer_linker, script);
+    d_call(director_attributes->effecteer, m_effecteer_linker, script);
     return self;
 }
 
@@ -132,6 +134,9 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
     switch (action->type) {
         case e_director_action_puppeteer:
             d_call(director_attributes->puppeteer, m_puppeteer_dispatcher, &(action->action.character));
+            break;
+        case e_director_action_effecteer:
+            d_call(director_attributes->effecteer, m_effecteer_dispatcher, &(action->action.effect));
             break;
         case e_director_action_service_sleep:       /* timeout */
             director_attributes->alive = time(NULL) + action->action.delay;
@@ -146,10 +151,10 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
 }
 
 d_define_method(director, delete)(struct s_object *self, struct s_director_attributes *attributes) {
-    struct s_director_character *current_character;
     struct s_director_action *current_action;
     d_delete(attributes->factory);
     d_delete(attributes->puppeteer);
+    d_delete(attributes->effecteer);
     while ((current_action = (struct s_director_action *)attributes->actions_pool.head)) {
         f_list_delete(&(attributes->actions_pool), (struct s_list_node *)current_action);
         d_free(current_action);

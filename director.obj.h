@@ -18,10 +18,12 @@
 #ifndef pomodoro_director_h
 #define pomodoro_director_h
 #include "puppeteer.obj.h"
+#include "effecteer.obj.h"
 extern struct s_object *director;
 /* action definition */
 typedef enum e_director_actions { 
     e_director_action_puppeteer,
+    e_director_action_effecteer,
     e_director_action_service_sleep,
     e_director_action_service_script
 } e_director_actions;
@@ -32,6 +34,7 @@ typedef struct s_director_action { d_list_node_head;
         time_t delay;
         char label[d_resources_key_size];
         struct s_puppeteer_action character;
+        struct s_effecteer_action effect;
     } action;
 } s_director_action;
 extern struct s_lisp_object *p_link_director_sleep(struct s_object *self, struct s_lisp_object *arguments);
@@ -42,6 +45,7 @@ d_declare_class(director) {
     struct s_list actions_pool;
     struct s_object *factory;
     struct s_object *puppeteer;
+    struct s_object *effecteer;
     time_t alive;
 } d_declare_class_tail(director);
 extern t_boolean f_director_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y, 

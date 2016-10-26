@@ -26,7 +26,6 @@
 struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json, *resources_lisp;
 struct s_object *factory;
 struct s_object *background;
-int index_loop = 0;
 t_boolean pomodoro_temporary_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y,
         double *new_zoom) {
     if (*new_x > d_pomodoro_width) {

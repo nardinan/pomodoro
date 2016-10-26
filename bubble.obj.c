@@ -133,7 +133,8 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
                 d_call(current_component->component, m_drawable_set_position, new_position_x, new_position_y);
                 drawable_attributes_selected->angle = drawable_attributes_self->angle;
                 drawable_attributes_selected->flip = drawable_attributes_self->flip;
-                if ((d_call(current_component->component, m_drawable_normalize_scale, environment_attributes->reference_w[environment_attributes->current_surface],
+                if ((d_call(current_component->component, m_drawable_normalize_scale, 
+                                environment_attributes->reference_w[environment_attributes->current_surface],
                                 environment_attributes->reference_h[environment_attributes->current_surface],
                                 environment_attributes->camera_origin_x[environment_attributes->current_surface],
                                 environment_attributes->camera_origin_y[environment_attributes->current_surface],
