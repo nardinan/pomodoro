@@ -22,6 +22,12 @@
 #define d_factory_configuration "pomodoro_config"
 #define d_factory_default_font_size 30.0
 #define d_factory_default_font_outline 0.0
+typedef enum e_factory_media_types {
+    e_factory_media_type_bitmap = 0,
+    e_factory_media_type_animation,
+    e_factory_media_type_particle,
+    e_factory_media_type_NULL
+} e_factory_media_types;
 d_declare_class(factory) {
     struct s_attributes head;
     struct s_object *environment;
@@ -37,7 +43,7 @@ d_declare_method(factory, get_animation)(struct s_object *self, const char *labe
 d_declare_method(factory, get_particle_structure)(struct s_object *self, struct s_object *json, struct s_particle_configuration_core *configuration, 
         const char *prefix);
 d_declare_method(factory, get_particle)(struct s_object *self, const char *label);
-d_declare_method(factory, get_media)(struct s_object *self, const char *label);
+d_declare_method(factory, get_media)(struct s_object *self, const char *label, enum e_factory_media_types *selected_type);
 d_declare_method(factory, get_json)(struct s_object *self, const char *label);
 d_declare_method(factory, get_font)(struct s_object *self, int ID, int style, int *height);
 d_declare_method(factory, get_script)(struct s_object *self, const char *label);

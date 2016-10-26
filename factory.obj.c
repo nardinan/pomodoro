@@ -206,11 +206,17 @@ d_define_method(factory, get_particle)(struct s_object *self, const char *label)
     return result;
 }
 
-d_define_method(factory, get_media)(struct s_object *self, const char *label) {
+d_define_method(factory, get_media)(struct s_object *self, const char *label, enum e_factory_media_types *selected_type) {
     struct s_object *result = NULL;
-    if (!(result = d_call(self, m_factory_get_bitmap, label)))
-        if (!(result = d_call(self, m_factory_get_animation, label)))
-            result = d_call(self, m_factory_get_particle, label);
+    *selected_type = e_factory_media_type_bitmap;
+    if (!(result = d_call(self, m_factory_get_bitmap, label))) {
+        *selected_type = e_factory_media_type_animation;
+        if (!(result = d_call(self, m_factory_get_animation, label))) {
+            *selected_type = e_factory_media_type_particle;
+            if (!(result = d_call(self, m_factory_get_particle, label)))
+                *selected_type = e_factory_media_type_NULL;
+        }
+    }
     return result;
 }
 

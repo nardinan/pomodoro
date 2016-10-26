@@ -54,6 +54,7 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
     d_using(character);
     struct s_object *drawable;
     enum e_drawable_flips flips;
+    enum e_factory_media_types type;
     char *string_supply, *string_supply_component;
     t_boolean character_flip_x = d_false, character_flip_y = d_false, status_flip_x, status_flip_y;
     double offset_x, offset_y, mask_R, mask_G, mask_B, mask_A, zoom = 1.0, speed_x, speed_y, speed_z;
@@ -109,7 +110,7 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
                             d_call(json, m_json_get_double, &mask_G, "sdss", "statuses", index_status, v_character_components_label[index_component], "mask_G");
                             d_call(json, m_json_get_double, &mask_B, "sdss", "statuses", index_status, v_character_components_label[index_component], "mask_B");
                             d_call(json, m_json_get_double, &mask_A, "sdss", "statuses", index_status, v_character_components_label[index_component], "mask_A");
-                            if ((drawable = d_call(factory, m_factory_get_media, string_supply))) {
+                            if ((drawable = d_call(factory, m_factory_get_media, string_supply, &type))) {
                                 if ((status_flip_x) && (status_flip_y))
                                     flips = e_drawable_flip_both;
                                 else if (status_flip_x)
