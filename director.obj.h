@@ -19,6 +19,7 @@
 #define pomodoro_director_h
 #include "puppeteer.obj.h"
 #include "effecteer.obj.h"
+#include "camera.obj.h"
 extern struct s_object *director;
 /* action definition */
 typedef enum e_director_actions { 
@@ -43,6 +44,7 @@ extern struct s_lisp_object *p_link_director_script(struct s_object *self, struc
 d_declare_class(director) {
     struct s_attributes head;
     struct s_list actions_pool;
+    struct s_object *camera;
     struct s_object *factory;
     struct s_object *puppeteer;
     struct s_object *effecteer;

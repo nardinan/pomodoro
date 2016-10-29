@@ -73,6 +73,7 @@ struct s_director_attributes *p_director_alloc(struct s_object *self) {
 struct s_object *f_director_new(struct s_object *self, struct s_object *factory) {
     struct s_director_attributes *attributes = p_director_alloc(self);
     attributes->factory = d_retain(factory);
+    d_assert(attributes->camera = f_camera_new(d_new(camera), e_environment_surface_primary));
     d_assert(attributes->puppeteer = f_puppeteer_new(d_new(puppeteer), factory, f_director_validator));
     d_assert(attributes->effecteer = f_effecteer_new(d_new(effecteer), factory));
     return self;
@@ -97,7 +98,9 @@ d_define_method(director, push_action)(struct s_object *self, struct s_director_
 
 d_define_method(director, update)(struct s_object *self) {
     d_using(director);
+    struct s_factory_attributes *factory_attributes = d_cast(director_attributes->factory, factory);
     struct s_director_action *current_action;
+    d_call(director_attributes->camera, m_camera_update, factory_attributes->environment);
     if (time(NULL) > director_attributes->alive)
         if ((current_action = (struct s_director_action *)director_attributes->actions_pool.head)) {
             f_list_delete(&(director_attributes->actions_pool), (struct s_list_node *)current_action);
@@ -152,6 +155,7 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
 
 d_define_method(director, delete)(struct s_object *self, struct s_director_attributes *attributes) {
     struct s_director_action *current_action;
+    d_delete(attributes->camera);
     d_delete(attributes->factory);
     d_delete(attributes->puppeteer);
     d_delete(attributes->effecteer);
