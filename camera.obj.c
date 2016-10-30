@@ -31,20 +31,29 @@ struct s_object *f_camera_new(struct s_object *self, enum e_environment_surfaces
     return self;
 }
 
-d_define_method(camera, move)(struct s_object *self, double position_x, double position_y, double position_z, struct s_object *environment) {
+d_define_method(camera, move_position)(struct s_object *self, double position_x, double position_y, double position_z, struct s_object *environment) {
     d_using(camera);
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
+    if (camera_attributes->distance_xy == 0)
+        gettimeofday(&(camera_attributes->last_refresh), NULL);
     camera_attributes->starting_x = environment_attributes->camera_origin_x[camera_attributes->surface];
     camera_attributes->starting_y = environment_attributes->camera_origin_y[camera_attributes->surface];
     camera_attributes->starting_z = environment_attributes->zoom[camera_attributes->surface];
-    camera_attributes->destination_x = (position_x - (environment_attributes->current_w / 2.0));
-    camera_attributes->destination_y = (position_y - (environment_attributes->current_h / 2.0));
-    camera_attributes->destination_z = position_z;
+    if (position_x == position_x)
+        camera_attributes->destination_x = (position_x - (environment_attributes->current_w / 2.0));
+    if (position_y == position_y)
+        camera_attributes->destination_y = (position_y - (environment_attributes->current_h / 2.0));
+    if (position_z == position_z)
+        camera_attributes->destination_z = position_z;
     camera_attributes->distance_xy = sqrt((d_math_square(camera_attributes->destination_x - camera_attributes->starting_x) + 
-            d_math_square(camera_attributes->destination_y - camera_attributes->starting_y)));
-    camera_attributes->distance_z = fabs(camera_attributes->destination_z - camera_attributes->starting_z);
-    gettimeofday(&(camera_attributes->last_refresh), NULL);
+                d_math_square(camera_attributes->destination_y - camera_attributes->starting_y)));
     return self;
+}
+
+d_define_method(camera, move_reference)(struct s_object *self, struct s_object *reference, double position_y, double position_z, struct s_object *environment) {
+    double position_x;
+    d_call(reference, m_drawable_get_position, &position_x, NULL);
+    return d_call(self, m_camera_move_position, position_x, position_y, position_z, environment);
 }
 
 d_define_method(camera, set_speed)(struct s_object *self, double speed) {
@@ -83,7 +92,7 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
                 d_math_square(camera_position_y - camera_attributes->destination_y));
         percentage_current_distance = (1.0 / camera_attributes->distance_xy) * (camera_attributes->distance_xy - current_distance);
         if ((percentage_movement = d_math_min(1.0, (camera_attributes->final_speed + ((camera_attributes->initial_speed - camera_attributes->final_speed) * 
-                                (1.0 - percentage_current_distance))) * difference_seconds)) > 0.0) {
+                                (1.0 - percentage_current_distance))) * difference_seconds)) > 0.0) {   
             t = ((camera_attributes->distance_xy * (percentage_current_distance + percentage_movement))/camera_attributes->distance_xy);
             final_position_x = ((1.0 - t) * camera_attributes->starting_x) + (t * camera_attributes->destination_x);
             final_position_y = ((1.0 - t) * camera_attributes->starting_y) + (t * camera_attributes->destination_y);
@@ -91,13 +100,11 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
                     (d_math_min(1.0, (percentage_current_distance + percentage_movement))));
             d_camera_round(camera_attributes->destination_x, final_position_x, 1.0);
             d_camera_round(camera_attributes->destination_y, final_position_y, 1.0);
-            d_camera_round(camera_attributes->destination_z, final_position_z, 0.02);
+            d_camera_round(camera_attributes->destination_z, final_position_z, 0.001);
             if ((camera_attributes->destination_x == final_position_x) &&
                     (camera_attributes->destination_y = final_position_y) &&
-                        (camera_attributes->destination_z == final_position_z)) {
+                    (camera_attributes->destination_z == final_position_z))
                 camera_attributes->distance_xy = 0;
-                camera_attributes->distance_z = 0;
-            }
             d_call(environment, m_environment_set_camera, final_position_x, final_position_y, camera_attributes->surface);
             d_call(environment, m_environment_set_zoom, final_position_z, camera_attributes->surface);
             memcpy(&(camera_attributes->last_refresh), &current, sizeof(struct timeval));
@@ -112,7 +119,8 @@ d_define_method(camera, delete)(struct s_object *self, struct s_camera_attribute
 }
 
 d_define_class(camera) {
-    d_hook_method(camera, e_flag_public, move),
+    d_hook_method(camera, e_flag_public, move_position),
+        d_hook_method(camera, e_flag_public, move_reference),
         d_hook_method(camera, e_flag_public, set_speed),
         d_hook_method(camera, e_flag_public, set_initial_speed),
         d_hook_method(camera, e_flag_public, set_final_speed),

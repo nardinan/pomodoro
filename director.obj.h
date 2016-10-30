@@ -26,26 +26,39 @@ typedef enum e_director_actions {
     e_director_action_puppeteer,
     e_director_action_effecteer,
     e_director_action_service_sleep,
-    e_director_action_service_script
+    e_director_action_service_script,
+    e_director_action_service_camera_move,
+    e_director_action_service_camera_follow
 } e_director_actions;
+typedef struct s_director_action_camera_move {
+    double position_x, position_y, position_z;
+} s_director_action_camera_move;
+typedef struct s_director_action_camera_follow {
+    char key[d_entity_label_size];
+    double position_y, position_z;
+} s_director_action_camera_follow;
 typedef struct s_director_action { d_list_node_head;
     enum e_director_actions type;
     time_t creation_time, pushing_time, execution_time;
     union {
         time_t delay;
         char label[d_resources_key_size];
+        struct s_director_action_camera_move camera_move;
+        struct s_director_action_camera_follow camera_follow;
         struct s_puppeteer_action character;
         struct s_effecteer_action effect;
     } action;
 } s_director_action;
 extern struct s_lisp_object *p_link_director_sleep(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_script(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_camera_move(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_camera_follow(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
 d_declare_class(director) {
     struct s_attributes head;
     struct s_list actions_pool;
-    struct s_object *camera;
     struct s_object *factory;
+    struct s_object *camera;
     struct s_object *puppeteer;
     struct s_object *effecteer;
     time_t alive;

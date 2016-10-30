@@ -206,6 +206,20 @@ d_define_method(puppeteer, move_character)(struct s_object *self, const char *ke
     return self;
 }
 
+d_define_method(puppeteer, set_main_character)(struct s_object *self, const char *key) {
+    d_using(puppeteer);
+    if (key)
+        puppeteer_attributes->main_character = d_call(self, m_puppeteer_get_character, key);
+    else
+        puppeteer_attributes->main_character = NULL;
+    return puppeteer_attributes->main_character;
+}
+
+d_define_method(puppeteer, get_main_character)(struct s_object *self) {
+    d_using(puppeteer);
+    return puppeteer_attributes->main_character;
+}
+
 d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *script) {
     d_call(script, m_lisp_extend_environment, "puppeteer_hide", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_hide_characters));
     d_call(script, m_lisp_extend_environment, "puppeteer_show", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_show_character));
@@ -276,6 +290,8 @@ d_define_class(puppeteer) {
         d_hook_method(puppeteer, e_flag_public, say_character),
         d_hook_method(puppeteer, e_flag_public, set_character),
         d_hook_method(puppeteer, e_flag_public, move_character),
+        d_hook_method(puppeteer, e_flag_public, set_main_character),
+        d_hook_method(puppeteer, e_flag_public, get_main_character),
         d_hook_method(puppeteer, e_flag_public, linker),
         d_hook_method(puppeteer, e_flag_public, dispatcher),
         d_hook_delete(puppeteer),
