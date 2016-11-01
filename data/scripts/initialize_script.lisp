@@ -16,15 +16,17 @@
 		)
 	)
 )
+
 (puppeteer_show "andrea" 200)
 (puppeteer_show "andrii" 800)
 (puppeteer_disable_control)
+(director_camera_follow "andrea" -100.0 1.0)
 (say "andrea" "Hello guys!")
 (say "andrii" "Hello!")
 (animation "andrea" "still_right")
 (say "andrea" "What do you think about my script system, Andrii?")
 (animation "andrii" "still_left")
-(effecteer_add "expl1" "fire_spot_particle" 400 450)
+(effecteer_add "expl1" "smoke_spot_particle" 400 450)
 (director_wait 2)
 (effecteer_add "expl2" "fire_spot_particle" 600 450 1 0 nil t)
 (director_wait 2)
@@ -33,7 +35,7 @@
 (say "andrea" "You hate it!")
 (say "andrii" "No, you hate it!")
 (animation "andrii" "back_code")
-(puppeteer_enable_control "andrii")
+(puppeteer_enable_control "andrea")
 
 (director_wait 10)
 

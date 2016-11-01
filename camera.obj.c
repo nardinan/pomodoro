@@ -39,10 +39,8 @@ d_define_method(camera, move_position)(struct s_object *self, double position_x,
     camera_attributes->starting_x = environment_attributes->camera_origin_x[camera_attributes->surface];
     camera_attributes->starting_y = environment_attributes->camera_origin_y[camera_attributes->surface];
     camera_attributes->starting_z = environment_attributes->zoom[camera_attributes->surface];
-    if (position_x == position_x)
-        camera_attributes->destination_x = (position_x - (environment_attributes->current_w / 2.0));
-    if (position_y == position_y)
-        camera_attributes->destination_y = (position_y - (environment_attributes->current_h / 2.0));
+    camera_attributes->destination_x = (position_x - (environment_attributes->current_w / 2.0));
+    camera_attributes->destination_y = (position_y - (environment_attributes->current_h / 2.0));
     if (position_z == position_z)
         camera_attributes->destination_z = position_z;
     camera_attributes->distance_xy = sqrt((d_math_square(camera_attributes->destination_x - camera_attributes->starting_x) + 
@@ -50,10 +48,24 @@ d_define_method(camera, move_position)(struct s_object *self, double position_x,
     return self;
 }
 
-d_define_method(camera, move_reference)(struct s_object *self, struct s_object *reference, double position_y, double position_z, struct s_object *environment) {
-    double position_x;
-    d_call(reference, m_drawable_get_position, &position_x, NULL);
-    return d_call(self, m_camera_move_position, position_x, position_y, position_z, environment);
+d_define_method(camera, move_reference)(struct s_object *self, struct s_object *reference, double offset_x, double offset_y, double position_z,
+        struct s_object *environment) {
+    double position_x, position_y;
+    d_call(reference, m_drawable_get_position, &position_x, &position_y);
+    return d_call(self, m_camera_move_position, (position_x + offset_x), (position_y + offset_y), position_z, environment);
+}
+
+d_define_method(camera, chase_reference)(struct s_object *self, struct s_object *reference, double offset_x, double offset_y, double position_z,
+        struct s_object *environment) {
+    d_using(camera);
+    if (camera_attributes->reference)
+        d_delete(camera_attributes->reference);
+    camera_attributes->reference = d_retain(reference);
+    camera_attributes->offset_x = offset_x;
+    camera_attributes->offset_y = offset_y;
+    if (position_z == position_z)
+        camera_attributes->destination_z = position_z;
+    return self;
 }
 
 d_define_method(camera, set_speed)(struct s_object *self, double speed) {
@@ -81,6 +93,8 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
     struct timeval current, difference;
     double camera_position_x, camera_position_y, camera_position_z, current_distance, percentage_current_distance, percentage_movement, 
            difference_seconds, t, final_position_x = 0.0, final_position_y = 0.0, final_position_z = 0.0;
+    if (camera_attributes->reference)
+        d_call(self, m_camera_move_reference, camera_attributes->reference, camera_attributes->offset_x, camera_attributes->offset_y, NAN, environment);
     gettimeofday(&current, NULL);
     camera_position_x = environment_attributes->camera_origin_x[camera_attributes->surface];
     camera_position_y = environment_attributes->camera_origin_y[camera_attributes->surface];
@@ -115,12 +129,15 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
 
 
 d_define_method(camera, delete)(struct s_object *self, struct s_camera_attributes *attributes) {
+    if (attributes->reference)
+        d_delete(attributes->reference);
     return NULL;
 }
 
 d_define_class(camera) {
     d_hook_method(camera, e_flag_public, move_position),
         d_hook_method(camera, e_flag_public, move_reference),
+        d_hook_method(camera, e_flag_public, chase_reference),
         d_hook_method(camera, e_flag_public, set_speed),
         d_hook_method(camera, e_flag_public, set_initial_speed),
         d_hook_method(camera, e_flag_public, set_final_speed),
