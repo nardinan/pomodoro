@@ -36,6 +36,12 @@ struct s_object *f_bubble_new(struct s_object *self, struct s_object *factory, u
     return self;
 }
 
+d_define_method(bubble, set)(struct s_object *self, struct s_object *drawable, enum e_uiable_components component) {
+    d_using(bubble);
+    bubble_attributes->drawables[component] = d_retain(drawable);
+    return self;
+}
+
 d_define_method(bubble, add_message)(struct s_object *self, const char *message, time_t timeout, int font_ID) {
     d_using(bubble);
     struct s_bubble_message *current_message;
@@ -55,8 +61,10 @@ d_define_method(bubble, skip)(struct s_object *self) {
     d_using(bubble);
     TTF_Font *selected_font;
     struct s_factory_attributes *factory_attributes = d_cast(bubble_attributes->factory, factory);
+    struct s_label_attributes *label_attributes;
     struct s_bubble_component *current_component;
     char *head_pointer, *next_pointer;
+    double maximum_width = 0.0;
     int font_height, index = 0;
     if (bubble_attributes->current_element) {
         while ((current_component = (struct s_bubble_component *)bubble_attributes->components.head)) {
@@ -110,6 +118,44 @@ d_define_method(bubble, skip)(struct s_object *self) {
         }
         bubble_attributes->last_update = time(NULL);
     }
+    d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component) {
+        label_attributes = d_cast(current_component->component, label);
+        if (label_attributes->last_width > maximum_width)
+            maximum_width = label_attributes->last_width;
+        if (((struct s_list_node *)current_component)->back == NULL) {
+            if (bubble_attributes->drawables[e_uiable_component_corner_top_left])
+                d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_corner_top_left], e_uiable_mode_active, 
+                        e_uiable_component_corner_top_left);
+            if (bubble_attributes->drawables[e_uiable_component_top])
+                d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_top], e_uiable_mode_active, 
+                        e_uiable_component_top);
+            if (bubble_attributes->drawables[e_uiable_component_corner_top_right])
+                d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_corner_top_right], e_uiable_mode_active, 
+                        e_uiable_component_corner_top_right);
+        }
+        if (((struct s_list_node *)current_component)->next == NULL) {
+            if (bubble_attributes->drawables[e_uiable_component_corner_bottom_left])
+                d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_corner_bottom_left], e_uiable_mode_active, 
+                        e_uiable_component_corner_bottom_left);
+            if (bubble_attributes->drawables[e_uiable_component_bottom])
+                d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_bottom], e_uiable_mode_active, 
+                        e_uiable_component_bottom);
+            if (bubble_attributes->drawables[e_uiable_component_corner_bottom_right])
+                d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_corner_bottom_right], e_uiable_mode_active, 
+                        e_uiable_component_corner_bottom_right);
+        }
+        if (bubble_attributes->drawables[e_uiable_component_left])
+            d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_left], e_uiable_mode_active, 
+                    e_uiable_component_left);
+        if (bubble_attributes->drawables[e_uiable_component_center])
+            d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_center], e_uiable_mode_active, 
+                    e_uiable_component_center);
+        if (bubble_attributes->drawables[e_uiable_component_right])
+            d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_right], e_uiable_mode_active, 
+                    e_uiable_component_right);
+    }
+    d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component)
+        d_call(current_component->component, m_drawable_set_dimension_w, maximum_width);
     return self;
 }
 
@@ -153,6 +199,7 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
     struct s_factory_attributes *factory_attributes = d_cast(attributes->factory, factory);
     struct s_bubble_component *current_component;
     struct s_bubble_message *current_message;
+    int index;
     d_delete(attributes->factory);
     if (attributes->current_element) {
         while ((current_component = (struct s_bubble_component *)attributes->components.head)) {
@@ -171,11 +218,15 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
         f_list_delete(&(attributes->messages), (struct s_list_node *)current_message);
         d_free(current_message);
     }
+    for (index = 0; index < e_uiable_component_NULL; ++index)
+        if (attributes->drawables[index])
+            d_delete(attributes->drawables[index]);
     return NULL;
 }
 
 d_define_class(bubble) {
-    d_hook_method(bubble, e_flag_public, add_message),
+    d_hook_method(bubble, e_flag_public, set),
+        d_hook_method(bubble, e_flag_public, add_message),
         d_hook_method(bubble, e_flag_public, skip),
         d_hook_method_override(bubble, e_flag_public, drawable, draw),
         d_hook_delete(bubble),

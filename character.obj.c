@@ -52,13 +52,28 @@ struct s_object *f_character_new(struct s_object *self, const char *key, t_entit
 
 d_define_method(character, load)(struct s_object *self, struct s_object *json, struct s_object *factory) {
     d_using(character);
+    struct s_character_scoped_list {
+        char *key;
+        enum e_uiable_components component;
+    } scoped_list[] = {
+        {"corner_top_left",     e_uiable_component_corner_top_left},
+        {"corner_top_right",    e_uiable_component_corner_top_right},
+        {"corner_bottom_left",  e_uiable_component_corner_bottom_left},
+        {"corner_bottom_right", e_uiable_component_corner_bottom_right},
+        {"left",                e_uiable_component_left},
+        {"right",               e_uiable_component_right},
+        {"top",                 e_uiable_component_top},
+        {"bottom",              e_uiable_component_bottom},
+        {"center",              e_uiable_component_center},
+        {NULL}
+    };
     struct s_object *drawable;
     enum e_drawable_flips flips;
     enum e_factory_media_types type;
     char *string_supply, *string_supply_component;
     t_boolean status_flip_x = d_false, status_flip_y = d_false, character_flip_x, character_flip_y;
     double offset_x, offset_y, mask_R = 255.0, mask_G = 255.0, mask_B = 255.0, mask_A = 255.0, zoom = 1.0, speed_x, speed_y, speed_z;
-    int index_status = 0, index_component;
+    int index_status = 0, index_component, index;
     if (d_call(json, m_json_get_string, &string_supply, "s", "format")) {
         if (f_string_strcmp(string_supply, "character") == 0)
             if ((d_call(json, m_json_get_string, &string_supply, "s", "ID"))) {
@@ -72,6 +87,12 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
                     d_delete(character_attributes->bubble);
                 d_assert(character_attributes->bubble = f_bubble_new(d_new(bubble), factory, (unsigned int)mask_R, (unsigned int)mask_G, (unsigned int)mask_B, 
                             (unsigned int)mask_A, TTF_STYLE_NORMAL));
+                for (index = 0; scoped_list[index].key; ++index)
+                    if ((d_call(json, m_json_get_string, &string_supply, "ss", "bubble", scoped_list[index].key)))
+                        if ((drawable = d_call(factory, m_factory_get_media, string_supply, &type))) {
+                            d_call(character_attributes->bubble, m_bubble_set, drawable, scoped_list[index].component);
+                            d_delete(drawable);
+                        }
                 d_call(json, m_json_get_boolean, &status_flip_x, "s", "flip_x");
                 d_call(json, m_json_get_boolean, &status_flip_y, "s", "flip_y");
                 d_call(json, m_json_get_double, &zoom, "s", "zoom");

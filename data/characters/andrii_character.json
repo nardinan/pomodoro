@@ -7,8 +7,17 @@
 		"mask_G":0,
 		"mask_B":127,
 		"mask_A":255,
-		"offset_x":5,
-		"offset_y":-20
+		"offset_x":0,
+		"offset_y":-20,
+		"corner_top_left":"bubble_TL",
+		"corner_top_right":"bubble_TR",
+		"corner_bottom_left":"bubble_BL",
+		"corner_bottom_right":"bubble_BR",
+		"left":"bubble_L",
+		"right":"bubble_R",
+		"top":"bubble_T",
+		"bottom":"bubble_B",
+		"center":"bubble_C"
 	},
 	"statuses":[{
 			"label":"back",

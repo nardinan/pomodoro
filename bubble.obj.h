@@ -37,6 +37,7 @@ d_declare_class(bubble) {
     struct s_list messages, components;
     struct s_bubble_message *current_element;
     struct s_object *factory;
+    struct s_object *drawables[e_uiable_component_NULL];
     int font_style;
     time_t last_update;
     unsigned int mask_R, mask_G, mask_B, mask_A;
@@ -44,6 +45,7 @@ d_declare_class(bubble) {
 struct s_bubble_attributes *p_bubble_alloc(struct s_object *self);
 extern struct s_object *f_bubble_new(struct s_object *self, struct s_object *factory, unsigned int red, unsigned int green, unsigned int blue, 
         unsigned int alpha, int font_style);
+d_declare_method(bubble, set)(struct s_object *self, struct s_object *drawable, enum e_uiable_components component);
 d_declare_method(bubble, add_message)(struct s_object *self, const char *message, time_t timeout, int font_ID);
 d_declare_method(bubble, skip)(struct s_object *self);
 d_declare_method(bubble, draw)(struct s_object *self, struct s_object *environment);
