@@ -47,5 +47,6 @@ d_declare_method(factory, get_media)(struct s_object *self, const char *label, e
 d_declare_method(factory, get_json)(struct s_object *self, const char *label);
 d_declare_method(factory, get_font)(struct s_object *self, int ID, int style, int *height);
 d_declare_method(factory, get_script)(struct s_object *self, const char *label);
+d_declare_method(factory, get_track)(struct s_object *self, const char *label);
 d_declare_method(factory, delete)(struct s_object *self, struct s_factory_attributes *attributes);
 #endif

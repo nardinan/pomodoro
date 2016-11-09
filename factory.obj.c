@@ -244,6 +244,15 @@ d_define_method(factory, get_script)(struct s_object *self, const char *label) {
     return result;
 }
 
+d_define_method(factory, get_track)(struct s_object *self, const char *label) {
+    d_using(factory);
+    struct s_object *stream;
+    struct s_object *result = NULL;
+    if ((stream = d_call(factory_attributes->resources_ogg, m_resources_get_stream_strict, label, e_resources_type_common)))
+        result = f_track_new(d_new(track), stream);
+    return result;
+}
+
 d_define_method(factory, delete)(struct s_object *self, struct s_factory_attributes *attributes) {
     d_delete(attributes->resources_png);
     d_delete(attributes->resources_ttf);
@@ -266,6 +275,7 @@ d_define_class(factory) {
         d_hook_method(factory, e_flag_public, get_json),
         d_hook_method(factory, e_flag_public, get_font),
         d_hook_method(factory, e_flag_public, get_script),
+        d_hook_method(factory, e_flag_public, get_track),
         d_hook_delete(factory),
         d_hook_method_tail
 };
