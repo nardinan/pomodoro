@@ -1,0 +1,28 @@
+{
+	"format":"landscape",
+	"ID":"canama",
+	"zoom":10,
+	"position_x":-200.0,
+	"position_y":-300.0,
+	"floor":[{
+		"position_x":0.0,
+		"position_y":550.0
+	}],
+	"surfaces":[{
+		"drawable":"canama_background",
+		"layer":1,
+		"speed_ratio_x":1.0
+	},{
+		"drawable":"canama_lights_layer",
+		"layer":8,
+		"speed_ratio_x":1.0
+	},{
+		"drawable":"canama_strips_layer",
+		"layer":9,
+		"speed_ratio_x":1.0
+	}],
+	"items":[
+		{"item":"canama_wall", 		"status":"still",	"position_x":1376.0, "position_y":433.0, "zoom":1.25},
+		{"item":"sink_A", 			"status":"droplet", "position_x":1244.0, "position_y":972.0, "zoom":1.25}
+	]
+} 

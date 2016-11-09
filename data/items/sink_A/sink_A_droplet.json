@@ -1,0 +1,15 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"sink_A_droplet_frame0",  "time":0.8},
+		{"drawable":"sink_A_droplet_frame1",  "time":0.1},
+		{"drawable":"sink_A_droplet_frame2",  "time":0.1},
+		{"drawable":"sink_A_droplet_frame3",  "time":0.1},
+		{"drawable":"sink_A_droplet_frame4",  "time":0.1},
+		{"drawable":"sink_A_droplet_frame5",  "time":0.1},
+		{"drawable":"sink_A_droplet_frame6",  "time":0.1},
+		{"drawable":"sink_A_droplet_frame7",  "time":0.1},
+		{"drawable":"sink_A_droplet_frame8",  "time":0.1}
+	]
+}

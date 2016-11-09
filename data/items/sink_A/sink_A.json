@@ -1,0 +1,27 @@
+{
+	"format":"item",
+	"ID":"sink_A",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"sink_A_still"}
+			]
+		},{
+			"label":"pan",
+			"layers":[
+				{"drawable":"sink_A_pan"}
+			]
+		},{
+			"label":"droplet",
+			"track":{
+				"playable":"sink_A_droplet",
+				"loops":-1.0
+			},
+			"layers":[
+				{"drawable":"sink_A_droplet"}
+			]
+		}
+	]
+}
