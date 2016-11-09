@@ -1,4 +1,5 @@
-objects = miranda.o pomodoro.o factory.obj.o bubble.obj.o camera.obj.o character.obj.o puppeteer.obj.o effecteer.obj.o landscape.obj.o director.obj.o
+objects = miranda.o pomodoro.o factory.obj.o bubble.obj.o camera.obj.o character.obj.o puppeteer.obj.o effecteer.obj.o item.obj.o landscape.obj.o\
+		  director.obj.o
 project = pomodoro
 name = pomodoro
 cc = clang -g $(debug)
@@ -33,6 +34,9 @@ puppeteer.obj.o: puppeteer.obj.c puppeteer.obj.h character.obj.h
 
 effecteer.obj.o: effecteer.obj.c effecteer.obj.h factory.obj.h
 	$(cc) $(cflags) effecteer.obj.c
+
+item.obj.o: item.obj.c item.obj.h factory.obj.h
+	$(cc) $(cflags) item.obj.c
 
 landscape.obj.o: landscape.obj.c landscape.obj.h factory.obj.h
 	$(cc) $(cflags) landscape.obj.c
