@@ -44,7 +44,6 @@ struct s_object *f_character_new(struct s_object *self, const char *key, t_entit
     d_call(self, m_controllable_add_configuration, SDLK_RIGHT,  p_character_move_right, p_character_move_right, d_true);
     d_call(self, m_controllable_add_configuration, SDLK_UP,     p_character_move_up,    p_character_move_up,    d_true);
     d_call(self, m_controllable_add_configuration, SDLK_DOWN,   p_character_move_down,  p_character_move_down,  d_true);
-    attributes->movement = d_false;
     attributes->direction = e_character_direction_down;
     attributes->set = d_true;
     return self;
