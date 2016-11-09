@@ -20,6 +20,8 @@
 #include "puppeteer.obj.h"
 #include "effecteer.obj.h"
 #include "camera.obj.h"
+#include "landscape.obj.h"
+#include "item.obj.h"
 extern struct s_object *director;
 /* action definition */
 typedef enum e_director_actions { 

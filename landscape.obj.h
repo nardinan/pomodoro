@@ -18,6 +18,9 @@
 #ifndef pomodoro_landscape_h
 #define pomodoro_landscape_h
 #include "factory.obj.h"
+#include "item.obj.h"
+#define d_landscape_surface_default_layer 1
+#define d_landscape_item_default_layer 3
 typedef struct s_landscape_surface { d_list_node_head;
     struct s_object *drawable;
     double offset_x, offset_y, speed_ratio_x, speed_ratio_y;
@@ -26,10 +29,15 @@ typedef struct s_landscape_surface { d_list_node_head;
 typedef struct s_landscape_point { d_list_node_head;
     double position_x, position_y;
 } s_landscape_point;
+typedef struct s_landscape_item { d_list_node_head;
+    struct s_object *item;
+    double position_x, position_y;
+    int layer;
+} s_landscape_item;
 d_declare_class(landscape) {
     struct s_attributes head;
     char label[d_entity_label_size];
-    struct s_list surfaces, points;
+    struct s_list surfaces, points, items;
     double position_x, position_y;
 } d_declare_class_tail(landscape);
 struct s_landscape_attributes *p_landscape_alloc(struct s_object *self);

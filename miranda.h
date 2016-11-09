@@ -25,5 +25,6 @@
 #include <miranda/objects/geometry/geometry.h>
 #include <miranda/objects/media/media.h>
 #include <miranda/objects/media/ui/ui.h>
+extern t_boolean v_developer_mode;
 #endif
 

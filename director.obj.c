@@ -93,7 +93,7 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
         *new_x = d_pomodoro_width + d_pomodoro_width_offset;
     else if (*new_x > (d_pomodoro_width + d_pomodoro_width_offset))
         *new_x = (0 - d_pomodoro_width_offset);
-    *new_y = 550.0;
+    *new_y = 650.0;
     return d_true;
 }
 

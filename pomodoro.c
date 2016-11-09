@@ -26,20 +26,9 @@
 struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json, *resources_lisp;
 struct s_object *factory;
 struct s_object *background;
-t_boolean pomodoro_temporary_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y,
-        double *new_zoom) {
-    if (*new_x > d_pomodoro_width) {
-        *new_x = current_x;
-        *new_y = current_y;
-        *new_zoom = current_zoom;
-        return d_false;
-    }
-    if (*new_x > d_pomodoro_height)
-        return d_false;
-    *new_y = 550.0;
-    return d_true;
-}
-
+struct s_object *landscape_test;
+unsigned int current_loop = 0;
+t_boolean v_developer_mode = d_false;
 int pomodoro_load_call(struct s_object *environment) {
     struct s_exception *exception;
     struct s_object *resources_path = f_string_new_constant(d_new(string), d_pomodoro_resources),
@@ -60,6 +49,15 @@ int pomodoro_load_call(struct s_object *environment) {
         if ((png_stream = d_call(resources_png, m_resources_get_stream, "default_background", e_resources_type_common)))
             if ((background = f_bitmap_new(d_new(bitmap), png_stream, environment)))
                 d_call(environment, m_environment_add_drawable, background, 0, e_environment_surface_primary);
+        /* example */
+        struct s_object *json_landscape = d_call(factory, m_factory_get_json, "canama_landscape");
+        if (json_landscape) {
+            landscape_test = f_landscape_new(d_new(landscape), "canama");
+            d_call(landscape_test, m_landscape_load, json_landscape, factory);
+            d_call(landscape_test, m_landscape_show, environment);
+            d_delete(json_landscape);
+        }
+        /* end */
         d_call(director, m_director_run_script, "initialize_script");
         d_delete(template_png);
         d_delete(template_ttf);
@@ -76,10 +74,12 @@ int pomodoro_load_call(struct s_object *environment) {
 
 int pomodoro_loop_call(struct s_object *environment) {
     d_call(director, m_director_update, NULL);
+    d_call(landscape_test, m_landscape_update, environment);
     return d_true;
 }
 
 int pomodoro_quit_call(struct s_object *environment) {
+    d_delete(landscape_test);
     d_delete(background);
     d_delete(resources_png);
     d_delete(resources_ttf);
@@ -96,6 +96,10 @@ int main (int argc, char *argv[]) {
     struct s_object *environment;
     d_pool_init;
     v_log_level = e_log_level_medium;
+    if ((argc > 1) && (f_string_strcmp(argv[1], "-developer") == 0)) {
+        d_war(e_log_level_ever, "developer mode has been enabled");
+        v_developer_mode = d_true;
+    }
     d_pool_begin("main context") {
         /* wait the unlock */
         d_try {
