@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"shelf_A",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"shelf_A_still"}
+			]
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"oven_A_flame_frame0",  "time":0.1},
+		{"drawable":"oven_A_flame_frame1",  "time":0.1},
+		{"drawable":"oven_A_flame_frame2",  "time":0.1},
+		{"drawable":"oven_A_flame_frame3",  "time":0.1},
+		{"drawable":"oven_A_flame_frame4",  "time":0.1}
+	]
+}

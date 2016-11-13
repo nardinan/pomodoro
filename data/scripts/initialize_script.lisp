@@ -25,7 +25,7 @@
 		)
 	)
 )
-
+(stagecrafter_show "canama")
 (puppeteer_show "andrea" 200)
 (puppeteer_show "andrii" 800)
 (puppeteer_disable_control)
@@ -48,3 +48,7 @@
 (effecteer_stop "expl2")
 
 (director_script "restore_environment")
+(director_wait 10)
+(stagecrafter_unlock_item "canama_wall_B")
+(director_wait 10)
+(stagecrafter_lock_item "canama_wall_B")
