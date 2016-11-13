@@ -34,7 +34,7 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
     enum e_drawable_flips flips;
     enum e_factory_media_types type;
     char *string_supply, *string_supply_item, *string_supply_label;
-    t_boolean status_flip_x = d_false, status_flip_y = d_false, layer_flip_x, layer_flip_y;
+    t_boolean status_flip_x = d_false, status_flip_y = d_false, layer_flip_x, layer_flip_y, solid, active;
     double mask_R, mask_G, mask_B, mask_A, status_zoom = 1.0, layer_zoom, item_zoom, position_x, position_y, layer;
     int index_layer = 0, index_path = 0, index_item = 0;
     struct s_object *item_json;
@@ -75,12 +75,16 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
                             d_call(json, m_json_get_double, &(current_item->position_y), "sds", "items", index_item, "position_y");
                             d_call(json, m_json_get_double, &layer, "sds", "items", index_item, "layer");
                             current_item->layer = (int)layer;
-                            if ((current_item->item = f_item_new(d_new(item), string_supply))) {
+                            if ((current_item->item = f_item_new(d_new(item), string_supply_item))) {
                                 d_call(current_item->item, m_item_load, item_json, factory);
                                 d_call(current_item->item, m_drawable_set_center, (0.0 - current_item->position_x), (0.0 - current_item->position_y)); /* reset the zoom-on-ROI */
                                 d_call(current_item->item, m_drawable_set_zoom, (item_zoom * status_zoom));
                                 if ((d_call(json, m_json_get_string, &string_supply, "sds", "items", index_item, "status")))
                                     d_call(current_item->item, m_entity_set_component, string_supply);
+                                if ((d_call(json, m_json_get_boolean, &solid, "sds", "items", index_item, "solid")))
+                                    d_call(current_item->item, m_item_set_solid, solid);
+                                if ((d_call(json, m_json_get_boolean, &active, "sds", "items", index_item, "active")))
+                                    d_call(current_item->item, m_item_set_active, active);
                                 f_list_append(&(landscape_attributes->items), (struct s_list_node *)current_item, e_list_insert_head);
                             }
                         } else
@@ -212,7 +216,8 @@ d_define_method(landscape, floor)(struct s_object *self, double position_x, doub
     return self;
 }
 
-d_define_method(landscape, validator)(struct s_object *self, struct s_object *entity, double current_x, double current_y, double *new_x, double *new_y) {
+d_define_method(landscape, validator)(struct s_object *self, struct s_object *entity, double current_x, double current_y, double *new_x, double *new_y,
+        double camera_offset_x, double camera_offset_y) {
     d_using(landscape);
     struct s_item_attributes *item_attributes;
     struct s_landscape_item *current_item;
@@ -221,15 +226,19 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
         d_call(entity, m_drawable_get_scaled_principal_point, &entity_position_x, &entity_position_y);
         d_foreach(&(landscape_attributes->items), current_item, struct s_landscape_item) { 
             d_call(current_item->item, m_drawable_get_scaled_principal_point, &item_position_x, &item_position_y);
-            if ((final_distance = d_point_square_distance(entity_position_x, entity_position_y, item_position_x, item_position_y)) < d_landscape_item_max_square_distance)
-                if ((intptr_t)d_call(current_item->item, m_item_collision, entity))
+            if ((final_distance = d_point_square_distance(entity_position_x, entity_position_y, item_position_x, item_position_y)) < 
+                    d_landscape_item_max_square_distance)
+                if ((intptr_t)d_call(current_item->item, m_item_collision, entity)) {
+                    item_position_x += camera_offset_x;
+                    item_position_y += camera_offset_y;
                     /* special case when distance(current_x, current_y) < distance(new_x, new_y) then new_x and new_y are authorized */
-                    if (d_point_square_distance(item_position_x, item_position_y, current_x, current_y) >=
-                            d_point_square_distance(item_position_x, item_position_y, *new_x, *new_y)) {
+                    if ((d_point_square_distance(current_x, current_y, item_position_x, item_position_y) >=
+                                d_point_square_distance(*new_x, *new_y, item_position_x, item_position_y))) {
                         item_attributes = d_cast(current_item->item, item);
                         if (item_attributes->solid)
                             *new_x = current_x;
                     }
+                }
         }
     }
     d_call(self, m_landscape_floor, *new_x, new_y);
@@ -252,7 +261,6 @@ d_define_method(landscape, update)(struct s_object *self, struct s_object *envir
 }
 
 d_define_method(landscape, delete)(struct s_object *self, struct s_landscape_attributes *attributes) {
-    struct s_entity_attributes *entity_attributes;
     struct s_landscape_surface *current_surface;
     struct s_landscape_item *current_item;
     struct s_landscape_point *current_point;
@@ -266,10 +274,9 @@ d_define_method(landscape, delete)(struct s_object *self, struct s_landscape_att
         f_list_delete(&(attributes->items), (struct s_list_node *)current_item);
         if (v_developer_mode) {
             /* dump of the item */
-            d_assert(entity_attributes = d_cast(current_item->item, entity));
             d_call(current_item->item, m_drawable_get_position, &position_x, &position_y);
             d_call(current_item->item, m_drawable_get_zoom, &zoom);
-            printf("{\"item\":\"%s\", \"position_x\":%.01f, \"position_y\":%.01f, \"zoom\":%.02f}\n", entity_attributes->label, 
+            printf("{\"item\":\"%s\", \"position_x\":%.01f, \"position_y\":%.01f, \"zoom\":%.02f}\n", current_item->label, 
                     (position_x - attributes->position_x), (position_y - attributes->position_y), zoom);
         }
         d_delete(current_item->item);

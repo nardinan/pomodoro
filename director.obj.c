@@ -89,10 +89,13 @@ struct s_lisp_object *p_link_director_camera_follow(struct s_object *self, struc
 t_boolean f_director_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y, 
         double *new_zoom) {
     struct s_director_attributes *director_attributes = d_cast(director, director);
+    struct s_factory_attributes *factory_attributes = d_cast(director_attributes->factory, factory);
+    struct s_environment_attributes *environment_attributes = d_cast(factory_attributes->environment, environment);
     struct s_object *current_landscape;
-    struct s_object *current_character = d_call(director_attributes->puppeteer, m_puppeteer_get_main_character, NULL);
     if ((current_landscape = d_call(director_attributes->stagecrafter, m_stagecrafter_get_main_landscape, NULL)))
-        d_call(current_landscape, m_landscape_validator, current_character, current_x, current_y, new_x, new_y);
+        d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, 
+                environment_attributes->camera_origin_x[environment_attributes->current_surface],
+                environment_attributes->camera_origin_y[environment_attributes->current_surface]);
     return d_true;
 }
 
