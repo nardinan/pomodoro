@@ -21,6 +21,7 @@
 #include "item.obj.h"
 #define d_landscape_surface_default_layer 1
 #define d_landscape_item_default_layer 3
+#define d_landscape_item_max_square_distance 1262500
 typedef struct s_landscape_surface { d_list_node_head;
     struct s_object *drawable;
     double offset_x, offset_y, speed_ratio_x, speed_ratio_y;
@@ -30,13 +31,14 @@ typedef struct s_landscape_point { d_list_node_head;
     double position_x, position_y;
 } s_landscape_point;
 typedef struct s_landscape_item { d_list_node_head;
+    char label[d_entity_label_size];
     struct s_object *item;
     double position_x, position_y;
     int layer;
 } s_landscape_item;
 d_declare_class(landscape) {
     struct s_attributes head;
-    char label[d_entity_label_size];
+    char label[d_entity_label_size], intro_script[d_string_buffer_size], outro_script[d_string_buffer_size];
     struct s_list surfaces, points, items;
     double position_x, position_y;
 } d_declare_class_tail(landscape);
@@ -45,7 +47,11 @@ extern struct s_object *f_landscape_new(struct s_object *self, const char *key);
 d_declare_method(landscape, load)(struct s_object *self, struct s_object *json, struct s_object *factory);
 d_declare_method(landscape, show)(struct s_object *self, struct s_object *environment);
 d_declare_method(landscape, hide)(struct s_object *self, struct s_object *environment);
-d_declare_method(landscape, get_floor)(struct s_object *self, double position_x, double *position_y);
+d_declare_method(landscape, set_item_solid)(struct s_object *self, const char *label, t_boolean solid);
+d_declare_method(landscape, set_item_active)(struct s_object *self, const char *label, t_boolean active);
+d_declare_method(landscape, set_item_status)(struct s_object *self, const char *label, const char *status);
+d_declare_method(landscape, floor)(struct s_object *self, double position_x, double *position_y);
+d_declare_method(landscape, validator)(struct s_object *self, struct s_object *entity, double current_x, double current_y, double *new_x, double *new_y);
 d_declare_method(landscape, update)(struct s_object *self, struct s_object *environment);
 d_declare_method(landscape, delete)(struct s_object *self, struct s_landscape_attributes *attributes);
 #endif

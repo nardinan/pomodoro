@@ -18,5 +18,8 @@
 		{"label":"andrii",	"link":"andrii_character",		"controllable":false},
 		{"label":"luca",	"link":"luca_character", 		"controllable":false},
 		{"label":"andrea",	"link":"andrea_character", 		"controllable":true}
+	],
+	"landscapes":[
+		{"label":"canama", 	"link":"canama_landscape"}
 	]
 }

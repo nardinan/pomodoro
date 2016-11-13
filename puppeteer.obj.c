@@ -131,7 +131,6 @@ struct s_object *f_puppeteer_new(struct s_object *self, struct s_object *factory
             d_die(d_error_malloc);
         ++character_index;
     }
-
     return self;
 }
 
@@ -139,12 +138,11 @@ d_define_method(puppeteer, get_character)(struct s_object *self, const char *key
     d_using(puppeteer);
     struct s_puppeteer_character *current_character;
     struct s_object *result = NULL;
-    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character) {
+    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
         if (f_string_strcmp(current_character->label, key) == 0) {
             result = current_character->character;
             break;
         }
-    }
     return result;
 }
 
@@ -170,10 +168,13 @@ d_define_method(puppeteer, show_character)(struct s_object *self, const char *ke
 }
 
 d_define_method(puppeteer, enable_control)(struct s_object *self, const char *key) {
+    d_using(puppeteer);
     struct s_object *current_character;
     d_call(self, m_puppeteer_disable_control, NULL);
-    if ((current_character = d_call(self, m_puppeteer_get_character, key)))
+    if ((current_character = d_call(self, m_puppeteer_get_character, key))) {
+        puppeteer_attributes->main_character = current_character;
         d_call(current_character, m_controllable_set, d_true);
+    }
     return self;
 }
 
@@ -204,15 +205,6 @@ d_define_method(puppeteer, move_character)(struct s_object *self, const char *ke
     if ((current_character = d_call(self, m_puppeteer_get_character, key)))
         d_call(current_character, m_character_move, destination_x);
     return self;
-}
-
-d_define_method(puppeteer, set_main_character)(struct s_object *self, const char *key) {
-    d_using(puppeteer);
-    if (key)
-        puppeteer_attributes->main_character = d_call(self, m_puppeteer_get_character, key);
-    else
-        puppeteer_attributes->main_character = NULL;
-    return puppeteer_attributes->main_character;
 }
 
 d_define_method(puppeteer, get_main_character)(struct s_object *self) {
@@ -290,7 +282,6 @@ d_define_class(puppeteer) {
         d_hook_method(puppeteer, e_flag_public, say_character),
         d_hook_method(puppeteer, e_flag_public, set_character),
         d_hook_method(puppeteer, e_flag_public, move_character),
-        d_hook_method(puppeteer, e_flag_public, set_main_character),
         d_hook_method(puppeteer, e_flag_public, get_main_character),
         d_hook_method(puppeteer, e_flag_public, linker),
         d_hook_method(puppeteer, e_flag_public, dispatcher),

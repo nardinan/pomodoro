@@ -4,9 +4,11 @@
 	"zoom":10,
 	"position_x":-200.0,
 	"position_y":-300.0,
+	"intro_script":"intro_canama",
+	"outro_script":"outro_canama",
 	"floor":[{
 		"position_x":0.0,
-		"position_y":550.0
+		"position_y":650.0
 	}],
 	"surfaces":[{
 		"drawable":"canama_background",
@@ -22,7 +24,7 @@
 		"speed_ratio_x":1.0
 	}],
 	"items":[
-		{"item":"canama_wall", 		"status":"still",	"position_x":1376.0, "position_y":433.0, "zoom":1.25},
-		{"item":"sink_A", 			"status":"droplet", "position_x":1244.0, "position_y":972.0, "zoom":1.25}
+		{"label":"canama_wall",		"item":"canama_wall", 		"status":"still",	"position_x":1376.0, "position_y":433.0, "zoom":1.25},
+		{"label":"sink_A",			"item":"sink_A", 			"status":"droplet", "position_x":1244.0, "position_y":972.0, "zoom":1.25}
 	]
 } 

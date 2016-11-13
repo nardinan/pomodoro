@@ -71,7 +71,6 @@ d_declare_method(puppeteer, disable_control)(struct s_object *self);
 d_declare_method(puppeteer, say_character)(struct s_object *self, const char *key, const char *message, time_t timeout);
 d_declare_method(puppeteer, set_character)(struct s_object *self, const char *key, const char *entry);
 d_declare_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x);
-d_declare_method(puppeteer, set_main_character)(struct s_object *self, const char *key);
 d_declare_method(puppeteer, get_main_character)(struct s_object *self);
 d_declare_method(puppeteer, linker)(struct s_object *self, struct s_object *script);
 d_declare_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer_action *action);

@@ -2,6 +2,7 @@
 	"format":"item",
 	"ID":"canama_wall",
 	"zoom":12,
+	"solid":true,
 	"statuses":[
 		{
 			"label":"still",

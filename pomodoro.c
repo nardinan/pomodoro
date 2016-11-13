@@ -26,7 +26,6 @@
 struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json, *resources_lisp;
 struct s_object *factory;
 struct s_object *background;
-struct s_object *landscape_test;
 unsigned int current_loop = 0;
 t_boolean v_developer_mode = d_false;
 int pomodoro_load_call(struct s_object *environment) {
@@ -49,15 +48,6 @@ int pomodoro_load_call(struct s_object *environment) {
         if ((png_stream = d_call(resources_png, m_resources_get_stream, "default_background", e_resources_type_common)))
             if ((background = f_bitmap_new(d_new(bitmap), png_stream, environment)))
                 d_call(environment, m_environment_add_drawable, background, 0, e_environment_surface_primary);
-        /* example */
-        struct s_object *json_landscape = d_call(factory, m_factory_get_json, "canama_landscape");
-        if (json_landscape) {
-            landscape_test = f_landscape_new(d_new(landscape), "canama");
-            d_call(landscape_test, m_landscape_load, json_landscape, factory);
-            d_call(landscape_test, m_landscape_show, environment);
-            d_delete(json_landscape);
-        }
-        /* end */
         d_call(director, m_director_run_script, "initialize_script");
         d_delete(template_png);
         d_delete(template_ttf);
@@ -74,12 +64,10 @@ int pomodoro_load_call(struct s_object *environment) {
 
 int pomodoro_loop_call(struct s_object *environment) {
     d_call(director, m_director_update, NULL);
-    d_call(landscape_test, m_landscape_update, environment);
     return d_true;
 }
 
 int pomodoro_quit_call(struct s_object *environment) {
-    d_delete(landscape_test);
     d_delete(background);
     d_delete(resources_png);
     d_delete(resources_ttf);

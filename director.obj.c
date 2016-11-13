@@ -88,12 +88,11 @@ struct s_lisp_object *p_link_director_camera_follow(struct s_object *self, struc
 
 t_boolean f_director_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y, 
         double *new_zoom) {
-    /* TODO: the system that corrects the Y coordinate and adjust the camera has to be developed */
-    if (*new_x < (0 - d_pomodoro_width_offset))
-        *new_x = d_pomodoro_width + d_pomodoro_width_offset;
-    else if (*new_x > (d_pomodoro_width + d_pomodoro_width_offset))
-        *new_x = (0 - d_pomodoro_width_offset);
-    *new_y = 650.0;
+    struct s_director_attributes *director_attributes = d_cast(director, director);
+    struct s_object *current_landscape;
+    struct s_object *current_character = d_call(director_attributes->puppeteer, m_puppeteer_get_main_character, NULL);
+    if ((current_landscape = d_call(director_attributes->stagecrafter, m_stagecrafter_get_main_landscape, NULL)))
+        d_call(current_landscape, m_landscape_validator, current_character, current_x, current_y, new_x, new_y);
     return d_true;
 }
 
@@ -110,6 +109,7 @@ struct s_object *f_director_new(struct s_object *self, struct s_object *factory)
     d_assert(attributes->camera = f_camera_new(d_new(camera), e_environment_surface_primary));
     d_assert(attributes->puppeteer = f_puppeteer_new(d_new(puppeteer), factory, f_director_validator));
     d_assert(attributes->effecteer = f_effecteer_new(d_new(effecteer), factory));
+    d_assert(attributes->stagecrafter = f_stagecrafter_new(d_new(stagecrafter), factory));
     return self;
 }
 
@@ -134,6 +134,7 @@ d_define_method(director, update)(struct s_object *self) {
     d_using(director);
     struct s_factory_attributes *factory_attributes = d_cast(director_attributes->factory, factory);
     struct s_director_action *current_action;
+    d_call(director_attributes->stagecrafter, m_stagecrafter_update, NULL);
     d_call(director_attributes->camera, m_camera_update, factory_attributes->environment);
     if (time(NULL) > director_attributes->alive)
         if ((current_action = (struct s_director_action *)director_attributes->actions_pool.head)) {
@@ -164,6 +165,7 @@ d_define_method(director, linker)(struct s_object *self, struct s_object *script
     d_call(script, m_lisp_extend_environment, "director_camera_follow", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_camera_follow));
     d_call(director_attributes->puppeteer, m_puppeteer_linker, script);
     d_call(director_attributes->effecteer, m_effecteer_linker, script);
+    d_call(director_attributes->stagecrafter, m_stagecrafter_linker, script);
     return self;
 }
 
@@ -178,6 +180,9 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
         case e_director_action_effecteer:
             d_call(director_attributes->effecteer, m_effecteer_dispatcher, &(action->action.effect));
             break;
+        case e_director_action_stagecrafter:
+            d_call(director_attributes->stagecrafter, m_stagecrafter_dispatcher, &(action->action.landscape));
+            break;
         case e_director_action_service_sleep:               /* timeout */
             director_attributes->alive = time(NULL) + action->action.delay;
             result = self;
@@ -189,7 +194,6 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
             d_log(e_log_level_medium, "action [camera_move] (position_x %.02f | position_y %.02f | position_z %.02f)", action->action.camera_move.position_x,
                     action->action.camera_move.position_y, action->action.camera_move.position_z);
             factory_attributes = d_cast(director_attributes->factory, factory);
-            d_call(director_attributes->puppeteer, m_puppeteer_set_main_character, NULL);
             d_call(director_attributes->camera, m_camera_move_position, action->action.camera_move.position_x, action->action.camera_move.position_y,
                     action->action.camera_move.position_z, factory_attributes->environment);
             break;
@@ -212,6 +216,7 @@ d_define_method(director, delete)(struct s_object *self, struct s_director_attri
     d_delete(attributes->factory);
     d_delete(attributes->puppeteer);
     d_delete(attributes->effecteer);
+    d_delete(attributes->stagecrafter);
     while ((current_action = (struct s_director_action *)attributes->actions_pool.head)) {
         f_list_delete(&(attributes->actions_pool), (struct s_list_node *)current_action);
         d_free(current_action);
