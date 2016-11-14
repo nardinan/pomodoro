@@ -91,11 +91,17 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
     struct s_director_attributes *director_attributes = d_cast(director, director);
     struct s_factory_attributes *factory_attributes = d_cast(director_attributes->factory, factory);
     struct s_environment_attributes *environment_attributes = d_cast(factory_attributes->environment, environment);
+    struct s_character_attributes *character_attributes = d_cast(self, character);
+    struct s_landscape_item *current_item;
     struct s_object *current_landscape;
     if ((current_landscape = d_call(director_attributes->stagecrafter, m_stagecrafter_get_main_landscape, NULL)))
-        d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, 
+        if ((current_item = d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, 
                 environment_attributes->camera_origin_x[environment_attributes->current_surface],
-                environment_attributes->camera_origin_y[environment_attributes->current_surface]);
+                environment_attributes->camera_origin_y[environment_attributes->current_surface])))
+            if ((current_item->script[0]) && (character_attributes->action)) {
+                d_call(director, m_director_run_script, current_item->script);
+                character_attributes->action = d_false;
+            }
     return d_true;
 }
 

@@ -79,6 +79,8 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
                                 d_call(current_item->item, m_item_load, item_json, factory);
                                 d_call(current_item->item, m_drawable_set_center, (0.0 - current_item->position_x), (0.0 - current_item->position_y)); /* reset the zoom-on-ROI */
                                 d_call(current_item->item, m_drawable_set_zoom, (item_zoom * status_zoom));
+                                if ((d_call(json, m_json_get_string, &string_supply, "sds", "items", index_item, "script")))
+                                    strncpy(current_item->script, string_supply, d_resources_key_size);
                                 if ((d_call(json, m_json_get_string, &string_supply, "sds", "items", index_item, "status")))
                                     d_call(current_item->item, m_entity_set_component, string_supply);
                                 if ((d_call(json, m_json_get_boolean, &solid, "sds", "items", index_item, "solid")))
@@ -219,8 +221,8 @@ d_define_method(landscape, floor)(struct s_object *self, double position_x, doub
 d_define_method(landscape, validator)(struct s_object *self, struct s_object *entity, double current_x, double current_y, double *new_x, double *new_y,
         double camera_offset_x, double camera_offset_y) {
     d_using(landscape);
+    struct s_landscape_item *current_item, *selected_item = NULL;
     struct s_item_attributes *item_attributes;
-    struct s_landscape_item *current_item;
     double entity_position_x, entity_position_y, item_position_x, item_position_y, final_distance;
     if (entity) {
         d_call(entity, m_drawable_get_scaled_principal_point, &entity_position_x, &entity_position_y);
@@ -229,20 +231,20 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
             if ((final_distance = d_point_square_distance(entity_position_x, entity_position_y, item_position_x, item_position_y)) < 
                     d_landscape_item_max_square_distance)
                 if ((intptr_t)d_call(current_item->item, m_item_collision, entity)) {
+                    item_attributes = d_cast(current_item->item, item);
+                    if (item_attributes->active)
+                        selected_item = current_item;
                     item_position_x += camera_offset_x;
                     item_position_y += camera_offset_y;
-                    /* special case when distance(current_x, current_y) < distance(new_x, new_y) then new_x and new_y are authorized */
                     if ((d_point_square_distance(current_x, current_y, item_position_x, item_position_y) >=
-                                d_point_square_distance(*new_x, *new_y, item_position_x, item_position_y))) {
-                        item_attributes = d_cast(current_item->item, item);
+                                d_point_square_distance(*new_x, *new_y, item_position_x, item_position_y)))
                         if (item_attributes->solid)
                             *new_x = current_x;
-                    }
                 }
         }
     }
     d_call(self, m_landscape_floor, *new_x, new_y);
-    return self;
+    d_cast_return(selected_item);
 }
 
 d_define_method(landscape, update)(struct s_object *self, struct s_object *environment) {

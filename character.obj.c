@@ -44,6 +44,7 @@ struct s_object *f_character_new(struct s_object *self, const char *key, t_entit
     d_call(self, m_controllable_add_configuration, SDLK_RIGHT,  p_character_move_right, p_character_move_right, d_true);
     d_call(self, m_controllable_add_configuration, SDLK_UP,     p_character_move_up,    p_character_move_up,    d_true);
     d_call(self, m_controllable_add_configuration, SDLK_DOWN,   p_character_move_down,  p_character_move_down,  d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_SPACE,  p_character_action,     p_character_action,     d_true);
     attributes->direction = e_character_direction_down;
     attributes->set = d_true;
     return self;
@@ -213,6 +214,13 @@ d_define_method(character, move_down)(struct s_object *self, struct s_controllab
     return self;
 }
 
+d_define_method(character, action)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
+    d_using(character);
+    if (pressed)
+        character_attributes->action = d_true;
+    return self;
+}
+
 d_define_method(character, say)(struct s_object *self, const char *message, time_t timeout) {
     d_using(character);
     if (character_attributes->bubble)
@@ -279,6 +287,7 @@ d_define_class(character) {
         d_hook_method(character, e_flag_public, move_right),
         d_hook_method(character, e_flag_public, move_up),
         d_hook_method(character, e_flag_public, move_down),
+        d_hook_method(character, e_flag_public, action),
         d_hook_method(character, e_flag_public, say),
         d_hook_method(character, e_flag_public, move),
         d_hook_method_override(character, e_flag_public, drawable, draw),

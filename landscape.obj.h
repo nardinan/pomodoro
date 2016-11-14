@@ -31,7 +31,7 @@ typedef struct s_landscape_point { d_list_node_head;
     double position_x, position_y;
 } s_landscape_point;
 typedef struct s_landscape_item { d_list_node_head;
-    char label[d_entity_label_size];
+    char label[d_entity_label_size], script[d_resources_key_size];
     struct s_object *item;
     double position_x, position_y;
     int layer;
