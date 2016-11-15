@@ -3,8 +3,8 @@
 (define say
 	(lambda (c m)
 		(begin
-			(puppeteer_say c m 1)
-			(director_wait 1)
+			(puppeteer_say c m 2)
+			(director_wait 2)
 		)
 	)
 )
@@ -25,6 +25,7 @@
 		)
 	)
 )
+
 (stagecrafter_show "canama")
 (puppeteer_show "andrea" 200)
 (puppeteer_show "andrii" 800)
@@ -44,11 +45,13 @@
 
 (director_wait 1)
 
-(effecteer_stop "expl1")
-(effecteer_stop "expl2")
 
-(director_script "restore_environment")
 (director_wait 10)
 (stagecrafter_unlock_item "canama_wall_B")
 (director_wait 10)
 (stagecrafter_lock_item "canama_wall_B")
+
+(effecteer_stop "expl1")
+(effecteer_stop "expl2")
+
+(director_script "restore_environment")

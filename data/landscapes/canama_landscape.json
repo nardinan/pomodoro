@@ -26,7 +26,7 @@
 	"items":[
 		{"label":"canama_wall_B",	"item":"canama_wall", 		"status":"still",	"position_x":2160.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":true},
 		{"label":"canama_wall_C",	"item":"canama_wall",		"status":"still",	"position_x":1680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},	
-		{"label":"sink_A",			"item":"sink_A", 			"status":"droplet", "position_x":1505.0, 	"position_y":1010.0, 	"zoom":1.25},
+		{"label":"sink_A",			"item":"sink_A", 			"status":"droplet", "position_x":1505.0, 	"position_y":1010.0, 	"zoom":1.25, 	"script":"sink_A_script"},
 		{"label":"oven_A",			"item":"oven_A",			"status":"flame",	"position_x":1245.0, 	"position_y":750.0, 	"zoom":1.25},
 		{"label":"fridge_A",		"item":"fridge_A",			"status":"still",	"position_x":970.0, 	"position_y":750.0, 	"zoom":1.25},
 		{"label":"shelf_A",			"item":"shelf_A",			"status":"still",	"position_x":735.0, 	"position_y":870.0, 	"zoom":1.25},
