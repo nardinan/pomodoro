@@ -98,10 +98,9 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
         if ((current_item = d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, 
                 environment_attributes->camera_origin_x[environment_attributes->current_surface],
                 environment_attributes->camera_origin_y[environment_attributes->current_surface])))
-            if ((current_item->script[0]) && (character_attributes->action)) {
+            if ((current_item->script[0]) && (character_attributes->action))
                 d_call(director, m_director_run_script, current_item->script);
-                character_attributes->action = d_false;
-            }
+    character_attributes->action = d_false;
     return d_true;
 }
 
@@ -135,7 +134,7 @@ d_define_method(director, new_action)(struct s_object *self, enum e_director_act
 d_define_method(director, push_action)(struct s_object *self, struct s_director_action *action) {
     d_using(director);
     action->pushing_time = time(NULL);
-    f_list_append(&(director_attributes->actions_pool), (struct s_list_node *)action, e_list_insert_tail);
+    f_list_append(&(director_attributes->actions_pool[director_attributes->current_pool]), (struct s_list_node *)action, e_list_insert_tail);
     return self;
 }
 
@@ -143,14 +142,18 @@ d_define_method(director, update)(struct s_object *self) {
     d_using(director);
     struct s_factory_attributes *factory_attributes = d_cast(director_attributes->factory, factory);
     struct s_director_action *current_action;
+    int index;
     d_call(director_attributes->stagecrafter, m_stagecrafter_update, NULL);
     d_call(director_attributes->camera, m_camera_update, factory_attributes->environment);
-    if (time(NULL) > director_attributes->alive)
-        if ((current_action = (struct s_director_action *)director_attributes->actions_pool.head)) {
-            f_list_delete(&(director_attributes->actions_pool), (struct s_list_node *)current_action);
-            current_action->execution_time = time(NULL);
-            d_call(self, m_director_dispatcher, current_action);
-            d_free(current_action);
+    for (index = 0; index < e_director_pool_level_NULL; ++index)
+        if ((current_action = (struct s_director_action *)director_attributes->actions_pool[index].head)) {
+            if (!current_action->execution_time)
+                current_action->execution_time = time(NULL);
+            if ((current_action->type != e_director_action_service_sleep) || ((current_action->execution_time + current_action->action.delay) < time(NULL))) {
+                f_list_delete(&(director_attributes->actions_pool[index]), (struct s_list_node *)current_action);
+                d_call(self, m_director_dispatcher, current_action);
+                d_free(current_action);
+            }
         }
     return self;
 }
@@ -159,6 +162,9 @@ d_define_method(director, run_script)(struct s_object *self, const char *label) 
     d_using(director);
     struct s_object *current_script;
     if ((current_script = d_call(director_attributes->factory, m_factory_get_script, label))) {
+        for (director_attributes->current_pool = 0; director_attributes->current_pool < e_director_pool_level_NULL; ++director_attributes->current_pool)
+            if (!director_attributes->actions_pool[director_attributes->current_pool].head)
+                break;
         d_call(self, m_director_linker, current_script);
         d_call(current_script, m_lisp_run, NULL);
         d_delete(current_script);
@@ -181,7 +187,6 @@ d_define_method(director, linker)(struct s_object *self, struct s_object *script
 d_define_method(director, dispatcher)(struct s_object *self, struct s_director_action *action) {
     d_using(director);
     struct s_factory_attributes *factory_attributes;
-    struct s_object *result = NULL;
     switch (action->type) {
         case e_director_action_puppeteer:
             d_call(director_attributes->puppeteer, m_puppeteer_dispatcher, &(action->action.character));
@@ -191,10 +196,6 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
             break;
         case e_director_action_stagecrafter:
             d_call(director_attributes->stagecrafter, m_stagecrafter_dispatcher, &(action->action.landscape));
-            break;
-        case e_director_action_service_sleep:               /* timeout */
-            director_attributes->alive = time(NULL) + action->action.delay;
-            result = self;
             break;
         case e_director_action_service_script:              /* label (script name) */
             d_call(self, m_director_run_script, action->action.label);
@@ -221,15 +222,17 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
 
 d_define_method(director, delete)(struct s_object *self, struct s_director_attributes *attributes) {
     struct s_director_action *current_action;
+    int index;
     d_delete(attributes->camera);
     d_delete(attributes->factory);
     d_delete(attributes->puppeteer);
     d_delete(attributes->effecteer);
     d_delete(attributes->stagecrafter);
-    while ((current_action = (struct s_director_action *)attributes->actions_pool.head)) {
-        f_list_delete(&(attributes->actions_pool), (struct s_list_node *)current_action);
-        d_free(current_action);
-    }
+    for (index = 0; index < e_director_pool_level_NULL; ++index)
+        while ((current_action = (struct s_director_action *)attributes->actions_pool[index].head)) {
+            f_list_delete(&(attributes->actions_pool[index]), (struct s_list_node *)current_action);
+            d_free(current_action);
+        }
     return NULL;
 }
 

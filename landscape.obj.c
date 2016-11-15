@@ -232,7 +232,7 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
                     d_landscape_item_max_square_distance)
                 if ((intptr_t)d_call(current_item->item, m_item_collision, entity)) {
                     item_attributes = d_cast(current_item->item, item);
-                    if (item_attributes->active)
+                    if (item_attributes->active) /* return the latest active item that has been selected */
                         selected_item = current_item;
                     item_position_x += camera_offset_x;
                     item_position_y += camera_offset_y;

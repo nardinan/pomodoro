@@ -54,12 +54,28 @@ typedef struct s_director_action { d_list_node_head;
 } s_director_action;
 extern struct s_lisp_object *p_link_director_sleep(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_script(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_clean(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_camera_move(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_camera_follow(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
+enum e_director_pool_levels {
+    e_director_pool_level_A = 0,
+    e_director_pool_level_B,
+    e_director_pool_level_C,
+    e_director_pool_level_D,
+    e_director_pool_level_E,
+    e_director_pool_level_F,
+    e_director_pool_level_G,
+    e_director_pool_level_H,
+    e_director_pool_level_I,
+    e_director_pool_level_J,
+    e_director_pool_level_K,
+    e_director_pool_level_NULL
+} e_director_pool_levels;
 d_declare_class(director) {
     struct s_attributes head;
-    struct s_list actions_pool;
+    struct s_list actions_pool[e_director_pool_level_NULL];
+    enum e_director_pool_levels current_pool;
     struct s_object *factory;
     struct s_object *camera;
     struct s_object *puppeteer;
