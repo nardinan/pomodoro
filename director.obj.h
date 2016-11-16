@@ -21,6 +21,7 @@
 #include "effecteer.obj.h"
 #include "stagecrafter.obj.h"
 #include "camera.obj.h"
+#include "collector.obj.h"
 extern struct s_object *director;
 /* action definition */
 typedef enum e_director_actions { 
@@ -81,6 +82,7 @@ d_declare_class(director) {
     struct s_object *puppeteer;
     struct s_object *effecteer;
     struct s_object *stagecrafter;
+    struct s_object *collector;
     time_t alive;
 } d_declare_class_tail(director);
 extern t_boolean f_director_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y, 

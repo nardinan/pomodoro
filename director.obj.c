@@ -118,6 +118,7 @@ struct s_object *f_director_new(struct s_object *self, struct s_object *factory)
     d_assert(attributes->puppeteer = f_puppeteer_new(d_new(puppeteer), factory, f_director_validator));
     d_assert(attributes->effecteer = f_effecteer_new(d_new(effecteer), factory));
     d_assert(attributes->stagecrafter = f_stagecrafter_new(d_new(stagecrafter), factory));
+    d_assert(attributes->collector = f_collector_new(d_new(collector)));
     return self;
 }
 
@@ -181,6 +182,7 @@ d_define_method(director, linker)(struct s_object *self, struct s_object *script
     d_call(director_attributes->puppeteer, m_puppeteer_linker, script);
     d_call(director_attributes->effecteer, m_effecteer_linker, script);
     d_call(director_attributes->stagecrafter, m_stagecrafter_linker, script);
+    d_call(director_attributes->collector, m_collector_linker, script);
     return self;
 }
 
@@ -228,6 +230,7 @@ d_define_method(director, delete)(struct s_object *self, struct s_director_attri
     d_delete(attributes->puppeteer);
     d_delete(attributes->effecteer);
     d_delete(attributes->stagecrafter);
+    d_delete(attributes->collector);
     for (index = 0; index < e_director_pool_level_NULL; ++index)
         while ((current_action = (struct s_director_action *)attributes->actions_pool[index].head)) {
             f_list_delete(&(attributes->actions_pool[index]), (struct s_list_node *)current_action);
