@@ -36,6 +36,7 @@ d_declare_class(camera) {
 struct s_camera_attributes *p_camera_alloc(struct s_object *self);
 extern struct s_object *f_camera_new(struct s_object *self, enum e_environment_surfaces surface);
 d_declare_method(camera, move_position)(struct s_object *self, double position_x, double position_y, double position_z, struct s_object *environment);
+d_declare_method(camera, set_position)(struct s_object *self, double position_x, double position_y, double position_z, struct s_object *environment);
 d_declare_method(camera, move_reference)(struct s_object *self, struct s_object *reference, double offset_x, double offset_y, double position_z, 
         struct s_object *environment);
 d_declare_method(camera, chase_reference)(struct s_object *self, struct s_object *reference, double offset_x, double offset_y, double position_z, 

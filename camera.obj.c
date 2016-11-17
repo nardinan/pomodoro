@@ -48,6 +48,23 @@ d_define_method(camera, move_position)(struct s_object *self, double position_x,
     return self;
 }
 
+d_define_method(camera, set_position)(struct s_object *self, double position_x, double position_y, double position_z, struct s_object *environment) {
+    d_using(camera);
+    struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
+    camera_attributes->destination_x = (position_x - (environment_attributes->current_w / 2.0));
+    camera_attributes->destination_y = (position_y - (environment_attributes->current_h / 2.0));
+    if (position_z == position_z)
+        camera_attributes->destination_z = position_z;
+    camera_attributes->starting_x = camera_attributes->destination_x;
+    camera_attributes->starting_y = camera_attributes->destination_y;
+    camera_attributes->starting_z = camera_attributes->destination_z;
+    camera_attributes->distance_xy = 0.0;
+    d_call(environment, m_environment_set_camera, camera_attributes->destination_x, camera_attributes->destination_y, camera_attributes->surface);
+    d_call(environment, m_environment_set_zoom, camera_attributes->destination_z, camera_attributes->surface);
+    return self;
+}
+
+
 d_define_method(camera, move_reference)(struct s_object *self, struct s_object *reference, double offset_x, double offset_y, double position_z,
         struct s_object *environment) {
     double position_x, position_y;
@@ -136,6 +153,7 @@ d_define_method(camera, delete)(struct s_object *self, struct s_camera_attribute
 
 d_define_class(camera) {
     d_hook_method(camera, e_flag_public, move_position),
+        d_hook_method(camera, e_flag_public, set_position),
         d_hook_method(camera, e_flag_public, move_reference),
         d_hook_method(camera, e_flag_public, chase_reference),
         d_hook_method(camera, e_flag_public, set_speed),

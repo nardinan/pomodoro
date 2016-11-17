@@ -34,6 +34,7 @@ void p_link_director(enum e_director_actions type, ...) {
                     strncpy(action->action.label, argument->value_string, d_resources_key_size);
                 break;
             case e_director_action_service_camera_move:
+            case e_director_action_service_camera_set:
                 action->action.camera_move.position_z = 1.0;
                 if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
                     action->action.camera_move.position_x = argument->value_double;
@@ -77,6 +78,12 @@ struct s_lisp_object *p_link_director_script(struct s_object *self, struct s_lis
 struct s_lisp_object *p_link_director_camera_move(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_director(e_director_action_service_camera_move, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_director_camera_set(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_director(e_director_action_service_camera_set, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -178,6 +185,7 @@ d_define_method(director, linker)(struct s_object *self, struct s_object *script
     d_call(script, m_lisp_extend_environment, "director_wait", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_sleep));
     d_call(script, m_lisp_extend_environment, "director_script", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_script));
     d_call(script, m_lisp_extend_environment, "director_camera_move", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_camera_move));
+    d_call(script, m_lisp_extend_environment, "director_camera_set", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_camera_set));
     d_call(script, m_lisp_extend_environment, "director_camera_follow", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_camera_follow));
     d_call(director_attributes->puppeteer, m_puppeteer_linker, script);
     d_call(director_attributes->effecteer, m_effecteer_linker, script);
@@ -207,6 +215,13 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
                     action->action.camera_move.position_y, action->action.camera_move.position_z);
             factory_attributes = d_cast(director_attributes->factory, factory);
             d_call(director_attributes->camera, m_camera_move_position, action->action.camera_move.position_x, action->action.camera_move.position_y,
+                    action->action.camera_move.position_z, factory_attributes->environment);
+            break;
+        case e_director_action_service_camera_set:          /* destination_x, destination_y, destination_z */
+            d_log(e_log_level_medium, "action [camera_set] (position_x %.02f | position_y %.02f | position_z %.02f)", action->action.camera_move.position_x,
+                    action->action.camera_move.position_y, action->action.camera_move.position_z);
+            factory_attributes = d_cast(director_attributes->factory, factory);
+            d_call(director_attributes->camera, m_camera_set_position, action->action.camera_move.position_x, action->action.camera_move.position_y,
                     action->action.camera_move.position_z, factory_attributes->environment);
             break;
         case e_director_action_service_camera_follow:       /* key (character), destination_z */

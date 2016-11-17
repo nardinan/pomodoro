@@ -31,6 +31,7 @@ typedef enum e_director_actions {
     e_director_action_service_sleep,
     e_director_action_service_script,
     e_director_action_service_camera_move,
+    e_director_action_service_camera_set,
     e_director_action_service_camera_follow
 } e_director_actions;
 typedef struct s_director_action_camera_move {
@@ -57,6 +58,7 @@ extern struct s_lisp_object *p_link_director_sleep(struct s_object *self, struct
 extern struct s_lisp_object *p_link_director_script(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_clean(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_camera_move(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_camera_set(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_camera_follow(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
 enum e_director_pool_levels {
