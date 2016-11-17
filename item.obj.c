@@ -124,23 +124,26 @@ d_define_method_override(item, set_component)(struct s_object *self, char *label
     struct s_animation_attributes *animation_attributes;
     struct s_entity_element *current_element;
     struct s_item_track *current_track;
-    struct s_object *result = d_call_owner(self, entity, m_entity_set_component, label);
-    if (entity_attributes->current_component)
-        d_foreach(&(entity_attributes->current_component->elements), current_element, struct s_entity_element)
-            if ((animation_attributes = d_cast(current_element->drawable, animation))) {
-                d_call(current_element->drawable, m_animation_set_status, e_animation_direction_stop);
-                d_call(current_element->drawable, m_animation_set_status, e_animation_direction_forward);
-            }
+    struct s_object *result = self;
     if (item_attributes->current_track) {
         d_call(item_attributes->current_track->track, m_track_stop, NULL);
         item_attributes->current_track = NULL;
     }
-    d_foreach(&(item_attributes->tracks), current_track, struct s_item_track)
-        if (f_string_strcmp(current_track->label, label) == 0) {
-            item_attributes->current_track = current_track;
-            d_call(item_attributes->current_track->track, m_track_play, d_true);
-            break;
-        }
+    if (label) {
+        result = d_call_owner(self, entity, m_entity_set_component, label);
+        if (entity_attributes->current_component)
+            d_foreach(&(entity_attributes->current_component->elements), current_element, struct s_entity_element)
+                if ((animation_attributes = d_cast(current_element->drawable, animation))) {
+                    d_call(current_element->drawable, m_animation_set_status, e_animation_direction_stop);
+                    d_call(current_element->drawable, m_animation_set_status, e_animation_direction_forward);
+                }
+        d_foreach(&(item_attributes->tracks), current_track, struct s_item_track)
+            if (f_string_strcmp(current_track->label, label) == 0) {
+                item_attributes->current_track = current_track;
+                d_call(item_attributes->current_track->track, m_track_play, d_true);
+                break;
+            }
+    }
     return result;
 }
 
