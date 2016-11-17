@@ -30,7 +30,7 @@ typedef struct s_bubble_message { d_list_node_head;
 typedef struct s_bubble_component { d_list_node_head;
     char content[d_bubble_characters_per_line + 1];
     struct s_object *component;
-    double offset_y, offset_x;
+    double offset_y, offset_x, width, height;
 } s_bubble_component;
 d_declare_class(bubble) {
     struct s_attributes head;
@@ -38,6 +38,7 @@ d_declare_class(bubble) {
     struct s_bubble_message *current_element;
     struct s_object *factory;
     struct s_object *drawables[e_uiable_component_NULL];
+    double maximum_width;
     int font_style;
     time_t last_update;
     unsigned int mask_R, mask_G, mask_B, mask_A;

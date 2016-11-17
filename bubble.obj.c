@@ -120,6 +120,8 @@ d_define_method(bubble, skip)(struct s_object *self) {
     }
     d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component) {
         label_attributes = d_cast(current_component->component, label);
+        current_component->width = label_attributes->last_width;
+        current_component->height = label_attributes->last_height;
         if (label_attributes->last_width > maximum_width)
             maximum_width = label_attributes->last_width;
         if (((struct s_list_node *)current_component)->back == NULL) {
@@ -154,6 +156,7 @@ d_define_method(bubble, skip)(struct s_object *self) {
             d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_right], e_uiable_mode_active, 
                     e_uiable_component_right);
     }
+    bubble_attributes->maximum_width = maximum_width;
     d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component)
         d_call(current_component->component, m_drawable_set_dimension_w, maximum_width);
     return self;

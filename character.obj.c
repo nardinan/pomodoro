@@ -242,6 +242,7 @@ d_define_method(character, move)(struct s_object *self, double destination_x) {
 d_define_method_override(character, draw)(struct s_object *self, struct s_object *environment) {
     d_using(character);
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
+    struct s_bubble_attributes *bubble_attributes;
     struct s_drawable_attributes *drawable_attributes_self = d_cast(self, drawable),
                                  *drawable_attributes_bubble;
     double position_x, position_y, bubble_position_x, bubble_position_y;
@@ -253,9 +254,13 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         character_attributes->source_x = character_attributes->destination_x;
     }
     if (character_attributes->bubble) {
+        bubble_attributes = d_cast(character_attributes->bubble, bubble);
         drawable_attributes_bubble = d_cast(character_attributes->bubble, drawable);
         bubble_position_x = position_x + (character_attributes->bubble_offset_x * drawable_attributes_self->zoom);
         bubble_position_y = position_y + (character_attributes->bubble_offset_y * drawable_attributes_self->zoom);
+        if (((bubble_position_x + bubble_attributes->maximum_width) - environment_attributes->camera_origin_x[environment_attributes->current_surface]) >
+                environment_attributes->current_w)
+            bubble_position_x -= bubble_attributes->maximum_width;
         d_call(character_attributes->bubble, m_drawable_set_position, bubble_position_x, bubble_position_y);
         drawable_attributes_bubble->angle = drawable_attributes_self->angle;
         drawable_attributes_bubble->zoom = drawable_attributes_self->zoom;
