@@ -80,7 +80,8 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
     enum e_drawable_flips flip;
     char *string_supply;
     t_boolean animation_flip_x = d_false, animation_flip_y = d_false, frame_flip_x, frame_flip_y;
-    double offset_x, offset_y, zoom, time, time_ratio = 1.0, cycles = d_animation_infinite_loop;
+    double offset_x, offset_y, zoom, time, time_ratio = 1.0, mask_R = 255.0, mask_G = 255.0, mask_B = 255.0, mask_A = 255.0, 
+           cycles = d_animation_infinite_loop;
     int index = 0;
     if ((stream = d_call(factory_attributes->resources_json, m_resources_get_stream_strict, label, e_resources_type_common)))
         if ((json = f_json_new_stream(d_new(json), stream))) {
@@ -90,7 +91,13 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
                     d_call(json, m_json_get_double, &cycles, "s", "cycles");
                     d_call(json, m_json_get_boolean, &animation_flip_x, "s", "flip_x");
                     d_call(json, m_json_get_boolean, &animation_flip_y, "s", "flip_y");
+                    d_call(json, m_json_get_double, &mask_R, "s", "mask_R");
+                    d_call(json, m_json_get_double, &mask_G, "s", "mask_G");
+                    d_call(json, m_json_get_double, &mask_B, "s", "mask_B");
+                    d_call(json, m_json_get_double, &mask_A, "s", "mask_A");
                     if ((result = f_animation_new(d_new(animation), (int)cycles, time_ratio))) {
+                        d_call(result, m_drawable_set_maskRGB, (unsigned int)mask_R, (unsigned int)mask_G, (unsigned int)mask_B);
+                        d_call(result, m_drawable_set_maskA, (unsigned int)mask_A);
                         while ((d_call(json, m_json_get_string, &string_supply, "sds", "frames", index, "drawable"))) {
                             offset_x = 0.0;
                             offset_y = 0.0;
@@ -114,9 +121,10 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
                                 else
                                     flip = e_drawable_flip_none;
                                 d_call(bitmap, m_drawable_flip, flip);
-                                d_call(result, m_animation_append_frame, bitmap, offset_x, offset_y, zoom, time);
-                                d_delete(bitmap);
                             }
+                            d_call(result, m_animation_append_frame, bitmap, offset_x, offset_y, zoom, time);
+                            if (bitmap)
+                                d_delete(bitmap);
                             ++index;
                         }
                     } else 
