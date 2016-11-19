@@ -1,0 +1,19 @@
+{
+	"format":"animation",
+	"cycles":1,
+	"frames":[
+		{"drawable":"fade_frame0",  "time":0.2},
+		{"drawable":"fade_frame1",  "time":0.2},
+		{"drawable":"fade_frame2",  "time":0.2},
+		{"drawable":"fade_frame3",  "time":0.2},
+		{"drawable":"fade_frame4",  "time":0.2},
+		{"drawable":"fade_frame5",  "time":0.2},
+		{"drawable":"fade_frame6",  "time":0.2},
+		{"drawable":"fade_frame7",	"time":0.2},
+		{"drawable":"fade_frame8",	"time":0.2},
+		{"drawable":"fade_frame9",	"time":0.2},
+		{"drawable":"fade_frame10",	"time":0.2},
+		{"drawable":"fade_frame11",	"time":0.2},
+		{"drawable":"fade_frame12",	"time":0.2},
+	]
+}

@@ -32,3 +32,8 @@
 (say "andrea" "yeah, you know ... I don't really want to clean this mess ...")
 (animation "andrea" "front")
 (main_control "andrea")
+(define final_value (collector_get "status_finale"))
+(define total_value (collector_get "status_andrea"))
+(print final_value)
+(print "passione")
+(print total_value)

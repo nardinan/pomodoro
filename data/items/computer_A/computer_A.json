@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"computer_A",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"computer_A_still"}
+			]
+		}
+	]
+}
