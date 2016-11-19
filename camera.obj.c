@@ -133,7 +133,7 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
             d_camera_round(camera_attributes->destination_y, final_position_y, 1.0);
             d_camera_round(camera_attributes->destination_z, final_position_z, 0.001);
             if ((camera_attributes->destination_x == final_position_x) &&
-                    (camera_attributes->destination_y = final_position_y) &&
+                    (camera_attributes->destination_y == final_position_y) &&
                     (camera_attributes->destination_z == final_position_z))
                 camera_attributes->distance_xy = 0;
             d_call(environment, m_environment_set_camera, final_position_x, final_position_y, camera_attributes->surface);
