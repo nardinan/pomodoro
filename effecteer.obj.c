@@ -165,7 +165,7 @@ d_define_method(effecteer, delete_effect)(struct s_object *self, const char *key
     if ((current_effect = (struct s_effecteer_effect *)d_call(self, m_effecteer_get_effect, key))) {
         f_list_delete(&(effecteer_attributes->components), (struct s_list_node *)current_effect);
         d_call(factory_attributes->environment, m_environment_del_drawable, current_effect->drawable, current_effect->layer,
-                (current_effect->absolute)?e_environment_surface_primary:e_environment_surface_ui);
+                (current_effect->absolute)?e_environment_surface_ui:e_environment_surface_primary);
         d_delete(current_effect->drawable);
         d_free(current_effect);
     }
@@ -198,7 +198,7 @@ d_define_method(effecteer, dispatcher)(struct s_object *self, struct s_effecteer
             break;
         case e_effecteer_action_delete:         /* key (effect) */
             d_log(e_log_level_medium, "action [delete] (effect %s)", action->key);
-            result = d_call(self, m_effecteer_stop_effect, action->key);
+            result = d_call(self, m_effecteer_delete_effect, action->key);
             break;
     }
     return self;
