@@ -82,16 +82,21 @@ int pomodoro_quit_call(struct s_object *environment) {
 int main (int argc, char *argv[]) {
     struct s_exception *exception;
     struct s_object *environment;
+    t_boolean fullscreen = d_false;
     d_pool_init;
     v_log_level = e_log_level_medium;
     if ((argc > 1) && (f_string_strcmp(argv[1], "-developer") == 0)) {
         d_war(e_log_level_ever, "developer mode has been enabled");
         v_developer_mode = d_true;
     }
+    if ((argc > 1) && (f_string_strcmp(argv[1], "-fullscreen") == 0)) {
+        d_war(e_log_level_ever, "fullscreen mode has been enabled");
+        fullscreen = d_true;
+    }
     d_pool_begin("main context") {
         /* wait the unlock */
         d_try {
-            environment = f_environment_new_fullscreen(d_new(environment), d_pomodoro_width, d_pomodoro_height, d_false);
+            environment = f_environment_new_fullscreen(d_new(environment), d_pomodoro_width, d_pomodoro_height, fullscreen);
             d_call(environment, m_environment_set_methods, &pomodoro_load_call, &pomodoro_loop_call, &pomodoro_quit_call);
             d_call(environment, m_environment_set_reference, d_pomodoro_width, d_pomodoro_height, e_environment_surface_primary);
             d_call(environment, m_environment_set_reference, d_pomodoro_width, d_pomodoro_height, e_environment_surface_ui);
