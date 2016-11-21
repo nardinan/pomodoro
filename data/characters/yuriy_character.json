@@ -163,9 +163,9 @@
 				"offset_y":0,
 				"flip_x":true,
 				"flip_y":false,
-				"mask_R":60,
+				"mask_R":230,
 				"mask_G":255,
-				"mask_B":60,
+				"mask_B":255,
 				"mask_A":255
 			},
 			"body":{
@@ -232,9 +232,9 @@
 				"offset_y":0,
 				"flip_x":false,
 				"flip_y":false,
-				"mask_R":60,
+				"mask_R":230,
 				"mask_G":255,
-				"mask_B":60,
+				"mask_B":255,
 				"mask_A":255
 			},
 			"body":{
@@ -301,9 +301,9 @@
 				"offset_y":0,
 				"flip_x":true,
 				"flip_y":false,
-				"mask_R":60,
+				"mask_R":230,
 				"mask_G":255,
-				"mask_B":60,
+				"mask_B":255,
 				"mask_A":255
 			},
 			"body":{
@@ -369,9 +369,9 @@
 				"offset_y":0,
 				"flip_x":true,
 				"flip_y":false,
-				"mask_R":60,
+				"mask_R":230,
 				"mask_G":255,
-				"mask_B":60,
+				"mask_B":255,
 				"mask_A":255
 			},
 			"body":{
@@ -437,9 +437,9 @@
 				"offset_y":0,
 				"flip_x":false,
 				"flip_y":false,
-				"mask_R":60,
+				"mask_R":230,
 				"mask_G":255,
-				"mask_B":60,
+				"mask_B":255,
 				"mask_A":255
 			},
 			"body":{

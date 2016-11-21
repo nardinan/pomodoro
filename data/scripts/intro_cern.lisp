@@ -1,10 +1,144 @@
 ; Pomodoro
-; this script restores the environment after an action
+; Module: intro_cern
+; Author: nardinan
+; Date  : 20 Nov 2016
+; This module contains the intro of the CERN scenario (which actually is the intro of the game itself)
+
+; Dialogs
+(define language 1) ; temporary
+(define dialogs (list 
+	(cons ;0 andrii
+ 	 "Dilution magnets are now operative and ready to prevent a catastophic scenario"
+	 "I magneti di diluizione sono operativi e pronti a prevenire una possibile catastrofe")
+	(cons ;1 yuriy
+	 "That's great"
+	 "Fantastico")
+	(cons ;2 yuriy
+	 "Dr. Tykhonov, could you please disable the secutiry grids?"
+	 "Dr. Tykhonov, puo' cortesemente disabilitare le griglie di sicurezza?")
+	(cons ;3 andrii
+	 "Dr. Tykhonov?"
+	 "Dr. Tykhonov?")
+	(cons ;4 andrii
+	 "Why Dr. Tykhonov?"
+	 "Perche' Dr. Tykhonov?")
+	(cons ;5 yuriy
+	 "Uhm, I'm bored"
+	 "Uhm, Cosi'")
+	(cons ;6 andrii
+	 "By the way ..."
+	 "Comunque ...")
+	(cons ;7 andrii
+	 "I don't think we should disable the security grids, Yuriy"
+	 "Non credo sia saggio disabilitare le griglie di sicurezza, Yuriy")
+	(cons ;8 andrii
+	 "Is too risky ..."
+	 "E' troppo pericoloso")
+	(cons ;9 yuriy
+	 "Oh, please ..."
+	 "Oh, per favore ...")
+	(cons ;10 andrii
+	 "Fine"
+	 "Va bene")
+	(cons ;11 andrii
+	 "Security grids have been disabled, Dr. Ilchenko"
+	 "Le griglie di sicurezza sono state disabilitate, Dr. Ilchenko")
+	(cons ;12 yuriy
+	 "Great"
+	 "Fantastico")
+	(cons ;13 yuriy
+	 "Dr. Ilchenko sounds great by the way!"
+	 "Comunque Dr. Ilchenko suona bene!")
+	(cons ;14 andrii
+	 "Yes, but 'Yuriy' is easier"
+	 "Si ma 'Yuriy' e' piu' semplice")
+	(cons ;15 yuriy
+	 "Uhm"
+	 "Uhm")
+	(cons ;16 yuriy
+	 "LHC is smoking. Is it normal?"
+	 "Del fumo esce dall'LHC. E' normale?")
+	(cons ;17 andrii
+	 "Ehm ... probably we should shut it off right now before it gets worse"
+	 "Ehm ... forse e' il caso di spegnerlo subito prima che la situazione peggiori")
+	(cons ;18 yuriy
+	 "Uh?"
+	 "Uh?")
+	(cons ;19 yuriy
+	 "Worse?"
+	 "Peggiorare?")
+	(cons ;20 yuriy
+	 "It's smoking! How could it be worse?"
+	 "Sta fumando! Come puo' essere peggiore la situazione?")
+	(cons ;21 yuriy
+	 "Oh, I see ..."
+	 "Ah ...")
+	(cons ;22 andrii
+	 "Fuck"
+	 "Cazzo")
+	(cons ;23 andrii
+	 "Shit"
+	 "Merda")
+	(cons ;24 andrii
+	 "Crap"
+	 "Diomatonne(TM)")
+	(cons ;25 andrii
+	 "We are polluting the space-time continuum"
+	 "Stiamo seriamente danneggiando il continuo spazio-temporale")
+	(cons ;26 yuriy
+	 "What?"
+	 "Cosa?")
+	(cons ;27 yuriy
+	 "Space-time continuum?"
+	 "Il continuo spazio-temporale?")
+	(cons ;28 yuriy
+	 "Are you high?"
+	 "Ti sei drogato?")
+	(cons ;29 andrii
+	 "Shut the fuck up!"
+	 "Stai zitto, cazzo!")
+	(cons ;30 andrii
+	 "Jesus Christ, shut the fucking crap up!"
+	 "Gesu' Cristo, smettila di parlare!")
+	(cons ;31 yuriy
+	 "Phew"
+	 "Phew")
+	(cons ;32 yuriy
+	 "Looks better now!"
+	 "Ce l'hai fatta!")
+	(cons ;33 andrii
+	 "Well ... Yes but ..."
+	 "Beh ... Si ma ...")
+	(cons ;34 yuriy
+	 "'But' what?"
+	 "'Ma' cosa?")
+	(cons ;35 andrii
+	 "Probably the energy peak that we saw wasn't casual"
+	 "Probabilmente il picco d'energia che abbiamo visto non era casuale")
+	(cons ;36 yuriy
+	 "So?"
+	 "Quindi?")
+	(cons ;37 andrii
+	 "I think we have changed something, somewhere in the past"
+	 "Penso che abbiamo cambiato qualcosa da qualche parte nel passato")
+	(cons ;38 andrii
+	 "We have changed the history"
+	 "Abbiamo cambiato la storia")
+	(cons ;39 yuriy
+	 "We are still here! Probably was not important"
+	 "Siamo ancora qui! Probabilmente non era nulla di importante")
+	(cons ;40 andrii
+	 "Yep probably you are right. Maybe was not important ..."
+	 "Si, probabilmente hai ragione. Magari non era nulla di importante ...")
+	nil
+))
+
+
 (define say
 	(lambda (c m)
 		(begin
-			(puppeteer_say c m (+ 1 (* (strlen m) 0.1)))
-			(director_wait (+ 1 (* (strlen m) 0.1)))
+			(puppeteer_say c m (+ 1 (* (length m) 0.1)))
+			(director_wait (+ 1 (* (length m) 0.1)))
 		)
 	)
 )
@@ -26,79 +160,111 @@
 	)
 )
 
+(define get_dialog
+	(lambda (d lang n)
+		(begin
+			(if (= n 0)
+				(if (= lang 0)
+					(car (car d))
+					(cdr (car d))
+				)
+				(get_dialog (cdr d) lang (- n 1))
+			)
+		)
+	)
+)
+
 (puppeteer_disable_control)
-
-(puppeteer_show "yuriy" 1350)
-(puppeteer_show "andrii" 2510)
-(animation "andrii" "back_code")
-(animation "yuriy" "back_code")
-
+(puppeteer_show "yuriy" 	1350)
+(puppeteer_show "andrii" 	2510)
+(animation "yuriy" 			"back_code")
+(animation "andrii" 		"back_code")
 (effecteer_add "intro1" "CERN_intro_layer" 1700 1800 3 0 nil nil)
 (director_camera_set 2000 2000)
-(director_wait 3)
-
+(director_wait 2)
 (director_camera_move 2000 500)
-(director_wait 3)
-(effecteer_delete "intro1")
-
+(director_wait 2)
+(effecteer_delete 	"intro1")
 (director_wait 1)
-(say "andrii" "Dilution magnets are now operative and ready to prevent a catasrophic scenario")
-(say "yuriy"  "That's great")
+(say "andrii"	(get_dialog dialogs language 0))
+(say "yuriy"	(get_dialog dialogs language 1))
 (director_wait 1)
-(animation "yuriy" "still_right")
-(say "yuriy" "Dr. Tykhonov, could you please disable the secutiry grids?")
+(animation "yuriy" 	"still_right")
+(say "yuriy"	(get_dialog dialogs language 2))
 (animation "andrii" "back")
 (director_wait 1)
 (animation "andrii" "still_left")
-(say "andrii" "Dr. Tykhonov?")
-(say "andrii" "Why Dr. Tykhonov?")
-(say "yuriy"  "I'm bored")
-(director_wait 2)
-(animation "andrii" "back_code")
+(say "andrii"	(get_dialog dialogs language 3))
+(say "andrii"	(get_dialog dialogs language 4))
+(say "yuriy"  	(get_dialog dialogs language 5))
+(say "andrii" 	(get_dialog dialogs language 6))
+(say "andrii" 	(get_dialog dialogs language 7))
+(say "andrii" 	(get_dialog dialogs language 8))
+(say "yuriy" 	(get_dialog dialogs language 9))
 (director_wait 1)
-(say "andrii" "Security grids have been disabled, Dr. Ilchenko")
-(animation "yuriy" "back_code")
-(say "yuriy" "Great")
-(say "yuriy" "Dr. Ilchenko sounds good by the way")
+(say "andrii" 	(get_dialog dialogs language 10))
+(animation "andrii" "back_code")
+(say "andrii" 	(get_dialog dialogs language 11))
+(animation "yuriy" 	"back_code")
+(say "yuriy" 	(get_dialog dialogs language 12))
+(say "yuriy" 	(get_dialog dialogs language 13))
+(say "andrii" 	(get_dialog dialogs language 14))
 (effecteer_add "smoke1" "smoke_spot_particle" 2050 400 3 0 nil nil)
 (director_wait 1)
 (animation "andrii" "back")
 (animation "yuriy"  "back")
 (director_wait 1)
-(say "yuriy"  "Uhm")
-(animation "yuriy" "still_right")
-(say "yuriy"  "Andrii, the LHC is smoking. Are we overloading it?")
-(director_wait 2)
-(animation "andrii" "back_code")
-(say "andrii" "Ehm ... probably we should shut if off right now before it gets worse")
-(animation "yuriy" "back")
-(say "yuriy"  "Uh?")
-(say "yuriy"  "Worse?")
-(say "yuriy"  "It's smoking! How could it be worse?") 
+(say "yuriy"  	(get_dialog dialogs language 15))
+(animation "yuriy" 	"still_right")
+(say "yuriy"  	(get_dialog dialogs language 16))
+(director_wait 1)
+(animation "andrii"	"back_code")
+(say "andrii" 	(get_dialog dialogs language 17))
+(animation "yuriy" 	"back")
+(say "yuriy"  	(get_dialog dialogs language 18))
+(say "yuriy"  	(get_dialog dialogs language 19))
+(say "yuriy"  	(get_dialog dialogs language 20)) 
 (effecteer_add "fire1" "fire_spot_particle" 2050 400 2 0 nil nil)
+(director_wait 0.5)
 (effecteer_add "redalarm1" "red_alarm_animation" 0 0 3 0 t nil)
 (animation "andrii" "back")
 (director_wait 2)
-(say "yuriy" "Oh, I see ...")
+(say "yuriy" 	(get_dialog dialogs language 21))
 (director_wait 2)
 (puppeteer_move "andrii" 1940)
-(say "andrii" "Fuck")
-(say "andrii" "Shit")
+(say "andrii" 	(get_dialog dialogs language 22))
+(say "andrii" 	(get_dialog dialogs language 23))
 (animation "andrii" "back_code")
-(say "andrii" "Crap")
-(say "andrii" "We are polluting the space-time continuum!")
-(animation "yuriy" "still_right")
-(say "yuriy"  "What?")
-(say "yuriy"  "Space-time continuum?")
-(say "yuriy"  "Are you drunk?")
-(say "andrii" "Shut the fuck up!")
-(say "andrii" "Shut the fucking crap up!")
-(effecteer_stop "fire1")
+(say "andrii" 	(get_dialog dialogs language 24))
+(say "andrii" 	(get_dialog dialogs language 25))
+(animation "yuriy" 	"still_right")
+(say "yuriy"  	(get_dialog dialogs language 26))
+(say "yuriy"  	(get_dialog dialogs language 27))
+(say "yuriy"  	(get_dialog dialogs language 28))
+(say "andrii" 	(get_dialog dialogs language 29))
+(say "andrii" 	(get_dialog dialogs language 30))
+(effecteer_stop 	"fire1")
 (director_wait 1)
-(effecteer_delete "redalarm1")
+(effecteer_delete 	"redalarm1")
+(director_wait 1)
 (animation "yuriy"  "back")
 (animation "andrii" "back")
 (director_wait 1)
-(say "yuriy"  "Looks better")
-(effecteer_stop "smoke1")
-(say "andrii" "Yes, looks a lot better")
+(say "yuriy"	(get_dialog dialogs language 31))
+(say "yuriy"  	(get_dialog dialogs language 32))
+(effecteer_stop 	"smoke1")
+(say "andrii" 	(get_dialog dialogs language 33))
+(animation "yuriy" 	"still_right")
+(say "yuriy" 	(get_dialog dialogs language 34))
+(animation "andrii"	"still_left")
+(say "andrii"	(get_dialog dialogs language 35))
+(say "yuriy"	(get_dialog dialogs language 36))
+(animation "andrii"	"back")
+(say "andrii"	(get_dialog dialogs language 37))
+(say "andrii"	(get_dialog dialogs language 38))
+(animation "yuriy"	"back")
+(director_wait 1)
+(say "yuriy"	(get_dialog dialogs language 39))
+(say "andrii"	(get_dialog dialogs language 40))
+(effecteer_delete 	"fire1")
+(effecteer_delete 	"smoke1")
