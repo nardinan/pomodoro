@@ -5,7 +5,7 @@
 ; This module contains the intro of the CERN scenario (which actually is the intro of the game itself)
 
 ; Dialogs
-(define language 1) ; temporary
+(define language 0) ; temporary
 (define dialogs (list 
 	(cons ;0 andrii
  	 "Dilution magnets are now operative and ready to prevent a catastophic scenario"
@@ -174,6 +174,7 @@
 	)
 )
 
+; Cinematic
 (puppeteer_disable_control)
 (puppeteer_show "yuriy" 	1350)
 (puppeteer_show "andrii" 	2510)
@@ -202,8 +203,9 @@
 (say "andrii" 	(get_dialog dialogs language 8))
 (say "yuriy" 	(get_dialog dialogs language 9))
 (director_wait 1)
-(say "andrii" 	(get_dialog dialogs language 10))
 (animation "andrii" "back_code")
+(say "andrii" 	(get_dialog dialogs language 10))
+(director_wait 1)
 (say "andrii" 	(get_dialog dialogs language 11))
 (animation "yuriy" 	"back_code")
 (say "yuriy" 	(get_dialog dialogs language 12))
@@ -223,9 +225,15 @@
 (animation "yuriy" 	"back")
 (say "yuriy"  	(get_dialog dialogs language 18))
 (say "yuriy"  	(get_dialog dialogs language 19))
-(say "yuriy"  	(get_dialog dialogs language 20)) 
+(say "yuriy"  	(get_dialog dialogs language 20))
+(stagecrafter_set_item "lhc_segment_B" "move")
+(stagecrafter_set_item "lhc_segment_D" "move")
+(director_wait 1)
+(stagecrafter_set_item "lhc_segment_A" "move")
+(stagecrafter_set_item "lhc_segment_C" "move")
+(stagecrafter_set_item "lhc_segment_E" "move")
 (effecteer_add "fire1" "fire_spot_particle" 2050 400 2 0 nil nil)
-(director_wait 0.5)
+(director_wait 1)
 (effecteer_add "redalarm1" "red_alarm_animation" 0 0 3 0 t nil)
 (animation "andrii" "back")
 (director_wait 2)
@@ -243,6 +251,11 @@
 (say "yuriy"  	(get_dialog dialogs language 28))
 (say "andrii" 	(get_dialog dialogs language 29))
 (say "andrii" 	(get_dialog dialogs language 30))
+(stagecrafter_set_item "lhc_segment_A" "still")
+(stagecrafter_set_item "lhc_segment_B" "still")
+(stagecrafter_set_item "lhc_segment_C" "still")
+(stagecrafter_set_item "lhc_segment_D" "still")
+(stagecrafter_set_item "lhc_segment_E" "still")
 (effecteer_stop 	"fire1")
 (director_wait 1)
 (effecteer_delete 	"redalarm1")
@@ -266,5 +279,6 @@
 (director_wait 1)
 (say "yuriy"	(get_dialog dialogs language 39))
 (say "andrii"	(get_dialog dialogs language 40))
+(director_camera_move 2000 -500)
 (effecteer_delete 	"fire1")
 (effecteer_delete 	"smoke1")

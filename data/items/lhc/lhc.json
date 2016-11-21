@@ -8,6 +8,11 @@
 			"layers":[
 				{"drawable":"lhc_still"}
 			]
+		},{
+			"label":"move",
+			"layers":[
+				{"drawable":"lhc_move"}
+			]
 		}
 	]
 }
