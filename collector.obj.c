@@ -78,6 +78,7 @@ struct s_object *f_collector_new(struct s_object *self) {
         }
         fclose(collector_dump);
     }
+    attributes = attributes;
     return self;
 }
 

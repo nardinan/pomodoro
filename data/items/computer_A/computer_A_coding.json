@@ -1,0 +1,13 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"computer_A_coding_frame0",  "time":0.1},
+		{"drawable":"computer_A_coding_frame1",  "time":0.1},
+		{"drawable":"computer_A_coding_frame2",  "time":0.1},
+		{"drawable":"computer_A_coding_frame3",  "time":0.1},
+		{"drawable":"computer_A_coding_frame4",  "time":0.1},
+		{"drawable":"computer_A_coding_frame5",  "time":0.1},
+		{"drawable":"computer_A_coding_frame6",	 "time":0.1}
+	]
+}

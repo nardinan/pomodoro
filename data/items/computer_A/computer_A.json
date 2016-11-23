@@ -8,6 +8,15 @@
 			"layers":[
 				{"drawable":"computer_A_still"}
 			]
+		},{
+			"label":"coding",
+			"track":{
+				"playable":"computer_A_coding",
+				"loops":-1.0
+			},
+			"layers":[
+				{"drawable":"computer_A_coding"}
+			]
 		}
 	]
 }
