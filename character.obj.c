@@ -239,6 +239,15 @@ d_define_method(character, move)(struct s_object *self, double destination_x) {
     return self;
 }
 
+d_define_method_override(character, event)(struct s_object *self, struct s_object *environment, SDL_Event *current_event) {
+    d_using(character);
+    struct s_object *result = NULL;
+    if ((result = d_call_owner(self, controllable, m_eventable_event, environment, current_event)))
+        if (character_attributes->bubble)
+            result = d_call(character_attributes->bubble, m_eventable_event, environment, current_event);
+    return result;
+}
+
 d_define_method_override(character, draw)(struct s_object *self, struct s_object *environment) {
     d_using(character);
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
@@ -295,6 +304,7 @@ d_define_class(character) {
         d_hook_method(character, e_flag_public, action),
         d_hook_method(character, e_flag_public, say),
         d_hook_method(character, e_flag_public, move),
+        d_hook_method_override(character, e_flag_public, eventable, event),
         d_hook_method_override(character, e_flag_public, drawable, draw),
         d_hook_delete(character),
         d_hook_method_tail

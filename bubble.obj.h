@@ -18,14 +18,21 @@
 #ifndef pomodoro_bubble_h
 #define pomodoro_bubble_h
 #include "factory.obj.h"
-#define d_bubble_queue_size 32
 #define d_bubble_message_size 1024
 #define d_bubble_characters_per_line 32
 #define d_bubble_layer_default 10
+#define d_bubble_select_character 0x11
+#define d_bubble_no_value -1
+typedef struct s_bubble_option { d_list_node_head;
+    char content[d_bubble_message_size];
+    int value;
+} s_bubble_option;
 typedef struct s_bubble_message { d_list_node_head;
     char content[d_bubble_message_size];
-    int font_ID;
+    struct s_list options;
+    int font_ID, dialog_ID, selected_option;
     time_t timeout;
+    t_boolean force_kill;
 } s_bubble_message;
 typedef struct s_bubble_component { d_list_node_head;
     char content[d_bubble_characters_per_line + 1];
@@ -35,11 +42,11 @@ typedef struct s_bubble_component { d_list_node_head;
 d_declare_class(bubble) {
     struct s_attributes head;
     struct s_list messages, components;
-    struct s_bubble_message *current_element;
+    struct s_bubble_message *current_element, *last_element;
     struct s_object *factory;
     struct s_object *drawables[e_uiable_component_NULL];
     double maximum_width;
-    int font_style;
+    int font_style, last_value;
     time_t last_update;
     unsigned int mask_R, mask_G, mask_B, mask_A;
 } d_declare_class_tail(bubble);
@@ -48,6 +55,11 @@ extern struct s_object *f_bubble_new(struct s_object *self, struct s_object *fac
         unsigned int alpha, int font_style);
 d_declare_method(bubble, set)(struct s_object *self, struct s_object *drawable, enum e_uiable_components component);
 d_declare_method(bubble, add_message)(struct s_object *self, const char *message, time_t timeout, int font_ID);
+d_declare_method(bubble, add_option)(struct s_object *self, const char *option, int value);
+d_declare_method(bubble, move_up)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
+d_declare_method(bubble, move_down)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
+d_declare_method(bubble, select)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
+d_declare_method(bubble, append_components)(struct s_object *self, char *message, TTF_Font *selected_font, int font_height, struct s_object *environment);
 d_declare_method(bubble, skip)(struct s_object *self);
 d_declare_method(bubble, draw)(struct s_object *self, struct s_object *environment);
 d_declare_method(bubble, delete)(struct s_object *self, struct s_bubble_attributes *attributes);

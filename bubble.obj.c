@@ -21,12 +21,17 @@ struct s_bubble_attributes *p_bubble_alloc(struct s_object *self) {
     f_memory_new(self);                                                                 /* inherit */
     f_mutex_new(self);                                                                  /* inherit */
     f_drawable_new(self, (e_drawable_kind_single|e_drawable_kind_force_visibility));    /* inherit */
+    f_controllable_new(self);                                                           /* inherit */
     return result;
 }
 
 struct s_object *f_bubble_new(struct s_object *self, struct s_object *factory, unsigned int red, unsigned int green, unsigned int blue, unsigned int alpha,
         int font_style) {
     struct s_bubble_attributes *attributes = p_bubble_alloc(self);
+    d_call(self, m_controllable_add_configuration, SDLK_UP,     p_bubble_move_up,       p_bubble_move_up,   d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_DOWN,   p_bubble_move_down,     p_bubble_move_down, d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_SPACE,  p_bubble_select,        p_bubble_select,    d_true);
+    // d_call(self, m_controllable_set, d_true);
     attributes->mask_R = red;
     attributes->mask_G = green;
     attributes->mask_B = blue;
@@ -48,64 +53,88 @@ d_define_method(bubble, add_message)(struct s_object *self, const char *message,
     if ((current_message = (struct s_bubble_message *)d_malloc(sizeof(struct s_bubble_message)))) {
         strncpy(current_message->content, message, d_bubble_message_size);
         current_message->font_ID = font_ID;
-        current_message->timeout = timeout;
+        if ((current_message->timeout = timeout) == 0)
+            current_message->timeout = 1;
         f_list_append(&(bubble_attributes->messages), (struct s_list_node *)current_message, e_list_insert_tail);
-        if (!bubble_attributes->current_element)
-            d_call(self, m_bubble_skip, NULL);
+        bubble_attributes->last_element = current_message;
     } else
         d_die(d_error_malloc);
     return self;
 }
 
-d_define_method(bubble, skip)(struct s_object *self) {
+d_define_method(bubble, add_option)(struct s_object *self, const char *option, int value) {
     d_using(bubble);
-    TTF_Font *selected_font;
-    struct s_factory_attributes *factory_attributes = d_cast(bubble_attributes->factory, factory);
-    struct s_label_attributes *label_attributes;
-    struct s_bubble_component *current_component;
-    char *head_pointer, *next_pointer;
-    double maximum_width = 0.0;
-    int font_height, index = 0;
-    if (bubble_attributes->current_element) {
-        while ((current_component = (struct s_bubble_component *)bubble_attributes->components.head)) {
-            f_list_delete(&(bubble_attributes->components), (struct s_list_node *)current_component);
-            if (current_component->component)
-                d_delete(current_component->component);
-            d_free(current_component);
-        }
-        d_free(bubble_attributes->current_element);
-        bubble_attributes->current_element = NULL;
+    struct s_bubble_option *current_option;
+    if (bubble_attributes->last_element) {
+        bubble_attributes->last_element->timeout = 0; /* will not expire anymore */
+        if ((current_option = (struct s_bubble_option *)d_malloc(sizeof(struct s_bubble_option)))) {
+            strncpy(current_option->content, option, d_bubble_message_size);
+            current_option->value = value;
+            if (!bubble_attributes->last_element->options.head)
+                bubble_attributes->last_element->selected_option = 0;
+            f_list_append(&(bubble_attributes->last_element->options), (struct s_list_node *)current_option, e_list_insert_tail);
+        } else
+            d_die(d_error_malloc);
     }
-    if ((bubble_attributes->current_element = (struct s_bubble_message *)bubble_attributes->messages.head)) {
-        f_list_delete(&(bubble_attributes->messages), (struct s_list_node *)bubble_attributes->current_element);
-        if ((selected_font = (TTF_Font *)d_call(bubble_attributes->factory, m_factory_get_font, bubble_attributes->current_element->font_ID, 
-                        bubble_attributes->font_style, &font_height))) {
-            head_pointer = bubble_attributes->current_element->content;
-            while (f_string_strlen(head_pointer) > d_bubble_characters_per_line) {
-                next_pointer = head_pointer + d_bubble_characters_per_line;
-                while ((next_pointer > head_pointer) && (*next_pointer != ' '))
-                    --next_pointer;
-                if (next_pointer == head_pointer)
-                    next_pointer = head_pointer + d_bubble_characters_per_line;
-                if ((current_component = (struct s_bubble_component *)d_malloc(sizeof(struct s_bubble_component)))) {
-                    strncpy(current_component->content, head_pointer, (next_pointer - head_pointer));
-                    if ((current_component->component = f_label_new(d_new(label), current_component->content, selected_font, 
-                                    factory_attributes->environment))) {
-                        current_component->offset_y = (index * font_height);
-                        d_call(current_component->component, m_drawable_set_maskRGB, bubble_attributes->mask_R, bubble_attributes->mask_G,
-                                bubble_attributes->mask_B);
-                        d_call(current_component->component, m_drawable_set_maskA, bubble_attributes->mask_A);
-                    } else
-                        d_die(d_error_malloc);
-                    f_list_append(&(bubble_attributes->components), (struct s_list_node *)current_component, e_list_insert_tail);
-                } else
-                    d_die(d_error_malloc);
-                head_pointer = (next_pointer + 1);
+    return self;
+}
+
+d_define_method(bubble, move_up)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
+    d_using(bubble);
+    if (!pressed)
+        if ((bubble_attributes->current_element) && (bubble_attributes->current_element->options.fill > 0)) {
+            if (--(bubble_attributes->current_element->selected_option) < 0)
+                bubble_attributes->current_element->selected_option = 0;
+            d_call(self, m_bubble_skip, NULL);
+        }
+    return self;
+}
+
+d_define_method(bubble, move_down)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
+    d_using(bubble);
+    if (!pressed)
+        if ((bubble_attributes->current_element) && (bubble_attributes->current_element->options.fill > 0)) {
+            if (++(bubble_attributes->current_element->selected_option) >= bubble_attributes->current_element->options.fill)
+                bubble_attributes->current_element->selected_option = (bubble_attributes->current_element->options.fill-1);
+            d_call(self, m_bubble_skip, NULL);
+        }
+    return self;
+}
+
+d_define_method(bubble, select)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
+    d_using(bubble);
+    struct s_bubble_option *current_option;
+    int index = 0;
+    if (!pressed)
+        if ((bubble_attributes->current_element) && (bubble_attributes->current_element->options.fill > 0)) {
+            bubble_attributes->current_element->force_kill = d_true;
+            d_foreach(&(bubble_attributes->current_element->options), current_option, struct s_bubble_option) {
+                if (bubble_attributes->current_element->selected_option == index) {
+                    bubble_attributes->last_value = current_option->value;
+                    break;
+                }
                 ++index;
             }
+            d_call(self, m_bubble_skip, NULL);
+        }
+    return self;
+}
+
+d_define_method(bubble, append_components)(struct s_object *self, char *message, TTF_Font *selected_font, int font_height, struct s_object *environment) {
+    d_using(bubble);
+    struct s_bubble_component *current_component;
+    char *head_pointer, *next_pointer;
+    int index = bubble_attributes->components.fill;
+    if ((head_pointer = message)) {
+        while (f_string_strlen(head_pointer) > d_bubble_characters_per_line) {
+            next_pointer = head_pointer + d_bubble_characters_per_line;
+            while ((next_pointer > head_pointer) && (*next_pointer != ' '))
+                --next_pointer;
+            if (next_pointer == head_pointer)
+                next_pointer = head_pointer + d_bubble_characters_per_line;
             if ((current_component = (struct s_bubble_component *)d_malloc(sizeof(struct s_bubble_component)))) {
-                strcpy(current_component->content, head_pointer);
-                if ((current_component->component = f_label_new(d_new(label), current_component->content, selected_font, factory_attributes->environment))) {
+                strncpy(current_component->content, head_pointer, (next_pointer - head_pointer));
+                if ((current_component->component = f_label_new(d_new(label), current_component->content, selected_font, environment))) {
                     current_component->offset_y = (index * font_height);
                     d_call(current_component->component, m_drawable_set_maskRGB, bubble_attributes->mask_R, bubble_attributes->mask_G,
                             bubble_attributes->mask_B);
@@ -115,6 +144,71 @@ d_define_method(bubble, skip)(struct s_object *self) {
                 f_list_append(&(bubble_attributes->components), (struct s_list_node *)current_component, e_list_insert_tail);
             } else
                 d_die(d_error_malloc);
+            head_pointer = (next_pointer + 1);
+            ++index;
+        }
+        if ((current_component = (struct s_bubble_component *)d_malloc(sizeof(struct s_bubble_component)))) {
+            strcpy(current_component->content, head_pointer);
+            if ((current_component->component = f_label_new(d_new(label), current_component->content, selected_font, environment))) {
+                current_component->offset_y = (index * font_height);
+                d_call(current_component->component, m_drawable_set_maskRGB, bubble_attributes->mask_R, bubble_attributes->mask_G,
+                        bubble_attributes->mask_B);
+                d_call(current_component->component, m_drawable_set_maskA, bubble_attributes->mask_A);
+            } else
+                d_die(d_error_malloc);
+            f_list_append(&(bubble_attributes->components), (struct s_list_node *)current_component, e_list_insert_tail);
+        } else
+            d_die(d_error_malloc);
+    }
+    return self;
+}
+
+d_define_method(bubble, skip)(struct s_object *self) {
+    d_using(bubble);
+    TTF_Font *selected_font;
+    struct s_factory_attributes *factory_attributes = d_cast(bubble_attributes->factory, factory);
+    struct s_label_attributes *label_attributes;
+    struct s_bubble_component *current_component;
+    struct s_bubble_option *current_option;
+    char buffer[d_bubble_message_size];
+    double maximum_width = 0.0;
+    int font_height, index = 0;
+    if (bubble_attributes->current_element) {
+        while ((current_component = (struct s_bubble_component *)bubble_attributes->components.head)) {
+            f_list_delete(&(bubble_attributes->components), (struct s_list_node *)current_component);
+            if (current_component->component)
+                d_delete(current_component->component);
+            d_free(current_component);
+        }
+        if ((bubble_attributes->current_element->options.fill == 0) || (bubble_attributes->current_element->force_kill)) {
+            while ((current_option = (struct s_bubble_option *)bubble_attributes->current_element->options.head)) {
+                f_list_delete(&(bubble_attributes->current_element->options), (struct s_list_node *)current_option);
+                d_free(current_option);
+            }
+            if (bubble_attributes->current_element == bubble_attributes->last_element)
+                bubble_attributes->last_element = NULL;
+            d_free(bubble_attributes->current_element);
+            bubble_attributes->current_element = NULL;
+        }
+    }
+    if (!bubble_attributes->current_element)
+        if ((bubble_attributes->current_element = (struct s_bubble_message *)bubble_attributes->messages.head)) {
+            f_list_delete(&(bubble_attributes->messages), (struct s_list_node *)bubble_attributes->current_element);
+            if (bubble_attributes->current_element->options.fill > 0)
+                bubble_attributes->last_value = d_bubble_no_value;
+        }
+    if (bubble_attributes->current_element) {
+        if ((selected_font = (TTF_Font *)d_call(bubble_attributes->factory, m_factory_get_font, bubble_attributes->current_element->font_ID, 
+                        bubble_attributes->font_style, &font_height))) {
+            d_call(self, m_bubble_append_components, bubble_attributes->current_element->content, selected_font, font_height, factory_attributes->environment);
+            d_foreach(&(bubble_attributes->current_element->options), current_option, struct s_bubble_option) {
+                if (index == bubble_attributes->current_element->selected_option)
+                    snprintf(buffer, d_bubble_message_size, "%c%s", d_bubble_select_character, current_option->content);
+                else
+                    snprintf(buffer, d_bubble_message_size, "  %s", current_option->content);
+                d_call(self, m_bubble_append_components, buffer, selected_font, font_height, factory_attributes->environment);
+                ++index;
+            }
         }
         bubble_attributes->last_update = time(NULL);
     }
@@ -169,9 +263,9 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
                                  *drawable_attributes_selected;
     struct s_bubble_component *current_component;
     double position_x, position_y, new_position_x, new_position_y;
-    if (bubble_attributes->current_element)
-        if ((bubble_attributes->current_element->timeout + bubble_attributes->last_update) < time(NULL))
-            d_call(self, m_bubble_skip, NULL);
+    if ((!bubble_attributes->current_element) || ((bubble_attributes->current_element->timeout > 0) && 
+                ((bubble_attributes->current_element->timeout + bubble_attributes->last_update) < time(NULL))))
+        d_call(self, m_bubble_skip, NULL);
     if (bubble_attributes->current_element) {
         d_call(self, m_drawable_get_position, &position_x, &position_y);
         d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component)
@@ -202,6 +296,7 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
     struct s_factory_attributes *factory_attributes = d_cast(attributes->factory, factory);
     struct s_bubble_component *current_component;
     struct s_bubble_message *current_message;
+    struct s_bubble_option *current_option;
     int index;
     d_delete(attributes->factory);
     if (attributes->current_element) {
@@ -219,6 +314,10 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
     }
     while ((current_message = (struct s_bubble_message *)attributes->messages.head)) {
         f_list_delete(&(attributes->messages), (struct s_list_node *)current_message);
+        while ((current_option = (struct s_bubble_option *)current_message->options.head)) {
+            f_list_delete(&(current_message->options), (struct s_list_node *)current_option);
+            d_free(current_option);
+        }
         d_free(current_message);
     }
     for (index = 0; index < e_uiable_component_NULL; ++index)
@@ -230,6 +329,11 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
 d_define_class(bubble) {
     d_hook_method(bubble, e_flag_public, set),
         d_hook_method(bubble, e_flag_public, add_message),
+        d_hook_method(bubble, e_flag_public, add_option),
+        d_hook_method(bubble, e_flag_public, move_up),
+        d_hook_method(bubble, e_flag_public, move_down),
+        d_hook_method(bubble, e_flag_public, select),
+        d_hook_method(bubble, e_flag_private, append_components),
         d_hook_method(bubble, e_flag_public, skip),
         d_hook_method_override(bubble, e_flag_public, drawable, draw),
         d_hook_delete(bubble),
