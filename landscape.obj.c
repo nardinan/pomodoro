@@ -156,6 +156,7 @@ d_define_method(landscape, show)(struct s_object *self, struct s_object *environ
         d_call(environment, m_environment_add_drawable, current_surface->drawable, current_surface->layer, e_environment_surface_primary);
     }
     d_foreach(&(landscape_attributes->items), current_item, struct s_landscape_item) {
+        d_call(current_item->item, m_item_play, NULL);
         d_call(current_item->item, m_drawable_set_position, (landscape_attributes->position_x + current_item->position_x),
                 (landscape_attributes->position_y + current_item->position_y));
         d_call(environment, m_environment_add_drawable, current_item->item, current_item->layer, e_environment_surface_primary);
@@ -170,7 +171,7 @@ d_define_method(landscape, hide)(struct s_object *self, struct s_object *environ
     d_foreach(&(landscape_attributes->surfaces), current_surface, struct s_landscape_surface)
         d_call(environment, m_environment_del_drawable, current_surface->drawable, current_surface->layer, e_environment_surface_primary);
     d_foreach(&(landscape_attributes->items), current_item, struct s_landscape_item) {
-        d_call(current_item->item, m_entity_set_component, NULL);
+        d_call(current_item->item, m_item_mute, NULL);
         d_call(environment, m_environment_del_drawable, current_item->item, current_item->layer, e_environment_surface_primary);
     }
     return self;

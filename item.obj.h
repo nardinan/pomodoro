@@ -27,11 +27,13 @@ d_declare_class(item) {
     double width, height;
     struct s_list tracks;
     struct s_item_track *current_track;
-    t_boolean active, solid;
+    t_boolean active, solid, audio;
 } d_declare_class_tail(item);
 struct s_item_attributes *p_item_alloc(struct s_object *self, const char *key);
 extern struct s_object *f_item_new(struct s_object *self, const char *key);
 d_declare_method(item, load)(struct s_object *self, struct s_object *json, struct s_object *factory);
+d_declare_method(item, mute)(struct s_object *self);
+d_declare_method(item, play)(struct s_object *self);
 d_declare_method(item, set_component)(struct s_object *self, char *label);
 d_declare_method(item, set_solid)(struct s_object *self, t_boolean solid);
 d_declare_method(item, set_active)(struct s_object *self, t_boolean active);

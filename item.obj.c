@@ -32,6 +32,7 @@ struct s_object *f_item_new(struct s_object *self, const char *key) {
         d_call(self, m_morphable_set_visibility, d_true);
         d_call(self, m_morphable_set_freedom_x, d_true);
         d_call(self, m_morphable_set_freedom_y, d_true);
+        d_call(self, m_morphable_set_freedom_z, d_true);
     }
     return self;
 }
@@ -118,6 +119,22 @@ d_define_method(item, load)(struct s_object *self, struct s_object *json, struct
     return self;
 }
 
+d_define_method(item, mute)(struct s_object *self) {
+    d_using(item);
+    item_attributes->audio = d_false;
+    if (item_attributes->current_track)
+        d_call(item_attributes->current_track->track, m_track_stop, NULL);
+    return self;
+}
+
+d_define_method(item, play)(struct s_object *self) {
+    d_using(item);
+    item_attributes->audio = d_true;
+    if (item_attributes->current_track)
+        d_call(item_attributes->current_track->track, m_track_play, d_true);
+    return self;
+}
+
 d_define_method_override(item, set_component)(struct s_object *self, char *label) {
     d_using(item);
     struct s_entity_attributes *entity_attributes = d_cast(self, entity);
@@ -129,21 +146,20 @@ d_define_method_override(item, set_component)(struct s_object *self, char *label
         d_call(item_attributes->current_track->track, m_track_stop, NULL);
         item_attributes->current_track = NULL;
     }
-    if (label) {
-        result = d_call_owner(self, entity, m_entity_set_component, label);
-        if (entity_attributes->current_component)
-            d_foreach(&(entity_attributes->current_component->elements), current_element, struct s_entity_element)
-                if ((animation_attributes = d_cast(current_element->drawable, animation))) {
-                    d_call(current_element->drawable, m_animation_set_status, e_animation_direction_stop);
-                    d_call(current_element->drawable, m_animation_set_status, e_animation_direction_forward);
-                }
-        d_foreach(&(item_attributes->tracks), current_track, struct s_item_track)
-            if (f_string_strcmp(current_track->label, label) == 0) {
-                item_attributes->current_track = current_track;
-                d_call(item_attributes->current_track->track, m_track_play, d_true);
-                break;
+    result = d_call_owner(self, entity, m_entity_set_component, label);
+    if (entity_attributes->current_component)
+        d_foreach(&(entity_attributes->current_component->elements), current_element, struct s_entity_element)
+            if ((animation_attributes = d_cast(current_element->drawable, animation))) {
+                d_call(current_element->drawable, m_animation_set_status, e_animation_direction_stop);
+                d_call(current_element->drawable, m_animation_set_status, e_animation_direction_forward);
             }
-    }
+    d_foreach(&(item_attributes->tracks), current_track, struct s_item_track)
+        if (f_string_strcmp(current_track->label, label) == 0) {
+            item_attributes->current_track = current_track;
+            if (item_attributes->audio)
+                d_call(item_attributes->current_track->track, m_track_play, d_true);
+            break;
+        }
     return result;
 }
 
@@ -196,6 +212,8 @@ d_define_method(item, delete)(struct s_object *self, struct s_item_attributes *a
 
 d_define_class(item) {
     d_hook_method(item, e_flag_public, load),
+        d_hook_method(item, e_flag_public, mute),
+        d_hook_method(item, e_flag_public, play),
         d_hook_method_override(item, e_flag_public, entity, set_component),
         d_hook_method(item, e_flag_public, set_solid),
         d_hook_method(item, e_flag_public, set_active),
