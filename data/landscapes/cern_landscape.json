@@ -5,6 +5,7 @@
 	"position_x":-200.0,
 	"position_y":-300.0,
 	"intro_script":"intro_cern",
+	"outro_script":"initialize_script",
 	"floor":[{
 		"position_x":0.0,
 		"position_y":700.0

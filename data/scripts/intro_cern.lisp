@@ -33,7 +33,7 @@
 	 "Non credo sia saggio disabilitare le griglie di sicurezza, Yuriy")
 	(cons ;8 andrii
 	 "Is too risky ..."
-	 "E' troppo pericoloso")
+	 "E' troppo pericoloso ...")
 	(cons ;9 yuriy
 	 "Oh, please ..."
 	 "Oh, per favore ...")
@@ -69,7 +69,7 @@
 	 "Peggiorare?")
 	(cons ;20 yuriy
 	 "It's smoking! How could it be worse?"
-	 "Sta fumando! Come puo' essere peggiore la situazione?")
+	 "Sta fumando! Come puo' peggiore la situazione?")
 	(cons ;21 yuriy
 	 "Oh, I see ..."
 	 "Ah ...")
@@ -120,25 +120,30 @@
 	 "Quindi?")
 	(cons ;37 andrii
 	 "I think we have changed something, somewhere in the past"
-	 "Penso che abbiamo cambiato qualcosa da qualche parte nel passato")
+	 "Penso che abbiamo cambiato qualcosa, da qualche parte nel passato")
 	(cons ;38 andrii
 	 "We have changed the history"
 	 "Abbiamo cambiato la storia")
 	(cons ;39 yuriy
-	 "We are still here! Probably was not important"
-	 "Siamo ancora qui! Probabilmente non era nulla di importante")
+	 "Yes but we are still here! Whatever we have changed probably was not important"
+	 "Si ma siamo ancora qui! Qualsiasi cosa abbiamo cambiato probabilmente non era importante")
 	(cons ;40 andrii
 	 "Yep probably you are right. Maybe was not important ..."
 	 "Si, probabilmente hai ragione. Magari non era nulla di importante ...")
+	(cons ;41 yuriy
+	 "Vodka party?"
+	 "Vodka party?")
+	(cons ;42 andrii
+	 "Yeah!"
+	 "Yeah!")
 	nil
 ))
-
 
 (define say
 	(lambda (c m)
 		(begin
-			(puppeteer_say c m (+ 1 (* (length m) 0.1)))
-			(director_wait (+ 1 (* (length m) 0.1)))
+			(puppeteer_say c m (+ 1 (* (length m) 0.05)))
+			(director_wait (+ 1 (* (length m) 0.05)))
 		)
 	)
 )
@@ -174,7 +179,7 @@
 	)
 )
 
-; Cinematic
+; Intro dialogs
 (puppeteer_disable_control)
 (puppeteer_show "yuriy" 	1350)
 (puppeteer_show "andrii" 	2510)
@@ -228,7 +233,6 @@
 (say "yuriy"  	(get_dialog dialogs language 20))
 (stagecrafter_set_item "lhc_segment_B" "move")
 (stagecrafter_set_item "lhc_segment_D" "move")
-(director_wait 1)
 (stagecrafter_set_item "lhc_segment_A" "move")
 (stagecrafter_set_item "lhc_segment_C" "move")
 (stagecrafter_set_item "lhc_segment_E" "move")
@@ -279,6 +283,18 @@
 (director_wait 1)
 (say "yuriy"	(get_dialog dialogs language 39))
 (say "andrii"	(get_dialog dialogs language 40))
-(director_camera_move 2000 -500)
+(director_wait 2)
+(animation "yuriy" 	"still_right")
+(say "yuriy"	(get_dialog dialogs language 41))
+(animation "andrii" "still_left")
+(say "andrii"	(get_dialog dialogs language 42))
+(director_camera_move 2000 -1500)
+
+; cleanup
 (effecteer_delete 	"fire1")
 (effecteer_delete 	"smoke1")
+(puppeteer_hide)
+
+(stagecrafter_hide)
+
+(collector_set "intro_ran" 1.0)

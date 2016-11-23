@@ -1,29 +1,12 @@
 ; Pomodoro
-; this script handles some interesting game parts
-(define say
-	(lambda (c m)
-		(begin
-			(puppeteer_say c m 2)
-			(director_wait 2)
-		)
-	)
-)
+; Module: intro_cern
+; Author: nardinan
+; Date  : 20 Nov 2016
+; Initialization script. Called at the begin of the game
 
-(define animation
-	(lambda (c m)
-		(begin
-			(puppeteer_set c m)
-		)
-	)
+; Preamble. Here we should check for other things: loaded informations and stored informations.
+(director_camera_set 6000 2000) ; far far away ...
+(if (collector_get "intro_ran")
+	(stagecrafter_show "canama")
+	(stagecrafter_show "cern")
 )
-
-(define main_control
-	(lambda (c)
-		(begin
-			(director_camera_follow c -100.0 1.0)
-			(puppeteer_enable_control c)
-		)
-	)
-)
-
-(stagecrafter_show "cern")
