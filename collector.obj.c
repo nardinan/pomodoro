@@ -57,7 +57,27 @@ struct s_collector_attributes *p_collector_alloc(struct s_object *self) {
 
 struct s_object *f_collector_new(struct s_object *self) {
     struct s_collector_attributes *attributes = p_collector_alloc(self);
-    attributes = attributes;
+    FILE *collector_dump = fopen(d_collector_dump, "r");
+    char buffer[d_string_buffer_size], *ptr_name, *ptr_type, *ptr_data;
+    if (collector_dump) {
+        while (fgets(buffer, d_string_buffer_size, collector_dump)) {
+            ptr_name = buffer;
+            f_string_trim(ptr_name);
+            if ((ptr_type = strchr(ptr_name, ':'))) {
+                *ptr_type = 0;
+                ++ptr_type;
+                if ((ptr_data = strchr(ptr_type, ':'))) {
+                    *ptr_data = 0;
+                    ++ptr_data;
+                    if (f_string_strcmp(ptr_type, d_collector_dump_string) == 0)
+                        d_call(self, m_collector_add_entry_string, ptr_name, ptr_data);
+                    else if (f_string_strcmp(ptr_type, d_collector_dump_double) == 0)
+                        d_call(self, m_collector_add_entry_double, ptr_name, (double)atof(ptr_data));
+                }
+            }
+        }
+        fclose(collector_dump);
+    }
     return self;
 }
 
@@ -109,12 +129,24 @@ d_define_method(collector, linker)(struct s_object *self, struct s_object *scrip
 
 d_define_method(collector, delete)(struct s_object *self, struct s_collector_attributes *attributes) {
     struct s_collector_entry *current_entry;
+    FILE *collector_dump = fopen(d_collector_dump, "w");
     while ((current_entry = (struct s_collector_entry *)attributes->pool.head)) {
         f_list_delete(&(attributes->pool), (struct s_list_node *)current_entry);
+        if (collector_dump)
+            switch (current_entry->type) {
+                case e_collector_type_string:
+                    fprintf(collector_dump, "%s:%s:%s\n", current_entry->key, d_collector_dump_string, current_entry->value.value_string);
+                    break;
+                case e_collector_type_double:
+                    fprintf(collector_dump, "%s:%s:%.02f\n", current_entry->key, d_collector_dump_double, current_entry->value.value_double);
+                    break;
+            }
         if ((current_entry->type == e_collector_type_string) && (current_entry->value.value_string))
             d_free(current_entry->value.value_string);
         d_free(current_entry);
     }
+    if (collector_dump)
+        fclose(collector_dump);
     return NULL;
 }
 

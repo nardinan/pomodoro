@@ -17,6 +17,9 @@
  */
 #ifndef pomodoro_collector_h
 #define pomodoro_collector_h
+#define d_collector_dump_string "string"
+#define d_collector_dump_double "double"
+#define d_collector_dump "collector.dump.dat"
 #include "miranda.h"
 /* action defintion */
 extern struct s_lisp_object *p_link_collector_set(struct s_object *self, struct s_lisp_object *arguments);
