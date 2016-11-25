@@ -33,13 +33,14 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
     d_using(landscape);
     enum e_drawable_flips flips;
     enum e_factory_media_types type;
-    char *string_supply, *string_supply_item, *string_supply_label;
+    char *string_supply, *string_supply_item, *string_supply_track, *string_supply_label;
     t_boolean status_flip_x = d_false, status_flip_y = d_false, layer_flip_x, layer_flip_y, solid, active;
-    double mask_R, mask_G, mask_B, mask_A, status_zoom = 1.0, layer_zoom, item_zoom, position_x, position_y, layer;
-    int index_layer = 0, index_path = 0, index_item = 0;
+    double mask_R, mask_G, mask_B, mask_A, status_zoom = 1.0, layer_zoom, item_zoom, position_x, position_y, layer, volume, loops;
+    int index_layer = 0, index_path = 0, index_item = 0, index_track = 0;
     struct s_object *item_json;
     struct s_landscape_point *current_point;
     struct s_landscape_item *current_item;
+    struct s_landscape_track *current_track;
     struct s_landscape_surface *current_surface;
     if (d_call(json, m_json_get_string, &string_supply, "s", "format"))
         if (f_string_strcmp(string_supply, "landscape") == 0)
@@ -94,6 +95,23 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
                         d_delete(item_json);
                     }
                     ++index_item;
+                }
+                while (((d_call(json, m_json_get_string, &string_supply_track, "sds", "tracks", index_track, "playable"))) &&
+                        (d_call(json, m_json_get_string, &string_supply_label, "sds", "tracks", index_track, "label"))) {
+                    if ((current_track = (struct s_landscape_track *)d_malloc(sizeof(struct s_landscape_track)))) {
+                        strncpy(current_track->label, string_supply_label, d_entity_label_size);
+                        volume = d_track_default_volume;
+                        loops = d_track_infinite_loop;
+                        d_call(json, m_json_get_double, &volume, "sds", "tracks", index_track, "volume");
+                        d_call(json, m_json_get_double, &loops, "sds", "tracks", index_track, "loops");
+                        if ((current_track->track = d_call(factory, m_factory_get_track, string_supply_track))) {
+                            d_call(current_track->track, m_track_set_loops, (int)loops);
+                            d_call(current_track->track, m_track_set_volume, (int)volume);
+                            f_list_append(&(landscape_attributes->tracks), (struct s_list_node *)current_track, e_list_insert_head);
+                        }
+                    } else
+                        d_die(d_error_malloc);
+                    ++index_track;
                 }
                 while ((d_call(json, m_json_get_string, &string_supply, "sds", "surfaces", index_layer, "drawable"))) {
                     layer_flip_x = status_flip_x;
@@ -168,12 +186,33 @@ d_define_method(landscape, hide)(struct s_object *self, struct s_object *environ
     d_using(landscape);
     struct s_landscape_surface *current_surface;
     struct s_landscape_item *current_item;
+    d_call(self, m_landscape_stop, NULL);
     d_foreach(&(landscape_attributes->surfaces), current_surface, struct s_landscape_surface)
         d_call(environment, m_environment_del_drawable, current_surface->drawable, current_surface->layer, e_environment_surface_primary);
     d_foreach(&(landscape_attributes->items), current_item, struct s_landscape_item) {
         d_call(current_item->item, m_item_mute, NULL);
         d_call(environment, m_environment_del_drawable, current_item->item, current_item->layer, e_environment_surface_primary);
     }
+    return self;
+}
+
+d_define_method(landscape, stop)(struct s_object *self) {
+    d_using(landscape);
+    struct s_landscape_track *current_track;
+    d_foreach(&(landscape_attributes->tracks), current_track, struct s_landscape_track)
+        d_call(current_track->track, m_track_stop, NULL);
+    return self;
+}
+
+d_define_method(landscape, play)(struct s_object *self, const char *label) {
+    d_using(landscape);
+    struct s_landscape_track *current_track;
+    d_call(self, m_landscape_stop, NULL);
+    d_foreach(&(landscape_attributes->tracks), current_track, struct s_landscape_track)
+        if (f_string_strcmp(current_track->label, label) == 0) {
+            d_call(current_track->track, m_track_play, d_true);
+            break;
+        }
     return self;
 }
 
@@ -268,6 +307,7 @@ d_define_method(landscape, update)(struct s_object *self, struct s_object *envir
 d_define_method(landscape, delete)(struct s_object *self, struct s_landscape_attributes *attributes) {
     struct s_landscape_surface *current_surface;
     struct s_landscape_item *current_item;
+    struct s_landscape_track *current_track;
     struct s_landscape_point *current_point;
     double position_x, position_y, zoom;
     while ((current_surface = (struct s_landscape_surface *)attributes->surfaces.head)) {
@@ -287,6 +327,12 @@ d_define_method(landscape, delete)(struct s_object *self, struct s_landscape_att
         d_delete(current_item->item);
         d_free(current_item);
     }
+    while ((current_track = (struct s_landscape_track *)attributes->tracks.head)) {
+        f_list_delete(&(attributes->tracks), (struct s_list_node *)current_track);
+        if (current_track->track)
+            d_delete(current_track->track);
+        d_free(current_track);
+    }
     while ((current_point = (struct s_landscape_point *)attributes->points.head)) {
         f_list_delete(&(attributes->points), (struct s_list_node *)current_point);
         d_free(current_point);
@@ -298,6 +344,8 @@ d_define_class(landscape) {
     d_hook_method(landscape, e_flag_public, load),
         d_hook_method(landscape, e_flag_public, show),
         d_hook_method(landscape, e_flag_public, hide),
+        d_hook_method(landscape, e_flag_public, stop),
+        d_hook_method(landscape, e_flag_public, play),
         d_hook_method(landscape, e_flag_public, set_item_solid),
         d_hook_method(landscape, e_flag_public, set_item_active),
         d_hook_method(landscape, e_flag_public, set_item_status),

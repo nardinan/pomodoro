@@ -22,6 +22,8 @@
 typedef enum e_stagecrafter_actions {
     e_stagecrafter_action_hide,
     e_stagecrafter_action_show,
+    e_stagecrafter_action_stop,
+    e_stagecrafter_action_play,
     e_stagecrafter_action_lock,
     e_stagecrafter_action_unlock,
     e_stagecrafter_action_enable,
@@ -37,6 +39,8 @@ typedef struct s_stagecrafter_action {
 } s_stagecrafter_action;
 extern struct s_lisp_object *p_link_stagecrafter_hide_landscapes(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_show_landscape(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_stagecrafter_stop_track(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_stagecrafter_play_track(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_lock_item(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_unlock_item(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_enable_item(struct s_object *self, struct s_lisp_object *arguments);
@@ -59,6 +63,8 @@ d_declare_method(stagecrafter, get_landscape)(struct s_object *self, const char 
 d_declare_method(stagecrafter, hide_landscapes)(struct s_object *self);
 d_declare_method(stagecrafter, show_landscape)(struct s_object *self, const char *key);
 d_declare_method(stagecrafter, get_main_landscape)(struct s_object *self);
+d_declare_method(stagecrafter, stop_tracks)(struct s_object *self);
+d_declare_method(stagecrafter, play_track)(struct s_object *self, const char *key);
 d_declare_method(stagecrafter, set_item_solid)(struct s_object *self, const char *key, t_boolean solid);
 d_declare_method(stagecrafter, set_item_active)(struct s_object *self, const char *key, t_boolean active);
 d_declare_method(stagecrafter, set_item_status)(struct s_object *self, const char *key, const char *status);

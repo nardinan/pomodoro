@@ -25,6 +25,7 @@ void p_link_stagecrafter(enum e_stagecrafter_actions type, ...) {
     if ((action = d_call(director, m_director_new_action, e_director_action_stagecrafter))) {
         action->action.landscape.type = type;
         if ((type == e_stagecrafter_action_show) ||
+                (type == e_stagecrafter_action_play) ||
                 (type == e_stagecrafter_action_lock) ||
                 (type == e_stagecrafter_action_unlock) ||
                 (type == e_stagecrafter_action_enable) ||
@@ -54,6 +55,18 @@ struct s_lisp_object *p_link_stagecrafter_hide_landscapes(struct s_object *self,
 struct s_lisp_object *p_link_stagecrafter_show_landscape(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_stagecrafter(e_stagecrafter_action_show, d_lisp_car(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_stagecrafter_stop_track(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_stagecrafter(e_stagecrafter_action_stop);
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_stagecrafter_play_track(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_stagecrafter(e_stagecrafter_action_play, d_lisp_car(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -168,6 +181,20 @@ d_define_method(stagecrafter, get_main_landscape)(struct s_object *self) {
     return stagecrafter_attributes->main_landscape;
 }
 
+d_define_method(stagecrafter, stop_tracks)(struct s_object *self) {
+    d_using(stagecrafter);
+    if (stagecrafter_attributes->main_landscape)
+        d_call(stagecrafter_attributes->main_landscape, m_landscape_stop, NULL);
+    return self;
+}
+
+d_define_method(stagecrafter, play_track)(struct s_object *self, const char *key) {
+    d_using(stagecrafter);
+    if (stagecrafter_attributes->main_landscape)
+        d_call(stagecrafter_attributes->main_landscape, m_landscape_play, key);
+    return self;
+}
+
 d_define_method(stagecrafter, set_item_solid)(struct s_object *self, const char *key, t_boolean solid) {
     d_using(stagecrafter);
     if (stagecrafter_attributes->main_landscape)
@@ -222,6 +249,14 @@ d_define_method(stagecrafter, dispatcher)(struct s_object *self, struct s_stagec
             d_log(e_log_level_medium, "action [show] (landscape %s)", action->key);
             result = d_call(self, m_stagecrafter_show_landscape, action->key);
             break;
+        case e_stagecrafter_action_stop:        /* no parameters */
+            d_log(e_log_level_medium, "action [stop]");
+            result = d_call(self, m_stagecrafter_stop_tracks, NULL);
+            break;
+        case e_stagecrafter_action_play:        /* key (track) */
+            d_log(e_log_level_medium, "action [play] (track %s)", action->key);
+            result = d_call(self, m_stagecrafter_play_track, action->key);
+            break;
         case e_stagecrafter_action_lock:        /* key (item) */
         case e_stagecrafter_action_unlock:
             d_log(e_log_level_medium, "action [lock_item/unlock_item] (item %s)", action->key);
@@ -256,6 +291,8 @@ d_define_class(stagecrafter) {
         d_hook_method(stagecrafter, e_flag_public, hide_landscapes),
         d_hook_method(stagecrafter, e_flag_public, show_landscape),
         d_hook_method(stagecrafter, e_flag_public, get_main_landscape),
+        d_hook_method(stagecrafter, e_flag_public, stop_tracks),
+        d_hook_method(stagecrafter, e_flag_public, play_track),
         d_hook_method(stagecrafter, e_flag_public, set_item_solid),
         d_hook_method(stagecrafter, e_flag_public, set_item_active),
         d_hook_method(stagecrafter, e_flag_public, set_item_status),
