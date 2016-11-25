@@ -39,7 +39,7 @@ typedef struct s_stagecrafter_action {
 } s_stagecrafter_action;
 extern struct s_lisp_object *p_link_stagecrafter_hide_landscapes(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_show_landscape(struct s_object *self, struct s_lisp_object *arguments);
-extern struct s_lisp_object *p_link_stagecrafter_stop_track(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_stagecrafter_stop_tracks(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_play_track(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_lock_item(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_unlock_item(struct s_object *self, struct s_lisp_object *arguments);

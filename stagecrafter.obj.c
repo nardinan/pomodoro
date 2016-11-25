@@ -58,7 +58,7 @@ struct s_lisp_object *p_link_stagecrafter_show_landscape(struct s_object *self, 
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
-struct s_lisp_object *p_link_stagecrafter_stop_track(struct s_object *self, struct s_lisp_object *arguments) {
+struct s_lisp_object *p_link_stagecrafter_stop_tracks(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_stagecrafter(e_stagecrafter_action_stop);
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
@@ -229,6 +229,8 @@ d_define_method(stagecrafter, update)(struct s_object *self) {
 d_define_method(stagecrafter, linker)(struct s_object *self, struct s_object *script) {
     d_call(script, m_lisp_extend_environment, "stagecrafter_hide", p_lisp_object(script, e_lisp_object_type_primitive, p_link_stagecrafter_hide_landscapes));
     d_call(script, m_lisp_extend_environment, "stagecrafter_show", p_lisp_object(script, e_lisp_object_type_primitive, p_link_stagecrafter_show_landscape));
+    d_call(script, m_lisp_extend_environment, "stagecrafter_stop", p_lisp_object(script, e_lisp_object_type_primitive, p_link_stagecrafter_stop_tracks));
+    d_call(script, m_lisp_extend_environment, "stagecrafter_play", p_lisp_object(script, e_lisp_object_type_primitive, p_link_stagecrafter_play_track));
     d_call(script, m_lisp_extend_environment, "stagecrafter_lock_item", p_lisp_object(script, e_lisp_object_type_primitive, p_link_stagecrafter_lock_item));
     d_call(script, m_lisp_extend_environment, "stagecrafter_unlock_item", p_lisp_object(script, e_lisp_object_type_primitive, p_link_stagecrafter_unlock_item));
     d_call(script, m_lisp_extend_environment, "stagecrafter_enable_item", p_lisp_object(script, e_lisp_object_type_primitive, p_link_stagecrafter_enable_item));
