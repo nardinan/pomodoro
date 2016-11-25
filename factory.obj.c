@@ -257,7 +257,9 @@ d_define_method(factory, get_track)(struct s_object *self, const char *label) {
     struct s_object *stream;
     struct s_object *result = NULL;
     if ((stream = d_call(factory_attributes->resources_ogg, m_resources_get_stream_strict, label, e_resources_type_common)))
-        result = f_track_new_channel(d_new(track), stream, factory_attributes->current_channel++);
+        if ((result = f_track_new_channel(d_new(track), stream, factory_attributes->current_channel++)))
+            if (factory_attributes->current_channel == d_factory_max_channels)
+                factory_attributes->current_channel = 0;
     return result;
 }
 

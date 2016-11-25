@@ -22,6 +22,7 @@
 #define d_factory_configuration "pomodoro_config"
 #define d_factory_default_font_size 30.0
 #define d_factory_default_font_outline 0.0
+#define d_factory_max_channels 128
 typedef enum e_factory_media_types {
     e_factory_media_type_bitmap = 0,
     e_factory_media_type_animation,

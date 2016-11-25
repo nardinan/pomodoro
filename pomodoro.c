@@ -102,6 +102,7 @@ int main (int argc, char *argv[]) {
             d_call(environment, m_environment_set_reference, d_pomodoro_width, d_pomodoro_height, e_environment_surface_primary);
             d_call(environment, m_environment_set_reference, d_pomodoro_width, d_pomodoro_height, e_environment_surface_ui);
             d_call(environment, m_environment_set_title, d_pomodoro_title);
+            d_call(environment, m_environment_set_channels, d_factory_max_channels);
             d_call(environment, m_environment_run_loop, NULL);
             d_delete(environment);
         } d_catch(exception) {
