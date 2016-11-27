@@ -28,7 +28,7 @@ typedef struct s_landscape_surface { d_list_node_head;
     int layer;
 } s_landscape_surface;
 typedef struct s_landscape_point { d_list_node_head;
-    double position_x, position_y;
+    double position_x, position_y, dimension_h, scale_min, scale_max;
 } s_landscape_point;
 typedef struct s_landscape_item { d_list_node_head;
     char label[d_entity_label_size], script[d_resources_key_size];
@@ -56,9 +56,9 @@ d_declare_method(landscape, play)(struct s_object *self, const char *label);
 d_declare_method(landscape, set_item_solid)(struct s_object *self, const char *label, t_boolean solid);
 d_declare_method(landscape, set_item_active)(struct s_object *self, const char *label, t_boolean active);
 d_declare_method(landscape, set_item_status)(struct s_object *self, const char *label, const char *status);
-d_declare_method(landscape, floor)(struct s_object *self, double position_x, double *position_y);
+d_declare_method(landscape, floor)(struct s_object *self, double position_x, double *position_y, double *dimension_h, double *scale_min, double *scale_max);
 d_declare_method(landscape, validator)(struct s_object *self, struct s_object *entity, double current_x, double current_y, double *new_x, double *new_y, 
-        double camera_offset_x, double camera_offset_y);
+        double *new_z, double camera_offset_x, double camera_offset_y);
 d_declare_method(landscape, update)(struct s_object *self, struct s_object *environment);
 d_declare_method(landscape, delete)(struct s_object *self, struct s_landscape_attributes *attributes);
 #endif

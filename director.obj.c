@@ -102,7 +102,7 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
     struct s_landscape_item *current_item;
     struct s_object *current_landscape;
     if ((current_landscape = d_call(director_attributes->stagecrafter, m_stagecrafter_get_main_landscape, NULL)))
-        if ((current_item = d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, 
+        if ((current_item = d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, new_zoom,
                 environment_attributes->camera_origin_x[environment_attributes->current_surface],
                 environment_attributes->camera_origin_y[environment_attributes->current_surface])))
             if ((current_item->script[0]) && (character_attributes->action))

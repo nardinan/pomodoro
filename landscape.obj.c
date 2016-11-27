@@ -59,6 +59,11 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
                     if ((current_point = (struct s_landscape_point *)d_malloc(sizeof(struct s_landscape_point)))) {
                         current_point->position_x = position_x;
                         current_point->position_y = position_y;
+                        current_point->scale_min = 1.0;
+                        current_point->scale_max = 1.0;
+                        d_call(json, m_json_get_double, &(current_point->dimension_h), "sds", "floor", index_path, "dimension_h");
+                        d_call(json, m_json_get_double, &(current_point->scale_min), "sds", "floor", index_path, "scale_min");
+                        d_call(json, m_json_get_double, &(current_point->scale_max), "sds", "floor", index_path, "scale_max");
                         f_list_append(&(landscape_attributes->points), (struct s_list_node *)current_point, e_list_insert_tail);
                     } else
                         d_die(d_error_malloc);
@@ -245,29 +250,36 @@ d_define_method(landscape, set_item_status)(struct s_object *self, const char *l
     return self;
 }
 
-d_define_method(landscape, floor)(struct s_object *self, double position_x, double *position_y) {
+d_define_method(landscape, floor)(struct s_object *self, double position_x, double *position_y, double *dimension_h, double *scale_min, double *scale_max) {
     d_using(landscape);
     struct s_landscape_point *current_point = NULL, *previous_point = NULL;
-    *position_y = 0.0;
+    double ratio;
     d_foreach(&(landscape_attributes->points), current_point, struct s_landscape_point) {
         if (current_point->position_x >= position_x)
             break;
         previous_point = current_point;
     }  
-    if ((previous_point) && (current_point))
-        *position_y = previous_point->position_y + ((position_x - previous_point->position_x)/(current_point->position_x-previous_point->position_x)) *
-            (current_point->position_y - previous_point->position_y);
-    else if (previous_point)
+    if ((previous_point) && (current_point)) {
+        ratio = (position_x - previous_point->position_x)/(current_point->position_x - previous_point->position_x);
+        *position_y = previous_point->position_y + (ratio * (current_point->position_y - previous_point->position_y));
+        *dimension_h = previous_point->dimension_h + (ratio * (current_point->dimension_h - previous_point->dimension_h));
+        *scale_min = previous_point->scale_min + (ratio * (current_point->scale_min - previous_point->scale_min));
+        *scale_max = previous_point->scale_max + (ratio * (current_point->scale_max - previous_point->scale_max));
+    } else if (previous_point) {
         *position_y = previous_point->position_y;
+        *dimension_h = previous_point->dimension_h;
+        *scale_min = previous_point->scale_min;
+        *scale_max = previous_point->scale_max;
+    }
     return self;
 }
 
 d_define_method(landscape, validator)(struct s_object *self, struct s_object *entity, double current_x, double current_y, double *new_x, double *new_y,
-        double camera_offset_x, double camera_offset_y) {
+        double *new_z, double camera_offset_x, double camera_offset_y) {
     d_using(landscape);
     struct s_landscape_item *current_item, *selected_item = NULL;
     struct s_item_attributes *item_attributes;
-    double entity_position_x, entity_position_y, item_position_x, item_position_y, final_distance;
+    double entity_position_x, entity_position_y, item_position_x, item_position_y, final_distance, valid_y, valid_h, scale_min, scale_max, ratio = 0.0;
     if (entity) {
         d_call(entity, m_drawable_get_scaled_principal_point, &entity_position_x, &entity_position_y);
         d_foreach(&(landscape_attributes->items), current_item, struct s_landscape_item) { 
@@ -286,8 +298,15 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
                             *new_x = current_x;
                 }
         }
+        d_call(self, m_landscape_floor, *new_x, &valid_y, &valid_h, &scale_min, &scale_max);
+        if (*new_y < (valid_y - valid_h))
+            *new_y = (valid_y - valid_h);
+        else if (*new_y > valid_y)
+            *new_y = valid_y;
+        if (valid_h > 0)
+            ratio = (*new_y - (valid_y - valid_h))/valid_h;
+        *new_z = scale_min + (ratio * (scale_max - scale_min));
     }
-    d_call(self, m_landscape_floor, *new_x, new_y);
     d_cast_return(selected_item);
 }
 
