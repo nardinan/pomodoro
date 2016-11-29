@@ -5,11 +5,24 @@
 	"statuses":[
 		{
 			"label":"still",
+			"track":{
+				"playable":"lhc_still",
+				"loops":-1.0
+			},
 			"layers":[
 				{"drawable":"lhc_still"}
 			]
 		},{
-			"label":"move",
+			"label":"move_audio",
+			"track":{
+				"playable":"lhc_move",
+				"loops":-1.0
+			},
+			"layers":[
+				{"drawable":"lhc_move"}
+			]
+		},{
+			"label":"move_silence",
 			"layers":[
 				{"drawable":"lhc_move"}
 			]

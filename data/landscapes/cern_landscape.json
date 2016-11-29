@@ -6,6 +6,10 @@
 	"position_y":-300.0,
 	"intro_script":"intro_cern",
 	"outro_script":"initialize_script",
+	"tracks":[{
+		"playable":"cern_track_A",
+		"label":"cern_track_A"
+	}],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":700.0
