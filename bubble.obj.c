@@ -171,7 +171,7 @@ d_define_method(bubble, skip)(struct s_object *self) {
     struct s_bubble_component *current_component;
     struct s_bubble_option *current_option;
     char buffer[d_bubble_message_size];
-    double maximum_width = 0.0;
+    double maximum_width = 0.0, total_height = 0.0;
     int font_height, index = 0;
     if (bubble_attributes->current_element) {
         while ((current_component = (struct s_bubble_component *)bubble_attributes->components.head)) {
@@ -218,6 +218,7 @@ d_define_method(bubble, skip)(struct s_object *self) {
         current_component->height = label_attributes->last_height;
         if (label_attributes->last_width > maximum_width)
             maximum_width = label_attributes->last_width;
+        total_height += current_component->height;
         if (((struct s_list_node *)current_component)->back == NULL) {
             if (bubble_attributes->drawables[e_uiable_component_corner_top_left])
                 d_call(current_component->component, m_uiable_set, bubble_attributes->drawables[e_uiable_component_corner_top_left], e_uiable_mode_active, 
@@ -251,6 +252,7 @@ d_define_method(bubble, skip)(struct s_object *self) {
                     e_uiable_component_right);
     }
     bubble_attributes->maximum_width = maximum_width;
+    bubble_attributes->total_height = total_height;
     d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component)
         d_call(current_component->component, m_drawable_set_dimension_w, maximum_width);
     return self;

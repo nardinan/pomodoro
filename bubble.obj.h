@@ -45,7 +45,7 @@ d_declare_class(bubble) {
     struct s_bubble_message *current_element, *last_element;
     struct s_object *factory;
     struct s_object *drawables[e_uiable_component_NULL];
-    double maximum_width;
+    double maximum_width, total_height;
     int font_style, last_value;
     time_t last_update;
     unsigned int mask_R, mask_G, mask_B, mask_A;
