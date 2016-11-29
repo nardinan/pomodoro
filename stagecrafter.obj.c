@@ -23,23 +23,25 @@ void p_link_stagecrafter(enum e_stagecrafter_actions type, ...) {
     struct s_lisp_object *argument;
     va_start(parameters_list, type);
     if ((action = d_call(director, m_director_new_action, e_director_action_stagecrafter))) {
-        action->action.landscape.type = type;
-        if ((type == e_stagecrafter_action_show) ||
-                (type == e_stagecrafter_action_play) ||
-                (type == e_stagecrafter_action_lock) ||
-                (type == e_stagecrafter_action_unlock) ||
-                (type == e_stagecrafter_action_enable) ||
-                (type == e_stagecrafter_action_disable) ||
-                (type == e_stagecrafter_action_set)) {
-            if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
-                strncpy(action->action.landscape.key, argument->value_string, d_entity_label_size);
-            switch (action->action.landscape.type) {
-                case e_stagecrafter_action_set:
+        switch ((action->action.landscape.type = type)) {
+            case e_stagecrafter_action_show:
+            case e_stagecrafter_action_play:
+            case e_stagecrafter_action_lock:
+            case e_stagecrafter_action_unlock:
+            case e_stagecrafter_action_enable:
+            case e_stagecrafter_action_disable:
+                if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                    strncpy(action->action.landscape.key, argument->value_string, d_entity_label_size);
+                break;
+            case e_stagecrafter_action_set:
+                if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                    strncpy(action->action.landscape.key, argument->value_string, d_entity_label_size);
                     if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
                         strncpy(action->action.landscape.parameters.entry, argument->value_string, d_entity_label_size);
-                default:
-                    break;
-            }
+                }
+                break;
+            default:
+                break;
         }
         d_call(director, m_director_push_action, action);
     }

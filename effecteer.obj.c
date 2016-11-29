@@ -23,10 +23,9 @@ void p_link_effecteer(enum e_effecteer_actions type, ...) {
     struct s_lisp_object *argument;
     va_start(parameters_list, type);
     if ((action = d_call(director, m_director_new_action, e_director_action_effecteer))) {
-        action->action.effect.type = type;
         if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
             strncpy(action->action.effect.key, argument->value_string, d_entity_label_size);
-            switch (action->action.effect.type) {
+            switch ((action->action.effect.type = type)) {
                 case e_effecteer_action_add:
                     action->action.effect.parameters.action_add.zoom = 1.0;
                     if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {

@@ -23,30 +23,38 @@ void p_link_puppeteer(enum e_puppeteer_actions type, ...) {
     struct s_lisp_object *argument;
     va_start(parameters_list, type);
     if ((action = d_call(director, m_director_new_action, e_director_action_puppeteer))) {
-        action->action.character.type = type;
-        if ((type == e_puppeteer_action_show) ||
-                (type == e_puppeteer_action_enable_control) ||
-                (type == e_puppeteer_action_say) ||
-                (type == e_puppeteer_action_set) ||
-                (type == e_puppeteer_action_move))
-            if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
-                strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
-        switch (action->action.character.type) {
+        switch ((action->action.character.type = type)) {
+            case e_puppeteer_action_enable_control:
+                if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                    strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
+                break;
             case e_puppeteer_action_say:
                 if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
-                    strncpy(action->action.character.parameters.action_say.message, argument->value_string, d_string_buffer_size);
-                    if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
-                        action->action.character.parameters.action_say.timeout = argument->value_double;
+                    strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
+
+                    if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                        strncpy(action->action.character.parameters.action_say.message, argument->value_string, d_string_buffer_size);
+                        if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                            action->action.character.parameters.action_say.timeout = argument->value_double;
+                    }
                 }
                 break;
             case e_puppeteer_action_set:
-                if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
-                    strncpy(action->action.character.parameters.entry, argument->value_string, d_string_buffer_size);
+                if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                    strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
+
+                    if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                        strncpy(action->action.character.parameters.entry, argument->value_string, d_string_buffer_size); 
+                }
                 break;
             case e_puppeteer_action_move:
             case e_puppeteer_action_show:
-                if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
-                    action->action.character.parameters.destination_x = argument->value_double;
+                if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                    strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
+
+                    if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                        action->action.character.parameters.destination_x = argument->value_double;
+                }
             default:
                 break;
         }
