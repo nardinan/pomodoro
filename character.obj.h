@@ -55,6 +55,8 @@ d_declare_method(character, move_down)(struct s_object *self, struct s_controlla
 d_declare_method(character, action)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, say)(struct s_object *self, const char *message, time_t timeout);
 d_declare_method(character, move)(struct s_object *self, double destination_x);
+d_declare_method(character, is_speaking)(struct s_object *self);
+d_declare_method(character, is_moving)(struct s_object *self);
 d_declare_method(character, event)(struct s_object *self, struct s_object *environment, SDL_Event *current_event);
 d_declare_method(character, draw)(struct s_object *self, struct s_object *environment);
 d_declare_method(character, delete)(struct s_object *self, struct s_character_attributes *attributes);

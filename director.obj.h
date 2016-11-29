@@ -22,13 +22,18 @@
 #include "stagecrafter.obj.h"
 #include "camera.obj.h"
 #include "collector.obj.h"
+#include "screenwriter.obj.h"
 extern struct s_object *director;
 /* action definition */
 typedef enum e_director_actions { 
     e_director_action_puppeteer,
     e_director_action_effecteer,
     e_director_action_stagecrafter,
-    e_director_action_service_sleep,
+    e_director_action_service_wait_time,
+    e_director_action_service_wait_message,
+    e_director_action_service_wait_dialog,
+    e_director_action_service_wait_movement,
+    e_director_action_service_dialog,
     e_director_action_service_script,
     e_director_action_service_camera_move,
     e_director_action_service_camera_set,
@@ -54,7 +59,11 @@ typedef struct s_director_action { d_list_node_head;
         struct s_stagecrafter_action landscape;
     } action;
 } s_director_action;
-extern struct s_lisp_object *p_link_director_sleep(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_wait_time(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_wait_message(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_wait_dialog(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_wait_movement(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_director_dialog(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_script(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_clean(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_camera_move(struct s_object *self, struct s_lisp_object *arguments);
@@ -85,6 +94,7 @@ d_declare_class(director) {
     struct s_object *effecteer;
     struct s_object *stagecrafter;
     struct s_object *collector;
+    struct s_object *screenwriter;
     time_t alive;
 } d_declare_class_tail(director);
 extern t_boolean f_director_validator(struct s_object *self, double current_x, double current_y, double current_zoom, double *new_x, double *new_y, 

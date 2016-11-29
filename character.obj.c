@@ -239,6 +239,27 @@ d_define_method(character, move)(struct s_object *self, double destination_x) {
     return self;
 }
 
+d_define_method(character, is_speaking)(struct s_object *self) {
+    d_using(character);
+    struct s_bubble_attributes *bubble_attributes;
+    t_boolean result = d_false;
+    if (character_attributes->bubble) {
+        bubble_attributes = d_cast(character_attributes->bubble, bubble);
+        if ((bubble_attributes->current_element) || (bubble_attributes->messages.fill > 0))
+            result = d_true;
+    }
+    d_cast_return(result);
+}
+
+d_define_method(character, is_moving)(struct s_object *self) {
+    struct s_entity_attributes *entity_attributes = d_cast(self, entity);
+    t_boolean result = d_false;
+    if ((entity_attributes->current_component) && ((fabs(entity_attributes->current_component->speed_x) > 0.0) || 
+                (fabs(entity_attributes->current_component->speed_y) > 0.0) || (fabs(entity_attributes->current_component->speed_z) > 0.0)))
+        result = d_true;
+    d_cast_return(result);
+}
+
 d_define_method_override(character, event)(struct s_object *self, struct s_object *environment, SDL_Event *current_event) {
     d_using(character);
     struct s_object *result = NULL;
@@ -304,6 +325,8 @@ d_define_class(character) {
         d_hook_method(character, e_flag_public, action),
         d_hook_method(character, e_flag_public, say),
         d_hook_method(character, e_flag_public, move),
+        d_hook_method(character, e_flag_public, is_speaking),
+        d_hook_method(character, e_flag_public, is_moving),
         d_hook_method_override(character, e_flag_public, eventable, event),
         d_hook_method_override(character, e_flag_public, drawable, draw),
         d_hook_delete(character),

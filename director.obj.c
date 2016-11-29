@@ -25,10 +25,13 @@ void p_link_director(enum e_director_actions type, ...) {
     va_start(parameters_list, type);
     if ((action = d_call(director, m_director_new_action, type))) {
         switch (action->type) {
-            case e_director_action_service_sleep:
+            case e_director_action_service_wait_time:
                 if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
                     action->action.delay = argument->value_double;
                 break;
+            case e_director_action_service_wait_message:
+            case e_director_action_service_wait_movement:
+            case e_director_action_service_dialog:
             case e_director_action_service_script:
                 if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
                     strncpy(action->action.label, argument->value_string, d_resources_key_size);
@@ -63,9 +66,32 @@ void p_link_director(enum e_director_actions type, ...) {
     va_end(parameters_list);
 }
 
-struct s_lisp_object *p_link_director_sleep(struct s_object *self, struct s_lisp_object *arguments) {
+struct s_lisp_object *p_link_director_wait_time(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
-    p_link_director(e_director_action_service_sleep, d_lisp_car(arguments));
+    p_link_director(e_director_action_service_wait_time, d_lisp_car(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+struct s_lisp_object *p_link_director_wait_message(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_director(e_director_action_service_wait_message, d_lisp_car(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_director_wait_dialog(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_director(e_director_action_service_wait_dialog);
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_director_wait_movement(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_director(e_director_action_service_wait_movement, d_lisp_car(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_director_dialog(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_director(e_director_action_service_dialog, d_lisp_car(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -103,8 +129,8 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
     struct s_object *current_landscape;
     if ((current_landscape = d_call(director_attributes->stagecrafter, m_stagecrafter_get_main_landscape, NULL)))
         if ((current_item = d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, new_zoom,
-                environment_attributes->camera_origin_x[environment_attributes->current_surface],
-                environment_attributes->camera_origin_y[environment_attributes->current_surface])))
+                        environment_attributes->camera_origin_x[environment_attributes->current_surface],
+                        environment_attributes->camera_origin_y[environment_attributes->current_surface])))
             if ((current_item->script[0]) && (character_attributes->action))
                 d_call(director, m_director_run_script, current_item->script);
     character_attributes->action = d_false;
@@ -126,6 +152,7 @@ struct s_object *f_director_new(struct s_object *self, struct s_object *factory)
     d_assert(attributes->effecteer = f_effecteer_new(d_new(effecteer), factory));
     d_assert(attributes->stagecrafter = f_stagecrafter_new(d_new(stagecrafter), factory));
     d_assert(attributes->collector = f_collector_new(d_new(collector)));
+    d_assert(attributes->screenwriter = f_screenwriter_new(d_new(screenwriter), factory, attributes->puppeteer, attributes->collector));
     return self;
 }
 
@@ -153,13 +180,13 @@ d_define_method(director, update)(struct s_object *self) {
     int index;
     d_call(director_attributes->stagecrafter, m_stagecrafter_update, NULL);
     d_call(director_attributes->camera, m_camera_update, factory_attributes->environment);
+    d_call(director_attributes->screenwriter, m_screenwriter_update, NULL);
     for (index = 0; index < e_director_pool_level_NULL; ++index)
         if ((current_action = (struct s_director_action *)director_attributes->actions_pool[index].head)) {
             if (!current_action->execution_time)
                 current_action->execution_time = time(NULL);
-            if ((current_action->type != e_director_action_service_sleep) || ((current_action->execution_time + current_action->action.delay) < time(NULL))) {
+            if (d_call(self, m_director_dispatcher, current_action)) {
                 f_list_delete(&(director_attributes->actions_pool[index]), (struct s_list_node *)current_action);
-                d_call(self, m_director_dispatcher, current_action);
                 d_free(current_action);
             }
         }
@@ -182,7 +209,11 @@ d_define_method(director, run_script)(struct s_object *self, const char *label) 
 
 d_define_method(director, linker)(struct s_object *self, struct s_object *script) {
     d_using(director);
-    d_call(script, m_lisp_extend_environment, "director_wait", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_sleep));
+    d_call(script, m_lisp_extend_environment, "director_wait_time", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_wait_time));
+    d_call(script, m_lisp_extend_environment, "director_wait_message", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_wait_message));
+    d_call(script, m_lisp_extend_environment, "director_wait_dialog", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_wait_dialog));
+    d_call(script, m_lisp_extend_environment, "director_wait_movement", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_wait_movement));
+    d_call(script, m_lisp_extend_environment, "director_dialog", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_dialog));
     d_call(script, m_lisp_extend_environment, "director_script", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_script));
     d_call(script, m_lisp_extend_environment, "director_camera_move", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_camera_move));
     d_call(script, m_lisp_extend_environment, "director_camera_set", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_camera_set));
@@ -197,18 +228,43 @@ d_define_method(director, linker)(struct s_object *self, struct s_object *script
 d_define_method(director, dispatcher)(struct s_object *self, struct s_director_action *action) {
     d_using(director);
     struct s_factory_attributes *factory_attributes;
+    struct s_screenwriter_attributes *screenwriter_attributes;
+    struct s_object *current_character;
+    struct s_object *result = self;
     switch (action->type) {
         case e_director_action_puppeteer:
-            d_call(director_attributes->puppeteer, m_puppeteer_dispatcher, &(action->action.character));
+            result = d_call(director_attributes->puppeteer, m_puppeteer_dispatcher, &(action->action.character));
             break;
         case e_director_action_effecteer:
-            d_call(director_attributes->effecteer, m_effecteer_dispatcher, &(action->action.effect));
+            result = d_call(director_attributes->effecteer, m_effecteer_dispatcher, &(action->action.effect));
             break;
         case e_director_action_stagecrafter:
-            d_call(director_attributes->stagecrafter, m_stagecrafter_dispatcher, &(action->action.landscape));
+            result = d_call(director_attributes->stagecrafter, m_stagecrafter_dispatcher, &(action->action.landscape));
             break;
         case e_director_action_service_script:              /* label (script name) */
-            d_call(self, m_director_run_script, action->action.label);
+            result = d_call(self, m_director_run_script, action->action.label);
+            break;
+        case e_director_action_service_dialog:              /* label (dialog name) */
+            result = d_call(director_attributes->screenwriter, m_screenwriter_run, action->action.label);
+            break;
+        case e_director_action_service_wait_time:
+            if ((action->execution_time + action->action.delay) > time(NULL))
+                result = NULL;
+            break;
+        case e_director_action_service_wait_message:
+            if ((current_character = d_call(director_attributes->puppeteer, m_puppeteer_get_character, action->action.label)))
+                if ((intptr_t)d_call(current_character, m_character_is_speaking, NULL))
+                    result = NULL;
+            break;
+        case e_director_action_service_wait_dialog:
+            screenwriter_attributes = d_cast(director_attributes->screenwriter, screenwriter);
+            if (screenwriter_attributes->current_entry)
+                result = NULL;
+            break;
+        case e_director_action_service_wait_movement:
+            if ((current_character = d_call(director_attributes->puppeteer, m_puppeteer_get_character, action->action.label)))
+                if ((intptr_t)d_call(current_character, m_character_is_moving, NULL))
+                    result = NULL;
             break;
         case e_director_action_service_camera_move:         /* destination_x, destination_y, destination_z */
             d_log(e_log_level_medium, "action [camera_move] (position_x %.02f | position_y %.02f | position_z %.02f)", action->action.camera_move.position_x,
@@ -234,7 +290,7 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
         default:
             break;
     }
-    return self;
+    return result;
 }
 
 d_define_method(director, delete)(struct s_object *self, struct s_director_attributes *attributes) {
@@ -246,6 +302,7 @@ d_define_method(director, delete)(struct s_object *self, struct s_director_attri
     d_delete(attributes->effecteer);
     d_delete(attributes->stagecrafter);
     d_delete(attributes->collector);
+    d_delete(attributes->screenwriter);
     for (index = 0; index < e_director_pool_level_NULL; ++index)
         while ((current_action = (struct s_director_action *)attributes->actions_pool[index].head)) {
             f_list_delete(&(attributes->actions_pool[index]), (struct s_list_node *)current_action);

@@ -30,7 +30,7 @@ typedef struct s_bubble_option { d_list_node_head;
 typedef struct s_bubble_message { d_list_node_head;
     char content[d_bubble_message_size];
     struct s_list options;
-    int font_ID, dialog_ID, selected_option;
+    int font_ID, selected_option;
     time_t timeout;
     t_boolean force_kill;
 } s_bubble_message;
