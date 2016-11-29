@@ -5,7 +5,7 @@
 ; This module contains the intro of the CERN scenario (which actually is the intro of the game itself)
 
 ; Dialogs
-(define language 0) ; temporary
+(define language (collector_get "language"))
 (define dialogs (list 
 	(cons ;0 andrii
  	 "Dilution magnets are now operative and ready to prevent a catastophic scenario"

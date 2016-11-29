@@ -3,6 +3,7 @@
 	"author":"Andrea Nardinocchi",
 	"email":"andrea@nardinan.it",
 	"date":"22 August 2016",
+	"language":0,
 	"fonts":[
 		{"font":"psycho_font", 		"size":70},
 		{"font":"psycho_font", 		"size":80},
