@@ -265,9 +265,6 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
                                  *drawable_attributes_selected;
     struct s_bubble_component *current_component;
     double position_x, position_y, new_position_x, new_position_y;
-    if ((!bubble_attributes->current_element) || ((bubble_attributes->current_element->timeout > 0) && 
-                ((bubble_attributes->current_element->timeout + bubble_attributes->last_update) < time(NULL))))
-        d_call(self, m_bubble_skip, NULL);
     if (bubble_attributes->current_element) {
         d_call(self, m_drawable_get_position, &position_x, &position_y);
         d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component)
@@ -291,6 +288,10 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
                     while(((int)d_call(current_component->component, m_drawable_draw, environment)) == d_drawable_return_continue);
             }
     }
+    /* check for the next entry */
+    if ((!bubble_attributes->current_element) || ((bubble_attributes->current_element->timeout > 0) && 
+                ((bubble_attributes->current_element->timeout + bubble_attributes->last_update) < time(NULL))))
+        d_call(self, m_bubble_skip, NULL);
     d_cast_return(d_drawable_return_last);
 }
 
