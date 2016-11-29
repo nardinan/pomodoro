@@ -153,6 +153,7 @@ struct s_object *f_director_new(struct s_object *self, struct s_object *factory)
     d_assert(attributes->stagecrafter = f_stagecrafter_new(d_new(stagecrafter), factory));
     d_assert(attributes->collector = f_collector_new(d_new(collector)));
     d_assert(attributes->screenwriter = f_screenwriter_new(d_new(screenwriter), factory, attributes->puppeteer, attributes->collector));
+    d_call(attributes->screenwriter, m_screenwriter_set_language, (intptr_t)d_call(attributes->factory, m_factory_get_language, NULL));
     return self;
 }
 

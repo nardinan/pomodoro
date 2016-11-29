@@ -35,11 +35,12 @@ d_declare_class(factory) {
     struct s_object *font_system;
     struct s_object *resources_png, *resources_ttf, *resources_json, *resources_ogg, *resources_lisp;
     struct s_object *json_configuration;
-    int current_channel;
+    int current_channel, current_language;
 } d_declare_class_tail(factory);
 struct s_factory_attributes *p_factory_alloc(struct s_object *self);
 extern struct s_object *f_factory_new(struct s_object *self, struct s_object *resources_png, struct s_object *resources_ttf, struct s_object *resources_json,
         struct s_object *resources_ogg, struct s_object *resources_lisp, struct s_object *environment);
+d_declare_method(factory, get_language)(struct s_object *self);
 d_declare_method(factory, get_bitmap)(struct s_object *self, const char *label);
 d_declare_method(factory, get_animation)(struct s_object *self, const char *label);
 d_declare_method(factory, get_particle_structure)(struct s_object *self, struct s_object *json, struct s_particle_configuration_core *configuration, 

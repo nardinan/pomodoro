@@ -36,7 +36,7 @@ struct s_object *f_screenwriter_new(struct s_object *self, struct s_object *fact
 d_define_method(screenwriter, set_language)(struct s_object *self, enum e_screenwriter_languages language) {
     d_using(screenwriter);
     screenwriter_attributes->language = language;
-    d_call(screenwriter_attributes->collector, m_collector_add_entry_double, (double)(screenwriter_attributes->language));
+    d_call(screenwriter_attributes->collector, m_collector_add_entry_double, "language", (double)(screenwriter_attributes->language));
     return self;
 }
 

@@ -28,7 +28,7 @@ struct s_object *f_factory_new(struct s_object *self, struct s_object *resources
     struct s_factory_attributes *attributes = p_factory_alloc(self);
     struct s_object *font;
     struct s_object *stream;
-    double font_size, font_outline;
+    double font_size, font_outline, language = 0.0; /* english by default */
     char *game_buffer, *name_buffer, *mail_buffer, *font_buffer;
     int index = 0;
     attributes->resources_png = d_retain(resources_png);
@@ -43,6 +43,8 @@ struct s_object *f_factory_new(struct s_object *self, struct s_object *resources
                 d_call(attributes->json_configuration, m_json_get_string, &game_buffer, "s", "game");
                 d_call(attributes->json_configuration, m_json_get_string, &name_buffer, "s", "author");
                 d_call(attributes->json_configuration, m_json_get_string, &mail_buffer, "s", "email");
+                d_call(attributes->json_configuration, m_json_get_double, &language, "s", "language");
+                attributes->current_language = (int)language;
                 d_log(e_log_level_ever, "[%s - developed by %s (%s)]", game_buffer, name_buffer, mail_buffer);
                 while (d_call(attributes->json_configuration, m_json_get_string, &font_buffer, "sds", "fonts", index, "font")) {
                     font_size = d_factory_default_font_size;
@@ -60,6 +62,11 @@ struct s_object *f_factory_new(struct s_object *self, struct s_object *resources
     } else
         d_die(d_error_malloc);
     return self;
+}
+
+d_define_method(factory, get_language)(struct s_object *self) {
+    d_using(factory);
+    d_cast_return(factory_attributes->current_language);
 }
 
 d_define_method(factory, get_bitmap)(struct s_object *self, const char *label) {
@@ -277,7 +284,8 @@ d_define_method(factory, delete)(struct s_object *self, struct s_factory_attribu
 }
 
 d_define_class(factory) {
-    d_hook_method(factory, e_flag_public, get_bitmap),
+    d_hook_method(factory, e_flag_public, get_language),
+        d_hook_method(factory, e_flag_public, get_bitmap),
         d_hook_method(factory, e_flag_public, get_animation),
         d_hook_method(factory, e_flag_private, get_particle_structure),
         d_hook_method(factory, e_flag_public, get_particle),
