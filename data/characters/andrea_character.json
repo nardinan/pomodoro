@@ -8,7 +8,7 @@
 		"mask_B":0,
 		"mask_A":255,
 		"offset_x":0,
-		"offset_y":-20,
+		"offset_y":-13,
 		"corner_top_left":"bubble_TL",
 		"corner_top_right":"bubble_TR",
 		"corner_bottom_left":"bubble_BL",
@@ -21,6 +21,7 @@
 	},
 	"statuses":[{
 			"label":"back",
+			"speed_y":-5,
 			"head":{
 				"drawable":"head_set_blank_back",
 				"offset_x":0,
@@ -78,6 +79,7 @@
 			}
 		},{
 			"label":"front",
+			"speed_y":5,
 			"head":{
 				"drawable":"head_set_blank_front",
 				"offset_x":0,
