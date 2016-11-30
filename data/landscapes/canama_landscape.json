@@ -19,11 +19,12 @@
 		"layer":8,
 		"speed_ratio_x":1.0
 	},{
-		"drawable":"canama_strips_layer",
+		"drawable":"strips",
 		"layer":9,
 		"speed_ratio_x":1.0
 	}],
 	"items":[
+		{"label":"bed_A",			"item":"bed_A",				"status":"still",	"position_x":300,		"position_y":1010.0,	"zoom":1.25},
 		{"label":"canama_wall_B",	"item":"canama_wall", 		"status":"still",	"position_x":2160.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":true},
 		{"label":"canama_wall_C",	"item":"canama_wall",		"status":"still",	"position_x":1680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},	
 		{"label":"sink_A",			"item":"sink_A", 			"status":"droplet", "position_x":1505.0, 	"position_y":1010.0, 	"zoom":1.25, 	"script":"sink_A_script"},

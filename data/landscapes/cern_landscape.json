@@ -23,7 +23,7 @@
 		"layer":8,
 		"speed_ratio_x":1.0
 	},{
-		"drawable":"cern_strips_layer",
+		"drawable":"strips",
 		"layer":9,
 		"speed_ratio_x":1.0
 	}],
