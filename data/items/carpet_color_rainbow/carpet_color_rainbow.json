@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"carpet_color_rainbow",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"carpet_color_rainbow_still"}
+			]
+		},{
+			"label":"dirty",
+			"layers":[
+				{"drawable":"carpet_color_rainbow_dirty"}
+			]
+		}
+	]
+}

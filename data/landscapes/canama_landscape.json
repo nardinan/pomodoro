@@ -24,14 +24,20 @@
 		"speed_ratio_x":1.0
 	}],
 	"items":[
-		{"label":"bed_A",			"item":"bed_A",				"status":"still",	"position_x":300,		"position_y":1010.0,	"zoom":1.25},
-		{"label":"canama_wall_B",	"item":"canama_wall", 		"status":"still",	"position_x":2160.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":true},
-		{"label":"canama_wall_C",	"item":"canama_wall",		"status":"still",	"position_x":1680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},	
-		{"label":"sink_A",			"item":"sink_A", 			"status":"droplet", "position_x":1505.0, 	"position_y":1010.0, 	"zoom":1.25, 	"script":"sink_A_script"},
-		{"label":"oven_A",			"item":"oven_A",			"status":"flame",	"position_x":1245.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"fridge_A",		"item":"fridge_A",			"status":"still",	"position_x":970.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"shelf_A",			"item":"shelf_A",			"status":"still",	"position_x":735.0, 	"position_y":870.0, 	"zoom":1.25},
-		{"label":"shelf_B",			"item":"shelf_B",			"status":"still",	"position_x":1640.0, 	"position_y":715.0, 	"zoom":1.25},
-		{"label":"canama_wall_A",	"item":"canama_wall", 		"status":"still",	"position_x":500.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":false}
+		{"label":"canama_wall_B",	"item":"canama_wall", 			"status":"still",	"position_x":4160.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":true},
+		{"label":"canama_wall_C",	"item":"canama_wall",			"status":"still",	"position_x":3680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},	
+		{"label":"sink_A",			"item":"sink_A", 				"status":"droplet", "position_x":3505.0, 	"position_y":1010.0, 	"zoom":1.25, 	"script":"sink_A_script"},
+		{"label":"shelf_B",			"item":"shelf_B",				"status":"still",	"position_x":3640.0, 	"position_y":715.0, 	"zoom":1.25},
+		{"label":"oven_A",			"item":"oven_A",				"status":"flame",	"position_x":3245.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"fridge_A",		"item":"fridge_A",				"status":"still",	"position_x":2970.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"shelf_A",			"item":"shelf_A",				"status":"still",	"position_x":2735.0, 	"position_y":870.0, 	"zoom":1.25},
+		{"label":"carpet_B",		"item":"carpet_color_green",	"status":"still",	"position_x":3260.0,	"position_y":1150.0,	"zoom":1.25},
+		{"label":"canama_wall_A",	"item":"canama_wall", 			"status":"still",	"position_x":2500.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":false},
+		{"label":"bed_A",			"item":"bed_A",					"status":"still",	"position_x":805.0,		"position_y":970.0,		"zoom":1.25},
+		{"label":"carpet_A",		"item":"carpet_color_rainbow",	"status":"dirty",	"position_x":720.0,		"position_y":1200.0,	"zoom":1.25},
+		{"label":"window_A",		"item":"window_A",				"status":"still",	"position_x":1500.0,	"position_y":640.0,		"zoom":1.25},
+		{"label":"chair_A",			"item":"chair_A",				"status":"still",	"position_x":1980.0,	"position_y":980.0,		"zoom":1.25},
+		{"label":"desk_A",			"item":"desk_A",				"status":"still",	"position_x":2020.0,	"position_y":890.0,		"zoom":1.25},
+		{"label":"canama_wall_D",	"item":"canama_wall", 			"status":"solid",	"position_x":310.0,		"position_y":450.0, 	"zoom":1.25,	"solid":true}
 	]
 } 

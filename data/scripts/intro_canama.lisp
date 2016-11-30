@@ -12,7 +12,7 @@
 	(lambda (c m)
 		(begin
 			(puppeteer_say c m (+ 1 (* (length m) 0.05)))
-			(director_wait (+ 1 (* (length m) 0.05)))
+			(director_wait_time (+ 1 (* (length m) 0.05)))
 		)
 	)
 )
@@ -49,8 +49,11 @@
 )
 
 (puppeteer_disable_control)
-(puppeteer_show "andrea" 	1350)
-(puppeteer_show "luca" 		2510)
+(puppeteer_show "andrea" 	1050)
+(puppeteer_show "luca" 		810)
 (animation "andrea" 	"front")
 (animation "luca" 		"front")
 (main_control "andrea")
+(director_wait_time 5)
+(animation "andrea" 	"still_right")
+(animation "luca" 	"still_left")

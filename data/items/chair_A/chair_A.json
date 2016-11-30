@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"chair_A",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"chair_A"}
+			]
+		}
+	]
+}

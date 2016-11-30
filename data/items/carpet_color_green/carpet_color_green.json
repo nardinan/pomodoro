@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"carpet_color_green",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"carpet_color_green"}
+			]
+		}
+	]
+}

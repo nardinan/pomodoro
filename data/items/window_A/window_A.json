@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"window_A",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"window_A_still"}
+			]
+		},{
+			"label":"open",
+			"layers":[
+				{"drawable":"window_A_open"}
+			]
+		}
+	]
+}

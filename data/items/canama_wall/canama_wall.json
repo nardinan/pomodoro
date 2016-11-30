@@ -9,6 +9,11 @@
 			"layers":[
 				{"drawable":"canama_wall", "mask_A":125.0}
 			]
+		},{
+			"label":"solid",
+			"layers":[
+				{"drawable":"canama_wall"}
+			]
 		}
 	]
 }
