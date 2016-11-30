@@ -21,7 +21,6 @@
 #include "item.obj.h"
 #define d_landscape_surface_default_layer 1
 #define d_landscape_item_default_layer 3
-#define d_landscape_item_max_square_distance 1262500
 typedef struct s_landscape_surface { d_list_node_head;
     struct s_object *drawable;
     double offset_x, offset_y, speed_ratio_x, speed_ratio_y;

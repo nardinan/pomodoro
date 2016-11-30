@@ -69,6 +69,7 @@ d_define_method(item, load)(struct s_object *self, struct s_object *json, struct
                             loops = d_track_infinite_loop;
                             d_call(json, m_json_get_double, &volume, "sdss", "statuses", index_status, "track", "volume");
                             d_call(json, m_json_get_double, &loops, "sdss", "statuses", index_status, "track", "loops");
+                            current_track->volume = (int)volume;
                             if ((current_track->track = d_call(factory, m_factory_get_track, string_supply))) {
                                 d_call(current_track->track, m_track_set_loops, (int)loops);
                                 d_call(current_track->track, m_track_set_volume, (int)volume);
@@ -194,7 +195,27 @@ d_define_method(item, collision)(struct s_object *self, struct s_object *entity)
 }
 
 d_define_method_override(item, draw)(struct s_object *self, struct s_object *environment) {
+    d_using(item);
+    struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
+    double distance, volume = 0, position_x, position_y, dimension_w, dimension_h, item_center_x, item_center_y, screen_center_x, screen_center_y;
     d_call(self, m_morphable_update, environment);
+    if ((item_attributes->current_track) && (item_attributes->audio)) {
+        d_call(self, m_drawable_get_scaled_position, &position_x, &position_y);
+        d_call(self, m_drawable_get_scaled_dimension, &dimension_w, &dimension_h);
+        item_center_x = (position_x + (dimension_w / 2.0));
+        item_center_y = (position_y + (dimension_h / 2.0));
+        screen_center_x = (environment_attributes->current_w / 2.0);
+        screen_center_y = (environment_attributes->current_h / 2.0);
+        if ((distance = d_point_square_distance(item_center_x, item_center_y, screen_center_x, screen_center_y)) > d_item_max_square_distance) {
+            if (distance < d_item_lost_square_distance)
+                volume = item_attributes->current_track->volume * 
+                    (1.0 - ((distance - d_item_max_square_distance)/(d_item_lost_square_distance - d_item_max_square_distance)));
+            else
+                volume = 0;
+        } else
+            volume = item_attributes->current_track->volume;
+        d_call(item_attributes->current_track->track, m_track_set_volume, (int)volume);
+    }
     return d_call_owner(self, entity, m_drawable_draw, environment); /* recall the father's draw method */
 }
 
