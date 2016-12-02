@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"trash_can_A",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"trash_can_A"}
+			]
+		}
+	]
+}

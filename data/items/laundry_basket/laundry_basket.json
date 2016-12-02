@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"laundry_basket",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"laundry_basket"}
+			]
+		}
+	]
+}
