@@ -19,7 +19,7 @@
 #define pomodoro_item_h
 #include "factory.obj.h"
 #define d_item_lost_square_distance 3659296
-#define d_item_max_square_distance 2059296
+#define d_item_max_square_distance 1559296
 typedef struct s_item_track { d_list_node_head;
     char label[d_entity_label_size];
     struct s_object *track;
