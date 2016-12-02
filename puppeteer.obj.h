@@ -27,7 +27,8 @@ typedef enum e_puppeteer_actions {
     e_puppeteer_action_disable_control,
     e_puppeteer_action_say,
     e_puppeteer_action_set,
-    e_puppeteer_action_move
+    e_puppeteer_action_move,
+    e_puppeteer_action_look
 } e_puppeteer_action;
 typedef struct s_puppeteer_action_say {
     char message[d_string_buffer_size];
@@ -38,7 +39,7 @@ typedef struct s_puppeteer_action {
     char key[d_entity_label_size];
     union {
         struct s_puppeteer_action_say action_say;
-        char entry[d_string_buffer_size];
+        char entry[d_string_buffer_size], entity[d_entity_label_size];
         double destination_x;
     } parameters;
 } s_puppeteer_action;
@@ -49,11 +50,12 @@ extern struct s_lisp_object *p_link_puppeteer_disable_control(struct s_object *s
 extern struct s_lisp_object *p_link_puppeteer_say_character(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_set_character(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_move_character(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_pippeteer_look_character(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
 typedef struct s_puppeteer_character { d_list_node_head;
-    char label[d_entity_label_size];
+    char label[d_entity_label_size], script[d_resources_key_size];
     struct s_object *character;
-    t_boolean controllable;
+    t_boolean controllable, visible;
 } s_puppeteer_character;
 d_declare_class(puppeteer) {
     struct s_attributes head;
@@ -71,6 +73,7 @@ d_declare_method(puppeteer, disable_control)(struct s_object *self);
 d_declare_method(puppeteer, say_character)(struct s_object *self, const char *key, const char *message, time_t timeout);
 d_declare_method(puppeteer, set_character)(struct s_object *self, const char *key, const char *entry);
 d_declare_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x);
+d_declare_method(puppeteer, look_character)(struct s_object *self, const char *key, const char *entity);
 d_declare_method(puppeteer, get_main_character)(struct s_object *self);
 d_declare_method(puppeteer, linker)(struct s_object *self, struct s_object *script);
 d_declare_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer_action *action);

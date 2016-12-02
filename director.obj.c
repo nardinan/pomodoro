@@ -71,6 +71,7 @@ struct s_lisp_object *p_link_director_wait_time(struct s_object *self, struct s_
     p_link_director(e_director_action_service_wait_time, d_lisp_car(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
+
 struct s_lisp_object *p_link_director_wait_message(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_director(e_director_action_service_wait_message, d_lisp_car(arguments));
@@ -123,16 +124,31 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
         double *new_zoom) {
     struct s_director_attributes *director_attributes = d_cast(director, director);
     struct s_factory_attributes *factory_attributes = d_cast(director_attributes->factory, factory);
+    struct s_puppeteer_attributes *puppeteer_attributes = d_cast(director_attributes->puppeteer, puppeteer);
     struct s_environment_attributes *environment_attributes = d_cast(factory_attributes->environment, environment);
     struct s_character_attributes *character_attributes = d_cast(self, character);
+    struct s_puppeteer_character *current_character;
     struct s_landscape_item *current_item;
     struct s_object *current_landscape;
+    if (character_attributes->action)
+        d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
+            if (current_character->character != self)
+                if (current_character->visible)
+                    if ((intptr_t)d_call(self, m_entity_interact, current_character->character)) {
+                        if (current_character->script[0]) {
+                            d_call(director, m_director_run_script, current_character->script);
+                            character_attributes->action = d_false;
+                        }
+                        break;
+                    }
     if ((current_landscape = d_call(director_attributes->stagecrafter, m_stagecrafter_get_main_landscape, NULL)))
         if ((current_item = d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, new_zoom,
                         environment_attributes->camera_origin_x[environment_attributes->current_surface],
                         environment_attributes->camera_origin_y[environment_attributes->current_surface])))
-            if ((current_item->script[0]) && (character_attributes->action))
+            if ((character_attributes->action) && (current_item->script[0])) {
                 d_call(director, m_director_run_script, current_item->script);
+                character_attributes->action = d_false;
+            }
     character_attributes->action = d_false;
     return d_true;
 }
@@ -204,7 +220,8 @@ d_define_method(director, run_script)(struct s_object *self, const char *label) 
         d_call(self, m_director_linker, current_script);
         d_call(current_script, m_lisp_run, NULL);
         d_delete(current_script);
-    }
+    } else
+        d_war(e_log_level_medium, "script '%s' cannot be found", label);
     return self;
 }
 
