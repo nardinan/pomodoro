@@ -149,6 +149,7 @@
 		},{
 			"label":"walk_left",
 			"speed_x":-10,
+			"offset_x":-200,
 			"head":{
 				"drawable":"head_set_blank_side",
 				"offset_x":0,
@@ -218,6 +219,7 @@
 		},{
 			"label":"walk_right",
 			"speed_x":10,
+			"offset_x":200,
 			"head":{
 				"drawable":"head_set_blank_side",
 				"offset_x":0,
@@ -286,6 +288,7 @@
 			}
 		},{
 			"label":"still_right",
+			"offset_x":200,
 			"head":{
 				"drawable":"head_set_blank_side",
 				"offset_x":0,
@@ -354,6 +357,7 @@
 			}
 		},{
 			"label":"still_left",
+			"offset_x":-200,
 			"head":{
 				"drawable":"head_set_blank_side",
 				"offset_x":0,

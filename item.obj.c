@@ -60,7 +60,7 @@ d_define_method(item, load)(struct s_object *self, struct s_object *json, struct
                 item_attributes->width *= zoom;
                 item_attributes->height *= zoom;
                 while (d_call(json, m_json_get_string, &string_supply_component, "sds", "statuses", index_status, "label")) {
-                    d_call(self, m_entity_add_component, string_supply_component, 0.0, 0.0, 0.0); /* the component is not moving */
+                    d_call(self, m_entity_add_component, string_supply_component, 0.0, 0.0, 0.0, 0.0, 0.0); /* the component is not moving */
                     index_layer = 0;
                     if ((d_call(json, m_json_get_string, &string_supply, "sdss", "statuses", index_status, "track", "playable"))) {
                         if ((current_track = (struct s_item_track *)d_malloc(sizeof(struct s_item_track)))) {

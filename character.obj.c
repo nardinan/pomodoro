@@ -100,10 +100,14 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
                     speed_x = 0;
                     speed_y = 0;
                     speed_z = 0;
+                    offset_x = 0;
+                    offset_y = 0;
                     d_call(json, m_json_get_double, &speed_x, "sds", "statuses", index_status, "speed_x");
                     d_call(json, m_json_get_double, &speed_y, "sds", "statuses", index_status, "speed_y");
                     d_call(json, m_json_get_double, &speed_z, "sds", "statuses", index_status, "speed_z");
-                    d_call(self, m_entity_add_component, string_supply_component, speed_x, speed_y, speed_z);
+                    d_call(json, m_json_get_double, &offset_x, "sds", "statuses", index_status, "offset_x");
+                    d_call(json, m_json_get_double, &offset_y, "sds", "statuses", index_status, "offset_y");
+                    d_call(self, m_entity_add_component, string_supply_component, speed_x, speed_y, speed_z, offset_x, offset_y);
                     for (index_component = 0; index_component < e_character_component_NULL; ++index_component) {
                         offset_x = 0;
                         offset_y = 0;
