@@ -18,7 +18,7 @@
 	"characters":[
 		{"label":"andrii",	"link":"andrii_character",		"controllable":false},
 		{"label":"yuriy",	"link":"yuriy_character",		"controllable":false},	
-		{"label":"luca",	"link":"luca_character", 		"controllable":false},
+		{"label":"luca",	"link":"luca_character", 		"controllable":false,	"script":"ai_luca"},
 		{"label":"andrea",	"link":"andrea_character", 		"controllable":true}
 	],
 	"landscapes":[

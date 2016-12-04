@@ -24,7 +24,7 @@
 		"speed_ratio_x":1.0
 	}],
 	"items":[
-		{"label":"canama_wall_B",	"item":"canama_wall", 			"status":"still",			"position_x":4160.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":true},
+		{"label":"canama_wall_B",	"item":"canama_wall", 			"status":"still",			"position_x":5650.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":true},
 		{"label":"canama_wall_C",	"item":"canama_wall",			"status":"still",			"position_x":3680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},	
 		{"label":"sink_A",			"item":"sink_A", 				"status":"droplet", 		"position_x":3505.0, 	"position_y":1010.0, 	"zoom":1.25, 	"script":"sink_A_script"},
 		{"label":"shelf_B",			"item":"shelf_B",				"status":"still",			"position_x":3640.0, 	"position_y":715.0, 	"zoom":1.25},
