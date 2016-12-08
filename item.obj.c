@@ -27,7 +27,7 @@ struct s_item_attributes *p_item_alloc(struct s_object *self, const char *key) {
 
 struct s_object *f_item_new(struct s_object *self, const char *key) {
     struct s_item_attributes *attributes = p_item_alloc(self, key);
-    attributes->active = d_true;
+    attributes->active = d_false;
     if (v_developer_mode) {
         d_call(self, m_morphable_set_visibility, d_true);
         d_call(self, m_morphable_set_freedom_x, d_true);
@@ -61,7 +61,6 @@ d_define_method(item, load)(struct s_object *self, struct s_object *json, struct
                 item_attributes->height *= zoom;
                 while (d_call(json, m_json_get_string, &string_supply_component, "sds", "statuses", index_status, "label")) {
                     d_call(self, m_entity_add_component, string_supply_component, 0.0, 0.0, 0.0, 0.0, 0.0); /* the component is not moving */
-                    index_layer = 0;
                     if ((d_call(json, m_json_get_string, &string_supply, "sdss", "statuses", index_status, "track", "playable"))) {
                         if ((current_track = (struct s_item_track *)d_malloc(sizeof(struct s_item_track)))) {
                             strncpy(current_track->label, string_supply_component, d_entity_label_size);
@@ -79,6 +78,7 @@ d_define_method(item, load)(struct s_object *self, struct s_object *json, struct
                         } else
                             d_die(d_error_malloc);
                     }
+                    index_layer = 0;
                     while ((d_call(json, m_json_get_string, &string_supply, "sdsds", "statuses", index_status, "layers", index_layer, "drawable"))) {
                         offset_x = 0;
                         offset_y = 0;
@@ -179,17 +179,13 @@ d_define_method(item, set_active)(struct s_object *self, t_boolean active) {
 d_define_method(item, collision)(struct s_object *self, struct s_object *entity) {
     struct s_drawable_attributes *drawable_attributes = d_cast(self, drawable);
     t_boolean result = d_false;
-    double entity_position_x, entity_position_y, entity_width, entity_height;
+    double entity_position_x, entity_position_y, entity_width, entity_height, item_position_x, item_position_y, item_width, item_height, center_x;
     d_call(entity, m_drawable_get_scaled_position, &entity_position_x, &entity_position_y);
     d_call(entity, m_drawable_get_scaled_dimension, &entity_width, &entity_height);
-    if (((intptr_t)d_call(&(drawable_attributes->square_collision_box), m_square_inside_coordinates, (entity_position_x + (entity_width / 3.0)), 
-                    (entity_position_y + (entity_height / 3.0)))) || 
-            ((intptr_t)d_call(&(drawable_attributes->square_collision_box), m_square_inside_coordinates, (entity_position_x + (entity_width / 3.0)),
-                (entity_position_y + (entity_height - (entity_height / 3.0))))) ||
-            ((intptr_t)d_call(&(drawable_attributes->square_collision_box), m_square_inside_coordinates, (entity_position_x + (entity_width - (entity_width / 3.0))),
-                (entity_position_y + (entity_height / 3.0)))) ||
-            ((intptr_t)d_call(&(drawable_attributes->square_collision_box), m_square_inside_coordinates, (entity_position_x + (entity_width - (entity_width / 3.0))),
-                (entity_position_y + (entity_height - (entity_height / 3.0))))))
+    d_call(self, m_drawable_get_scaled_position, &item_position_x, &item_position_y);
+    d_call(self, m_drawable_get_scaled_dimension, &item_width, &item_height);
+    center_x = (entity_position_x + (entity_width / 2.0));
+    if ((center_x > item_position_x) && (center_x < (item_position_x + item_width)))
         result = d_true;
     d_cast_return(result);
 }

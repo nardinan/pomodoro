@@ -220,7 +220,7 @@ d_define_method(character, move_down)(struct s_object *self, struct s_controllab
 
 d_define_method(character, action)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
     d_using(character);
-    if (pressed)
+    if (!pressed)
         character_attributes->action = d_true;
     return self;
 }

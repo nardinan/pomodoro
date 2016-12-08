@@ -17,8 +17,8 @@
  */
 #ifndef pomodoro_miranda_h
 #define pomodoro_miranda_h
-#define d_pomodoro_width (double)1600
-#define d_pomodoro_height (double)900
+#define d_pomodoro_width (double)1920
+#define d_pomodoro_height (double)1080
 #include <miranda/ground.h>
 #include <miranda/objects/objects.h>
 #include <miranda/objects/io/io.h>
