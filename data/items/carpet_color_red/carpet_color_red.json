@@ -1,12 +1,12 @@
 {
 	"format":"item",
-	"ID":"desk_A",
+	"ID":"carpet_color_red",
 	"zoom":12,
 	"statuses":[
 		{
 			"label":"still",
 			"layers":[
-				{"drawable":"desk_A_still"}
+				{"drawable":"carpet_color_red"}
 			]
 		}
 	]

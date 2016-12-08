@@ -48,12 +48,20 @@
 	)
 )
 
+; Collect environment 
+(define note_A_taken (collector_get "note_A_taken"))
+
+; Configure
+(if (= note_A_taken 1.0)
+	(begin
+		(stagecrafter_set_item "notes_A" "none")
+		(stagecrafter_enable_item "bed_B"))
+	nil)
+
+; Setup characters
 (puppeteer_disable_control)
-(puppeteer_show "andrea" 	1050)
+(puppeteer_show "andrea" 	4000)
 (puppeteer_show "luca" 		810)
 (animation "andrea" 	"front")
 (animation "luca" 		"front")
 (main_control "andrea")
-(director_wait_time 5)
-(animation "andrea" 	"still_right")
-(animation "luca" 	"still_left")

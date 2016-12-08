@@ -6,7 +6,7 @@
 		{
 			"label":"still",
 			"layers":[
-				{"drawable":"chair_A"}
+				{"drawable":"chair_A_still"}
 			]
 		}
 	]

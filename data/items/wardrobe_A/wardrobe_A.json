@@ -1,12 +1,12 @@
 {
 	"format":"item",
-	"ID":"desk_A",
+	"ID":"wardrobe_A",
 	"zoom":12,
 	"statuses":[
 		{
 			"label":"still",
 			"layers":[
-				{"drawable":"desk_A_still"}
+				{"drawable":"wardrobe_A_still"}
 			]
 		}
 	]

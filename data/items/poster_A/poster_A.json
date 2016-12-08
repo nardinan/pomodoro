@@ -1,12 +1,12 @@
 {
 	"format":"item",
-	"ID":"desk_A",
+	"ID":"painting_A",
 	"zoom":12,
 	"statuses":[
 		{
 			"label":"still",
 			"layers":[
-				{"drawable":"desk_A_still"}
+				{"drawable":"poster_A_still"}
 			]
 		}
 	]
