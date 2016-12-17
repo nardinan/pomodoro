@@ -25,7 +25,6 @@
 #define d_pomodoro_resources_default_lisp   "./data/placeholders/default_lisp.lisp"
 struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json, *resources_lisp;
 struct s_object *factory;
-struct s_object *background;
 unsigned int current_loop = 0;
 t_boolean v_developer_mode = d_false;
 int pomodoro_load_call(struct s_object *environment) {
@@ -36,7 +35,6 @@ int pomodoro_load_call(struct s_object *environment) {
                     *template_json  = f_string_new_constant(d_new(string), d_pomodoro_resources_default_json),
                     *template_ogg   = f_string_new_constant(d_new(string), d_pomodoro_resources_default_ogg),
                     *template_lisp  = f_string_new_constant(d_new(string), d_pomodoro_resources_default_lisp);
-    struct s_object *png_stream;
     d_try {
         d_assert(resources_png = f_resources_new_template(d_new(resources), resources_path, template_png, ".png"));
         d_assert(resources_ttf = f_resources_new_template(d_new(resources), resources_path, template_ttf, ".ttf"));
@@ -45,9 +43,6 @@ int pomodoro_load_call(struct s_object *environment) {
         d_assert(resources_lisp = f_resources_new_template(d_new(resources), resources_path, template_lisp, ".lisp"));
         d_assert(factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, resources_lisp, environment));
         d_assert(director = f_director_new(d_new(director), factory));
-        if ((png_stream = d_call(resources_png, m_resources_get_stream, "default_background", e_resources_type_common)))
-            if ((background = f_bitmap_new(d_new(bitmap), png_stream, environment)))
-                d_call(environment, m_environment_add_drawable, background, 0, e_environment_surface_primary);
         d_call(director, m_director_run_script, "initialize_script");
         d_delete(template_png);
         d_delete(template_ttf);
@@ -68,7 +63,6 @@ int pomodoro_loop_call(struct s_object *environment) {
 }
 
 int pomodoro_quit_call(struct s_object *environment) {
-    d_delete(background);
     d_delete(resources_png);
     d_delete(resources_ttf);
     d_delete(resources_json);
