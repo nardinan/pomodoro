@@ -288,6 +288,7 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
             d_log(e_log_level_medium, "action [camera_move] (position_x %.02f | position_y %.02f | position_z %.02f)", action->action.camera_move.position_x,
                     action->action.camera_move.position_y, action->action.camera_move.position_z);
             factory_attributes = d_cast(director_attributes->factory, factory);
+            d_call(director_attributes->camera, m_camera_remove_reference, NULL);
             d_call(director_attributes->camera, m_camera_move_position, action->action.camera_move.position_x, action->action.camera_move.position_y,
                     action->action.camera_move.position_z, factory_attributes->environment);
             break;
@@ -295,6 +296,7 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
             d_log(e_log_level_medium, "action [camera_set] (position_x %.02f | position_y %.02f | position_z %.02f)", action->action.camera_move.position_x,
                     action->action.camera_move.position_y, action->action.camera_move.position_z);
             factory_attributes = d_cast(director_attributes->factory, factory);
+            d_call(director_attributes->camera, m_camera_remove_reference, NULL);
             d_call(director_attributes->camera, m_camera_set_position, action->action.camera_move.position_x, action->action.camera_move.position_y,
                     action->action.camera_move.position_z, factory_attributes->environment);
             break;
