@@ -177,7 +177,6 @@ d_define_method(item, set_active)(struct s_object *self, t_boolean active) {
 }
 
 d_define_method(item, collision)(struct s_object *self, struct s_object *entity) {
-    struct s_drawable_attributes *drawable_attributes = d_cast(self, drawable);
     t_boolean result = d_false;
     double entity_position_x, entity_position_y, entity_width, entity_height, item_position_x, item_position_y, item_width, item_height, center_x;
     d_call(entity, m_drawable_get_scaled_position, &entity_position_x, &entity_position_y);

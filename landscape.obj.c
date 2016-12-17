@@ -254,6 +254,7 @@ d_define_method(landscape, floor)(struct s_object *self, double position_x, doub
     d_using(landscape);
     struct s_landscape_point *current_point = NULL, *previous_point = NULL;
     double ratio;
+    position_x -= landscape_attributes->position_x;
     d_foreach(&(landscape_attributes->points), current_point, struct s_landscape_point) {
         if (current_point->position_x >= position_x)
             break;
@@ -271,6 +272,7 @@ d_define_method(landscape, floor)(struct s_object *self, double position_x, doub
         *scale_min = previous_point->scale_min;
         *scale_max = previous_point->scale_max;
     }
+    *position_y += landscape_attributes->position_y;
     return self;
 }
 
