@@ -20,7 +20,7 @@
 #include "miranda.h"
 #include <sys/time.h>
 #include <math.h>
-#define d_camera_default_initial_speed  0.5
+#define d_camera_default_initial_speed  0.8
 #define d_camera_default_final_speed    0.01
 #define d_camera_round(o,v,t) do{\
     if((((o)-(t))<(v))&&(((o)+(t))>(v)))\
@@ -41,6 +41,7 @@ d_declare_method(camera, move_reference)(struct s_object *self, struct s_object 
         struct s_object *environment);
 d_declare_method(camera, chase_reference)(struct s_object *self, struct s_object *reference, double offset_x, double offset_y, double position_z, 
         struct s_object *environment);
+d_declare_method(camera, remove_reference)(struct s_object *self);
 d_declare_method(camera, set_speed)(struct s_object *self, double speed);
 d_declare_method(camera, set_initial_speed)(struct s_object *self, double speed);
 d_declare_method(camera, set_final_speed)(struct s_object *self, double speed);

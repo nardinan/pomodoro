@@ -85,6 +85,15 @@ d_define_method(camera, chase_reference)(struct s_object *self, struct s_object 
     return self;
 }
 
+d_define_method(camera, remove_reference)(struct s_object *self) {
+    d_using(camera);
+    if (camera_attributes->reference) {
+        d_delete(camera_attributes->reference);
+        camera_attributes->reference = NULL;
+    }
+    return self;
+}
+
 d_define_method(camera, set_speed)(struct s_object *self, double speed) {
     d_using(camera);
     camera_attributes->initial_speed = speed;
@@ -156,6 +165,7 @@ d_define_class(camera) {
         d_hook_method(camera, e_flag_public, set_position),
         d_hook_method(camera, e_flag_public, move_reference),
         d_hook_method(camera, e_flag_public, chase_reference),
+        d_hook_method(camera, e_flag_public, remove_reference),
         d_hook_method(camera, e_flag_public, set_speed),
         d_hook_method(camera, e_flag_public, set_initial_speed),
         d_hook_method(camera, e_flag_public, set_final_speed),
