@@ -1,11 +1,11 @@
 ; Pomodoro
-; Module: intro_canama
+; Module: intro_stairs
 ; Author: nardinan
-; Date  : 20 Nov 2016
-; This module contains the intro of the Canama scenario
+; Date  : 14 Dec 2016
+; This module contains the intro of the Stairs scenario
 
 ; Dialogs
-(define language 0) ; temporary
+(define language 0)
 (define dialogs (nil))
 
 (define say
@@ -50,19 +50,24 @@
 
 ; Collect environment 
 (define note_A_taken (collector_get "note_A_taken"))
+(define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "canama")
-(if (= note_A_taken 1.0)
-	(begin
-		(stagecrafter_set_item "notes_A" "none")
-		(stagecrafter_enable_item "bed_B"))
-	nil)
+(collector_set "from_where" "stairs")
 
 ; Setup characters
 (puppeteer_disable_control)
-(puppeteer_show "andrea" 	450)
-(puppeteer_show "luca" 		810)
+(if (compare from_where "canama")
+	(puppeteer_show "andrea" 1000)
+	(if (compare from_where "palegi")
+		(puppeteer_show "andrea" 2000)
+		(if (compare from_where "lupattelli")
+			(puppeteer_show "andrea" 250)
+			(puppeteer_show "andrea" 1000)
+		)
+	)
+)
+
+; Setup characters
 (animation "andrea" 	"front")
-(animation "luca" 		"front")
 (main_control "andrea")

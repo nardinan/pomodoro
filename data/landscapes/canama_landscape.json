@@ -2,13 +2,13 @@
 	"format":"landscape",
 	"ID":"canama",
 	"zoom":10,
-	"position_x":-200.0,
-	"position_y":-300.0,
+	"position_x":0.0,
+	"position_y":0.0,
 	"intro_script":"intro_canama",
 	"outro_script":"outro_canama",
 	"floor":[{
 		"position_x":0.0,
-		"position_y":700.0
+		"position_y":1000.0
 	}],
 	"surfaces":[{
 		"drawable":"canama_background",
@@ -28,17 +28,17 @@
 		{"label":"carpet_C",		"item":"carpet_color_red",		"status":"still",			"position_x":4460.0,	"position_y":1200.0,	"zoom":1.25},
 		{"label":"poster_A",		"item":"poster_A",				"status":"still",			"position_x":5540.0,	"position_y":570.0,		"zoom":1.25},
 		{"label":"shelf_C",			"item":"shelf_C",				"status":"still",			"position_x":5560.0, 	"position_y":1060.0, 	"zoom":1.25},
-		{"label":"notes_A",			"item":"notes_A",				"status":"still",			"position_x":5390.0,	"position_y":970.0,		"zoom":1.25,	"active":true, "script":"note_A_script"},
-		{"label":"bed_B",			"item":"bed_B",					"status":"still",			"position_x":5410.0,	"position_y":970.0,		"zoom":1.25,    "script":"bed_B_script"},
+		{"label":"notes_A",			"item":"notes_A",				"status":"still",			"position_x":5390.0,	"position_y":970.0,		"zoom":1.25,						"active":true, 		"script":"note_A_script"},
+		{"label":"bed_B",			"item":"bed_B",					"status":"still",			"position_x":5410.0,	"position_y":970.0,		"zoom":1.25,    										"script":"bed_B_script"},
 		{"label":"wardrobe_A",		"item":"wardrobe_A",			"status":"still",			"position_x":4650.0,	"position_y":720.0,		"zoom":1.25},
 		{"label":"chair_B",			"item":"chair_B",				"status":"still",			"position_x":4100.0,	"position_y":990.0,		"zoom":1.25},
 		{"label":"desk_B",			"item":"desk_B",				"status":"still",			"position_x":3820.0,	"position_y":990.0,		"zoom":1.25},
 		{"label":"window_B",		"item":"window_A",				"status":"open",			"position_x":4050.0,	"position_y":640.0,		"zoom":1.25},
 		{"label":"canama_wall_C",	"item":"canama_wall",			"status":"still",			"position_x":3680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},	
-		{"label":"sink_A",			"item":"sink_A", 				"status":"droplet", 		"position_x":3505.0, 	"position_y":1010.0, 	"zoom":1.25, 	"active":true, "script":"sink_A_script"},
+		{"label":"sink_A",			"item":"sink_A", 				"status":"droplet", 		"position_x":3505.0, 	"position_y":1010.0, 	"zoom":1.25, 						"active":true, 		"script":"sink_A_script"},
 		{"label":"shelf_B",			"item":"shelf_B",				"status":"still",			"position_x":3640.0, 	"position_y":715.0, 	"zoom":1.25},
 		{"label":"oven_A",			"item":"oven_A",				"status":"flame",			"position_x":3245.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"fridge_A",		"item":"fridge_A",				"status":"still",			"position_x":2970.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"fridge_A",		"item":"fridge_A",				"status":"still",			"position_x":2970.0, 	"position_y":750.0, 	"zoom":1.25,    "solid":false,      "active":true,      "script":"message_brains"},
 		{"label":"shelf_A",			"item":"shelf_A",				"status":"still",			"position_x":2735.0, 	"position_y":870.0, 	"zoom":1.25},
 		{"label":"carpet_B",		"item":"carpet_color_green",	"status":"still",			"position_x":3260.0,	"position_y":1150.0,	"zoom":1.25},
 		{"label":"canama_wall_A",	"item":"canama_wall", 			"status":"still",			"position_x":2500.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":false},
@@ -51,7 +51,8 @@
 		{"label":"window_A",		"item":"window_A",				"status":"still",			"position_x":1500.0,	"position_y":640.0,		"zoom":1.25},
 		{"label":"chair_A",			"item":"chair_A",				"status":"still",			"position_x":1980.0,	"position_y":980.0,		"zoom":1.25},
 		{"label":"desk_A",			"item":"desk_A",				"status":"still",			"position_x":2020.0,	"position_y":880.0,		"zoom":1.25},
-		{"label":"painting_A",		"item":"painting_A",			"status":"tatta",			"position_x":2060.0,	"position_y":530.0},
-		{"label":"canama_wall_D",	"item":"canama_wall", 			"status":"solid",			"position_x":310.0,		"position_y":450.0, 	"zoom":1.25,	"solid":true}
+		{"label":"painting_A",		"item":"painting_A",			"status":"tatta",			"position_x":2060.0,	"position_y":530.0,		"zoom":1.25},
+		{"label":"door_A",			"item":"door_A",				"status":"active_left",		"position_x":250.0,		"position_y":1000.0,	"zoom":1.25,	"solid":true,		"active":true,		"script":"move_canama_stairs"},
+		{"label":"canama_wall_D",	"item":"canama_wall", 			"status":"solid",			"position_x":310.0,		"position_y":450.0, 	"zoom":1.25,	"solid":false}
 	]
 } 

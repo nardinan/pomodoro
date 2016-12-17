@@ -1,0 +1,14 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"door_A_active_v_frame0",  "time":0.1},
+		{"drawable":"door_A_active_v_frame1",  "time":0.1},
+		{"drawable":"door_A_active_v_frame2",  "time":0.1},
+		{"drawable":"door_A_active_v_frame3",  "time":0.1},
+		{"drawable":"door_A_active_v_frame4",  "time":0.1},
+		{"drawable":"door_A_active_v_frame3",  "time":0.1},
+		{"drawable":"door_A_active_v_frame2",  "time":0.1},
+		{"drawable":"door_A_active_v_frame1",  "time":0.1}
+	]
+}
