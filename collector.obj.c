@@ -41,9 +41,9 @@ struct s_lisp_object *p_link_collector_get(struct s_object *self, struct s_lisp_
     if (label_object->type == e_lisp_object_type_string)
         if ((current_entry = (struct s_collector_entry *) d_call(director_attributes->collector, m_collector_get_entry, label_object->value_string))) {
             if (current_entry->type == e_collector_type_string)
-                result = p_lisp_object(self, e_lisp_object_type_string, d_false, current_entry->value.value_string);
+                result = p_lisp_object(self, e_lisp_object_type_string, current_entry->value.value_string);
             else if (current_entry->type == e_collector_type_double)
-                result = p_lisp_object(self, e_lisp_object_type_value, d_false, current_entry->value.value_double);
+                result = p_lisp_object(self, e_lisp_object_type_value, current_entry->value.value_double);
         }
     return result;
 }
