@@ -203,7 +203,7 @@
 			}
 		},{
 			"label":"walk_left",
-			"speed_x":-10,
+			"speed_x":-15,
 			"head":{
 				"drawable":"head_set_blank_side",
 				"offset_x":0,
@@ -272,7 +272,7 @@
 			}
 		},{
 			"label":"walk_right",
-			"speed_x":10,
+			"speed_x":15,
 			"head":{
 				"drawable":"head_set_blank_side",
 				"offset_x":0,

@@ -21,7 +21,6 @@
 	},
 	"statuses":[{
 			"label":"back",
-			"speed_y":-5,
 			"head":{
 				"drawable":"head_set_blank_back",
 				"offset_x":0,
@@ -79,7 +78,6 @@
 			}
 		},{
 			"label":"front",
-			"speed_y":5,
 			"head":{
 				"drawable":"head_set_blank_front",
 				"offset_x":0,
@@ -148,7 +146,7 @@
 			}
 		},{
 			"label":"walk_left",
-			"speed_x":-10,
+			"speed_x":-15,
 			"offset_x":-200,
 			"head":{
 				"drawable":"head_set_blank_side",
@@ -218,7 +216,7 @@
 			}
 		},{
 			"label":"walk_right",
-			"speed_x":10,
+			"speed_x":15,
 			"offset_x":200,
 			"head":{
 				"drawable":"head_set_blank_side",
