@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"door_C",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still",
+			"layers":[
+				{"drawable":"door_C_still"}
+			]
+		}
+	]
+}

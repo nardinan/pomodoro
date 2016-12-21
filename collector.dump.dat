@@ -1,3 +1,5 @@
-language:double:0.00
+from_where:string:lupattelli
+language:double:1.00
 intro_ran:double:1.00
-liar:double:1.00
+note_A_taken:double:1.00
+destination_scenario:string:canama

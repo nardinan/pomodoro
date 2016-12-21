@@ -2,8 +2,8 @@
 	"format":"landscape",
 	"ID":"cern",
 	"zoom":10,
-	"position_x":-200.0,
-	"position_y":-300.0,
+	"position_x":0.0,
+	"position_y":0.0,
 	"intro_script":"intro_cern",
 	"outro_script":"initialize_script",
 	"tracks":[{
@@ -12,7 +12,7 @@
 	}],
 	"floor":[{
 		"position_x":0.0,
-		"position_y":700.0
+		"position_y":1000.0
 	}],
 	"surfaces":[{
 		"drawable":"cern_background",
@@ -22,20 +22,16 @@
 		"drawable":"cern_lights_layer",
 		"layer":8,
 		"speed_ratio_x":1.0
-	},{
-		"drawable":"strips",
-		"layer":9,
-		"speed_ratio_x":1.0
 	}],
 	"items":[
-		{"label":"computer_C",		"item":"computer_A",	"status":"still",	"position_x":2915.0,	"position_y":1000.0,	"zoom":1.25},
-		{"label":"computer_B",		"item":"computer_A",	"status":"still",	"position_x":2335.0,	"position_y":1000.0,	"zoom":1.25},
-		{"label":"computer_A",		"item":"computer_A",	"status":"still",	"position_x":1755.0,	"position_y":1000.0,	"zoom":1.25},
-		{"label":"lhc_segment_A",	"item":"lhc", 			"status":"still",	"position_x":1090.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"lhc_segment_B",	"item":"lhc", 			"status":"still",	"position_x":1666.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"lhc_segment_C",	"item":"lhc", 			"status":"still",	"position_x":2242.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"lhc_segment_D",	"item":"lhc", 			"status":"still",	"position_x":2818.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"lhc_segment_E",	"item":"lhc", 			"status":"still",	"position_x":3394.0, 	"position_y":750.0, 	"zoom":1.25}
-
+		{"label":"computer_C",		"item":"computer_A",		"status":"still",	"position_x":2715.0,	"position_y":1000.0,	"zoom":1.25},
+		{"label":"computer_B",		"item":"computer_A",		"status":"still",	"position_x":2335.0,	"position_y":1000.0,	"zoom":1.25},
+		{"label":"computer_A",		"item":"computer_A",		"status":"still",	"position_x":1955.0,	"position_y":1000.0,	"zoom":1.25},
+		{"label":"lhc_segment_A",	"item":"lhc", 				"status":"still",	"position_x":1090.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"lhc_segment_B",	"item":"lhc", 				"status":"still",	"position_x":1666.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"lhc_segment_C",	"item":"lhc", 				"status":"still",	"position_x":2242.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"lhc_segment_D",	"item":"lhc", 				"status":"still",	"position_x":2818.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"lhc_segment_E",	"item":"lhc", 				"status":"still",	"position_x":3394.0, 	"position_y":750.0, 	"zoom":1.25},
+		{"label":"thunder_strike",  "item":"thunder_strike",	"status":"still",	"position_x":2500.0,	"position_y":1000.0}
 	]
 } 

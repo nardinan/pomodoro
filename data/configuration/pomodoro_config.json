@@ -3,7 +3,7 @@
 	"author":"Andrea Nardinocchi",
 	"email":"andrea@nardinan.it",
 	"date":"22 August 2016",
-	"language":0,
+	"language":1,
 	"fonts":[
 		{"font":"psycho_font", 		"size":50},
 		{"font":"psycho_font", 		"size":60},
@@ -22,8 +22,9 @@
 		{"label":"andrea",	"link":"andrea_character", 		"controllable":true}
 	],
 	"landscapes":[
-		{"label":"canama", 	"link":"canama_landscape"},
-		{"label":"cern",	"link":"cern_landscape"},
-		{"label":"stairs",	"link":"stairs_landscape"}
+		{"label":"canama", 		"link":"canama_landscape"},
+		{"label":"cern",		"link":"cern_landscape"},
+		{"label":"stairs",		"link":"stairs_landscape"},
+		{"label":"lupattelli",	"link":"lupattelli_landscape"}
 	]
 }

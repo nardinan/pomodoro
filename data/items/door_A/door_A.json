@@ -4,6 +4,11 @@
 	"zoom":12,
 	"statuses":[
 		{
+			"label":"none",
+			"layers":[
+				{"drawable":"empty_particle"}
+			]
+		},{
 			"label":"active_left",
 			"layers":[
 				{"drawable":"door_A_h_active"}

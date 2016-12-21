@@ -1,0 +1,16 @@
+{
+	"format":"item",
+	"ID":"thunder_strike",
+	"statuses":[
+		{
+			"label":"still"
+		},{
+			"label":"strike",
+			"track":{
+				"playable":"thunder_sound",
+				"loops":0.0,
+				"volume":48
+			}
+		}
+	]
+}

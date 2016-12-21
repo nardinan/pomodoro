@@ -1,0 +1,29 @@
+{
+	"format":"animation",
+	"cycles":1,
+	"frames":[
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":0},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":20},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":40},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":80},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":100},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":150},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":250},
+		{"drawable":"white_layer",  "time":0.2, 	"mask_A":200},
+		{"drawable":"white_layer",  "time":0.5, 	"mask_A":255},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":240},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":230},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":220},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":200},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":180},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":160},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":140},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":120},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":100},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":80},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":40},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":20},
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":0},
+
+	]
+}

@@ -18,10 +18,6 @@
 		"drawable":"canama_lights_layer",
 		"layer":8,
 		"speed_ratio_x":1.0
-	},{
-		"drawable":"strips",
-		"layer":9,
-		"speed_ratio_x":1.0
 	}],
 	"items":[
 		{"label":"canama_wall_B",	"item":"canama_wall", 			"status":"still",			"position_x":5900.0, 	"position_y":450.0, 	"zoom":1.25,	"solid":true},
