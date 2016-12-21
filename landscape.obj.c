@@ -338,13 +338,15 @@ d_define_method(landscape, delete)(struct s_object *self, struct s_landscape_att
         d_delete(current_surface->drawable);
         d_free(current_surface);
     }
+    if (v_developer_mode)
+        printf("\"landscape\":\"%s\"\n", attributes->label);
     while ((current_item = (struct s_landscape_item *)attributes->items.head)) {
         f_list_delete(&(attributes->items), (struct s_list_node *)current_item);
         if (v_developer_mode) {
             /* dump of the item */
             d_call(current_item->item, m_drawable_get_position, &position_x, &position_y);
             d_call(current_item->item, m_drawable_get_zoom, &zoom);
-            printf("{\"item\":\"%s\", \"position_x\":%.01f, \"position_y\":%.01f, \"zoom\":%.02f}\n", current_item->label, 
+            printf("\t{\"item\":\"%s\", \"position_x\":%.01f, \"position_y\":%.01f, \"zoom\":%.02f}\n", current_item->label, 
                     (position_x - attributes->position_x), (position_y - attributes->position_y), zoom);
         }
         d_delete(current_item->item);
