@@ -87,8 +87,8 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
     enum e_drawable_flips flip;
     char *string_supply;
     t_boolean animation_flip_x = d_false, animation_flip_y = d_false, frame_flip_x, frame_flip_y;
-    double offset_x, offset_y, zoom, time, time_ratio = 1.0, mask_R = 255.0, mask_G = 255.0, mask_B = 255.0, mask_A = 255.0, 
-           cycles = d_animation_infinite_loop;
+    double offset_x, offset_y, zoom, time, time_ratio = 1.0, mask_R = 255.0, mask_G = 255.0, mask_B = 255.0, mask_A = 255.0, frame_mask_R, frame_mask_G,
+           frame_mask_B, frame_mask_A, cycles = d_animation_infinite_loop;
     int index = 0;
     if ((stream = d_call(factory_attributes->resources_json, m_resources_get_stream_strict, label, e_resources_type_common)))
         if ((json = f_json_new_stream(d_new(json), stream))) {
@@ -112,10 +112,18 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
                             time = d_factory_animation_frame_time;
                             frame_flip_x = animation_flip_x;
                             frame_flip_y = animation_flip_y;
+                            frame_mask_R = mask_R;
+                            frame_mask_G = mask_G;
+                            frame_mask_B = mask_B;
+                            frame_mask_A = mask_A;
                             d_call(json, m_json_get_double, &offset_x, "sds", "frames", index, "offset_x");
                             d_call(json, m_json_get_double, &offset_y, "sds", "frames", index, "offset_y");
                             d_call(json, m_json_get_double, &zoom, "sds", "frames", index, "zoom");
                             d_call(json, m_json_get_double, &time, "sds", "frames", index, "time");
+                            d_call(json, m_json_get_double, &frame_mask_R, "sds", "frames", index, "mask_R");
+                            d_call(json, m_json_get_double, &frame_mask_G, "sds", "frames", index, "mask_G");
+                            d_call(json, m_json_get_double, &frame_mask_B, "sds", "frames", index, "mask_B");
+                            d_call(json, m_json_get_double, &frame_mask_A, "sds", "frames", index, "mask_A");
                             d_call(json, m_json_get_boolean, &frame_flip_x, "sds", "frames", index, "flip_x");
                             d_call(json, m_json_get_boolean, &frame_flip_y, "sds", "frames", index, "flip_y");
                             if ((bitmap = d_call(self, m_factory_get_bitmap, string_supply, factory_attributes->environment))) {
@@ -130,8 +138,11 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
                                 d_call(bitmap, m_drawable_flip, flip);
                             }
                             d_call(result, m_animation_append_frame, bitmap, offset_x, offset_y, zoom, time);
-                            if (bitmap)
+                            if (bitmap) {
+                                d_call(bitmap, m_drawable_set_maskRGB, (unsigned int)frame_mask_R, (unsigned int)frame_mask_G, (unsigned int)frame_mask_B);
+                                d_call(bitmap, m_drawable_set_maskA, (unsigned int)frame_mask_A);
                                 d_delete(bitmap);
+                            }
                             ++index;
                         }
                     } else 
