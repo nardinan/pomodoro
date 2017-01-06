@@ -1,0 +1,28 @@
+{
+	"format":"item",
+	"ID":"carpet",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"color_green",
+			"layers":[
+				{"drawable":"carpet_color_green"}
+			]
+		},{
+			"label":"color_rainbow",
+			"layers":[
+				{"drawable":"carpet_color_rainbow"}
+			]
+		},{
+			"label":"color_rainbow_dirty",
+			"layers":[
+				{"drawable":"carpet_color_rainbow_dirty"}
+			]
+		},{
+			"label":"color_red",
+			"layers":[
+				{"drawable":"carpet_color_red"}
+			]
+		}
+	]
+}

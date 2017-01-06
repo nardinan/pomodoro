@@ -25,6 +25,7 @@
 		{"label":"canama", 		"link":"canama_landscape"},
 		{"label":"cern",		"link":"cern_landscape"},
 		{"label":"stairs",		"link":"stairs_landscape"},
-		{"label":"lupattelli",	"link":"lupattelli_landscape"}
+		{"label":"lupattelli",	"link":"lupattelli_landscape"},
+		{"label":"garibaldi",	"link":"garibaldi_landscape"}
 	]
 }

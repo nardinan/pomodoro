@@ -1,0 +1,14 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"arrow_active_h_frame0",  "time":0.1},
+		{"drawable":"arrow_active_h_frame1",  "time":0.1},
+		{"drawable":"arrow_active_h_frame2",  "time":0.1},
+		{"drawable":"arrow_active_h_frame3",  "time":0.1},
+		{"drawable":"arrow_active_h_frame4",  "time":0.1},
+		{"drawable":"arrow_active_h_frame3",  "time":0.1},
+		{"drawable":"arrow_active_h_frame2",  "time":0.1},
+		{"drawable":"arrow_active_h_frame1",  "time":0.1}
+	]
+}

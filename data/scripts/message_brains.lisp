@@ -15,6 +15,12 @@
 	(cons ;2 andrea
 	 "'Call me! 456456'"
 	 "'Chiamami! 456456'")
+	(cons ;3 andrea
+	 "'Do you want to learn how to cook?'"
+	 "'Vuoi imparare a cucinare?'")
+	(cons ;4 andrea
+	 "'Do you want to learn how to read correctly?'"
+	 "'Vuoi imparare a leggere correttamente?'")
 	nil
 ))
 
@@ -66,13 +72,27 @@
 	)
 )
 
-; Collect environment 
-(define note_A_taken (collector_get "note_A_taken"))
-
 ; Script
 (puppeteer_disable_control)
 (animation "andrea" "back")
 (say "andrea" (get_dialog dialogs language 0))
-(say "andrea" (get_dialog dialogs language 1))
-(say "andrea" (get_dialog dialogs language 2))
+(if (compare (collector_get "from_where") "canama")
+	(begin
+		(say "andrea" (get_dialog dialogs language 1))
+		(say "andrea" (get_dialog dialogs language 2))
+	)
+	(if (compare (collector_get "from_where") "lupattelli")
+		(begin
+			(say "andrea" (get_dialog dialogs language 3))
+			(say "andrea" (get_dialog dialogs language 2))
+		)
+		(if (compare (collector_get "from_where") "garibaldi")
+			(begin
+				(say "andrea" (get_dialog dialogs language 4))
+				(say "andrea" (get_dialog dialogs language 2))
+			)
+			nil
+		)
+	)
+)
 (main_control "andrea")

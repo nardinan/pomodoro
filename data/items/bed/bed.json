@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"bed",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"bed_still_A"}
+			]
+		},{
+			"label":"still_B",
+			"layers":[
+				{"drawable":"bed_still_B"}
+			]
+		}
+	]
+}

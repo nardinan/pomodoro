@@ -1,0 +1,28 @@
+{
+	"format":"item",
+	"ID":"window",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"inside_A",
+			"layers":[
+				{"drawable":"window_inside_A"}
+			]
+		},{
+			"label":"inside_B",
+			"layers":[
+				{"drawable":"window_inside_B"}
+			]
+		},{
+			"label":"outside_A",
+			"layers":[
+				{"drawable":"window_outside_A"}
+			]
+		},{
+			"label":"outside_B",
+			"layers":[
+				{"drawable":"window_outside_B"}
+			]
+		}
+	]
+}

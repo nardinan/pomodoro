@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"fridge",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"fridge_still_A"}
+			]
+		}
+	]
+}
