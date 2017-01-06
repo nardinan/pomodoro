@@ -16,7 +16,7 @@
 	"surfaces":[{
 		"drawable":"garibaldi_panorama",
 		"layer":0,
-		"speed_ratio_x":0.75
+		"speed_ratio_x":0.85
 	},{
 		"drawable":"garibaldi_background",
 		"layer":1,
@@ -27,7 +27,7 @@
 		"speed_ratio_x":1.0
 	}],
 	"items":[
-		{"label":"door_A",		"item":"arrow",			"status":"active_up",		"position_x":7100.0,	"position_y":1500.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_garibaldi_lupattelli"},
+		{"label":"door_A",		"item":"arrow",			"status":"active_right",	"position_x":7100.0,	"position_y":1500.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_garibaldi_lupattelli"},
 		{"label":"door_B",		"item":"arrow",			"status":"active_left",		"position_x":910.0,		"position_y":2300.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_garibaldi_fortebraccio"},
 		{"label":"door_C",		"item":"door",			"status":"still_D",			"position_x":1820.0,	"position_y":1880.0,	"zoom":1.25},
 		{"label":"door_D",		"item":"door",			"status":"still_E",			"position_x":2750.0,	"position_y":1880.0,	"zoom":1.25},
@@ -36,8 +36,8 @@
 		{"label":"window_B",	"item":"window",		"status":"outside_B",		"position_x":3400.0,	"position_y":1140.0,	"zoom":1.25},		
 		{"label":"window_C",	"item":"window",		"status":"outside_A",		"position_x":2750.0,	"position_y":1140.0,	"zoom":1.25},	
 		{"label":"window_D",	"item":"window",		"status":"outside_A",		"position_x":4050.0,	"position_y":1000.0,	"zoom":1.25},
-		{"label":"window_E",	"item":"window",		"status":"outside_A",		"position_x":6570.0,	"position_y":750.0,		"zoom":1.25},
-		{"label":"window_F",	"item":"window",		"status":"outside_B",		"position_x":7320.0,	"position_y":750.0,		"zoom":1.25},
+		{"label":"window_E",	"item":"window",		"status":"outside_A",		"position_x":6570.0,	"position_y":650.0,		"zoom":1.25},
+		{"label":"window_F",	"item":"window",		"status":"outside_B",		"position_x":7320.0,	"position_y":650.0,		"zoom":1.25},
 		{"label":"window_G",	"item":"window",		"status":"outside_B",		"position_x":5620.0,	"position_y":830.0,		"zoom":1.25},
 		{"label":"window_H",	"item":"window",		"status":"outside_A",		"position_x":4750.0,	"position_y":1000.0,	"zoom":1.25},
 		{"label":"poster_A",	"item":"poster_B",		"status":"still",			"position_x":4740.0,	"position_y":1620.0,	"zoom":1.25,					"active":true,	"script":"message_brains"}
