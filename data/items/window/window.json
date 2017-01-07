@@ -23,6 +23,11 @@
 			"layers":[
 				{"drawable":"window_outside_B"}
 			]
+		},{
+			"label":"outside_C",
+			"layers":[
+				{"drawable":"window_outside_C"}
+			]
 		}
 	]
 }
