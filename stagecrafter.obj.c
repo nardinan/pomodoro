@@ -221,9 +221,12 @@ d_define_method(stagecrafter, set_item_status)(struct s_object *self, const char
 d_define_method(stagecrafter, update)(struct s_object *self) {
     d_using(stagecrafter);
     struct s_factory_attributes *factory_attributes;
+    struct s_landscape_script *current_script;
     if (stagecrafter_attributes->main_landscape) {
         factory_attributes = d_cast(stagecrafter_attributes->factory, factory);
-        d_call(stagecrafter_attributes->main_landscape, m_landscape_update, factory_attributes->environment);
+        if ((current_script = (struct s_landscape_script *)d_call(stagecrafter_attributes->main_landscape, m_landscape_update, 
+                        factory_attributes->environment)))
+            d_call(director, m_director_run_script, current_script->script);
     }
     return self;
 }

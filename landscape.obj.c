@@ -33,13 +33,14 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
     d_using(landscape);
     enum e_drawable_flips flips;
     enum e_factory_media_types type;
-    char *string_supply, *string_supply_item, *string_supply_track, *string_supply_label;
+    char *string_supply, *string_supply_script, *string_supply_item, *string_supply_track, *string_supply_label;
     t_boolean status_flip_x = d_false, status_flip_y = d_false, layer_flip_x, layer_flip_y, solid, active;
-    double mask_R, mask_G, mask_B, mask_A, status_zoom = 1.0, layer_zoom, item_zoom, position_x, position_y, layer, volume, loops;
-    int index_layer = 0, index_path = 0, index_item = 0, index_track = 0;
+    double mask_R, mask_G, mask_B, mask_A, status_zoom = 1.0, layer_zoom, item_zoom, position_x, position_y, layer, volume, loops, time;
+    int index_layer = 0, index_script = 0, index_path = 0, index_item = 0, index_track = 0;
     struct s_object *item_json;
     struct s_landscape_point *current_point;
     struct s_landscape_item *current_item;
+    struct s_landscape_script *current_script;
     struct s_landscape_track *current_track;
     struct s_landscape_surface *current_surface;
     if (d_call(json, m_json_get_string, &string_supply, "s", "format"))
@@ -54,6 +55,19 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
                     strncpy(landscape_attributes->intro_script, string_supply, d_string_buffer_size);
                 if ((d_call(json, m_json_get_string, &string_supply, "s", "outro_script")))
                     strncpy(landscape_attributes->outro_script, string_supply, d_string_buffer_size);
+                while ((d_call(json, m_json_get_string, &string_supply_label, "sds", "scripts", index_script, "label")) &&
+                        (d_call(json, m_json_get_string, &string_supply_script, "sds", "scripts", index_script, "script"))) {
+                    time = 1.0;
+                    d_call(json, m_json_get_double, &time, "sds", "scripts", index_script, "frequency");
+                    if ((current_script = (struct s_landscape_script *)d_malloc(sizeof(struct s_landscape_script)))) {
+                        current_script->frequency = (time_t)time;
+                        strncpy(current_script->label, string_supply_label, d_entity_label_size);
+                        strncpy(current_script->script, string_supply_script, d_resources_key_size);
+                        f_list_append(&(landscape_attributes->scripts), (struct s_list_node *)current_script, e_list_insert_tail);
+                    } else
+                        d_die(d_error_malloc);
+                    ++index_script;
+                }
                 while ((d_call(json, m_json_get_double, &position_x, "sds", "floor", index_path, "position_x")) && 
                         (d_call(json, m_json_get_double, &position_y, "sds", "floor", index_path, "position_y"))) {
                     if ((current_point = (struct s_landscape_point *)d_malloc(sizeof(struct s_landscape_point)))) {
@@ -171,8 +185,11 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
 
 d_define_method(landscape, show)(struct s_object *self, struct s_object *environment) {
     d_using(landscape);
+    struct s_landscape_script *current_script;
     struct s_landscape_surface *current_surface;
     struct s_landscape_item *current_item;
+    d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script)
+        current_script->last_update = time(NULL);
     d_foreach(&(landscape_attributes->surfaces), current_surface, struct s_landscape_surface) {
         d_call(current_surface->drawable, m_drawable_set_position, (landscape_attributes->position_x + current_surface->offset_x), 
                 (landscape_attributes->position_y + current_surface->offset_y));
@@ -316,6 +333,8 @@ d_define_method(landscape, update)(struct s_object *self, struct s_object *envir
     d_using(landscape);
     double camera_position_x, camera_position_y, position_x, position_y;
     struct s_landscape_surface *current_surface;
+    struct s_landscape_script *current_script;
+    time_t current_timestamp;
     d_call(environment, m_environment_get_camera, &camera_position_x, &camera_position_y, e_environment_surface_primary);
     d_foreach(&(landscape_attributes->surfaces), current_surface, struct s_landscape_surface) {
         position_x = (landscape_attributes->position_x + current_surface->offset_x) + 
@@ -324,11 +343,19 @@ d_define_method(landscape, update)(struct s_object *self, struct s_object *envir
             (camera_position_y * (1.0 - current_surface->speed_ratio_y));
         d_call(current_surface->drawable, m_drawable_set_position, position_x, position_y);
     }
-    return self;
+    d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script) {
+        current_timestamp = time(NULL);
+        if ((current_script->last_update + current_script->frequency) < current_timestamp) {
+            current_script->last_update = current_timestamp;
+            break;
+        }
+    }
+    d_cast_return(current_script);
 }
 
 d_define_method(landscape, delete)(struct s_object *self, struct s_landscape_attributes *attributes) {
     struct s_landscape_surface *current_surface;
+    struct s_landscape_script *current_script;
     struct s_landscape_item *current_item;
     struct s_landscape_track *current_track;
     struct s_landscape_point *current_point;
@@ -337,6 +364,10 @@ d_define_method(landscape, delete)(struct s_object *self, struct s_landscape_att
         f_list_delete(&(attributes->surfaces), (struct s_list_node *)current_surface);
         d_delete(current_surface->drawable);
         d_free(current_surface);
+    }
+    while ((current_script = (struct s_landscape_script *)attributes->scripts.head)) {
+        f_list_delete(&(attributes->scripts), (struct s_list_node *)current_script);
+        d_free(current_script);
     }
     if (v_developer_mode)
         printf("\"landscape\":\"%s\"\n", attributes->label);
