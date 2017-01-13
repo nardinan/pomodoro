@@ -1,17 +1,17 @@
 {
 	"format":"item",
-	"ID":"painting_A",
+	"ID":"painting",
 	"zoom":12,
 	"statuses":[
 		{
 			"label":"psychogames",
 			"layers":[
-				{"drawable":"painting_A_psychogames"}
+				{"drawable":"painting_psychogames"}
 			]
 		},{
 			"label":"tatta",
 			"layers":[
-				{"drawable":"painting_A_tatta"}
+				{"drawable":"painting_tatta"}
 			]
 		}
 	]

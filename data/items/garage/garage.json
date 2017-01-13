@@ -1,12 +1,12 @@
 {
 	"format":"item",
-	"ID":"garage_A",
+	"ID":"garage",
 	"zoom":12,
 	"statuses":[
 		{
-			"label":"still",
+			"label":"still_A",
 			"layers":[
-				{"drawable":"garage_A_still"}
+				{"drawable":"garage_still_A"}
 			]
 		}
 	]

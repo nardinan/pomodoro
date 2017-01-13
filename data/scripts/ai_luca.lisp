@@ -5,7 +5,6 @@
 ; This module contains the artificial intelligence for Luca
 
 ; Dialogs
-; Dialogs
 (define language (collector_get "language"))
 (define dialogs (list 
 	(cons ;0 luca

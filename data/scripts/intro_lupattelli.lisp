@@ -1,8 +1,8 @@
 ; Pomodoro
-; Module: intro_canama
+; Module: intro_lupattelli
 ; Author: nardinan
-; Date  : 20 Nov 2016
-; This module contains the intro of the Canama scenario
+; Date  : 20 Dec 2016
+; This module contains the intro of the Lupattelli scenario
 
 ; Dialogs
 (define language 0) ; temporary

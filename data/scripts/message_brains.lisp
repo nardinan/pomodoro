@@ -1,5 +1,5 @@
 ; Pomodoro
-; Module: note_A_script
+; Module: message_brains
 ; Author: nardinan
 ; Date  : 8 Dec 2016
 
@@ -77,22 +77,14 @@
 (animation "andrea" "back")
 (say "andrea" (get_dialog dialogs language 0))
 (if (compare (collector_get "from_where") "canama")
-	(begin
-		(say "andrea" (get_dialog dialogs language 1))
-		(say "andrea" (get_dialog dialogs language 2))
-	)
+	(say "andrea" (get_dialog dialogs language 1))
 	(if (compare (collector_get "from_where") "lupattelli")
-		(begin
-			(say "andrea" (get_dialog dialogs language 3))
-			(say "andrea" (get_dialog dialogs language 2))
-		)
+		(say "andrea" (get_dialog dialogs language 3))
 		(if (compare (collector_get "from_where") "garibaldi")
-			(begin
-				(say "andrea" (get_dialog dialogs language 4))
-				(say "andrea" (get_dialog dialogs language 2))
-			)
+			(say "andrea" (get_dialog dialogs language 4))
 			nil
 		)
 	)
 )
+(say "andrea" (get_dialog dialogs language 2))
 (main_control "andrea")

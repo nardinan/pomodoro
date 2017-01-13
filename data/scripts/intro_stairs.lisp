@@ -49,7 +49,6 @@
 )
 
 ; Collect environment 
-(define note_A_taken (collector_get "note_A_taken"))
 (define from_where (collector_get "from_where"))
 
 ; Configure
