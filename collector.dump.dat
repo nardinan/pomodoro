@@ -1,5 +1,5 @@
-destination_scenario:string:lupattelli
 language:double:1.00
 intro_ran:double:1.00
 from_where:string:lupattelli
-note_A_taken:double:1.00
+destination_scenario:string:lupattelli
+fornaio_sentence:double:2.00

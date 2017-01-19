@@ -329,7 +329,7 @@
 				"mask_A":255
 			},
 			"arms":{
-				"drawable":"arms_set_blank_side_walk_frame0",
+				"drawable":"arms_set_blank_side_smoke",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":true,
@@ -397,7 +397,7 @@
 				"mask_A":255
 			},
 			"arms":{
-				"drawable":"arms_set_blank_side_walk_frame0",
+				"drawable":"arms_set_blank_side_smoke",
 				"offset_x":0,
 				"offset_y":8,
 				"flip_x":false,

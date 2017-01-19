@@ -1,0 +1,29 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"arms_set_blank_side_smoke_still_frame0",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame1",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame2",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame1",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame0",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame0",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame1",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame2",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame1",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_still_frame0",		"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame0",  	"time":0.1},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame1",  	"time":0.1},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame2",  	"time":0.1},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame3",  	"time":0.1},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame4",  	"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame5",  	"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame6",  	"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame5",  	"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame4",  	"time":0.4},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame3",  	"time":0.1},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame2",  	"time":0.1},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame1",  	"time":0.1},
+		{"drawable":"arms_set_blank_side_smoke_aspirate_frame0",  	"time":0.1}
+	]
+}
