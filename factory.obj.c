@@ -136,7 +136,8 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
                                 else
                                     flip = e_drawable_flip_none;
                                 d_call(bitmap, m_drawable_flip, flip);
-                            }
+                            } else
+                                d_err(e_log_level_ever, "impossible to load the following frame: %s", string_supply);
                             d_call(result, m_animation_append_frame, bitmap, offset_x, offset_y, zoom, time);
                             if (bitmap) {
                                 d_call(bitmap, m_drawable_set_maskRGB, (unsigned int)frame_mask_R, (unsigned int)frame_mask_G, (unsigned int)frame_mask_B);
