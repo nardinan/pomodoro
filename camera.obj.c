@@ -34,13 +34,16 @@ struct s_object *f_camera_new(struct s_object *self, enum e_environment_surfaces
 d_define_method(camera, move_position)(struct s_object *self, double position_x, double position_y, double position_z, struct s_object *environment) {
     d_using(camera);
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
+    double real_position_x, real_position_y;
     if (camera_attributes->distance_xy == 0)
         gettimeofday(&(camera_attributes->last_refresh), NULL);
     camera_attributes->starting_x = environment_attributes->camera_origin_x[camera_attributes->surface];
     camera_attributes->starting_y = environment_attributes->camera_origin_y[camera_attributes->surface];
     camera_attributes->starting_z = environment_attributes->zoom[camera_attributes->surface];
-    camera_attributes->destination_x = (position_x - (environment_attributes->current_w / 2.0));
-    camera_attributes->destination_y = (position_y - (environment_attributes->current_h / 2.0));
+    real_position_x = position_x * (environment_attributes->current_w / environment_attributes->reference_w[camera_attributes->surface]);
+    real_position_y = position_y * (environment_attributes->current_h / environment_attributes->reference_h[camera_attributes->surface]);
+    camera_attributes->destination_x = (real_position_x - (environment_attributes->current_w / 2.0));
+    camera_attributes->destination_y = (real_position_y - (environment_attributes->current_h / 2.0));
     if (position_z == position_z)
         camera_attributes->destination_z = position_z;
     camera_attributes->distance_xy = sqrt((d_math_square(camera_attributes->destination_x - camera_attributes->starting_x) + 
