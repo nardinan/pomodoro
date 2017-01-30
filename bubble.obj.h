@@ -19,7 +19,7 @@
 #define pomodoro_bubble_h
 #include "factory.obj.h"
 #define d_bubble_message_size 1024
-#define d_bubble_characters_per_line 32
+#define d_bubble_characters_per_line 48
 #define d_bubble_layer_default 10
 #define d_bubble_select_character 0x11
 #define d_bubble_no_value -1
