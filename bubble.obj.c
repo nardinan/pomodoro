@@ -205,7 +205,7 @@ d_define_method(bubble, skip)(struct s_object *self) {
                 if (index == bubble_attributes->current_element->selected_option)
                     snprintf(buffer, d_bubble_message_size, "%c%s", d_bubble_select_character, current_option->content);
                 else
-                    snprintf(buffer, d_bubble_message_size, "  %s", current_option->content);
+                    snprintf(buffer, d_bubble_message_size, "%c%s", d_bubble_empty_character, current_option->content);
                 d_call(self, m_bubble_append_components, buffer, selected_font, font_height, factory_attributes->environment);
                 ++index;
             }
