@@ -33,7 +33,7 @@
 				"mask_A":255
 			},
 			"hair":{
-				"drawable":"hair_set_shaved_back",
+				"drawable":"hair_set_short_beard_back",
 				"offset_x":0,
 				"offset_y":-2,
 				"flip_x":true,
@@ -90,7 +90,7 @@
 				"mask_A":255
 			},
 			"hair":{
-				"drawable":"hair_set_shaved_front",
+				"drawable":"hair_set_short_beard_front",
 				"offset_x":0,
 				"offset_y":-2,
 				"flip_x":true,
@@ -159,7 +159,7 @@
 				"mask_A":255
 			},
 			"hair":{
-				"drawable":"hair_set_shaved_side",
+				"drawable":"hair_set_short_beard_side",
 				"offset_x":0,
 				"offset_y":-2,
 				"flip_x":false,
@@ -228,7 +228,7 @@
 				"mask_A":255
 			},
 			"hair":{
-				"drawable":"hair_set_shaved_side",
+				"drawable":"hair_set_short_beard_side",
 				"offset_x":0,
 				"offset_y":-2,
 				"flip_x":true,
@@ -296,7 +296,7 @@
 				"mask_A":255
 			},
 			"hair":{
-				"drawable":"hair_set_shaved_side",
+				"drawable":"hair_set_short_beard_side",
 				"offset_x":0,
 				"offset_y":-2,
 				"flip_x":true,
@@ -364,7 +364,7 @@
 				"mask_A":255
 			},
 			"hair":{
-				"drawable":"hair_set_shaved_side",
+				"drawable":"hair_set_short_beard_side",
 				"offset_x":0,
 				"offset_y":-2,
 				"flip_x":false,
