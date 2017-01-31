@@ -178,13 +178,11 @@ d_define_method(item, set_active)(struct s_object *self, t_boolean active) {
 
 d_define_method(item, collision)(struct s_object *self, struct s_object *entity) {
     t_boolean result = d_false;
-    double entity_position_x, entity_position_y, entity_width, entity_height, item_position_x, item_position_y, item_width, item_height, center_x;
-    d_call(entity, m_drawable_get_scaled_position, &entity_position_x, &entity_position_y);
-    d_call(entity, m_drawable_get_scaled_dimension, &entity_width, &entity_height);
+    double entity_principal_point_x, entity_principal_point_y, item_position_x, item_position_y, item_width, item_height, center_x;
+    d_call(entity, m_drawable_get_scaled_principal_point, &entity_principal_point_x, &entity_principal_point_y);
     d_call(self, m_drawable_get_scaled_position, &item_position_x, &item_position_y);
     d_call(self, m_drawable_get_scaled_dimension, &item_width, &item_height);
-    center_x = (entity_position_x + (entity_width / 2.0));
-    if ((center_x > item_position_x) && (center_x < (item_position_x + item_width)))
+    if ((entity_principal_point_x > item_position_x) && (entity_principal_point_x < (item_position_x + item_width)))
         result = d_true;
     d_cast_return(result);
 }

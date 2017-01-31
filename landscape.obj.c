@@ -300,19 +300,17 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
     struct s_item_attributes *item_attributes;
     double entity_position_x, entity_position_y, item_position_x, item_position_y, final_distance, valid_y, valid_h, scale_min, scale_max, ratio = 0.0;
     if (entity) {
-        d_call(entity, m_drawable_get_scaled_principal_point, &entity_position_x, &entity_position_y);
+        d_call(entity, m_drawable_get_principal_point, &entity_position_x, &entity_position_y);
         d_foreach(&(landscape_attributes->items), current_item, struct s_landscape_item) { 
-            d_call(current_item->item, m_drawable_get_scaled_principal_point, &item_position_x, &item_position_y);
+            d_call(current_item->item, m_drawable_get_principal_point, &item_position_x, &item_position_y);
             if ((final_distance = d_point_square_distance(entity_position_x, entity_position_y, item_position_x, item_position_y)) < 
                     d_item_max_square_distance)
                 if ((intptr_t)d_call(current_item->item, m_item_collision, entity)) {
                     item_attributes = d_cast(current_item->item, item);
                     if (item_attributes->active) /* return the latest active item that has been selected */
                         selected_item = current_item;
-                    item_position_x += camera_offset_x;
-                    item_position_y += camera_offset_y;
-                    if ((d_point_square_distance(current_x, current_y, item_position_x, item_position_y) >=
-                                d_point_square_distance(*new_x, *new_y, item_position_x, item_position_y)))
+                    if (d_point_square_distance(current_x, current_y, item_position_x, item_position_y) >
+                            d_point_square_distance(*new_x, *new_y, item_position_x, item_position_y))
                         if (item_attributes->solid)
                             *new_x = current_x;
                 }
