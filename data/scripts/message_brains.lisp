@@ -21,6 +21,9 @@
 	(cons ;4 andrea
 	 "'Do you want to learn how to read correctly?'"
 	 "'Vuoi imparare a leggere correttamente?'")
+	(cons ;5 andrea
+	 "'Do you want to learn how to be cool with girls?'"
+	 "'Vuoi imparare ad essere cool con le ragazze?'")
 	nil
 ))
 
@@ -82,7 +85,10 @@
 		(say "andrea" (get_dialog dialogs language 3))
 		(if (compare (collector_get "from_where") "garibaldi")
 			(say "andrea" (get_dialog dialogs language 4))
-			nil
+			(if (compare (collector_get "from_where") "fortebraccio")
+				(say "andrea" (get_dialog dialogs language 5))
+				nil
+			)
 		)
 	)
 )

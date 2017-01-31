@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"balcony",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"balcony_still_A"}
+			]
+		}
+	]
+}

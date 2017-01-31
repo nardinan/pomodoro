@@ -1,12 +1,12 @@
 {
 	"format":"item",
-	"ID":"trash_can_A",
+	"ID":"column",
 	"zoom":12,
 	"statuses":[
 		{
-			"label":"still",
+			"label":"still_A",
 			"layers":[
-				{"drawable":"trash_can_A"}
+				{"drawable":"column_still_A"}
 			]
 		}
 	]

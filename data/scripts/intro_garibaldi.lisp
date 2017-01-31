@@ -62,5 +62,7 @@
 )
 
 ; Setup characters
-(animation "andrea" 	"front")
+(puppeteer_show "baker" 	3500)
+(animation "andrea" 		"front")
+(animation "baker" 			"still_right")
 (main_control "andrea")

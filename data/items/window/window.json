@@ -28,6 +28,16 @@
 			"layers":[
 				{"drawable":"window_outside_C"}
 			]
+		},{
+			"label":"outside_D",
+			"layers":[
+				{"drawable":"window_outside_D"}
+			]
+		},{
+			"label":"outside_E",
+			"layers":[
+				{"drawable":"window_outside_E"}
+			]
 		}
 	]
 }

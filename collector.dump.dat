@@ -1,5 +1,5 @@
-language:double:1.00
+have_leaf:double:1.00
+destination_scenario:string:garibaldi
+from_where:string:garibaldi
 intro_ran:double:1.00
-from_where:string:lupattelli
-destination_scenario:string:lupattelli
-fornaio_sentence:double:2.00
+language:double:1.00

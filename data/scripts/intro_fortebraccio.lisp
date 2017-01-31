@@ -1,8 +1,8 @@
 ; Pomodoro
-; Module: intro_lupattelli
+; Module: intro_fortebraccio
 ; Author: nardinan
-; Date  : 20 Dec 2016
-; This module contains the intro of the Lupattelli scenario
+; Date  : 21 Jan 2017
+; This module contains the intro of the Fortebraccio scenario
 
 ; Dialogs
 (define language 0) ; temporary
@@ -52,13 +52,13 @@
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "lupattelli")
+(collector_set "from_where" "fortebraccio")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "stairs")
-	(puppeteer_show "andrea" 2090)
-	(puppeteer_show "andrea" 3600)
+(if (compare from_where "garibaldi")
+	(puppeteer_show "andrea" 1000)
+	(puppeteer_show "andrea" 4980)
 )
 
 ; Setup characters
