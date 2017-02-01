@@ -57,8 +57,8 @@
 ; Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "garibaldi")
-	(puppeteer_show "andrea" 1000)
 	(puppeteer_show "andrea" 4980)
+	(puppeteer_show "andrea" 1000)
 )
 
 ; Setup characters

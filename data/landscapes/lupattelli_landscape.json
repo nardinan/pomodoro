@@ -8,7 +8,7 @@
 	"outro_script":"outro_lupattelli",
 	"floor":[{
 		"position_x":0.0,
-		"position_y":2600.0
+		"position_y":2550.0
 	}],
 	"surfaces":[{
 		"drawable":"lupattelli_background",
@@ -27,7 +27,7 @@
 		{"label":"poster_B",	"item":"poster_B",		"status":"still",			"position_x":3100.0,	"position_y":2430.0,		"zoom":1.25,					"active":true,	"script":"message_brains"},
 		{"label":"door_B",		"item":"arrow",			"status":"active_up",		"position_x":2090.0,	"position_y":2580.0,		"zoom":1.25,					"active":true,	"script":"move_lupattelli_stairs"},
 		{"label":"door_C",		"item":"arrow",			"status":"active_up",		"position_x":3720.0,	"position_y":2580.0,		"zoom":1.25,	"solid":true,	"active":true,	"script":"move_lupattelli_garibaldi"},
-		{"label":"lock_A",		"item":"arrow",			"status":"none",			"position_x":620.0,		"position_y":2680.0,		"zoom":1.25,	"solid":true},
+		{"label":"lock_A",		"item":"arrow",			"status":"none",			"position_x":900.0,		"position_y":2680.0,		"zoom":1.25,	"solid":true},
 		{"label":"door_A",		"item":"door",			"status":"still_C",			"position_x":2050.0,	"position_y":2200.0,		"zoom":1.25},
 		{"label":"garage_A",	"item":"garage",		"status":"still_A",			"position_x":1230.0,	"position_y":2360.0,		"zoom":1.25},
 		{"label":"garage_B",	"item":"garage",		"status":"still_A",			"position_x":2880.0,	"position_y":2360.0,		"zoom":1.25},
