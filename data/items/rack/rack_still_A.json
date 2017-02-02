@@ -1,0 +1,9 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"rack_still_A_frame0",  "time":0.5},
+		{"drawable":"rack_still_A_frame1",  "time":0.5},
+		{"drawable":"rack_still_A_frame2",  "time":0.5}
+	]
+}

@@ -23,6 +23,7 @@
 		{"label":"computer_A",		"item":"computer",			"status":"still_A",		"position_x":1650.0,	"position_y":1000.0,	"zoom":1.25},
 		{"label":"computer_B",		"item":"computer",			"status":"still_B",		"position_x":2350.0,	"position_y":1000.0,	"zoom":1.25},
 		{"label":"computer_C",		"item":"computer",			"status":"still_C",		"position_x":2870.0,	"position_y":1000.0,	"zoom":1.25},
+		{"label":"rack",			"item":"rack",				"status":"still_A",		"position_x":1440.0,	"position_y":770.0,		"zoom":1.25},
 		{"label":"lhc_segment_A",	"item":"lhc", 				"status":"still",		"position_x":1090.0, 	"position_y":750.0, 	"zoom":1.25},
 		{"label":"lhc_segment_B",	"item":"lhc", 				"status":"still",		"position_x":1666.0, 	"position_y":750.0, 	"zoom":1.25},
 		{"label":"lhc_segment_C",	"item":"lhc", 				"status":"still",		"position_x":2242.0, 	"position_y":750.0, 	"zoom":1.25},

@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"rack",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"rack_still_A"}
+			]
+		}
+	]
+}
