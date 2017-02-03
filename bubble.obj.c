@@ -296,7 +296,6 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
 }
 
 d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attributes *attributes) {
-    struct s_factory_attributes *factory_attributes = d_cast(attributes->factory, factory);
     struct s_bubble_component *current_component;
     struct s_bubble_message *current_message;
     struct s_bubble_option *current_option;
@@ -305,11 +304,8 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
     if (attributes->current_element) {
         while ((current_component = (struct s_bubble_component *)attributes->components.head)) {
             f_list_delete(&(attributes->components), (struct s_list_node *)current_component);
-            if (current_component->component) {
-                d_call(factory_attributes->environment, m_environment_del_drawable, current_component->component, d_bubble_layer_default, 
-                        e_environment_surface_primary);
+            if (current_component->component)
                 d_delete(current_component->component);
-            }
             d_free(current_component);
         }
         d_free(attributes->current_element);

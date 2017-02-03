@@ -264,13 +264,18 @@ d_define_method(character, is_moving)(struct s_object *self) {
     d_cast_return(result);
 }
 
-d_define_method_override(character, event)(struct s_object *self, struct s_object *environment, SDL_Event *current_event) {
+d_define_method(character, show_bubble)(struct s_object *self, struct s_object *environment) {
     d_using(character);
-    struct s_object *result = NULL;
-    if ((result = d_call_owner(self, controllable, m_eventable_event, environment, current_event)))
-        if (character_attributes->bubble)
-            result = d_call(character_attributes->bubble, m_eventable_event, environment, current_event);
-    return result;
+    if (character_attributes->bubble)
+        d_call(environment, m_environment_add_drawable, character_attributes->bubble, d_bubble_default_layer, e_environment_surface_primary);
+    return self;
+}
+
+d_define_method(character, hide_bubble)(struct s_object *self, struct s_object *environment) {
+    d_using(character);
+    if (character_attributes->bubble)
+        d_call(environment, m_environment_del_drawable, character_attributes->bubble, d_bubble_default_layer, e_environment_surface_primary);
+    return self;
 }
 
 d_define_method_override(character, draw)(struct s_object *self, struct s_object *environment) {
@@ -279,7 +284,7 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
     struct s_bubble_attributes *bubble_attributes;
     struct s_drawable_attributes *drawable_attributes_self = d_cast(self, drawable),
                                  *drawable_attributes_bubble;
-    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, ratio_y;
+    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, ratio_y, total_zoom;
     struct s_object *result = d_call_owner(self, entity, m_drawable_draw, environment); /* recall the father's draw method */
     d_call(self, m_drawable_get_position, &position_x, &position_y);
     if (((character_attributes->source_x < character_attributes->destination_x) && (position_x >= character_attributes->destination_x)) ||
@@ -292,25 +297,16 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         drawable_attributes_bubble = d_cast(character_attributes->bubble, drawable);
         ratio_x = (environment_attributes->current_w / environment_attributes->reference_w[environment_attributes->current_surface]);
         ratio_y = (environment_attributes->current_h / environment_attributes->reference_h[environment_attributes->current_surface]);
-        bubble_position_x = position_x + (character_attributes->bubble_offset_x * drawable_attributes_self->zoom);
-        bubble_position_y = position_y + (character_attributes->bubble_offset_y * drawable_attributes_self->zoom) - bubble_attributes->total_height;
-        if (((bubble_position_x + bubble_attributes->maximum_width) - environment_attributes->camera_origin_x[environment_attributes->current_surface]) * ratio_x >
-                environment_attributes->current_w)
+        total_zoom = drawable_attributes_self->zoom * environment_attributes->zoom[environment_attributes->current_surface];
+        bubble_position_x = position_x + (character_attributes->bubble_offset_x * total_zoom);
+        bubble_position_y = position_y + (character_attributes->bubble_offset_y * total_zoom) - bubble_attributes->total_height;
+        if (((bubble_position_x * ratio_x) + bubble_attributes->maximum_width - environment_attributes->camera_origin_x[environment_attributes->current_surface]) > 
+                    environment_attributes->current_w)
             bubble_position_x -= bubble_attributes->maximum_width;
         d_call(character_attributes->bubble, m_drawable_set_position, bubble_position_x, bubble_position_y);
         drawable_attributes_bubble->angle = drawable_attributes_self->angle;
         drawable_attributes_bubble->zoom = drawable_attributes_self->zoom;
         drawable_attributes_bubble->flip = drawable_attributes_self->flip;
-        if ((d_call(character_attributes->bubble, m_drawable_normalize_scale, environment_attributes->reference_w[environment_attributes->current_surface],
-                        environment_attributes->reference_h[environment_attributes->current_surface],
-                        environment_attributes->camera_origin_x[environment_attributes->current_surface],
-                        environment_attributes->camera_origin_y[environment_attributes->current_surface],
-                        environment_attributes->camera_focus_x[environment_attributes->current_surface],
-                        environment_attributes->camera_focus_y[environment_attributes->current_surface],
-                        environment_attributes->current_w,
-                        environment_attributes->current_h,
-                        environment_attributes->zoom[environment_attributes->current_surface])))
-            while(((int)d_call(character_attributes->bubble, m_drawable_draw, environment)) == d_drawable_return_continue);
     }
     return result;
 }
@@ -333,7 +329,8 @@ d_define_class(character) {
         d_hook_method(character, e_flag_public, move),
         d_hook_method(character, e_flag_public, is_speaking),
         d_hook_method(character, e_flag_public, is_moving),
-        d_hook_method_override(character, e_flag_public, eventable, event),
+        d_hook_method(character, e_flag_public, show_bubble),
+        d_hook_method(character, e_flag_public, hide_bubble),
         d_hook_method_override(character, e_flag_public, drawable, draw),
         d_hook_delete(character),
         d_hook_method_tail
