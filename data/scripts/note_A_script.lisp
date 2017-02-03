@@ -85,5 +85,6 @@
 		(stagecrafter_enable_item "bed_B")
 		(collector_set "note_A_taken" 1)
 	)
+	nil
 )
 (main_control "andrea")
