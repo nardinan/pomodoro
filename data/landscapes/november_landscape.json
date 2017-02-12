@@ -40,6 +40,7 @@
 		{"label":"window_D",		"item":"window",			"status":"outside_F",		"position_x":7080.0,		"position_y":1540.0,	"zoom":1.25},
 		{"label":"window_E",		"item":"window",			"status":"outside_G",		"position_x":8160.0,		"position_y":1390.0,	"zoom":1.25},
 		{"label":"window_F",		"item":"window",			"status":"outside_G",		"position_x":8600.0,		"position_y":970.0,		"zoom":1.25},
+		{"label":"window_G",		"item":"window",			"status":"outside_F",		"position_x":1240.0,		"position_y":1810.0,	"zoom":1.25},
 		{"label":"door_D",			"item":"door",				"status":"still_E",			"position_x":660.0,			"position_y":3860.0,	"zoom":1.25},
 		{"label":"door_E",			"item":"door",				"status":"still_G",			"position_x":5690.0,		"position_y":3080.0,	"zoom":1.25},
 		{"label":"fountain",		"item":"fountain",			"status":"november",		"position_x":4000.0,		"position_y":4700.0,	"zoom":1.25, 																				"layer":7}
