@@ -43,7 +43,7 @@ d_declare_class(character) {
     enum e_character_directions direction;
     struct s_object *bubble;
     double bubble_offset_x, bubble_offset_y, destination_x, source_x;
-    t_boolean movement, set, action;
+    t_boolean movement, set, action, collidable;
 } d_declare_class_tail(character);
 struct s_character_attributes *p_character_alloc(struct s_object *self, const char *key, t_entity_validator validator);
 extern struct s_object *f_character_new(struct s_object *self, const char *key, t_entity_validator validator);

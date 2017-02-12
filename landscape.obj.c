@@ -188,8 +188,10 @@ d_define_method(landscape, show)(struct s_object *self, struct s_object *environ
     struct s_landscape_script *current_script;
     struct s_landscape_surface *current_surface;
     struct s_landscape_item *current_item;
-    d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script)
+    d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script) {
+        current_script->first_execution = d_false;
         current_script->last_update = time(NULL);
+    }
     d_foreach(&(landscape_attributes->surfaces), current_surface, struct s_landscape_surface) {
         d_call(current_surface->drawable, m_drawable_set_position, (landscape_attributes->position_x + current_surface->offset_x), 
                 (landscape_attributes->position_y + current_surface->offset_y));
@@ -294,7 +296,7 @@ d_define_method(landscape, floor)(struct s_object *self, double position_x, doub
 }
 
 d_define_method(landscape, validator)(struct s_object *self, struct s_object *entity, double current_x, double current_y, double *new_x, double *new_y,
-        double *new_z, double camera_offset_x, double camera_offset_y) {
+        double *new_z, double camera_offset_x, double camera_offset_y, t_boolean collidable) {
     d_using(landscape);
     struct s_landscape_item *current_item, *selected_item = NULL;
     struct s_item_attributes *item_attributes;
@@ -311,7 +313,7 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
                         selected_item = current_item;
                     if (d_point_square_distance(current_x, current_y, item_position_x, item_position_y) >
                             d_point_square_distance(*new_x, *new_y, item_position_x, item_position_y))
-                        if (item_attributes->solid)
+                        if ((collidable) && (item_attributes->solid))
                             *new_x = current_x;
                 }
         }
@@ -343,8 +345,9 @@ d_define_method(landscape, update)(struct s_object *self, struct s_object *envir
     }
     d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script) {
         current_timestamp = time(NULL);
-        if ((current_script->last_update + current_script->frequency) < current_timestamp) {
+        if ((!current_script->first_execution) || ((current_script->last_update + current_script->frequency) < current_timestamp)) {
             current_script->last_update = current_timestamp;
+            current_script->first_execution = d_true;
             break;
         }
     }
