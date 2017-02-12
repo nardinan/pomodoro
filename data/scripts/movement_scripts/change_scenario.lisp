@@ -6,7 +6,7 @@
 (define destination_scenario (collector_get "destination_scenario"))
 
 ; Clear out the scene with a movement outside
-(director_camera_move 2000.0 12000.0)
+(director_camera_move 2000.0 8000.0)
 (director_wait_time 2)
 
 ; Remove all the character (intro-script will take care of them)
