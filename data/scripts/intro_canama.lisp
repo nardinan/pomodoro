@@ -63,6 +63,8 @@
 (puppeteer_disable_control)
 (puppeteer_show "andrea" 	450)
 (puppeteer_show "luca" 		810)
+(puppeteer_show "luna"		1100)
 (animation "andrea" 	"front")
 (animation "luca" 		"front")
+(animation "luna"		"front")
 (main_control "andrea")

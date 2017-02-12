@@ -20,8 +20,9 @@
 		{"label":"yuriy",	"link":"yuriy_character",		"controllable":false},	
 		{"label":"luca",	"link":"luca_character", 		"controllable":false,	"script":"ai_luca"},
 		{"label":"andrea",	"link":"andrea_character", 		"controllable":true},
-		{"label":"luna",	"link":"luna_character",		"controllable":true},
-		{"label":"baker",	"link":"baker_character",		"controllabel":false,	"script":"ai_baker"}
+		{"label":"luna",	"link":"luna_character",		"controllable":false},
+		{"label":"baker",	"link":"baker_character",		"controllable":false,	"script":"ai_baker"},
+		{"label":"maria",	"link":"maria_character",		"controllable":true,	"script":"ai_maria"}
 	],
 	"landscapes":[
 		{"label":"canama", 		"link":"canama_landscape"},
