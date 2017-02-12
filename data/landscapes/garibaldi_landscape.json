@@ -6,6 +6,9 @@
 	"position_y":0.0,
 	"intro_script":"intro_garibaldi",
 	"outro_script":"outro_garibaldi",
+	"scripts":[
+		{"label":"movement_maria",	"script":"script_maria_garibaldi", "frequency":60}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":2400.0

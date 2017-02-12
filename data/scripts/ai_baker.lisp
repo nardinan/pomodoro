@@ -14,7 +14,7 @@
 	 "Sure. Do you like my shirt?"
 	 "Certo. Ti piace la mia maglietta?")
 	(cons ;2 baker
-	 "Nope"
+	 "Don't think so"
 	 "No, direi di no")
 ))
 

@@ -2,10 +2,9 @@
 ; Module: intro_canama
 ; Author: nardinan
 ; Date  : 20 Nov 2016
-; This module contains the intro of the Canama scenario
 
 ; Dialogs
-(define language 0) ; temporary
+(define language (collector_get "language"))
 (define dialogs (nil))
 
 (define say

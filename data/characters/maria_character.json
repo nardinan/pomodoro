@@ -2,6 +2,7 @@
 	"format":"character",
 	"ID":"maria",
 	"zoom":20,
+	"collidable":false,
 	"bubble":{
 		"mask_R":30,
 		"mask_G":120,
