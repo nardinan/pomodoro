@@ -76,7 +76,7 @@ int pomodoro_quit_call(struct s_object *environment) {
 int main (int argc, char *argv[]) {
     struct s_exception *exception;
     struct s_object *environment;
-    double final_resolution_x, final_resolution_y;
+    double final_resolution_x, final_resolution_y, scale_resolution_x, scale_resolution_y;
     t_boolean fullscreen = d_false;
     d_pool_init;
     v_log_level = e_log_level_ever;
@@ -94,14 +94,18 @@ int main (int argc, char *argv[]) {
         d_try {
             final_resolution_x = d_pomodoro_width;
             final_resolution_y = d_pomodoro_height;
+            scale_resolution_x = d_pomodoro_developer_width;
+            scale_resolution_y = d_pomodoro_developer_height;
             if (v_developer_mode) {
                 final_resolution_x = d_pomodoro_developer_width;
                 final_resolution_y = d_pomodoro_developer_height;
+                scale_resolution_x = (d_pomodoro_developer_width * 3.0);
+                scale_resolution_y = (d_pomodoro_developer_height * 3.0);
             }
             environment = f_environment_new_fullscreen(d_new(environment), final_resolution_x, final_resolution_y, fullscreen);
             d_call(environment, m_environment_set_methods, &pomodoro_load_call, &pomodoro_loop_call, &pomodoro_quit_call);
-            d_call(environment, m_environment_set_reference, d_pomodoro_developer_width, d_pomodoro_developer_height, e_environment_surface_primary);
-            d_call(environment, m_environment_set_reference, d_pomodoro_developer_width, d_pomodoro_developer_height, e_environment_surface_ui);
+            d_call(environment, m_environment_set_reference, scale_resolution_x, scale_resolution_y, e_environment_surface_primary);
+            d_call(environment, m_environment_set_reference, scale_resolution_x, scale_resolution_y, e_environment_surface_ui);
             d_call(environment, m_environment_set_title, d_pomodoro_title);
             d_call(environment, m_environment_set_channels, d_factory_max_channels);
             d_call(environment, m_environment_run_loop, NULL);
