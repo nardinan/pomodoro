@@ -1,0 +1,10 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"fountain_november_frame0",  "time":0.1},
+		{"drawable":"fountain_november_frame1",  "time":0.1},
+		{"drawable":"fountain_november_frame2",  "time":0.1},
+		{"drawable":"fountain_november_frame3",  "time":0.1}
+	]
+}

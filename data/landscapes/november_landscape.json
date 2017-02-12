@@ -1,0 +1,47 @@
+{
+	"format":"landscape",
+	"ID":"november",
+	"zoom":10,
+	"position_x":0.0,
+	"position_y":0.0,
+	"intro_script":"intro_november",
+	"outro_script":"outro_november",
+	"floor":[{
+		"position_x":0.0,
+		"position_y":4250.0
+	}],
+	"surfaces":[{
+		"drawable":"november_panorama",
+		"layer":0,
+		"speed_ratio_x":0.85
+	},{
+		"drawable":"november_background",
+		"layer":1,
+		"speed_ratio_x":1
+	},{
+		"drawable":"november_lights_layer",
+		"layer":8,
+		"speed_ratio_x":1
+	}],
+	"items":[
+		{"label":"door_A",			"item":"arrow",				"status":"active_left",		"position_x":900.0,			"position_y":4200.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_november_fortebraccio"},
+		{"label":"door_B",			"item":"arrow",				"status":"active_down",		"position_x":8500.0,		"position_y":4200.0,	"zoom":1.25,					"active":true,	"script":"move_november_vannucci"},
+		{"label":"door_C",			"item":"arrow",				"status":"active_right",	"position_x":9000.0,		"position_y":4200.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_november_mania"},
+		{"label":"arc_C",			"item":"arc",				"status":"still_B",			"position_x":2890.0,		"position_y":2760.0,	"zoom":1.25},
+		{"label":"arc_B",			"item":"arc",				"status":"still_A",			"position_x":1620.0,		"position_y":2880.0,	"zoom":1.25},
+		{"label":"arc_A",			"item":"arc",				"status":"still_A",			"position_x":590.0,			"position_y":2880.0,	"zoom":1.25},
+		{"label":"column_A",		"item":"column",			"status":"still_A",			"position_x":210.0,			"position_y":3810.0,	"zoom":1.25},
+		{"label":"column_B",		"item":"column",			"status":"still_A",			"position_x":1140.0,		"position_y":3810.0,	"zoom":1.25},
+		{"label":"column_C",		"item":"column",			"status":"still_A",			"position_x":2170.0,		"position_y":3810.0,	"zoom":1.25},
+		{"label":"column_D",		"item":"column",			"status":"still_A",			"position_x":3170.0,		"position_y":3810.0,	"zoom":1.25},
+		{"label":"window_A",		"item":"window",			"status":"outside_F",		"position_x":3080.0,		"position_y":1540.0,	"zoom":1.25},
+		{"label":"window_B",		"item":"window",			"status":"outside_F",		"position_x":4370.0,		"position_y":1540.0,	"zoom":1.25},
+		{"label":"window_C",		"item":"window",			"status":"outside_F",		"position_x":5680.0,		"position_y":1540.0,	"zoom":1.25},
+		{"label":"window_D",		"item":"window",			"status":"outside_F",		"position_x":7080.0,		"position_y":1540.0,	"zoom":1.25},
+		{"label":"window_E",		"item":"window",			"status":"outside_G",		"position_x":8160.0,		"position_y":1390.0,	"zoom":1.25},
+		{"label":"window_F",		"item":"window",			"status":"outside_G",		"position_x":8600.0,		"position_y":970.0,		"zoom":1.25},
+		{"label":"door_D",			"item":"door",				"status":"still_E",			"position_x":660.0,			"position_y":3860.0,	"zoom":1.25},
+		{"label":"door_E",			"item":"door",				"status":"still_G",			"position_x":5690.0,		"position_y":3080.0,	"zoom":1.25},
+		{"label":"fountain",		"item":"fountain",			"status":"november",		"position_x":4000.0,		"position_y":4700.0,	"zoom":1.25, 																				"layer":7}
+	]
+} 

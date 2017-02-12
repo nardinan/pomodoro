@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"arc",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"arc_still_A"}
+			]
+		},{
+			"label":"still_B",
+			"layers":[
+				{"drawable":"arc_still_B"}
+			]
+		}
+	]
+}
