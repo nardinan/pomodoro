@@ -203,7 +203,7 @@
 (puppeteer_disable_control)
 (puppeteer_show "yuriy" 	1450)
 (puppeteer_show "andrii" 	2750)
-(effecteer_add "intro1" "CERN_intro_layer" 1800 1900 1 0 nil nil)
+(effecteer_add "intro1" "CERN_intro_layer" 2500 2600 1 0 nil nil)
 (stagecrafter_play "cern_track_A")
 (director_camera_set 2200 2200)
 (director_wait_time 2)
