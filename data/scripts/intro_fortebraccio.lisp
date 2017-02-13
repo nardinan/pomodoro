@@ -11,16 +11,11 @@
 	)
 )
 
-(define get_dialog
-	(lambda (d lang n)
+(define main_control
+	(lambda (c)
 		(begin
-			(if (= n 0)
-				(if (= lang 0)
-					(car (car d))
-					(cdr (car d))
-				)
-				(get_dialog (cdr d) lang (- n 1))
-			)
+			(director_camera_follow c -100.0 1.0)
+			(puppeteer_enable_control c)
 		)
 	)
 )

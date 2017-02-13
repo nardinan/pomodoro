@@ -39,4 +39,15 @@
 (puppeteer_show "maria" 	-200)
 (animation "andrea" 		"front")
 (animation "baker" 			"still_right")
+
+(if (collector_get "intro_chronos")
+	nil
+	(begin
+		(puppeteer_show "andrii"	1500)
+		(puppeteer_show "yuriy"		2000)
+		(animation "andrii"			"still_right_radar_up")
+		(animation "yuriy"			"still_left")
+	)
+)
+
 (main_control "andrea")

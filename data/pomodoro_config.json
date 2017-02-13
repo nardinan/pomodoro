@@ -16,8 +16,8 @@
 		{"font":"kingthings_font", 	"size":70}
 	],
 	"characters":[
-		{"label":"andrii",	"link":"andrii_character",		"controllable":false},
-		{"label":"yuriy",	"link":"yuriy_character",		"controllable":false},	
+		{"label":"andrii",	"link":"andrii_character",		"controllable":false,	"script":"ai_andrii"},
+		{"label":"yuriy",	"link":"yuriy_character",		"controllable":false,	"script":"ai_yuriy"},	
 		{"label":"luca",	"link":"luca_character", 		"controllable":false,	"script":"ai_luca"},
 		{"label":"andrea",	"link":"andrea_character", 		"controllable":true},
 		{"label":"luna",	"link":"luna_character",		"controllable":false},
