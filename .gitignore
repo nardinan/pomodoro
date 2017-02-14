@@ -2,3 +2,7 @@
 *.bin   # exclude executable
 
 collector\.dump\.dat
+
+*.o
+
+*.bin
