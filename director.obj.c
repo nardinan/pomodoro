@@ -127,20 +127,28 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
     struct s_puppeteer_attributes *puppeteer_attributes = d_cast(director_attributes->puppeteer, puppeteer);
     struct s_environment_attributes *environment_attributes = d_cast(factory_attributes->environment, environment);
     struct s_character_attributes *character_attributes = d_cast(self, character);
-    struct s_puppeteer_character *current_character;
+    struct s_puppeteer_character *current_character, *nearest_character = NULL;
     struct s_landscape_item *current_item;
     struct s_object *current_landscape;
-    if (character_attributes->action)
+    double current_distance, last_distance = -1.0, self_position_x, self_position_y, character_position_x, character_position_y;
+    if (character_attributes->action) {
+        d_call(self, m_drawable_get_position, &self_position_x, &self_position_y);
         d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
             if (current_character->character != self)
                 if (current_character->visible)
                     if ((intptr_t)d_call(self, m_entity_interact, current_character->character)) {
-                        if (current_character->script[0]) {
-                            d_call(director, m_director_run_script, current_character->script);
-                            character_attributes->action = d_false;
+                        d_call(current_character->character, m_drawable_get_position, &character_position_x, &character_position_y);
+                        current_distance = (character_position_x - self_position_x) * (character_position_x - self_position_x);
+                        if ((!nearest_character) || (current_distance < last_distance)) {
+                            last_distance = current_distance;
+                            nearest_character = current_character;
                         }
-                        break;
                     }
+        if ((nearest_character) && (nearest_character->script[0])) {
+            d_call(director, m_director_run_script, nearest_character->script);
+            character_attributes->action = d_false;
+        }
+    }
     if ((current_landscape = d_call(director_attributes->stagecrafter, m_stagecrafter_get_main_landscape, NULL)))
         if ((current_item = d_call(current_landscape, m_landscape_validator, self, current_x, current_y, new_x, new_y, new_zoom,
                         environment_attributes->camera_origin_x[environment_attributes->current_surface],
