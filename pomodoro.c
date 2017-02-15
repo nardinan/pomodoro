@@ -94,13 +94,13 @@ int main (int argc, char *argv[]) {
         d_try {
             final_resolution_x = d_pomodoro_width;
             final_resolution_y = d_pomodoro_height;
-            scale_resolution_x = d_pomodoro_developer_width;
-            scale_resolution_y = d_pomodoro_developer_height;
+            scale_resolution_x = (d_pomodoro_width * d_pomodoro_scale_factor);
+            scale_resolution_y = (d_pomodoro_height * d_pomodoro_scale_factor);
             if (v_developer_mode) {
                 final_resolution_x = d_pomodoro_developer_width;
                 final_resolution_y = d_pomodoro_developer_height;
-                scale_resolution_x = (d_pomodoro_developer_width * 3.0);
-                scale_resolution_y = (d_pomodoro_developer_height * 3.0);
+                scale_resolution_x = (d_pomodoro_developer_width * d_pomodoro_developer_scale_factor);
+                scale_resolution_y = (d_pomodoro_developer_height *d_pomodoro_developer_scale_factor);
             }
             environment = f_environment_new_fullscreen(d_new(environment), final_resolution_x, final_resolution_y, fullscreen);
             d_call(environment, m_environment_set_methods, &pomodoro_load_call, &pomodoro_loop_call, &pomodoro_quit_call);
