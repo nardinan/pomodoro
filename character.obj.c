@@ -65,6 +65,7 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
         {"top",                 e_uiable_component_top},
         {"bottom",              e_uiable_component_bottom},
         {"center",              e_uiable_component_center},
+        {"tail",                e_uiable_component_NULL},
         {NULL}
     };
     struct s_object *drawable;
@@ -303,8 +304,11 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         bubble_position_x = position_x + (character_attributes->bubble_offset_x * total_zoom);
         bubble_position_y = position_y + (character_attributes->bubble_offset_y * total_zoom) - bubble_attributes->total_height;
         if (((bubble_position_x * ratio_x) + bubble_attributes->maximum_width - environment_attributes->camera_origin_x[environment_attributes->current_surface]) > 
-                    environment_attributes->current_w)
+                    environment_attributes->current_w) {
+            bubble_attributes->current_position = e_bubble_position_left;
             bubble_position_x -= bubble_attributes->maximum_width;
+        } else
+            bubble_attributes->current_position = e_bubble_position_right;
         d_call(character_attributes->bubble, m_drawable_set_position, bubble_position_x, bubble_position_y);
         drawable_attributes_bubble->angle = drawable_attributes_self->angle;
         drawable_attributes_bubble->zoom = drawable_attributes_self->zoom;

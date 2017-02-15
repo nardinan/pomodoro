@@ -18,7 +18,8 @@
 		"right":"bubble_R",
 		"top":"bubble_T",
 		"bottom":"bubble_B",
-		"center":"bubble_C"
+		"center":"bubble_C",
+		"tail":"bubble_tail"
 	},
 	"statuses":[{
 			"label":"back",

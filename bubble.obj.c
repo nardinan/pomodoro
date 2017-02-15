@@ -264,7 +264,7 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
     struct s_drawable_attributes *drawable_attributes_self = d_cast(self, drawable),
                                  *drawable_attributes_selected;
     struct s_bubble_component *current_component;
-    double position_x, position_y, new_position_x, new_position_y;
+    double position_x, position_y, new_position_x, new_position_y, dimension_w, dimension_h, final_position_y, final_dimension_w, final_dimension_h;
     if (bubble_attributes->current_element) {
         d_call(self, m_drawable_get_position, &position_x, &position_y);
         d_foreach(&(bubble_attributes->components), current_component, struct s_bubble_component)
@@ -272,6 +272,8 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
                 drawable_attributes_selected = d_cast(current_component->component, drawable);
                 new_position_x = position_x + current_component->offset_x;
                 new_position_y = position_y + current_component->offset_y;
+                final_position_y = new_position_y;
+                d_call(current_component->component, m_drawable_get_dimension, &final_dimension_w, &final_dimension_h);
                 d_call(current_component->component, m_drawable_set_position, new_position_x, new_position_y);
                 drawable_attributes_selected->angle = drawable_attributes_self->angle;
                 drawable_attributes_selected->flip = drawable_attributes_self->flip;
@@ -287,6 +289,29 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
                                 environment_attributes->zoom[environment_attributes->current_surface])))
                     while(((int)d_call(current_component->component, m_drawable_draw, environment)) == d_drawable_return_continue);
             }
+        if (bubble_attributes->drawables[e_uiable_component_NULL]) {
+            drawable_attributes_selected = d_cast(bubble_attributes->drawables[e_uiable_component_NULL], drawable);
+            if (bubble_attributes->current_position == e_bubble_position_left) {
+                d_call(bubble_attributes->drawables[e_uiable_component_NULL], m_drawable_get_dimension, &dimension_w, &dimension_h);
+                new_position_x = position_x + bubble_attributes->maximum_width - dimension_w - 1;
+            } else
+                new_position_x = position_x + 1;
+            new_position_y = final_position_y + final_dimension_h - 1;
+            d_call(bubble_attributes->drawables[e_uiable_component_NULL], m_drawable_set_position, new_position_x, new_position_y);
+            drawable_attributes_selected->angle = drawable_attributes_self->angle;
+            drawable_attributes_selected->flip = drawable_attributes_self->flip;
+            if ((d_call(bubble_attributes->drawables[e_uiable_component_NULL], m_drawable_normalize_scale,
+                            environment_attributes->reference_w[environment_attributes->current_surface],
+                            environment_attributes->reference_h[environment_attributes->current_surface],
+                            environment_attributes->camera_origin_x[environment_attributes->current_surface],
+                            environment_attributes->camera_origin_y[environment_attributes->current_surface],
+                            environment_attributes->camera_focus_x[environment_attributes->current_surface],
+                            environment_attributes->camera_focus_y[environment_attributes->current_surface],
+                            environment_attributes->current_w,
+                            environment_attributes->current_h,
+                            environment_attributes->zoom[environment_attributes->current_surface])))
+                while(((int)d_call(bubble_attributes->drawables[e_uiable_component_NULL], m_drawable_draw, environment)) == d_drawable_return_continue);
+        }
     }
     /* check for the next entry */
     if ((!bubble_attributes->current_element) || ((bubble_attributes->current_element->timeout > 0) && 
@@ -319,7 +344,7 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
         }
         d_free(current_message);
     }
-    for (index = 0; index < e_uiable_component_NULL; ++index)
+    for (index = 0; index < (e_uiable_component_NULL + 1); ++index)
         if (attributes->drawables[index])
             d_delete(attributes->drawables[index]);
     return NULL;
