@@ -105,7 +105,7 @@ d_define_method(bubble, select)(struct s_object *self, struct s_controllable_ent
     d_using(bubble);
     struct s_bubble_option *current_option;
     int index = 0;
-    if (!pressed)
+    if (!pressed) {
         if ((bubble_attributes->current_element) && (bubble_attributes->current_element->options.fill > 0)) {
             bubble_attributes->current_element->force_kill = d_true;
             d_foreach(&(bubble_attributes->current_element->options), current_option, struct s_bubble_option) {
@@ -115,8 +115,9 @@ d_define_method(bubble, select)(struct s_object *self, struct s_controllable_ent
                 }
                 ++index;
             }
-            d_call(self, m_bubble_skip, NULL);
         }
+        d_call(self, m_bubble_skip, NULL);
+    }
     return self;
 }
 
