@@ -40,11 +40,11 @@ struct s_character_attributes *p_character_alloc(struct s_object *self, const ch
 
 struct s_object *f_character_new(struct s_object *self, const char *key, t_entity_validator validator) {
     struct s_character_attributes *attributes = p_character_alloc(self, key, validator);
-    d_call(self, m_controllable_add_configuration, SDLK_LEFT,   p_character_move_left,  p_character_move_left,  d_true);
-    d_call(self, m_controllable_add_configuration, SDLK_RIGHT,  p_character_move_right, p_character_move_right, d_true);
-    d_call(self, m_controllable_add_configuration, SDLK_UP,     p_character_move_up,    p_character_move_up,    d_true);
-    d_call(self, m_controllable_add_configuration, SDLK_DOWN,   p_character_move_down,  p_character_move_down,  d_true);
-    d_call(self, m_controllable_add_configuration, SDLK_SPACE,  p_character_action,     p_character_action,     d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_LEFT,   p_character_move_left,  p_character_move_left,  p_character_run_left,   d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_RIGHT,  p_character_move_right, p_character_move_right, p_character_run_right,  d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_UP,     p_character_move_up,    p_character_move_up,    p_character_move_up,    d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_DOWN,   p_character_move_down,  p_character_move_down,  p_character_move_down,  d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_SPACE,  p_character_action,     p_character_action,     p_character_action,     d_true);
     attributes->direction = e_character_direction_down;
     attributes->set = d_true;
     return self;
@@ -189,10 +189,38 @@ d_define_method(character, move_left)(struct s_object *self, struct s_controllab
     return self;
 }
 
+d_define_method(character, run_left)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
+    d_using(character);
+    if (pressed) {
+        d_call(self, m_entity_set_component, "run_left");
+        character_attributes->direction = e_character_direction_left;
+        character_attributes->movement = d_true;
+    } else {
+        d_call(self, m_entity_set_component, "still_left");
+        character_attributes->movement = d_false;
+    }
+    character_attributes->set = d_true;
+    return self;
+}
+
 d_define_method(character, move_right)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
     d_using(character);
     if (pressed) {
         d_call(self, m_entity_set_component, "walk_right");
+        character_attributes->direction = e_character_direction_right;
+        character_attributes->movement = d_true;
+    } else {
+        d_call(self, m_entity_set_component, "still_right");
+        character_attributes->movement = d_false;
+    }
+    character_attributes->set = d_true;
+    return self;
+}
+
+d_define_method(character, run_right)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
+    d_using(character);
+    if (pressed) {
+        d_call(self, m_entity_set_component, "run_right");
         character_attributes->direction = e_character_direction_right;
         character_attributes->movement = d_true;
     } else {
@@ -327,7 +355,9 @@ d_define_class(character) {
     d_hook_method(character, e_flag_public, load),
         d_hook_method_override(character, e_flag_public, entity, set_component),
         d_hook_method(character, e_flag_public, move_left),
+        d_hook_method(character, e_flag_public, run_left),
         d_hook_method(character, e_flag_public, move_right),
+        d_hook_method(character, e_flag_public, run_right),
         d_hook_method(character, e_flag_public, move_up),
         d_hook_method(character, e_flag_public, move_down),
         d_hook_method(character, e_flag_public, action),

@@ -49,7 +49,9 @@ struct s_character_attributes *p_character_alloc(struct s_object *self, const ch
 extern struct s_object *f_character_new(struct s_object *self, const char *key, t_entity_validator validator);
 d_declare_method(character, load)(struct s_object *self, struct s_object *json, struct s_object *factory);
 d_declare_method(character, move_left)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
+d_declare_method(character, run_left)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, move_right)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
+d_declare_method(character, run_right)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, move_up)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, move_down)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, action)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
