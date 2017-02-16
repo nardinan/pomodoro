@@ -28,9 +28,9 @@ struct s_bubble_attributes *p_bubble_alloc(struct s_object *self) {
 struct s_object *f_bubble_new(struct s_object *self, struct s_object *factory, unsigned int red, unsigned int green, unsigned int blue, unsigned int alpha,
         int font_style) {
     struct s_bubble_attributes *attributes = p_bubble_alloc(self);
-    d_call(self, m_controllable_add_configuration, SDLK_UP,     p_bubble_move_up,       p_bubble_move_up,   d_true);
-    d_call(self, m_controllable_add_configuration, SDLK_DOWN,   p_bubble_move_down,     p_bubble_move_down, d_true);
-    d_call(self, m_controllable_add_configuration, SDLK_SPACE,  p_bubble_select,        p_bubble_select,    d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_UP,     p_bubble_move_up,       p_bubble_move_up,       p_bubble_move_up,   d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_DOWN,   p_bubble_move_down,     p_bubble_move_down,     p_bubble_move_down, d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_SPACE,  p_bubble_select,        p_bubble_select,        p_bubble_select,    d_true);
     d_call(self, m_controllable_set, d_true);
     attributes->mask_R = red;
     attributes->mask_G = green;
