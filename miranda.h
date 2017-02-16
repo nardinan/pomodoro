@@ -19,7 +19,7 @@
 #define pomodoro_miranda_h
 #define d_pomodoro_width (double)1280
 #define d_pomodoro_height (double)720
-#define d_pomodoro_scale_factor (double)1.8
+#define d_pomodoro_scale_factor (double)1.5
 #define d_pomodoro_developer_width (double)1920
 #define d_pomodoro_developer_height (double)1200
 #define d_pomodoro_developer_scale_factor (double)3.0
