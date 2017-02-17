@@ -207,6 +207,7 @@ d_define_method(director, update)(struct s_object *self) {
     d_call(director_attributes->stagecrafter, m_stagecrafter_update, NULL);
     d_call(director_attributes->camera, m_camera_update, factory_attributes->environment);
     d_call(director_attributes->screenwriter, m_screenwriter_update, NULL);
+    d_call(director_attributes->puppeteer, m_puppeteer_update, NULL);
     for (index = 0; index < e_director_pool_level_NULL; ++index)
         if ((current_action = (struct s_director_action *)director_attributes->actions_pool[index].head)) {
             if (!current_action->execution_time)

@@ -73,7 +73,6 @@
 )
 
 (puppeteer_disable_control)
-(puppeteer_look "luca" "andrea")
 (puppeteer_look "andrea" "luca")
 (say "luca"	(get_dialog dialogs language 0))
 (say "andrea"	(get_dialog dialogs language 1))

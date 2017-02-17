@@ -54,6 +54,7 @@ void p_link_puppeteer(enum e_puppeteer_actions type, ...) {
                 }
                 break;
             case e_puppeteer_action_look:
+            case e_puppeteer_action_stare:
                 if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
                     strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
                     if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
@@ -112,6 +113,12 @@ struct s_lisp_object *p_link_puppeteer_move_character(struct s_object *self, str
 struct s_lisp_object *p_link_puppeteer_look_character(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_puppeteer(e_puppeteer_action_look, d_lisp_car(arguments), d_lisp_cadr(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_puppeteer_stare_character(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_puppeteer(e_puppeteer_action_stare, d_lisp_car(arguments), d_lisp_cadr(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -236,19 +243,54 @@ d_define_method(puppeteer, move_character)(struct s_object *self, const char *ke
 }
 
 d_define_method(puppeteer, look_character)(struct s_object *self, const char *key, const char *entity) {
-    struct s_object *current_character, *destination_character;
+    d_using(puppeteer);
+    struct s_puppeteer_character *current_character;
+    struct s_object *destination_character;
     double current_position_x, destination_position_x, position_y;
-    if ((current_character = d_call(self, m_puppeteer_get_character, key)) && ((destination_character = d_call(self, m_puppeteer_get_character, entity)))) {
-        d_call(current_character, m_drawable_get_position, &current_position_x, &position_y);
-        d_call(destination_character, m_drawable_get_position, &destination_position_x, &position_y);
-        d_call(current_character, ((current_position_x < destination_position_x)?m_character_move_right:m_character_move_left), NULL, d_false);
+    if ((destination_character = d_call(self, m_puppeteer_get_character, entity))) {
+        d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
+            if (f_string_strcmp(current_character->label, key) == 0) {
+                current_character->connected = NULL;
+                d_call(current_character->character, m_drawable_get_position, &current_position_x, &position_y);
+                d_call(destination_character, m_drawable_get_position, &destination_position_x, &position_y);
+                d_call(current_character->character, ((current_position_x < destination_position_x)?m_character_move_right:m_character_move_left), NULL, 
+                        d_false);
+                break;
+            }
     }
+    return self;
+}
+
+d_define_method(puppeteer, stare_character)(struct s_object *self, const char *key, const char *entity) {
+    d_using(puppeteer);
+    struct s_puppeteer_character *current_character;
+    struct s_object *destination_character = d_call(self, m_puppeteer_get_character, entity);
+    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
+        if (f_string_strcmp(current_character->label, key) == 0) {
+            current_character->connected = destination_character;
+            break;
+        }
     return self;
 }
 
 d_define_method(puppeteer, get_main_character)(struct s_object *self) {
     d_using(puppeteer);
     return puppeteer_attributes->main_character;
+}
+
+d_define_method(puppeteer, update)(struct s_object *self) {
+    d_using(puppeteer);
+    struct s_puppeteer_character *current_character;
+    double current_position_x, destination_position_x, position_y;
+    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character) {
+        if (current_character->connected) {
+            d_call(current_character->character, m_drawable_get_position, &current_position_x, &position_y);
+            d_call(current_character->connected, m_drawable_get_position, &destination_position_x, &position_y);
+            d_call(current_character->character, ((current_position_x < destination_position_x)?m_character_move_right:m_character_move_left), NULL, 
+                    d_false);
+        }
+    }
+    return self;
 }
 
 d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *script) {
@@ -262,6 +304,7 @@ d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *scrip
     d_call(script, m_lisp_extend_environment, "puppeteer_set", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_set_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_move", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_move_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_look", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_look_character));
+    d_call(script, m_lisp_extend_environment, "puppeteer_stare", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_stare_character));
     return self;
 }
 
@@ -272,7 +315,7 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
             d_log(e_log_level_medium, "action [hide]");
             result = d_call(self, m_puppeteer_hide_characters, NULL);
             break;
-        case e_puppeteer_action_show:               /* key (character), destination_x */
+        case e_puppeteer_action_show:               /* key (character, destination_x */
             d_log(e_log_level_medium, "action [show] (character %s | destionation %.02f)", action->key, action->parameters.destination_x);
             result = d_call(self, m_puppeteer_show_character, action->key, action->parameters.destination_x);
             break;
@@ -301,6 +344,10 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
         case e_puppeteer_action_look:               /* key (character), entity (look at) */
             d_log(e_log_level_medium, "action [look] (character %s | entity %s)", action->key, action->parameters.entity);
             result = d_call(self, m_puppeteer_look_character, action->key, action->parameters.entity);
+            break;
+        case e_puppeteer_action_stare:
+            d_log(e_log_level_medium, "action [stare] (character %s | entity %s)", action->key, action->parameters.entity);
+            result = d_call(self, m_puppeteer_stare_character, action->key, action->parameters.entity);
     }
     return result;
 }
@@ -326,7 +373,9 @@ d_define_class(puppeteer) {
         d_hook_method(puppeteer, e_flag_public, set_character),
         d_hook_method(puppeteer, e_flag_public, move_character),
         d_hook_method(puppeteer, e_flag_public, look_character),
+        d_hook_method(puppeteer, e_flag_public, stare_character),
         d_hook_method(puppeteer, e_flag_public, get_main_character),
+        d_hook_method(puppeteer, e_flag_public, update),
         d_hook_method(puppeteer, e_flag_public, linker),
         d_hook_method(puppeteer, e_flag_public, dispatcher),
         d_hook_delete(puppeteer),

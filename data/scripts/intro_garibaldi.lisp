@@ -35,10 +35,11 @@
 )
 
 ; Setup characters
-(puppeteer_show "baker" 	3500)
-(puppeteer_show "maria" 	-200)
-(animation "andrea" 		"front")
-(animation "baker" 			"still_right")
+(puppeteer_show 	"baker" 	3500)
+(puppeteer_show 	"maria" 	-200)
+(animation 			"andrea" 	"front")
+(animation 			"baker" 	"still_right")
+(puppeteer_stare 	"baker"		"andrea")
 
 (if (collector_get "intro_chronos")
 	nil

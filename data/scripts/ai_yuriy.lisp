@@ -88,8 +88,8 @@
 )
 
 (puppeteer_disable_control)
-(puppeteer_look "yuriy" "andrea")
-(puppeteer_look "andrea" "yuriy")
+(puppeteer_look 	"yuriy" 	"andrea")
+(puppeteer_stare "andrea" "yuriy")
 (say 		"yuriy"		(get_dialog dialogs language 0))
 (animation 	"andrii" "still_right_radar_down")
 (say_and_go "andrii"	(get_dialog dialogs language 1))
@@ -112,6 +112,7 @@
 (say 		"andrea"	(get_dialog dialogs language 9))
 (director_wait_movement "andrii")
 (director_wait_movement "yuriy")
+(puppeteer_stare "andrea" "#null")
 (main_control "andrea")
 
 ; and never again
