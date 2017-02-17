@@ -21,13 +21,19 @@ struct s_item_attributes *p_item_alloc(struct s_object *self, const char *key) {
     f_memory_new(self);             /* inherit */
     f_mutex_new(self);              /* inherit */
     f_entity_new(self, key, NULL);  /* inherit */
-    f_morphable_new(self);          /* inherit */
+    f_controllable_new(self);       /* inherit */
     return result;
 }
 
 struct s_object *f_item_new(struct s_object *self, const char *key) {
     struct s_item_attributes *attributes = p_item_alloc(self, key);
+    d_call(self, m_controllable_add_configuration, SDLK_LSHIFT, p_item_blink,  p_item_blink,  p_item_blink,  d_true);
+    d_call(self, m_controllable_add_configuration, SDLK_RSHIFT, p_item_blink,  p_item_blink,  p_item_blink,  d_true);
+    d_call(self, m_controllable_set, d_true);
     attributes->active = d_false;
+    attributes->blink = d_false;
+    attributes->green_channel = d_item_blink_max_channel;
+    attributes->green_modificator = d_item_blink_modificator;
     if (v_developer_mode) {
         d_call(self, m_morphable_set_visibility, d_true);
         d_call(self, m_morphable_set_freedom_x, d_true);
@@ -176,6 +182,20 @@ d_define_method(item, set_active)(struct s_object *self, t_boolean active) {
     return self;
 }
 
+d_define_method(item, blink)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
+    d_using(item);
+    if (pressed)
+        item_attributes->blink = item_attributes->active;
+    else {
+        item_attributes->blink = d_false;
+        item_attributes->green_channel = d_item_blink_max_channel;
+        item_attributes->green_modificator = -d_item_blink_modificator;
+        d_call(self, m_drawable_set_maskRGB, (unsigned int)d_item_blink_max_channel, (unsigned int)d_item_blink_max_channel, 
+                (unsigned int)d_item_blink_max_channel);
+    }
+    return self;
+}
+
 d_define_method(item, collision)(struct s_object *self, struct s_object *entity) {
     t_boolean result = d_false;
     double entity_principal_point_x, entity_principal_point_y, item_position_x, item_position_y, item_width, item_height;
@@ -192,6 +212,18 @@ d_define_method_override(item, draw)(struct s_object *self, struct s_object *env
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
     double distance, volume = 0, position_x, position_y, dimension_w, dimension_h, item_center_x, item_center_y, screen_center_x, screen_center_y;
     d_call(self, m_morphable_update, environment);
+    if (item_attributes->blink) {
+        item_attributes->green_channel += item_attributes->green_modificator;
+        if (item_attributes->green_channel >= d_item_blink_max_channel) {
+            item_attributes->green_channel = d_item_blink_max_channel;
+            item_attributes->green_modificator = -d_item_blink_modificator;
+        } else if (item_attributes->green_channel < d_item_blink_min_channel) {
+            item_attributes->green_channel = d_item_blink_min_channel;
+            item_attributes->green_modificator = d_item_blink_modificator;
+        }
+        d_call(self, m_drawable_set_maskRGB, (unsigned int)item_attributes->green_channel, (unsigned int)d_item_blink_max_channel, 
+                (unsigned int)item_attributes->green_channel);
+    }
     if ((item_attributes->current_track) && (item_attributes->audio)) {
         d_call(self, m_drawable_get_scaled_position, &position_x, &position_y);
         d_call(self, m_drawable_get_scaled_dimension, &dimension_w, &dimension_h);
@@ -231,6 +263,7 @@ d_define_class(item) {
         d_hook_method_override(item, e_flag_public, entity, set_component),
         d_hook_method(item, e_flag_public, set_solid),
         d_hook_method(item, e_flag_public, set_active),
+        d_hook_method(item, e_flag_public, blink),
         d_hook_method(item, e_flag_public, collision),
         d_hook_method_override(item, e_flag_public, drawable, draw),
         d_hook_delete(item),

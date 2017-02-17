@@ -144,9 +144,9 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
                                 else
                                     flips = e_drawable_flip_none;
                                 d_call(drawable, m_drawable_flip, flips);
+                                d_call(self, m_entity_add_element, string_supply_component, offset_x, offset_y, drawable);
                                 d_call(drawable, m_drawable_set_maskRGB, (unsigned int)mask_R, (unsigned int)mask_G, (unsigned int)mask_B);
                                 d_call(drawable, m_drawable_set_maskA, (unsigned int)mask_A);
-                                d_call(self, m_entity_add_element, string_supply_component, offset_x, offset_y, drawable);
                                 d_delete(drawable);
                             }
                         }
