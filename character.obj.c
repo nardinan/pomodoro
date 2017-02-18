@@ -179,12 +179,12 @@ d_define_method(character, move_left)(struct s_object *self, struct s_controllab
     d_using(character);
     if (pressed) {
         d_call(self, m_entity_set_component, "walk_left");
-        character_attributes->direction = e_character_direction_left;
         character_attributes->movement = d_true;
-    } else {
+    } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_left)) {
         d_call(self, m_entity_set_component, "still_left");
         character_attributes->movement = d_false;
     }
+    character_attributes->direction = e_character_direction_left;
     character_attributes->set = d_true;
     return self;
 }
@@ -193,12 +193,12 @@ d_define_method(character, run_left)(struct s_object *self, struct s_controllabl
     d_using(character);
     if (pressed) {
         d_call(self, m_entity_set_component, "run_left");
-        character_attributes->direction = e_character_direction_left;
         character_attributes->movement = d_true;
-    } else {
+    } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_left)) {
         d_call(self, m_entity_set_component, "still_left");
         character_attributes->movement = d_false;
     }
+    character_attributes->direction = e_character_direction_left;
     character_attributes->set = d_true;
     return self;
 }
@@ -207,12 +207,12 @@ d_define_method(character, move_right)(struct s_object *self, struct s_controlla
     d_using(character);
     if (pressed) {
         d_call(self, m_entity_set_component, "walk_right");
-        character_attributes->direction = e_character_direction_right;
         character_attributes->movement = d_true;
-    } else {
+    } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_right)) {
         d_call(self, m_entity_set_component, "still_right");
         character_attributes->movement = d_false;
     }
+    character_attributes->direction = e_character_direction_right;
     character_attributes->set = d_true;
     return self;
 }
@@ -221,12 +221,12 @@ d_define_method(character, run_right)(struct s_object *self, struct s_controllab
     d_using(character);
     if (pressed) {
         d_call(self, m_entity_set_component, "run_right");
-        character_attributes->direction = e_character_direction_right;
         character_attributes->movement = d_true;
-    } else {
+    } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_right)) {
         d_call(self, m_entity_set_component, "still_right");
         character_attributes->movement = d_false;
     }
+    character_attributes->direction = e_character_direction_right;
     character_attributes->set = d_true;
     return self;
 }
@@ -332,7 +332,7 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         bubble_position_x = position_x + (character_attributes->bubble_offset_x * total_zoom);
         bubble_position_y = position_y + (character_attributes->bubble_offset_y * total_zoom) - bubble_attributes->total_height;
         if (((bubble_position_x * ratio_x) + bubble_attributes->maximum_width - environment_attributes->camera_origin_x[environment_attributes->current_surface]) > 
-                    environment_attributes->current_w) {
+                environment_attributes->current_w) {
             bubble_attributes->current_position = e_bubble_position_left;
             bubble_position_x -= bubble_attributes->maximum_width;
         } else
