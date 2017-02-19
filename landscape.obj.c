@@ -18,8 +18,8 @@
 #include "landscape.obj.h"
 struct s_landscape_attributes *p_landscape_alloc(struct s_object *self) {
     struct s_landscape_attributes *result = d_prepare(self, landscape);
-    f_memory_new(self); /* inherit */
-    f_mutex_new(self);  /* inherit */
+    f_memory_new(self);         /* inherit */
+    f_mutex_new(self);          /* inherit */
     return result;
 }
 
@@ -155,6 +155,7 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
                         d_call(json, m_json_get_double, &(current_surface->offset_y), "sds", "surfaces", index_layer, "offset_y");
                         d_call(json, m_json_get_double, &(current_surface->speed_ratio_x), "sds", "surfaces", index_layer, "speed_ratio_x");
                         d_call(json, m_json_get_double, &(current_surface->speed_ratio_y), "sds", "surfaces", index_layer, "speed_ratio_y");
+                        d_call(json, m_json_get_boolean, &(current_surface->reference), "sds", "surfaces", index_layer, "reference");
                         d_call(json, m_json_get_double, &layer, "sds", "surfaces", index_layer, "layer");
                         current_surface->layer = (int)layer;
                         if ((current_surface->drawable = d_call(factory, m_factory_get_media, string_supply, &type))) {
@@ -269,6 +270,17 @@ d_define_method(landscape, set_item_status)(struct s_object *self, const char *l
     return self;
 }
 
+d_define_method(landscape, get_dimension)(struct s_object *self, double *dimension_w, double *dimension_h) {
+    d_using(landscape);
+    struct s_landscape_surface *current_surface;
+    d_foreach(&(landscape_attributes->surfaces), current_surface, struct s_landscape_surface)
+        if (current_surface->reference) {
+            d_call(current_surface->drawable, m_drawable_get_scaled_dimension, dimension_w, dimension_h);
+            break;
+        }
+   return self;
+}
+
 d_define_method(landscape, floor)(struct s_object *self, double position_x, double *position_y, double *dimension_h, double *scale_min, double *scale_max) {
     d_using(landscape);
     struct s_landscape_point *current_point = NULL, *previous_point = NULL;
@@ -331,16 +343,19 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
 
 d_define_method(landscape, update)(struct s_object *self, struct s_object *environment) {
     d_using(landscape);
-    double camera_position_x, camera_position_y, position_x, position_y;
+    struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
+    double camera_position_x, camera_position_y, position_x, position_y, ratio_x, ratio_y;
     struct s_landscape_surface *current_surface;
     struct s_landscape_script *current_script;
     time_t current_timestamp;
     d_call(environment, m_environment_get_camera, &camera_position_x, &camera_position_y, e_environment_surface_primary);
+    ratio_x = (environment_attributes->current_w / environment_attributes->reference_w[environment_attributes->current_surface]);
+    ratio_y = (environment_attributes->current_h / environment_attributes->reference_h[environment_attributes->current_surface]);
     d_foreach(&(landscape_attributes->surfaces), current_surface, struct s_landscape_surface) {
-        position_x = (landscape_attributes->position_x + current_surface->offset_x) + 
-            (camera_position_x * (1.0 - current_surface->speed_ratio_x));
-        position_y = (landscape_attributes->position_y + current_surface->offset_y) +
-            (camera_position_y * (1.0 - current_surface->speed_ratio_y));
+        position_x = ((landscape_attributes->position_x + current_surface->offset_x) +  
+                (camera_position_x * (1.0 - current_surface->speed_ratio_x) * (1.0 / ratio_x)));
+        position_y = ((landscape_attributes->position_y + current_surface->offset_y) +
+                (camera_position_y * (1.0 - current_surface->speed_ratio_y) * ratio_y));
         d_call(current_surface->drawable, m_drawable_set_position, position_x, position_y);
     }
     d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script) {
@@ -406,6 +421,7 @@ d_define_class(landscape) {
         d_hook_method(landscape, e_flag_public, set_item_solid),
         d_hook_method(landscape, e_flag_public, set_item_active),
         d_hook_method(landscape, e_flag_public, set_item_status),
+        d_hook_method(landscape, e_flag_public, get_dimension),
         d_hook_method(landscape, e_flag_public, floor),
         d_hook_method(landscape, e_flag_public, validator),
         d_hook_method(landscape, e_flag_public, update),

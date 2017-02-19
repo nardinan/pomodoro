@@ -23,7 +23,8 @@
 	},{
 		"drawable":"garibaldi_background",
 		"layer":1,
-		"speed_ratio_x":1.0
+		"speed_ratio_x":1.0,
+		"reference":true
 	},{
 		"drawable":"garibaldi_lights_layer",
 		"layer":7,

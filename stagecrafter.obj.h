@@ -68,6 +68,7 @@ d_declare_method(stagecrafter, play_track)(struct s_object *self, const char *ke
 d_declare_method(stagecrafter, set_item_solid)(struct s_object *self, const char *key, t_boolean solid);
 d_declare_method(stagecrafter, set_item_active)(struct s_object *self, const char *key, t_boolean active);
 d_declare_method(stagecrafter, set_item_status)(struct s_object *self, const char *key, const char *status);
+d_declare_method(stagecrafter, get_dimension)(struct s_object *self, double *dimension_w, double *dimension_h);
 d_declare_method(stagecrafter, update)(struct s_object *self);
 d_declare_method(stagecrafter, linker)(struct s_object *self, struct s_object *script);
 d_declare_method(stagecrafter, dispatcher)(struct s_object *self, struct s_stagecrafter_action *action);

@@ -104,6 +104,22 @@ d_define_method(camera, set_speed)(struct s_object *self, double speed) {
     return self;
 }
 
+d_define_method(camera, set_limit_x)(struct s_object *self, t_boolean applied, double low_limit_x, double high_limit_x) {
+    d_using(camera);
+    camera_attributes->limit_x = applied;
+    camera_attributes->low_limit_x = low_limit_x;
+    camera_attributes->high_limit_x = high_limit_x;
+    return self;
+}
+
+d_define_method(camera, set_limit_y)(struct s_object *self, t_boolean applied, double low_limit_y, double high_limit_y) {
+    d_using(camera);
+    camera_attributes->limit_y = applied;
+    camera_attributes->low_limit_y = low_limit_y;
+    camera_attributes->high_limit_y = high_limit_y;
+    return self;
+}
+
 d_define_method(camera, set_initial_speed)(struct s_object *self, double speed) {
     d_using(camera);
     camera_attributes->initial_speed = speed;
@@ -148,6 +164,18 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
                     (camera_attributes->destination_y == final_position_y) &&
                     (camera_attributes->destination_z == final_position_z))
                 camera_attributes->distance_xy = 0;
+            if (camera_attributes->limit_x) {
+                if ((final_position_x + environment_attributes->current_w) > (camera_attributes->high_limit_x))
+                    final_position_x = (camera_attributes->high_limit_x - environment_attributes->current_w);
+                if (final_position_x < (camera_attributes->low_limit_x))
+                    final_position_x = camera_attributes->low_limit_x;
+            }
+            if (camera_attributes->limit_y) {
+                if (final_position_y < (camera_attributes->low_limit_y))
+                    final_position_y = camera_attributes->low_limit_y;
+                if ((final_position_y + environment_attributes->current_h) > (camera_attributes->high_limit_y))
+                    final_position_y = (camera_attributes->high_limit_y - environment_attributes->current_h);
+            }
             d_call(environment, m_environment_set_camera, final_position_x, final_position_y, camera_attributes->surface);
             d_call(environment, m_environment_set_zoom, final_position_z, camera_attributes->surface);
             memcpy(&(camera_attributes->last_refresh), &current, sizeof(struct timeval));
@@ -170,6 +198,8 @@ d_define_class(camera) {
         d_hook_method(camera, e_flag_public, chase_reference),
         d_hook_method(camera, e_flag_public, remove_reference),
         d_hook_method(camera, e_flag_public, set_speed),
+        d_hook_method(camera, e_flag_public, set_limit_x),
+        d_hook_method(camera, e_flag_public, set_limit_y),
         d_hook_method(camera, e_flag_public, set_initial_speed),
         d_hook_method(camera, e_flag_public, set_final_speed),
         d_hook_method(camera, e_flag_public, update),

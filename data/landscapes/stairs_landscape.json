@@ -70,7 +70,8 @@
 	"surfaces":[{
 		"drawable":"stairs_background",
 		"layer":1,
-		"speed_ratio_x":1.0
+		"speed_ratio_x":1.0,
+		"reference":true
 	},{
 		"drawable":"stairs_lights_layer",
 		"layer":8,

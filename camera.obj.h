@@ -28,10 +28,12 @@
 }while(0)
 d_declare_class(camera) {
     struct s_attributes head;
-    double destination_x, destination_y, destination_z, starting_x, starting_y, starting_z, offset_x, offset_y, distance_xy, initial_speed, final_speed;
+    double destination_x, destination_y, destination_z, starting_x, starting_y, starting_z, offset_x, offset_y, distance_xy, initial_speed, final_speed,
+           low_limit_x, high_limit_x, low_limit_y, high_limit_y;
     enum e_environment_surfaces surface;
     struct s_object *reference;
     struct timeval last_refresh;
+    t_boolean limit_x, limit_y;
 } d_declare_class_tail(camera);
 struct s_camera_attributes *p_camera_alloc(struct s_object *self);
 extern struct s_object *f_camera_new(struct s_object *self, enum e_environment_surfaces surface);
@@ -43,6 +45,8 @@ d_declare_method(camera, chase_reference)(struct s_object *self, struct s_object
         struct s_object *environment);
 d_declare_method(camera, remove_reference)(struct s_object *self);
 d_declare_method(camera, set_speed)(struct s_object *self, double speed);
+d_declare_method(camera, set_limit_x)(struct s_object *self, t_boolean applied, double low_limit_x, double high_limit_x);
+d_declare_method(camera, set_limit_y)(struct s_object *self, t_boolean applied, double low_limit_y, double high_limit_y);
 d_declare_method(camera, set_initial_speed)(struct s_object *self, double speed);
 d_declare_method(camera, set_final_speed)(struct s_object *self, double speed);
 d_declare_method(camera, update)(struct s_object *self, struct s_object *environment);

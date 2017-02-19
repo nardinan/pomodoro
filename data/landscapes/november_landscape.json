@@ -17,7 +17,8 @@
 	},{
 		"drawable":"november_background",
 		"layer":1,
-		"speed_ratio_x":1
+		"speed_ratio_x":1,
+		"reference":true
 	},{
 		"drawable":"november_lights_layer",
 		"layer":8,

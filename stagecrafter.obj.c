@@ -213,9 +213,18 @@ d_define_method(stagecrafter, set_item_active)(struct s_object *self, const char
 
 d_define_method(stagecrafter, set_item_status)(struct s_object *self, const char *key, const char *status) {
     d_using(stagecrafter);
-    if (stagecrafter_attributes->main_landscape)
+    struct s_object *landscape = NULL;
+    if ((landscape = stagecrafter_attributes->main_landscape))
         d_call(stagecrafter_attributes->main_landscape, m_landscape_set_item_status, key, status);
-    return self;
+    return landscape;
+}
+
+d_define_method(stagecrafter, get_dimension)(struct s_object *self, double *dimension_w, double *dimension_h) {
+    d_using(stagecrafter);
+    struct s_object *landscape = NULL;
+    if ((landscape = stagecrafter_attributes->main_landscape))
+        d_call(stagecrafter_attributes->main_landscape, m_landscape_get_dimension, dimension_w, dimension_h);
+    return landscape;
 }
 
 d_define_method(stagecrafter, update)(struct s_object *self) {
@@ -303,6 +312,7 @@ d_define_class(stagecrafter) {
         d_hook_method(stagecrafter, e_flag_public, set_item_solid),
         d_hook_method(stagecrafter, e_flag_public, set_item_active),
         d_hook_method(stagecrafter, e_flag_public, set_item_status),
+        d_hook_method(stagecrafter, e_flag_public, get_dimension),
         d_hook_method(stagecrafter, e_flag_public, update),
         d_hook_method(stagecrafter, e_flag_public, linker),
         d_hook_method(stagecrafter, e_flag_public, dispatcher),

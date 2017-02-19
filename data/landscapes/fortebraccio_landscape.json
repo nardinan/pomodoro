@@ -21,7 +21,8 @@
 	},{
 		"drawable":"fortebraccio_background",
 		"layer":2,
-		"speed_ratio_x":1
+		"speed_ratio_x":1,
+		"reference":true
 	},{
 		"drawable":"fortebraccio_foreground",
 		"layer":6,

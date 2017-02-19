@@ -259,6 +259,8 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
     struct s_screenwriter_attributes *screenwriter_attributes;
     struct s_object *current_character;
     struct s_object *result = self;
+    double dimension_w, dimension_h;
+    t_boolean limitations_enabled = d_false;
     switch (action->type) {
         case e_director_action_puppeteer:
             result = d_call(director_attributes->puppeteer, m_puppeteer_dispatcher, &(action->action.character));
@@ -297,6 +299,9 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
         case e_director_action_service_camera_move:         /* destination_x, destination_y, destination_z */
             d_log(e_log_level_medium, "action [camera_move] (position_x %.02f | position_y %.02f | position_z %.02f)", action->action.camera_move.position_x,
                     action->action.camera_move.position_y, action->action.camera_move.position_z);
+            if (d_call(director_attributes->stagecrafter, m_stagecrafter_get_dimension, &dimension_w, &dimension_h))
+                limitations_enabled = d_true;
+            d_call(director_attributes->camera, m_camera_set_limit_x, limitations_enabled, 0.0, dimension_w);
             factory_attributes = d_cast(director_attributes->factory, factory);
             d_call(director_attributes->camera, m_camera_remove_reference, NULL);
             d_call(director_attributes->camera, m_camera_move_position, action->action.camera_move.position_x, action->action.camera_move.position_y,
@@ -305,6 +310,9 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
         case e_director_action_service_camera_set:          /* destination_x, destination_y, destination_z */
             d_log(e_log_level_medium, "action [camera_set] (position_x %.02f | position_y %.02f | position_z %.02f)", action->action.camera_move.position_x,
                     action->action.camera_move.position_y, action->action.camera_move.position_z);
+            if (d_call(director_attributes->stagecrafter, m_stagecrafter_get_dimension, &dimension_w, &dimension_h))
+                limitations_enabled = d_true;
+            d_call(director_attributes->camera, m_camera_set_limit_x, limitations_enabled, 0.0, dimension_w);
             factory_attributes = d_cast(director_attributes->factory, factory);
             d_call(director_attributes->camera, m_camera_remove_reference, NULL);
             d_call(director_attributes->camera, m_camera_set_position, action->action.camera_move.position_x, action->action.camera_move.position_y,
@@ -313,6 +321,9 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
         case e_director_action_service_camera_follow:       /* key (character), destination_z */
             d_log(e_log_level_medium, "action [camera_follow] (character %s | offset_y %.02f | position_z %.02f)", action->action.camera_follow.key, 
                     action->action.camera_follow.position_y, action->action.camera_follow.position_z);
+            if (d_call(director_attributes->stagecrafter, m_stagecrafter_get_dimension, &dimension_w, &dimension_h))
+                limitations_enabled = d_true;
+            d_call(director_attributes->camera, m_camera_set_limit_x, limitations_enabled, 0.0, dimension_w);
             factory_attributes = d_cast(director_attributes->factory, factory);
             d_call(director_attributes->camera, m_camera_chase_reference, 
                     d_call(director_attributes->puppeteer, m_puppeteer_get_character, action->action.camera_follow.key), 0.0, 
