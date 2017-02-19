@@ -20,6 +20,11 @@
 #include "bubble.obj.h"
 #define d_character_default_speed 10
 #define d_character_default_font 0
+#define d_character_principal_point_offset 5
+#define d_character_principal_point_red 0
+#define d_character_principal_point_green 255
+#define d_character_principal_point_blue 0 
+#define d_character_principal_point_alpha 255
 typedef enum e_character_components {
     e_character_component_hair = 0,
     e_character_component_eyes,

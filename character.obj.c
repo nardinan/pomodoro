@@ -315,7 +315,7 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
     struct s_bubble_attributes *bubble_attributes;
     struct s_drawable_attributes *drawable_attributes_self = d_cast(self, drawable),
                                  *drawable_attributes_bubble;
-    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, ratio_y, total_zoom;
+    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, ratio_y, total_zoom, principal_point_x, principal_point_y;
     struct s_object *result = d_call_owner(self, entity, m_drawable_draw, environment); /* recall the father's draw method */
     d_call(self, m_drawable_get_position, &position_x, &position_y);
     if (((character_attributes->source_x < character_attributes->destination_x) && (position_x >= character_attributes->destination_x)) ||
@@ -341,6 +341,14 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         drawable_attributes_bubble->angle = drawable_attributes_self->angle;
         drawable_attributes_bubble->zoom = drawable_attributes_self->zoom;
         drawable_attributes_bubble->flip = drawable_attributes_self->flip;
+    }
+    if (v_developer_mode) {
+        d_call(self, m_drawable_get_scaled_principal_point, &principal_point_x, &principal_point_y);
+        f_primitive_fill_triangle(environment_attributes->renderer, 
+                (principal_point_x - d_character_principal_point_offset), (principal_point_y + d_character_principal_point_offset),
+                (principal_point_x + d_character_principal_point_offset), (principal_point_y + d_character_principal_point_offset), principal_point_x, 
+                (principal_point_y - d_character_principal_point_offset), d_character_principal_point_red, d_character_principal_point_green, 
+                d_character_principal_point_blue, d_character_principal_point_alpha);
     }
     return result;
 }
