@@ -132,12 +132,12 @@ t_boolean f_director_validator(struct s_object *self, double current_x, double c
     struct s_object *current_landscape;
     double current_distance, last_distance = -1.0, self_position_x, self_position_y, character_position_x, character_position_y;
     if (character_attributes->action) {
-        d_call(self, m_drawable_get_position, &self_position_x, &self_position_y);
+        d_call(self, m_drawable_get_principal_point, &self_position_x, &self_position_y);
         d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
             if (current_character->character != self)
                 if (current_character->visible)
                     if ((intptr_t)d_call(self, m_entity_interact, current_character->character)) {
-                        d_call(current_character->character, m_drawable_get_position, &character_position_x, &character_position_y);
+                        d_call(current_character->character, m_drawable_get_principal_point, &character_position_x, &character_position_y);
                         current_distance = (character_position_x - self_position_x) * (character_position_x - self_position_x);
                         if ((!nearest_character) || (current_distance < last_distance)) {
                             last_distance = current_distance;

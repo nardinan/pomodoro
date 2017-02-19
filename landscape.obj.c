@@ -318,7 +318,7 @@ d_define_method(landscape, validator)(struct s_object *self, struct s_object *en
         d_foreach(&(landscape_attributes->items), current_item, struct s_landscape_item) { 
             d_call(current_item->item, m_drawable_get_principal_point, &item_position_x, &item_position_y);
             if ((final_distance = d_point_square_distance(entity_position_x, entity_position_y, item_position_x, item_position_y)) < 
-                    d_item_max_square_distance)
+                    d_item_lost_square_distance)
                 if ((intptr_t)d_call(current_item->item, m_item_collision, entity)) {
                     item_attributes = d_cast(current_item->item, item);
                     if (item_attributes->active) /* return the latest active item that has been selected */

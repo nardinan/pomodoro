@@ -192,11 +192,13 @@ d_define_method(puppeteer, show_character)(struct s_object *self, const char *ke
     struct s_puppeteer_character *current_character;
     d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
         if (f_string_strcmp(current_character->label, key) == 0) {
-            current_character->visible = d_true;
             d_call(current_character->character, m_drawable_set_position_x, position_x);
-            d_call(factory_attributes->environment, m_environment_add_drawable, current_character->character, d_puppeteer_default_layer, 
-                    e_environment_surface_primary);
-            d_call(current_character->character, m_character_show_bubble, factory_attributes->environment);
+            if (!current_character->visible) {
+                current_character->visible = d_true;
+                d_call(factory_attributes->environment, m_environment_add_drawable, current_character->character, d_puppeteer_default_layer, 
+                        e_environment_surface_primary);
+                d_call(current_character->character, m_character_show_bubble, factory_attributes->environment);
+            }
             break;
         }
     return self;
@@ -236,9 +238,15 @@ d_define_method(puppeteer, set_character)(struct s_object *self, const char *key
 }
 
 d_define_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x) {
-    struct s_object *current_character;
-    if ((current_character = d_call(self, m_puppeteer_get_character, key)))
-        d_call(current_character, m_character_move, destination_x);
+    d_using(puppeteer);
+    struct s_puppeteer_character *current_character;
+    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
+        if (f_string_strcmp(current_character->label, key) == 0) {
+            if (current_character->connected)
+                d_delete(current_character->connected);
+            current_character->connected = NULL;
+            d_call(current_character->character, m_character_move, destination_x);
+        }
     return self;
 }
 
@@ -250,6 +258,8 @@ d_define_method(puppeteer, look_character)(struct s_object *self, const char *ke
     if ((destination_character = d_call(self, m_puppeteer_get_character, entity))) {
         d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
             if (f_string_strcmp(current_character->label, key) == 0) {
+                if (current_character->connected)
+                    d_delete(current_character->connected);
                 current_character->connected = NULL;
                 d_call(current_character->character, m_drawable_get_position, &current_position_x, &position_y);
                 d_call(destination_character, m_drawable_get_position, &destination_position_x, &position_y);
@@ -267,7 +277,7 @@ d_define_method(puppeteer, stare_character)(struct s_object *self, const char *k
     struct s_object *destination_character = d_call(self, m_puppeteer_get_character, entity);
     d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
         if (f_string_strcmp(current_character->label, key) == 0) {
-            current_character->connected = destination_character;
+            current_character->connected = d_retain(destination_character);
             break;
         }
     return self;
@@ -316,7 +326,7 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
             result = d_call(self, m_puppeteer_hide_characters, NULL);
             break;
         case e_puppeteer_action_show:               /* key (character, destination_x */
-            d_log(e_log_level_medium, "action [show] (character %s | destionation %.02f)", action->key, action->parameters.destination_x);
+            d_log(e_log_level_medium, "action [show] (character %s | destination %.02f)", action->key, action->parameters.destination_x);
             result = d_call(self, m_puppeteer_show_character, action->key, action->parameters.destination_x);
             break;
         case e_puppeteer_action_enable_control:     /* key (character) */
@@ -357,6 +367,8 @@ d_define_method(puppeteer, delete)(struct s_object *self, struct s_puppeteer_att
     d_delete(attributes->factory);
     while ((current_character = (struct s_puppeteer_character *)((struct s_list_node *)attributes->characters.head))) {
         f_list_delete(&(attributes->characters), (struct s_list_node *)current_character);
+        if (current_character->connected)
+            d_delete(current_character->connected);
         d_delete(current_character->character);
         d_free(current_character);
     }

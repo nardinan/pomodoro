@@ -18,8 +18,8 @@
 #ifndef pomodoro_item_h
 #define pomodoro_item_h
 #include "factory.obj.h"
-#define d_item_lost_square_distance 3659296
-#define d_item_max_square_distance 1559296
+#define d_item_lost_square_distance 2570000
+#define d_item_max_square_distance 257000
 #define d_item_blink_modificator 10.0
 #define d_item_blink_max_channel 254.0
 #define d_item_blink_min_channel 0.0

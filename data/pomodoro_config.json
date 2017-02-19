@@ -5,9 +5,9 @@
 	"date":"22 August 2016",
 	"language":1,
 	"fonts":[
-		{"font":"psycho_font", 		"size":50},
 		{"font":"psycho_font", 		"size":60},
 		{"font":"psycho_font", 		"size":70},
+		{"font":"psycho_font", 		"size":80},
 		{"font":"raleway_font", 	"size":50},
 		{"font":"raleway_font", 	"size":60},
 		{"font":"raleway_font", 	"size":70},

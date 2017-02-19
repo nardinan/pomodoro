@@ -6,6 +6,9 @@
 	"position_y":0.0,
 	"intro_script":"intro_lupattelli",
 	"outro_script":"outro_lupattelli",
+	"tracks":[
+		{"label":"birds_background", "playable":"lupattelli_background_noise"}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":2550.0
