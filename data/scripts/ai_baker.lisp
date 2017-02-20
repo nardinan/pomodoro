@@ -72,7 +72,6 @@
 
 ; Script
 (puppeteer_disable_control)
-(puppeteer_look "baker" "andrea")
 (puppeteer_look "andrea" "baker")
 (if (= have_leaf 1.0)
 	(begin
