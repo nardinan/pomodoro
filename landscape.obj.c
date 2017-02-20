@@ -226,7 +226,7 @@ d_define_method(landscape, stop)(struct s_object *self) {
     struct s_landscape_track *current_track;
     d_foreach(&(landscape_attributes->tracks), current_track, struct s_landscape_track)
         if (current_track->track)
-            d_call(current_track->track, m_track_stop, NULL);
+            d_call(current_track->track, m_track_stop_fade_out, d_landscape_fade_in_time);
     return self;
 }
 
@@ -237,7 +237,7 @@ d_define_method(landscape, play)(struct s_object *self, const char *label) {
     d_foreach(&(landscape_attributes->tracks), current_track, struct s_landscape_track)
         if (f_string_strcmp(current_track->label, label) == 0) {
             if (current_track->track)
-               d_call(current_track->track, m_track_play, d_true);
+               d_call(current_track->track, m_track_play_fade_in, d_true, d_landscape_fade_in_time);
             break;
         }
     return self;
