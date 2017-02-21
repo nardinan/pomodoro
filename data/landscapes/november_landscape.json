@@ -6,6 +6,9 @@
 	"position_y":0.0,
 	"intro_script":"intro_november",
 	"outro_script":"outro_november",
+	"tracks":[
+		{"label":"people_background", "playable":"november_background_noise"}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":4250.0

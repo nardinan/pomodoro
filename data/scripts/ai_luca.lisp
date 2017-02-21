@@ -18,7 +18,7 @@
 	 "Uhm, che ne dici di una ...")
 	(cons ;3 andrea
 	 "Well, I was thinking about a ..."
-	 "Beh, io pensavo ...")
+	 "Beh, io pensavo a una ...")
 	(cons ;4 andrea & luca
  	 "Pizza?"
 	 "Pizza?")

@@ -6,6 +6,9 @@
 	"position_y":0.0,
 	"intro_script":"intro_fortebraccio",
 	"outro_script":"outro_fortebraccio",
+	"tracks":[
+		{"label":"traffic_background", "playable":"fortebraccio_background_noise"}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":2550.0

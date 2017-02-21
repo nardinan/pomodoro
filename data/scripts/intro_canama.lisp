@@ -103,7 +103,7 @@
 
 (if (= intro_canama 1.0)
 	(begin
-		(puppeteer_show "luca" 2500)
+		(puppeteer_show "luca" 4500)
 		(puppeteer_stare "luca" "andrea"))
 	(begin
 		(animation "andrea" "front")
