@@ -1,0 +1,38 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"black_hole_frame0",  		"time":0.1},
+		{"drawable":"black_hole_frame1",  		"time":0.1},
+		{"drawable":"black_hole_frame2",  		"time":0.1},
+		{"drawable":"black_hole_frame3",  		"time":0.1},
+		{"drawable":"black_hole_frame4",  		"time":0.1},
+		{"drawable":"black_hole_frame5",  		"time":0.1},
+		{"drawable":"black_hole_frame6",  		"time":0.1},
+		{"drawable":"black_hole_frame7",  		"time":0.1,	"key":true},
+		{"drawable":"black_hole_frame8",  		"time":0.1},
+		{"drawable":"black_hole_frame9",  		"time":0.1},
+		{"drawable":"black_hole_frame10",  		"time":0.1},
+		{"drawable":"black_hole_frame11",  		"time":0.1},
+		{"drawable":"black_hole_frame12",  		"time":0.1},
+		{"drawable":"black_hole_frame13",  		"time":0.1},
+		{"drawable":"black_hole_frame14",  		"time":0.1},
+		{"drawable":"black_hole_frame15",  		"time":0.1},
+		{"drawable":"black_hole_frame16",  		"time":0.1},
+		{"drawable":"black_hole_frame17",  		"time":0.1},
+		{"drawable":"black_hole_frame18",  		"time":0.1},
+		{"drawable":"black_hole_frame19",  		"time":0.1},
+		{"drawable":"black_hole_frame20",  		"time":0.1},
+		{"drawable":"black_hole_frame21",  		"time":0.1},
+		{"drawable":"black_hole_frame22",  		"time":0.1},
+		{"drawable":"black_hole_frame23",  		"time":0.1},
+		{"drawable":"black_hole_frame24",  		"time":0.1},
+		{"drawable":"black_hole_frame25",  		"time":0.1},
+		{"drawable":"black_hole_frame26",  		"time":0.1},
+		{"drawable":"black_hole_frame27",  		"time":0.1},
+		{"drawable":"black_hole_frame28",  		"time":0.1},
+		{"drawable":"black_hole_frame29",  		"time":0.1},
+		{"drawable":"black_hole_frame30",  		"time":0.1}
+	]
+}
+	
