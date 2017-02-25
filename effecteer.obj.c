@@ -48,6 +48,26 @@ void p_link_effecteer(enum e_effecteer_actions type, ...) {
                             }
                         }
                     }
+                    break;
+                case e_effecteer_action_play:
+                    action->action.effect.parameters.action_play.volume = d_track_default_volume;
+                    action->action.effect.parameters.action_play.fade_in = d_track_default_fade_delay;
+                    action->action.effect.parameters.action_play.fade_out = d_track_default_fade_delay;
+                    action->action.effect.parameters.action_play.loop = d_true;
+                    if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                        strncpy(action->action.effect.parameters.action_play.label, argument->value_string, d_string_buffer_size);
+                        if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                            action->action.effect.parameters.action_play.fade_in = argument->value_double;
+                            if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                                action->action.effect.parameters.action_play.fade_out = argument->value_double;
+                                if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                                    action->action.effect.parameters.action_play.volume = argument->value_double;
+                                    if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                                        action->action.effect.parameters.action_play.loop = d_lisp_true_token(argument);
+                                }
+                            }
+                        }
+                    }
                 default:
                     break;
             }
@@ -69,6 +89,13 @@ struct s_lisp_object *p_link_effecteer_add_effect(struct s_object *self, struct 
 struct s_lisp_object *p_link_effecteer_stop_effect(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_effecteer(e_effecteer_action_stop, d_lisp_car(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_effecteer_play_effect(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_effecteer(e_effecteer_action_play, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments), d_lisp_caddr(d_lisp_cdr(arguments)),
+            d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(arguments))));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -140,9 +167,29 @@ d_define_method(effecteer, add_effect)(struct s_object *self, const char *key, c
     return result;
 }
 
+d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, const char *label, int fade_in, int fade_out, int volume, t_boolean loop) {
+    d_using(effecteer);
+    if (effecteer_attributes->track.track) {
+        d_delete(effecteer_attributes->track.track);
+        effecteer_attributes->track.track = NULL;
+    }
+    if ((effecteer_attributes->track.track = d_call(effecteer_attributes->factory, m_factory_get_track, label))) {
+        strncpy(effecteer_attributes->track.key, key, d_resources_key_size);
+        effecteer_attributes->track.fade_in = fade_in;
+        effecteer_attributes->track.fade_out = fade_out;
+        effecteer_attributes->track.volume = volume;
+        effecteer_attributes->track.loop = loop;
+        d_call(effecteer_attributes->track.track, m_track_set_volume, effecteer_attributes->track.volume);
+        d_call(effecteer_attributes->track.track, m_track_set_loops, ((effecteer_attributes->track.loop)?d_track_infinite_loop:0));
+        d_call(effecteer_attributes->track.track, m_track_play_fade_in, d_true, effecteer_attributes->track.fade_in);
+    }
+    return self;
+}
+
 d_define_method(effecteer, stop_effect)(struct s_object *self, const char *key) {
+    d_using(effecteer);
     struct s_effecteer_effect *current_effect;
-    if ((current_effect = (struct s_effecteer_effect *)d_call(self, m_effecteer_get_effect, key)))
+    if ((current_effect = (struct s_effecteer_effect *)d_call(self, m_effecteer_get_effect, key))) {
         switch (current_effect->type) {
             case e_factory_media_type_particle:
                 /* stop particle effect */
@@ -154,6 +201,8 @@ d_define_method(effecteer, stop_effect)(struct s_object *self, const char *key) 
             default:
                 break;
         }
+    } else if ((effecteer_attributes->track.track) && (f_string_strcmp(effecteer_attributes->track.key, key) == 0))
+        d_call(effecteer_attributes->track.track, m_track_stop_fade_out, effecteer_attributes->track.fade_out);
     return self;
 }
 
@@ -174,6 +223,7 @@ d_define_method(effecteer, delete_effect)(struct s_object *self, const char *key
 d_define_method(effecteer, linker)(struct s_object *self, struct s_object *script) {
     d_call(script, m_lisp_extend_environment, "effecteer_add", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_add_effect));
     d_call(script, m_lisp_extend_environment, "effecteer_stop", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_stop_effect));
+    d_call(script, m_lisp_extend_environment, "effecteer_play", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_play_effect));
     d_call(script, m_lisp_extend_environment, "effecteer_delete", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_delete_effect));
     return self;
 }
@@ -195,6 +245,13 @@ d_define_method(effecteer, dispatcher)(struct s_object *self, struct s_effecteer
             d_log(e_log_level_medium, "action [stop] (effect %s)", action->key);
             result = d_call(self, m_effecteer_stop_effect, action->key);
             break;
+        case e_effecteer_action_play:           /* key (effect), label (effect), fade_in (time), fade_out (time), volume, loop */
+            d_log(e_log_level_medium, "action [play] (effect %s (%s) | fade_in %d | fade out %d | volume %d | %s)", action->key,
+                    action->parameters.action_play.label, action->parameters.action_play.fade_in, action->parameters.action_play.fade_out,
+                    action->parameters.action_play.volume, (action->parameters.action_play.loop)?"look":"single");
+            result = d_call(self, m_effecteer_play_effect, action->key, action->parameters.action_play.label, action->parameters.action_play.fade_in, 
+                    action->parameters.action_play.fade_out, action->parameters.action_play.volume, action->parameters.action_play.loop);
+            break;
         case e_effecteer_action_delete:         /* key (effect) */
             d_log(e_log_level_medium, "action [delete] (effect %s)", action->key);
             result = d_call(self, m_effecteer_delete_effect, action->key);
@@ -213,6 +270,8 @@ d_define_method(effecteer, delete)(struct s_object *self, struct s_effecteer_att
         d_delete(current_effect->drawable);
         d_free(current_effect);
     }
+    if (attributes->track.track)
+        d_delete(attributes->track.track);
     d_delete(attributes->factory);
     return NULL;
 }
@@ -221,6 +280,7 @@ d_define_class(effecteer) {
     d_hook_method(effecteer, e_flag_private, get_effect),
         d_hook_method(effecteer, e_flag_public, add_effect),
         d_hook_method(effecteer, e_flag_public, stop_effect),
+        d_hook_method(effecteer, e_flag_public, play_effect),
         d_hook_method(effecteer, e_flag_public, delete_effect),
         d_hook_method(effecteer, e_flag_public, linker),
         d_hook_method(effecteer, e_flag_public, dispatcher),

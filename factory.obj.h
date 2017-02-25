@@ -27,6 +27,7 @@ typedef enum e_factory_media_types {
     e_factory_media_type_bitmap = 0,
     e_factory_media_type_animation,
     e_factory_media_type_particle,
+    e_factory_media_type_track,
     e_factory_media_type_NULL
 } e_factory_media_types;
 d_declare_class(factory) {
