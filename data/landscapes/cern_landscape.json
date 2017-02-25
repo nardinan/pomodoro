@@ -30,6 +30,7 @@
 		{"label":"lhc_segment_C",	"item":"lhc", 				"status":"still",		"position_x":2242.0, 	"position_y":750.0, 	"zoom":1.25},
 		{"label":"lhc_segment_D",	"item":"lhc", 				"status":"still",		"position_x":2818.0, 	"position_y":750.0, 	"zoom":1.25},
 		{"label":"lhc_segment_E",	"item":"lhc", 				"status":"still",		"position_x":3394.0, 	"position_y":750.0, 	"zoom":1.25},
-		{"label":"thunder_strike",  "item":"thunder_strike",	"status":"still",		"position_x":2500.0,	"position_y":1000.0}
+		{"label":"thunder_strike",  "item":"thunder_strike",	"status":"still",		"position_x":2500.0,	"position_y":1000.0},
+		{"label":"shutdown",		"item":"shutdown",			"status":"still",		"position_x":2500.0,	"position_y":1000.0}
 	]
 } 

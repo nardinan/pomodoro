@@ -23,8 +23,8 @@
 	 "Sounds too much formal, don't you think?"
 	 "Suona un po' troppo formale, non credi?")
 	(cons ;5 yuriy
-	 "In 'Angel & Deamons' CERN they are referring each other in this way!"
-	 "Al CERN di 'Angeli & Demoni' si chiamano tra di loro in questo modo!")
+	 "In 'Angel & Deamons' people at CERN are referring each other in this way!"
+	 "Su 'Angeli & Demoni' le persone al CERN usano questi appellativi!")
 	(cons ;6 andrii
 	 "By the way ..."
 	 "Comunque ...")
@@ -62,8 +62,8 @@
 	 "No Yuriy, obviously, is not normal."
 	 "No Yuriy, ovviamente non e' normale.")
 	(cons ;18 yuriy
-	 "Is called 'sarcasm'. Even Dan Brown would be able to understand that a smoking LHC is not normal"
-	 "Si chiama 'sarcasmo'. Anche Dan Brown sarebbe capace di capire che lo LHC che fuma non e' normale")
+	 "Is called 'sarcasm'. Even Dan Brown would be able to recognize it"
+	 "Si chiama 'sarcasmo'. Anche Dan Brown sarebbe capace di riconoscerlo.")
 	(cons ;19 andrii
 	 "Probably we should shut it off right now before it gets worse"
 	 "Forse e' il caso di spegnerlo subito prima che la situazione peggiori")
@@ -78,7 +78,7 @@
 	 "Sta uscendo del fumo! Come puo' peggiore la situazione?")
 	(cons ;23 yuriy
 	 "Oh, I see ..."
-	 "Ah, capisco ...")
+	 "Oh, capisco ...")
 	(cons ;24 andrii
 	 "Fuck"
 	 "Cazzo")
@@ -89,17 +89,17 @@
 	 "Diomatonne(TM)"
 	 "Diomatonne(TM)")
 	(cons ;27 andrii
-	 "We are polluting the space-time continuum"
-	 "Stiamo seriamente danneggiando il continuo spazio-temporale")
+	 "We are polluting the fabric of space-time"
+	 "Stiamo seriamente inquinando il tessuto spazio-termporale")
 	(cons ;28 yuriy
 	 "What?"
 	 "Cosa?")
 	(cons ;29 yuriy
-	 "Space-time continuum?"
-	 "Il continuo spazio-temporale?")
+	 "Fabric of space-time?"
+	 "Il tessuto spazio-temporale?")
 	(cons ;30 yuriy
-	 "Are you high?"
-	 "Ti sei drogato?")
+	 "Do you have potatoes in your head?"
+	 "C'hai le patate in testa?")
 	(cons ;31 andrii
 	 "Shut the fuck up!"
 	 "Stai zitto, cazzo!")
@@ -110,8 +110,8 @@
 	 "Phew"
 	 "Phew")
 	(cons ;34 yuriy
-	 "Looks better now!"
-	 "Ce l'hai fatta!")
+	 "Our hero is here for us!"
+	 "Il nostro eroe e' qui per noi!")
 	(cons ;35 andrii
 	 "Well, yes but ..."
 	 "Beh, si ma ...")
@@ -119,35 +119,53 @@
 	 "'But' what?"
 	 "'Ma' cosa?")
 	(cons ;37 andrii
-	 "Probably the energy peak that we saw wasn't casual"
-	 "Probabilmente il picco d'energia che abbiamo visto non era casuale")
+	 "The energy peak that we had wasn't casual"
+	 "Il picco d'energia che abbiamo avuto non era casuale")
 	(cons ;38 yuriy
 	 "So?"
 	 "Quindi?")
 	(cons ;39 andrii
 	 "I think we have changed something, somewhere in the past"
-	 "Penso che abbiamo cambiato qualcosa, da qualche parte nel passato")
+	 "Credo che abbiamo cambiato qualcosa, da qualche parte nel passato")
 	(cons ;40 andrii
-	 "We have changed the history"
-	 "Abbiamo cambiato la storia")
-	(cons ;41 yuriy
-	 "Shit, I have no umbrella!"
-	 "Merda, non ho l'ombrello!")
+	 "We have changed ..."
+	 "Abbiamo cambiato ...")
+	(cons ;41 andrii
+	 "THE HISTORY"
+	 "LA STORIA")
 	(cons ;42 yuriy
-	 "Anyway we are still here!"
-	 "Comunque siamo ancora qui!")
+	 "Wow! Maaaaaagic"
+	 "Wow! Maaaaaagico")
 	(cons ;43 yuriy
-	 "Whatever we have changed, probably was not that important"
-	 "Qualsiasi cosa abbiamo cambiato, probabilmente non era cosi' importante")
-	(cons ;44 andrii
-	 "Yep probably you are right. Maybe was not important ..."
-	 "Si, probabilmente hai ragione. Magari non era nulla di importante ...")
-	(cons ;45 yuriy
+	 "Anyway we are still here!"
+	 "Comunque noi siamo ancora qui!")
+	(cons ;44 yuriy
+	 "Probably we've changed the history of some dumb person . . ."
+	 "Probabilmente abbiamo cambiato la storia di qualche idiota . . .")
+	(cons ;45 andrii
+	 "Maybe we've changed the history of a group of dumb persons"
+	 "O magari di un gruppo di idioti")
+	(cons ;46 yurii
+	 "In a nameless city, maybe"
+	 "Magari in una citta' senza nome")
+	(cons ;47 andrii
+	 "The kind of city that you couldn't find in a map"
+	 "La solita citta' che pur con una cartina davanti nessuno saprebbe dove cercarla")
+	(cons ;48 yuriy
+	 "Probably not many years ago"
+	 "Magari in un passato non troppo lontano")
+	(cons ;49 andrii
+	 "Maybe in 2012 somewhere in Italy"
+	 "Diciamo nel 2012 da qualche parte in Italia")
+	(cons ;50 yuriy
+	 "OK that's enough"
+	 "Vabbe' ora basta")
+	(cons ;51 yuriy
 	 "Vodka party?"
 	 "Vodka party?")
-	(cons ;46 andrii
-	 "Yeah!"
-	 "Yeah!")
+	(cons ;52 andrii
+	 "Yeeeeeeee!"
+	 "Yeeeeeeee!")
 	nil
 ))
 
@@ -201,19 +219,15 @@
 
 ; Intro dialogs
 (puppeteer_disable_control)
+
 (puppeteer_show "yuriy" 	1450)
 (puppeteer_show "andrii" 	2750)
-(effecteer_add "intro1" "CERN_intro_layer" 2500 2600 1 0 nil nil)
-(stagecrafter_play "cern_track_A")
-(director_camera_set 2200 2200)
-(director_wait_time 2)
-(director_camera_move 2200 800)
 (animation "yuriy" 			"back_code")
+(director_wait_time 1)
 (animation "andrii" 		"back_code")
+(director_camera_move 2200 800)
 (stagecrafter_set_item "computer_A" "coding_A")
 (stagecrafter_set_item "computer_C" "coding_C")
-(director_wait_time 2)
-(effecteer_delete 	"intro1")
 (director_wait_time 2)
 (say "andrii"	(get_dialog dialogs language 0))
 (say "yuriy"	(get_dialog dialogs language 1))
@@ -238,6 +252,8 @@
 (stagecrafter_set_item "computer_C" "coding_C")
 (say "andrii" 	(get_dialog dialogs language 10))
 (director_wait_time 1)
+(stagecrafter_set_item "shutdown" "trigger")
+(director_wait_time 2)
 (say "andrii" 	(get_dialog dialogs language 11))
 (animation "yuriy" 	"back_code")
 (stagecrafter_set_item "computer_A" "coding_A")
@@ -319,29 +335,51 @@
 (animation "andrii"	"back")
 (say "andrii"	(get_dialog dialogs language 39))
 (say "andrii"	(get_dialog dialogs language 40))
+(say "andrii"	(get_dialog dialogs language 41))
 (effecteer_add "flash1" "thunder_flash"  0 0 4 0 t nil)
 (stagecrafter_set_item "thunder_strike" "strike")
 (director_wait_time 3)
 (animation "yuriy"	"still_left")
-(say "yuriy"	(get_dialog dialogs language 41))
+(say "yuriy"	(get_dialog dialogs language 42))
 (director_wait_time 1)
 (animation "yuriy" "back")
-(say "yuriy"	(get_dialog dialogs language 42))
 (say "yuriy"	(get_dialog dialogs language 43))
-(say "andrii"	(get_dialog dialogs language 44))
-(director_wait_time 2)
-(animation "yuriy" 	"still_right")
-(say "yuriy"	(get_dialog dialogs language 45))
+(animation "yuriy" "still_right")
+(say "yuriy"	(get_dialog dialogs language 44))
 (animation "andrii" "still_left")
-(say "andrii"	(get_dialog dialogs language 46))
-(director_camera_move 2000 -1500)
+(say "andrii"	(get_dialog dialogs language 45))
+(say "yuriy"	(get_dialog dialogs language 46))
+(say "andrii"	(get_dialog dialogs language 47))
+(say "yuriy"	(get_dialog dialogs language 48))
+(say "andrii"	(get_dialog dialogs language 49))
+(animation "yuriy" "back")
+(say "yuriy"	(get_dialog dialogs language 50))
+(director_wait_time 1)
+(animation "andrii" "back")
+(director_wait_time 2)
+(effecteer_play 	"dream1" "dream_a_little_dream_of_me" 4000 4000)
+(animation "yuriy" 	"still_right")
+(say "yuriy"	(get_dialog dialogs language 51))
+(animation "andrii" "still_left")
+(say "andrii"	(get_dialog dialogs language 52))
+(director_wait_time 1)
+(effecteer_add  "black1" "black_hole_animation" 0 -1100 28 0 t nil)
+(director_wait_time 5)
+(effecteer_add  "pgs1"   "intro_pgs" 400 0 18 0 t nil)
+(director_wait_time 35)
+(effecteer_add  "clear1" "fade_out" 0 0 4 0 t nil)
 (director_wait_time 2)
 
 ; cleanup
-(effecteer_delete 	"fire1")
-(effecteer_delete 	"smoke1")
 (puppeteer_hide)
 (stagecrafter_hide)
+(effecteer_stop  "dream1")
+(effecteer_delete "fire1")
+(effecteer_delete "smoke1")
+(effecteer_delete "flash1")
+(effecteer_delete "dream1")
+(effecteer_delete "black1")
+(effecteer_delete "clear1")
 
 ; and never again
 (collector_set "intro_ran" 1.0)
