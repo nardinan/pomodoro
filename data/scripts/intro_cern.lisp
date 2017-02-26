@@ -50,7 +50,7 @@
 	 "Dan Brown would be proud of you!"
 	 "Dan Brown sarebbe orgoglioso di te!")
 	(cons ;14 andrii
-	 "Dan Brown is an asshole"
+	 "Dan Brown is an needy"
 	 "Dan Brown e' un disagiato")
 	(cons ;15 yuriy
 	 "Uhm"
@@ -134,8 +134,8 @@
 	 "THE HISTORY"
 	 "LA STORIA")
 	(cons ;42 yuriy
-	 "Wow! Maaaaaagic"
-	 "Wow! Maaaaaagico")
+	 "Oh gosh! I forgot my Umbrella"
+	 "Oh no! Mi son dimenticato l'ombrello!")
 	(cons ;43 yuriy
 	 "Anyway we are still here!"
 	 "Comunque noi siamo ancora qui!")

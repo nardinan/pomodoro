@@ -102,9 +102,11 @@
 (director_camera_follow "andrea" -100.0 1.0)
 
 (if (= intro_canama 1.0)
-	(begin
-		(puppeteer_show "luca" 4500)
-		(puppeteer_stare "luca" "andrea"))
+	(if (= note_A_taken 1.0)
+		(begin
+			(puppeteer_show "luca" 4500)
+			(puppeteer_stare "luca" "andrea"))
+		nil)
 	(begin
 		(animation "andrea" "front")
 		(director_wait_time 3)

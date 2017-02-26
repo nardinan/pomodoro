@@ -28,41 +28,44 @@
 	 "I woke up twenty minutes ago"
 	 "Mi sono svegliato venti minuti fa")
 	(cons ;7 luca
-	 ". . . It is three o'clock"
-	 ". . . Sono le tre di pomeriggio")
+	 "I'm not here tu judge you"
+	 "Non sono qui per giudicarti")
 	(cons ;8 luca
-	 "Biata a tte(TM)"
-	 "Biata a tte(TM)")
+	 "I just want you to know that it's three in the evening"
+	 "Voglio solo che tu sappia che sono le tre di pomeriggio")
 	(cons ;9 luca
-	 "Listen very carefull. Tomorrow we have to pay the electricity bill"
-	 "Ascolta attentamente. Domani dobbiamo tassativamente pagare la bolletta della luce")
+	 "Listen very carefull now. Tomorrow we have to pay the electricity bill"
+	 "Ascolta attentamente ora. Domani dobbiamo pagare la bolletta della luce")
 	(cons ;10 andrea
-	 "Don't worry, even if we pay the bill after the expiration they will not tell us anything"
-	 "Non ti preoccupare, anche se la paghiamo in ritardo non ci diranno nulla")
+	 "We have time"
+	 "Abbiamo tempo")
 	(cons ;11 luca
-	 "We are three monts late. Tomorrow I have to send them the receipt otherwise they will disconnect everything"
-	 "Siamo in ritardo di tre mesi. Se domani non mando il bollettino staccano tutto")
-	(cons ;12 andrea
-	 "How much do I need to give you?"
-	 "E io quanto devo pagare?")
-	(cons ;13 luca
-	 "120.97 euros"
-	 "120.97 euri")
+	 "No, idiot. Tomorrow I have to send them the receipt otherwise . . ."
+	 "No, idiota. Domani devo mandare il bollettino altrimenti . . .")
+	(cons ;12 luca
+	 "THEY WILL CUT US OUT"
+	 "CI TAGLIERANNO LA CORRENTE")
+	(cons ;13 andrea
+	 "Wow! How you were able to do it?"
+	 "Wow! Ma come hai fatto a farlo?")
 	(cons ;14 luca
-	 "Before this evening, otherwise I will be pissed off"
-	 "entro stasera, altrimenti mi incazzo")
+	 "Do what?"
+	 "Fare cosa?")
 	(cons ;15 andrea
-	 "I hope you are aware about the fact that I have no idea where I could find 120.97 euros"
-	 "Spero tu ti renda conto che non ho la minima idea di dove posso recuperare 120.97 euri")
+	 "How much do I need to give you?"
+	 "Quanti soldi devo darti?")
 	(cons ;16 luca
-	 "I don't care"
+	 "One hundred twenty euros and ninenty five cents"
+	 "Centoventi euro e novantasette centesimi")
+	(cons ;17 luca
+	 "Before this evening, otherwise I will be pissed off"
+	 "Entro stasera, altrimenti mi incazzo")
+	(cons ;18 andrea
+	 "I hope you are aware about the fact that I have no idea where I could find all those money"
+	 "Spero tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")
+	(cons ;19 luca
+	 "I care less than a dog that pees in the desert"
 	 "M'importa meno di un cane che orina nel deserto")
-	(cons ;17 andrea
-	 "OK. I will do it"
-	 "OK. Lo faro'")
-	(cons ;18 luca
-	 "Good boy!"
-	 "E bravo cagnolone!")
 	nil
 ))
 
@@ -139,21 +142,31 @@
 		(say "andrea" (get_dialog dialogs language 6))
 		(director_wait_time 2)
 		(say "luca" (get_dialog dialogs language 7))
-		(director_wait_time 1)
 		(say "luca" (get_dialog dialogs language 8))
 		(say "luca" (get_dialog dialogs language 9))
 		(say "andrea" (get_dialog dialogs language 10))
 		(say "luca" (get_dialog dialogs language 11))
-		(say "andrea" (get_dialog dialogs language 12))
-		(say "luca" (get_dialog dialogs language 13))
+		(say "luca" (get_dialog dialogs language 12))
+		(effecteer_add "flash2" "thunder_flash"  0 0 4 0 t nil)
+		(stagecrafter_set_item "thunder_strike" "strike")
+		(director_wait_time 3)
+		(say "andrea" (get_dialog dialogs language 13))
 		(say "luca" (get_dialog dialogs language 14))
-		(director_wait_time 1)
+		(director_wait_time 2)
 		(say "andrea" (get_dialog dialogs language 15))
 		(say "luca" (get_dialog dialogs language 16))
-		(say "andrea" (get_dialog dialogs language 17))
-		(say "luca" (get_dialog dialogs language 18))
+		(director_wait_time 1)
+		(say "luca" (get_dialog dialogs language 17))
+		(director_wait_time 1)
+		(say "andrea" (get_dialog dialogs language 18))
+		(say "luca" (get_dialog dialogs language 19))
 		(animation "andrea" "front")
 		(puppeteer_stare "luca" "andrea")
+
+		; cleanup
+		(effecteer_delete "flash2")
+
+		; and never again
 		(collector_set "note_A_taken" 1))
 	nil
 )
