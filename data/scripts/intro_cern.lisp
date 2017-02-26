@@ -222,6 +222,7 @@
 
 (puppeteer_show "yuriy" 	1450)
 (puppeteer_show "andrii" 	2750)
+
 (animation "yuriy" 			"back_code")
 (director_wait_time 1)
 (animation "andrii" 		"back_code")
@@ -365,8 +366,8 @@
 (director_wait_time 1)
 (effecteer_add  "black1" "black_hole_animation" 0 -1100 28 0 t nil)
 (director_wait_time 5)
-(effecteer_add  "pgs1"   "intro_pgs" 400 0 18 0 t nil)
-(director_wait_time 35)
+(effecteer_add  "pgs1"   "intro_pgs" -50 50 16 0 t nil)
+(director_wait_time 45)
 (effecteer_add  "clear1" "fade_out" 0 0 4 0 t nil)
 (director_wait_time 2)
 
