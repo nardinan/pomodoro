@@ -358,7 +358,7 @@
 (director_wait_time 1)
 (animation "andrii" "back")
 (director_wait_time 2)
-(effecteer_play 	"dream1" "dream_a_little_dream_of_me" 4000 4000)
+(effecteer_play 	"dream" "dream_a_little_dream_of_me" 4000 4000)
 (animation "yuriy" 	"still_right")
 (say "yuriy"	(get_dialog dialogs language 51))
 (animation "andrii" "still_left")
@@ -374,13 +374,15 @@
 ; cleanup
 (puppeteer_hide)
 (stagecrafter_hide)
-(effecteer_stop  "dream1")
 (effecteer_delete "fire1")
 (effecteer_delete "smoke1")
 (effecteer_delete "flash1")
 (effecteer_delete "dream1")
 (effecteer_delete "black1")
 (effecteer_delete "clear1")
+
+; stop the music
+(effecteer_stop   "dream")
 
 ; and never again
 (collector_set "intro_ran" 1.0)

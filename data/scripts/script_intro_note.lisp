@@ -167,7 +167,10 @@
 		(effecteer_delete "flash2")
 
 		; and never again
-		(collector_set "note_A_taken" 1))
+		(collector_set "note_A_taken" 1)
+
+		; and now, please, play the track
+		(effecteer_play "perditus" "perditus_agnus_dei" 2000 2000 16))
 	nil
 )
 (main_control "andrea")

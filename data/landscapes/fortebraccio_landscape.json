@@ -39,7 +39,7 @@
 		{"label":"poster_A",		"item":"poster_B",		"status":"still",			"position_x":3150.0,	"position_y":2350.0,	"zoom":1.25,					"active":true,	"script":"message_brains"},
 		{"label":"door_B",			"item":"arrow",			"status":"active_left",		"position_x":940.0,		"position_y":2500.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_fortebraccio_november"},
 		{"label":"door_C",			"item":"arrow",			"status":"active_right",	"position_x":5130.0,	"position_y":2500.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_fortebraccio_garibaldi"},
-		{"label":"door_D",			"item":"arrow",			"status":"active_up",		"position_x":3500.0,	"position_y":2500.0,	"zoom":1.25,	"solid":false,	"active":true,	"script":"move_fortebraccio_unistra"},
+		{"label":"door_D",			"item":"arrow",			"status":"active_up",		"position_x":3500.0,	"position_y":2500.0,	"zoom":1.25,	"solid":false,	"active":true,	"script":"move_fortebraccio_gallenga"},
 		{"label":"door_E",			"item":"arrow",			"status":"active_up",		"position_x":1300.0,	"position_y":2500.0,	"zoom":1.25,	"solid":false,	"active":true,	"script":"move_fortebraccio_innamorati"},
 		{"label":"balcony_A",		"item":"balcony",		"status":"still_A",			"position_x":3320.0,	"position_y":1390.0,	"zoom":1.25},
 		{"label":"column_A",		"item":"column",		"status":"still_A",			"position_x":2840.0,	"position_y":2090.0,	"zoom":1.25},
