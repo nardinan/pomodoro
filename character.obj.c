@@ -180,9 +180,18 @@ d_define_method(character, move_left)(struct s_object *self, struct s_controllab
     if (pressed) {
         d_call(self, m_entity_set_component, "walk_left");
         character_attributes->movement = d_true;
+        character_attributes->running = d_false;
+        character_attributes->sliding = d_false;
     } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_left)) {
-        d_call(self, m_entity_set_component, "still_left");
-        character_attributes->movement = d_false;
+        if (character_attributes->running) {
+            d_call(self, m_entity_set_component, "walk_left");
+            gettimeofday(&(character_attributes->last_stop), NULL);
+            character_attributes->sliding = d_true;
+            character_attributes->running = d_false;
+        } else {
+            d_call(self, m_entity_set_component, "still_left");
+            character_attributes->movement = d_false;
+        }
     }
     character_attributes->direction = e_character_direction_left;
     character_attributes->set = d_true;
@@ -194,9 +203,13 @@ d_define_method(character, run_left)(struct s_object *self, struct s_controllabl
     if (pressed) {
         d_call(self, m_entity_set_component, "run_left");
         character_attributes->movement = d_true;
+        character_attributes->running = d_true;
+        character_attributes->sliding = d_false;
     } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_left)) {
-        d_call(self, m_entity_set_component, "still_left");
-        character_attributes->movement = d_false;
+        d_call(self, m_entity_set_component, "walk_left");
+        gettimeofday(&(character_attributes->last_stop), NULL);
+        character_attributes->sliding = d_true;
+        character_attributes->running = d_false;
     }
     character_attributes->direction = e_character_direction_left;
     character_attributes->set = d_true;
@@ -208,9 +221,18 @@ d_define_method(character, move_right)(struct s_object *self, struct s_controlla
     if (pressed) {
         d_call(self, m_entity_set_component, "walk_right");
         character_attributes->movement = d_true;
+        character_attributes->running = d_false;
+        character_attributes->sliding = d_false;
     } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_right)) {
-        d_call(self, m_entity_set_component, "still_right");
-        character_attributes->movement = d_false;
+        if (character_attributes->running) {
+            d_call(self, m_entity_set_component, "walk_right");
+            gettimeofday(&(character_attributes->last_stop), NULL);
+            character_attributes->sliding = d_true;
+            character_attributes->running = d_false;
+        } else {
+            d_call(self, m_entity_set_component, "still_right");
+            character_attributes->movement = d_false;
+        }
     }
     character_attributes->direction = e_character_direction_right;
     character_attributes->set = d_true;
@@ -222,9 +244,13 @@ d_define_method(character, run_right)(struct s_object *self, struct s_controllab
     if (pressed) {
         d_call(self, m_entity_set_component, "run_right");
         character_attributes->movement = d_true;
+        character_attributes->running = d_true;
+        character_attributes->sliding = d_false;
     } else if ((character_attributes->movement) || (character_attributes->direction != e_character_direction_right)) {
-        d_call(self, m_entity_set_component, "still_right");
-        character_attributes->movement = d_false;
+        d_call(self, m_entity_set_component, "walk_right");
+        gettimeofday(&(character_attributes->last_stop), NULL);
+        character_attributes->sliding = d_true;
+        character_attributes->running = d_false;
     }
     character_attributes->direction = e_character_direction_right;
     character_attributes->set = d_true;
@@ -315,7 +341,9 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
     struct s_bubble_attributes *bubble_attributes;
     struct s_drawable_attributes *drawable_attributes_self = d_cast(self, drawable),
                                  *drawable_attributes_bubble;
-    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, ratio_y, total_zoom, principal_point_x, principal_point_y;
+    struct timeval current, elapsed_update;
+    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, ratio_y, total_zoom, principal_point_x, principal_point_y, 
+           real_elapsed_update;
     struct s_object *result = d_call_owner(self, entity, m_drawable_draw, environment); /* recall the father's draw method */
     d_call(self, m_drawable_get_position, &position_x, &position_y);
     if (((character_attributes->source_x < character_attributes->destination_x) && (position_x >= character_attributes->destination_x)) ||
@@ -341,6 +369,18 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         drawable_attributes_bubble->angle = drawable_attributes_self->angle;
         drawable_attributes_bubble->zoom = drawable_attributes_self->zoom;
         drawable_attributes_bubble->flip = drawable_attributes_self->flip;
+    }
+    if (character_attributes->sliding) {
+        gettimeofday(&current, NULL);
+        timersub(&current, &(character_attributes->last_stop), &elapsed_update);
+        if ((real_elapsed_update = elapsed_update.tv_sec + ((double)(elapsed_update.tv_usec)/1000000.0)) > d_character_default_sliding_time) {
+            if (character_attributes->direction == e_character_direction_left)
+                d_call(self, m_entity_set_component, "still_left");
+            else
+                d_call(self, m_entity_set_component, "still_right");
+            character_attributes->sliding = d_false;
+            character_attributes->movement = d_false;
+        }
     }
     if (v_developer_mode) {
         d_call(self, m_drawable_get_scaled_principal_point, &principal_point_x, &principal_point_y);

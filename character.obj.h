@@ -20,6 +20,7 @@
 #include "bubble.obj.h"
 #define d_character_default_speed 10
 #define d_character_default_font 0
+#define d_character_default_sliding_time 0.6
 #define d_character_principal_point_offset 5
 #define d_character_principal_point_red 0
 #define d_character_principal_point_green 255
@@ -48,7 +49,8 @@ d_declare_class(character) {
     enum e_character_directions direction;
     struct s_object *bubble;
     double bubble_offset_x, bubble_offset_y, destination_x, source_x;
-    t_boolean movement, set, action, collidable;
+    t_boolean movement, set, action, collidable, running, sliding;
+    struct timeval last_stop;
 } d_declare_class_tail(character);
 struct s_character_attributes *p_character_alloc(struct s_object *self, const char *key, t_entity_validator validator);
 extern struct s_object *f_character_new(struct s_object *self, const char *key, t_entity_validator validator);
