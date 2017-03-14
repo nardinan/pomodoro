@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"plant",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"plant_still_A"}
+			]
+		},{
+			"label":"still_B",
+			"layers":[
+				{"drawable":"plant_still_B"}
+			]
+		}
+	]
+}

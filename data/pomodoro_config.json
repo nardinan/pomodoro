@@ -16,13 +16,14 @@
 		{"font":"kingthings_font", 	"size":70}
 	],
 	"characters":[
-		{"label":"andrii",	"link":"andrii_character",		"controllable":false,	"script":"ai_andrii"},
-		{"label":"yuriy",	"link":"yuriy_character",		"controllable":false,	"script":"ai_yuriy"},	
-		{"label":"luca",	"link":"luca_character", 		"controllable":false,	"script":"ai_luca"},
-		{"label":"andrea",	"link":"andrea_character", 		"controllable":true},
-		{"label":"luna",	"link":"luna_character",		"controllable":false},
-		{"label":"baker",	"link":"baker_character",		"controllable":false,	"script":"ai_baker"},
-		{"label":"maria",	"link":"maria_character",		"controllable":true,	"script":"ai_maria"}
+		{"label":"andrii",		"link":"andrii_character",		"controllable":false,	"script":"ai_andrii"},
+		{"label":"yuriy",		"link":"yuriy_character",		"controllable":false,	"script":"ai_yuriy"},	
+		{"label":"luca",		"link":"luca_character", 		"controllable":false,	"script":"ai_luca"},
+		{"label":"andrea",		"link":"andrea_character", 		"controllable":true},
+		{"label":"luna",		"link":"luna_character",		"controllable":false},
+		{"label":"baker",		"link":"baker_character",		"controllable":false,	"script":"ai_baker"},
+		{"label":"maria",		"link":"maria_character",		"controllable":false,	"script":"ai_maria"},
+		{"label":"antonietta",	"link":"antonietta_character",	"controllabel":false,	"script":"ai_antonietta"}
 	],
 	"landscapes":[
 		{"label":"canama", 		"link":"canama_landscape"},
@@ -31,6 +32,7 @@
 		{"label":"lupattelli",	"link":"lupattelli_landscape"},
 		{"label":"garibaldi",	"link":"garibaldi_landscape"},
 		{"label":"fortebraccio","link":"fortebraccio_landscape"},
+		{"label":"gallenga",	"link":"gallenga_landscape"},
 		{"label":"november",	"link":"november_landscape"}
 	]
 }

@@ -1,7 +1,7 @@
 ; Pomodoro
-; Module: intro_fortebraccio
+; Module: intro_gallenga
 ; Author: nardinan
-; Date  : 21 Jan 2017
+; Date  : 27 Feb 2017
 
 (define animation
 	(lambda (c m)
@@ -20,23 +20,20 @@
 	)
 )
 ; Play background
-(stagecrafter_play "traffic_background")
+(stagecrafter_play "people_background")
 
 ; Collect environment 
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "fortebraccio")
+(collector_set "from_where" "gallenga")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "garibaldi")
-	(puppeteer_show "andrea" 4980)
-	(if (compare from_where "gallenga")
-		(puppeteer_show "andrea" 3360)
-		(puppeteer_show "andrea" 1000))
-)
+(puppeteer_show "andrea" 1950)
+(puppeteer_show "antonietta" 100)
 
 ; Setup characters
 (animation "andrea" 	"front")
+(animation "antonietta"	"still_right")
 (main_control "andrea")

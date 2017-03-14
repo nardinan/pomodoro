@@ -1,0 +1,43 @@
+{
+	"format":"landscape",
+	"ID":"gallenga",
+	"zoom":10,
+	"position_x":0.0,
+	"position_y":0.0,
+	"intro_script":"intro_gallenga",
+	"outro_script":"outro_gallenga",
+	"tracks":[
+		{"label":"people_background", "playable":"gallenga_background_noise"}
+	],
+	"floor":[{
+		"position_x":0.0,
+		"position_y":1200.0
+	}],
+	"surfaces":[{
+		"drawable":"gallenga_panorama",
+		"layer":0,
+		"speed_ratio_x":0.85
+	},{
+		"drawable":"gallenga_background",
+		"layer":2,
+		"speed_ratio_x":1,
+		"reference":true
+	},{
+		"drawable":"gallenga_foreground",
+		"layer":6	,
+		"speed_ratio_x":1
+	},{
+		"drawable":"gallenga_lights_layer",
+		"layer":8,
+		"speed_ratio_x":1.0
+	}],
+	"items":[
+		{"label":"door_A",		"item":"arrow",			"status":"active_down",	"position_x":1950.0,	"position_y":1300.0,	"zoom":1.25, 					"active":true,	"script":"move_gallenga_fortebraccio",	"layer":7},
+		{"label":"door_B",		"item":"arrow",			"status":"none",		"position_x":550.0,		"position_y":1300.0,	"zoom":1.25,	"solid":true},
+		{"label":"door_C",		"item":"arrow",			"status":"none",		"position_x":3150.0,	"position_y":1300.0,	"zoom":1.25,	"solid":true},
+		{"label":"plant_A",		"item":"plant",			"status":"still_A",		"position_x":2390.0,	"position_y":1130.0,	"zoom":1.25},
+		{"label":"plant_B",		"item":"plant",			"status":"still_B",		"position_x":1090.0,	"position_y":1130.0,	"zoom":1.25},
+		{"label":"frame_A",		"item":"painting",		"status":"monnalisa",	"position_x":900.0,		"position_y":900.0,		"zoom":1.25},
+		{"label":"fly",			"item":"fly",			"status":"still_A",		"position_x":500.0,		"position_y":700.0,		"zoom":1.25,																			"layer":7}
+	]
+} 

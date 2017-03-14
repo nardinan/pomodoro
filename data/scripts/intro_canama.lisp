@@ -7,8 +7,8 @@
 (define language (collector_get "language"))
 (define dialogs (list 
 	(cons ;0 andrea
- 	 "Hello, my name is Andrea and I am a student here, in the University of Perugia"
-	 "Salve, io mi chiamo Andrea e sono uno studente nell'Universita' di Perugia")
+ 	 "Hello, my name is Andrea and I am a student here, at the University of Perugia"
+	 "Salve, io mi chiamo Andrea e sono uno studente dell'Universita' di Perugia")
 	(cons ;1 andrea
 	 "This is my appartment"
 	 "Questo e' il mio appartamento")
