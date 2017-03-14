@@ -95,7 +95,7 @@ struct s_lisp_object *p_link_effecteer_stop_effect(struct s_object *self, struct
 struct s_lisp_object *p_link_effecteer_play_effect(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_effecteer(e_effecteer_action_play, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments), d_lisp_caddr(d_lisp_cdr(arguments)),
-            d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(arguments))));
+            d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(arguments))), d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(arguments)))));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -248,7 +248,7 @@ d_define_method(effecteer, dispatcher)(struct s_object *self, struct s_effecteer
         case e_effecteer_action_play:           /* key (effect), label (effect), fade_in (time), fade_out (time), volume, loop */
             d_log(e_log_level_medium, "action [play] (effect %s (%s) | fade_in %d | fade out %d | volume %d | %s)", action->key,
                     action->parameters.action_play.label, action->parameters.action_play.fade_in, action->parameters.action_play.fade_out,
-                    action->parameters.action_play.volume, (action->parameters.action_play.loop)?"look":"single");
+                    action->parameters.action_play.volume, (action->parameters.action_play.loop)?"loop":"single");
             result = d_call(self, m_effecteer_play_effect, action->key, action->parameters.action_play.label, action->parameters.action_play.fade_in, 
                     action->parameters.action_play.fade_out, action->parameters.action_play.volume, action->parameters.action_play.loop);
             break;
