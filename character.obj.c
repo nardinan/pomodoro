@@ -260,8 +260,10 @@ d_define_method(character, run_right)(struct s_object *self, struct s_controllab
 d_define_method(character, move_up)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
     d_using(character);
     d_call(self, m_entity_set_component, "back");
-    character_attributes->direction = e_character_direction_up;
     character_attributes->movement = d_false;
+    character_attributes->running = d_false;
+    character_attributes->sliding = d_false;
+    character_attributes->direction = e_character_direction_up;
     character_attributes->set = d_true;
     return self;
 }
@@ -269,8 +271,19 @@ d_define_method(character, move_up)(struct s_object *self, struct s_controllable
 d_define_method(character, move_down)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
     d_using(character);
     d_call(self, m_entity_set_component, "front");
-    character_attributes->direction = e_character_direction_down;
     character_attributes->movement = d_false;
+    character_attributes->running = d_false;
+    character_attributes->sliding = d_false;
+    character_attributes->direction = e_character_direction_down;
+    character_attributes->set = d_true;
+    return self;
+}
+
+d_define_method(character, move_clean)(struct s_object *self) {
+    d_using(character);
+    character_attributes->movement = d_false;
+    character_attributes->sliding = d_false;
+    character_attributes->running = d_false;
     character_attributes->set = d_true;
     return self;
 }
@@ -408,6 +421,7 @@ d_define_class(character) {
         d_hook_method(character, e_flag_public, run_right),
         d_hook_method(character, e_flag_public, move_up),
         d_hook_method(character, e_flag_public, move_down),
+        d_hook_method(character, e_flag_public, move_clean),
         d_hook_method(character, e_flag_public, action),
         d_hook_method(character, e_flag_public, say),
         d_hook_method(character, e_flag_public, move),

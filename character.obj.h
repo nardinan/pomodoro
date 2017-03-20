@@ -61,6 +61,7 @@ d_declare_method(character, move_right)(struct s_object *self, struct s_controll
 d_declare_method(character, run_right)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, move_up)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, move_down)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
+d_declare_method(character, move_clean)(struct s_object *self);
 d_declare_method(character, action)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(character, say)(struct s_object *self, const char *message, time_t timeout);
 d_declare_method(character, move)(struct s_object *self, double destination_x);

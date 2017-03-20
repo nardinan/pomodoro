@@ -232,8 +232,10 @@ d_define_method(puppeteer, say_character)(struct s_object *self, const char *key
 
 d_define_method(puppeteer, set_character)(struct s_object *self, const char *key, const char *entry) {
     struct s_object *current_character;
-    if ((current_character = d_call(self, m_puppeteer_get_character, key)))
+    if ((current_character = d_call(self, m_puppeteer_get_character, key))) {
+        d_call(current_character, m_character_move_clean, NULL);
         d_call(current_character, m_entity_set_component, entry);
+    }
     return self;
 }
 
