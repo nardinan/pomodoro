@@ -279,12 +279,14 @@ d_define_method(character, move_down)(struct s_object *self, struct s_controllab
     return self;
 }
 
-d_define_method(character, move_clean)(struct s_object *self) {
+d_define_method(character, move_clean)(struct s_object *self, t_boolean expire_direction) {
     d_using(character);
     character_attributes->movement = d_false;
     character_attributes->sliding = d_false;
     character_attributes->running = d_false;
     character_attributes->set = d_true;
+    if (expire_direction)
+        character_attributes->direction = e_character_direction_unknown;
     return self;
 }
 
