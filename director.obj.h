@@ -29,6 +29,7 @@ typedef enum e_director_actions {
     e_director_action_puppeteer,
     e_director_action_effecteer,
     e_director_action_stagecrafter,
+    e_director_action_collector,
     e_director_action_service_wait_time,
     e_director_action_service_wait_message,
     e_director_action_service_wait_dialog,
@@ -57,6 +58,7 @@ typedef struct s_director_action { d_list_node_head;
         struct s_puppeteer_action character;
         struct s_effecteer_action effect;
         struct s_stagecrafter_action landscape;
+        struct s_collector_action collector;
     } action;
 } s_director_action;
 extern struct s_lisp_object *p_link_director_wait_time(struct s_object *self, struct s_lisp_object *arguments);

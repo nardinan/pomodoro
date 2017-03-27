@@ -22,9 +22,6 @@
 #define d_collector_dump "collector.dump.dat"
 #include "miranda.h"
 /* action defintion */
-extern struct s_lisp_object *p_link_collector_set(struct s_object *self, struct s_lisp_object *arguments);
-extern struct s_lisp_object *p_link_collector_get(struct s_object *self, struct s_lisp_object *arguments);
-/* end */
 typedef enum e_collector_types {
     e_collector_type_string,
     e_collector_type_double
@@ -37,6 +34,18 @@ typedef struct s_collector_entry { d_list_node_head;
         char *value_string;
     } value;
 } s_collector_entry;
+typedef enum e_collector_actions {
+    e_collector_action_set
+} e_collector_actions;
+typedef struct s_collector_action {
+    enum e_collector_actions type;
+    union {
+        struct s_collector_entry action_set;
+    } parameters;
+} s_collector_action;
+extern struct s_lisp_object *p_link_collector_set(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_collector_get(struct s_object *self, struct s_lisp_object *arguments);
+/* end */
 d_declare_class(collector) {
     struct s_attributes head;
     struct s_list pool;
@@ -48,5 +57,6 @@ d_declare_method(collector, add_entry)(struct s_object *self, const char *key);
 d_declare_method(collector, add_entry_double)(struct s_object *self, const char *key, double value);
 d_declare_method(collector, add_entry_string)(struct s_object *self, const char *key, const char *value);
 d_declare_method(collector, linker)(struct s_object *self, struct s_object *script);
+d_declare_method(collector, dispatcher)(struct s_object *self, struct s_collector_action *action);
 d_declare_method(collector, delete)(struct s_object *self, struct s_collector_attributes *attributes);
 #endif

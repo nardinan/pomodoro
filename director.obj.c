@@ -271,6 +271,9 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
         case e_director_action_stagecrafter:
             result = d_call(director_attributes->stagecrafter, m_stagecrafter_dispatcher, &(action->action.landscape));
             break;
+        case e_director_action_collector:
+            result = d_call(director_attributes->collector, m_collector_dispatcher, &(action->action.collector));
+            break;
         case e_director_action_service_script:              /* label (script name) */
             result = d_call(self, m_director_run_script, action->action.label);
             break;

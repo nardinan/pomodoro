@@ -17,19 +17,46 @@
  */
 #include "collector.obj.h"
 #include "director.obj.h"
+void p_link_collector(enum e_collector_actions type, ...) {
+    va_list parameters_list;
+    struct s_director_action *action;
+    struct s_lisp_object *argument;
+    va_start(parameters_list, type);
+    if ((action = d_call(director, m_director_new_action, e_director_action_collector))) {
+        switch ((action->action.collector.type = type)) {
+            case e_collector_action_set:
+                if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                    strncpy(action->action.collector.parameters.action_set.key, argument->value_string, d_lisp_symbol_size);
+                    if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                        if (argument->type == e_lisp_object_type_string) {
+                            action->action.collector.parameters.action_set.type = e_collector_type_string;
+                            if ((action->action.collector.parameters.action_set.value.value_string = (char *)d_malloc(f_string_strlen(argument->value_string) + 1)))
+                                strcpy(action->action.collector.parameters.action_set.value.value_string, argument->value_string);
+                            else
+                                d_die(d_error_malloc);
+                        } else if (argument->type == e_lisp_object_type_symbol) {
+                            action->action.collector.parameters.action_set.type = e_collector_type_string;
+                            if ((action->action.collector.parameters.action_set.value.value_string = (char *)d_malloc(f_string_strlen(argument->value_symbol) + 1)))
+                                strcpy(action->action.collector.parameters.action_set.value.value_string, argument->value_symbol);
+                            else
+                                d_die(d_error_malloc);
+                        } else {
+                            action->action.collector.parameters.action_set.type = e_collector_type_double;
+                            action->action.collector.parameters.action_set.value.value_double = argument->value_double;
+                        }
+                    }
+                }
+            default:
+                break;
+        }
+        d_call(director, m_director_push_action, action);
+    }
+    va_end(parameters_list);
+}
+
 struct s_lisp_object *p_link_collector_set(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
-    struct s_lisp_object *label_object = d_lisp_car(arguments), 
-                         *value_object = d_lisp_cadr(arguments);
-    struct s_director_attributes *director_attributes = d_cast(director, director);
-    if (label_object->type == e_lisp_object_type_string) {
-        if (value_object->type == e_lisp_object_type_string)
-            d_call(director_attributes->collector, m_collector_add_entry_string, label_object->value_string, value_object->value_string);
-        else if (value_object->type == e_lisp_object_type_symbol)
-            d_call(director_attributes->collector, m_collector_add_entry_string, label_object->value_string, value_object->value_symbol);
-        else if (value_object->type == e_lisp_object_type_value)
-            d_call(director_attributes->collector, m_collector_add_entry_double, label_object->value_string, value_object->value_double);
-    }
+    p_link_collector(e_collector_action_set, d_lisp_car(arguments), d_lisp_cadr(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -128,6 +155,24 @@ d_define_method(collector, linker)(struct s_object *self, struct s_object *scrip
     return self;
 }
 
+d_define_method(collector, dispatcher)(struct s_object *self, struct s_collector_action *action) {
+    struct s_object *result = NULL;
+    switch (action->type) {
+        case e_collector_action_set:
+            if ((action->parameters.action_set.type == e_collector_type_string) && (action->parameters.action_set.value.value_string)) {
+                d_log(e_log_level_medium, "action [set] (key %s | value %s)", action->parameters.action_set.key, action->parameters.action_set.value.value_string);
+                result = d_call(self, m_collector_add_entry_string, action->parameters.action_set.key, action->parameters.action_set.value.value_string);
+                d_free(action->parameters.action_set.value.value_string);
+            } else if (action->parameters.action_set.type == e_collector_type_double) {
+                d_log(e_log_level_medium, "action [set] (key %s | value %.02f)", action->parameters.action_set.key, action->parameters.action_set.value.value_double);
+                result = d_call(self, m_collector_add_entry_double, action->parameters.action_set.key, action->parameters.action_set.value.value_double);
+            }
+        default:
+            break;
+    }
+    return result;
+}
+
 d_define_method(collector, delete)(struct s_object *self, struct s_collector_attributes *attributes) {
     struct s_collector_entry *current_entry;
     FILE *collector_dump = fopen(d_collector_dump, "w");
@@ -157,6 +202,7 @@ d_define_class(collector) {
         d_hook_method(collector, e_flag_public, add_entry_double),
         d_hook_method(collector, e_flag_public, add_entry_string),
         d_hook_method(collector, e_flag_public, linker),
+        d_hook_method(collector, e_flag_public, dispatcher),
         d_hook_delete(collector),
         d_hook_method_tail
 };
