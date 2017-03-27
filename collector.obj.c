@@ -163,6 +163,7 @@ d_define_method(collector, dispatcher)(struct s_object *self, struct s_collector
                 d_log(e_log_level_medium, "action [set] (key %s | value %s)", action->parameters.action_set.key, action->parameters.action_set.value.value_string);
                 result = d_call(self, m_collector_add_entry_string, action->parameters.action_set.key, action->parameters.action_set.value.value_string);
                 d_free(action->parameters.action_set.value.value_string);
+                action->parameters.action_set.value.value_string = NULL;
             } else if (action->parameters.action_set.type == e_collector_type_double) {
                 d_log(e_log_level_medium, "action [set] (key %s | value %.02f)", action->parameters.action_set.key, action->parameters.action_set.value.value_double);
                 result = d_call(self, m_collector_add_entry_double, action->parameters.action_set.key, action->parameters.action_set.value.value_double);
