@@ -98,8 +98,8 @@
 	 "Fabric of space-time?"
 	 "Il tessuto spazio-temporale?")
 	(cons ;30 yuriy
-	 "Do you have potatoes in your head?"
-	 "C'hai le patate in testa?")
+	 "We are polluting your brain as well . . ."
+	 "Stiamo inquinando anche il tuo cervello . . .")
 	(cons ;31 andrii
 	 "Shut the fuck up!"
 	 "Stai zitto, cazzo!")
@@ -110,8 +110,8 @@
 	 "Phew"
 	 "Phew")
 	(cons ;34 yuriy
-	 "Our hero is here for us!"
-	 "Il nostro eroe e' qui per noi!")
+	 "You did it!"
+	 "Ce l'hai fatta!")
 	(cons ;35 andrii
 	 "Well, yes but ..."
 	 "Beh, si ma ...")
@@ -119,8 +119,8 @@
 	 "'But' what?"
 	 "'Ma' cosa?")
 	(cons ;37 andrii
-	 "The energy peak that we had wasn't casual"
-	 "Il picco d'energia che abbiamo avuto non era casuale")
+	 "The energy peak that we saw wasn't casual"
+	 "Il picco d'energia che abbiamo visto non era casuale")
 	(cons ;38 yuriy
 	 "So?"
 	 "Quindi?")
@@ -134,8 +134,8 @@
 	 "THE HISTORY"
 	 "LA STORIA")
 	(cons ;42 yuriy
-	 "Oh gosh! I forgot my Umbrella"
-	 "Oh no! Mi son dimenticato l'ombrello!")
+	 "Fuck! I forgot my Umbrella"
+	 "Merda! Mi son dimenticato l'ombrello!")
 	(cons ;43 yuriy
 	 "Anyway we are still here!"
 	 "Comunque noi siamo ancora qui!")
@@ -155,11 +155,11 @@
 	 "Probably not many years ago"
 	 "Magari in un passato non troppo lontano")
 	(cons ;49 andrii
-	 "Maybe in 2012 somewhere in Italy"
-	 "Diciamo nel 2012 da qualche parte in Italia")
+	 "Would we tell how it ends?"
+	 "Dobbiamo raccontare come va a finire?")
 	(cons ;50 yuriy
-	 "OK that's enough"
-	 "Vabbe' ora basta")
+	 "Right, it's enough"
+	 "Giuso, famo basta")
 	(cons ;51 yuriy
 	 "Vodka party?"
 	 "Vodka party?")
