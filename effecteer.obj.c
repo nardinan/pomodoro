@@ -179,9 +179,11 @@ d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, 
         effecteer_attributes->track.fade_out = fade_out;
         effecteer_attributes->track.volume = volume;
         effecteer_attributes->track.loop = loop;
-        d_call(effecteer_attributes->track.track, m_track_set_volume, effecteer_attributes->track.volume);
-        d_call(effecteer_attributes->track.track, m_track_set_loops, ((effecteer_attributes->track.loop)?d_track_infinite_loop:0));
-        d_call(effecteer_attributes->track.track, m_track_play_fade_in, d_true, effecteer_attributes->track.fade_in);
+        if (!v_developer_mode) {
+            d_call(effecteer_attributes->track.track, m_track_set_volume, effecteer_attributes->track.volume);
+            d_call(effecteer_attributes->track.track, m_track_set_loops, ((effecteer_attributes->track.loop)?d_track_infinite_loop:0));
+            d_call(effecteer_attributes->track.track, m_track_play_fade_in, d_true, effecteer_attributes->track.fade_in);
+        }
     }
     return self;
 }
