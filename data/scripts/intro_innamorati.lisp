@@ -21,7 +21,7 @@
 	)
 )
 ; Play background
-;(stagecrafter_play "traffic_background")
+(stagecrafter_play "traffic_background")
 
 ; Collect environment 
 (define from_where (collector_get "from_where"))

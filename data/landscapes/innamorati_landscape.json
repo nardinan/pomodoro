@@ -6,6 +6,9 @@
 	"position_y":0.0,
 	"intro_script":"intro_innamorati",
 	"outro_script":"outro_innamorati",
+	"tracks":[
+		{"label":"traffic_background", "playable":"innamorati_background_noise"}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":3000.0
