@@ -81,7 +81,7 @@ int main (int argc, char *argv[]) {
     d_pool_init;
     v_log_level = e_log_level_ever;
     if ((argc > 1) && (f_string_strcmp(argv[1], "-developer") == 0)) {
-        v_log_level = e_log_level_medium;
+        v_log_level = e_log_level_high;
         d_war(e_log_level_ever, "developer mode has been enabled");
         v_developer_mode = d_true;
     }
