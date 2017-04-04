@@ -371,18 +371,18 @@
 (effecteer_add  "clear1" "fade_out" 0 0 4 0 t nil)
 (director_wait_time 2)
 
+; and never again
+(collector_set "intro_ran" 1.0)
+
 ; cleanup
 (puppeteer_hide)
 (stagecrafter_hide)
 (effecteer_delete "fire1")
 (effecteer_delete "smoke1")
 (effecteer_delete "flash1")
-(effecteer_delete "dream1")
 (effecteer_delete "black1")
+(effecteer_delete "pgs1")
 (effecteer_delete "clear1")
 
 ; stop the music
 (effecteer_stop   "dream")
-
-; and never again
-(collector_set "intro_ran" 1.0)

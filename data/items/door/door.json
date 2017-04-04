@@ -43,6 +43,21 @@
 			"layers":[
 				{"drawable":"door_still_H"}
 			]
+		},{
+			"label":"still_I",
+			"layers":[
+				{"drawable":"door_still_I"}
+			]
+		},{
+			"label":"still_J",
+			"layers":[
+				{"drawable":"door_still_J"}
+			]
+		},{
+			"label":"still_K",
+			"layers":[
+				{"drawable":"door_still_K"}
+			]
 		}
 	]
 }

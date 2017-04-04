@@ -1,0 +1,57 @@
+{
+	"format":"landscape",
+	"ID":"innamorati",
+	"zoom":10,
+	"position_x":0.0,
+	"position_y":0.0,
+	"intro_script":"intro_innamorati",
+	"outro_script":"outro_innamorati",
+	"floor":[{
+		"position_x":0.0,
+		"position_y":3000.0
+	}],
+	"surfaces":[{
+		"drawable":"innamorati_panorama_deep",
+		"layer":1,
+		"speed_ratio_x":0.85
+	},{
+		"drawable":"innamorati_panorama",
+		"layer":0,
+		"speed_ratio_x":1.0
+	},{
+		"drawable":"innamorati_background",
+		"layer":2,
+		"speed_ratio_x":1.0,
+		"reference":true
+	},{
+        "drawable":"innamorati_foreground",
+        "layer":6,
+        "speed_ratio_x":1.0
+    },{
+		"drawable":"innamorati_lights_layer",
+		"layer":7,
+		"speed_ratio_x":1.0
+	}],
+	"items":[
+		{"label":"door_A",		"item":"arrow",			"status":"active_left",		"position_x":800.0,		"position_y":3000.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_innamorati_fortebraccio"},
+		{"label":"door_B",		"item":"arrow",			"status":"active_down",		"position_x":13700.0,	"position_y":3000.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_innamorati_unipgp1"},
+		{"label":"door_C",		"item":"arrow",			"status":"active_up",		"position_x":11270.0,	"position_y":3000.0,	"zoom":1.25,					"active":true,	"script":"move_innamorati_francesco"},
+		{"label":"door_D",		"item":"door",			"status":"still_I",			"position_x":3830.0,	"position_y":2230.0,	"zoom":1.25},
+		{"label":"door_E",		"item":"door",			"status":"still_E",			"position_x":660.0,		"position_y":2830.0,	"zoom":1.25},
+		{"label":"door_F",		"item":"door",			"status":"still_I",			"position_x":5490.0,	"position_y":2760.0,	"zoom":1.25},
+		{"label":"door_G",		"item":"door",			"status":"still_J",			"position_x":8040.0,	"position_y":2750.0,	"zoom":1.25},
+		{"label":"door_H",		"item":"door",			"status":"still_K",			"position_x":8740.0,	"position_y":2750.0,	"zoom":1.25},
+		{"label":"window_A",	"item":"window",		"status":"outside_A",		"position_x":310.0,		"position_y":2020.0,	"zoom":1.25},		
+		{"label":"window_B",	"item":"window",		"status":"outside_A",		"position_x":1040.0,	"position_y":2030.0,	"zoom":1.25},
+		{"label":"window_C",	"item":"window",		"status":"outside_C",		"position_x":1530.0,	"position_y":1850.0,	"zoom":1.25},		
+		{"label":"window_D",	"item":"window",		"status":"outside_H",		"position_x":1890.0,	"position_y":1510.0,	"zoom":1.25},		
+		{"label":"window_E",	"item":"window",		"status":"outside_C",		"position_x":2240.0,	"position_y":1170.0,	"zoom":1.25},		
+		{"label":"window_F",	"item":"window",		"status":"outside_B",		"position_x":4520.0,	"position_y":1870.0,	"zoom":1.25},
+		{"label":"window_G",	"item":"window",		"status":"outside_C",		"position_x":5080.0,	"position_y":1690.0,	"zoom":1.25},
+		{"label":"window_H",	"item":"window",		"status":"outside_A",		"position_x":6920.0,	"position_y":1870.0,	"zoom":1.25},
+		{"label":"window_I",	"item":"window",		"status":"outside_B",		"position_x":7530.0,	"position_y":1870.0,	"zoom":1.25},
+		{"label":"window_J",	"item":"window",		"status":"outside_A",		"position_x":8150.0,	"position_y":1870.0,	"zoom":1.25},
+		{"label":"window_K",	"item":"window",		"status":"outside_C",		"position_x":8650.0,	"position_y":1690.0,	"zoom":1.25},
+		{"label":"poster_A",	"item":"poster_B",		"status":"still",			"position_x":3780.0,	"position_y":3000.0,	"zoom":1.25,					"active":true,	"script":"message_brains"}
+	]
+}

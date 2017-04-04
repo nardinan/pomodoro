@@ -1,7 +1,8 @@
 ; Pomodoro
-; Module: intro_fortebraccio
+; Module: intro_garibaldi
 ; Author: nardinan
-; Date  : 21 Jan 2017
+; Date  : 31 March 2017
+; This module contains the intro of the Innamorati scenario
 
 (define animation
 	(lambda (c m)
@@ -20,26 +21,22 @@
 	)
 )
 ; Play background
-(stagecrafter_play "traffic_background")
+;(stagecrafter_play "traffic_background")
 
 ; Collect environment 
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "fortebraccio")
+(collector_set "from_where" "innamorati")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "garibaldi")
-	(puppeteer_show "andrea" 4980)
-	(if (compare from_where "gallenga")
-		(puppeteer_show "andrea" 3360)
-		(if (compare from_where "november")
-			(puppeteer_show "andrea" 1000)
-			(puppeteer_show "andrea" 1300))
-	)
+(if (compare from_where "unipgp1")
+	(puppeteer_show "andrea" 9000)
+	(puppeteer_show "andrea" 1000)
 )
 
 ; Setup characters
-(animation "andrea" 	"front")
+(animation 			"andrea" 	"front")
+
 (main_control "andrea")

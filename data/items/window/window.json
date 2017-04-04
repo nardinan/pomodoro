@@ -48,6 +48,11 @@
 			"layers":[
 				{"drawable":"window_outside_G"}
 			]
+		},{
+			"label":"outside_H",
+			"layers":[
+				{"drawable":"window_outside_H"}
+			]
 		}
 	]
 }
