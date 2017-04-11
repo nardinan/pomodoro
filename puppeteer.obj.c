@@ -38,6 +38,16 @@ void p_link_puppeteer(enum e_puppeteer_actions type, ...) {
                     }
                 }
                 break;
+            case e_puppeteer_action_talk:
+                if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                    strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
+                    if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                        strncpy(action->action.character.parameters.action_talk.message, argument->value_string, d_string_buffer_size);
+                        if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                            strncpy(action->action.character.parameters.action_talk.track, argument->value_string, d_resources_key_size);
+                    }
+                }
+                break;
             case e_puppeteer_action_set:
                 if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
                     strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
@@ -95,6 +105,12 @@ struct s_lisp_object *p_link_puppeteer_disable_control(struct s_object *self, st
 struct s_lisp_object *p_link_puppeteer_say_character(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_puppeteer(e_puppeteer_action_say, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_puppeteer_talk_character(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_puppeteer(e_puppeteer_action_talk, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -230,6 +246,19 @@ d_define_method(puppeteer, say_character)(struct s_object *self, const char *key
     return self;
 }
 
+d_define_method(puppeteer, talk_character)(struct s_object *self, const char *key, const char *message, const char *track) {
+    d_using(puppeteer);
+    struct s_object *current_character;
+    struct s_object *current_track;
+    if ((current_character = d_call(self, m_puppeteer_get_character, key))) {
+        if ((current_track = d_call(puppeteer_attributes->factory, m_factory_get_track, track))) {
+            d_call(current_character, m_character_talk, message, current_track);
+            d_delete(current_track);
+        }
+    }
+    return self;
+}
+
 d_define_method(puppeteer, set_character)(struct s_object *self, const char *key, const char *entry) {
     struct s_object *current_character;
     if ((current_character = d_call(self, m_puppeteer_get_character, key))) {
@@ -313,6 +342,7 @@ d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *scrip
     d_call(script, m_lisp_extend_environment, "puppeteer_disable_control", p_lisp_object(script, e_lisp_object_type_primitive, 
                 p_link_puppeteer_disable_control));
     d_call(script, m_lisp_extend_environment, "puppeteer_say", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_say_character));
+    d_call(script, m_lisp_extend_environment, "puppeteer_talk", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_talk_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_set", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_set_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_move", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_move_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_look", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_look_character));
@@ -344,6 +374,11 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
                     action->parameters.action_say.timeout);
             result = d_call(self, m_puppeteer_say_character, action->key, action->parameters.action_say.message, 
                     (time_t)action->parameters.action_say.timeout);
+            break;
+        case e_puppeteer_action_talk:
+            d_log(e_log_level_medium, "action [talk] (character %s | message %s | track %s)", action->key, action->parameters.action_talk.message,
+                    action->parameters.action_talk.track);
+            result = d_call(self, m_puppeteer_talk_character, action->key, action->parameters.action_talk.message, action->parameters.action_talk.track);
             break;
         case e_puppeteer_action_set:                /* key (character), entry (animation) */
             d_log(e_log_level_medium, "action [set] (character %s | animation %s)", action->key, action->parameters.entry);
@@ -384,6 +419,7 @@ d_define_class(puppeteer) {
         d_hook_method(puppeteer, e_flag_public, enable_control),
         d_hook_method(puppeteer, e_flag_public, disable_control),
         d_hook_method(puppeteer, e_flag_public, say_character),
+        d_hook_method(puppeteer, e_flag_public, talk_character),
         d_hook_method(puppeteer, e_flag_public, set_character),
         d_hook_method(puppeteer, e_flag_public, move_character),
         d_hook_method(puppeteer, e_flag_public, look_character),

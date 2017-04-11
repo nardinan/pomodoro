@@ -62,6 +62,20 @@ d_define_method(bubble, add_message)(struct s_object *self, const char *message,
     return self;
 }
 
+d_define_method(bubble, add_track)(struct s_object *self, const char *message, struct s_object *track, int font_ID) {
+    d_using(bubble);
+    struct s_bubble_message *current_message;
+    if ((current_message = (struct s_bubble_message *)d_malloc(sizeof(struct s_bubble_message)))) {
+        strncpy(current_message->content, message, d_bubble_message_size);
+        current_message->font_ID = font_ID;
+        current_message->track = d_retain(track);
+        f_list_append(&(bubble_attributes->messages), (struct s_list_node *)current_message, e_list_insert_tail);
+        bubble_attributes->last_element = current_message;
+    } else
+        d_die(d_error_malloc);
+    return self;
+}
+
 d_define_method(bubble, add_option)(struct s_object *self, const char *option, int value) {
     d_using(bubble);
     struct s_bubble_option *current_option;
@@ -175,6 +189,10 @@ d_define_method(bubble, skip)(struct s_object *self) {
     double maximum_width = 0.0, total_height = 0.0;
     int font_height, index = 0;
     if (bubble_attributes->current_element) {
+        if (bubble_attributes->current_element->track) {
+            d_call(bubble_attributes->current_element->track, m_track_stop, NULL);
+            d_delete(bubble_attributes->current_element->track);
+        }
         while ((current_component = (struct s_bubble_component *)bubble_attributes->components.head)) {
             f_list_delete(&(bubble_attributes->components), (struct s_list_node *)current_component);
             if (current_component->component)
@@ -195,6 +213,8 @@ d_define_method(bubble, skip)(struct s_object *self) {
     if (!bubble_attributes->current_element)
         if ((bubble_attributes->current_element = (struct s_bubble_message *)bubble_attributes->messages.head)) {
             f_list_delete(&(bubble_attributes->messages), (struct s_list_node *)bubble_attributes->current_element);
+            if (bubble_attributes->current_element->track)
+                d_call(bubble_attributes->current_element->track, m_track_play, NULL);
             if (bubble_attributes->current_element->options.fill > 0)
                 bubble_attributes->last_value = d_bubble_no_value;
         }
@@ -315,9 +335,10 @@ d_define_method_override(bubble, draw)(struct s_object *self, struct s_object *e
         }
     }
     /* check for the next entry */
-    if ((!bubble_attributes->current_element) || ((bubble_attributes->current_element->timeout > 0) && 
-                ((bubble_attributes->current_element->timeout + bubble_attributes->last_update) < time(NULL))))
-        d_call(self, m_bubble_skip, NULL);
+    if ((!bubble_attributes->current_element) ||
+            (((bubble_attributes->current_element->track) && (!((intptr_t)d_call(bubble_attributes->current_element->track, m_track_is_playing, NULL)))) ||
+             ((bubble_attributes->current_element->timeout > 0) && ((bubble_attributes->current_element->timeout + bubble_attributes->last_update) < time(NULL)))))
+            d_call(self, m_bubble_skip, NULL);
     d_cast_return(d_drawable_return_last);
 }
 
@@ -328,6 +349,10 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
     int index;
     d_delete(attributes->factory);
     if (attributes->current_element) {
+        if (attributes->current_element->track) {
+            d_call(attributes->current_element->track, m_track_stop, NULL);
+            d_delete(attributes->current_element->track);
+        }
         while ((current_component = (struct s_bubble_component *)attributes->components.head)) {
             f_list_delete(&(attributes->components), (struct s_list_node *)current_component);
             if (current_component->component)
@@ -339,6 +364,10 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
     }
     while ((current_message = (struct s_bubble_message *)attributes->messages.head)) {
         f_list_delete(&(attributes->messages), (struct s_list_node *)current_message);
+        if (current_message->track) {
+            d_call(current_message->track, m_track_stop, NULL);
+            d_delete(current_message->track);
+        }
         while ((current_option = (struct s_bubble_option *)current_message->options.head)) {
             f_list_delete(&(current_message->options), (struct s_list_node *)current_option);
             d_free(current_option);
@@ -354,6 +383,7 @@ d_define_method(bubble, delete)(struct s_object *self, struct s_bubble_attribute
 d_define_class(bubble) {
     d_hook_method(bubble, e_flag_public, set),
         d_hook_method(bubble, e_flag_public, add_message),
+        d_hook_method(bubble, e_flag_public, add_track),
         d_hook_method(bubble, e_flag_public, add_option),
         d_hook_method(bubble, e_flag_public, move_up),
         d_hook_method(bubble, e_flag_public, move_down),

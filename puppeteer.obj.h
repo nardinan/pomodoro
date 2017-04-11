@@ -26,6 +26,7 @@ typedef enum e_puppeteer_actions {
     e_puppeteer_action_enable_control,
     e_puppeteer_action_disable_control,
     e_puppeteer_action_say,
+    e_puppeteer_action_talk,
     e_puppeteer_action_set,
     e_puppeteer_action_move,
     e_puppeteer_action_look,
@@ -35,11 +36,15 @@ typedef struct s_puppeteer_action_say {
     char message[d_string_buffer_size];
     double timeout;
 } s_puppeteer_action_say;
+typedef struct s_puppeteer_action_talk {
+    char message[d_string_buffer_size], track[d_resources_key_size];
+} s_puppeteer_action_talk;
 typedef struct s_puppeteer_action {
     enum e_puppeteer_actions type;
     char key[d_entity_label_size];
     union {
         struct s_puppeteer_action_say action_say;
+        struct s_puppeteer_action_talk action_talk;
         char entry[d_string_buffer_size], entity[d_entity_label_size];
         double destination_x;
     } parameters;
@@ -49,6 +54,7 @@ extern struct s_lisp_object *p_link_puppeteer_show_character(struct s_object *se
 extern struct s_lisp_object *p_link_puppeteer_enable_control(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_disable_control(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_say_character(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_puppeteer_talk_character(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_set_character(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_move_character(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_look_character(struct s_object *self, struct s_lisp_object *arguments);
@@ -73,6 +79,7 @@ d_declare_method(puppeteer, show_character)(struct s_object *self, const char *k
 d_declare_method(puppeteer, enable_control)(struct s_object *self, const char *key);
 d_declare_method(puppeteer, disable_control)(struct s_object *self);
 d_declare_method(puppeteer, say_character)(struct s_object *self, const char *key, const char *message, time_t timeout);
+d_declare_method(puppeteer, talk_character)(struct s_object *self, const char *key, const char *message, const char *track);
 d_declare_method(puppeteer, set_character)(struct s_object *self, const char *key, const char *entry);
 d_declare_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x);
 d_declare_method(puppeteer, look_character)(struct s_object *self, const char *key, const char *entity);

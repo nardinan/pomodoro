@@ -304,6 +304,13 @@ d_define_method(character, say)(struct s_object *self, const char *message, time
     return self;
 }
 
+d_define_method(character, talk)(struct s_object *self, const char *message, struct s_object *track) {
+    d_using(character);
+    if (character_attributes->bubble)
+        d_call(character_attributes->bubble, m_bubble_add_track, message, track, d_character_default_font);
+    return self;
+}
+
 d_define_method(character, move)(struct s_object *self, double destination_x) {
     d_using(character);
     double position_x, position_y;
@@ -426,6 +433,7 @@ d_define_class(character) {
         d_hook_method(character, e_flag_public, move_clean),
         d_hook_method(character, e_flag_public, action),
         d_hook_method(character, e_flag_public, say),
+        d_hook_method(character, e_flag_public, talk),
         d_hook_method(character, e_flag_public, move),
         d_hook_method(character, e_flag_public, is_speaking),
         d_hook_method(character, e_flag_public, is_moving),

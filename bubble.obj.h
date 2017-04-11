@@ -35,6 +35,7 @@ typedef struct s_bubble_option { d_list_node_head;
 typedef struct s_bubble_message { d_list_node_head;
     char content[d_bubble_message_size];
     struct s_list options;
+    struct s_object *track;
     int font_ID, selected_option;
     time_t timeout;
     t_boolean force_kill;
@@ -61,6 +62,7 @@ extern struct s_object *f_bubble_new(struct s_object *self, struct s_object *fac
         unsigned int alpha, int font_style);
 d_declare_method(bubble, set)(struct s_object *self, struct s_object *drawable, enum e_uiable_components component);
 d_declare_method(bubble, add_message)(struct s_object *self, const char *message, time_t timeout, int font_ID);
+d_declare_method(bubble, add_track)(struct s_object *self, const char *message, struct s_object *track, int font_ID);
 d_declare_method(bubble, add_option)(struct s_object *self, const char *option, int value);
 d_declare_method(bubble, move_up)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
 d_declare_method(bubble, move_down)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed);
