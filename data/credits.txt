@@ -6,6 +6,7 @@ Sounds from freesound.org
 - Moonlight Dancer (square) - November background noise
 - Cmusounddesign (museum) - Gallenga background noise
 - Klankbeeld (city hum) - Innamorati background
+- Suonidibologna (people chatting) - Vannucci background
 
 [MUSIC]
 Musics from openmusicarchive.org
@@ -14,4 +15,3 @@ Musics from openmusicarchive.org
 
 Musics from newgrounds.com
 - Streampianist (Perditus Agnus Dei)
-

@@ -1,7 +1,7 @@
 ; Pomodoro
-; Module: intro_november
+; Module: intro_vannucci
 ; Author: nardinan
-; Date  : 4 Feb 2017
+; Date  : 22 April 2017
 
 (define animation
 	(lambda (c m)
@@ -19,6 +19,7 @@
 		)
 	)
 )
+
 ; Play background
 (stagecrafter_play "people_background")
 
@@ -26,15 +27,18 @@
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "november")
+(collector_set "from_where" "vannucci")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "fortebraccio")
-	(puppeteer_show "andrea" 980)
-	(if (compare from_where "vannucci")
-		(puppeteer_show "andrea" 7500)
-		(puppeteer_show "andrea" 7900)
+(if (compare from_where "november")
+	(puppeteer_show "andrea" 240)
+	(if (compare from_where "priori")
+		(puppeteer_show "andrea" 3400)
+		(if (compare from_where "panoramica")
+			(puppeteer_show "andrea" 11800)
+			(puppeteer_show "andrea" 12000)
+		)
 	)
 )
 

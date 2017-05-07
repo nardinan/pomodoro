@@ -17,7 +17,7 @@
 	],
 	"characters":[
 		{"label":"andrii",		"link":"andrii_character",		"controllable":false,	"script":"ai_andrii"},
-		{"label":"yuriy",		"link":"yuriy_character",		"controllable":false,	"script":"ai_yuriy"},	
+		{"label":"yuriy",		"link":"yuriy_character",		"controllable":false,	"script":"ai_yuriy"},
 		{"label":"luca",		"link":"luca_character", 		"controllable":false,	"script":"ai_luca"},
 		{"label":"andrea",		"link":"andrea_character", 		"controllable":true},
 		{"label":"luna",		"link":"luna_character",		"controllable":false},
@@ -34,6 +34,7 @@
 		{"label":"fortebraccio","link":"fortebraccio_landscape"},
 		{"label":"gallenga",	"link":"gallenga_landscape"},
 		{"label":"november",	"link":"november_landscape"},
-		{"label":"innamorati",	"link":"innamorati_landscape"}
+		{"label":"innamorati",	"link":"innamorati_landscape"},
+		{"label":"vannucci",		"link":"vannucci_landscape"}
 	]
 }
