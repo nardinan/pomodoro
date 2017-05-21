@@ -16,6 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "director.obj.h"
+#include "loader.obj.h"
 #define d_pomodoro_title "Pomodoro"
 #define d_pomodoro_resources "./data"
 #define d_pomodoro_resources_default_png 	"./data/placeholders/default_png.png"
@@ -100,7 +101,7 @@ int main (int argc, char *argv[]) {
                 final_resolution_x = d_pomodoro_developer_width;
                 final_resolution_y = d_pomodoro_developer_height;
                 scale_resolution_x = (d_pomodoro_developer_width * d_pomodoro_developer_scale_factor);
-                scale_resolution_y = (d_pomodoro_developer_height *d_pomodoro_developer_scale_factor);
+                scale_resolution_y = (d_pomodoro_developer_height * d_pomodoro_developer_scale_factor);
             }
             environment = f_environment_new_fullscreen(d_new(environment), final_resolution_x, final_resolution_y, fullscreen);
             d_call(environment, m_environment_set_methods, &pomodoro_load_call, &pomodoro_loop_call, &pomodoro_quit_call);
