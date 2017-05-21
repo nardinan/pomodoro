@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"bench",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"bench_still_A"}
+			]
+		},{
+			"label":"still_B",
+			"layers":[
+				{"drawable":"bench_still_B"}
+			]
+		}
+	]
+}

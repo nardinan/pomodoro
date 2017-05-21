@@ -1,4 +1,4 @@
-objects = miranda.o pomodoro.o factory.obj.o bubble.obj.o camera.obj.o character.obj.o puppeteer.obj.o effecteer.obj.o item.obj.o landscape.obj.o\
+objects = miranda.o pomodoro.o loader.obj.o factory.obj.o bubble.obj.o camera.obj.o character.obj.o puppeteer.obj.o effecteer.obj.o item.obj.o landscape.obj.o\
 		  stagecrafter.obj.o collector.obj.o screenwriter.obj.o director.obj.o
 project = pomodoro
 name = pomodoro
@@ -16,6 +16,9 @@ miranda.o: miranda.c miranda.h
 
 pomodoro.o: pomodoro.c character.obj.h factory.obj.h
 	$(cc) $(cflags) pomodoro.c
+
+loader.obj.o: loader.obj.c loader.obj.h miranda.h
+	$(cc) $(cflags) loader.obj.c
 
 factory.obj.o: factory.obj.c factory.obj.h miranda.h
 	$(cc) $(cflags) factory.obj.c

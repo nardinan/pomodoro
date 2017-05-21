@@ -32,12 +32,12 @@
 		"speed_ratio_x":1.0
 	}],
 	"items":[
-		{"label":"door_A",		"item":"arrow",			"status":"active_down",	"position_x":1950.0,	"position_y":1300.0,	"zoom":1.25, 					"active":true,	"script":"move_gallenga_fortebraccio",	"layer":7},
-		{"label":"door_B",		"item":"arrow",			"status":"none",		"position_x":550.0,		"position_y":1300.0,	"zoom":1.25,	"solid":true},
-		{"label":"door_C",		"item":"arrow",			"status":"none",		"position_x":3150.0,	"position_y":1300.0,	"zoom":1.25,	"solid":true},
-		{"label":"plant_A",		"item":"plant",			"status":"still_A",		"position_x":2390.0,	"position_y":1130.0,	"zoom":1.25},
-		{"label":"plant_B",		"item":"plant",			"status":"still_B",		"position_x":1090.0,	"position_y":1130.0,	"zoom":1.25},
-		{"label":"frame_A",		"item":"painting",		"status":"monnalisa",	"position_x":900.0,		"position_y":900.0,		"zoom":1.25},
-		{"label":"fly",			"item":"fly",			"status":"still_A",		"position_x":500.0,		"position_y":700.0,		"zoom":1.25,																			"layer":7}
+		{"label":"door_A",		"item":"arrow",				"status":"active_down",		"position_x":1950.0,	"position_y":1300.0,	"zoom":1.25, 									"active":true,	"script":"move_gallenga_fortebraccio",	"layer":7},
+		{"label":"door_B",		"item":"arrow",				"status":"none",					"position_x":550.0,		"position_y":1300.0,	"zoom":1.25,	"solid":true},
+		{"label":"door_C",		"item":"arrow",				"status":"none",					"position_x":3150.0,	"position_y":1300.0,	"zoom":1.25,	"solid":true},
+		{"label":"plant_A",		"item":"plant",				"status":"still_A",				"position_x":2390.0,	"position_y":1130.0,	"zoom":1.25},
+		{"label":"plant_B",		"item":"plant",				"status":"still_B",				"position_x":1090.0,	"position_y":1130.0,	"zoom":1.25},
+		{"label":"frame_A",		"item":"painting",		"status":"monnalisa",			"position_x":900.0,		"position_y":900.0,		"zoom":1.25},
+		{"label":"fly",				"item":"fly",					"status":"still_A",				"position_x":500.0,		"position_y":700.0,		"zoom":1.25,																																					"layer":7}
 	]
-} 
+}

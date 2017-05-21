@@ -1,0 +1,32 @@
+{
+	"format":"landscape",
+	"ID":"med",
+	"zoom":10,
+	"position_x":0.0,
+	"position_y":0.0,
+	"intro_script":"intro_med",
+	"outro_script":"outro_med",
+	"floor":[{
+		"position_x":0.0,
+		"position_y":1000.0
+	}],
+	"surfaces":[{
+		"drawable":"med_background",
+		"layer":1,
+		"speed_ratio_x":1.0,
+		"reference":true
+	},{
+		"drawable":"med_foreground",
+		"layer":7,
+		"speed_ratio_x":1.0
+	},{
+		"drawable":"med_lights_layer",
+		"layer":8,
+		"speed_ratio_x":1.0
+	}],
+	"items":[
+		{"label":"door_A",		"item":"arrow",				"status":"active_left",		"position_x":520.0,			"position_y":1060.0,	"zoom":1.25, 	"solid":true,		"active":true,	"script":"move_med_vannucci"},
+		{"label":"door_B",		"item":"arrow",				"status":"none",					"position_x":2220.0,		"position_y":1060.0,	"zoom":1.25,	"solid":true},
+		{"label":"bench_A",		"item":"bench",				"status":"still_B",				"position_x":1400.0,		"position_y":860.0,	"zoom":1.25}
+	]
+}
