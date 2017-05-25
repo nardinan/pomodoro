@@ -36,6 +36,7 @@
 		{"label":"november",						"link":"november_landscape"},
 		{"label":"innamorati",					"link":"innamorati_landscape"},
 		{"label":"vannucci",						"link":"vannucci_landscape"},
-		{"label":"med",									"link":"med_landscape"}
+		{"label":"med",									"link":"med_landscape"},
+		{"label":"mania",								"link":"mania_landscape"}
 	]
 }

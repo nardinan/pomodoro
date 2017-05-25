@@ -1,7 +1,7 @@
 ; Pomodoro
-; Module: intro_med
+; Module: intro_mania
 ; Author: nardinan
-; Date  : 9 May 2017
+; Date  : 25 May 2017
 
 (define animation
 	(lambda (c m)
@@ -24,7 +24,7 @@
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "med")
+(collector_set "from_where" "mania")
 
 ; Setup characters
 (puppeteer_disable_control)

@@ -13,6 +13,16 @@
 			"layers":[
 				{"drawable":"bench_still_B"}
 			]
+		},{
+			"label":"still_C",
+			"layers":[
+				{"drawable":"bench_still_C"}
+			]
+		},{
+			"label":"still_D",
+			"layers":[
+				{"drawable":"bench_still_D"}
+			]
 		}
 	]
 }

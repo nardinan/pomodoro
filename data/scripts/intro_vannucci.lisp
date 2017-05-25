@@ -32,7 +32,7 @@
 ; Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "november")
-	(puppeteer_show "andrea" 240)
+	(puppeteer_show "andrea" 320)
 	(if (compare from_where "priori")
 		(puppeteer_show "andrea" 3400)
 		(if (compare from_where "med")
