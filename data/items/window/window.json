@@ -1,4 +1,4 @@
-{
+	{
 	"format":"item",
 	"ID":"window",
 	"zoom":12,
@@ -29,6 +29,11 @@
 				{"drawable":"window_outside_C"}
 			]
 		},{
+			"label":"outside_C_flip",
+			"layers":[
+				{"drawable":"window_outside_C", "flip_x":true}
+			]
+		},{
 			"label":"outside_D",
 			"layers":[
 				{"drawable":"window_outside_D"}
@@ -37,6 +42,11 @@
 			"label":"outside_E",
 			"layers":[
 				{"drawable":"window_outside_E"}
+			]
+		},{
+			"label":"outside_E_flip",
+			"layers":[
+				{"drawable":"window_outside_E", "flip_x":true}
 			]
 		},{
 			"label":"outside_F",
@@ -49,9 +59,19 @@
 				{"drawable":"window_outside_G"}
 			]
 		},{
+			"label":"outside_G_flip",
+			"layers":[
+				{"drawable":"window_outside_G", "flip_x":true}
+			]
+		},{
 			"label":"outside_H",
 			"layers":[
 				{"drawable":"window_outside_H"}
+			]
+		},{
+			"label":"outside_H_flip",
+			"layers":[
+				{"drawable":"window_outside_H", "flip_x":true}
 			]
 		}
 	]

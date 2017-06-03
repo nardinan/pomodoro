@@ -23,7 +23,7 @@
 		{"label":"luna",					"link":"luna_character",				"controllable":false},
 		{"label":"baker",					"link":"baker_character",				"controllable":false,	"script":"ai_baker"},
 		{"label":"maria",					"link":"maria_character",				"controllable":false,	"script":"ai_maria"},
-		{"label":"antonietta",		"link":"antonietta_character",	"controllabel":false,	"script":"ai_antonietta"}
+		{"label":"antonietta",		"link":"antonietta_character",	"controllable":false,	"script":"ai_antonietta"}
 	],
 	"landscapes":[
 		{"label":"canama", 							"link":"canama_landscape"},
@@ -37,6 +37,7 @@
 		{"label":"innamorati",					"link":"innamorati_landscape"},
 		{"label":"vannucci",						"link":"vannucci_landscape"},
 		{"label":"med",									"link":"med_landscape"},
-		{"label":"mania",								"link":"mania_landscape"}
+		{"label":"mania",								"link":"mania_landscape"},
+		{"label":"priori",							"link":"priori_landscape"}
 	]
 }
