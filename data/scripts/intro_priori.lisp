@@ -20,7 +20,7 @@
 	)
 )
 ; Play background
-(stagecrafter_play "people_background")
+; (stagecrafter_play "people_background")
 
 ; Collect environment
 (define from_where (collector_get "from_where"))

@@ -73,6 +73,11 @@
 			"layers":[
 				{"drawable":"window_outside_H", "flip_x":true}
 			]
+		},{
+			"label":"outside_I",
+			"layers":[
+				{"drawable":"window_outside_I"}
+			]
 		}
 	]
 }

@@ -58,6 +58,11 @@
 			"layers":[
 				{"drawable":"door_still_K"}
 			]
+		},{
+			"label":"still_L",
+			"layers":[
+				{"drawable":"door_still_L"}
+			]
 		}
 	]
 }
