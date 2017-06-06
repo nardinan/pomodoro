@@ -38,6 +38,7 @@
 		{"label":"vannucci",						"link":"vannucci_landscape"},
 		{"label":"med",									"link":"med_landscape"},
 		{"label":"mania",								"link":"mania_landscape"},
-		{"label":"priori",							"link":"priori_landscape"}
+		{"label":"priori",							"link":"priori_landscape"},
+		{"label":"elfo",								"link":"elfo_landscape"}
 	]
 }

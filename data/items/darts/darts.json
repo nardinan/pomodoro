@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"darts",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"darts_still_A"}
+			]
+		},{
+			"label":"active_A",
+			"layers":[
+				{"drawable":"darts_active_A"}
+			]
+		}
+	]
+}

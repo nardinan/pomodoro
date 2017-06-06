@@ -1,7 +1,7 @@
 ; Pomodoro
-; Module: intro_priori
+; Module: intro_elfo
 ; Author: nardinan
-; Date  : 28 May 2017
+; Date  : 5 June 2017
 
 (define animation
 	(lambda (c m)
@@ -19,24 +19,16 @@
 		)
 	)
 )
-; Play background
-; (stagecrafter_play "people_background")
 
 ; Collect environment
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "priori")
+(collector_set "from_where" "elfo")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "vannucci")
-	(puppeteer_show "andrea" 250)
-	(if (compare from_where "elfo")
-		(puppeteer_show "andrea" 5900)
-		(puppeteer_show "andrea" 8750)
-	)
-)
+(puppeteer_show "andrea" 300)
 
 ; Setup characters
 (animation "andrea" 	"front")
