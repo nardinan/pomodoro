@@ -23,7 +23,8 @@
 		{"label":"luna",					"link":"luna_character",				"controllable":false},
 		{"label":"baker",					"link":"baker_character",				"controllable":false,	"script":"ai_baker"},
 		{"label":"maria",					"link":"maria_character",				"controllable":false,	"script":"ai_maria"},
-		{"label":"antonietta",		"link":"antonietta_character",	"controllable":false,	"script":"ai_antonietta"}
+		{"label":"antonietta",		"link":"antonietta_character",	"controllable":false,	"script":"ai_antonietta"},
+		{"label":"massimo",				"link":"massimo_character",			"controllabel":false, "script":"ai_massimo"}
 	],
 	"landscapes":[
 		{"label":"canama", 							"link":"canama_landscape"},

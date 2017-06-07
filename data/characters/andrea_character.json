@@ -531,7 +531,7 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_side_walk_frame0",
+				"drawable":"body_set_blank_side_point",
 				"offset_x":0,
 				"offset_y":10,
 				"flip_x":true,
@@ -669,7 +669,7 @@
 				"mask_A":255
 			},
 			"body":{
-				"drawable":"body_set_blank_side_walk_frame0",
+				"drawable":"body_set_blank_side_point",
 				"offset_x":0,
 				"offset_y":10,
 				"flip_x":false,
