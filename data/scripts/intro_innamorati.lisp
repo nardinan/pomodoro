@@ -23,7 +23,7 @@
 ; Play background
 (stagecrafter_play "traffic_background")
 
-; Collect environment 
+; Collect environment
 (define from_where (collector_get "from_where"))
 
 ; Configure
@@ -35,8 +35,10 @@
 	(puppeteer_show "andrea" 9000)
 	(puppeteer_show "andrea" 1000)
 )
+(puppeteer_show "writer" 8900)
 
 ; Setup characters
-(animation 			"andrea" 	"front")
+(animation "andrea" 	"front")
+(animation "writer"		"back_writer")
 
 (main_control "andrea")
