@@ -7,7 +7,7 @@
 	"intro_script":"intro_francesco",
 	"outro_script":"outro_francesco",
 	"tracks":[
-		{"label":"birds_background", "playable":"lupattelli_background_noise"}
+		{"label":"nature_background", "playable":"lupattelli_background_noise"}
 	],
 	"floor":[{
 		"position_x":0.0,

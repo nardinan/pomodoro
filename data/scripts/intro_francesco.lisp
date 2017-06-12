@@ -21,7 +21,7 @@
 	)
 )
 ; Play background
-(stagecrafter_play "birds_background")
+(stagecrafter_play "nature_background")
 
 ; Collect environment
 (define from_where (collector_get "from_where"))
@@ -37,6 +37,5 @@
 )
 
 ; Setup characters
-(puppeteer_stare 	"baker"		"andrea")
-
+(animation "andrea" 	"front")
 (main_control "andrea")
