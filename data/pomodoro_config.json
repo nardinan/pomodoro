@@ -26,7 +26,9 @@
 		{"label":"antonietta",		"link":"antonietta_character",	"controllable":false,	"script":"ai_antonietta"},
 		{"label":"massimo",				"link":"massimo_character",			"controllable":false, "script":"ai_massimo"},
 		{"label":"policeman",			"link":"policeman_character",		"controllable":false, "script":"ai_policeman"},
-		{"label":"writer",				"link":"writer_character",			"controllable":false, "script":"ai_writer"}
+		{"label":"writer",				"link":"writer_character",			"controllable":false, "script":"ai_writer"},
+		{"label":"anna",					"link":"anna_character",				"controllable":false,	"script":"ai_anna"},
+		{"label":"jamal",					"link":"jamal_character",				"controllable":false, "script":"ai_jamal"}
 	],
 	"landscapes":[
 		{"label":"canama", 							"link":"canama_landscape"},
@@ -42,6 +44,7 @@
 		{"label":"med",									"link":"med_landscape"},
 		{"label":"mania",								"link":"mania_landscape"},
 		{"label":"priori",							"link":"priori_landscape"},
-		{"label":"elfo",								"link":"elfo_landscape"}
+		{"label":"elfo",								"link":"elfo_landscape"},
+		{"label":"francesco",						"link":"francesco_landscape"}
 	]
 }

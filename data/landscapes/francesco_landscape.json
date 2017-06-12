@@ -1,0 +1,32 @@
+{
+	"format":"landscape",
+	"ID":"francesco",
+	"zoom":10,
+	"position_x":0.0,
+	"position_y":0.0,
+	"intro_script":"intro_francesco",
+	"outro_script":"outro_francesco",
+	"tracks":[
+		{"label":"birds_background", "playable":"lupattelli_background_noise"}
+	],
+	"floor":[{
+		"position_x":0.0,
+		"position_y":5000.0
+	}],
+	"surfaces":[{
+		"drawable":"francesco_background",
+		"layer":1,
+		"speed_ratio_x":1,
+		"reference":true
+	},{
+		"drawable":"francesco_lights_layer",
+		"layer":8,
+		"speed_ratio_x":1.0
+	}],
+	"items":[
+		{"label":"door_A",		"item":"arrow",			"status":"active_left",					"position_x":200.0,		  "position_y":5000.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_francesco_priori"},
+		{"label":"door_B",		"item":"arrow",			"status":"active_right",				"position_x":8800.0,		"position_y":5000.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_francesco_innamorati"},
+		{"label":"door_C",		"item":"door",			"status":"still_G",							"position_x":5240.0,		"position_y":4090.0,	"zoom":1.25},
+		{"label":"trash_A",		"item":"trash_can",	"status":"still_B",							"position_x":1580.0,		"position_y":5000.0,	"zoom":1.25}
+	]
+}

@@ -39,7 +39,7 @@
 	}],
 	"items":[
 		{"label":"door_A",		"item":"arrow",			"status":"active_left",					"position_x":150.0,		"position_y":2140.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_priori_vannucci"},
-		{"label":"door_B",		"item":"arrow",			"status":"active_right",				"position_x":8800.0,	"position_y":2900.0,	"zoom":1.25,	"solid":true, "active":true,	"script":"move_priori_fancesco"},
+		{"label":"door_B",		"item":"arrow",			"status":"active_right",				"position_x":8800.0,	"position_y":2900.0,	"zoom":1.25,	"solid":true, "active":true,	"script":"move_priori_francesco"},
 		{"label":"door_C",		"item":"arrow",			"status":"active_up",						"position_x":5900.0,	"position_y":2500.0,	"zoom":1.25,								"active":true,	"script":"move_priori_elfo"},
 		{"label":"window_A",	"item":"window",		"status":"outside_A",						"position_x":1890.0,	"position_y":920.0,		"zoom":1.25},
 		{"label":"window_B",	"item":"window",		"status":"outside_A",						"position_x":2910.0,	"position_y":1200.0,	"zoom":1.25},

@@ -1,7 +1,8 @@
 ; Pomodoro
-; Module: intro_priori
+; Module: intro_francesco
 ; Author: nardinan
-; Date  : 28 May 2017
+; Date  : 12 June 2017
+; This module contains the intro of the Francesco scenario
 
 (define animation
 	(lambda (c m)
@@ -20,24 +21,22 @@
 	)
 )
 ; Play background
-(stagecrafter_play "people_background")
+(stagecrafter_play "birds_background")
 
 ; Collect environment
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "priori")
+(collector_set "from_where" "francesco")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "vannucci")
-	(puppeteer_show "andrea" 250)
-	(if (compare from_where "elfo")
-		(puppeteer_show "andrea" 5900)
-		(puppeteer_show "andrea" 8700)
-	)
+(if (compare from_where "innamorati")
+	(puppeteer_show "andrea" 8700)
+	(puppeteer_show "andrea" 300)
 )
 
 ; Setup characters
-(animation "andrea" 	"front")
+(puppeteer_stare 	"baker"		"andrea")
+
 (main_control "andrea")

@@ -1,5 +1,5 @@
 ; Pomodoro
-; Module: intro_garibaldi
+; Module: intro_innamorati
 ; Author: nardinan
 ; Date  : 31 March 2017
 ; This module contains the intro of the Innamorati scenario
@@ -32,8 +32,11 @@
 ; Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "unipgp1")
-	(puppeteer_show "andrea" 9000)
-	(puppeteer_show "andrea" 1000)
+	(puppeteer_show "andrea" 13700)
+	(if (compare from_where "francesco")
+		(puppeteer_show "andrea"11270)
+		(puppeteer_show "andrea" 900)
+	)
 )
 (puppeteer_show "writer" 8900)
 
