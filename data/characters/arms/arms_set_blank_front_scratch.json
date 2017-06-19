@@ -1,0 +1,25 @@
+{
+	"format":"animation",
+	"cycles":1,
+	"frames":[
+		{"drawable":"arms_set_blank_front_scratch_frame0",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame1",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame2",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame3",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame4",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame5",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame6",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame5",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame6",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame5",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame6",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame5",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame6",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame5",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame4",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame3",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame2",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame1",		"time":0.1},
+		{"drawable":"arms_set_blank_front_scratch_frame0",		"time":1.0}
+	]
+}
