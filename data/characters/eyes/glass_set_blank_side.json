@@ -1,0 +1,8 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"glass_set_blank_side_open",  "time":2.5},
+		{"drawable":"glass_set_blank_side_close", "time":0.1}
+	]
+}
