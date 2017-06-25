@@ -27,8 +27,8 @@
 #define d_character_principal_point_blue 0 
 #define d_character_principal_point_alpha 255
 typedef enum e_character_components {
-    e_character_component_hair = 0,
-    e_character_component_eyes,
+    e_character_component_eyes = 0,
+    e_character_component_hair,
     e_character_component_head,
     e_character_component_arms,
     e_character_component_legs,

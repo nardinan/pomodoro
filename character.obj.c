@@ -17,8 +17,8 @@
  */
 #include "character.obj.h"
 const char *v_character_components_label[e_character_component_NULL] = {
-    "hair",
     "eyes",
+    "hair",
     "head",
     "arms",
     "legs",
