@@ -22,7 +22,7 @@ const char *v_character_components_label[e_character_component_NULL] = {
     "head",
     "arms",
     "legs",
-    "body",
+    "body"
 }, *v_character_directions_label[e_character_direction_NULL] = {
     "left",
     "right",
