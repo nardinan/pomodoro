@@ -68,11 +68,14 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
         {"tail",                e_uiable_component_NULL},
         {NULL}
     };
+    struct s_character_scoped_color {
+        double mask_R, mask_G, mask_B, mask_A;
+    } scoped_colors[e_character_component_NULL];
     struct s_object *drawable;
     enum e_drawable_flips flips;
     enum e_factory_media_types type;
     char *string_supply, *string_supply_component;
-    t_boolean status_flip_x = d_false, status_flip_y = d_false, character_flip_x, character_flip_y;
+    t_boolean status_flip_x, status_flip_y, character_flip_x, character_flip_y;
     double offset_x, offset_y, mask_R = 255.0, mask_G = 255.0, mask_B = 255.0, mask_A = 255.0, zoom = 1.0, speed_x, speed_y, speed_z;
     int index_status = 0, index_component, index;
     character_attributes->collidable = d_true;
@@ -96,30 +99,46 @@ d_define_method(character, load)(struct s_object *self, struct s_object *json, s
                             d_delete(drawable);
                         }
                 d_call(json, m_json_get_boolean, &(character_attributes->collidable), "s", "collidable");
-                d_call(json, m_json_get_boolean, &status_flip_x, "s", "flip_x");
-                d_call(json, m_json_get_boolean, &status_flip_y, "s", "flip_y");
                 d_call(json, m_json_get_double, &zoom, "s", "zoom");
+                for (index_component = 0; index_component < e_character_component_NULL; ++index_component) {
+                    scoped_colors[index_component].mask_R = 255.0;
+                    scoped_colors[index_component].mask_G = 255.0;
+                    scoped_colors[index_component].mask_B = 255.0;
+                    scoped_colors[index_component].mask_A = 255.0;
+                    d_call(json, m_json_get_double, &(scoped_colors[index_component].mask_R), "sss", "colors", v_character_components_label[index_component], 
+                            "mask_R");
+                    d_call(json, m_json_get_double, &(scoped_colors[index_component].mask_G), "sss", "colors", v_character_components_label[index_component], 
+                            "mask_G");
+                    d_call(json, m_json_get_double, &(scoped_colors[index_component].mask_B), "sss", "colors", v_character_components_label[index_component], 
+                            "mask_B");
+                    d_call(json, m_json_get_double, &(scoped_colors[index_component].mask_A), "sss", "colors", v_character_components_label[index_component], 
+                            "mask_A");
+                }
                 while (d_call(json, m_json_get_string, &string_supply_component, "sds", "statuses", index_status, "label")) {
                     speed_x = 0;
                     speed_y = 0;
                     speed_z = 0;
                     offset_x = 0;
                     offset_y = 0;
+                    status_flip_x = d_false;
+                    status_flip_y = d_false;
                     d_call(json, m_json_get_double, &speed_x, "sds", "statuses", index_status, "speed_x");
                     d_call(json, m_json_get_double, &speed_y, "sds", "statuses", index_status, "speed_y");
                     d_call(json, m_json_get_double, &speed_z, "sds", "statuses", index_status, "speed_z");
                     d_call(json, m_json_get_double, &offset_x, "sds", "statuses", index_status, "offset_x");
                     d_call(json, m_json_get_double, &offset_y, "sds", "statuses", index_status, "offset_y");
+                    d_call(json, m_json_get_boolean, &status_flip_y, "sds", "statuses", index_status, "flip_y");
+                    d_call(json, m_json_get_boolean, &status_flip_x, "sds", "statuses", index_status, "flip_x");
                     d_call(self, m_entity_add_component, string_supply_component, speed_x, speed_y, speed_z, offset_x, offset_y);
                     for (index_component = 0; index_component < e_character_component_NULL; ++index_component) {
                         offset_x = 0;
                         offset_y = 0;
                         character_flip_x = status_flip_x;
                         character_flip_y = status_flip_y;
-                        mask_R = 255.0;
-                        mask_G = 255.0;
-                        mask_B = 255.0;
-                        mask_A = 255.0;
+                        mask_R = scoped_colors[index_component].mask_R;
+                        mask_G = scoped_colors[index_component].mask_G;
+                        mask_B = scoped_colors[index_component].mask_B;
+                        mask_A = scoped_colors[index_component].mask_A;
                         if ((d_call(json, m_json_get_string, &string_supply, "sdss", "statuses", index_status, 
                                         v_character_components_label[index_component], "drawable"))) {
                             d_call(json, m_json_get_double, &offset_x, "sdss", "statuses", index_status,
