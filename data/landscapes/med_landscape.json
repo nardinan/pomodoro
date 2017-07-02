@@ -27,6 +27,6 @@
 	"items":[
 		{"label":"door_A",		"item":"arrow",				"status":"active_left",		"position_x":520.0,			"position_y":1060.0,	"zoom":1.25, 	"solid":true,		"active":true,	"script":"move_med_vannucci"},
 		{"label":"door_B",		"item":"arrow",				"status":"none",					"position_x":2220.0,		"position_y":1060.0,	"zoom":1.25,	"solid":true},
-		{"label":"bench_A",		"item":"bench",				"status":"still_B",				"position_x":1400.0,		"position_y":860.0,	"zoom":1.25}
+		{"label":"bench_A",		"item":"bench",				"status":"still_B",				"position_x":1400.0,		"position_y":860.0,		"zoom":1.25}
 	]
 }
