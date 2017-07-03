@@ -3,9 +3,9 @@ objects = miranda.o pomodoro.o loader.obj.o factory.obj.o bubble.obj.o camera.ob
 project = pomodoro
 name = pomodoro
 cc = clang -g $(debug)
-cflags = -fPIC -I. `sdl2-config --cflags` -Wall -Wno-variadic-macros -Wno-pointer-arith -Wno-pointer-to-int-cast -c
+cflags = -I/usr/local/include -I. -fPIC `sdl2-config --cflags` -Wall -Wno-variadic-macros -Wno-pointer-arith -Wno-pointer-to-int-cast -c
 lflags = -Wall
-libags = -L/usr/lib `sdl2-config --libs` -lpthread -lmiranda_ground -lmiranda_objects -lmiranda_io -lmiranda_geometry -lmiranda_media -lmiranda_ui -lm
+libags = -L/usr/local/lib `sdl2-config --libs` -lpthread -lmiranda_ground -lmiranda_objects -lmiranda_io -lmiranda_geometry -lmiranda_media -lmiranda_ui -lm
 executable = $(name).bin
 
 all: $(objects)
