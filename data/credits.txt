@@ -5,8 +5,8 @@ Sounds from freesound.org
 - Inchadney (traffic) - Fortebraccio background noise
 - Moonlight Dancer (square) - November background noise
 - Cmusounddesign (museum) - Gallenga background noise
-- Klankbeeld (city hum) - Innamorati background
-- Suonidibologna (people chatting) - Vannucci background
+- Klankbeeld (city hum) - Innamorati background noise
+- Suonidibologna (people chatting) - Vannucci background noise
 
 [MUSIC]
 Musics from openmusicarchive.org

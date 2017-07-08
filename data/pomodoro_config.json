@@ -29,7 +29,8 @@
 		{"label":"writer",				"link":"writer_character",			"controllable":false, "script":"ai_writer"},
 		{"label":"anna",					"link":"anna_character",				"controllable":false,	"script":"ai_anna"},
 		{"label":"jamal",					"link":"jamal_character",				"controllable":false, "script":"ai_jamal"},
-		{"label":"nerd",					"link":"nerd_character",				"controllable":false, "script":"ai_nerd"}
+		{"label":"nerd",					"link":"nerd_character",				"controllable":false, "script":"ai_nerd"},
+		{"label":"valerio",				"link":"valerio_character",			"controllabel":false, "script":"ai_valerio"}
 	],
 	"landscapes":[
 		{"label":"canama", 							"link":"canama_landscape"},
