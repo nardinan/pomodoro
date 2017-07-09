@@ -35,7 +35,9 @@
 	(puppeteer_show "andrea" 8700)
 	(puppeteer_show "andrea" 300)
 )
+(puppeteer_show "roberto" 5000)
 
 ; Setup characters
 (animation "andrea" 	"front")
+(animation "roberto"	"front")
 (main_control "andrea")
