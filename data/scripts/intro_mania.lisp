@@ -29,7 +29,9 @@
 ; Setup characters
 (puppeteer_disable_control)
 (puppeteer_show "andrea" 590)
+(puppeteer_show "serena" 2280)
 
 ; Setup characters
 (animation "andrea" 	"front")
+(animation "serena"		"still_left")
 (main_control "andrea")

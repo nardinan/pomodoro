@@ -32,7 +32,8 @@
 		{"label":"nerd",					"link":"nerd_character",				"controllable":false, "script":"ai_nerd"},
 		{"label":"valerio",				"link":"valerio_character",			"controllable":false, "script":"ai_valerio"},
 		{"label":"marta",					"link":"marta_character",				"controllable":false, "script":"ai_marta"},
-		{"label":"gianni",				"link":"gianni_character",			"controllabel":false, "script":"ai_gianni"}
+		{"label":"gianni",				"link":"gianni_character",			"controllable":false, "script":"ai_gianni"},
+		{"label":"serena",				"link":"serena_character",			"controllable":false, "script":"ai_serena"}
 	],
 	"landscapes":[
 		{"label":"canama", 							"link":"canama_landscape"},

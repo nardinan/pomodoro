@@ -1,0 +1,341 @@
+{
+  "format": "character",
+  "ID": "serena",
+  "zoom": 20,
+  "bubble": {
+    "mask_R": 50,
+    "mask_G": 127,
+    "mask_B": 40,
+    "mask_A": 255,
+    "offset_y": -13,
+    "corner_top_left": "bubble_TL",
+    "corner_top_right": "bubble_TR",
+    "corner_bottom_left": "bubble_BL",
+    "corner_bottom_right": "bubble_BR",
+    "left": "bubble_L",
+    "right": "bubble_R",
+    "top": "bubble_T",
+    "bottom": "bubble_B",
+    "center": "bubble_C",
+    "tail": "bubble_tail"
+  },
+  "colors": {
+    "head": {
+      "mask_R": 255,
+      "mask_G": 255,
+      "mask_B": 255,
+      "mask_A": 255
+    },
+    "hair": {
+      "mask_R": 255,
+      "mask_G": 255,
+      "mask_B": 10,
+      "mask_A": 255
+    },
+    "eyes": {
+      "mask_R": 180,
+      "mask_G": 90,
+      "mask_B": 90,
+      "mask_A": 255
+    },
+    "body": {
+      "mask_R": 80,
+      "mask_G": 140,
+      "mask_B": 80,
+      "mask_A": 255
+    },
+    "arms": {
+      "mask_R": 255,
+      "mask_G": 255,
+      "mask_B": 255,
+      "mask_A": 255
+    },
+    "legs": {
+      "mask_R": 30,
+      "mask_G": 30,
+      "mask_B": 30,
+      "mask_A": 255
+    }
+  },
+  "statuses": [
+    {
+      "label": "back",
+      "head": {
+        "drawable": "head_set_blank_back"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_back",
+        "flip_x": true
+      },
+      "body": {
+        "drawable": "shirt_set_blank_back",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_back",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_back",
+        "offset_y": 20,
+        "flip_x": true
+      }
+    },
+    {
+      "label": "front",
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_front"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_front"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_front"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_front",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_front",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_front",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "walk_left",
+      "speed_x": -15,
+      "offset_x": -200,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_walk",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_walk",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "walk_right",
+      "speed_x": 15,
+      "offset_x": 200,
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_walk",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_walk",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "still_right",
+      "offset_x": 200,
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_walk_frame0",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_walk_frame0",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "scratch_right",
+      "offset_x": 200,
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_scratch",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_scratch",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "point_right",
+      "offset_x": 200,
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_point",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_point",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "still_left",
+      "offset_x": -200,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_walk_frame0",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_walk_frame0",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "scratch_left",
+      "offset_x": -200,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_scratch",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_scratch",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "point_left",
+      "offset_x": -200,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_point",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_point",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "scratch_front",
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_front"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_front"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_front"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_front",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_front_scratch",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_front",
+        "offset_y": 20
+      }
+    }
+  ]
+}
