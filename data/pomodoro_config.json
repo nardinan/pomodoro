@@ -34,7 +34,8 @@
 		{"label":"marta",					"link":"marta_character",				"controllable":false, "script":"ai_marta"},
 		{"label":"gianni",				"link":"gianni_character",			"controllable":false, "script":"ai_gianni"},
 		{"label":"serena",				"link":"serena_character",			"controllable":false, "script":"ai_serena"},
-		{"label":"roberto",				"link":"roberto_character",			"controllable":false, "script":"ai_roberto"}
+		{"label":"roberto",				"link":"roberto_character",			"controllable":false, "script":"ai_roberto"},
+		{"label":"bruno",					"link":"bruno_character",				"controllable":false, "script":"ai_bruno"}
 	],
 	"landscapes":[
 		{"label":"canama", 							"link":"canama_landscape"},
