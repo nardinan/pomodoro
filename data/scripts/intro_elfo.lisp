@@ -28,8 +28,12 @@
 
 ; Setup characters
 (puppeteer_disable_control)
-(puppeteer_show "andrea" 300)
+(puppeteer_show "andrea"  300)
+(puppeteer_show "gianni"  3000)
+(puppeteer_show "mariano" 2340)
 
 ; Setup characters
-(animation "andrea" 	"front")
+(animation "andrea" 	     "front")
+(animation "gianni"        "drink_left")
+(puppeteer_stare "mariano" "andrea")
 (main_control "andrea")

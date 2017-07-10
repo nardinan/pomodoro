@@ -5,7 +5,7 @@
 
 ; Dialogs
 (define language (collector_get "language"))
-(define dialogs (list 
+(define dialogs (list
 	(cons ;0 andrea
  	 "Hello, my name is Andrea and I am a student here, at the University of Perugia"
 	 "Salve, io mi chiamo Andrea e sono uno studente dell'Universita' di Perugia")
@@ -81,7 +81,7 @@
 	)
 )
 
-; Collect environment 
+; Collect environment
 (define note_A_taken (collector_get "note_A_taken"))
 (define intro_canama (collector_get "intro_canama"))
 
