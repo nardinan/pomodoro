@@ -53,6 +53,7 @@
 		{"label":"mania",								"link":"mania_landscape"},
 		{"label":"priori",							"link":"priori_landscape"},
 		{"label":"elfo",								"link":"elfo_landscape"},
-		{"label":"francesco",						"link":"francesco_landscape"}
+		{"label":"francesco",						"link":"francesco_landscape"},
+		{"label":"unipgA",							"link":"unipgA_landscape"}
 	]
 }

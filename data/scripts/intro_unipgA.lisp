@@ -1,8 +1,7 @@
 ; Pomodoro
-; Module: intro_innamorati
+; Module: intro_unipgA
 ; Author: nardinan
-; Date  : 31 March 2017
-; This module contains the intro of the Innamorati scenario
+; Date  : 15 July 2017
 
 (define animation
 	(lambda (c m)
@@ -21,27 +20,21 @@
 	)
 )
 ; Play background
-(stagecrafter_play "traffic_background")
+(stagecrafter_play "people_background")
 
 ; Collect environment
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "innamorati")
+(collector_set "from_where" "unipgA")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "unipgA")
-	(puppeteer_show "andrea" 13600)
-	(if (compare from_where "francesco")
-		(puppeteer_show "andrea"11270)
-		(puppeteer_show "andrea" 900)
-	)
+(if (compare from_where "innamorati")
+	(puppeteer_show "andrea" 4530)
+	(puppeteer_show "andrea" 1200))
 )
-(puppeteer_show "writer" 8900)
 
 ; Setup characters
 (animation "andrea" 	"front")
-(animation "writer"		"back_writer")
-
 (main_control "andrea")

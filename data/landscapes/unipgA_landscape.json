@@ -1,0 +1,68 @@
+{
+	"format":"landscape",
+	"ID":"unipgA",
+	"zoom":10,
+	"position_x":0.0,
+	"position_y":0.0,
+	"intro_script":"intro_unipgA",
+	"outro_script":"outro_unipgA",
+	"tracks":[
+		{"label":"people_background", "playable":"gallenga_background_noise"}
+	],
+	"floor":[{
+		"position_x":0.0,
+		"position_y":850.0
+	},{
+		"position_x":6200.0,
+		"position_y":850.0
+	},{
+		"position_x":6201.0,
+		"position_y":930.0
+	},{
+		"position_x":6350.0,
+		"position_y":930.0
+	},{
+		"position_x":6351.0,
+		"position_y":1010.0
+	},{
+		"position_x":6470.0,
+		"position_y":1010.0
+	},{
+		"position_x":6471.0,
+		"position_y":1090.0
+	},{
+		"position_x":6600.0,
+		"position_y":1090.0
+	},{
+		"position_x":6601.0,
+		"position_y":1170.0
+	}],
+	"surfaces":[{
+		"drawable":"unipgA_panorama",
+		"layer":0,
+		"speed_ratio_x":0.85
+	},{
+		"drawable":"unipgA_background",
+		"layer":1,
+		"speed_ratio_x":1,
+		"reference":true
+	},{
+		"drawable":"unipgA_lights_layer",
+		"layer":8,
+		"speed_ratio_x":1
+	}],
+	"items":[
+		{"label":"board_A",			"item":"board",			"status":"still_A",						"position_x":4660.0,		"position_y":580.0,		"zoom":1.25 },
+		{"label":"door_A",  		"item":"door",			"status":"still_M", 	       	"position_x":3940.0, 		"position_y":630.0, 	"zoom":1.25},
+		{"label":"door_B",  		"item":"door",			"status":"still_N", 	       	"position_x":3460.0, 		"position_y":580.0, 	"zoom":1.25},
+		{"label":"door_C",  		"item":"door",			"status":"still_N", 	       	"position_x":2960.0, 		"position_y":580.0, 	"zoom":1.25},
+		{"label":"door_D",			"item":"arrow",			"status":"active_up",					"position_x":1100.0,		"position_y":880.0,		"zoom":1.25,	"solid":true,	"active":true,	"script":"move_unipgA_unipgB"},
+		{"label":"door_E",			"item":"arrow",			"status":"active_down",				"position_x":4530.0,		"position_y":880.0,		"zoom":1.25,								"active":true,	"script":"move_unipgA_innamorati",		"layer":7},
+		{"label":"door_F",			"item":"arrow",			"status":"none",							"position_x":7870.0,		"position_y":1220.0,	"zoom":1.25,	"solid":true},
+		{"label":"plant_A",  		"item":"plant",			"status":"still_A", 	       	"position_x":6080.0, 		"position_y":770.0, 	"zoom":1.25},
+		{"label":"plant_B",  		"item":"plant",			"status":"still_B", 	       	"position_x":2240.0, 		"position_y":770.0, 	"zoom":1.25},
+		{"label":"printer_A",		"item":"printer",		"status":"still_A",						"position_x":5410.0,		"position_y":720.0,		"zoom":1.25},
+		{"label":"computer_A",	"item":"computer",	"status":"still_A",						"position_x":7040.0,		"position_y":1070.0,	"zoom":1.25},
+		{"label":"rack_A",			"item":"rack",			"status":"still_A",						"position_x":7740.0,		"position_y":960.0,  	"zoom":1.25}
+	]
+}

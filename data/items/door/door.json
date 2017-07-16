@@ -63,6 +63,21 @@
 			"layers":[
 				{"drawable":"door_still_L"}
 			]
+		},{
+			"label":"still_M",
+			"layers":[
+				{"drawable":"door_still_M"}
+			]
+		},{
+			"label":"still_N",
+			"layers":[
+				{"drawable":"door_still_N"}
+			]
+		},{
+			"label":"still_O",
+			"layers":[
+				{"drawable":"door_still_O"}
+			]
 		}
 	]
 }
