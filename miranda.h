@@ -29,6 +29,8 @@
 #include <miranda/objects/geometry/geometry.h>
 #include <miranda/objects/media/media.h>
 #include <miranda/objects/media/ui/ui.h>
+#include <miranda/objects/network/network.h>
+#include <miranda/endian.local.h>
 extern t_boolean v_developer_mode;
 #endif
 
