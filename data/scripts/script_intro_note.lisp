@@ -170,7 +170,7 @@
 		(collector_set "note_A_taken" 1)
 
 		; and now, please, play the track
-		(effecteer_play "perditus" "perditus_agnus_dei" 2000 2000 16))
+		(effecteer_play "stone_paradise" "stone_paradise" 2000 2000 16))
 	nil
 )
 (main_control "andrea")

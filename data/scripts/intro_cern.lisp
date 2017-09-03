@@ -6,10 +6,10 @@
 
 ; Dialogs
 (define language (collector_get "language"))
-(define dialogs (list 
+(define dialogs (list
 	(cons ;0 andrii
  	 "Dilution magnets are now operative and ready to prevent a catastophic scenario"
-	 "I magneti di diluizione stati attivati e sono pronti a prevenire una possibile catastrofe")
+	 "I magneti di diluizione sono stati attivati e sono pronti a prevenire una possibile catastrofe")
 	(cons ;1 yuriy
 	 "That's great"
 	 "Fantastico")
@@ -149,7 +149,7 @@
 	 ""
 	 "Comunque noi siamo ancora qui!")
 	(cons ;44 yuriy
-	 "" 
+	 ""
 	 "Probabilmente abbiamo cambiato la storia di qualche idiota . . .")
 	(cons ;45 andrii
 	 ""
@@ -244,6 +244,7 @@
 )
 
 ; Intro dialogs
+(effecteer_play "moscow_mule_relaxed" "moscow_mule_relaxed" 0 1000 14)
 (puppeteer_disable_control)
 
 (puppeteer_show "yuriy" 	1450)
@@ -311,7 +312,9 @@
 (animation "yuriy" 	"back")
 (say "yuriy"  	(get_dialog dialogs language 23) "yuriy_track11A")
 (say "yuriy"  	(get_dialog dialogs language 24) "yuriy_track11B")
+(effecteer_stop "moscow_mule_relaxed")
 (say "yuriy"  	(get_dialog dialogs language 25) "yuriy_track11C")
+(effecteer_play "moscow_mule_stressed" "moscow_mule_stressed" 0 1000 14)
 (stagecrafter_set_item "computer_B" "error_B")
 (stagecrafter_set_item "lhc_segment_B" "move_silence")
 (stagecrafter_set_item "lhc_segment_D" "move_silence")
@@ -345,9 +348,10 @@
 (stagecrafter_set_item "lhc_segment_C" "still")
 (stagecrafter_set_item "lhc_segment_D" "still")
 (stagecrafter_set_item "lhc_segment_E" "still")
-(effecteer_delete 	"redalarm1")
-(effecteer_stop 	"fire1")
-(effecteer_stop 	"smoke1")
+(effecteer_delete "redalarm1")
+(effecteer_stop   "fire1")
+(effecteer_stop   "smoke1")
+(effecteer_stop   "moscow_mule_stressed")
 (director_wait_time 1)
 (animation "yuriy"  "back")
 (animation "andrii" "back")
@@ -357,6 +361,7 @@
 (say "andrii" 	(get_dialog dialogs language 37) "andrii_track17")
 (animation "yuriy" 	"still_right")
 (say "yuriy" 	(get_dialog dialogs language 38) "yuriy_track15")
+(effecteer_play   "moscow_mule_final" "moscow_mule_final" 0 1000 14 nil)
 (animation "andrii"	"still_left")
 (say "andrii"	(get_dialog dialogs language 39) "andrii_track18")
 (say "yuriy"	(get_dialog dialogs language 40) "yuriy_track16")
@@ -384,7 +389,8 @@
 (say "andrii"	(get_dialog dialogs language 52) "andrii_track22")
 (animation "yuriy" "back")
 (say "yuriy"	(get_dialog dialogs language 53) "yuriy_track22")
-(director_wait_time 1)
+(effecteer_stop "moscow_mule_final")
+(director_wait_time 2)
 (animation "andrii" "back")
 (director_wait_time 2)
 (effecteer_play 	"dream" "dream_a_little_dream_of_me" 4000 4000)
@@ -412,6 +418,9 @@
 (effecteer_delete "black1")
 (effecteer_delete "pgs1")
 (effecteer_delete "clear1")
+(effecteer_delete "moscow_mule_relaxed")
+(effecteer_delete "moscow_mule_stressed")
+(effecteer_delete "moscow_mule_final")
 
 ; stop the music
 (effecteer_stop   "dream")
