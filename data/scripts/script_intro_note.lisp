@@ -13,59 +13,80 @@
 	 "Calculus 2"
 	 "Analisi Matematica 2")
 	(cons ;2 andrea
-	 "These are the holy class notes from CUG"
-	 "Questi sono i sacri appunti di CUG")
+	 "These are the holy notes from Cug"
+	 "Questi sono i sacri appunti di Cug")
 	(cons ;3 andrea
-	 "Let me take them ..."
-	 "Sara' il caso che io li prenda ...")
+	 "Let me take them . . ."
+	 "Sara' il caso che io li prenda . . .")
 	(cons ;4 andrea
 	 "Ehm . . ."
 	 "Ehm . . .")
 	(cons ;5 andrea
-	 "Hello CUG, how are you?"
-	 "Ciao CUG, come stai?")
-	(cons ;6 andrea
-	 "I woke up twenty minutes ago"
-	 "Mi sono svegliato venti minuti fa")
-	(cons ;7 luca
-	 "I'm not here tu judge you"
-	 "Non sono qui per giudicarti")
+	 "Hello Cug, how are you?"
+	 "Ciao Cug, come stai?")
+    (cons ;6 andrea
+     "He is Cug"
+     "Lui e' Cug")
+	(cons ;7 andrea
+	 "I woke up twenty minutes ago and I am ready for this amazing day"
+	 "Mi sono svegliato venti minuti fa e sono pronto per questa meravigliosa giornata")
 	(cons ;8 luca
-	 "I just want you to know that it's three in the evening"
-	 "Voglio solo che tu sappia che sono le tre di pomeriggio")
+	 "I am not here tu judge you"
+	 "Io non sono qui per giudicarti")
 	(cons ;9 luca
-	 "Listen very carefull now. Tomorrow we have to pay the electricity bill"
-	 "Ascolta attentamente ora. Domani dobbiamo pagare la bolletta della luce")
-	(cons ;10 andrea
+	 "But I want you to know that it is three in the evening"
+	 "Voglio solo che tu sappia che sono le tre di pomeriggio")
+    (cons ;10 andrea
+     "Ah"
+     "Ah")
+	(cons ;11 luca
+	 "Listen very carefull now. The electricity bill is arrived and we have to pay it as soon as possible"
+	 "Ascolta attentamente ora. E' arrivata la bolletta della luce e dobbiamo pagarla al piu' presto")
+	(cons ;12 andrea
 	 "We have time"
 	 "Abbiamo tempo")
-	(cons ;11 luca
-	 "No, idiot. Tomorrow I have to send them the receipt otherwise . . ."
-	 "No, idiota. Domani devo mandare il bollettino altrimenti . . .")
-	(cons ;12 luca
+    (cons ;13 luca
+	 "No, idiot. Tomorrow I have to send them the receipt, otherwise . . ."
+	 "No, idiota. Domani devo mandare il bollettino, altrimenti . . .")
+	(cons ;14 luca
 	 "THEY WILL CUT US OUT"
 	 "CI TAGLIERANNO LA CORRENTE")
-	(cons ;13 andrea
-	 "Wow! How you were able to do it?"
+	(cons ;15 andrea
+	 "Wow! How did you do that?"
 	 "Wow! Ma come hai fatto a farlo?")
-	(cons ;14 luca
+	(cons ;16 luca
 	 "Do what?"
 	 "Fare cosa?")
-	(cons ;15 andrea
-	 "How much do I need to give you?"
-	 "Quanti soldi devo darti?")
-	(cons ;16 luca
+    (cons ;17 andrea
+     "That thing with thunderbolt"
+     "Quella cosa del fulmine")
+    (cons ;18 luca
+     "What thunderbolt thing?"
+     "Quale cosa del fulmine?")
+	(cons ;19 andrea
+     "It is fine. Listen, how much do I have to give you?"
+     "Fa niente. Ascolta, quanto ti devo dare?")
+	(cons ;20 luca
 	 "One hundred twenty euros and ninenty five cents"
 	 "Centoventi euro e novantasette centesimi")
-	(cons ;17 luca
+    (cons ;21 luca
+     "Cash"
+     "In contanti")
+	(cons ;22 luca
 	 "Before this evening, otherwise I will be pissed off"
 	 "Entro stasera, altrimenti mi incazzo")
-	(cons ;18 andrea
-	 "I hope you are aware about the fact that I have no idea where I could find all those money"
-	 "Spero tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")
-	(cons ;19 luca
+    (cons ;23 andrea
+     "I . . ."
+     "Io . . .")
+	(cons ;24 andrea
+	 "I hope you are aware about the fact that I have no idea where I could find those money"
+	 "Io spero tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")
+	(cons ;25 luca
 	 "I care less than a dog that pees in the desert"
-	 "M'importa meno di un cane che orina nel deserto")
+	 "Mi interessa meno di un cane che orina nel deserto")
+    (cons ;26 andrea
+     "We'd better get a move on"
+     "Sara' il caso di darsi da fare")
 	nil
 ))
 
@@ -138,29 +159,46 @@
 		(puppeteer_look "luca" "andrea")
 		(director_wait_time 2)
 		(say "andrea" (get_dialog dialogs language 4))
+        (animation "andrea" "scratch_left")
 		(say "andrea" (get_dialog dialogs language 5))
+        (animation "andrea" "front")
 		(say "andrea" (get_dialog dialogs language 6))
+        (puppeteer_look "andrea" "luca")
+        (say "andrea" (get_dialog dialogs language 7))
 		(director_wait_time 2)
-		(say "luca" (get_dialog dialogs language 7))
 		(say "luca" (get_dialog dialogs language 8))
 		(say "luca" (get_dialog dialogs language 9))
-		(say "andrea" (get_dialog dialogs language 10))
+        (director_wait_time 2)
+        (say "andrea" (get_dialog dialogs language 10))
+        (director_wait_time 1)
 		(say "luca" (get_dialog dialogs language 11))
-		(say "luca" (get_dialog dialogs language 12))
+		(say "andrea" (get_dialog dialogs language 12))
+        (animation "luca" "point_right")
+		(say "luca" (get_dialog dialogs language 13))
+        (puppeteer_look "luca" "andrea")
+		(say "luca" (get_dialog dialogs language 14))
 		(effecteer_add "flash2" "thunder_flash"  0 0 4 0 t nil)
 		(stagecrafter_set_item "thunder_strike" "strike")
 		(director_wait_time 3)
-		(say "andrea" (get_dialog dialogs language 13))
-		(say "luca" (get_dialog dialogs language 14))
-		(director_wait_time 2)
 		(say "andrea" (get_dialog dialogs language 15))
 		(say "luca" (get_dialog dialogs language 16))
-		(director_wait_time 1)
-		(say "luca" (get_dialog dialogs language 17))
-		(director_wait_time 1)
-		(say "andrea" (get_dialog dialogs language 18))
-		(say "luca" (get_dialog dialogs language 19))
+        (animation "andrea" "point_left")
+        (say "andrea" (get_dialog dialogs language 17))
+        (puppeteer_look "andrea" "luca")
+		(say "luca" (get_dialog dialogs language 18))
+		(say "andrea" (get_dialog dialogs language 19))
+		(say "luca" (get_dialog dialogs language 20))
+		(director_wait_time 2)
+		(say "luca" (get_dialog dialogs language 21))
+        (director_wait_time 2)
+		(say "luca" (get_dialog dialogs language 22))
+        (director_wait_time 2)
+		(say "andrea" (get_dialog dialogs language 23))
+        (director_wait_time 1)
+		(say "andrea" (get_dialog dialogs language 24))
+		(say "luca" (get_dialog dialogs language 25))
 		(animation "andrea" "front")
+		(say "andrea" (get_dialog dialogs language 26))
 		(puppeteer_stare "luca" "andrea")
 
 		; cleanup

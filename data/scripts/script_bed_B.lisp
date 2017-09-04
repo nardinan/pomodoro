@@ -10,8 +10,8 @@
      "Tsk"
      "Tsk")
 	(cons ;1 andrea
-	 "Cug wastes his time making his bed every day..."
-	 "Cug perde tempo a rifare il letto tutti i giorni ...")
+	 "Cug wastes his time making his bed every day . . ."
+	 "Cug perde tempo a rifare il letto tutti i giorni . . .")
 	(cons ;2 andrea
 	 "Where is the point?"
 	 "Ma a quale pro?")

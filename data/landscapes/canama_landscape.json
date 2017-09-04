@@ -26,7 +26,7 @@
 		{"label":"poster_A",					"item":"poster_A",					"status":"still",								"position_x":5540.0,	"position_y":570.0,		"zoom":1.25},
 		{"label":"shelf_C",						"item":"shelf",							"status":"still_C",							"position_x":5560.0, 	"position_y":1060.0, 	"zoom":1.25},
 		{"label":"notes_A",						"item":"notes_A",						"status":"still",								"position_x":5390.0,	"position_y":970.0,		"zoom":1.25,											"active":true, 		"script":"script_intro_note"},
-		{"label":"bed_B",							"item":"bed",								"status":"still_B",							"position_x":5410.0,	"position_y":970.0,		"zoom":1.25,    																		"script":"bed_B_script"},
+		{"label":"bed_B",							"item":"bed",								"status":"still_B",							"position_x":5410.0,	"position_y":970.0,		"zoom":1.25,    																		"script":"script_bed_B"},
 		{"label":"wardrobe_A",				"item":"wardrobe",					"status":"still_A",							"position_x":4650.0,	"position_y":720.0,		"zoom":1.25},
 		{"label":"chair_B",						"item":"chair",							"status":"still_B",							"position_x":4100.0,	"position_y":990.0,		"zoom":1.25},
 		{"label":"desk_B",						"item":"desk",							"status":"still_B",							"position_x":3830.0,	"position_y":980.0,		"zoom":1.25},

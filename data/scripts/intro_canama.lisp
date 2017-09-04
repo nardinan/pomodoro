@@ -8,28 +8,34 @@
 (define dialogs (list
 	(cons ;0 andrea
  	 "Hello, my name is Andrea and I am a student here, at the University of Perugia"
-	 "Salve, io mi chiamo Andrea e sono uno studente dell'Universita' di Perugia")
+	 "Ciao, io mi chiamo Andrea e sono uno studente dell'Universita' di Perugia")
 	(cons ;1 andrea
 	 "This is my appartment"
 	 "Questo e' il mio appartamento")
 	(cons ;2 andrea
-	 "I live here with my cusin, Luca"
-	 "Vivo qui con mio cugino, Luca")
+     "I am taking a Computer Science class and I will get my master degree very soon!"
+     "Frequento il corso di informatica e sono prossimo alla mia laurea magistrale!")
 	(cons ;3 andrea
-     "We call him 'CUG'"
-     "Lo chiamiamo 'CUG'")
+     "I live here with my cusin, Luca"
+	 "Vivo qui con mio cugino, Luca")
 	(cons ;4 andrea
-	 "Because he is my cousin, you know"
-	 "Perche' e' mio cugino, sapete")
+     "We call him 'Cug'"
+     "Lo chiamiamo 'Cug'")
 	(cons ;5 andrea
-	 "He is a student at UniPG's Department of Mathematics"
-	 "E' uno studente del Dipartimento di Matematica dell'UniPG")
+     "Because he is my cousin, you know"
+     "Perche' e' mio cugino, sapete")
 	(cons ;6 andrea
-	 "He is even one of the two reasons why I was able to survive so far"
-	 "E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")
+     "He is a student at UniPG's Department of Mathematics"
+     "E' uno studente del Dipartimento di Matematica dell'UniPG")
 	(cons ;7 andrea
-	 "This is his room"
-	 "Questa e' la sua stanza")
+     "He is even one of the two reasons why I was able to survive so far"
+     "E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")
+	(cons ;8 andrea
+     "This is his room"
+     "Questa e' la sua stanza")
+	(cons ;9 andrea
+     "And you know what? It's clean"
+     "E sapete cosa? E' pulita")
 	nil
 ))
 
@@ -111,18 +117,22 @@
 		(animation "andrea" "front")
 		(director_wait_time 3)
 		(say "andrea" (get_dialog dialogs language 0))
-		(puppeteer_move "andrea" 4500)
+		(animation "andrea" "scratch_front")
 		(say "andrea" (get_dialog dialogs language 1))
+		(puppeteer_move "andrea" 4500)
 		(say "andrea" (get_dialog dialogs language 2))
-		(animation "andrea" "front")
 		(say "andrea" (get_dialog dialogs language 3))
 		(say "andrea" (get_dialog dialogs language 4))
-		(puppeteer_move "andrea" 4500)
+		(animation "andrea" "front")
 		(say "andrea" (get_dialog dialogs language 5))
+		(puppeteer_move "andrea" 4500)
 		(say "andrea" (get_dialog dialogs language 6))
-		(director_wait_movement "andrea")
-		(animation "andrea"	"front")
 		(say "andrea" (get_dialog dialogs language 7))
+		(director_wait_movement "andrea")
+		(animation "andrea"	"point_right")
+		(say "andrea" (get_dialog dialogs language 8))
+		(animation "andrea"	"front")
+		(say "andrea" (get_dialog dialogs language 9))
 		(collector_set "intro_canama" 1))
 )
 (main_control "andrea")
