@@ -244,7 +244,7 @@
 )
 
 ; Intro dialogs
-(effecteer_play "moscow_mule_relaxed" "moscow_mule_relaxed" 0 1000 14)
+(effecteer_play "moscow_mule_relaxed" "moscow_mule_relaxed" 0 1000 10)
 (puppeteer_disable_control)
 
 (puppeteer_show "yuriy" 	1450)
@@ -314,7 +314,7 @@
 (say "yuriy"  	(get_dialog dialogs language 24) "yuriy_track11B")
 (effecteer_stop "moscow_mule_relaxed")
 (say "yuriy"  	(get_dialog dialogs language 25) "yuriy_track11C")
-(effecteer_play "moscow_mule_stressed" "moscow_mule_stressed" 0 1000 14)
+(effecteer_play "moscow_mule_stressed" "moscow_mule_stressed" 0 1000 10)
 (stagecrafter_set_item "computer_B" "error_B")
 (stagecrafter_set_item "lhc_segment_B" "move_silence")
 (stagecrafter_set_item "lhc_segment_D" "move_silence")
@@ -361,7 +361,7 @@
 (say "andrii" 	(get_dialog dialogs language 37) "andrii_track17")
 (animation "yuriy" 	"still_right")
 (say "yuriy" 	(get_dialog dialogs language 38) "yuriy_track15")
-(effecteer_play   "moscow_mule_final" "moscow_mule_final" 0 1000 14 nil)
+(effecteer_play   "moscow_mule_final" "moscow_mule_final" 0 1000 10 nil)
 (animation "andrii"	"still_left")
 (say "andrii"	(get_dialog dialogs language 39) "andrii_track18")
 (say "yuriy"	(get_dialog dialogs language 40) "yuriy_track16")
