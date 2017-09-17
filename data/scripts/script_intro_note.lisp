@@ -1,214 +1,264 @@
-; Pomodoro
-; Module: note_A_script
-; Author: nardinan
-; Date  : 8 Dec 2016
+;Pomodoro - I have no money and I must eat an ice cream
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : cugmny
+;Location   : Canama
+;Author     : Nardinan
+;Description: In this cut-scene cug asks Andrea the money for the electric bill
 
-; Dialogs
+;Dialogs
 (define language (collector_get "language"))
-(define dialogs (list 
-	(cons ;0 andrea
- 	 "Oh, look!"
-	 "Oh ma tu guarda!")
-	(cons ;1 andrea
-	 "Calculus 2"
-	 "Analisi Matematica 2")
-	(cons ;2 andrea
-	 "These are the holy notes from Cug"
-	 "Questi sono i sacri appunti di Cug")
-	(cons ;3 andrea
-	 "Let me take them . . ."
-	 "Sara' il caso che io li prenda . . .")
-	(cons ;4 andrea
-	 "Ehm . . ."
-	 "Ehm . . .")
-	(cons ;5 andrea
-	 "Hello Cug, how are you?"
-	 "Ciao Cug, come stai?")
-    (cons ;6 andrea
-     "He is Cug"
-     "Lui e' Cug")
-	(cons ;7 andrea
-	 "I woke up twenty minutes ago and I am ready for this amazing day"
-	 "Mi sono svegliato venti minuti fa e sono pronto per questa meravigliosa giornata")
-	(cons ;8 luca
-	 "I am not here tu judge you"
-	 "Io non sono qui per giudicarti")
-	(cons ;9 luca
-	 "But I want you to know that it is three in the evening"
-	 "Voglio solo che tu sappia che sono le tre di pomeriggio")
-    (cons ;10 andrea
-     "Ah"
-     "Ah")
-	(cons ;11 luca
-	 "Listen very carefull now. The electricity bill is arrived and we have to pay it as soon as possible"
-	 "Ascolta attentamente ora. E' arrivata la bolletta della luce e dobbiamo pagarla al piu' presto")
-	(cons ;12 andrea
-	 "We have time"
-	 "Abbiamo tempo")
-    (cons ;13 luca
-	 "No, idiot. Tomorrow I have to send them the receipt, otherwise . . ."
-	 "No, idiota. Domani devo mandare il bollettino, altrimenti . . .")
-	(cons ;14 luca
-	 "THEY WILL CUT US OUT"
-	 "CI TAGLIERANNO LA CORRENTE")
-	(cons ;15 andrea
-	 "Wow! How did you do that?"
-	 "Wow! Ma come hai fatto a farlo?")
-	(cons ;16 luca
-	 "Do what?"
-	 "Fare cosa?")
-    (cons ;17 andrea
-     "That thing with thunderbolt"
-     "Quella cosa del fulmine")
-    (cons ;18 luca
-     "What thunderbolt thing?"
-     "Quale cosa del fulmine?")
-	(cons ;19 andrea
-     "It is fine. Listen, how much do I have to give you?"
-     "Fa niente. Ascolta, quanto ti devo dare?")
-	(cons ;20 luca
-	 "One hundred twenty euros and ninenty five cents"
-	 "Centoventi euro e novantasette centesimi")
-    (cons ;21 luca
-     "Cash"
-     "In contanti")
-	(cons ;22 luca
-	 "Before this evening, otherwise I will be pissed off"
-	 "Entro stasera, altrimenti mi incazzo")
-    (cons ;23 andrea
-     "I . . ."
-     "Io . . .")
-	(cons ;24 andrea
-	 "I hope you are aware about the fact that I have no idea where I could find those money"
-	 "Io spero tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")
-	(cons ;25 luca
-	 "I care less than a dog that pees in the desert"
-	 "Mi interessa meno di un cane che orina nel deserto")
-    (cons ;26 andrea
-     "We'd better get a move on"
-     "Sara' il caso di darsi da fare")
-	nil
+(define dialogs (list
+  (cons ;0 default
+   ""
+   "")
+  (cons ;1 andrea
+   "Oh, look!"
+   "Oh ma tu guarda!")
+  (cons ;2 andrea
+   "Calculus 2"
+   "Analisi Matematica 2")
+  (cons ;3 andrea
+   "These are the holy notes from Cug"
+   "Questi sono i sacri appunti di Cug")
+  (cons ;4 andrea
+   "Let me take them ..."
+   "Sara' il caso che li prenda io ...")
+  (cons ;5 andrea
+   "Ehm"
+   "Ehm")
+  (cons ;6 andrea
+   "Hello Cug, how are you?"
+   "Ciao Cug, come stai?")
+  (cons ;7 andrea
+   "He is Cug"
+   "Lui e' Cug")
+  (cons ;8 andrea
+   "I woke up twenty minutes ago and I am ready for this amazing day"
+   "Mi sono svegliato venti minuti fa e sono pronto per questa meravigliosa giornata")
+  (cons ;9 cug
+   "I am not here to judge you"
+   "Io non sono qui per giudicarti")
+  (cons ;10 cug
+   "But I want you to know that it is three in the evening"
+   "Voglio solo che tu sappia che sono le tre di pomeriggio")
+  (cons ;11 andrea
+   "Ah"
+   "Ah")
+  (cons ;12 cug
+   "Listen very careful now. The electricity bill is arrived and we have to pay it as soon as possible"
+   "Ascolta attentamente ora. E' arrivata la bolletta della luce e dobbiamo pagarla al piu' presto")
+  (cons ;13 andrea
+   "We have time"
+   "Abbiamo tempo")
+  (cons ;14 cug
+   "No, idiot. Tomorrow I have to send them the receipt otherwise . . ."
+   "No, idiota. Domani devo mandare il bollettino, altrimenti . . .")
+  (cons ;15 cug
+   "THEY WILL CUT US OUT!"
+   "CI TAGLIERANNO LA CORRENTE!")
+  (cons ;16 andrea
+   "Wow! How did you do that?"
+   "Wow! Ma come hai fatto a farlo?")
+  (cons ;17 cug
+   "Do what?"
+   "Fare cosa?")
+  (cons ;18 andrea
+   "That thing with thunderbolt"
+   "Quella cosa del fulmine")
+  (cons ;19 cug
+   "What thunderbolt thing?"
+   "Quale cosa del fulmine?")
+  (cons ;20 andrea
+   "It is fine. Listen, how much do I have to give you?"
+   "Fa niente. Ascolta, quanto ti devo dare?")
+  (cons ;21 cug
+   "One hundred twenty euros and ninety five cents"
+   "Centoventi euro e novantasette centesimi")
+  (cons ;22 cug
+   "Cash"
+   "In contanti")
+  (cons ;23 cug
+   "Before this evening, otherwise I will be pissed off"
+   "Entro stasera, altrimenti mi incazzo")
+  (cons ;24 andrea
+   "I ..."
+   "Io ...")
+  (cons ;25 andrea
+   "I hope you are aware about the fact that I have no idea where I could find those money"
+   "Io spero che tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")
+  (cons ;26 cug
+   "I care less than a dog that pees in the desert"
+   "Mi interessa meno di un cane che orina nel deserto")
+  (cons ;27 andrea
+   "We'd better get a move on"
+   "Sara' il caso di darsi da fare")
+  nil
 ))
 
+;High level functions
+;@brief: say <character> <message>
+;@description: character <character> says <message> and the system waits for the bubble to disappear
 (define say
-	(lambda (c m)
-		(begin
-			(puppeteer_say c m (+ 1 (* (length m) 0.05)))
-			(director_wait_message c)
-		)
-	)
-)
+  (lambda (c m)
+    (begin
+      (puppeteer_say c m (+ 1 (* (length m) 0.05)))
+      (director_wait_message c)
+      )
+    )
+  )
 
+;@brief: talk <character> <message> <track>
+;@description: similar to 'say', but is it possible to associate an audio track to the dialog
+(define talk
+  (lambda (c m track)
+    (begin
+      (puppeteer_say c m track)
+      (director_wait_message c)
+      )
+    )
+  )
+
+;@brief: say_and_go <character> <message>
+;@description: similar to 'say', but the control is returned immediately to the program before the end of the message
 (define say_and_go
-	(lambda (c m)
-		(begin
-			(puppeteer_say c m (+ 1 (* (length m) 0.05)))
-		)
-	)
-)
+  (lambda (c m)
+    (begin
+      (puppeteer_say c m (+ 1 (* (length m) 0.05)))
+      )
+    )
+  )
 
+;@brief: talk_and_go <character> <message> <track>
+;@description: similar to 'talk', but the control is returned immediately to the program before the end of the audio track
+(define talk_and_go
+  (lambda (c m track)
+    (begin
+      (puppeteer_say c m track)
+      )
+    )
+  )
+
+;@brief: animation <character> <animation>
+;@description: changes the state/animation of <character> to <animation>
 (define animation
-	(lambda (c m)
-		(begin
-			(puppeteer_set c m)
-		)
-	)
-)
+  (lambda (c m)
+    (begin
+      (puppeteer_set c m)
+      )
+    )
+  )
 
+;@brief: main_control <character>
+;@description: gives the main control of the game to the character <character>
 (define main_control
-	(lambda (c)
-		(begin
-			(director_camera_follow c -100.0 1.0)
-			(puppeteer_enable_control c)
-		)
-	)
-)
+  (lambda (c)
+    (begin
+      (director_camera_follow c -100.0 1.0)
+      (puppeteer_enable_control c)
+      )
+    )
+  )
 
+;@brief: get_dialog <dialog list> <language> <number>
+;@description: returns the message number <number> stored in the <dialog list> list in the <language> language
 (define get_dialog
-	(lambda (d lang n)
-		(begin
-			(if (= n 0)
-				(if (= lang 0)
-					(car (car d))
-					(cdr (car d))
-				)
-				(get_dialog (cdr d) lang (- n 1))
-			)
-		)
-	)
-)
-
-; Collect environment 
+  (lambda (d lang n)
+    (begin
+      (if (= n 0)
+        (if (= lang 0)
+          (car (car d))
+          (cdr (car d))
+          )
+        (get_dialog (cdr d) lang (- n 1))
+        )
+      )
+    )
+  )
+;Parameters configuration
 (define note_A_taken (collector_get "note_A_taken"))
 
-; Script
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+(animation "andrea" "back")
+
+;Action!
 (puppeteer_disable_control)
 (animation "andrea" "back")
 (if (not (= note_A_taken 1.0))
 	(begin
-		(say "andrea" (get_dialog dialogs language 0))
-		(say "andrea" (get_dialog dialogs language 1))
-		(say "andrea" (get_dialog dialogs language 2))
-		(say "andrea" (get_dialog dialogs language 3))
+		(say "andrea" (get_dialog dialogs language 1) "cugmny_track1") ;preview: Oh, look! | animation back
+		(say "andrea" (get_dialog dialogs language 2) "cugmny_track2") ;preview: Calculus 2 | animation back
+		(say "andrea" (get_dialog dialogs language 3) "cugmny_track3") ;preview: These are the holy notes fro... | animation back
 		(stagecrafter_set_item "notes_A" "none")
 		(stagecrafter_enable_item "bed_B")
+		(animation "andrea" "front")
+		(say "andrea" (get_dialog dialogs language 4) "cugmny_track4") ;preview: Let me take them ... | animation front
 		(puppeteer_show "luca" 3500)
 		(puppeteer_move "luca" 4500)
 		(director_wait_movement "luca")
-		(puppeteer_look "andrea" "luca")
-		(puppeteer_look "luca" "andrea")
+		(animation "andrea" "still_left")
+		(animation "luca" "still_right")
 		(director_wait_time 2)
-		(say "andrea" (get_dialog dialogs language 4))
-        (animation "andrea" "scratch_left")
-		(say "andrea" (get_dialog dialogs language 5))
-        (animation "andrea" "front")
-		(say "andrea" (get_dialog dialogs language 6))
-        (puppeteer_look "andrea" "luca")
-        (say "andrea" (get_dialog dialogs language 7))
+		(say "andrea" (get_dialog dialogs language 5) "cugmny_track5") ;preview: Ehm | looking at Cug | animation back
+		(animation "andrea" "scratch_left")
+		(say "andrea" (get_dialog dialogs language 6) "cugmny_track6") ;preview: Hello Cug, how are you? | looking at Cug | animation scratching his head
+		(animation "andrea" "front")
+		(say "andrea" (get_dialog dialogs language 7) "cugmny_track7") ;preview: He is Cug | looking at Main Camera
+		(animation "andrea" "still_left")
+		(say "andrea" (get_dialog dialogs language 8) "cugmny_track8") ;preview: I woke up twenty minutes ago... | looking at Cug
+		;Script suggestion: Lunga pausa in cui i due si guardano
 		(director_wait_time 2)
-		(say "luca" (get_dialog dialogs language 8))
-		(say "luca" (get_dialog dialogs language 9))
-        (director_wait_time 2)
-        (say "andrea" (get_dialog dialogs language 10))
-        (director_wait_time 1)
-		(say "luca" (get_dialog dialogs language 11))
-		(say "andrea" (get_dialog dialogs language 12))
-        (animation "luca" "point_right")
-		(say "luca" (get_dialog dialogs language 13))
-        (puppeteer_look "luca" "andrea")
-		(say "luca" (get_dialog dialogs language 14))
-		(effecteer_add "flash2" "thunder_flash"  0 0 4 0 t nil)
+		(say "luca" (get_dialog dialogs language 9) "cugmny_track9") ;preview: I am not here to judge you | looking at Andrea
+		(say "luca" (get_dialog dialogs language 10) "cugmny_track10") ;preview: But I want you to know that ... | looking at Andrea
+		(director_wait_time 2)
+		(say "andrea" (get_dialog dialogs language 11) "cugmny_track11") ;preview: Ah | looking at Cug | animation hands in the pocket
+		(director_wait_time 1)
+		(say "luca" (get_dialog dialogs language 12) "cugmny_track12") ;preview: Listen very careful now. The... | looking at Andrea
+		(say "andrea" (get_dialog dialogs language 13) "cugmny_track13") ;preview: We have time | looking at Cug | animation hands in the pocket
+		(animation "luca" "point_right")
+		(say "luca" (get_dialog dialogs language 14) "cugmny_track14") ;preview: No, idiot. Tomorrow I have t... | looking at Andrea | animation pointing
+		(animation "luca" "still_right")
+		(say "luca" (get_dialog dialogs language 15) "cugmny_track15") ;preview: THEY WILL CUT US OUT! | looking at Andrea
+		;Script suggestion: Tuono
+		(effecteer_add "flash" "thunder_flash"  0 0 4 0 t nil)
 		(stagecrafter_set_item "thunder_strike" "strike")
 		(director_wait_time 3)
-		(say "andrea" (get_dialog dialogs language 15))
-		(say "luca" (get_dialog dialogs language 16))
-        (animation "andrea" "point_left")
-        (say "andrea" (get_dialog dialogs language 17))
-        (puppeteer_look "andrea" "luca")
-		(say "luca" (get_dialog dialogs language 18))
-		(say "andrea" (get_dialog dialogs language 19))
-		(say "luca" (get_dialog dialogs language 20))
+		(say "andrea" (get_dialog dialogs language 16) "cugmny_track16") ;preview: Wow! How did you do that? | looking at Cug | animation hands in the air
+		(say "luca" (get_dialog dialogs language 17) "cugmny_track17") ;preview: Do what? | looking at Andrea
+		(animation "andrea" "point_left")
+		(say "andrea" (get_dialog dialogs language 18) "cugmny_track18") ;preview: That thing with thunderbolt | looking at Cug | animation pointing
+		(say "luca" (get_dialog dialogs language 19) "cugmny_track19") ;preview: What thunderbolt thing? | animation left
+		(animation "andrea" "still_left")
 		(director_wait_time 2)
-		(say "luca" (get_dialog dialogs language 21))
-        (director_wait_time 2)
-		(say "luca" (get_dialog dialogs language 22))
-        (director_wait_time 2)
-		(say "andrea" (get_dialog dialogs language 23))
-        (director_wait_time 1)
-		(say "andrea" (get_dialog dialogs language 24))
-		(say "luca" (get_dialog dialogs language 25))
+		(say "andrea" (get_dialog dialogs language 20) "cugmny_track20") ;preview: It is fine. Listen, how much... | looking at Cug
+		(say "luca" (get_dialog dialogs language 21) "cugmny_track21") ;preview: One hundred twenty euros and... | looking at Andrea
+		;Script suggestion: Lunga pausa in cui i due si guardano
+		(director_wait_time 2)
+		(say "luca" (get_dialog dialogs language 22) "cugmny_track22") ;preview: Cash | looking at Andrea
+		;Script suggestion: Lunga pausa in cui i due si guardano
+		(director_wait_time 2)
+		(say "luca" (get_dialog dialogs language 23) "cugmny_track23") ;preview: Before this evening, otherwi... | looking at Andrea
+		;Script suggestion: Lunga pausa in cui i due si guardano
+		(director_wait_time 2)
+		(animation "andrea" "scratch_left")
+		(say "andrea" (get_dialog dialogs language 24) "cugmny_track24") ;preview: I ... | looking at Cug | animation stroking his chin
+		(animation "andrea" "still_left")
+		(say "andrea" (get_dialog dialogs language 25) "cugmny_track25") ;preview: I hope you are aware about t... | looking at Cug
+		(say "luca" (get_dialog dialogs language 26) "cugmny_track26") ;preview: I care less than a dog that ... | looking at Andrea
 		(animation "andrea" "front")
-		(say "andrea" (get_dialog dialogs language 26))
+		(say "andrea" (get_dialog dialogs language 27) "cugmny_track27") ;preview: We'd better get a move on | looking at Main Camera
 		(puppeteer_stare "luca" "andrea")
 
-		; cleanup
-		(effecteer_delete "flash2")
+		;And never again
+		(collector_set "intro_canama" 1)
+    (collector_set "note_A_taken" 1)
 
-		; and never again
-		(collector_set "note_A_taken" 1)
+		;Cleanup
+		(effecteer_delete "flash")
 
-		; and now, please, play the track
+		;And now, please, play the track
 		(effecteer_play "stone_paradise" "stone_paradise" 2000 2000 16))
-	nil
-)
+	nil)
+;Return the control
 (main_control "andrea")

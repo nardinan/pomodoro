@@ -23,7 +23,7 @@
 ; Play background
 (stagecrafter_play "traffic_background")
 
-; Collect environment 
+; Collect environment
 (define from_where (collector_get "from_where"))
 
 ; Configure
@@ -39,8 +39,8 @@
 ; Setup characters
 (puppeteer_show 	"baker" 	3500)
 (puppeteer_show 	"maria" 	-200)
-(animation 			"andrea" 	"front")
-(animation 			"baker" 	"still_right")
+(animation 			  "andrea" 	"front")
+(animation 			  "baker" 	"still_right")
 (puppeteer_stare 	"baker"		"andrea")
 
 (if (collector_get "intro_chronos")
@@ -52,5 +52,5 @@
 		(animation "yuriy"			"still_left")
 	)
 )
-
+;Return the control
 (main_control "andrea")

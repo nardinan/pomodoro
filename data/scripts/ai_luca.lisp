@@ -6,7 +6,7 @@
 
 ; Dialogs
 (define language (collector_get "language"))
-(define dialogs (list 
+(define dialogs (list
 	(cons ;0 luca
  	 "Do you need something?"
 	 "Hai bisogno di qualcosa?")
@@ -82,4 +82,6 @@
 (say_and_go "andrea" (get_dialog dialogs language 4))
 (director_wait_message "luca")
 (director_wait_message "andrea")
+
+;Return the control
 (main_control "andrea")

@@ -6,7 +6,7 @@
 
 ; Dialogs
 (define language (collector_get "language"))
-(define dialogs (list 
+(define dialogs (list
 	(cons ;0 baker
  	 "So? Do you like my Pane Cafone?"
 	 "Allora? Ti piace il mio Pane Cafone?")
@@ -67,7 +67,7 @@
 	)
 )
 
-; Collect environment 
+; Collect environment
 (define have_leaf (collector_get "have_leaf"))
 
 ; Script
@@ -84,4 +84,5 @@
 		(director_wait_dialog)
 	)
 )
+;Return the control
 (main_control "andrea")

@@ -30,9 +30,10 @@
 (collector_set "from_where" "panorama")
 
 ; Setup characters
-(puppeteer_show "andrea" 280)
-
-; Setup characters
+(puppeteer_show  "andrea"   280)
+(puppeteer_show  "federico" 5750)
+(puppeteer_stare "federico" "andrea")
 (animation "andrea" 	"front")
-
+(animation "federico" "back")
+;Return the control
 (main_control "andrea")
