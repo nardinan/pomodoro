@@ -57,6 +57,7 @@
         {"label":"elfo",								"link":"elfo_landscape"},
         {"label":"francesco",						"link":"francesco_landscape"},
         {"label":"unipgA",							"link":"unipgA_landscape"},
-        {"label":"panorama",						"link":"panorama_landscape"}
+        {"label":"panorama",						"link":"panorama_landscape"},
+        {"label":"fologna",             "link":"fologna_landscape"}
     ]
 }

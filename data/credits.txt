@@ -7,6 +7,7 @@ Sounds from freesound.org
 - Cmusounddesign (museum) - Gallenga background noise
 - Klankbeeld (city hum) - Innamorati background noise
 - Suonidibologna (people chatting) - Vannucci background noise
+- Zimbot (Deep noise loop) - Fologna background noise
 
 [MUSIC]
 Musics from openmusicarchive.org
