@@ -14,6 +14,16 @@
 				{"drawable":"window_inside_B"}
 			]
 		},{
+			"label":"inside_C",
+			"layers":[
+				{"drawable":"window_inside_C"}
+			]
+		},{
+			"label":"inside_D",
+			"layers":[
+				{"drawable":"window_inside_D"}
+			]
+		},{
 			"label":"outside_A",
 			"layers":[
 				{"drawable":"window_outside_A"}

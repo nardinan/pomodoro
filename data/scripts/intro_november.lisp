@@ -24,6 +24,8 @@
 
 ; Collect environment
 (define from_where (collector_get "from_where"))
+(define intro_chronos (collector_get "intro_chronos"))
+(define outro_chronos (collector_get "outro_chronos"))
 
 ; Configure
 (collector_set "from_where" "november")
@@ -38,8 +40,23 @@
 	)
 )
 (puppeteer_show "policeman" 3000)
+(puppeteer_show "jamal" 5000)
+(puppeteer_show "gianni" 5300)
+(if (= intro_chronos 1.0)
+	(if (= outro_chronos 1.0)
+		nil
+		(begin
+			(puppeteer_show "andrii" 6800)
+			(puppeteer_show "yuriy"  6400)
+			(animation "andrii" "still_left_radar_up")
+			(animation "yuriy" "still_right"))
+		)
+		nil
+)
 
 ; Setup characters
-(animation "andrea" 	"front")
+(animation "andrea" "front")
 (animation "policeman" "front")
+(animation "jamal" "still_right")
+(animation "gianni" "drink_left")
 (main_control "andrea")

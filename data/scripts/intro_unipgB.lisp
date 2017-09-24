@@ -1,7 +1,7 @@
 ; Pomodoro
-; Module: intro_unipgA
+; Module: intro_unipgB
 ; Author: nardinan
-; Date  : 15 July 2017
+; Date  : 24 Sept 2017
 
 (define animation
 	(lambda (c m)
@@ -26,13 +26,13 @@
 (define from_where (collector_get "from_where"))
 
 ; Configure
-(collector_set "from_where" "unipgA")
+(collector_set "from_where" "unipgB")
 
 ; Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "innamorati")
-	(puppeteer_show "andrea" 4530)
-	(puppeteer_show "andrea" 1200)
+(if (compare from_where "unipgA")
+	(puppeteer_show "andrea" 900)
+	(puppeteer_show "andrea" 1400)
 )
 
 ; Setup characters

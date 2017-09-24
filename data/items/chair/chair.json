@@ -13,6 +13,11 @@
 			"layers":[
 				{"drawable":"chair_still_B"}
 			]
+		},{
+			"label":"still_C",
+			"layers":[
+				{"drawable":"chair_still_C"}
+			]
 		}
 	]
 }
