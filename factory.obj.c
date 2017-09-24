@@ -251,10 +251,16 @@ d_define_method(factory, get_media)(struct s_object *self, const char *label, en
 
 d_define_method(factory, get_json)(struct s_object *self, const char *label) {
     d_using(factory);
+    struct s_exception *exception;
     struct s_object *stream;
     struct s_object *result = NULL;
-    if ((stream = d_call(factory_attributes->resources_json, m_resources_get_stream_strict, label, e_resources_type_common)))
-        result = f_json_new_stream(d_new(json), stream);
+    d_try {
+        if ((stream = d_call(factory_attributes->resources_json, m_resources_get_stream_strict, label, e_resources_type_common)))
+            result = f_json_new_stream(d_new(json), stream);
+    } d_catch(exception) {
+        d_exception_verbose_dump(stderr, exception, "corrupted file stored under label \"%s\"", label);
+        d_raise;
+    } d_endtry;
     return result;
 }
 
