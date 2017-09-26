@@ -22,7 +22,7 @@
 ; Play background
 (stagecrafter_play "people_background")
 
-; Collect environment 
+; Collect environment
 (define from_where (collector_get "from_where"))
 
 ; Configure
@@ -32,8 +32,10 @@
 (puppeteer_disable_control)
 (puppeteer_show "andrea" 1950)
 (puppeteer_show "antonietta" 100)
+(puppeteer_show "luna" 2900)
 
 ; Setup characters
 (animation "andrea" 	"front")
 (animation "antonietta"	"still_right")
+(puppeteer_stare "luna" "andrea")
 (main_control "andrea")

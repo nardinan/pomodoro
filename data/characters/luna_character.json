@@ -74,7 +74,7 @@
         "offset_y": 10
       },
       "arms": {
-        "drawable": "arms_set_blank_side_walk_frame0",
+        "drawable": "arms_set_blank_side_coffee",
         "offset_y": 10
       },
       "legs": {
@@ -99,7 +99,7 @@
         "offset_y": 10
       },
       "arms": {
-        "drawable": "arms_set_blank_side_walk_frame0",
+        "drawable": "arms_set_blank_side_coffee",
         "offset_y": 10
       },
       "legs": {
@@ -246,7 +246,7 @@
         "offset_y": 10
       },
       "arms": {
-        "drawable": "arms_set_blank_side_point",
+        "drawable": "arms_set_blank_side_coffee_point",
         "offset_y": 10
       },
       "legs": {
@@ -294,7 +294,7 @@
         "offset_y": 10
       },
       "arms": {
-        "drawable": "arms_set_blank_side_point",
+        "drawable": "arms_set_blank_side_coffee_point",
         "offset_y": 10
       },
       "legs": {
