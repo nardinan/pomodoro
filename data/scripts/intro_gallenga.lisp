@@ -35,7 +35,7 @@
 (puppeteer_show "luna" 2900)
 
 ; Setup characters
-(animation "andrea" 	"front")
+(animation "andrea" 		"front")
 (animation "antonietta"	"still_right")
 (puppeteer_stare "luna" "andrea")
 (main_control "andrea")

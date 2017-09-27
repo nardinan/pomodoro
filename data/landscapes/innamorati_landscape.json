@@ -9,6 +9,9 @@
 	"tracks":[
 		{"label":"traffic_background", "playable":"innamorati_background_noise"}
 	],
+	"scripts":[
+		{"label":"marta_worried",	"script":"script_marta_worried", "frequency":15}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":3000.0

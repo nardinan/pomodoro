@@ -31,8 +31,8 @@
    "We suspect she got stuck in a time loop"
    "Crediamo sia bloccata in un loop temporale")
   (cons ;7 andrea
-   "I ..."
-   "Io ...")
+   "I . . ."
+   "Io . . .")
   (cons ;8 andrea
    "I am not sure exactly what that means."
    "Io non credo di aver capito.")
@@ -49,11 +49,11 @@
    "Let's go then!"
    "Andiamo!")
   (cons ;13 andrea
-   "Even two euros would be great ..."
-   "Anche due euro vanno bene ...")
+   "Even two euros would be great . . ."
+   "Anche due euro vanno bene . . .")
   (cons ;14 andrea
-   "I have to pay the electric bill, you know ..."
-   "Sto cercando di pagare una bolletta, sapete ...")
+   "I have to pay the electric bill, you know . . ."
+   "Sto cercando di pagare una bolletta, sapete . . .")
   nil
 ))
 
