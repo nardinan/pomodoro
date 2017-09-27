@@ -3,9 +3,9 @@
   "ID": "bruno",
   "zoom": 20,
   "bubble": {
-    "mask_R": 127,
-    "mask_G": 0,
-    "mask_B": 0,
+    "mask_R": 80,
+    "mask_G": 130,
+    "mask_B": 170,
     "mask_A": 255,
     "offset_y": -13,
     "corner_top_left": "bubble_TL",
