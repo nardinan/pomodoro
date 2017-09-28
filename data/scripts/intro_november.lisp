@@ -24,8 +24,8 @@
 
 ; Collect environment
 (define from_where (collector_get "from_where"))
-(define intro_chronos (collector_get "intro_chronos"))
-(define outro_chronos (collector_get "outro_chronos"))
+(define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
+(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
 
 ; Configure
 (collector_set "from_where" "november")
@@ -40,10 +40,16 @@
 	)
 )
 (puppeteer_show "policeman" 3000)
-(puppeteer_show "jamal" 5000)
-(puppeteer_show "gianni" 5300)
-(if (= intro_chronos 1.0)
-	(if (= outro_chronos 1.0)
+(puppeteer_show "jamal" 		5000)
+(puppeteer_show "gianni" 		5300)
+
+; Setup characters
+(animation "andrea" 		"front")
+(animation "policeman" 	"front")
+(animation "jamal" 			"still_right")
+(animation "gianni" 		"drink_left")
+(if (= yuriy_quiet_dialog_garibaldi 1.0)
+	(if (= yuriy_quiet_dialog_november 1.0)
 		nil
 		(begin
 			(puppeteer_show "andrii" 6800)
@@ -54,9 +60,5 @@
 		nil
 )
 
-; Setup characters
-(animation "andrea" "front")
-(animation "policeman" "front")
-(animation "jamal" "still_right")
-(animation "gianni" "drink_left")
+;Setup character
 (main_control "andrea")

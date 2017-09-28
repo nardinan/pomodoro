@@ -488,7 +488,7 @@
 (director_wait_time 2)
 
 ;And never again
-(collector_set "intro_ran" 1.0)
+(collector_set "intro_cern" 1.0)
 
 ;Cleanup
 (puppeteer_hide)

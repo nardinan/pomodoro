@@ -10,7 +10,7 @@
 		{"label":"traffic_background", "playable":"garibaldi_background_noise"}
 	],
 	"scripts":[
-		{"label":"maria_garibaldi",	"script":"script_maria_garibaldi", "frequency":60}
+		{"label":"update",	"script":"update_garibaldi", "frequency":60}
 	],
 	"floor":[{
 		"position_x":0.0,

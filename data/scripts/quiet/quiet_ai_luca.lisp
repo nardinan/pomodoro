@@ -1,25 +1,35 @@
-; Pomodoro
-; Module: script_marta_worried
-; Author: nardinan
-; Date  : 27 Sept 2017
+;Pomodoro - I have no money and I must eat an ice cream
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : cganquiet
+;Location   : Canama
+;Author     : Nardinan
+;Description: Cug and Andrea want a pizza
+
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
   (cons ;0 default
    ""
    "")
-  (cons ;1 marta
-   "Look, what is this about?"
-   "Ma si puo' sapere che ti prende?")
-  (cons ;2 marta
-   "I will show you 'Lost' again from the beginning to the end, eh!"
-   "Guarda che ti faccio vedere di nuovo Lost dall'inizio alla fine, eh?")
-  (cons ;3 marta
-   "Please, talk to me!"
-   "Parla, ti prego!")
-  (cons ;4 marta
-   "Tell me what is going on!"
-   "Dimmi che succede!")
+  (cons ;1 luca
+   "Do you need something?"
+   "Hai bisogno di qualcosa?")
+  (cons ;2 andrea
+   "What do you want to eat for dinner?"
+   "Cosa mangiamo stasera a cena?")
+  (cons ;3 luca
+   "Well, I was thinking about a . . ."
+   "Pensavo a una . . .")
+  (cons ;4 andrea
+   "Uhm, what about a . . ."
+   "Che ne dici di . . .")
+  (cons ;5 andrea
+   "Pizza?"
+   "Pizza?")
+  (cons ;6 luca
+   "Pizza?"
+   "Pizza?")
   nil
 ))
 
@@ -103,33 +113,20 @@
     )
   )
 
-;Parameters configuration
-(define marta_quiet_dialog      (collector_get "marta_quiet_dialog"))
-(define marta_quiet_discussing  (collector_get "marta_quiet_discussing"))
-(define marta_quiet_answer      (collector_get "marta_quiet_answer"))
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
 
-(if (= marta_quiet_dialog 1.0)
-  nil
-  (if (= marta_quiet_discussing 1.0)
-    nil
-    (begin
-      (if (= marta_quiet_answer 0.0)
-        (say "marta" (get_dialog dialogs language 1) "mbrquiet_track19") ;preview: Look, what is this about? | looking at Bruno
-        (if (= marta_quiet_answer 1.0)
-          (say "marta" (get_dialog dialogs language 2) "mbrquiet_track20") ;preview: I will show you 'Lost' again... | looking at Bruno
-          (if (= marta_quiet_answer 2.0)
-            (say "marta" (get_dialog dialogs language 3) "mbrquiet_track21") ;preview: Please, talk to me! | looking at Bruno
-            (say "marta" (get_dialog dialogs language 4) "mbrquiet_track22") ;preview: Tell me what is going on! | looking at Bruno
-          )
-        )
-      )
-    )
-  )
-)
+;Action!
+(puppeteer_look "andrea" "luca")
+(say "luca" (get_dialog dialogs language 1) "cganquiet_track1") ;preview: Do you need something? | looking at Andrea
+(say "andrea" (get_dialog dialogs language 2) "cganquiet_track2") ;preview: What do you want to eat for ... | looking at Luca
+(say "luca" (get_dialog dialogs language 3) "cganquiet_track3") ;preview: Well, I was thinking about a... | looking at Andrea
+(say "andrea" (get_dialog dialogs language 4) "cganquiet_track4") ;preview: Uhm, what about a . . . | looking at Luca
+;Script suggestion: Allo stesso tempo
+(say_and_go "andrea" (get_dialog dialogs language 5) "cganquiet_track5") ;preview: Pizza? | looking at Luca
+(say_and_go "luca" (get_dialog dialogs language 6) "cganquiet_track6") ;preview: Pizza? | looking at Andrea
+(director_wait_message "luca")
+(director_wait_message "andrea")
 
-;Configure environment for the next hop
-(define marta_next_quiet_answer (+ marta_quiet_answer 1.0))
-(if (> marta_next_quiet_answer 3.0)
-  (collector_set "marta_quiet_answer" 0.0)
-  (collector_set "marta_quiet_answer" marta_next_quiet_answer)
-)
+;Return the control
+(main_control "andrea")

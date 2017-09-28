@@ -147,7 +147,8 @@
 		(begin
 			(puppeteer_show "luca" 4500)
 			(puppeteer_stare "luca" "andrea"))
-		nil)
+		nil
+  )
 	(begin
 		(animation "andrea" "front")
 		(director_wait_time 3)
@@ -173,7 +174,7 @@
 		(say "andrea" (get_dialog dialogs language 10) "intro_track10") ;preview: And you know what? It's clean. | looking at Main Camera
 
 		;And never again
-		(collector_set "intro_ran" 1.0))
+		(collector_set "intro_canama" 1.0))
 )
 ;Return the control
 (main_control "andrea")

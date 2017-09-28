@@ -1,30 +1,26 @@
-; Pomodoro
-; Module: message_brains
-; Author: nardinan
-; Date  : 8 Dec 2016
-
-; Dialogs
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: quiet_update_innamorati
+;Author: nardinan
+;Date  : 27 Sept 2017
+;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-	(cons ;0 andrea
- 	 "It says:"
-	 "Dice:")
-	(cons ;1 andrea
-	 "'Do you want to increase your intelligence?'"
-	 "'Vuoi incrementare la tua intelligenza?'")
-	(cons ;2 andrea
-	 "'Call me! 456456'"
-	 "'Chiamami! 456456'")
-	(cons ;3 andrea
-	 "'Do you want to learn how to cook?'"
-	 "'Vuoi imparare a cucinare?'")
-	(cons ;4 andrea
-	 "'Do you want to learn how to read correctly?'"
-	 "'Vuoi imparare a leggere correttamente?'")
-	(cons ;5 andrea
-	 "'Do you want to learn how to be cool with girls?'"
-	 "'Vuoi imparare ad essere cool con le ragazze?'")
-	nil
+  (cons ;0 default
+   ""
+   "")
+  (cons ;1 marta
+   "Look, what is this about?"
+   "Ma si puo' sapere che ti prende?")
+  (cons ;2 marta
+   "I will show you 'Lost' again from the beginning to the end, eh!"
+   "Guarda che ti faccio vedere di nuovo Lost dall'inizio alla fine, eh?")
+  (cons ;3 marta
+   "Please, talk to me!"
+   "Parla, ti prego!")
+  (cons ;4 marta
+   "Tell me what is going on!"
+   "Dimmi che succede!")
+  nil
 ))
 
 ;High level functions
@@ -107,24 +103,33 @@
     )
   )
 
-;Action!
-(puppeteer_disable_control)
-(animation "andrea" "back")
-(say "andrea" (get_dialog dialogs language 0))
-(if (compare (collector_get "from_where") "canama")
-	(say "andrea" (get_dialog dialogs language 1))
-	(if (compare (collector_get "from_where") "lupattelli")
-		(say "andrea" (get_dialog dialogs language 3))
-		(if (compare (collector_get "from_where") "garibaldi")
-			(say "andrea" (get_dialog dialogs language 4))
-			(if (compare (collector_get "from_where") "fortebraccio")
-				(say "andrea" (get_dialog dialogs language 5))
-				nil
-			)
-		)
-	)
-)
-(say "andrea" (get_dialog dialogs language 2))
+;Parameters configuration
+(define marta_quiet_dialog      (collector_get "marta_quiet_dialog"))
+(define marta_quiet_discussing  (collector_get "marta_quiet_discussing"))
+(define marta_quiet_answer      (collector_get "marta_quiet_answer"))
 
-;Return the control
-(main_control "andrea")
+(if (= marta_quiet_dialog 1.0)
+  nil
+  (if (= marta_quiet_discussing 1.0)
+    nil
+    (begin
+      (if (= marta_quiet_answer 0.0)
+        (say "marta" (get_dialog dialogs language 1) "mbrquiet_track19") ;preview: Look, what is this about? | looking at Bruno
+        (if (= marta_quiet_answer 1.0)
+          (say "marta" (get_dialog dialogs language 2) "mbrquiet_track20") ;preview: I will show you 'Lost' again... | looking at Bruno
+          (if (= marta_quiet_answer 2.0)
+            (say "marta" (get_dialog dialogs language 3) "mbrquiet_track21") ;preview: Please, talk to me! | looking at Bruno
+            (say "marta" (get_dialog dialogs language 4) "mbrquiet_track22") ;preview: Tell me what is going on! | looking at Bruno
+          )
+        )
+      )
+    )
+  )
+)
+
+;Configure environment for the next hop
+(define marta_next_quiet_answer (+ marta_quiet_answer 1.0))
+(if (> marta_next_quiet_answer 3.0)
+  (collector_set "marta_quiet_answer" 0.0)
+  (collector_set "marta_quiet_answer" marta_next_quiet_answer)
+)

@@ -42,7 +42,7 @@
 (animation 			  "andrea" 	"front")
 (animation 			  "baker" 	"still_right")
 (puppeteer_stare 	"baker"		"andrea")
-(if (collector_get "intro_chronos")
+(if (collector_get "yuriy_quiet_dialog_garibaldi")
 	nil
 	(begin
 		(puppeteer_show "andrii"	1500)

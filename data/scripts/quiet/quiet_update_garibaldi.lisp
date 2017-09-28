@@ -1,32 +1,7 @@
-; Pomodoro
-; Module: message_brains
-; Author: nardinan
-; Date  : 8 Dec 2016
-
-; Dialogs
-(define language (collector_get "language"))
-(define dialogs (list
-	(cons ;0 andrea
- 	 "It says:"
-	 "Dice:")
-	(cons ;1 andrea
-	 "'Do you want to increase your intelligence?'"
-	 "'Vuoi incrementare la tua intelligenza?'")
-	(cons ;2 andrea
-	 "'Call me! 456456'"
-	 "'Chiamami! 456456'")
-	(cons ;3 andrea
-	 "'Do you want to learn how to cook?'"
-	 "'Vuoi imparare a cucinare?'")
-	(cons ;4 andrea
-	 "'Do you want to learn how to read correctly?'"
-	 "'Vuoi imparare a leggere correttamente?'")
-	(cons ;5 andrea
-	 "'Do you want to learn how to be cool with girls?'"
-	 "'Vuoi imparare ad essere cool con le ragazze?'")
-	nil
-))
-
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: quiet_update_garibaldi
+;Author: nardinan
+;Date  : 12 Feb 2017
 ;High level functions
 ;@brief: say <character> <message>
 ;@description: character <character> says <message> and the system waits for the bubble to disappear
@@ -107,24 +82,10 @@
     )
   )
 
-;Action!
-(puppeteer_disable_control)
-(animation "andrea" "back")
-(say "andrea" (get_dialog dialogs language 0))
-(if (compare (collector_get "from_where") "canama")
-	(say "andrea" (get_dialog dialogs language 1))
-	(if (compare (collector_get "from_where") "lupattelli")
-		(say "andrea" (get_dialog dialogs language 3))
-		(if (compare (collector_get "from_where") "garibaldi")
-			(say "andrea" (get_dialog dialogs language 4))
-			(if (compare (collector_get "from_where") "fortebraccio")
-				(say "andrea" (get_dialog dialogs language 5))
-				nil
-			)
-		)
-	)
-)
-(say "andrea" (get_dialog dialogs language 2))
+;Move maria outside, on the right
+(puppeteer_move "maria" 7800)
+(director_wait_movement "maria")
 
-;Return the control
-(main_control "andrea")
+;And then back, on the left
+(puppeteer_move "maria" 80)
+(director_wait_movement "maria")
