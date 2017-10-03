@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: intro_gallenga
-; Author: nardinan
-; Date  : 27 Feb 2017
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_gallenga
+;Author: nardinan
+;Date  : 27 Feb 2017
 
 (define animation
 	(lambda (c m)
@@ -19,22 +19,22 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "people_background")
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "gallenga")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (puppeteer_show "andrea" 1950)
 (puppeteer_show "antonietta" 100)
 (puppeteer_show "luna" 2900)
 
-; Setup characters
+;Setup characters
 (animation "andrea" 		"front")
 (animation "antonietta"	"still_right")
 (puppeteer_stare "luna" "andrea")

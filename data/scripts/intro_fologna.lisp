@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: intro_fologna
-; Author: nardinan
-; Date  : 18 Sept 2017
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_fologna
+;Author: nardinan
+;Date  : 18 Sept 2017
 
 (define animation
 	(lambda (c m)
@@ -19,21 +19,21 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "engine_background")
 
-; Configure
+;Configure
 (collector_set "from_where" "fologna")
 
-; Stop the background music
+;Stop the background music
 (effecteer_stop "stone_paradise")
 
-; Setup characters
+;Setup characters
 (puppeteer_show "andrea" 250)
 (puppeteer_show "chaos" 2900)
 (animation "andrea" "front")
 (puppeteer_stare 	"chaos" "andrea")
 (main_control "andrea")
 
-; And never again
+;And never again
 (collector_set "fologna_enabled" 2)

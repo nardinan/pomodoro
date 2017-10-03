@@ -1,10 +1,10 @@
-; Pomodoro
-; Module: ai_chaos
-; Author: nardinan
-; Date  : 19 Sept 2017
-; This module contains the artificial intelligence for Chaos
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: ai_chaos
+;Author: nardinan
+;Date  : 19 Sept 2017
+;This module contains the artificial intelligence for Chaos
 
-; Dialogs
+;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
 	(cons ;0 chaos
@@ -93,10 +93,10 @@
     )
   )
 
-; Collect environment
+;Collect environment
 (define chaos_visited (collector_get "chaos_visited"))
 
-; Script
+;Script
 (puppeteer_disable_control)
 (puppeteer_look "andrea" "chaos")
 (if (= chaos_visited 1.0)

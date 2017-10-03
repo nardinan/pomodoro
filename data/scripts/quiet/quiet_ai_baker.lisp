@@ -1,33 +1,27 @@
 ;Pomodoro - I have no money and I must eat an ice cream
-;Module: message_brains
-;Author: nardinan
-;Date  : 8 Dec 2016
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : bkrquiet
+;Location   : Garibaldi
+;Author     : Nardinan
+;Description: The baker already gave you 5 euros, you can't ask for more
 
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-	(cons ;0
-		""
-		"")
-	(cons ;1 andrea
-	 "'Call me! 456456'"
-	 "'Chiamami! 456456'")
-	(cons ;2 andrea
- 	 "It says:"
-	 "Dice:")
-	(cons ;3 andrea
-	 "'Do you want to increase your intelligence?'"
-	 "'Vuoi incrementare la tua intelligenza?'")
-	(cons ;4 andrea
-	 "'Do you want to learn how to cook?'"
-	 "'Vuoi imparare a cucinare?'")
-	(cons ;5 andrea
-	 "'Do you want to learn how to read correctly?'"
-	 "'Vuoi imparare a leggere correttamente?'")
-	(cons ;6 andrea
-	 "'Do you want to learn how to be cool with girls?'"
-	 "'Vuoi imparare ad essere cool con le ragazze?'")
-	nil
+  (cons ;0 default
+   ""
+   "")
+  (cons ;1 baker
+   "Are you still asking for money?"
+   "Hai finito di chiedere soldi?")
+  (cons ;2 baker
+   "You should be ashamed of yourself!"
+   "Dovresti vergognarti!")
+  (cons ;3 andrea
+   "I am sorry, I clicked by mistake"
+   "Scusa, ho cliccato per sbaglio")
+  nil
 ))
 
 ;High level functions
@@ -110,24 +104,23 @@
     )
   )
 
-;Action!
+;Parameters configuration
+(define got_five_euros (collector_get "got_five_euros"))
+
+;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
-(animation "andrea" "back")
-(say "andrea" (get_dialog dialogs language 2))
-(if (compare (collector_get "from_where") "canama")
-	(say "andrea" (get_dialog dialogs language 3))
-	(if (compare (collector_get "from_where") "lupattelli")
-		(say "andrea" (get_dialog dialogs language 4))
-		(if (compare (collector_get "from_where") "garibaldi")
-			(say "andrea" (get_dialog dialogs language 5))
-			(if (compare (collector_get "from_where") "fortebraccio")
-				(say "andrea" (get_dialog dialogs language 6))
-				nil
-			)
-		)
-	)
+
+;Action!
+(puppeteer_look "andrea" "baker")
+(if (= got_five_euros 1.0)
+  (begin
+    (say "baker" (get_dialog dialogs language 1) "bkrquiet_track1") ;preview: Are you still asking for mon... | looking at Andrea
+    (say "baker" (get_dialog dialogs language 2) "bkrquiet_track2") ;preview: You should be ashamed of you... | looking at Andrea | animation pointing
+    (say "andrea" (get_dialog dialogs language 3) "bkrquiet_track3")) ;preview: I am sorry, I clicked by mis... | looking at Baker
+  (begin
+    (director_dialog "game_baker_dialogue_quiet_0x0a")
+    (director_wait_dialog))
 )
-(say "andrea" (get_dialog dialogs language 1))
 
 ;Return the control
 (main_control "andrea")

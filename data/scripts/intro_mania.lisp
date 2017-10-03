@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: intro_mania
-; Author: nardinan
-; Date  : 25 May 2017
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_mania
+;Author: nardinan
+;Date  : 25 May 2017
 
 (define animation
 	(lambda (c m)
@@ -20,18 +20,18 @@
 	)
 )
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "mania")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (puppeteer_show "andrea" 590)
 (puppeteer_show "serena" 2280)
 
-; Setup characters
+;Setup characters
 (animation "andrea" 	"front")
 (animation "serena"		"still_left")
 (main_control "andrea")

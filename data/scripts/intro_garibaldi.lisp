@@ -1,8 +1,7 @@
-; Pomodoro
-; Module: intro_garibaldi
-; Author: nardinan
-; Date  : 2 Jan 2017
-; This module contains the intro of the Garibaldi scenario
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_garibaldi
+;Author: nardinan
+;Date  : 2 Jan 2017
 
 (define animation
 	(lambda (c m)
@@ -20,23 +19,23 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "traffic_background")
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "garibaldi")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "lupattelli")
 	(puppeteer_show "andrea" 6900)
 	(puppeteer_show "andrea" 1100)
 )
 
-; Setup characters
+;Setup characters
 (puppeteer_show 	"baker" 	3500)
 (puppeteer_show 	"maria" 	-200)
 (animation 			  "andrea" 	"front")

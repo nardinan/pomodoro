@@ -1,8 +1,7 @@
-; Pomodoro
-; Module: intro_francesco
-; Author: nardinan
-; Date  : 12 June 2017
-; This module contains the intro of the Francesco scenario
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_francesco
+;Author: nardinan
+;Date  : 12 June 2017
 
 (define animation
 	(lambda (c m)
@@ -20,16 +19,16 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "nature_background")
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "francesco")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "innamorati")
 	(puppeteer_show "andrea" 8700)
@@ -39,7 +38,7 @@
 (puppeteer_show "roberto" 5000)
 (puppeteer_stare "roberto" "andrea")
 
-; Setup characters
+;Setup characters
 (animation "andrea" 	"front")
 (animation "roberto"	"front")
 (main_control "andrea")

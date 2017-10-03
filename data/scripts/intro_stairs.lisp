@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: intro_stairs
-; Author: nardinan
-; Date  : 14 Dec 2016
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_stairs
+;Author: nardinan
+;Date  : 14 Dec 2016
 
 (define animation
 	(lambda (c m)
@@ -20,13 +20,13 @@
 	)
 )
 
-; Collect environment 
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "stairs")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "canama")
 	(puppeteer_show "andrea" 1000)
@@ -39,6 +39,6 @@
 	)
 )
 
-; Setup characters
+;Setup characters
 (animation "andrea" 	"front")
 (main_control "andrea")

@@ -1,8 +1,7 @@
-; Pomodoro
-; Module: intro_innamorati
-; Author: nardinan
-; Date  : 31 March 2017
-; This module contains the intro of the Innamorati scenario
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_innamorati
+;Author: nardinan
+;Date  : 31 March 2017
 
 (define animation
 	(lambda (c m)
@@ -20,17 +19,17 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "traffic_background")
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 (define marta_quiet_dialog (collector_get "marta_quiet_dialog"))
 
-; Configure
+;Configure
 (collector_set "from_where" "innamorati")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "unipgA")
 	(puppeteer_show "andrea" 13600)
@@ -40,7 +39,7 @@
 	)
 )
 
-; Setup characters
+;Setup characters
 (puppeteer_show "writer" 8900)
 (animation "andrea" "front")
 (animation "writer" "back_writer")

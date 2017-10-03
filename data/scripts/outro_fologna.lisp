@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: outro_fologna
-; Author: nardinan
-; Date  : 19 Sept 2017
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: outro_fologna
+;Author: nardinan
+;Date  : 19 Sept 2017
 
-; And now, please, play the track
+;And now, please, play the track
 (effecteer_play "stone_paradise" "stone_paradise" 2000 2000 16)

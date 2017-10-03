@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: intro_med
-; Author: nardinan
-; Date  : 9 May 2017
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_med
+;Author: nardinan
+;Date  : 9 May 2017
 
 (define animation
 	(lambda (c m)
@@ -20,19 +20,19 @@
 	)
 )
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "med")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (puppeteer_show "andrea"  590)
 (puppeteer_show "massimo" 2700)
 (puppeteer_show "nerd"    2100)
 
-; Setup characters
+;Setup characters
 (animation "andrea" 	"front")
 (animation "massimo"	"still_left")
 (animation "nerd"     "still_right")

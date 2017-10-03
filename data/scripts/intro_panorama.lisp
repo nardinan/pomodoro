@@ -1,8 +1,8 @@
-; Pomodoro
-; Module: intro_panorama
-; Author: nardinan
-; Date  : 6 Sept 2017
-; This module contains the intro of the Panorama scenario
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_panorama
+;Author: nardinan
+;Date  : 6 Sept 2017
+;This module contains the intro of the Panorama scenario
 
 (define animation
 	(lambda (c m)
@@ -20,16 +20,16 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "birds_background")
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "panorama")
 
-; Setup characters
+;Setup characters
 (puppeteer_show  "andrea"   280)
 (puppeteer_show  "federico" 5750)
 (puppeteer_stare "federico" "andrea")

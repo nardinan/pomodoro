@@ -1,14 +1,14 @@
-; Pomodoro
-; Module: intro_cern
-; Author: nardinan
-; Date  : 20 Nov 2016
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_cern
+;Author: nardinan
+;Date  : 20 Nov 2016
 
-; Preamble. Here we should check for other things: loaded informations and stored informations.
+;Preamble. Here we should check for other things: loaded informations and stored informations.
 (if (= (collector_get "current_chapter") nil)
   (collector_set "current_chapter" "quiet")
   nil)
 
-(director_camera_set 1000.0 -1000.0) ; far far away ...
+(director_camera_set 1000.0 -1000.0) ;far far away ...
 (if (collector_get "intro_cern")
     (begin
         (if (collector_get "destination_scenario")

@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: intro_november
-; Author: nardinan
-; Date  : 4 Feb 2017
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_november
+;Author: nardinan
+;Date  : 4 Feb 2017
 
 (define animation
 	(lambda (c m)
@@ -19,18 +19,18 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "people_background")
 
-; Collect environment
+;Collect environment
 (define from_where (collector_get "from_where"))
 (define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
 (define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
 
-; Configure
+;Configure
 (collector_set "from_where" "november")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "fortebraccio")
 	(puppeteer_show "andrea" 980)
@@ -43,7 +43,7 @@
 (puppeteer_show "jamal" 		5000)
 (puppeteer_show "gianni" 		5300)
 
-; Setup characters
+;Setup characters
 (animation "andrea" 		"front")
 (animation "policeman" 	"front")
 (animation "jamal" 			"still_right")

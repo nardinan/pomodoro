@@ -1,7 +1,7 @@
-; Pomodoro
-; Module: intro_lupattelli
-; Author: nardinan
-; Date  : 20 Dec 2016
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_lupattelli
+;Author: nardinan
+;Date  : 20 Dec 2016
 
 (define animation
 	(lambda (c m)
@@ -19,22 +19,22 @@
 		)
 	)
 )
-; Play background
+;Play background
 (stagecrafter_play "birds_background")
 
-; Collect environment 
+;Collect environment
 (define from_where (collector_get "from_where"))
 
-; Configure
+;Configure
 (collector_set "from_where" "lupattelli")
 
-; Setup characters
+;Setup characters
 (puppeteer_disable_control)
 (if (compare from_where "stairs")
 	(puppeteer_show "andrea" 2090)
 	(puppeteer_show "andrea" 3600)
 )
 
-; Setup characters
+;Setup characters
 (animation "andrea" 	"front")
 (main_control "andrea")
