@@ -69,6 +69,15 @@
 				{"drawable":"door_still_M"}
 			]
 		},{
+			"label":"still_M_red",
+			"layers":[
+				{
+					"drawable":"door_still_M",
+					"mask_G":180,
+					"mask_B":180
+				}
+			]
+		},{
 			"label":"still_N",
 			"layers":[
 				{"drawable":"door_still_N"}
