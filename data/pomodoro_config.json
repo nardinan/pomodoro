@@ -58,6 +58,7 @@
         {"label":"francesco",						"link":"francesco_landscape"},
         {"label":"unipgA",							"link":"unipgA_landscape"},
         {"label":"unipgB",              "link":"unipgB_landscape"},
+        {"label":"unipgC",              "link":"unipgC_landscape"},
         {"label":"panorama",						"link":"panorama_landscape"},
         {"label":"fologna",             "link":"fologna_landscape"}
     ]
