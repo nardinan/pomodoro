@@ -1,0 +1,8 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"boss_right_sadic_frame0",  "time":2.0},
+		{"drawable":"boss_right_sadic_frame1",  "time":0.1}
+	]
+}

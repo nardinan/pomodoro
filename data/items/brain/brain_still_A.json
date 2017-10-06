@@ -1,0 +1,11 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"brain_still_A_frame0",  "time":2.0},
+		{"drawable":"brain_still_A_frame1",  "time":0.1},
+		{"drawable":"brain_still_A_frame3",  "time":0.1},
+    {"drawable":"brain_still_A_frame4",  "time":0.1},
+    {"drawable":"brain_still_A_frame5",  "time":0.1}
+	]
+}

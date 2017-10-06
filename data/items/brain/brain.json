@@ -1,0 +1,13 @@
+{
+	"format":"item",
+	"ID":"brain",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"brain_still_A"}
+			]
+		}
+	]
+}
