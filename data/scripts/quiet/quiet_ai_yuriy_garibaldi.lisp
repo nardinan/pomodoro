@@ -140,7 +140,6 @@
 ;Parameters configuration
 (define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
 
-
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 

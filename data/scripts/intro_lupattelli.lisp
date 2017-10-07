@@ -2,39 +2,27 @@
 ;Module: intro_lupattelli
 ;Author: nardinan
 ;Date  : 20 Dec 2016
-
-(define animation
-	(lambda (c m)
-		(begin
-			(puppeteer_set c m)
-		)
-	)
-)
-
-(define main_control
-	(lambda (c)
-		(begin
-			(director_camera_follow c -100.0 1.0)
-			(puppeteer_enable_control c)
-		)
-	)
-)
 ;Play background
 (stagecrafter_play "birds_background")
 
 ;Collect environment
 (define from_where (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "lupattelli")
 
 ;Setup characters
 (puppeteer_disable_control)
-(if (compare from_where "stairs")
-	(puppeteer_show "andrea" 2090)
+(if (compare from_where "garibaldi")
 	(puppeteer_show "andrea" 3600)
+	(puppeteer_show "andrea" 2090)
 )
 
 ;Setup characters
-(animation "andrea" 	"front")
-(main_control "andrea")
+(puppeteer_show   "technician" 3100)
+(puppeteer_stare  "technician" "andrea")
+
+(if (compare current_chapter "quiet")
+  (director_script "quiet_intro_lupattelli")
+  nil)
