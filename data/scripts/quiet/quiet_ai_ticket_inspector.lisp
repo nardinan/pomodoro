@@ -119,7 +119,10 @@
   (begin
     (director_dialog "game_ticket_inspector_dialog_quiet_0x0a")
     (director_wait_dialog)
-    (collector_set "ticket_inspector_quiet_dialog" 1.0))
+    (collector_set "ticket_inspector_quiet_dialog" 1.0)
+
+    ;Refresh interface
+    (director_script "items_interface"))
 )
 
 ;Return the control

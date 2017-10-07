@@ -2,6 +2,10 @@
 ;Module: intro_lupattelli
 ;Author: nardinan
 ;Date  : 20 Dec 2016
+
+;Draw interface
+(director_script "items_interface")
+
 ;Play background
 (stagecrafter_play "birds_background")
 

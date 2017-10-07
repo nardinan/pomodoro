@@ -129,7 +129,10 @@
   (begin
     (director_dialog "game_baker_dialogue_quiet_0x0a")
     (director_wait_dialog)
-    (collector_set "game_baker_dialog_quiet" 1.0))
+    (collector_set "game_baker_dialog_quiet" 1.0)
+
+    ;Refresh interface
+    (director_script "items_interface"))
 )
 
 ;Return the control

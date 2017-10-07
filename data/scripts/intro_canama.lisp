@@ -125,6 +125,9 @@
     )
   )
 
+;Draw interface
+(director_script "items_interface")
+
 ;Parameters configuration
 (define note_A_taken (collector_get "note_A_taken"))
 (define intro_canama (collector_get "intro_canama"))
