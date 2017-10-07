@@ -42,7 +42,10 @@
 		)
 	)
 )
+(puppeteer_show  "ticket_inspector" 9800)
+(puppeteer_stare "ticket_inspector" "andrea")
 
 ;Setup characters
-(animation "andrea" 	"front")
+(puppeteer_stare "ticket_controller" "andrea")
+(animation "andrea" "front")
 (main_control "andrea")

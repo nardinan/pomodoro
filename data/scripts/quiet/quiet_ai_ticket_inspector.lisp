@@ -1,10 +1,10 @@
 ;Pomodoro - I have no money and I must eat an ice cream
 ;this script has been generated automatically and then has been polished manually
 ;(sounds professional, uh? Well, it is not)
-;Code name  : bkrquiet
-;Location   : Garibaldi
+;Code name  : tinspquiet
+;Location   : Corso Vannucci
 ;Author     : Nardinan
-;Description: The baker already gave you 5 euros, you can't ask for more
+;Description: After the dialogue, the ticket inspector asks Andrea to leave
 
 ;Dialogs
 (define language (collector_get "language"))
@@ -12,18 +12,15 @@
   (cons ;0 default
    ""
    "")
-  (cons ;1 baker
-   "Are you still asking for money?"
-   "Hai finito di chiedere soldi?")
-  (cons ;2 baker
-   "You should be ashamed of yourself!"
-   "Dovresti vergognarti!")
-  (cons ;3 baker
-   "Leave me alone!"
-   "Te ne vai?")
-  (cons ;4 andrea
-   "I am sorry, I clicked by mistake"
-   "Scusa, ho cliccato per sbaglio")
+  (cons ;1 ticket_inspector
+   "I don't want any junkie in my bus!"
+   "Non voglio drogati sul mio postale!")
+  (cons ;2 ticket_inspector
+   "I don't want my guests to be killed like the guy in Piazza Quattro Novembre!"
+   "Non vorrei che i miei ospiti facessero la fine del poveretto a Piazza Quattro Novembre!")
+  (cons ;3 andrea
+   "Remarkable"
+   "Ammirevole")
   nil
 ))
 
@@ -108,28 +105,21 @@
   )
 
 ;Parameters configuration
-(define got_five_euros (collector_get "got_five_euros"))
-(define game_baker_dialog_quiet (collector_get "game_baker_dialog_quiet"))
+(define ticket_inspector_quiet_dialog (collector_get "ticket_inspector_quiet_dialog"))
 
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 
 ;Action!
-(puppeteer_look "andrea" "baker")
-(if (= game_baker_dialog_quiet 1.0)
-  (if (= got_five_euros 1.0)
-    (begin
-      (say "baker" (get_dialog dialogs language 1) "bkrquiet_track1") ;preview: Are you still asking for mon... | looking at Andrea
-      (say "baker" (get_dialog dialogs language 2) "bkrquiet_track2") ;preview: You should be ashamed of you... | looking at Andrea | animation pointing
-      (say "andrea" (get_dialog dialogs language 4) "bkrquiet_track4")) ;preview: I am sorry, I clicked by mis... | looking at Baker
-    (begin
-      (say "baker" (get_dialog dialogs language 3) "bkrquiet_track3") ;preview: Leave me alone! | looking at Andrea
-      (say "andrea" (get_dialog dialogs language 4) "bkrquiet_track4")) ;preview: I am sorry, I clicked by mis... | looking at Baker
-  )
+(if (= ticket_inspector_quiet_dialog 1.0)
   (begin
-    (director_dialog "game_baker_dialogue_quiet_0x0a")
+    (say "ticket_inspector" (get_dialog dialogs language 1) "tinspquiet_track1") ;preview: I don't want any junkie in m... | looking at Andrea
+    (say "ticket_inspector" (get_dialog dialogs language 2) "tinspquiet_track2") ;preview: I don't want my guests to be... | looking at Andrea | animation pointing
+    (say "andrea" (get_dialog dialogs language 3) "tinspquiet_track3")) ;preview: Remarkable | looking at Ticket_inspector
+  (begin
+    (director_dialog "game_ticket_inspector_dialog_quiet_0x0a")
     (director_wait_dialog)
-    (collector_set "game_baker_dialog_quiet" 1.0))
+    (collector_set "ticket_inspector_quiet_dialog" 1.0))
 )
 
 ;Return the control
