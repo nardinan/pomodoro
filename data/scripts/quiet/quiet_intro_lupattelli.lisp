@@ -37,36 +37,42 @@
    "I can't wait to do it!"
    "E ti assicuro che non vedo l'ora!")
   (cons ;9 andrea
-   "Oh, ehm, I'm going to pay the bill right now!"
-   "Ma no, sto andando a pagare la bolletta ora . . .")
+   "Are you the guy from ENEL?"
+   "Sei il tipo dell'ENEL?")
   (cons ;10 technician
+   "Bingo!"
+   "Bingo!")
+  (cons ;11 andrea
+   "Oh, ehm, I'm going to pay the bill right now!"
+   "Ehm, sto andando a pagare la bolletta ora . . .")
+  (cons ;12 technician
    "Are you kidding?"
    "Ma chi prendi in giro?")
-  (cons ;11 technician
+  (cons ;13 technician
    "You're a beggar!"
    "Sei un morto di fame!")
-  (cons ;12 andrea
+  (cons ;14 andrea
    "Ehm . . ."
    "Ehm . . .")
-  (cons ;13 technician
+  (cons ;15 technician
    "You'll be fucked up!"
    "Domani sono cazzi tuoi!")
-  (cons ;14 andrea
+  (cons ;16 andrea
    "God, it is a shitty day indeed"
    "Che giornatina . . .")
-  (cons ;15 technician
+  (cons ;17 technician
    "What do you want?"
    "Cosa vuoi?")
-  (cons ;16 andrea
+  (cons ;18 andrea
    "I wanted to know if I can postpone the cut of the power . . ."
    "Volevo sapere se c'era qualche possibilita' di posticipare il taglio della corrente?")
-  (cons ;17 technician
+  (cons ;19 technician
    "Sure"
    "Certo")
-  (cons ;18 technician
+  (cons ;20 technician
    "You have to pay the bill to avoid such fate"
    "Con i soldi della bolletta potresti scampare a questo destino")
-  (cons ;19 technician
+  (cons ;21 technician
    "At least for another month"
    "Almeno per un altro mese")
   nil
@@ -193,16 +199,20 @@
     (animation "technician" "point_left")
     (say "technician" (get_dialog dialogs language 8) "techquiet_track8") ;preview: I can't wait to do it! | looking at Andrea | animation pointing
     (animation "technician" "still_left")
-    (say "andrea" (get_dialog dialogs language 9) "techquiet_track9") ;preview: Oh, ehm, I'm going to pay th... | looking at Technician
-    (say "technician" (get_dialog dialogs language 10) "techquiet_track10") ;preview: Are you kidding? | looking at Andrea
-    (say "technician" (get_dialog dialogs language 11) "techquiet_track11") ;preview: You're a beggar! | looking at Andrea
+    ;Script suggestion: I due si guardano per qualche secondo
+    (director_wait_time 2.0)
+    (say "andrea" (get_dialog dialogs language 9) "techquiet_track9") ;preview: Are you the guy from ENEL? | looking at Technician
+    (say "technician" (get_dialog dialogs language 10) "techquiet_track10") ;preview: Bingo! | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 11) "techquiet_track11") ;preview: Oh, ehm, I'm going to pay th... | looking at Technician
+    (say "technician" (get_dialog dialogs language 12) "techquiet_track12") ;preview: Are you kidding? | looking at Andrea
+    (say "technician" (get_dialog dialogs language 13) "techquiet_track13") ;preview: You're a beggar! | looking at Andrea
     (animation "andrea" "scratch_right")
-    (say "andrea" (get_dialog dialogs language 12) "techquiet_track12") ;preview: Ehm . . . | looking at Technician | animation scratching his head
+    (say "andrea" (get_dialog dialogs language 14) "techquiet_track14") ;preview: Ehm . . . | looking at Technician | animation scratching his head
     (animation "technician" "point_left")
-    (say "technician" (get_dialog dialogs language 13) "techquiet_track13") ;preview: You'll be fucked up! | looking at Andrea | animation pointing
+    (say "technician" (get_dialog dialogs language 15) "techquiet_track15") ;preview: You'll be fucked up! | looking at Andrea | animation pointing
     (animation "technician" "still_left")
     (animation "andrea" "front")
-    (say "andrea" (get_dialog dialogs language 14) "techquiet_track14") ;preview: God, it is a shitty day indeed | looking at Main Camera
+    (say "andrea" (get_dialog dialogs language 16) "techquiet_track16") ;preview: God, it is a shitty day indeed | looking at Main Camera
 
     (puppeteer_stare 	"technician" "andrea")
 

@@ -37,36 +37,42 @@
    "I can't wait to do it!"
    "E ti assicuro che non vedo l'ora!")
   (cons ;9 andrea
-   "Oh, ehm, I'm going to pay the bill right now!"
-   "Ma no, sto andando a pagare la bolletta ora . . .")
+   "Are you the guy from ENEL?"
+   "Sei il tipo dell'ENEL?")
   (cons ;10 technician
+   "Bingo!"
+   "Bingo!")
+  (cons ;11 andrea
+   "Oh, ehm, I'm going to pay the bill right now!"
+   "Ehm, sto andando a pagare la bolletta ora . . .")
+  (cons ;12 technician
    "Are you kidding?"
    "Ma chi prendi in giro?")
-  (cons ;11 technician
+  (cons ;13 technician
    "You're a beggar!"
    "Sei un morto di fame!")
-  (cons ;12 andrea
+  (cons ;14 andrea
    "Ehm . . ."
    "Ehm . . .")
-  (cons ;13 technician
+  (cons ;15 technician
    "You'll be fucked up!"
    "Domani sono cazzi tuoi!")
-  (cons ;14 andrea
+  (cons ;16 andrea
    "God, it is a shitty day indeed"
-   "Che giornata di merda")
-  (cons ;15 technician
+   "Che giornatina . . .")
+  (cons ;17 technician
    "What do you want?"
    "Cosa vuoi?")
-  (cons ;16 andrea
+  (cons ;18 andrea
    "I wanted to know if I can postpone the cut of the power . . ."
    "Volevo sapere se c'era qualche possibilita' di posticipare il taglio della corrente?")
-  (cons ;17 technician
+  (cons ;19 technician
    "Sure"
    "Certo")
-  (cons ;18 technician
+  (cons ;20 technician
    "You have to pay the bill to avoid such fate"
    "Con i soldi della bolletta potresti scampare a questo destino")
-  (cons ;19 technician
+  (cons ;21 technician
    "At least for another month"
    "Almeno per un altro mese")
   nil
@@ -156,11 +162,11 @@
 (puppeteer_disable_control)
 
 ;Action!
-(say "technician" (get_dialog dialogs language 15) "techquiet_track15") ;preview: What do you want? | looking at Andrea
-(say "andrea" (get_dialog dialogs language 16) "techquiet_track16") ;preview: I wanted to know if I can po... | looking at Technician
-(say "technician" (get_dialog dialogs language 17) "techquiet_track17") ;preview: Sure | looking at Andrea
-(say "technician" (get_dialog dialogs language 18) "techquiet_track18") ;preview: You have to pay the bill to ... | looking at Andrea
-(say "technician" (get_dialog dialogs language 19) "techquiet_track19") ;preview: At least for another month | looking at Andrea
+(say "technician" (get_dialog dialogs language 17) "techquiet_track17") ;preview: What do you want? | looking at Andrea
+(say "andrea" (get_dialog dialogs language 18) "techquiet_track18") ;preview: I wanted to know if I can po... | looking at Technician
+(say "technician" (get_dialog dialogs language 19) "techquiet_track19") ;preview: Sure | looking at Andrea
+(say "technician" (get_dialog dialogs language 20) "techquiet_track20") ;preview: You have to pay the bill to ... | looking at Andrea
+(say "technician" (get_dialog dialogs language 21) "techquiet_track21") ;preview: At least for another month | looking at Andrea
 
 ;Return the control
 (main_control "andrea")
