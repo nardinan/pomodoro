@@ -38,7 +38,8 @@
         {"label":"bruno",					"link":"bruno_character",				"controllable":false, "script":"ai_bruno"},
         {"label":"mariano",				"link":"mariano_character",			"controllable":false, "script":"ai_mariano"},
         {"label":"federico",			"link":"federico_character",		"controllable":false, "script":"ai_federico"},
-        {"label":"chaos",         "link":"chaos_character",       "controllable":false, "script":"ai_chaos"}
+        {"label":"chaos",         "link":"chaos_character",       "controllable":false, "script":"ai_chaos"},
+        {"label":"technician",    "link":"technician_character",  "controllable":false, "script":"ai_technician"}
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},
