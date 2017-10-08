@@ -108,7 +108,13 @@
 	)
 )
 (puppeteer_show  "ticket_inspector" 9800)
+(puppeteer_show  "jamal" 		        6900)
+(puppeteer_show  "gianni"           4500)
+(puppeteer_show  "mariano"          4200)
 (puppeteer_stare "ticket_inspector" "andrea")
+(animation       "jamal"            "back")
+(animation       "gianni"           "still_left")
+(animation       "mariano"          "still_right")
 
 ;Setup characters
 (puppeteer_stare "ticket_controller" "andrea")

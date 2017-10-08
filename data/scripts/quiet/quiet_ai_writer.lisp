@@ -1,7 +1,34 @@
 ;Pomodoro - I have no money and I must eat an ice cream
-;Module: intro_november
-;Author: nardinan
-;Date  : 4 Feb 2017
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : writquiet
+;Location   : Innamorati
+;Author     : Nardinan
+;Description: The writer stands there, in fron of the wall, thinking how to create a piece of art
+
+;Dialogs
+(define language (collector_get "language"))
+(define dialogs (list
+  (cons ;0 default
+   ""
+   "")
+  (cons ;1 writer
+   "Leave me alone!"
+   "Lasciami in pace!")
+  (cons ;2 writer
+   "I am not a junkie!"
+   "Non sono un drogato!")
+  (cons ;3 writer
+   "I'm just trying to create something."
+   "Sto solo cercando di creare qualcosa.")
+  (cons ;4 andrea
+   "Everyone is so touchy in this city . . ."
+   "Tutti permalosi . . .")
+  (cons ;5 andrea
+   "Who knows what piece of art he will draw here!"
+   "Chissa' che capolavoro tirera' fuori!")
+  nil
+))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -83,45 +110,28 @@
     )
   )
 
-;Draw interface
-(director_script "items_interface")
+;Parameters configuration
+(define writer_quiet_dialog (collector_get "writer_quiet_dialog"))
 
-;Play background
-(stagecrafter_play "people_background")
-
-;Collect environment
-(define from_where (collector_get "from_where"))
-(define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
-(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
-
-;Configure
-(collector_set "from_where" "november")
-
-;Setup characters
+;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
-(if (compare from_where "fortebraccio")
-	(puppeteer_show "andrea" 980)
-	(if (compare from_where "vannucci")
-		(puppeteer_show "andrea" 7500)
-		(puppeteer_show "andrea" 7900)
-	)
-)
-(puppeteer_show "policeman" 3000)
 
-;Setup characters
-(animation "andrea" 		"front")
-(animation "policeman" 	"front")
-(if (= yuriy_quiet_dialog_garibaldi 1.0)
-	(if (= yuriy_quiet_dialog_november 1.0)
-		nil
-		(begin
-			(puppeteer_show "andrii" 6800)
-			(puppeteer_show "yuriy"  6400)
-			(animation "andrii" "still_left_radar_up")
-			(animation "yuriy" "still_right"))
-		)
-		nil
+;Action!
+(if (= writer_quiet_dialog 1.0)
+  (begin
+    (animation "andrea" "front")
+    (say "andrea" (get_dialog dialogs language 5) "writquiet_track5")) ;preview: Who knows what piece of art ... | looking at Main Camera
+  (begin
+    (puppeteer_look "andrea" "writer")
+    (say "writer" (get_dialog dialogs language 1) "writquiet_track1") ;preview: Leave me alone! | animation back
+    (say "writer" (get_dialog dialogs language 2) "writquiet_track2") ;preview: I am not a junkie! | animation back
+    (say "writer" (get_dialog dialogs language 3) "writquiet_track3") ;preview: I'm just trying to create so... | animation back
+    (animation "andrea" "front")
+    (say "andrea" (get_dialog dialogs language 4) "writquiet_track4") ;preview: Everyone is so touchy in thi... | looking at Main Camera
+
+    ;And never again
+    (collector_set "writer_quiet_dialog" 1.0))
 )
 
-;Setup character
+;Return the control
 (main_control "andrea")

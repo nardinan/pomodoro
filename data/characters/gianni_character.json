@@ -3,9 +3,9 @@
   "ID": "gianni",
   "zoom": 20,
   "bubble": {
-    "mask_R": 140,
-    "mask_G": 120,
-    "mask_B": 30,
+    "mask_R": 180,
+    "mask_G": 40,
+    "mask_B": 40,
     "mask_A": 255,
     "offset_y": -13,
     "corner_top_left": "bubble_TL",
@@ -213,32 +213,6 @@
       }
     },
     {
-      "label": "still_right",
-      "offset_x": 200,
-      "flip_x": true,
-      "head": {
-        "drawable": "head_set_blank_side"
-      },
-      "hair": {
-        "drawable": "hair_set_bald_patch_side"
-      },
-      "eyes": {
-        "drawable": "eyes_set_blank_side"
-      },
-      "body": {
-        "drawable": "shirt_set_blank_side_walk_frame0",
-        "offset_y": 10
-      },
-      "arms": {
-        "drawable": "arms_set_blank_side_walk_frame0",
-        "offset_y": 10
-      },
-      "legs": {
-        "drawable": "legs_set_blank_side_walk_frame0",
-        "offset_y": 20
-      }
-    },
-    {
       "label": "scratch_right",
       "offset_x": 200,
       "flip_x": true,
@@ -291,7 +265,7 @@
       }
     },
     {
-      "label":"drink_right",
+      "label":"still_right",
       "offset_x":-200,
       "flip_x": true,
       "head": {
@@ -309,31 +283,6 @@
       },
       "arms": {
         "drawable": "arms_set_blank_side_drink",
-        "offset_y": 10
-      },
-      "legs": {
-        "drawable": "legs_set_blank_side_walk_frame0",
-        "offset_y": 20
-      }
-    },
-    {
-      "label": "still_left",
-      "offset_x": -200,
-      "head": {
-        "drawable": "head_set_blank_side"
-      },
-      "hair": {
-        "drawable": "hair_set_bald_patch_side"
-      },
-      "eyes": {
-        "drawable": "eyes_set_blank_side"
-      },
-      "body": {
-        "drawable": "shirt_set_blank_side_walk_frame0",
-        "offset_y": 10
-      },
-      "arms": {
-        "drawable": "arms_set_blank_side_walk_frame0",
         "offset_y": 10
       },
       "legs": {
@@ -392,7 +341,7 @@
       }
     },
     {
-      "label":"drink_left",
+      "label":"still_left",
       "offset_x":-200,
       "head": {
         "drawable": "head_set_blank_side"

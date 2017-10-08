@@ -1,7 +1,28 @@
 ;Pomodoro - I have no money and I must eat an ice cream
-;Module: intro_november
-;Author: nardinan
-;Date  : 4 Feb 2017
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : jamquiet
+;Location   : Piazza Italia
+;Author     : Madmoon
+;Description: Andrea meets Jamal (a random citizen) and he asks for the time
+
+;Dialogs
+(define language (collector_get "language"))
+(define dialogs (list
+  (cons ;0 default
+   ""
+   "")
+  (cons ;1 andrea
+   "Excuse me, what time is it?"
+   "Scusi, mi sa dire l'ora?")
+  (cons ;2 jamal
+   "Leave me alone, junkie!"
+   "Mi lasci in pace, drogato!")
+  (cons ;3 andrea
+   "Nice guy!"
+   "Che tipo!")
+  nil
+))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -83,45 +104,17 @@
     )
   )
 
-;Draw interface
-(director_script "items_interface")
-
-;Play background
-(stagecrafter_play "people_background")
-
-;Collect environment
-(define from_where (collector_get "from_where"))
-(define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
-(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
-
-;Configure
-(collector_set "from_where" "november")
-
-;Setup characters
+;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
-(if (compare from_where "fortebraccio")
-	(puppeteer_show "andrea" 980)
-	(if (compare from_where "vannucci")
-		(puppeteer_show "andrea" 7500)
-		(puppeteer_show "andrea" 7900)
-	)
-)
-(puppeteer_show "policeman" 3000)
 
-;Setup characters
-(animation "andrea" 		"front")
-(animation "policeman" 	"front")
-(if (= yuriy_quiet_dialog_garibaldi 1.0)
-	(if (= yuriy_quiet_dialog_november 1.0)
-		nil
-		(begin
-			(puppeteer_show "andrii" 6800)
-			(puppeteer_show "yuriy"  6400)
-			(animation "andrii" "still_left_radar_up")
-			(animation "yuriy" "still_right"))
-		)
-		nil
-)
+;Action!
+(puppeteer_look "andrea" "jamal")
+(puppeteer_look "jamal" "andrea")
+(say "andrea" (get_dialog dialogs language 1) "jamquiet_track1") ;preview: Excuse me, what time is it? | looking at Jamal
+(say "jamal" (get_dialog dialogs language 2) "jamquiet_track2") ;preview: Leave me alone, junkie! | looking at Andrea
+(animation "jamal"  "back")
+(animation "andrea" "front")
+(say "andrea" (get_dialog dialogs language 3) "jamquiet_track3") ;preview: Nice guy! | looking at Main Camera
 
-;Setup character
+;Return the control
 (main_control "andrea")

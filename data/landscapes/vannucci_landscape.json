@@ -9,6 +9,9 @@
 	"tracks":[
 		{"label":"people_background", "playable":"vannucci_background_noise"}
 	],
+	"scripts":[
+		{"label":"update",	"script":"update_vannucci", "frequency":5}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":3010.0

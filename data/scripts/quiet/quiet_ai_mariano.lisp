@@ -1,8 +1,31 @@
 ;Pomodoro - I have no money and I must eat an ice cream
-;Module: intro_november
-;Author: nardinan
-;Date  : 4 Feb 2017
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : marquiet
+;Location   : Corso Vannucci
+;Author     : Madmoon
+;Description: Andrea meets a person in Corso Vannucci and he tries to talk with him
 
+;Dialogs
+(define language (collector_get "language"))
+(define dialogs (list
+  (cons ;0 default
+   ""
+   "")
+  (cons ;1 mariano
+   "Boy, don't you see I'm discussing with the future major of the great Perugia City?"
+   "Ragazzo, non vedi che sto amorevolmente parlando con il futuro sindaco di Perugia?")
+  (cons ;2 mariano
+   "I will not give anything to buy the drug, go away!"
+   "Non te li do i soldi per comprarti la droga, pussa via! ")
+  (cons ;3 mariano
+   "Vote for Gianni!"
+   "Vota Gianni!")
+  (cons ;4 andrea
+   "Maybe it's better not to push"
+   "Forse e' meglio non insistere")
+  nil
+))
 ;High level functions
 ;@brief: say <character> <message>
 ;@description: character <character> says <message> and the system waits for the bubble to disappear
@@ -83,45 +106,29 @@
     )
   )
 
-;Draw interface
-(director_script "items_interface")
+;Parameters configuration
+(define mariano_quiet_dialog_vannucci (collector_get "mariano_quiet_dialog_vannucci"))
+(collector_set "quiet_mariano_and_gianni_ongoing" 1.0)
 
-;Play background
-(stagecrafter_play "people_background")
-
-;Collect environment
-(define from_where (collector_get "from_where"))
-(define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
-(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
-
-;Configure
-(collector_set "from_where" "november")
-
-;Setup characters
+;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
-(if (compare from_where "fortebraccio")
-	(puppeteer_show "andrea" 980)
-	(if (compare from_where "vannucci")
-		(puppeteer_show "andrea" 7500)
-		(puppeteer_show "andrea" 7900)
-	)
-)
-(puppeteer_show "policeman" 3000)
 
-;Setup characters
-(animation "andrea" 		"front")
-(animation "policeman" 	"front")
-(if (= yuriy_quiet_dialog_garibaldi 1.0)
-	(if (= yuriy_quiet_dialog_november 1.0)
-		nil
-		(begin
-			(puppeteer_show "andrii" 6800)
-			(puppeteer_show "yuriy"  6400)
-			(animation "andrii" "still_left_radar_up")
-			(animation "yuriy" "still_right"))
-		)
-		nil
+;Action!
+(if (= mariano_quiet_dialog_vannucci 1.0)
+  (begin
+    (animation "andrea" "front")
+    (say "andrea" (get_dialog dialogs language 4) "marquiet_track4")) ;preview: Maybe it's better not to push | looking at Main Camera
+  (begin
+    (puppeteer_look "mariano" "andrea")
+    (puppeteer_look "andrea" "mariano")
+    (say "mariano" (get_dialog dialogs language 1) "marquiet_track1") ;preview: Boy, don't you see I'm discu... | looking at Andrea
+    (say "mariano" (get_dialog dialogs language 2) "marquiet_track2") ;preview: I will not give anything to ... | looking at Andrea
+    (say "mariano" (get_dialog dialogs language 3) "marquiet_track3") ;preview: Vote for Gianni! | looking at Andrea | animation pointing
+
+    ;And never again
+    (collector_set "mariano_quiet_dialog_vannucci" 1.0))
 )
 
-;Setup character
+;Return the control
+(collector_set "quiet_mariano_and_gianni_ongoing" 0.0)
 (main_control "andrea")
