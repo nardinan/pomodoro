@@ -216,6 +216,7 @@
 
     (puppeteer_stare 	"technician" "andrea")
 
+    ;And never again
     (collector_set "technician_quiet_dialog_lupattelli" 1.0))
 )
 

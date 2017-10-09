@@ -129,6 +129,8 @@
   (begin
     (director_dialog "game_baker_dialogue_quiet_0x0a")
     (director_wait_dialog)
+
+    ;And never again
     (collector_set "game_baker_dialog_quiet" 1.0)
 
     ;Refresh interface

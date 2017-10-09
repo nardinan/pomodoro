@@ -82,7 +82,7 @@
       )
     )
   )
-	
+
 ;Draw interface
 (director_script "items_interface")
 
@@ -96,10 +96,8 @@
 (puppeteer_disable_control)
 (puppeteer_show "andrea"  590)
 (puppeteer_show "massimo" 2700)
-(puppeteer_show "nerd"    2100)
 
 ;Setup characters
 (animation "andrea" 	"front")
 (animation "massimo"	"still_left")
-(animation "nerd"     "still_right")
 (main_control "andrea")

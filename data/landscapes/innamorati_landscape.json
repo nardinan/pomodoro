@@ -47,6 +47,7 @@
 		{"label":"door_F",		"item":"door",			"status":"still_I",			"position_x":5490.0,	"position_y":2760.0,	"zoom":1.25},
 		{"label":"door_G",		"item":"door",			"status":"still_J",			"position_x":8040.0,	"position_y":2750.0,	"zoom":1.25},
 		{"label":"door_H",		"item":"door",			"status":"still_K",			"position_x":8740.0,	"position_y":2750.0,	"zoom":1.25},
+		{"label":"coverture",	"item":"wall",			"status":"still_A",			"position_x":9220.0,	"position_y":2860.0,	"zoom":2.00},
 		{"label":"window_A",	"item":"window",		"status":"outside_A",		"position_x":310.0,		"position_y":2020.0,	"zoom":1.25},
 		{"label":"window_B",	"item":"window",		"status":"outside_A",		"position_x":1040.0,	"position_y":2030.0,	"zoom":1.25},
 		{"label":"window_C",	"item":"window",		"status":"outside_C",		"position_x":1530.0,	"position_y":1850.0,	"zoom":1.25},

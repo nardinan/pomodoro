@@ -111,14 +111,17 @@
 (puppeteer_disable_control)
 
 ;Action!
+(puppeteer_look "andrea" "ticket_inspector")
 (if (= ticket_inspector_quiet_dialog 1.0)
   (begin
     (say "ticket_inspector" (get_dialog dialogs language 1) "tinspquiet_track1") ;preview: I don't want any junkie in m... | looking at Andrea
     (say "ticket_inspector" (get_dialog dialogs language 2) "tinspquiet_track2") ;preview: I don't want my guests to be... | looking at Andrea | animation pointing
     (say "andrea" (get_dialog dialogs language 3) "tinspquiet_track3")) ;preview: Remarkable | looking at Ticket_inspector
   (begin
-    (director_dialog "game_ticket_inspector_dialog_quiet_0x0a")
+    (director_dialog "game_ticket_inspector_dialogue_quiet_0x0a")
     (director_wait_dialog)
+
+    ;And never again
     (collector_set "ticket_inspector_quiet_dialog" 1.0)
 
     ;Refresh interface

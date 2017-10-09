@@ -3,9 +3,9 @@
   "ID": "massimo",
   "zoom": 20,
   "bubble": {
-    "mask_R": 220,
-    "mask_G": 220,
-    "mask_B": 220,
+    "mask_R": 60,
+    "mask_G": 60,
+    "mask_B": 60,
     "mask_A": 255,
     "offset_y": -13,
     "corner_top_left": "bubble_TL",
@@ -219,6 +219,63 @@
         "drawable": "legs_set_blank_back",
         "offset_y": 20,
         "flip_x": true
+      }
+    },
+    {
+      "label": "point_right",
+      "offset_x": 200,
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_side",
+        "offset_y": -2
+      },
+      "hair": {
+        "drawable": "hair_set_bald_side",
+        "offset_y": -2
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side",
+        "offset_y": -2
+      },
+      "body": {
+        "drawable": "body_set_blank_side_point",
+        "offset_y": 8
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_point",
+        "offset_y": 8
+      },
+      "legs": {
+        "drawable": "legs_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "point_left",
+      "offset_x": -200,
+      "head": {
+        "drawable": "head_set_blank_side",
+        "offset_y": -2
+      },
+      "hair": {
+        "drawable": "hair_set_bald_side",
+        "offset_y": -2
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side",
+        "offset_y": -2
+      },
+      "body": {
+        "drawable": "body_set_blank_side_point",
+        "offset_y": 8
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_point",
+        "offset_y": 8
+      },
+      "legs": {
+        "drawable": "legs_set_blank_side_walk_frame0",
+        "offset_y": 20
       }
     }
   ]

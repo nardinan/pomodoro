@@ -1,20 +1,28 @@
 ;Pomodoro - I have no money and I must eat an ice cream
-;Module: ai_chaos
-;Author: nardinan
-;Date  : 19 Sept 2017
-;This module contains the artificial intelligence for Chaos
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : masjuquiet
+;Location   : Med Store
+;Author     : Nardinan
+;Description: Massimo complains about the criminality that is investing the city
 
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-	(cons ;0 default
+  (cons ;0 default
    ""
    "")
-	(cons ;1 chaos
- 	 "You should go. Backstage is not the right place for the main character"
-	 "Dovresti andare. Il retroscena non e' il posto giusto per il protagonista")
-	)
-)
+  (cons ;1 massimo
+   "People like you should be locked up in a Community Center!"
+   "Gente come te, dovrebbe essere rinchiusa in un centro sociale!")
+  (cons ;2 andrea
+   "I am just slightly addicted to pizza . . ."
+   "Ho solo una lieve dipendenza da pizza . . .")
+  (cons ;3 andrea
+   "But I am working on it!"
+   "Ma ci sto lavorando!")
+  nil
+))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -96,19 +104,29 @@
     )
   )
 
-;Collect environment
-(define chaos_visited (collector_get "chaos_visited"))
+;Parameters configuration
+(define massimo_quiet_dialog (collector_get "massimo_quiet_dialog"))
 
-;Script
+;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
-(puppeteer_look "andrea" "chaos")
-(if (= chaos_visited 1.0)
-	(say "chaos" 	(get_dialog dialogs language 1) "chaos_track1")
-	(begin
-		(director_dialog "game_chaos_dialogue")
-		(director_wait_dialog)
-		(collector_set "chaos_visited" 1)
-	)
+
+;Action!
+(puppeteer_look "andrea" "massimo")
+(if (= massimo_quiet_dialog 1.0)
+  (begin
+    (animation "massimo" "point_left")
+    (say "massimo" (get_dialog dialogs language 1) "masjuquiet_track1") ;preview: People like you should be lo... | looking at Andrea | animation pointing
+    (animation "massimo" "still_left")
+    (say "andrea" (get_dialog dialogs language 2) "masjuquiet_track2") ;preview: I am just slightly addicted ... | looking at Massimo
+    (animation "andrea" "scratch_right")
+    (say "andrea" (get_dialog dialogs language 3) "masjuquiet_track3")) ;preview: But I am working on it! | looking at Massimo | animation scratching his head
+  (begin
+    (director_dialog "game_massimo_dialogue_quiet_0x0a")
+    (director_wait_dialog)
+
+    ;And never again
+    (collector_set "massimo_quiet_dialog" 1.0))
 )
+
 ;Return the control
 (main_control "andrea")

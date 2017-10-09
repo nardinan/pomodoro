@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"wall",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"none",
+			"layers":[
+				{"drawable":"empty_particle"}
+			]
+		},{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"wall_still_A"}
+			]
+		}
+	]
+}

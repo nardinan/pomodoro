@@ -207,9 +207,9 @@
     (say "roberto" (get_dialog dialogs language 18) "robquiet_track18") ;preview:  I'm waiting for the end of ... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 19) "robquiet_track19") ;preview: We go from bad to worse | looking at Roberto
     (say "roberto" (get_dialog dialogs language 20) "robquiet_track20") ;preview: Leave me alone now! I need t... | looking at Andrea
+    (puppeteer_stare "roberto" "andrea")
 
     ;And never again
-    (puppeteer_stare "roberto" "andrea")
     (collector_set "roberto_quiet_dialog" 1.0))
 )
 

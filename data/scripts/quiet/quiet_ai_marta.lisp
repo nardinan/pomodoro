@@ -221,6 +221,8 @@
 
     (puppeteer_show "marta" -200)
     (puppeteer_show "bruno" -200)
+
+    ;And never again
     (collector_set "marta_quiet_dialog" 1.0))
 )
 

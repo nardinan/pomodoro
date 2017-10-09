@@ -31,7 +31,7 @@
    "Uhm . . ."
    "Uhm . . .")
   (cons ;7 andrea
-   "This 2012 smells like 1992"
+   "This 2012 smells like 1992 . . ."
    "Questo 2012 mi puzza di 1992 . . .")
   (cons ;8 andrea
    "What are you doing?"
