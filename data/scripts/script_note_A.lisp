@@ -176,7 +176,7 @@
     )
   )
 ;Parameters configuration
-(define note_A_taken (collector_get "note_A_taken"))
+(define got_note (collector_get "got_note"))
 
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
@@ -185,7 +185,7 @@
 ;Action!
 (puppeteer_disable_control)
 (animation "andrea" "back")
-(if (not (= note_A_taken 1.0))
+(if (not (= got_note 1.0))
 	(begin
 		(say "andrea" (get_dialog dialogs language 1) "cugmny_track1") ;preview: Oh, look! | animation back
 		(say "andrea" (get_dialog dialogs language 2) "cugmny_track2") ;preview: Calculus 2 | animation back
@@ -251,8 +251,11 @@
 		(puppeteer_stare "luca" "andrea")
 
 		;And never again
-		(collector_set "intro_canama" 1)
-    (collector_set "note_A_taken" 1)
+		(collector_set "intro_canama" 1.0)
+    (collector_set "got_note" 1.0)
+
+    ;Refresh interface
+    (director_script "items_interface")
 
 		;Cleanup
 		(effecteer_delete "flash")

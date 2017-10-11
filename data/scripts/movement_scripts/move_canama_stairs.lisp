@@ -44,9 +44,9 @@
 )
 
 ; Collect environment 
-(define note_A_taken (collector_get "note_A_taken"))
+(define got_note (collector_get "got_note"))
 
-(if (not (= note_A_taken 1.0))
+(if (not (= got_note 1.0))
 	(begin
 		(animation "andrea" "front")
 		(say "andrea" (get_dialog dialogs language 0)))

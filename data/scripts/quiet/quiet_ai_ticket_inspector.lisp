@@ -106,6 +106,7 @@
 
 ;Parameters configuration
 (define ticket_inspector_quiet_dialog (collector_get "ticket_inspector_quiet_dialog"))
+(define got_beer (collector_get "got_beer"))
 
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
@@ -113,10 +114,18 @@
 ;Action!
 (puppeteer_look "andrea" "ticket_inspector")
 (if (= ticket_inspector_quiet_dialog 1.0)
-  (begin
-    (say "ticket_inspector" (get_dialog dialogs language 1) "tinspquiet_track1") ;preview: I don't want any junkie in m... | looking at Andrea
-    (say "ticket_inspector" (get_dialog dialogs language 2) "tinspquiet_track2") ;preview: I don't want my guests to be... | looking at Andrea | animation pointing
-    (say "andrea" (get_dialog dialogs language 3) "tinspquiet_track3")) ;preview: Remarkable | looking at Ticket_inspector
+  (if (= got_beer 1.0)
+    (begin
+      (director_dialog "game_ticket_inspector_dialogue_quiet_gotbeer_0x0a")
+      (director_wait_dialog)
+
+      ;Refresh interface
+      (director_script "items_interface"))
+    (begin
+      (say "ticket_inspector" (get_dialog dialogs language 1) "tinspquiet_track1") ;preview: I don't want any junkie in m... | looking at Andrea
+      (say "ticket_inspector" (get_dialog dialogs language 2) "tinspquiet_track2") ;preview: I don't want my guests to be... | looking at Andrea | animation pointing
+      (say "andrea" (get_dialog dialogs language 3) "tinspquiet_track3")) ;preview: Remarkable | looking at Ticket_inspector
+  )
   (begin
     (director_dialog "game_ticket_inspector_dialogue_quiet_0x0a")
     (director_wait_dialog)

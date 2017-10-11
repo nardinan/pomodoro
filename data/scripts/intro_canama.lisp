@@ -129,10 +129,10 @@
 (director_script "items_interface")
 
 ;Parameters configuration
-(define note_A_taken (collector_get "note_A_taken"))
+(define got_note (collector_get "got_note"))
 (define intro_canama (collector_get "intro_canama"))
 (collector_set "from_where" "canama")
-(if (= note_A_taken 1.0)
+(if (= got_note 1.0)
 	(begin
 		(stagecrafter_set_item "notes_A" "none")
 		(stagecrafter_enable_item "bed_B"))
@@ -146,7 +146,7 @@
 
 ;Action!
 (if (= intro_canama 1.0)
-	(if (= note_A_taken 1.0)
+	(if (= got_note 1.0)
 		(begin
 			(puppeteer_show "luca" 4500)
 			(puppeteer_stare "luca" "andrea"))

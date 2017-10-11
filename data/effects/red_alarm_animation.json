@@ -4,7 +4,6 @@
 	"mask_A":50.0,
 	"frames":[
 		{"drawable":"red_layer",  		"time":0.6},
-		{"drawable":"#null",	      	"time":0.8}
+		{"drawable":"empty_particle",	"time":0.8}
 	]
 }
-	
