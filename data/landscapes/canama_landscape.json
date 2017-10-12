@@ -42,7 +42,7 @@
 		{"label":"laundry_basket",		"item":"laundry_basket",		"status":"still",								"position_x":2420.0,	"position_y":930.0,		"zoom":1.25},
 		{"label":"whiteboard_A",			"item":"whiteboard_A",			"status":"note1",								"position_x":1060.0,	"position_y":630.0,		"zoom":1.25},
 		{"label":"whiteboard_B",			"item":"whiteboard_A",			"status":"note2",								"position_x":780.0,		"position_y":630.0,		"zoom":1.25},
-		{"label":"bed_A",							"item":"bed",								"status":"still_A",							"position_x":805.0,		"position_y":970.0,		"zoom":1.25},
+		{"label":"bed_A",							"item":"bed",								"status":"still_A",							"position_x":805.0,		"position_y":970.0,		"zoom":1.25,										  "active":true,		"script":"script_bed_A"},
 		{"label":"carpet_A",					"item":"carpet",						"status":"color_rainbow_dirty",	"position_x":720.0,		"position_y":1200.0,	"zoom":1.25},
 		{"label":"trash_A",						"item":"trash_can",					"status":"still_A",							"position_x":1620.0,	"position_y":1020.0,	"zoom":1.25},
 		{"label":"window_A",					"item":"window",						"status":"inside_B",						"position_x":1500.0,	"position_y":640.0,		"zoom":1.25},
