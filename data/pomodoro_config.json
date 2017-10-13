@@ -41,7 +41,8 @@
         {"label":"chaos",               "link":"chaos_character",               "controllable":false, "script":"ai_chaos"},
         {"label":"technician",          "link":"technician_character",          "controllable":false, "script":"ai_technician"},
         {"label":"ticket_inspector",    "link":"ticket_inspector_character",    "controllable":false, "script":"ai_ticket_inspector"},
-        {"label":"letizia",             "link":"letizia_character",             "controllable":false, "script":"ai_letizia"}
+        {"label":"letizia",             "link":"letizia_character",             "controllable":false, "script":"ai_letizia"},
+        {"label":"mustafa",             "link":"mustafa_character",             "controllable":false, "script":"ai_mustafa"}
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},
