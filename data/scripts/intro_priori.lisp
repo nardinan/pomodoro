@@ -83,6 +83,9 @@
     )
   )
 
+;Draw interface
+(director_script "items_interface")
+
 ;Play background
 (stagecrafter_play "people_background")
 
@@ -101,7 +104,9 @@
 		(puppeteer_show "andrea" 8700)
 	)
 )
+(puppeteer_show "cristiano" 5500)
 
 ;Setup characters
-(animation "andrea" 	"front")
+(animation "cristiano" "front")
+(animation "andrea" 	 "front")
 (main_control "andrea")

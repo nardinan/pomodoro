@@ -43,7 +43,7 @@
         {"label":"ticket_inspector",    "link":"ticket_inspector_character",    "controllable":false, "script":"ai_ticket_inspector"},
         {"label":"letizia",             "link":"letizia_character",             "controllable":false, "script":"ai_letizia"},
         {"label":"mustafa",             "link":"mustafa_character",             "controllable":false, "script":"ai_mustafa"},
-        {"label":"cristiano",           "link":"cristiano_character",           "controllable":false, "script":"ai_cristiano"}
+        {"label":"cristiano",           "link":"cristiano_character",           "controllable":false}
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},
