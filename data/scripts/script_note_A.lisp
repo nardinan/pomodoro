@@ -36,49 +36,49 @@
   (cons ;8 andrea
    "I woke up twenty minutes ago and I am ready for this amazing day"
    "Mi sono svegliato venti minuti fa e sono pronto per questa meravigliosa giornata")
-  (cons ;9 cug
+  (cons ;9 luca
    "I am not here to judge you"
    "Io non sono qui per giudicarti")
-  (cons ;10 cug
+  (cons ;10 luca
    "But I want you to know that it is three in the evening"
    "Voglio solo che tu sappia che sono le tre di pomeriggio")
   (cons ;11 andrea
    "Ah"
    "Ah")
-  (cons ;12 cug
+  (cons ;12 luca
    "Listen very careful now. The electricity bill is arrived and we have to pay it as soon as possible"
    "Ascolta attentamente ora. E' arrivata la bolletta della luce e dobbiamo pagarla al piu' presto")
   (cons ;13 andrea
    "We have time"
    "Abbiamo tempo")
-  (cons ;14 cug
+  (cons ;14 luca
    "No, idiot. Tomorrow I have to send them the receipt otherwise . . ."
    "No, idiota. Domani devo mandare il bollettino, altrimenti . . .")
-  (cons ;15 cug
+  (cons ;15 luca
    "THEY WILL CUT US OUT!"
    "CI TAGLIERANNO LA CORRENTE!")
   (cons ;16 andrea
    "Wow! How did you do that?"
    "Wow! Ma come hai fatto a farlo?")
-  (cons ;17 cug
+  (cons ;17 luca
    "Do what?"
    "Fare cosa?")
   (cons ;18 andrea
    "That thing with thunderbolt"
    "Quella cosa del fulmine")
-  (cons ;19 cug
+  (cons ;19 luca
    "What thunderbolt thing?"
    "Quale cosa del fulmine?")
   (cons ;20 andrea
    "It is fine. Listen, how much do I have to give you?"
    "Fa niente. Ascolta, quanto ti devo dare?")
-  (cons ;21 cug
+  (cons ;21 luca
    "One hundred twenty euros and ninety five cents"
    "Centoventi euro e novantasette centesimi")
-  (cons ;22 cug
+  (cons ;22 luca
    "Cash"
    "In contanti")
-  (cons ;23 cug
+  (cons ;23 luca
    "Before this evening, otherwise I will be pissed off"
    "Entro stasera, altrimenti mi incazzo")
   (cons ;24 andrea
@@ -87,10 +87,31 @@
   (cons ;25 andrea
    "I hope you are aware about the fact that I have no idea where I could find those money"
    "Io spero che tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")
-  (cons ;26 cug
+  (cons ;26 luca
+   "You can start with these five euros."
+   "Puoi iniziare con questi cinque euri.")
+  (cons ;27 luca
+   "Now you have to find one hundred fifteen euros and ninety five cents"
+   "Ora ne mancano centoquindici euro e novantasette centesimi.")
+  (cons ;28 andrea
+   "And where I can find them?"
+   "E dove li trovo?")
+  (cons ;29 luca
+   "Why don't you go to 'Elfo' pub?"
+   "Perche' non vai al pub 'Elfo'?")
+  (cons ;30 luca
+   "I know that Luca Caprini is there!"
+   "So che Luca Caprini e' li!")
+  (cons ;31 luca
+   "Maybe he wants to help you with the rest of the money."
+   "Magari lui te li presta.")
+  (cons ;32 luca
+   "And what if he doesn't want to help me?"
+   "E se non dovesse prestarmeli?")
+  (cons ;33 luca
    "I care less than a dog that pees in the desert"
    "Mi interessa meno di un cane che orina nel deserto")
-  (cons ;27 andrea
+  (cons ;34 andrea
    "We'd better get a move on"
    "Sara' il caso di darsi da fare")
   nil
@@ -194,6 +215,13 @@
 		(stagecrafter_enable_item "bed_B")
 		(animation "andrea" "front")
 		(say "andrea" (get_dialog dialogs language 4) "cugmny_track4") ;preview: Let me take them ... | animation front
+
+    ;Got notes
+    (collector_set "got_note" 1.0)
+
+    ;Refresh interface
+    (director_script "items_interface")
+
 		(puppeteer_show "luca" 3500)
 		(puppeteer_move "luca" 4500)
 		(director_wait_movement "luca")
@@ -245,17 +273,32 @@
 		(say "andrea" (get_dialog dialogs language 24) "cugmny_track24") ;preview: I ... | looking at Cug | animation stroking his chin
 		(animation "andrea" "still_left")
 		(say "andrea" (get_dialog dialogs language 25) "cugmny_track25") ;preview: I hope you are aware about t... | looking at Cug
-		(say "luca" (get_dialog dialogs language 26) "cugmny_track26") ;preview: I care less than a dog that ... | looking at Andrea
-		(animation "andrea" "front")
-		(say "andrea" (get_dialog dialogs language 27) "cugmny_track27") ;preview: We'd better get a move on | looking at Main Camera
-		(puppeteer_stare "luca" "andrea")
+    (animation "luca" "point_right")
+    (say "luca" (get_dialog dialogs language 26) "cugmny_track26") ;preview: You can start with these fiv... | looking at Andrea
 
-		;And never again
-		(collector_set "intro_canama" 1.0)
-    (collector_set "got_note" 1.0)
+    ;Got five euros
+    (collector_set "got_five_euros" 1.0)
 
     ;Refresh interface
     (director_script "items_interface")
+
+    (animation "luca" "still_right")
+    (say "luca" (get_dialog dialogs language 27) "cugmny_track27") ;preview: Now you have to find one hun... | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 28) "cugmny_track28") ;preview: And where I can find them? | looking at Luca
+    (animation "luca" "point_right")
+    (say "luca" (get_dialog dialogs language 29) "cugmny_track29") ;preview: Why don't you go to 'Elfo' p... | looking at Andrea | animation pointing
+    (animation "luca" "still_right")
+    (say "luca" (get_dialog dialogs language 30) "cugmny_track30") ;preview: I know that Luca Caprini is ... | looking at Andrea
+    (say "luca" (get_dialog dialogs language 31) "cugmny_track31") ;preview: Maybe he wants to help you w... | looking at Andrea
+    (animation "andrea" "scratch_left")
+    (say "andrea" (get_dialog dialogs language 32) "cugmny_track32") ;preview: And what if he doesn't want ... | looking at Andrea | animation scratching his head
+    (say "luca" (get_dialog dialogs language 33) "cugmny_track33") ;preview: I care less than a dog that ... | looking at Andrea
+    (animation "andrea" "front")
+    (say "andrea" (get_dialog dialogs language 34) "cugmny_track34") ;preview: We'd better get a move on | looking at Main Camera
+    (puppeteer_stare "luca" "andrea")
+
+		;And never again
+		(collector_set "intro_canama" 1.0)
 
 		;Cleanup
 		(effecteer_delete "flash")

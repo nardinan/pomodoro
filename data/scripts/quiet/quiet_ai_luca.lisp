@@ -30,6 +30,15 @@
   (cons ;6 luca
    "Pizza?"
    "Pizza?")
+  (cons ;7 andrea
+   "Can you tell me again where Luca Caprini is?"
+   "Puoi dirmi di nuovo dove trovo Luca Caprini?")
+  (cons ;8 luca
+   "At 'Elfo' pub, in Priori street"
+   "Al pub 'Elfo', in via dei Priori")
+  (cons ;9 andrea
+   "OK"
+   "OK")
   nil
 ))
 
@@ -127,6 +136,9 @@
 (say_and_go "luca" (get_dialog dialogs language 6) "cganquiet_track6") ;preview: Pizza? | looking at Andrea
 (director_wait_message "luca")
 (director_wait_message "andrea")
+(say "andrea" (get_dialog dialogs language 7) "cganquiet_track7") ;preview: Can you tell me again where ... | looking at Luca
+(say "luca" (get_dialog dialogs language 8) "cganquiet_track8") ;preview: At 'Elfo' pub, in Priori str... | looking at Andrea | animation pointing
+(say "andrea" (get_dialog dialogs language 9) "cganquiet_track9") ;preview: OK | looking at Luca
 
 ;Return the control
 (main_control "andrea")
