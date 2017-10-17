@@ -105,37 +105,46 @@
   )
 
 ;Parameters configuration
-(define ticket_inspector_quiet_dialog (collector_get "ticket_inspector_quiet_dialog"))
-(define got_beer (collector_get "got_beer"))
+(define dialog_done    (collector_get "ticket_inspector_quiet_dialog"))
+(define request_tie    (collector_get "request_tie"))
+(define request_disk   (collector_get "request_disk"))
+(define request_movie  (collector_get "request_movie"))
+(define done_tie       (collector_get "done_tie"))
+(define got_disk       (collector_get "got_disk"))
+(define got_movie      (collector_get "got_movie"))
 
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 
 ;Action!
 (puppeteer_look "andrea" "ticket_inspector")
-(if (= ticket_inspector_quiet_dialog 1.0)
-  (if (= got_beer 1.0)
-    (begin
-      (director_dialog "game_ticket_inspector_dialogue_quiet_gotbeer_0x0a")
-      (director_wait_dialog)
-
-      ;Refresh interface
-      (director_script "items_interface"))
-    (begin
-      (say "ticket_inspector" (get_dialog dialogs language 1) "tinspquiet_track1") ;preview: I don't want any junkie in m... | looking at Andrea
-      (say "ticket_inspector" (get_dialog dialogs language 2) "tinspquiet_track2") ;preview: I don't want my guests to be... | looking at Andrea | animation pointing
-      (say "andrea" (get_dialog dialogs language 3) "tinspquiet_track3")) ;preview: Remarkable | looking at Ticket_inspector
-  )
+(if (= dialog_done 1.0)
+  (director_dialog "game_ticket_inspector_intro_after_0x0a")
   (begin
-    (director_dialog "game_ticket_inspector_dialogue_quiet_0x0a")
-    (director_wait_dialog)
+    (director_dialog "game_ticket_inspector_intro_first_0x0a")
 
     ;And never again
-    (collector_set "ticket_inspector_quiet_dialog" 1.0)
-
-    ;Refresh interface
-    (director_script "items_interface"))
+    (collector_set "ticket_inspector_quiet_dialog" 1.0))
 )
+(director_wait_dialog)
+(if (= request_tie 1.0)
+  (if (= done_tie 1.0)
+    (director_dialog "game_ticket_inspector_done_0x0a")
+    (if (= (+ got_disk got_movie) 2.0)
+      (director_dialog "game_ticket_inspector_requested_tools_0x0a")
+      (if (= (+ request_disk request_movie) 2.0)
+        (director_dialog "game_ticket_inspector_requested_no_tools_0x0a")
+        (director_dialog "game_ticket_inspector_activated_no_tools_0x0a")
+      )
+    )
+  )
+  (director_dialog "game_ticket_inspector_no_request_0x0a")
+)
+(director_wait_dialog)
+
+
+;Refresh interface
+(director_script "items_interface"))
 
 ;Return the control
 (main_control "andrea")
