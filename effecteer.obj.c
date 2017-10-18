@@ -268,7 +268,7 @@ d_define_method(effecteer, delete)(struct s_object *self, struct s_effecteer_att
     while ((current_effect = (struct s_effecteer_effect *)(attributes->components.head))) {
         f_list_delete(&(attributes->components), (struct s_list_node *)current_effect);
         d_call(factory_attributes->environment, m_environment_del_drawable, current_effect->drawable, current_effect->layer,
-                (current_effect->absolute)?e_environment_surface_primary:e_environment_surface_ui);
+                (current_effect->absolute)?e_environment_surface_ui:e_environment_surface_primary);
         d_delete(current_effect->drawable);
         d_free(current_effect);
     }
