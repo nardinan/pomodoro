@@ -7,7 +7,7 @@
     "mask_G": 60,
     "mask_B": 60,
     "mask_A": 255,
-    "offset_y": -13,
+    "offset_y": -15,
     "corner_top_left": "bubble_TL",
     "corner_top_right": "bubble_TR",
     "corner_bottom_left": "bubble_BL",

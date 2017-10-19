@@ -104,29 +104,37 @@
     )
   )
 
-;Parameters configuration
-(define massimo_quiet_dialog (collector_get "massimo_quiet_dialog"))
 
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
+  ;Parameters configuration
+  (define dialog_done    (collector_get "massimo_quiet_dialog"))
+  (define request_disk   (collector_get "request_disk"))
+  (define done_disk      (collector_get "done_disk"))
 
-;Action!
-(puppeteer_look "andrea" "massimo")
-(if (= massimo_quiet_dialog 1.0)
-  (begin
-    (animation "massimo" "point_left")
-    (say "massimo" (get_dialog dialogs language 1) "masjuquiet_track1") ;preview: People like you should be lo... | looking at Andrea | animation pointing
-    (animation "massimo" "still_left")
-    (say "andrea" (get_dialog dialogs language 2) "masjuquiet_track2") ;preview: I am just slightly addicted ... | looking at Massimo
-    (animation "andrea" "scratch_right")
-    (say "andrea" (get_dialog dialogs language 3) "masjuquiet_track3")) ;preview: But I am working on it! | looking at Massimo | animation scratching his head
-  (begin
-    (director_dialog "game_massimo_dialogue_quiet_0x0a")
-    (director_wait_dialog)
+  ;Environment configuration (music, effect, whatever)
+  (puppeteer_disable_control)
 
-    ;And never again
-    (collector_set "massimo_quiet_dialog" 1.0))
-)
+  ;Action!
+  (puppeteer_look "andrea" "massimo")
+  (if (= dialog_done 1.0)
+    (director_dialog "game_massimo_intro_after_0x0a")
+    (begin
+      (director_dialog "game_massimo_intro_first_0x0a")
 
-;Return the control
-(main_control "andrea")
+      ;And never again
+      (collector_set "massimo_quiet_dialog" 1.0))
+  )
+  (director_wait_dialog)
+  (if (= request_disk 1.0)
+    (if (= done_disk 1.0)
+      (director_dialog "game_massimo_done_0x0a")
+      (director_dialog "game_massimo_requested_tools_0x0a")
+    )
+    (director_dialog "game_massimo_no_request_0x0a")
+  )
+  (director_wait_dialog)
+
+  ;Refresh interface
+  (director_script "items_interface"))
+
+  ;Return the control
+  (main_control "andrea")
