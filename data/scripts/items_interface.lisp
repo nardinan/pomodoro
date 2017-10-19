@@ -4,17 +4,19 @@
 ;Date  : 7 Oct 2017
 
 ;Parameters configuration
-(define got_euros  (collector_get "got_five_euros"))
-(define got_note   (collector_get "got_note"))
-(define got_tie    (collector_get "got_tie"))
-(define got_disk   (collector_get "got_disk"))
-(define got_movie  (collector_get "got_movie"))
+(define got_euros       (collector_get "got_five_euros"))
+(define got_note        (collector_get "got_note"))
+(define got_tie         (collector_get "got_tie"))
+(define got_disk        (collector_get "got_disk"))
+(define got_movie       (collector_get "got_movie"))
+(define got_internet    (collector_get "got_internet"))
 
 (effecteer_delete "inventory_five_euros")
 (effecteer_delete "inventory_note")
 (effecteer_delete "inventory_tie")
 (effecteer_delete "inventory_disk")
 (effecteer_delete "inventory_movie")
+(effecteer_delete "inventory_internet")
 
 (define position_y 100.0) ; the Y is fixed with the bottom of the screen
 (define position_x 100.0) ; initially, the X is 100 and increases step by step by an offset
@@ -51,6 +53,13 @@
 (if (= got_movie 1.0)
   (begin
     (effecteer_add "inventory_movie" "icon_movie" position_x position_y 12.0 0.0 t nil)
+    (define position_x (+ position_x offset_x)))
+  nil
+)
+
+(if (= got_internet 1.0)
+  (begin
+    (effecteer_add "inventory_internet" "icon_internet" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
 )
