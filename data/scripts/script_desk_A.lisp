@@ -242,7 +242,6 @@
           (collector_set "got_disk"     0.0)
           (collector_set "done_movie"   1.0)
 
-
           ;Refresh interface
           (director_script "items_interface"))
         (begin
@@ -257,7 +256,10 @@
         (say "andrea" (get_dialog dialogs language 5) "quietdwmovie_track5") ;preview: . . . but this kind of opera... | animation front
         (animation "andrea" "scratch_front")
         (say "andrea" (get_dialog dialogs language 6) "quietdwmovie_track6") ;preview: A Internet connection that I... | animation front
-        (say "andrea" (get_dialog dialogs language 7) "quietdwmovie_track7")) ;preview: A bad condition that is part... | animation front
+        (say "andrea" (get_dialog dialogs language 7) "quietdwmovie_track7") ;preview: A bad condition that is part... | animation front
+
+        ;Now is it possible to take THE INTERNET
+        (collector_set "request_internet" 1.0))
     )
     (begin
       (say "andrea" (get_dialog dialogs language 1) "quietdwmovie_track1") ;preview: My Mac . . . | animation back
@@ -266,6 +268,6 @@
       (say "andrea" (get_dialog dialogs language 3) "quietdwmovie_track3")) ;preview: With a fantastic operating s... | animation front
   )
 )
-  
+
 ;Return the control
 (main_control "andrea")
