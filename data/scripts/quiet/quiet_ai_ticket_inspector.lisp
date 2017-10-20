@@ -107,10 +107,8 @@
 ;Parameters configuration
 (define dialog_done    (collector_get "ticket_inspector_quiet_dialog"))
 (define request_tie    (collector_get "request_tie"))
-(define request_disk   (collector_get "request_disk"))
 (define request_movie  (collector_get "request_movie"))
 (define done_tie       (collector_get "done_tie"))
-(define got_disk       (collector_get "got_disk"))
 (define got_movie      (collector_get "got_movie"))
 
 ;Environment configuration (music, effect, whatever)
@@ -130,9 +128,9 @@
 (if (= request_tie 1.0)
   (if (= done_tie 1.0)
     (director_dialog "game_ticket_inspector_done_0x0a")
-    (if (= (+ got_disk got_movie) 2.0)
+    (if (= got_movie 1.0)
       (director_dialog "game_ticket_inspector_requested_tools_0x0a")
-      (if (= (+ request_disk request_movie) 2.0)
+      (if (= request_movie 1.0)
         (director_dialog "game_ticket_inspector_requested_no_tools_0x0a")
         (director_dialog "game_ticket_inspector_activated_no_tools_0x0a")
       )

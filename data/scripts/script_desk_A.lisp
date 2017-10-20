@@ -37,44 +37,56 @@
    "Finally I have an Internet connection."
    "Finalmente ho internet!")
   (cons ;9 andrea
+   "Really?"
+   "Ma che, davvero?")
+  (cons ;10 andrea
+   "What year is this?"
+   "Ma in che anno siamo?")
+  (cons ;11 andrea
+   "Diomatonne . . ."
+   "Diomatonne pero' . . .")
+  (cons ;12 andrea
+   "Done!"
+   "Fatto!")
+  (cons ;13 andrea
    "Now, let me search for Torrent of the movie . . ."
    "Cerchiamo il Torrent del film . . .")
-  (cons ;10 andrea
+  (cons ;14 andrea
    "Here it is!"
    "Eccolo!")
-  (cons ;11 andrea
+  (cons ;15 andrea
    "So many feeds, the download will take just few minutes."
    "Ci sono cosi' tanti seeds che finira' in pochissimo tempo.")
-  (cons ;12 andrea
+  (cons ;16 andrea
    "And this is very, very sad, due to the nature of this movie."
    "Il che e' veramente triste, considerando il genere di film.")
-  (cons ;13 andrea
+  (cons ;17 andrea
    "10%"
    "10%")
-  (cons ;14 andrea
-   "30%"
-   "30%")
-  (cons ;15 andrea
-   "60%"
-   "60%")
-  (cons ;16 andrea
+  (cons ;18 andrea
+   "40%"
+   "40%")
+  (cons ;19 andrea
    "80%"
    "80%")
-  (cons ;17 andrea
+  (cons ;20 andrea
+   "Aaaaaand . . ."
+   "Eeeeeeee . . .")
+  (cons ;21 andrea
    "Done!"
    "Fatto!")
-  (cons ;18 andrea
+  (cons ;22 andrea
    "Let me copy it on my USB key . . ."
    "Lo copio su chiavetta . . .")
-  (cons ;19 andrea
+  (cons ;23 andrea
    "Done!"
    "Fatto!")
-  (cons ;20 andrea
-    "However . . ."
-    "Comunque . . .")
-  (cons ;21 andrea
-    ". . . there is no point in download the movie without the USB key!"
-    ". . . non c'e' ragione di scaricare il film senza una chiavetta USB!")
+  (cons ;24
+   "However . . ."
+   "Comunque . . .")
+  (cons ;25 andrea
+   ". . . there is no point in download the movie without the USB key!"
+   ". . . non c'e' ragione di scaricare il film senza una chiavetta USB!")
   nil
 ))
 
@@ -181,48 +193,63 @@
         (begin
           (say "andrea" (get_dialog dialogs language 8) "quietdwmovie_track8") ;preview: Finally I have an Internet c... | animation back
 
+          ;Internet connection sequence
+          (effecteer_play "internet_connection" "internet_connection" 0 1000 10 nil)
+          (director_wait_time 4.0)
+          (say "andrea" (get_dialog dialogs language 9) "quietdwmovie_track9") ;preview: Really? | animation back
+          (director_wait_time 2.0)
+          (animation "andrea" "scratch_front")
+          (say "andrea" (get_dialog dialogs language 10) "quietdwmovie_track10") ;preview: What year is this? | animation back
+          (director_wait_time 1.0)
+          (animation "andrea" "back")
+          (director_wait_time 2.0)
+          (say "andrea" (get_dialog dialogs language 11) "quietdwmovie_track11") ;preview: Diomatonne . . . | animation back
+          (director_wait_time 1.0)
+          (effecteer_stop "internet_connection")
+          (effecteer_delete "internet_connection")
+
+          (say "andrea" (get_dialog dialogs language 12) "quietdwmovie_track12") ;preview: Done! | animation back
+          (say "andrea" (get_dialog dialogs language 13) "quietdwmovie_track13") ;preview: Now, let me search for Torre... | animation back
+          ;Script suggestion: Andrea scrive sul computer
+          ;Script suggestion: Andrea scrive sul computer
+          (animation "andrea" "back_code")
+          (director_wait_time 2.0)
+          (animation "andrea" "back")
+          (say "andrea" (get_dialog dialogs language 14) "quietdwmovie_track14") ;preview: Here it is! | animation back
+          (say "andrea" (get_dialog dialogs language 15) "quietdwmovie_track15") ;preview: So many feeds, the download ... | animation back
+          (say "andrea" (get_dialog dialogs language 16) "quietdwmovie_track16") ;preview: And this is very, very sad, ... | animation back
+          ;Script suggestion: Andrea scrive sul computer
+          ;Script suggestion: Andrea scrive sul computer
+          (animation "andrea" "back_code")
+          (director_wait_time 2.0)
+          (animation "andrea" "back")
+          (say "andrea" (get_dialog dialogs language 17) "quietdwmovie_track17") ;preview: 10% | animation back
+          (say "andrea" (get_dialog dialogs language 18) "quietdwmovie_track18") ;preview: 30% | animation back
+          (say "andrea" (get_dialog dialogs language 19) "quietdwmovie_track19") ;preview: 60% | animation back
+          (say "andrea" (get_dialog dialogs language 20) "quietdwmovie_track20") ;preview: 80% | animation back
+          (say "andrea" (get_dialog dialogs language 21) "quietdwmovie_track21") ;preview: Done! | animation back
+          (say "andrea" (get_dialog dialogs language 22) "quietdwmovie_track22") ;preview: Let me copy it on my USB key... | animation back
+          ;Script suggestion: Andrea scrive sul computer
+          ;Script suggestion: Andrea scrive sul computer
+          (animation "andrea" "back_code")
+          (director_wait_time 2.0)
+          (animation "andrea" "back")
+          (say "andrea" (get_dialog dialogs language 23) "quietdwmovie_track23") ;preview: Done! | animation front
+
           ;And never again
+          (collector_set "got_movie"    1.0)
           (collector_set "got_internet" 0.0)
+          (collector_set "got_disk"     0.0)
+          (collector_set "done_movie"   1.0)
 
-          ;Refresh interface
-          (director_script "items_interface")
-
-          (say "andrea" (get_dialog dialogs language 9) "quietdwmovie_track9") ;preview: Now, let me search for Torre... | animation back
-          ;Script suggestion: Andrea scrive sul computer
-          (animation "andrea" "back_code")
-          (director_wait_time 2.0)
-          (animation "andrea" "back")
-          (say "andrea" (get_dialog dialogs language 10) "quietdwmovie_track10") ;preview: Here it is! | animation back
-          (say "andrea" (get_dialog dialogs language 11) "quietdwmovie_track11") ;preview: So many feeds, the download ... | animation back
-          (say "andrea" (get_dialog dialogs language 12) "quietdwmovie_track12") ;preview: And this is very, very sad, ... | animation back
-          ;Script suggestion: Andrea scrive sul computer
-          (animation "andrea" "back_code")
-          (director_wait_time 2.0)
-          (animation "andrea" "back")
-          (say "andrea" (get_dialog dialogs language 13) "quietdwmovie_track13") ;preview: 10% | animation back
-          (say "andrea" (get_dialog dialogs language 14) "quietdwmovie_track14") ;preview: 30% | animation back
-          (say "andrea" (get_dialog dialogs language 15) "quietdwmovie_track15") ;preview: 60% | animation back
-          (say "andrea" (get_dialog dialogs language 16) "quietdwmovie_track16") ;preview: 80% | animation back
-          (say "andrea" (get_dialog dialogs language 17) "quietdwmovie_track17") ;preview: Done! | animation back
-          (say "andrea" (get_dialog dialogs language 18) "quietdwmovie_track18") ;preview: Let me copy it on my USB key... | animation back
-          ;Script suggestion: Andrea scrive sul computer
-          (animation "andrea" "back_code")
-          (director_wait_time 2.0)
-          (animation "andrea" "front")
-          (say "andrea" (get_dialog dialogs language 19) "quietdwmovie_track19") ;preview: Done! | animation front
-
-          ;And never again
-          (collector_set "got_movie" 1.0)
-          (collector_set "done_movie" 1.0)
 
           ;Refresh interface
           (director_script "items_interface"))
         (begin
           (say "andrea" (get_dialog dialogs language 8) "quietdwmovie_track8") ;preview: Finally I have an Internet c... | animation back
-          (say "andrea" (get_dialog dialogs language 20) "quietdwmovie_track20") ;preview: However . . . | animation back
+          (say "andrea" (get_dialog dialogs language 24) "quietdwmovie_track24") ;preview: However . . . | animation back
           (animation "andrea" "front")
-          (say "andrea" (get_dialog dialogs language 21) "quietdwmovie_track21")) ;preview: . . . non c'e' ragione di scaricare il film... | animation back
-
+          (say "andrea" (get_dialog dialogs language 25) "quietdwmovie_track25")) ;preview: . . . there is no point in d... | animation front
       )
       (begin
         (say "andrea" (get_dialog dialogs language 4) "quietdwmovie_track4") ;preview: I would like to download 'I ... | animation back
@@ -239,6 +266,6 @@
       (say "andrea" (get_dialog dialogs language 3) "quietdwmovie_track3")) ;preview: With a fantastic operating s... | animation front
   )
 )
-
+  
 ;Return the control
 (main_control "andrea")

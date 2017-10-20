@@ -9,6 +9,7 @@ Sounds from freesound.org
 - Suonidibologna (people chatting) - Vannucci background noise
 - Zimbot (Deep noise loop) - Fologna background noise
 - PatrickLieberkind (Dark ambience) - temple background noise
+- Oktober (Connecting to internet via modem)
 
 [MUSIC]
 Musics from openmusicarchive.org
