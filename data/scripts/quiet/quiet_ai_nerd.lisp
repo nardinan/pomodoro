@@ -1,10 +1,10 @@
 ;Pomodoro - I have no money and I must eat an ice cream
 ;this script has been generated automatically and then has been polished manually
 ;(sounds professional, uh? Well, it is not)
-;Code name  : tinspquiet
-;Location   : Corso Vannucci
+;Code name  : <none>
+;Location   : UnipgA
 ;Author     : Nardinan
-;Description: The ticket inspector gives to Andrea the tie if he gives him the movie
+;Description: The nerd gives you the internet key if you give him Antonietta's number
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -87,41 +87,44 @@
   )
 
 ;Parameters configuration
-(define dialog_done    (collector_get "ticket_inspector_quiet_dialog"))
-(define request_tie    (collector_get "request_tie"))
-(define request_movie  (collector_get "request_movie"))
-(define done_tie       (collector_get "done_tie"))
-(define got_movie      (collector_get "got_movie"))
+(define dialog_done      (collector_get "nerd_quiet_dialog"))
+(define request_internet (collector_get "request_internet"))
+(define request_phone    (collector_get "request_phone"))
+(define got_phone        (collector_get "got_phone"))
+(define done_internet    (collector_get "done_internet"))
 
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 
 ;Action!
-(puppeteer_look "andrea" "ticket_inspector")
+(puppeteer_look "andrea" "nerd")
+(puppeteer_look "nerd"   "andrea")
+(stagecrafter_set_item "computer_A" "still_A")
 (if (= dialog_done 1.0)
-  (director_dialog "game_ticket_inspector_intro_after_0x0a")
+  (director_dialog "game_nerd_intro_after_0x0a")
   (begin
-    (director_dialog "game_ticket_inspector_intro_first_0x0a")
+    (director_dialog "game_nerd_intro_first_0x0a")
 
     ;And never again
-    (collector_set "ticket_inspector_quiet_dialog" 1.0))
+    (collector_set "nerd_quiet_dialog" 1.0))
 )
 (director_wait_dialog)
-(if (= request_tie 1.0)
-  (if (= done_tie 1.0)
-    (director_dialog "game_ticket_inspector_done_0x0a")
-    (if (= got_movie 1.0)
-      (director_dialog "game_ticket_inspector_requested_tools_0x0a")
-      (if (= request_movie 1.0)
-        (director_dialog "game_ticket_inspector_requested_no_tools_0x0a")
-        (director_dialog "game_ticket_inspector_activated_no_tools_0x0a")
+(if (= request_internet 1.0)
+  (if (= done_internet 1.0)
+    (director_dialog "game_nerd_done_0x0a")
+    (if (= got_phone 1.0)
+      (director_dialog "game_nerd_requested_tool_0x0a")
+      (if (= request_phone 1.0)
+        (director_dialog "game_nerd_requested_no_tool_0x0a")
+        (director_dialog "game_nerd_activated_no_tool_0x0a")
       )
     )
   )
-  (director_dialog "game_ticket_inspector_no_request_0x0a")
+  (director_dialog "game_nerd_no_request_0x0a")
 )
 (director_wait_dialog)
-
+(animation "nerd" "back_code")
+(stagecrafter_set_item "computer_A" "coding_A")
 
 ;Refresh interface
 (director_script "items_interface"))

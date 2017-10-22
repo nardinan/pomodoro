@@ -82,6 +82,29 @@
       }
     },
     {
+      "label": "back_code",
+      "head": {
+        "drawable": "head_set_blank_back"
+      },
+      "hair": {
+        "drawable": "hair_set_bob_back",
+        "flip_x": true
+      },
+      "body": {
+        "drawable": "shirt_set_blank_back",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_back_code",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "legs_set_blank_back",
+        "offset_y": 20,
+        "flip_x": true
+      }
+    },
+    {
       "label": "front",
       "flip_x": true,
       "head": {

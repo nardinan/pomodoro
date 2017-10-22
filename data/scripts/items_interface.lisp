@@ -10,6 +10,7 @@
 (define got_disk        (collector_get "got_disk"))
 (define got_movie       (collector_get "got_movie"))
 (define got_internet    (collector_get "got_internet"))
+(define got_phone       (collector_get "got_phone"))
 
 (effecteer_delete "inventory_five_euros")
 (effecteer_delete "inventory_note")
@@ -17,6 +18,7 @@
 (effecteer_delete "inventory_disk")
 (effecteer_delete "inventory_movie")
 (effecteer_delete "inventory_internet")
+(effecteer_delete "inventory_phone")
 
 (define position_y 100.0) ; the Y is fixed with the bottom of the screen
 (define position_x 100.0) ; initially, the X is 100 and increases step by step by an offset
@@ -60,6 +62,13 @@
 (if (= got_internet 1.0)
   (begin
     (effecteer_add "inventory_internet" "icon_internet" position_x position_y 12.0 0.0 t nil)
+    (define position_x (+ position_x offset_x)))
+  nil
+)
+
+(if (= got_phone 1.0)
+  (begin
+    (effecteer_add "inventory_phone" "icon_phone" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
 )

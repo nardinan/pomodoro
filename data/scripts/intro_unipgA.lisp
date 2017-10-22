@@ -101,7 +101,10 @@
 	(puppeteer_show "andrea" 4530)
 	(puppeteer_show "andrea" 1400)
 )
+(stagecrafter_set_item "computer_A" "coding_A")
+(puppeteer_show "nerd" 7040)
 
 ;Setup characters
 (animation "andrea" 	"front")
+(animation "nerd"     "back_code")
 (main_control "andrea")
