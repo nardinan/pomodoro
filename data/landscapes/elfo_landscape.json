@@ -20,8 +20,12 @@
 		"layer":7,
 		"speed_ratio_x":1.0
 	},{
-		"drawable":"elfo_lights_layer",
+		"drawable":"elfo_foreground_front",
 		"layer":8,
+		"speed_ratio_x":1.5
+	},{
+		"drawable":"elfo_lights_layer",
+		"layer":9,
 		"speed_ratio_x":1.0
 	}],
 	"items":[
