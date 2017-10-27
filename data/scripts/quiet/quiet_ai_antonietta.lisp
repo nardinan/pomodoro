@@ -6,48 +6,6 @@
 ;Author     : Nardinan
 ;Description: Antonietta is extremely relaxed and she doesn't want to do anything
 
-;Dialogs
-(define language (collector_get "language"))
-(define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 antonietta
-   "I am sorry, I am too busy to listen you!"
-   "Mi dispiace, sono troppo occupata per ascoltarti")
-  (cons ;2 andrea
-   "Hello Antonietta!"
-   "Ciao Antonietta!")
-  (cons ;3 antonietta
-   "Hello Antonietta' my ass!"
-   "Ciao Antonietta' un paglio di coglioni!")
-  (cons ;4 andrea
-   "Excuse me?"
-   "Come, scusa?")
-  (cons ;5 antonietta
-   "Hello MADAME Antonietta!"
-   "Ciao SIGNORA Antonietta!")
-  (cons ;6 andrea
-   "Uhm . . ."
-   "Uhm . . .")
-  (cons ;7 andrea
-   "This 2012 smells like 1992 . . ."
-   "Questo 2012 mi puzza di 1992 . . .")
-  (cons ;8 andrea
-   "What are you doing?"
-   "Cos'hai da fare?")
-  (cons ;9 antonietta
-   "I am waiting . . ."
-   "Sto aspettando . . .")
-  (cons ;10 antonietta
-   "Soon or later that fly will put its ass somewhere, and then . . ."
-   "Prima o poi quella mosca di posera' da qualche parte e allora . . .")
-  (cons ;11 antonietta
-   "SBAM!"
-   "SBAM!")
-  nil
-))
-
 ;High level functions
 ;@brief: say <character> <message>
 ;@description: character <character> says <message> and the system waits for the bubble to disappear
@@ -128,33 +86,43 @@
     )
   )
 
+;Parameters configuration
+(define dialog_done      (collector_get "antonietta_quiet_dialog"))
+(define request_phone    (collector_get "request_phone"))
+(define request_flowers  (collector_get "request_flowers"))
+(define got_flowers      (collector_get "got_flowers"))
+(define done_phone       (collector_get "done_phone"))
+
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 
 ;Action!
-(animation "andrea" "still_left")
-(animation "antonietta" "still_right")
-(if (collector_get "antonietta_quiet_dialog")
+(puppeteer_look "andrea" "antonietta")
+(if (= dialog_done 1.0)
+  (director_dialog "game_antonietta_intro_after_0x0a")
   (begin
-    (say "antonietta" (get_dialog dialogs language 10) "antquiet_track10") ;preview: Soon or later that fly will ... | looking at Andrea
-    (say "antonietta" (get_dialog dialogs language 11) "antquiet_track11")) ;preview: SBAM! | looking at Andrea
-  (begin
-    (say "antonietta" (get_dialog dialogs language 1) "antquiet_track1") ;preview: I am sorry, I am too busy to... | looking at Andrea
-    (say "andrea" (get_dialog dialogs language 2) "antquiet_track2") ;preview: Hello Antonietta! | looking at Antonietta
-    (say "antonietta" (get_dialog dialogs language 3) "antquiet_track3") ;preview: Hello Antonietta' my ass! | looking at Andrea
-    (say "andrea" (get_dialog dialogs language 4) "antquiet_track4") ;preview: Excuse me? | looking at Antonietta
-    (say "antonietta" (get_dialog dialogs language 5) "antquiet_track5") ;preview: Hello MADAME Antonietta! | looking at Andrea
-    (say "andrea" (get_dialog dialogs language 6) "antquiet_track6") ;preview: Uhm . . . | looking at Antonietta
-    (animation "andrea" "scratch_left")
-    (say "andrea" (get_dialog dialogs language 7) "antquiet_track7") ;preview: This 2012 smells like 1992 | looking at Antonietta | animation scratching his head
-    (say "andrea" (get_dialog dialogs language 8) "antquiet_track8") ;preview: What are you doing? | looking at Antonietta
-    (say "antonietta" (get_dialog dialogs language 9) "antquiet_track9") ;preview: I am waiting . . . | looking at Andrea
-    (say "antonietta" (get_dialog dialogs language 10) "antquiet_track10") ;preview: Soon or later that fly will ... | looking at Andrea
-    (say "antonietta" (get_dialog dialogs language 11) "antquiet_track11") ;preview: SBAM! | looking at Andrea
+    (director_dialog "game_antonietta_intro_first_0x0a")
 
     ;And never again
-		(collector_set "antonietta_quiet_dialog" 1.0))
+    (collector_set "antonietta_quiet_dialog" 1.0))
 )
+(director_wait_dialog)
+(if (= request_phone 1.0)
+  (if (= done_phone 1.0)
+    (director_dialog "game_antonietta_done_0x0a")
+    (if (= got_flowers 1.0)
+      (director_dialog "game_antonietta_requested_tool_0x0a")
+      (if (= request_flowers 1.0)
+        (director_dialog "game_antonietta_requested_no_tool_0x0a")
+        (director_dialog "game_antonietta_activated_no_tool_0x0a")
+      )
+    )
+  )
+  (director_dialog "game_antonietta_no_request_0x0a")
+)
+(director_wait_dialog)
+;Refresh interface
+(director_script "items_interface"))
 
 ;Return the control
 (main_control "andrea")
