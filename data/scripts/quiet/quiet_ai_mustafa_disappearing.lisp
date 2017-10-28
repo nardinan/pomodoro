@@ -1,7 +1,10 @@
 ;Pomodoro - I have no money and I must eat an ice cream
-;Module: intro_november
-;Author: nardinan
-;Date  : 4 Feb 2017
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : <none>
+;Location   : November
+;Author     : Nardinan
+;Description: Mustafa disappears when the done_flowers goes to one
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -83,56 +86,19 @@
     )
   )
 
-;Draw interface
-(director_script "items_interface")
+;Parameters configuration
+(define done_flowers       (collector_get "done_flowers"))
 
-;Play background
-(stagecrafter_play "people_background")
-
-;Collect environment
-(define from_where (collector_get "from_where"))
-(define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
-(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
-(define done_cigarette (collector_get "done_cigarette"))
-(define request_flowers (collector_get "request_flowers"))
-
-;Configure
-(collector_set "from_where" "november")
-
-;Setup characters
-(puppeteer_disable_control)
-(if (compare from_where "fortebraccio")
-	(puppeteer_show "andrea" 980)
-	(if (compare from_where "vannucci")
-		(puppeteer_show "andrea" 7500)
-		(puppeteer_show "andrea" 7900)
-	)
-)
-(puppeteer_show "policeman" 3000)
-
-;Setup characters
-(animation "andrea" 		"front")
-(animation "policeman" 	"front")
-(if (= yuriy_quiet_dialog_garibaldi 1.0)
-	(if (= yuriy_quiet_dialog_november 1.0)
-		nil
-		(begin
-			(puppeteer_show "andrii" 6800)
-			(puppeteer_show "yuriy"  6400)
-			(animation "andrii" "still_left_radar_up")
-			(animation "yuriy" "still_right"))
-		)
-		nil
-)
-(if (= request_flowers 1.0)
-  (if (= done_cigarette 1.0)
-    nil
-    (begin
-      (puppeteer_show  "mustafa" 6000)
-      (puppeteer_stare "mustafa" "andrea"))
-  )
+;If the flowers are done, move away mustafa
+(if (= done_flowers 1.0)
+  (begin
+    (effecteer_add "fog_spot" "fog_spot_particle" 6000 4550 4 0 nil t)
+    (director_wait_time 3.0)
+    (puppeteer_show "mustafa" -200)
+    (director_wait_time 1.0)
+    (effecteer_stop "fog_spot"))
   nil
 )
 
-;Setup character
+;Return the control
 (main_control "andrea")

@@ -1,7 +1,10 @@
 ;Pomodoro - I have no money and I must eat an ice cream
-;Module: intro_november
-;Author: nardinan
-;Date  : 4 Feb 2017
+;this script has been generated automatically and then has been polished manually
+;(sounds professional, uh? Well, it is not)
+;Code name  : <none>
+;Location   : November
+;Author     : Nardinan
+;Description: Mustafa sells a Rose for a cigarette
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -83,56 +86,35 @@
     )
   )
 
-;Draw interface
-(director_script "items_interface")
+;Parameters configuration
+(define dialog_done         (collector_get "mustafa_quiet_dialog"))
+(define request_cigarette   (collector_get "request_cigarette"))
+(define got_cigarette       (collector_get "got_cigarette"))
 
-;Play background
-(stagecrafter_play "people_background")
-
-;Collect environment
-(define from_where (collector_get "from_where"))
-(define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
-(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
-(define done_cigarette (collector_get "done_cigarette"))
-(define request_flowers (collector_get "request_flowers"))
-
-;Configure
-(collector_set "from_where" "november")
-
-;Setup characters
+;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
-(if (compare from_where "fortebraccio")
-	(puppeteer_show "andrea" 980)
-	(if (compare from_where "vannucci")
-		(puppeteer_show "andrea" 7500)
-		(puppeteer_show "andrea" 7900)
-	)
-)
-(puppeteer_show "policeman" 3000)
 
-;Setup characters
-(animation "andrea" 		"front")
-(animation "policeman" 	"front")
-(if (= yuriy_quiet_dialog_garibaldi 1.0)
-	(if (= yuriy_quiet_dialog_november 1.0)
-		nil
-		(begin
-			(puppeteer_show "andrii" 6800)
-			(puppeteer_show "yuriy"  6400)
-			(animation "andrii" "still_left_radar_up")
-			(animation "yuriy" "still_right"))
-		)
-		nil
+;Action!
+(puppeteer_look "andrea"  "mustafa")
+(puppeteer_look "mustafa" "andrea")
+(if (= dialog_done 1.0)
+  (director_dialog "game_mustafa_intro_after_0x0a")
+  (begin
+    (director_dialog "game_mustafa_intro_first_0x0a")
+
+    ;And never again
+    (collector_set "mustafa_quiet_dialog" 1.0))
 )
-(if (= request_flowers 1.0)
-  (if (= done_cigarette 1.0)
-    nil
-    (begin
-      (puppeteer_show  "mustafa" 6000)
-      (puppeteer_stare "mustafa" "andrea"))
+(director_wait_dialog)
+(if (= got_cigarette 1.0)
+  (director_dialog "game_mustafa_requested_tool_0x0a")
+  (if (= request_cigarette 1.0)
+    (director_dialog "game_mustafa_requested_no_tool_0x0a")
+    (director_dialog "game_mustafa_activated_no_tool_0x0a")
   )
-  nil
 )
+(director_wait_dialog)
 
-;Setup character
-(main_control "andrea")
+;Refresh interface
+(director_script "items_interface")
+(director_script "quiet_ai_mustafa_disappearing")

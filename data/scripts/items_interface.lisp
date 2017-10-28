@@ -12,6 +12,7 @@
 (define got_internet    (collector_get "got_internet"))
 (define got_phone       (collector_get "got_phone"))
 (define got_flowers     (collector_get "got_flowers"))
+(define got_cigarette   (collector_get "got_cigarette"))
 
 (effecteer_delete "inventory_five_euros")
 (effecteer_delete "inventory_note")
@@ -21,6 +22,7 @@
 (effecteer_delete "inventory_internet")
 (effecteer_delete "inventory_phone")
 (effecteer_delete "inventory_flowers")
+(effecteer_delete "inventory_cigarette")
 
 (define position_y 100.0) ; the Y is fixed with the bottom of the screen
 (define position_x 100.0) ; initially, the X is 100 and increases step by step by an offset
@@ -78,6 +80,13 @@
 (if (= got_flowers 1.0)
   (begin
     (effecteer_add "inventory_flowers" "icon_flowers" position_x position_y 12.0 0.0 t nil)
+    (define position_x (+ position_x offset_x)))
+  nil
+)
+
+(if (= got_cigarette 1.0)
+  (begin
+    (effecteer_add "inventory_cigarette" "icon_cigarette" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
 )

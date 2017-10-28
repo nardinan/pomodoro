@@ -127,7 +127,7 @@
 (stagecrafter_set_item "computer_A" "coding_A")
 
 ;Refresh interface
-(director_script "items_interface"))
+(director_script "items_interface")
 
 ;Return the control
 (main_control "andrea")
