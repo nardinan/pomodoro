@@ -8,6 +8,15 @@
 			"layers":[
 				{"drawable":"rack_still_A"}
 			]
+		}, {
+			"label":"still_UPS_A",
+			"track":{
+				"playable":"rack_still_A",
+				"loops":-1.0
+			},
+			"layers":[
+				{"drawable":"rack_still_A"}
+			]
 		}
 	]
 }
