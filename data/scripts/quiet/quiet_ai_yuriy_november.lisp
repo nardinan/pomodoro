@@ -19,7 +19,7 @@
    "Probably there is someone that helps them to access this specific time."
    "Sembra che qualcuno permetta loro di entrare in questo preciso periodo.")
   (cons ;3 andrea
-   "Will we meet somewhere in the future?"
+   "Will we ever meet somewhere in the future?"
    "Ma io e te ci conosceremo in futuro?")
   (cons ;4 yuriy
    "Yes."
