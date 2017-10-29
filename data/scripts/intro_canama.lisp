@@ -124,9 +124,8 @@
       )
     )
   )
-
 ;Draw interface
-(director_script "items_interface")
+(director_script "update_items_interface")
 
 ;Parameters configuration
 (define got_note (collector_get "got_note"))

@@ -122,7 +122,7 @@
 )
 (director_wait_dialog)
 ;Refresh interface
-(director_script "items_interface"))
+(director_script "update_items_interface"))
 
 ;Return the control
 (main_control "andrea")

@@ -10,7 +10,7 @@
 		{"label":"traffic_background", "playable":"innamorati_background_noise"}
 	],
 	"scripts":[
-		{"label":"update",	"script":"update_innamorati", "frequency":10}
+		{"label":"update",	"script":"update_innamorati", "frequency":8}
 	],
 	"floor":[{
 		"position_x":0.0,

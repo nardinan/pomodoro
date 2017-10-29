@@ -1,0 +1,19 @@
+{
+	"format":"animation",
+	"cycles":1,
+	"frames":[
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":0},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":40},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":80},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":120},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":160},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":200},
+		{"drawable":"chapter_screen_four",  "time":3.0, 	"mask_A":255},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":200},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":160},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":120},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":80},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":40},
+		{"drawable":"chapter_screen_four",  "time":0.2, 	"mask_A":0}
+	]
+}

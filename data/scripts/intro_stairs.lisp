@@ -84,7 +84,7 @@
   )
 
 ;Draw interface
-(director_script "items_interface")
+(director_script "update_items_interface")
 
 ;Collect environment
 (define from_where (collector_get "from_where"))

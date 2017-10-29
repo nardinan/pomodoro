@@ -243,7 +243,7 @@
           (collector_set "done_movie"   1.0)
 
           ;Refresh interface
-          (director_script "items_interface"))
+          (director_script "update_items_interface"))
         (begin
           (say "andrea" (get_dialog dialogs language 8) "quietdwmovie_track8") ;preview: Finally I have an Internet c... | animation back
           (say "andrea" (get_dialog dialogs language 24) "quietdwmovie_track24") ;preview: However . . . | animation back

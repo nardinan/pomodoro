@@ -23,7 +23,6 @@
 		{"drawable":"white_layer",  "time":0.1, 	"mask_A":80},
 		{"drawable":"white_layer",  "time":0.1, 	"mask_A":40},
 		{"drawable":"white_layer",  "time":0.1, 	"mask_A":20},
-		{"drawable":"white_layer",  "time":0.1, 	"mask_A":0},
-
+		{"drawable":"white_layer",  "time":0.1, 	"mask_A":0}
 	]
 }

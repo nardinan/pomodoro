@@ -176,6 +176,7 @@
       (animation "cristiano" "front")
 
       ;And never again
+      (collector_set "show_chapter_two" 1.0)
       (collector_set "approved_tie" 1.0)
 
       ;Setup characters

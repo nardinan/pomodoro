@@ -220,7 +220,7 @@
     (collector_set "got_note" 1.0)
 
     ;Refresh interface
-    (director_script "items_interface")
+    (director_script "update_items_interface")
 
 		(puppeteer_show "luca" 3500)
 		(puppeteer_move "luca" 4500)
@@ -280,7 +280,7 @@
     (collector_set "got_five_euros" 1.0)
 
     ;Refresh interface
-    (director_script "items_interface")
+    (director_script "update_items_interface")
 
     (animation "luca" "still_right")
     (say "luca" (get_dialog dialogs language 27) "cugmny_track27") ;preview: Now you have to find one hun... | looking at Andrea
@@ -298,6 +298,7 @@
     (puppeteer_stare "luca" "andrea")
 
 		;And never again
+    (collector_set "show_chapter_one" 1.0)
 		(collector_set "intro_canama" 1.0)
 
 		;Cleanup
