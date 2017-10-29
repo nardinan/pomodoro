@@ -74,6 +74,16 @@ int pomodoro_quit_call(struct s_object *environment) {
     return d_true;
 }
 
+void pomodoro_change_location(const char *application) {
+    char buffer[PATH_MAX], *pointer;
+    if ((pointer = strrchr(application, '/'))) {
+        memset(buffer, 0, PATH_MAX);
+        strncpy(buffer, application, (pointer - application));
+        chdir(buffer);
+        d_log(e_log_level_ever, "changing local path to: %s", buffer);
+    }
+}
+
 int main (int argc, char *argv[]) {
     struct s_exception *exception;
     struct s_object *environment;
@@ -81,6 +91,8 @@ int main (int argc, char *argv[]) {
     t_boolean fullscreen = d_false;
     d_pool_init;
     v_log_level = e_log_level_ever;
+    /* change chmod to the current location of the application */
+    pomodoro_change_location(argv[0]);
     if ((argc > 1) && (f_string_strcmp(argv[1], "-developer") == 0)) {
         v_log_level = e_log_level_high;
         d_war(e_log_level_ever, "developer mode has been enabled");
