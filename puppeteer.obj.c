@@ -275,7 +275,7 @@ d_define_method(puppeteer, set_character)(struct s_object *self, const char *key
     return self;
 }
 
-d_define_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x) {
+d_define_method(puppeteer, move_character)(struct s_object *self, const char *key, double destination_x, t_boolean run) {
     d_using(puppeteer);
     struct s_puppeteer_character *current_character;
     d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
@@ -283,7 +283,7 @@ d_define_method(puppeteer, move_character)(struct s_object *self, const char *ke
             if (current_character->connected)
                 d_delete(current_character->connected);
             current_character->connected = NULL;
-            d_call(current_character->character, m_character_move, destination_x);
+            d_call(current_character->character, m_character_move, destination_x, run);
         }
     return self;
 }
@@ -396,7 +396,7 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
             d_log(e_log_level_medium, "action [move] (character %s | destination %.02f)", action->key, action->parameters.destination_x);
             result = d_call(self, m_puppeteer_move_character, action->key, action->parameters.destination_x, d_false);
             break;
-        case e_puppeteer_action_run:
+        case e_puppeteer_action_run:                /* key (character), destination_x */
             d_log(e_log_level_medium, "action [run] (character %s | destination %.02f)", action->key, action->parameters.destination_x);
             result = d_call(self, m_puppeteer_move_character, action->key, action->parameters.destination_x, d_true);
             break;

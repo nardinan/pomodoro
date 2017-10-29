@@ -289,7 +289,7 @@
       )
     )
   )
-  
+
 ;Environment configuration (music, effect, whatever)
 (effecteer_play "moscow_mule_relaxed" "moscow_mule_relaxed" 0 1000 10)
 (puppeteer_disable_control)
@@ -435,7 +435,7 @@
 (animation "andrii"	"still_left")
 (say "andrii" (get_dialog dialogs language 45) "cern_track45") ;preview: yuriy, I think that the ener... | looking at yuriy
 (say "yuriy" (get_dialog dialogs language 46) "cern_track46") ;preview: What? | looking at andrii
-(effecteer_play "moscow_mule_final" "moscow_mule_final" 0 1000 10 nil)
+(effecteer_play "moscow_mule_final" "moscow_mule_final" 0 2000 10 nil)
 (say "andrii" (get_dialog dialogs language 47) "cern_track47") ;preview: The computer says that we ha... | looking at yuriy
 (animation "andrii"	"back")
 (say "andrii" (get_dialog dialogs language 48) "cern_track48") ;preview: This means that for a small ...
@@ -469,6 +469,7 @@
 (say "yuriy" (get_dialog dialogs language 61) "cern_track61") ;preview: Maybe somewhere, not so far ... | looking at andrii
 (say "andrii" (get_dialog dialogs language 62) "cern_track62") ;preview: Do you want to tell them the... | looking at yuriy
 (say "yuriy" (get_dialog dialogs language 63) "cern_track63") ;preview: You're right, that's enough
+(effecteer_stop "moscow_mule_final")
 ;Script suggestion: Entrambi guardano l'LHC
 (animation "yuriy" "back")
 (director_wait_time 1)
