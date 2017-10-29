@@ -330,14 +330,16 @@ d_define_method(character, talk)(struct s_object *self, const char *message, str
     return self;
 }
 
-d_define_method(character, move)(struct s_object *self, double destination_x) {
+d_define_method(character, move)(struct s_object *self, double destination_x, t_boolean run) {
     d_using(character);
     double position_x, position_y;
     d_call(self, m_drawable_get_position, &position_x, &position_y);
     character_attributes->destination_x = destination_x;
     character_attributes->source_x = position_x;
-    if (destination_x != position_x)
-        d_call(self, (destination_x > position_x)?m_character_move_right:m_character_move_left, NULL, d_true);
+    if (destination_x != position_x) 
+        d_call(self, ((destination_x > position_x)?
+                        ((run)?m_character_run_right:m_character_move_right):
+                        ((run)?m_character_run_left:m_character_move_left)), NULL, d_true);
     return self;
 }
 

@@ -56,6 +56,7 @@ void p_link_puppeteer(enum e_puppeteer_actions type, ...) {
                 }
                 break;
             case e_puppeteer_action_move:
+            case e_puppeteer_action_run:
             case e_puppeteer_action_show:
                 if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
                     strncpy(action->action.character.key, argument->value_string, d_entity_label_size);
@@ -123,6 +124,12 @@ struct s_lisp_object *p_link_puppeteer_set_character(struct s_object *self, stru
 struct s_lisp_object *p_link_puppeteer_move_character(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_puppeteer(e_puppeteer_action_move, d_lisp_car(arguments), d_lisp_cadr(arguments));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_puppeteer_run_character(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_puppeteer(e_puppeteer_action_run, d_lisp_car(arguments), d_lisp_cadr(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -345,6 +352,7 @@ d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *scrip
     d_call(script, m_lisp_extend_environment, "puppeteer_talk", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_talk_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_set", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_set_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_move", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_move_character));
+    d_call(script, m_lisp_extend_environment, "puppeteer_run", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_run_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_look", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_look_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_stare", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_stare_character));
     return self;
@@ -386,7 +394,11 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
             break;
         case e_puppeteer_action_move:               /* key (character), destination_x */
             d_log(e_log_level_medium, "action [move] (character %s | destination %.02f)", action->key, action->parameters.destination_x);
-            result = d_call(self, m_puppeteer_move_character, action->key, action->parameters.destination_x);
+            result = d_call(self, m_puppeteer_move_character, action->key, action->parameters.destination_x, d_false);
+            break;
+        case e_puppeteer_action_run:
+            d_log(e_log_level_medium, "action [run] (character %s | destination %.02f)", action->key, action->parameters.destination_x);
+            result = d_call(self, m_puppeteer_move_character, action->key, action->parameters.destination_x, d_true);
             break;
         case e_puppeteer_action_look:               /* key (character), entity (look at) */
             d_log(e_log_level_medium, "action [look] (character %s | entity %s)", action->key, action->parameters.entity);
