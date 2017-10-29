@@ -94,8 +94,9 @@
   (begin
     (effecteer_add "fog_spot" "fog_spot_particle" 6000 4550 4 0 nil t)
     (director_wait_time 3.0)
+    (puppeteer_run "mustafa" 1000)
+    (director_wait_time 2.0)
     (puppeteer_show "mustafa" -200)
-    (director_wait_time 1.0)
     (effecteer_stop "fog_spot"))
   nil
 )

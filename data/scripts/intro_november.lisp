@@ -93,7 +93,7 @@
 (define from_where (collector_get "from_where"))
 (define yuriy_quiet_dialog_garibaldi (collector_get "yuriy_quiet_dialog_garibaldi"))
 (define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
-(define done_cigarette (collector_get "done_cigarette"))
+(define done_flowers (collector_get "done_flowers"))
 (define request_flowers (collector_get "request_flowers"))
 
 ;Configure
@@ -125,7 +125,7 @@
 		nil
 )
 (if (= request_flowers 1.0)
-  (if (= done_cigarette 1.0)
+  (if (= done_flowers 1.0)
     nil
     (begin
       (puppeteer_show  "mustafa" 6000)
