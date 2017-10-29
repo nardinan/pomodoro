@@ -289,7 +289,7 @@
       )
     )
   )
-
+  
 ;Environment configuration (music, effect, whatever)
 (effecteer_play "moscow_mule_relaxed" "moscow_mule_relaxed" 0 1000 10)
 (puppeteer_disable_control)
@@ -482,7 +482,7 @@
 (director_wait_time 1)
 (effecteer_add  "black_hole" "black_hole_animation" 0 -1100 28 0 t nil)
 (director_wait_time 5)
-(effecteer_add  "psycho_games" "intro_pgs" -50 50 16 0 t nil)
+(effecteer_add  "psycho_games_post" "intro_pgs_post" -50 50 16 0 t nil)
 (director_wait_time 45)
 (effecteer_add  "clear_out" "fade_out" 0 0 4 0 t nil)
 (director_wait_time 2)
@@ -498,7 +498,8 @@
 (effecteer_delete "smoke_lhc")
 (effecteer_delete "flash")
 (effecteer_delete "black_hole")
-(effecteer_delete "psycho_games")
+(effecteer_delete "psycho_games_pre")
+(effecteer_delete "psycho_games_post")
 (effecteer_delete "clear_out")
 (effecteer_delete "moscow_mule_relaxed")
 (effecteer_delete "moscow_mule_stressed")
