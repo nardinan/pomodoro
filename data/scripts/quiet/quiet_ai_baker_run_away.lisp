@@ -4,7 +4,22 @@
 ;Code name  : bkrquiet
 ;Location   : Garibaldi
 ;Author     : Nardinan
-;Description: The baker is there to give you a cigarette
+;Description: We run away from the baker
+
+;Dialogs
+(define language (collector_get "language"))
+(define dialogs (list
+  (cons ;0 default
+   ""
+   "")
+  (cons ;1 andrea
+   "Ah ah ah . . ."
+   "Ah ah ah . . .")
+  (cons ;2 andrea
+   "Moron."
+   "Deficiente.")
+  nil
+))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -87,33 +102,17 @@
   )
 
 ;Parameters configuration
-(define dialog_done         (collector_get "baker_quiet_dialog"))
-(define request_cigarette   (collector_get "request_cigarette"))
-(define done_cigarette      (collector_get "done_cigarette"))
+(define quiet_baker_run_away (collector_get "quiet_baker_run_away"))
 
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
-
-;Action!
-(puppeteer_look "andrea" "baker")
-(if (= dialog_done 1.0)
-  (director_dialog "game_baker_intro_after_0x0a")
+(if (= quiet_baker_run_away 1.0)
   (begin
-    (director_dialog "game_baker_intro_first_0x0a")
-
-    ;And never again
-    (collector_set "baker_quiet_dialog" 1.0))
+    (puppeteer_run "andrea" 2000)
+    (director_wait_movement "andrea")
+    (say "andrea" (get_dialog dialogs language 1) "bkrquiet_track1") ;preview: Ah ah ah . . . | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 2) "bkrquiet_track2") ;preview: Moron. | looking at Luca
+    (collector_set "quiet_baker_run_away" 0.0))
+  nil
 )
-(director_wait_dialog)
-(if (= request_cigarette 1.0)
-  (if (= done_cigarette 1.0)
-    (director_dialog "game_baker_done_0x0a")
-    (director_dialog "game_baker_requested_tool_0x0a")
-  )
-  (director_dialog "game_baker_no_request_0x0a")
-)
-(director_wait_dialog)
 
-;Refresh interface
-(director_script "items_interface")
-(director_script "quiet_ai_baker_run_away")
+;Return the control
+(main_control "andrea")
