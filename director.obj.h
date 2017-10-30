@@ -72,7 +72,7 @@ extern struct s_lisp_object *p_link_director_camera_move(struct s_object *self, 
 extern struct s_lisp_object *p_link_director_camera_set(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_director_camera_follow(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
-enum e_director_pool_levels {
+typedef enum e_director_pool_levels {
     e_director_pool_level_A = 0,
     e_director_pool_level_B,
     e_director_pool_level_C,
