@@ -147,7 +147,7 @@
 (if (= yuriy_quiet_dialog_garibaldi 1.0)
   nil
   (begin
-    (puppeteer_look  "yuriy" 	"andrea")
+    (puppeteer_look  "yuriy"  "andrea")
     (puppeteer_stare "andrea" "yuriy")
 
     ;Action!
@@ -172,11 +172,11 @@
     (say "yuriy" (get_dialog dialogs language 12) "sprqrk_track12") ;preview: Let's go then! | looking at Andrii
     ;Script suggestion: Pausa
     ;Script suggestion: Andrii e Yuriy spariscono dalla scena
-    (puppeteer_move "andrii" 0)
-    (puppeteer_move "yuriy"  0)
-    (director_wait_time 3)
-    (say "andrea" (get_dialog dialogs language 13) "sprqrk_track13") ;preview: Even two euros would be grea...
+    (puppeteer_move "andrii" 200)
+    (puppeteer_move "yuriy"  200)
     (director_wait_time 2)
+    (say "andrea" (get_dialog dialogs language 13) "sprqrk_track13") ;preview: Even two euros would be grea...
+    (director_wait_time 1)
     (say "andrea" (get_dialog dialogs language 14) "sprqrk_track14") ;preview: I have to pay the electric b...
 
     (director_wait_movement "andrii")

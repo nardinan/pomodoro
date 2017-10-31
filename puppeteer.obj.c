@@ -315,6 +315,10 @@ d_define_method(puppeteer, stare_character)(struct s_object *self, const char *k
     struct s_object *destination_character = d_call(self, m_puppeteer_get_character, entity);
     d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
         if (f_string_strcmp(current_character->label, key) == 0) {
+            if (current_character->connected) {
+                d_delete(current_character->connected);
+                current_character->connected = NULL;
+            }
             current_character->connected = d_retain(destination_character);
             break;
         }

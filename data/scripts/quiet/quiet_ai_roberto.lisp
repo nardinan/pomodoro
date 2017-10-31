@@ -13,10 +13,10 @@
    ""
    "")
   (cons ;1 roberto
-   "Enough is enough! "
-   "Non se ne puo' piu! ")
+   "Enough is enough!"
+   "Non se ne puo' piu!")
   (cons ;2 andrea
-   "What are you talking about? "
+   "What are you talking about?"
    "Di che parli?")
   (cons ;3 andrea
    "He is Roberto"
@@ -52,14 +52,14 @@
    "Here we go . . ."
    "Ambe . . .")
   (cons ;14 roberto
-   "Indeed! "
-   "Appunto! ")
+   "Indeed!"
+   "Appunto!")
   (cons ;15 roberto
    "I prefer to talk with someone who can understand"
-   "Preferisco parlarne con qualcuno che ci capisce! ")
+   "Preferisco parlarne con qualcuno che ne capisce!")
   (cons ;16 andrea
-   "Sure, I guess with the priest! "
-   "Certo, magari con il prete! ")
+   "Sure, I guess with the priest!"
+   "Certo, magari con il prete!")
   (cons ;17 roberto
    "Of course!"
    "Certo!")
