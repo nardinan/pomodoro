@@ -32,7 +32,7 @@
 		{"label":"desk_B",						"item":"desk",							"status":"still_B",							"position_x":3830.0,	"position_y":980.0,		"zoom":1.25},
 		{"label":"window_B",					"item":"window",						"status":"inside_A",						"position_x":4050.0,	"position_y":640.0,		"zoom":1.25},
 		{"label":"canama_wall_C",			"item":"canama_wall",				"status":"still",								"position_x":3680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},
-		{"label":"sink_A",						"item":"sink_A", 						"status":"droplet", 						"position_x":3505.0, 	"position_y":1010.0, 	"zoom":1.25, 											"active":true},
+		{"label":"sink_A",						"item":"sink_A", 						"status":"droplet", 						"position_x":3505.0, 	"position_y":1010.0, 	"zoom":1.25},
 		{"label":"shelf_B",						"item":"shelf",							"status":"still_B",							"position_x":3640.0, 	"position_y":715.0, 	"zoom":1.25},
 		{"label":"oven_A",						"item":"oven_A",						"status":"flame",								"position_x":3245.0, 	"position_y":750.0, 	"zoom":1.25},
 		{"label":"fridge_A",					"item":"fridge",						"status":"still_A",							"position_x":2970.0, 	"position_y":750.0, 	"zoom":1.25,	"solid":false,      "active":true,		"script":"message_brains"},
