@@ -29,6 +29,11 @@
 				{"drawable":"computer_still_C"}
 			]
 		},{
+			"label":"still_D",
+			"layers":[
+				{"drawable":"computer_still_D"}
+			]
+		},{
 			"label":"coding_A",
 			"track":{
 				"playable":"computer_coding",

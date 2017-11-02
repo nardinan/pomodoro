@@ -46,7 +46,7 @@
 		{"label":"carpet_A",					"item":"carpet",						"status":"color_rainbow_dirty",	"position_x":720.0,		"position_y":1200.0,	"zoom":1.25},
 		{"label":"window_A",					"item":"window",						"status":"inside_B",						"position_x":1500.0,	"position_y":640.0,		"zoom":1.25},
 		{"label":"chair_A",						"item":"chair",							"status":"still_A",							"position_x":1830.0,	"position_y":1070.0,	"zoom":1.25},
-		{"label":"computer_A",				"item":"arrow",							"status":"none",								"position_x":2000.0,	"position_y":900.0,		"zoom":1.25,											"active":true,		"script":"script_desk_A"},
+		{"label":"computer_A",				"item":"computer",					"status":"still_D",							"position_x":2030.0,	"position_y":910.0,		"zoom":1.25,											"active":true,		"script":"script_desk_A"},
 		{"label":"desk_A",						"item":"desk",							"status":"still_A",							"position_x":1950.0,	"position_y":1040.0,	"zoom":1.25},
 		{"label":"trash_A",						"item":"trash_can",					"status":"still_A",							"position_x":1640.0,	"position_y":1100.0,	"zoom":1.25},
 		{"label":"painting_A",				"item":"painting",					"status":"tatta",								"position_x":2060.0,	"position_y":530.0,		"zoom":1.25},
