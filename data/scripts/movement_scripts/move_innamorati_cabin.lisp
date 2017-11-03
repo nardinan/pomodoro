@@ -1,7 +1,7 @@
 ; Pomodoro
-; Module: move_unipgC_temple
+; Module: move_innamorati_cabin
 ; Author: nardinan
-; Date  : 4 Oct 2017
+; Date  : 3 Nov 2017
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
@@ -98,9 +98,9 @@
   )
 
 ;Action!
-(if (collector_get "got_temple_key")
+(if (collector_get "got_cabin_key")
   (begin
-    (collector_set "destination_scenario" "temple")
+    (collector_set "destination_scenario" "cabin")
     (director_script "change_scenario"))
   (begin
     ;Environment configuration (music, effect, whatever)

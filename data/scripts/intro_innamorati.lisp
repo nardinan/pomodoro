@@ -82,7 +82,7 @@
       )
     )
   )
-	
+
 ;Draw interface
 (director_script "update_items_interface")
 
@@ -98,16 +98,20 @@
 
 ;Setup characters
 (puppeteer_disable_control)
+
 (if (compare from_where "unipgA")
-	(puppeteer_show "andrea" 13600)
-	(if (compare from_where "francesco")
-		(puppeteer_show "andrea" 11270)
-		(puppeteer_show "andrea" 900)
-	)
+  (puppeteer_show "andrea" 13600)
+  (if (compare from_where "francesco")
+    (puppeteer_show "andrea" 11270)
+    (if (compare from_where "cabin")
+      (puppeteer_show "andrea" 8800)
+      (puppeteer_show "andrea" 900)
+    )
+  )
 )
 
 ;Setup characters
-(puppeteer_show "writer" 8900)
+(puppeteer_show "writer" 9400)
 (animation "andrea" "front")
 (animation "writer" "back_writer")
 (if (= marta_quiet_dialog 1.0)

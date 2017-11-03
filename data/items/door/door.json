@@ -87,6 +87,11 @@
 			"layers":[
 				{"drawable":"door_still_O"}
 			]
+		},{
+			"label":"still_P",
+			"layers":[
+				{"drawable":"door_still_P"}
+			]
 		}
 	]
 }

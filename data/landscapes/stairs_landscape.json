@@ -79,8 +79,8 @@
 	}],
 	"items":[
 		{"label":"door_A",      "item":"arrow",		"status":"active_left", 			"position_x":150.0, 		"position_y":2000.0, "zoom":1.25, "solid":true, 	"active":true, "script":"move_stairs_lupattelli"},
-		{"label":"door_B",      "item":"arrow",		"status":"active_right", 			"position_x":2150.0, 		"position_y":1050.0, "zoom":1.25, "solid":true},
-		{"label":"door_C",      "item":"arrow",		"status":"active_up",       	"position_x":1120.0,    "position_y":1330.0, "zoom":1.25, "solid":false,	"active":true, "script":"move_stairs_canama"},
+		{"label":"door_B",      "item":"arrow",		"status":"none", 							"position_x":2150.0, 		"position_y":1050.0, "zoom":1.25, "solid":true},
+		{"label":"door_C",      "item":"arrow",		"status":"active_up",       	"position_x":1120.0,    "position_y":1400.0, "zoom":1.25, "solid":false,	"active":true, "script":"move_stairs_canama"},
 		{"label":"real_door",   "item":"door",		"status":"still_B", 	       	"position_x":1120.0, 		"position_y":1330.0, "zoom":1.25}
 	]
 }

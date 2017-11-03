@@ -66,6 +66,7 @@
         {"label":"unipgC",              "link":"unipgC_landscape"},
         {"label":"temple",              "link":"temple_landscape"},
         {"label":"panorama",						"link":"panorama_landscape"},
-        {"label":"fologna",             "link":"fologna_landscape"}
+        {"label":"fologna",             "link":"fologna_landscape"},
+        {"label":"cabin",               "link":"cabin_landscape"}
     ]
 }

@@ -1,21 +1,7 @@
-; Pomodoro
-; Module: move_unipgC_temple
-; Author: nardinan
-; Date  : 4 Oct 2017
-;Dialogs
-(define language (collector_get "language"))
-(define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 andrea
-   "It's locked!"
-   "Chiuso a chiave!")
-  (cons ;2 andrea
-   "I wonder what's in there!"
-   "Mi chiedo cosa ci sia li dentro!")
-  nil
-))
+;Pomodoro - I have no money and I must eat an ice cream
+;Module: intro_cabin
+;Author: nardinan
+;Date  : 3 Nov 2017
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -97,19 +83,23 @@
     )
   )
 
-;Action!
-(if (collector_get "got_temple_key")
-  (begin
-    (collector_set "destination_scenario" "temple")
-    (director_script "change_scenario"))
-  (begin
-    ;Environment configuration (music, effect, whatever)
-    (puppeteer_disable_control)
+;Draw interface
+(director_script "update_items_interface")
 
-    (animation "andrea" "front")
-    (say "andrea" (get_dialog dialogs language 1) "doorepl_track1")
-    (say "andrea" (get_dialog dialogs language 2) "doorepl_track2")
+;Play background
+(stagecrafter_play "cave_background")
 
-    ;Return the control
-    (main_control "andrea"))
-)
+;Collect environment
+(define from_where (collector_get "from_where"))
+
+;Configure
+(collector_set "from_where" "cabin")
+
+;Setup characters
+(puppeteer_disable_control)
+(puppeteer_show "andrea" 590)
+
+;Setup characters
+(animation "andrea" 	"front")
+(animation "serena"		"still_left")
+(main_control "andrea")

@@ -11,6 +11,7 @@ Sounds from freesound.org
 - PatrickLieberkind (Dark ambience) - temple background noise
 - Oktober (Connecting to internet via modem)
 - DangerLeaf (Computer server room)
+- iampagan (Droplets in cave) - cabin background noise
 
 [MUSIC]
 Musics from openmusicarchive.org
