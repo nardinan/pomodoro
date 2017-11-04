@@ -1,0 +1,23 @@
+{
+	"format":"item",
+	"ID":"lemon_tree",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"lemon_tree_still_A"}
+			]
+		},{
+			"label":"still_B",
+			"layers":[
+				{"drawable":"lemon_tree_still_B"}
+			]
+		},{
+			"label":"drop_lemon",
+			"layers":[
+				{"drawable":"lemon_tree_drop_lemon"}
+			]
+		}
+	]
+}

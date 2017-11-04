@@ -170,14 +170,14 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define request_movie (collector_get "request_movie"))
 (define got_disk      (collector_get "got_disk"))
 (define got_internet  (collector_get "got_internet"))
 (define done_movie    (collector_get "done_movie"))
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (animation "andrea" "back")

@@ -38,7 +38,8 @@
 		"speed_ratio_x":1
 	}],
 	"items":[
-		{"label":"door_A",		"item":"arrow",			"status":"active_left",		"position_x":230.0,		"position_y":1760.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_panorama_vannucci"},
-		{"label":"door_B",		"item":"arrow",			"status":"none",					"position_x":5980.0,	"position_y":2360.0,	"zoom":1.25,	"solid":true}
+		{"label":"door_A",				"item":"arrow",				"status":"active_left",		"position_x":230.0,		"position_y":1760.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_panorama_vannucci"},
+		{"label":"door_B",				"item":"arrow",				"status":"none",					"position_x":5980.0,	"position_y":2360.0,	"zoom":1.25,	"solid":true},
+		{"label":"lemon_tree_A",	"item":"lemon_tree",	"status":"still_A",				"position_x":3980.0,	"position_y":1680.0,	"zoom":1.25,								"active":true, 	"script":"script_lemon_tree_A"}
 	]
 }

@@ -1,0 +1,15 @@
+{
+	"format":"animation",
+	"cycles":1,
+	"frames":[
+		{"drawable":"lemon_tree_drop_lemon_frame0",  "time":0.1},
+		{"drawable":"lemon_tree_drop_lemon_frame1",  "time":0.1},
+		{"drawable":"lemon_tree_drop_lemon_frame2",  "time":0.1},
+		{"drawable":"lemon_tree_drop_lemon_frame3",  "time":0.1},
+		{"drawable":"lemon_tree_drop_lemon_frame4",  "time":0.1},
+		{"drawable":"lemon_tree_drop_lemon_frame5",  "time":0.3},
+		{"drawable":"lemon_tree_drop_lemon_frame6",  "time":0.1},
+		{"drawable":"lemon_tree_drop_lemon_frame7",  "time":0.1},
+		{"drawable":"lemon_tree_drop_lemon_frame8",  "time":0.1}
+	]
+}

@@ -4,10 +4,19 @@
 ;Date  : 20 Nov 2016
 
 ;Preamble. Here we should check for other things: loaded informations and stored informations.
-(if (= (collector_get "current_chapter") nil)
-  (collector_set "current_chapter" "quiet")
-  nil)
-
+(if (compare (collector_get "current_chapter") "quiet")
+  nil
+  (if (compare (collector_get "current_chapter") "virus")
+    nil
+    (if (compare (collector_get "current_chapter") "apocalypse")
+      nil
+      (if (compare (collector_get "current_chapter") "epilogue")
+        nil
+        (collector_set "current_chapter" "quiet")
+      )
+    )
+  )
+)
 (director_camera_set 1000.0 -1000.0) ;far far away ...
 (if (collector_get "intro_cern")
     (begin

@@ -196,12 +196,13 @@
       )
     )
   )
-;Parameters configuration
-(define got_note (collector_get "got_note"))
 
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 (animation "andrea" "back")
+
+;Parameters configuration
+(define got_note (collector_get "got_note"))
 
 ;Action!
 (puppeteer_disable_control)
