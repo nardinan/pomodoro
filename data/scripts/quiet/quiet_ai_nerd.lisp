@@ -86,15 +86,15 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define dialog_done      (collector_get "nerd_quiet_dialog"))
 (define request_internet (collector_get "request_internet"))
 (define request_phone    (collector_get "request_phone"))
 (define got_phone        (collector_get "got_phone"))
 (define done_internet    (collector_get "done_internet"))
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (puppeteer_look "andrea" "nerd")

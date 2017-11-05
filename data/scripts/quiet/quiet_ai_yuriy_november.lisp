@@ -125,11 +125,11 @@
     )
   )
 
-;Parameters configuration
-(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
-
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
+
+;Parameters configuration
+(define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
 
 ;Action!
 (puppeteer_look "andrea" "yuriy")

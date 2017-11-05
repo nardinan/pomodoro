@@ -86,15 +86,15 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define dialog_done      (collector_get "antonietta_quiet_dialog"))
 (define request_phone    (collector_get "request_phone"))
 (define request_flowers  (collector_get "request_flowers"))
 (define got_flowers      (collector_get "got_flowers"))
 (define done_phone       (collector_get "done_phone"))
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (puppeteer_look "andrea" "antonietta")

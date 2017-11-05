@@ -104,37 +104,36 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
 
-  ;Parameters configuration
-  (define dialog_done    (collector_get "massimo_quiet_dialog"))
-  (define request_disk   (collector_get "request_disk"))
-  (define done_disk      (collector_get "done_disk"))
+;Parameters configuration
+(define dialog_done    (collector_get "massimo_quiet_dialog"))
+(define request_disk   (collector_get "request_disk"))
+(define done_disk      (collector_get "done_disk"))
 
-  ;Environment configuration (music, effect, whatever)
-  (puppeteer_disable_control)
+;Action!
+(puppeteer_look "andrea" "massimo")
+(if (= dialog_done 1.0)
+  (director_dialog "game_massimo_intro_after_0x0a")
+  (begin
+    (director_dialog "game_massimo_intro_first_0x0a")
 
-  ;Action!
-  (puppeteer_look "andrea" "massimo")
-  (if (= dialog_done 1.0)
-    (director_dialog "game_massimo_intro_after_0x0a")
-    (begin
-      (director_dialog "game_massimo_intro_first_0x0a")
-
-      ;And never again
-      (collector_set "massimo_quiet_dialog" 1.0))
+    ;And never again
+    (collector_set "massimo_quiet_dialog" 1.0))
+)
+(director_wait_dialog)
+(if (= request_disk 1.0)
+  (if (= done_disk 1.0)
+    (director_dialog "game_massimo_done_0x0a")
+    (director_dialog "game_massimo_requested_tools_0x0a")
   )
-  (director_wait_dialog)
-  (if (= request_disk 1.0)
-    (if (= done_disk 1.0)
-      (director_dialog "game_massimo_done_0x0a")
-      (director_dialog "game_massimo_requested_tools_0x0a")
-    )
-    (director_dialog "game_massimo_no_request_0x0a")
-  )
-  (director_wait_dialog)
+  (director_dialog "game_massimo_no_request_0x0a")
+)
+(director_wait_dialog)
 
-  ;Refresh interface
-  (director_script "update_items_interface"))
+;Refresh interface
+(director_script "update_items_interface"))
 
-  ;Return the control
-  (main_control "andrea")
+;Return the control
+(main_control "andrea")

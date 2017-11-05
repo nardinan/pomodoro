@@ -155,11 +155,11 @@
     )
   )
 
-;Parameters configuration
-(define roberto_quiet_dialog (collector_get "roberto_quiet_dialog"))
-
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
+
+;Parameters configuration
+(define roberto_quiet_dialog (collector_get "roberto_quiet_dialog"))
 
 ;Action!
 (if (= roberto_quiet_dialog 1.0)

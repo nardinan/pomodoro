@@ -110,11 +110,11 @@
     )
   )
 
-;Parameters configuration
-(define writer_quiet_dialog (collector_get "writer_quiet_dialog"))
-
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
+
+;Parameters configuration
+(define writer_quiet_dialog (collector_get "writer_quiet_dialog"))
 
 ;Action!
 (if (= writer_quiet_dialog 1.0)

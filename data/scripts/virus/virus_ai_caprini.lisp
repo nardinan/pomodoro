@@ -1,10 +1,28 @@
 ;Pomodoro - I have no money and I must eat an ice cream
 ;this script has been generated automatically and then has been polished manually
 ;(sounds professional, uh? Well, it is not)
-;Code name  : bkrquiet
-;Location   : Garibaldi
+;Code name  : caprianvirus
+;Location   : Elfo Pub
 ;Author     : Nardinan
-;Description: The baker is there to give you a cigarette
+;Description: Caprini tells Andrea that he puts the money in the Enel cabin
+
+;Dialogs
+(define language (collector_get "language"))
+(define dialogs (list
+  (cons ;0 default
+   ""
+   "")
+  (cons ;48 andrea
+   "Where are those money, by the way?"
+   "Dov'e' che avevi messo i soldi?")
+  (cons ;49 caprini
+   "I put them into the ENEL's cabin in Viale Innamorati."
+   "Li ho nascosti dentro la cabina dell'ENEL in viale Innamorati.")
+  (cons ;50 caprini
+   "It's a green door."
+   "E' una porta verde.")
+  nil
+))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -85,35 +103,14 @@
       )
     )
   )
-  
+
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 
-;Parameters configuration
-(define dialog_done         (collector_get "baker_quiet_dialog"))
-(define request_cigarette   (collector_get "request_cigarette"))
-(define done_cigarette      (collector_get "done_cigarette"))
-
 ;Action!
-(puppeteer_look "andrea" "baker")
-(if (= dialog_done 1.0)
-  (director_dialog "game_baker_intro_after_0x0a")
-  (begin
-    (director_dialog "game_baker_intro_first_0x0a")
+(say "andrea" (get_dialog dialogs language 1) "caprianvirus_track48") ;preview: Where are those money, by th... | looking at Caprini
+(say "caprini" (get_dialog dialogs language 2) "caprianvirus_track49") ;preview: I put them into the ENEL's c... | looking at Andrea
+(say "caprini" (get_dialog dialogs language 3) "caprianvirus_track50") ;preview: It's a green door. | looking at Andrea
 
-    ;And never again
-    (collector_set "baker_quiet_dialog" 1.0))
-)
-(director_wait_dialog)
-(if (= request_cigarette 1.0)
-  (if (= done_cigarette 1.0)
-    (director_dialog "game_baker_done_0x0a")
-    (director_dialog "game_baker_requested_tool_0x0a")
-  )
-  (director_dialog "game_baker_no_request_0x0a")
-)
-(director_wait_dialog)
-
-;Refresh interface
-(director_script "update_items_interface")
-(director_script "quiet_ai_baker_run_away")
+;Return the control
+(main_control "andrea")

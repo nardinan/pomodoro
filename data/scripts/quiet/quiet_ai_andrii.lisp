@@ -109,13 +109,12 @@
       )
     )
   )
+  
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
 
 ;Parameters configuration
 (define andrii_quiet_dialog (collector_get "andrii_quiet_dialog"))
-
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (if (= andrii_quiet_dialog 1.0)

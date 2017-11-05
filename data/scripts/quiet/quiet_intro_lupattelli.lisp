@@ -158,11 +158,11 @@
     )
   )
 
-;Parameters configuration
-(define technician_quiet_dialog_lupattelli (collector_get "technician_quiet_dialog_lupattelli"))
-
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
+
+;Parameters configuration
+(define technician_quiet_dialog_lupattelli (collector_get "technician_quiet_dialog_lupattelli"))
 
 ;Action!
 (if (= technician_quiet_dialog_lupattelli 1.0)

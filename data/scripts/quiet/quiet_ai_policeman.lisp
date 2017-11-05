@@ -176,11 +176,11 @@
     )
   )
 
-;Parameters configuration
-(define intro_policeman_november (collector_get "intro_policeman_november"))
-
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
+
+;Parameters configuration
+(define intro_policeman_november (collector_get "intro_policeman_november"))
 
 ;Action!
 (if (= intro_policeman_november 1.0)

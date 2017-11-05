@@ -6,3 +6,5 @@ collector\.dump\.dat
 *.o
 
 *.bin
+
+\.DS_Store

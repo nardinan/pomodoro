@@ -19,7 +19,7 @@
    "This is my appartment"
    "Questo e' l'appartamento dove vivo")
   (cons ;3 andrea
-   "I am taking a Computer Science class and I will get my master degree very soon!"
+   "I will get my master degree in Computer Science very soon!"
    "Frequento il corso di informatica e sono prossimo alla mia laurea magistrale!")
   (cons ;4 andrea
    "I live here with my cusin, Luca"

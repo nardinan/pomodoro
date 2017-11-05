@@ -119,12 +119,12 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define gianni_quiet_dialog_vannucci (collector_get "gianni_quiet_dialog_vannucci"))
 (collector_set "quiet_mariano_and_gianni_ongoing" 1.0)
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (puppeteer_look "gianni" "andrea")

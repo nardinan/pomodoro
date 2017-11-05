@@ -5,15 +5,15 @@
     "date":"22 August 2016",
     "language":1,
     "fonts":[
+        {"font":"psycho_font", 			"size":50},
+        {"font":"psycho_font", 			"size":60},
+        {"font":"psycho_font", 			"size":70},
         {"font":"raleway_font", 		"size":40},
         {"font":"raleway_font", 		"size":50},
         {"font":"raleway_font", 		"size":60},
         {"font":"kingthings_font", 	"size":40},
         {"font":"kingthings_font", 	"size":50},
-        {"font":"kingthings_font", 	"size":60},
-        {"font":"psycho_font", 			"size":40},
-        {"font":"psycho_font", 			"size":50},
-        {"font":"psycho_font", 			"size":60}
+        {"font":"kingthings_font", 	"size":60}
     ],
     "characters":[
         {"label":"andrii",				      "link":"andrii_character",			        "controllable":false,	"script":"ai_andrii"},
@@ -43,7 +43,8 @@
         {"label":"ticket_inspector",    "link":"ticket_inspector_character",    "controllable":false, "script":"ai_ticket_inspector"},
         {"label":"letizia",             "link":"letizia_character",             "controllable":false, "script":"ai_letizia"},
         {"label":"mustafa",             "link":"mustafa_character",             "controllable":false, "script":"ai_mustafa"},
-        {"label":"cristiano",           "link":"cristiano_character",           "controllable":false}
+        {"label":"cristiano",           "link":"cristiano_character",           "controllable":false},
+        {"label":"caprini",             "link":"caprini_character",             "controllable":false, "script":"ai_caprini"}
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},

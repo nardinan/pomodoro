@@ -100,7 +100,7 @@
 (puppeteer_disable_control)
 
 (if (compare from_where "unipgA")
-  (puppeteer_show "andrea" 13600)
+  (puppeteer_show "andrea" 13500)
   (if (compare from_where "francesco")
     (puppeteer_show "andrea" 11270)
     (if (compare from_where "cabin")

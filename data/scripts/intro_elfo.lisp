@@ -94,12 +94,11 @@
 
 ;Setup characters
 (puppeteer_disable_control)
-(puppeteer_show "andrea"  300)
-(puppeteer_show "gianni"  3000)
-(puppeteer_show "mariano" 2340)
+(puppeteer_show "andrea"   300)
+(puppeteer_show "caprini"  3000)
 
 ;Setup characters
 (animation "andrea" 	     "front")
-(animation "gianni"        "drink_left")
-(puppeteer_stare "mariano" "andrea")
+(animation "caprini"       "still_left")
+(puppeteer_stare "caprini" "andrea")
 (main_control "andrea")

@@ -86,15 +86,15 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define dialog_done    (collector_get "ticket_inspector_quiet_dialog"))
 (define request_tie    (collector_get "request_tie"))
 (define request_movie  (collector_get "request_movie"))
 (define done_tie       (collector_get "done_tie"))
 (define got_movie      (collector_get "got_movie"))
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (puppeteer_look "andrea" "ticket_inspector")
@@ -121,7 +121,6 @@
   (director_dialog "game_ticket_inspector_no_request_0x0a")
 )
 (director_wait_dialog)
-
 
 ;Refresh interface
 (director_script "update_items_interface"))

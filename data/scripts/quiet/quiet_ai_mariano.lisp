@@ -106,12 +106,12 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define mariano_quiet_dialog_vannucci (collector_get "mariano_quiet_dialog_vannucci"))
 (collector_set "quiet_mariano_and_gianni_ongoing" 1.0)
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (if (= mariano_quiet_dialog_vannucci 1.0)

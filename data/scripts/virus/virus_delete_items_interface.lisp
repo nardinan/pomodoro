@@ -3,5 +3,6 @@
 ;Author: nardinan
 ;Date  : 4 Nov 2017
 (effecteer_delete "inventory_note")
+(effecteer_delete "inventory_tie")
 (effecteer_delete "inventory_shoe")
 (effecteer_delete "inventory_lemon")

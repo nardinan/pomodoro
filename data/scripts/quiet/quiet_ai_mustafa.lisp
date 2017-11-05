@@ -86,13 +86,13 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define dialog_done         (collector_get "mustafa_quiet_dialog"))
 (define request_cigarette   (collector_get "request_cigarette"))
 (define got_cigarette       (collector_get "got_cigarette"))
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (puppeteer_look "andrea"  "mustafa")

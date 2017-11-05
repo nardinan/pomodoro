@@ -173,12 +173,12 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define luna_quiet_dialog (collector_get "luna_quiet_dialog"))
 (define luna_quiet_answer (collector_get "luna_quiet_answer"))
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (if (= luna_quiet_dialog 1.0)

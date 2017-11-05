@@ -178,10 +178,6 @@
       ;And never again
       (collector_set "approved_tie" 1.0)
 
-      ;Advance to the next chapter
-      (collector_set "current_chapter" "virus")
-      (collector_set "show_chapter_two" 1.0)
-
       ;Setup characters
       (main_control "andrea"))
     (begin

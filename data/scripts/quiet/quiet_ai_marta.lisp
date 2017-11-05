@@ -161,12 +161,14 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+(collector_set "marta_quiet_discussing" 1.0)
+
 ;Parameters configuration
 (define marta_quiet_dialog (collector_get "marta_quiet_dialog"))
 
-;Environment configuration (music, effect, whatever)
-(collector_set "marta_quiet_discussing" 1.0)
-(puppeteer_disable_control)
+
 
 ;Action!
 (if (= marta_quiet_dialog 1.0)
