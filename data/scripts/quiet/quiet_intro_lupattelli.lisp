@@ -213,7 +213,6 @@
     (animation "technician" "still_left")
     (animation "andrea" "front")
     (say "andrea" (get_dialog dialogs language 16) "techquiet_track16") ;preview: God, it is a shitty day indeed | looking at Main Camera
-
     (puppeteer_stare 	"technician" "andrea")
 
     ;And never again

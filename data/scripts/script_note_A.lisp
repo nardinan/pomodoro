@@ -307,6 +307,7 @@
 
 		;And now, please, play the track
 		(effecteer_play "stone_paradise" "stone_paradise" 2000 2000 16))
-	nil)
+	nil
+)
 ;Return the control
 (main_control "andrea")

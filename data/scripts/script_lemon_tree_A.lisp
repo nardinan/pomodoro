@@ -206,6 +206,7 @@
           (say "andrea" (get_dialog dialogs language 8) "lemvirus_track8") ;preview: I liked her better when she ... | animation front
           (animation "andrea" "back")
           (say "andrea" (get_dialog dialogs language 9) "lemvirus_track9") ;preview: Maybe I could search for som...
+          
           ;And never again
           (collector_set "request_shoe" 1.0))
       )

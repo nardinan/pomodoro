@@ -172,7 +172,7 @@
 		(director_wait_movement "andrea")
 		(animation "andrea"	"point_right")
 		(say "andrea" (get_dialog dialogs language 9) "intro_track9") ;preview: This is his room | animation pointing
-			(animation "andrea"	"front")
+		(animation "andrea"	"front")
 		(say "andrea" (get_dialog dialogs language 10) "intro_track10") ;preview: And you know what? It's clean. | looking at Main Camera
 
 		;And never again
