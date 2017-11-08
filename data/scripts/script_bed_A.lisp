@@ -67,16 +67,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -108,10 +98,10 @@
 (puppeteer_disable_control)
 
 ;Action!
-(animation "andrea" "back")
+(puppeteer_set "andrea" "back")
 (say "andrea" (get_dialog dialogs language 1) "andbedquiet_track1") ;preview: My bed is unmade | animation back
 (say "andrea" (get_dialog dialogs language 2) "andbedquiet_track2") ;preview: As usual
-(animation "andrea" "front")
+(puppeteer_set "andrea" "front")
 (say "andrea" (get_dialog dialogs language 3) "andbedquiet_track3") ;preview: And I love it in this way | animation front
 
 ;Return the control

@@ -76,16 +76,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -115,7 +105,7 @@
 
 ;Action!
 (puppeteer_disable_control)
-(animation "andrea" "back")
+(puppeteer_set "andrea" "back")
 (say "andrea" (get_dialog dialogs language 2))
 (if (compare (collector_get "from_where") "canama")
 	(say "andrea" (get_dialog dialogs language 3))

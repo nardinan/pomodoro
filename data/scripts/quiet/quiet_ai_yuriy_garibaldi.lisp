@@ -100,16 +100,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -152,13 +142,13 @@
 
     ;Action!
     (say "yuriy" (get_dialog dialogs language 1) "sprqrk_track1") ;preview: There is something fishy goi... | looking at Andrea
-    (animation 	"andrii" "still_right_radar_down")
+    (puppeteer_set 	"andrii" "still_right_radar_down")
     (say_and_go "andrii" (get_dialog dialogs language 2) "sprqrk_track2") ;preview: Really? I told you about the... | looking at Yuriy | animation pointing
-    (animation "yuriy" "still_left")
+    (puppeteer_set "yuriy" "still_left")
     (director_wait_message "andrii")
     (say "yuriy" (get_dialog dialogs language 3) "sprqrk_track3") ;preview: You said something completel... | looking at Andrii
     (say_and_go "andrii" (get_dialog dialogs language 4) "sprqrk_track4") ;preview: Came on!
-    (animation 	"andrii" "still_right_radar_up")
+    (puppeteer_set 	"andrii" "still_right_radar_up")
     (puppeteer_look "yuriy" "andrea")
     (say "yuriy" (get_dialog dialogs language 5) "sprqrk_track5") ;preview: The lady in green is followi... | looking at Andrea
     (say "yuriy" (get_dialog dialogs language 6) "sprqrk_track6") ;preview: We suspect she got stuck in ... | looking at Andrea
@@ -166,7 +156,7 @@
     (say "andrea" (get_dialog dialogs language 8) "sprqrk_track8") ;preview: I am not sure exactly what t... | looking at Yuriy
     (say "andrea" (get_dialog dialogs language 9) "sprqrk_track9") ;preview: Do you have some spare chang... | looking at Yuriy
     (say_and_go "andrii" (get_dialog dialogs language 10) "sprqrk_track10") ;preview: Yuriy | looking at Yuriy
-    (animation "yuriy" "still_left")
+    (puppeteer_set "yuriy" "still_left")
     (director_wait_message "andrii")
     (say "andrii" (get_dialog dialogs language 11) "sprqrk_track11") ;preview: The disturbance in the Chron... | looking at Yuriy
     (say "yuriy" (get_dialog dialogs language 12) "sprqrk_track12") ;preview: Let's go then! | looking at Andrii

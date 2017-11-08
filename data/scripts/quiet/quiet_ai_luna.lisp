@@ -135,17 +135,7 @@
       )
     )
   )
-
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
+  
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -186,7 +176,7 @@
 		(puppeteer_look "andrea" "luna")
 		(say "luna" (get_dialog dialogs language 21) "lunquiet_track21") ;preview: I'm just taking a break and ... | looking at Andrea
 		(say "luna" (get_dialog dialogs language 22) "lunquiet_track22") ;preview: Get off my ass! | looking at Andrea
-		(animation "andrea" "front")
+		(puppeteer_set "andrea" "front")
 		(if (= luna_quiet_answer 0.0)
 			(say "andrea" (get_dialog dialogs language 23) "lunquiet_track23") ;preview: A reference point in my life! | looking at Main Camera
 			(if (= luna_quiet_answer 1.0)
@@ -204,30 +194,30 @@
     (director_wait_movement "andrea")
 		(puppeteer_stare "luna" "#null")
 
-    (animation "andrea" "still_right")
-		(animation "luna" "still_left")
+    (puppeteer_set "andrea" "still_right")
+		(puppeteer_set "luna" "still_left")
 		(say "luna" (get_dialog dialogs language 1) "lunquiet_track1") ;preview: What do you do here? | looking at Andrea
 		(say "andrea" (get_dialog dialogs language 2) "lunquiet_track2") ;preview: I'm looking for some stuff | looking at Luna
-		(animation "luna" "point_left")
+		(puppeteer_set "luna" "point_left")
 		(say "luna" (get_dialog dialogs language 3) "lunquiet_track3") ;preview: Money for a bill, I suppose! | looking at Andrea | animation pointing
-		(animation "luna" "still_left")
-		(animation "andrea" "scratch_right")
+		(puppeteer_set "luna" "still_left")
+		(puppeteer_set "andrea" "scratch_right")
 		(say "andrea" (get_dialog dialogs language 4) "lunquiet_track4") ;preview: Don't be so melodramatic | looking at Luna | animation scratching his head
-		(animation "andrea" "front")
+		(puppeteer_set "andrea" "front")
 		(say "andrea" (get_dialog dialogs language 5) "lunquiet_track5") ;preview: She is Luna | looking at Main Camera
 		(say "andrea" (get_dialog dialogs language 6) "lunquiet_track6") ;preview: She is my girlfriend | looking at Main Camera
 		(say "andrea" (get_dialog dialogs language 7) "lunquiet_track7") ;preview: She is even one of the two r... | looking at Main Camera
-		(animation "andrea" "scratch_front")
+		(puppeteer_set "andrea" "scratch_front")
 		(say "andrea" (get_dialog dialogs language 8) "lunquiet_track8") ;preview: In this precise moment of he... | looking at Main Camera | animation scratching his head
-		(animation "andrea" "still_right")
+		(puppeteer_set "andrea" "still_right")
 		(say "andrea" (get_dialog dialogs language 9) "lunquiet_track9") ;preview: What are you doing here? | looking at Luna
 		(say "luna" (get_dialog dialogs language 10) "lunquiet_track10") ;preview: I need a break, too much str... | looking at Andrea
-		(animation "andrea" "scratch_right")
+		(puppeteer_set "andrea" "scratch_right")
 		(say "andrea" (get_dialog dialogs language 11) "lunquiet_track11") ;preview: Chaos, for what? | looking at Luna | animation scratching his head
 		(say "luna" (get_dialog dialogs language 12) "lunquiet_track12") ;preview: I don't know exactly, I hear... | looking at Andrea
-		(animation "luna" "point_left")
+		(puppeteer_set "luna" "point_left")
 		(say "luna" (get_dialog dialogs language 13) "lunquiet_track13") ;preview: Maybe you could go to have a... | looking at Andrea | animation pointing
-		(animation "luna" "still_left")
+		(puppeteer_set "luna" "still_left")
 		(say "andrea" (get_dialog dialogs language 14) "lunquiet_track14") ;preview: Free pizza? | looking at Luna | animation pointing
 		;Script suggestion: I due si guardano in silenzio
 		(director_wait_time 2)
@@ -236,9 +226,9 @@
 		;Script suggestion: I due si guardano in silenzio
 		(director_wait_time 2)
 		(say "andrea" (get_dialog dialogs language 17) "lunquiet_track17") ;preview: No? | looking at Luna
-		(animation "luna" "point_left")
+		(puppeteer_set "luna" "point_left")
 		(say "luna" (get_dialog dialogs language 18) "lunquiet_track18") ;preview: Why don't you go instead of ... | looking at Andrea | animation pointing
-		(animation "luna" "still_left")
+		(puppeteer_set "luna" "still_left")
 		(say "andrea" (get_dialog dialogs language 19) "lunquiet_track19") ;preview: And why don't you go back to... | looking at Luna
 		(say "luna" (get_dialog dialogs language 20) "lunquiet_track20") ;preview: Touche'! | looking at Andrea
 		(puppeteer_stare "luna" "andrea")

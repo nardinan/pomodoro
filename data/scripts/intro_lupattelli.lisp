@@ -3,6 +3,18 @@
 ;Author: nardinan
 ;Date  : 20 Dec 2016
 
+;High level functions
+;@brief: main_control <character>
+;@description: gives the main control of the game to the character <character>
+(define main_control
+  (lambda (c)
+    (begin
+      (director_camera_follow c -100.0 1.0)
+      (puppeteer_enable_control c)
+      )
+    )
+  )
+
 ;Draw interface
 (director_script "update_items_interface")
 
@@ -17,16 +29,13 @@
 (collector_set "from_where" "lupattelli")
 
 ;Setup characters
-(puppeteer_disable_control)
+(puppeteer_show "technician" 3100)
+(puppeteer_stare "technician" "andrea")
 (if (compare from_where "garibaldi")
 	(puppeteer_show "andrea" 3600)
 	(puppeteer_show "andrea" 2090)
 )
-
-;Setup characters
-(puppeteer_show   "technician" 3100)
-(puppeteer_stare  "technician" "andrea")
-
 (if (compare current_chapter "quiet")
   (director_script "quiet_intro_lupattelli")
-  nil)
+  nil
+)

@@ -253,16 +253,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -295,9 +285,9 @@
 (puppeteer_disable_control)
 (puppeteer_show "yuriy" 	1450)
 (puppeteer_show "andrii" 	2750)
-(animation "yuriy" 			"back_code")
+(puppeteer_set "yuriy" 			"back_code")
 (stagecrafter_set_item "computer_A" "coding_A")
-(animation "andrii" 		"back_code")
+(puppeteer_set "andrii" 		"back_code")
 (stagecrafter_set_item "computer_C" "coding_C")
 
 ;Action!
@@ -306,51 +296,51 @@
 (say "andrii" (get_dialog dialogs language 1) "cern_track1") ;preview: Dilution magnets are up and ... | animation programming
 (say "yuriy" (get_dialog dialogs language 2) "cern_track2") ;preview: That's great! | animation programming
 (director_wait_time 1)
-(animation "yuriy" 	"still_right")
+(puppeteer_set "yuriy" 	"still_right")
 (stagecrafter_set_item "computer_A" "still_A")
 (say "yuriy" (get_dialog dialogs language 3) "cern_track3") ;preview: Dr. Tykhonov? | looking at andrii
 (say "andrii" (get_dialog dialogs language 4) "cern_track4") ;preview: Mh? | animation programming
 (say "yuriy" (get_dialog dialogs language 5) "cern_track5") ;preview: Could you please disable the... | looking at andrii | animation scratching his ass
-(animation "andrii" "back")
+(puppeteer_set "andrii" "back")
 (stagecrafter_set_item "computer_C" "still_C")
 (director_wait_time 1)
-(animation "andrii" "still_left")
+(puppeteer_set "andrii" "still_left")
 (say "andrii" (get_dialog dialogs language 6) "cern_track6") ;preview: Dr. Tykhonov? | looking at yuriy
 (say "andrii" (get_dialog dialogs language 7) "cern_track7") ;preview: I am not 50 years old, pleas... | looking at yuriy
-(animation "yuriy" "point_right")
+(puppeteer_set "yuriy" "point_right")
 (say "yuriy" (get_dialog dialogs language 8) "cern_track8") ;preview: In 'Angel and Deamons' peopl... | looking at andrii | animation pointing
-(animation "yuriy" 	"still_right")
+(puppeteer_set "yuriy" 	"still_right")
 (say "yuriy" (get_dialog dialogs language 9) "cern_track9") ;preview: You want to be less professi... | looking at andrii
 ;Script suggestion: Lunga pausa
 (director_wait_time 2)
 (say "andrii" (get_dialog dialogs language 10) "cern_track10") ;preview: Anyway ... | looking at yuriy
-(animation "andrii" "scratch_left")
+(puppeteer_set "andrii" "scratch_left")
 (say "andrii" (get_dialog dialogs language 11) "cern_track11") ;preview: I don't think we should disa... | looking at yuriy | animation stroking his chin
-(animation "andrii" "still_left")
+(puppeteer_set "andrii" "still_left")
 (say "andrii" (get_dialog dialogs language 12) "cern_track12") ;preview: Is too dangerous! | looking at yuriy
 (say "yuriy" (get_dialog dialogs language 13) "cern_track13") ;preview: Oh, came on! | looking at andrii
 (say "andrii" (get_dialog dialogs language 14) "cern_track14") ;preview: No! | looking at yuriy
 (say "yuriy" (get_dialog dialogs language 15) "cern_track15") ;preview: I would do it for you! | looking at andrii
 (director_wait_time 2)
-(animation "andrii" "back_code")
+(puppeteer_set "andrii" "back_code")
 (stagecrafter_set_item "computer_C" "coding_C")
 (say "andrii" (get_dialog dialogs language 16) "cern_track16") ;preview: OK, but you're fucking annoy... | looking at yuriy
-(animation "andrii" "point_left")
+(puppeteer_set "andrii" "point_left")
 (stagecrafter_set_item "computer_C" "still_C")
 (say "andrii" (get_dialog dialogs language 17) "cern_track17") ;preview: If something explodes, it's ... | looking at yuriy | animation pointing
-(animation "yuriy" "point_right")
+(puppeteer_set "yuriy" "point_right")
 (say "yuriy" (get_dialog dialogs language 18) "cern_track18") ;preview: If something explodes, it's ... | looking at andrii | animation pointing
-(animation "andrii" "still_left")
+(puppeteer_set "andrii" "still_left")
 (director_wait_time 2)
 (say "andrii" (get_dialog dialogs language 19) "cern_track19") ;preview: Stop to say what I'm saying! | looking at yuriy
 ;Script suggestion: andrii si rimette a programmare
-(animation "yuriy" "still_right")
-(animation "andrii" "back_code")
+(puppeteer_set "yuriy" "still_right")
+(puppeteer_set "andrii" "back_code")
 (stagecrafter_set_item "computer_C" "coding_C")
 (director_wait_time 1)
 (stagecrafter_set_item "shutdown" "trigger")
 (say "andrii" (get_dialog dialogs language 20) "cern_track20") ;preview: Security grids have been dis... | animation programming
-(animation "yuriy" 	"back_code")
+(puppeteer_set "yuriy" 	"back_code")
 (stagecrafter_set_item "computer_A" "coding_A")
 (say "yuriy" (get_dialog dialogs language 21) "cern_track21") ;preview: Fantastic! | looking at andrii
 (say "yuriy" (get_dialog dialogs language 22) "cern_track22") ;preview: Dan Brown would be proud of ... | animation programming
@@ -359,25 +349,25 @@
 (effecteer_add "smoke_lhc" "smoke_spot_particle" 2250 700 4 0 nil nil)
 (stagecrafter_set_item "computer_B" "warning_B")
 (director_wait_time 1)
-(animation "andrii" "back")
+(puppeteer_set "andrii" "back")
 (stagecrafter_set_item "computer_C" "still_C")
-(animation "yuriy"  "back")
+(puppeteer_set "yuriy"  "back")
 (stagecrafter_set_item "computer_A" "still_A")
 (director_wait_time 1)
 (say "yuriy" (get_dialog dialogs language 24) "cern_track24") ;preview: Uhm | animation scratching his head
-(animation "yuriy" 	"scratch_right")
+(puppeteer_set "yuriy" 	"scratch_right")
 (say "yuriy" (get_dialog dialogs language 25) "cern_track25") ;preview: andrii, smoke seems coming o... | animation scratching his head
 (say "yuriy" (get_dialog dialogs language 26) "cern_track26") ;preview: Is it normal? | looking at andrii
-(animation "andrii"	"still_left")
+(puppeteer_set "andrii"	"still_left")
 (say "andrii" (get_dialog dialogs language 27) "cern_track27") ;preview: No yuriy, is not normal. Obv... | looking at yuriy
 (say "yuriy" (get_dialog dialogs language 28) "cern_track28") ;preview: Even Dan Brown would be able... | looking at andrii
-(animation "andrii" "back")
+(puppeteer_set "andrii" "back")
 (director_wait_time 2)
-(animation "andrii"	"back_code")
+(puppeteer_set "andrii"	"back_code")
 (stagecrafter_set_item "computer_C" "coding_C")
 (say "andrii" (get_dialog dialogs language 29) "cern_track29") ;preview: I think we should shut it do... | animation stroking his chin
 (say "yuriy" (get_dialog dialogs language 30) "cern_track30") ;preview: Uh? | looking at andrii
-(animation "yuriy" 	"back")
+(puppeteer_set "yuriy" 	"back")
 (say "yuriy" (get_dialog dialogs language 31) "cern_track31") ;preview: It gets worse? | looking at Andrea | animation scratching his head
 (effecteer_stop "moscow_mule_relaxed")
 (say "yuriy" (get_dialog dialogs language 32) "cern_track32") ;preview: Is smoking! How could it get...
@@ -392,7 +382,7 @@
 (effecteer_add "fire_lhc" "fire_spot_particle" 2250 700 2 0 nil nil)
 (director_wait_time 1)
 (effecteer_add "fire_alarm_lhc" "red_alarm_animation" 0 0 4 0 t nil)
-(animation "andrii" "back")
+(puppeteer_set "andrii" "back")
 (stagecrafter_set_item "computer_C" "still_C")
 (director_wait_time 2)
 (say "yuriy" (get_dialog dialogs language 33) "cern_track33") ;preview: Oh, I see now!
@@ -402,15 +392,15 @@
 (say_and_go "andrii" (get_dialog dialogs language 34) "cern_track34") ;preview: Chto za huinyat, bliat!? | animation programming
 (say_and_go "andrii" (get_dialog dialogs language 35) "cern_track35") ;preview: Diomatonne! | animation programming
 (director_wait_movement "andrii")
-(animation "andrii" "back_code")
+(puppeteer_set "andrii" "back_code")
 (stagecrafter_set_item "computer_B" "error_coding_B")
 (say "andrii" (get_dialog dialogs language 36) "cern_track36") ;preview: We're polluting the fabric o... | animation hands in the hairs
-(animation "yuriy" 	"still_right")
+(puppeteer_set "yuriy" 	"still_right")
 (say "yuriy" (get_dialog dialogs language 37) "cern_track37") ;preview: What? | looking at andrii
 (say "yuriy" (get_dialog dialogs language 38) "cern_track38") ;preview: The fabric of space and time? | looking at andrii
-(animation "yuriy" 	"point_right")
+(puppeteer_set "yuriy" 	"point_right")
 (say "yuriy" (get_dialog dialogs language 39) "cern_track39") ;preview: Where did you got your PhD? | looking at andrii | animation pointing
-(animation "yuriy"  "still_right")
+(puppeteer_set "yuriy"  "still_right")
 (say "andrii" (get_dialog dialogs language 40) "cern_track40") ;preview: Shut the fuck up! | animation programming
 (say "andrii" (get_dialog dialogs language 41) "cern_track41") ;preview: Jesus Christ, shut up! | animation programming
 ;Script suggestion: La situazione torna alla normalita'
@@ -424,20 +414,20 @@
 (effecteer_stop "smoke_lhc")
 (effecteer_stop "moscow_mule_stressed")
 (director_wait_time 1)
-(animation "andrii" "back")
+(puppeteer_set "andrii" "back")
 (stagecrafter_set_item "computer_B" "still_B")
-(animation "yuriy"  "back")
+(puppeteer_set "yuriy"  "back")
 (director_wait_time 2)
 (say "yuriy" (get_dialog dialogs language 42) "cern_track42") ;preview: Phew, we missed it by a hair!
 (say "andrii" (get_dialog dialogs language 43) "cern_track43") ;preview: Uhm
-(animation "yuriy" 	"still_right")
+(puppeteer_set "yuriy" 	"still_right")
 (say "yuriy" (get_dialog dialogs language 44) "cern_track44") ;preview: What? What's the matter? | looking at andrii
-(animation "andrii"	"still_left")
+(puppeteer_set "andrii"	"still_left")
 (say "andrii" (get_dialog dialogs language 45) "cern_track45") ;preview: yuriy, I think that the ener... | looking at yuriy
 (say "yuriy" (get_dialog dialogs language 46) "cern_track46") ;preview: What? | looking at andrii
 (effecteer_play "moscow_mule_final" "moscow_mule_final" 0 2000 10 nil)
 (say "andrii" (get_dialog dialogs language 47) "cern_track47") ;preview: The computer says that we ha... | looking at yuriy
-(animation "andrii"	"back")
+(puppeteer_set "andrii"	"back")
 (say "andrii" (get_dialog dialogs language 48) "cern_track48") ;preview: This means that for a small ...
 (say "andrii" (get_dialog dialogs language 49) "cern_track49") ;preview: We may have changed somethin...
 (say "andrii" (get_dialog dialogs language 50) "cern_track50") ;preview: We may have changed ...
@@ -446,24 +436,24 @@
 (effecteer_add "flash" "thunder_flash"  0 0 4 0 t nil)
 (stagecrafter_set_item "thunder_strike" "strike")
 (director_wait_time 3)
-(animation "yuriy"	"still_left")
+(puppeteer_set "yuriy"	"still_left")
 (director_wait_time 2)
 (say "yuriy" (get_dialog dialogs language 52) "cern_track52") ;preview: Wow! How did you do that?
-(animation "andrii"	"still_left")
+(puppeteer_set "andrii"	"still_left")
 (say "andrii" (get_dialog dialogs language 53) "cern_track53") ;preview: That? What?
-(animation "yuriy"	"point_left")
+(puppeteer_set "yuriy"	"point_left")
 (say "yuriy" (get_dialog dialogs language 54) "cern_track54") ;preview: The thunder stuff | animation pointing
 (say "andrii" (get_dialog dialogs language 55) "cern_track55") ;preview: What thunder stuff? | looking at yuriy
 ;Script suggestion: I due si guardano per qualche momento
-(animation "yuriy" 	"still_right")
+(puppeteer_set "yuriy" 	"still_right")
 (director_wait_time 2)
 (say "yuriy" (get_dialog dialogs language 56) "cern_track56") ;preview: However, we're still here! | looking at andrii | animation pointing
-(animation "yuriy" 	"point_right")
+(puppeteer_set "yuriy" 	"point_right")
 (say "yuriy" (get_dialog dialogs language 57) "cern_track57") ;preview: Probably we changed the stor... | looking at andrii
-(animation "yuriy" 	"still_right")
-(animation "andrii" "point_left")
+(puppeteer_set "yuriy" 	"still_right")
+(puppeteer_set "andrii" "point_left")
 (say "andrii" (get_dialog dialogs language 58) "cern_track58") ;preview: Or a whole team of dorks! | looking at yuriy
-(animation "andrii" "still_left")
+(puppeteer_set "andrii" "still_left")
 (say "yuriy" (get_dialog dialogs language 59) "cern_track59") ;preview: Maybe in a unnamed city! | looking at andrii
 (say "andrii" (get_dialog dialogs language 60) "cern_track60") ;preview: The kind of city that you ca... | looking at yuriy
 (say "yuriy" (get_dialog dialogs language 61) "cern_track61") ;preview: Maybe somewhere, not so far ... | looking at andrii
@@ -471,14 +461,14 @@
 (say "yuriy" (get_dialog dialogs language 63) "cern_track63") ;preview: You're right, that's enough
 (effecteer_stop "moscow_mule_final")
 ;Script suggestion: Entrambi guardano l'LHC
-(animation "yuriy" "back")
+(puppeteer_set "yuriy" "back")
 (director_wait_time 1)
-(animation "andrii" "back")
+(puppeteer_set "andrii" "back")
 (director_wait_time 2)
 (effecteer_play "dream" "dream_a_little_dream_of_me" 4000 4000)
-(animation "yuriy" 	"still_right")
+(puppeteer_set "yuriy" 	"still_right")
 (say "yuriy" (get_dialog dialogs language 64) "cern_track64") ;preview: Vodka party? | looking at andrii
-(animation "andrii" "point_left")
+(puppeteer_set "andrii" "point_left")
 (say "andrii" (get_dialog dialogs language 65) "cern_track65") ;preview: Yeeeeeee! | looking at yuriy | animation hands in the air
 (director_wait_time 1)
 (effecteer_add  "black_hole" "black_hole_animation" 0 -1100 28 0 t nil)

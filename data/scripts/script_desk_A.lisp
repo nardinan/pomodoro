@@ -133,16 +133,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -180,12 +170,12 @@
 (define done_movie    (collector_get "done_movie"))
 
 ;Action!
-(animation "andrea" "back")
+(puppeteer_set "andrea" "back")
 (if (= done_movie 1.0)
   (begin
     (say "andrea" (get_dialog dialogs language 1) "quietdwmovie_track1") ;preview: My Mac . . . | animation back
     (say "andrea" (get_dialog dialogs language 2) "quietdwmovie_track2") ;preview: This is a fantastic computer! | animation back
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 3) "quietdwmovie_track3")) ;preview: With a fantastic operating s... | animation front
   (if (= request_movie 1.0)
     (if (= got_internet 1.0)
@@ -198,10 +188,10 @@
           (director_wait_time 4.0)
           (say "andrea" (get_dialog dialogs language 9) "quietdwmovie_track9") ;preview: Really? | animation back
           (director_wait_time 2.0)
-          (animation "andrea" "scratch_front")
+          (puppeteer_set "andrea" "scratch_front")
           (say "andrea" (get_dialog dialogs language 10) "quietdwmovie_track10") ;preview: What year is this? | animation back
           (director_wait_time 1.0)
-          (animation "andrea" "back")
+          (puppeteer_set "andrea" "back")
           (director_wait_time 2.0)
           (say "andrea" (get_dialog dialogs language 11) "quietdwmovie_track11") ;preview: Diomatonne . . . | animation back
           (director_wait_time 1.0)
@@ -212,17 +202,17 @@
           (say "andrea" (get_dialog dialogs language 13) "quietdwmovie_track13") ;preview: Now, let me search for Torre... | animation back
           ;Script suggestion: Andrea scrive sul computer
           ;Script suggestion: Andrea scrive sul computer
-          (animation "andrea" "back_code")
+          (puppeteer_set "andrea" "back_code")
           (director_wait_time 2.0)
-          (animation "andrea" "back")
+          (puppeteer_set "andrea" "back")
           (say "andrea" (get_dialog dialogs language 14) "quietdwmovie_track14") ;preview: Here it is! | animation back
           (say "andrea" (get_dialog dialogs language 15) "quietdwmovie_track15") ;preview: So many feeds, the download ... | animation back
           (say "andrea" (get_dialog dialogs language 16) "quietdwmovie_track16") ;preview: And this is very, very sad, ... | animation back
           ;Script suggestion: Andrea scrive sul computer
           ;Script suggestion: Andrea scrive sul computer
-          (animation "andrea" "back_code")
+          (puppeteer_set "andrea" "back_code")
           (director_wait_time 2.0)
-          (animation "andrea" "back")
+          (puppeteer_set "andrea" "back")
           (say "andrea" (get_dialog dialogs language 17) "quietdwmovie_track17") ;preview: 10% | animation back
           (say "andrea" (get_dialog dialogs language 18) "quietdwmovie_track18") ;preview: 30% | animation back
           (say "andrea" (get_dialog dialogs language 19) "quietdwmovie_track19") ;preview: 60% | animation back
@@ -231,9 +221,9 @@
           (say "andrea" (get_dialog dialogs language 22) "quietdwmovie_track22") ;preview: Let me copy it on my USB key... | animation back
           ;Script suggestion: Andrea scrive sul computer
           ;Script suggestion: Andrea scrive sul computer
-          (animation "andrea" "back_code")
+          (puppeteer_set "andrea" "back_code")
           (director_wait_time 2.0)
-          (animation "andrea" "back")
+          (puppeteer_set "andrea" "back")
           (say "andrea" (get_dialog dialogs language 23) "quietdwmovie_track23") ;preview: Done! | animation front
 
           ;And never again
@@ -247,14 +237,14 @@
         (begin
           (say "andrea" (get_dialog dialogs language 8) "quietdwmovie_track8") ;preview: Finally I have an Internet c... | animation back
           (say "andrea" (get_dialog dialogs language 24) "quietdwmovie_track24") ;preview: However . . . | animation back
-          (animation "andrea" "front")
+          (puppeteer_set "andrea" "front")
           (say "andrea" (get_dialog dialogs language 25) "quietdwmovie_track25")) ;preview: . . . there is no point in d... | animation front
       )
       (begin
         (say "andrea" (get_dialog dialogs language 4) "quietdwmovie_track4") ;preview: I would like to download 'I ... | animation back
-        (animation "andrea" "front")
+        (puppeteer_set "andrea" "front")
         (say "andrea" (get_dialog dialogs language 5) "quietdwmovie_track5") ;preview: . . . but this kind of opera... | animation front
-        (animation "andrea" "scratch_front")
+        (puppeteer_set "andrea" "scratch_front")
         (say "andrea" (get_dialog dialogs language 6) "quietdwmovie_track6") ;preview: A Internet connection that I... | animation front
         (say "andrea" (get_dialog dialogs language 7) "quietdwmovie_track7") ;preview: A bad condition that is part... | animation front
 
@@ -264,7 +254,7 @@
     (begin
       (say "andrea" (get_dialog dialogs language 1) "quietdwmovie_track1") ;preview: My Mac . . . | animation back
       (say "andrea" (get_dialog dialogs language 2) "quietdwmovie_track2") ;preview: This is a fantastic computer! | animation back
-      (animation "andrea" "front")
+      (puppeteer_set "andrea" "front")
       (say "andrea" (get_dialog dialogs language 3) "quietdwmovie_track3")) ;preview: With a fantastic operating s... | animation front
   )
 )

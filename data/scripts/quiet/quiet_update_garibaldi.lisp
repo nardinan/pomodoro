@@ -2,6 +2,7 @@
 ;Module: quiet_update_garibaldi
 ;Author: nardinan
 ;Date  : 12 Feb 2017
+
 ;High level functions
 ;@brief: say <character> <message>
 ;@description: character <character> says <message> and the system waits for the bubble to disappear
@@ -41,16 +42,6 @@
   (lambda (c m track)
     (begin
       (puppeteer_say c m track)
-      )
-    )
-  )
-
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
       )
     )
   )

@@ -88,16 +88,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -145,9 +135,9 @@
     (say "yuriy" (get_dialog dialogs language 4) "yuriyttquiet_track4") ;preview: Yes. | looking at Andrea
     (say "yuriy" (get_dialog dialogs language 5) "yuriyttquiet_track5") ;preview: And you will convince me tha... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 6) "yuriyttquiet_track6") ;preview: Me? | looking at Yuriy
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 7) "yuriyttquiet_track7") ;preview: Java? | animation front
-    (animation "andrea" "scratch_front")
+    (puppeteer_set "andrea" "scratch_front")
     (say "andrea" (get_dialog dialogs language 8) "yuriyttquiet_track8") ;preview: Oh God . . . | animation scratching his head
 
     ;And never again

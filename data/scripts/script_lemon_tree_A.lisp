@@ -105,17 +105,7 @@
       )
     )
   )
-
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
+  
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -155,7 +145,7 @@
 ;Action!
 (puppeteer_move "andrea" 3980)
 (director_wait_movement "andrea")
-(animation "andrea" "back")
+(puppeteer_set "andrea" "back")
 (if (= request_lemon 1.0)
   (if (= done_lemon 1.0)
     (say "andrea" (get_dialog dialogs language 1) "lemvirus_track1") ;preview: This lemon tree has seen bet... | animation back
@@ -176,20 +166,20 @@
         (director_script "update_items_interface")
 
         (say "andrea" (get_dialog dialogs language 15) "lemvirus_track15") ;preview: Eh eh eh | animation back
-        (animation "andrea" "front")
+        (puppeteer_set "andrea" "front")
         (say "andrea" (get_dialog dialogs language 16) "lemvirus_track16")) ;preview: I'm a genius! | animation front
       (if (= request_shoe 1.0)
         (begin
           (say "andrea" (get_dialog dialogs language 10) "lemvirus_track10") ;preview: Again? | animation front
-          (animation "andrea" "front")
+          (puppeteer_set "andrea" "front")
           (say "andrea" (get_dialog dialogs language 11) "lemvirus_track11") ;preview: We have established that I'm... | animation front
           (say "andrea" (get_dialog dialogs language 12) "lemvirus_track12")) ;preview: Maybe I could search for som...
         (begin
           (say "andrea" (get_dialog dialogs language 2) "lemvirus_track2") ;preview: Uhm . . . | animation back
           (say "andrea" (get_dialog dialogs language 3) "lemvirus_track3") ;preview: I would like to take a lemon... | animation back
-          (animation "andrea" "front")
+          (puppeteer_set "andrea" "front")
           (say "andrea" (get_dialog dialogs language 4) "lemvirus_track4") ;preview: Seems alien military technol... | animation front
-          (animation "andrea" "scratch_front")
+          (puppeteer_set "andrea" "scratch_front")
           (say "andrea" (get_dialog dialogs language 5) "lemvirus_track5") ;preview: What kind of trick is this? | animation front
           ;Script suggestion: La signora Maria passa da sinistra a destra dello schermo mentre parla
           (puppeteer_show "maria" 2600)
@@ -202,11 +192,11 @@
           (director_wait_movement "maria")
           (puppeteer_show "maria" -200)
           (puppeteer_stare "andrea" "#null")
-          (animation "andrea" "front")
+          (puppeteer_set "andrea" "front")
           (say "andrea" (get_dialog dialogs language 8) "lemvirus_track8") ;preview: I liked her better when she ... | animation front
-          (animation "andrea" "back")
+          (puppeteer_set "andrea" "back")
           (say "andrea" (get_dialog dialogs language 9) "lemvirus_track9") ;preview: Maybe I could search for som...
-          
+
           ;And never again
           (collector_set "request_shoe" 1.0))
       )

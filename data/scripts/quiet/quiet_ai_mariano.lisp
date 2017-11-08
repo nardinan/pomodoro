@@ -69,16 +69,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -116,7 +106,7 @@
 ;Action!
 (if (= mariano_quiet_dialog_vannucci 1.0)
   (begin
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 4) "marquiet_track4")) ;preview: Maybe it's better not to push | looking at Main Camera
   (begin
     (puppeteer_look "mariano" "andrea")

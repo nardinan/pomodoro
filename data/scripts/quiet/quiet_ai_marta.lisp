@@ -124,16 +124,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -177,35 +167,35 @@
     (puppeteer_move "andrea" 12000)
     (director_wait_movement "andrea")
 
-    (animation "marta"  "still_left")
-    (animation "bruno"  "still_left")
-    (animation "andrea" "still_right")
+    (puppeteer_set "marta"  "still_left")
+    (puppeteer_set "bruno"  "still_left")
+    (puppeteer_set "andrea" "still_right")
     (say "marta" (get_dialog dialogs language 1) "mbrquiet_track1") ;preview: Hi Andrea! | looking at Andrea
     (say "andrea" (get_dialog dialogs language 2) "mbrquiet_track2") ;preview: Hy guys, what's up? | looking at Marta
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 3) "mbrquiet_track3") ;preview: They are Marta and Bruno | looking at Main Camera
     (say "andrea" (get_dialog dialogs language 4) "mbrquiet_track4") ;preview: She is the bestie of my girl... | looking at Main Camera
-    (animation "marta" "front")
+    (puppeteer_set "marta" "front")
     (say "andrea" (get_dialog dialogs language 5) "mbrquiet_track5") ;preview: He is one of my best friend | looking at Main Camera
-    (animation "bruno"  "scratch_left")
+    (puppeteer_set "bruno"  "scratch_left")
     (say "andrea" (get_dialog dialogs language 6) "mbrquiet_track6") ;preview: And he is even one of the mo... | looking at Main Camera
-    (animation "andrea" "still_right")
-    (animation "marta" "point_left")
+    (puppeteer_set "andrea" "still_right")
+    (puppeteer_set "marta" "point_left")
     (say "marta" (get_dialog dialogs language 7) "mbrquiet_track7") ;preview: With Bruno we were going to ... | looking at Andrea | animation pointing
-    (animation "marta" "scratch_right")
+    (puppeteer_set "marta" "scratch_right")
     (say "marta" (get_dialog dialogs language 8) "mbrquiet_track8") ;preview: But I think he's not in his ... | looking at Bruno | animation scratching his head
     (say "bruno" (get_dialog dialogs language 9) "mbrquiet_track9") ;preview: I'm fin-segmentation fault, ... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 10) "mbrquiet_track10") ;preview: Brunetto what's going on?  | looking at Bruno
-    (animation "bruno"  "scratch_left")
+    (puppeteer_set "bruno"  "scratch_left")
     (say "bruno" (get_dialog dialogs language 11) "mbrquiet_track11") ;preview: Nothi-say.bin[512]: segfault... | looking at Andrea | animation scratching his head
     ;Script suggestion: Marta e Andrea si guardano in silenzio
     (director_wait_time 3)
     (say "marta" (get_dialog dialogs language 12) "mbrquiet_track12") ;preview: For once in his life he can'... | looking at Bruno
-    (animation "marta" "still_left")
+    (puppeteer_set "marta" "still_left")
     (say "marta" (get_dialog dialogs language 13) "mbrquiet_track13") ;preview: I try to enjoy the moment, y... | looking at Andrea
-    (animation "andrea" "scratch_right")
+    (puppeteer_set "andrea" "scratch_right")
     (say "andrea" (get_dialog dialogs language 14) "mbrquiet_track14") ;preview: I see | looking at Marta | animation scratching his head
-    (animation "marta" "still_right")
+    (puppeteer_set "marta" "still_right")
     (say "marta" (get_dialog dialogs language 15) "mbrquiet_track15") ;preview: Let's go, the doctor is wait... | looking at Bruno | animation pointing
     ;Script suggestion: Marta e Bruno se ne vanno mentre Andrea resta a guardarli
     (puppeteer_move "marta" 10000)

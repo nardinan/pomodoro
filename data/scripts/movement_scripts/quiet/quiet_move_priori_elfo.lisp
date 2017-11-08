@@ -106,16 +106,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -143,13 +133,13 @@
     )
   )
 
+;Environment configuration (music, effect, whatever)
+(puppeteer_disable_control)
+
 ;Parameters configuration
 (define request_tie (collector_get "request_tie"))
 (define got_tie (collector_get "got_tie"))
 (define approved_tie (collector_get "approved_tie"))
-
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
 
 ;Action!
 (if (= approved_tie 1.0)
@@ -158,22 +148,22 @@
     (director_script "change_scenario"))
   (if (= got_tie 1.0)
     (begin
-      (animation "andrea" "still_left")
+      (puppeteer_set "andrea" "still_left")
       (say "andrea" (get_dialog dialogs language 11) "crisntquiet_track11") ;preview: So? | looking at Cristiano
-      (animation "cristiano" "still_right")
+      (puppeteer_set "cristiano" "still_right")
       (director_wait_time 2.0)
       (say "cristiano" (get_dialog dialogs language 12) "crisntquiet_track12") ;preview: So, what? | looking at Andrea
-      (animation "andrea" "point_left")
+      (puppeteer_set "andrea" "point_left")
       (say "andrea" (get_dialog dialogs language 13) "crisntquiet_track13") ;preview: What do you think about my n... | looking at Cristiano
-      (animation "andrea" "still_left")
+      (puppeteer_set "andrea" "still_left")
       ;Script suggestion: Cristiano guarda Andrea qualche secondo
       (say "cristiano" (get_dialog dialogs language 14) "crisntquiet_track14") ;preview: I . . . | looking at Andrea
       ;Script suggestion: Pausa
       (director_wait_time 2.0)
       (say "cristiano" (get_dialog dialogs language 15) "crisntquiet_track15") ;preview: Liste, I feel so sorry for y... | looking at Andrea
-      (animation "andrea" "front")
+      (puppeteer_set "andrea" "front")
       (say "andrea" (get_dialog dialogs language 16) "crisntquiet_track16") ;preview: Thankfully people feel sorry... | animation front
-      (animation "cristiano" "front")
+      (puppeteer_set "cristiano" "front")
 
       ;And never again
       (collector_set "approved_tie" 1.0)
@@ -182,35 +172,35 @@
       (main_control "andrea"))
     (begin
       ;Fake "I am going in ..."
-      (animation "andrea" "back")
+      (puppeteer_set "andrea" "back")
       (if (= request_tie 1.0)
         nil
         (begin
-          (animation "cristiano" "point_right")
+          (puppeteer_set "cristiano" "point_right")
           (say "cristiano" (get_dialog dialogs language 1) "crisntquiet_track1") ;preview: Ehy, where do you think you ... | looking at Andrea | animation pointing
-          (animation "cristiano" "still_right")
-          (animation "andrea" "still_left")
+          (puppeteer_set "cristiano" "still_right")
+          (puppeteer_set "andrea" "still_left")
           (say "andrea" (get_dialog dialogs language 2) "crisntquiet_track2") ;preview: Ehm | looking at Cristiano
           (say "andrea" (get_dialog dialogs language 3) "crisntquiet_track3") ;preview: Inside? | looking at Cristiano
           (say "cristiano" (get_dialog dialogs language 4) "crisntquiet_track4") ;preview: Are you serious? | looking at Andrea
-          (animation "andrea" "scratch_left")
+          (puppeteer_set "andrea" "scratch_left")
           (say "andrea" (get_dialog dialogs language 5) "crisntquiet_track5") ;preview: Yes? | looking at Cristiano | animation scratching his head
-          (animation "cristiano" "front")
+          (puppeteer_set "cristiano" "front")
           (say "cristiano" (get_dialog dialogs language 6) "crisntquiet_track6") ;preview: I don't think so mate. | animation front
           (say "cristiano" (get_dialog dialogs language 7) "crisntquiet_track7") ;preview: They pay me to keep people d... | animation front
-          (animation "andrea" "scratch_left")
+          (puppeteer_set "andrea" "scratch_left")
           (say "andrea" (get_dialog dialogs language 8) "crisntquiet_track8") ;preview: What's the problem with my d... | looking at Cristiano | animation scratching his head
-          (animation "cristiano" "still_right")
+          (puppeteer_set "cristiano" "still_right")
           (director_wait_time 2.0)
 
           ;And never again
           (collector_set "request_tie" 1.0))
       )
       ;Script suggestion: Cristiano guarda Andrea qualche secondo
-      (animation "cristiano" "still_right")
+      (puppeteer_set "cristiano" "still_right")
       (say "cristiano" (get_dialog dialogs language 9) "crisntquiet_track9") ;preview: Try to be a little bit more ... | animation front
-      (animation "andrea" "still_left")
-      (animation "cristiano" "front")
+      (puppeteer_set "andrea" "still_left")
+      (puppeteer_set "cristiano" "front")
       (say "cristiano" (get_dialog dialogs language 10) "crisntquiet_track10")
 
       ;Setup characters

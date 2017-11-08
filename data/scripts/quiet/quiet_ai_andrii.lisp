@@ -73,16 +73,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -109,7 +99,7 @@
       )
     )
   )
-  
+
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
 
@@ -119,14 +109,14 @@
 ;Action!
 (if (= andrii_quiet_dialog 1.0)
   (begin
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 5) "andriiquiet_track5")) ;preview: I should not push . . . | looking Front
   (begin
     (puppeteer_look "andrea" "andrii")
     (say "andrii" (get_dialog dialogs language 1) "andriiquiet_track1") ;preview: I can't be talking to you!
     (say "andrea" (get_dialog dialogs language 2) "andriiquiet_track2") ;preview: Excuse me? | looking at Andrii
     (say "andrii" (get_dialog dialogs language 3) "andriiquiet_track3") ;preview: We'll meet in the future and...
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 4) "andriiquiet_track4") ;preview: Makes sense. | looking at Andrii
 
     ;And never again

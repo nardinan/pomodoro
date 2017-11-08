@@ -1,8 +1,7 @@
-; Pomodoro
+;Pomodoro - I have no money and I must eat an ice cream
 ; Module: move_francesco_priori
 ; Author: nardinan
 ; Date  : 12 June 2017
-
 ; Collect environment
 (define fologna_enabled (collector_get "fologna_enabled"))
 (if (= fologna_enabled 1.0)

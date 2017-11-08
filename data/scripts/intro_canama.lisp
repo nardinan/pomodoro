@@ -87,17 +87,7 @@
       )
     )
   )
-
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
+  
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -124,6 +114,7 @@
       )
     )
   )
+
 ;Draw interface
 (director_script "update_items_interface")
 
@@ -138,8 +129,7 @@
 	nil
 )
 
-;Environment configuration (music, effect, whatever)
-(puppeteer_disable_control)
+
 (puppeteer_show "andrea" 450)
 (director_camera_follow "andrea" -100.0 1.0)
 
@@ -152,17 +142,17 @@
 		nil
   )
 	(begin
-		(animation "andrea" "front")
+		(puppeteer_set "andrea" "front")
 		(director_wait_time 3)
 		(say "andrea" (get_dialog dialogs language 1) "intro_track1") ;preview: Hello, my name is Andrea and... | looking at Main Camera
-		(animation "andrea" "scratch_front")
+		(puppeteer_set "andrea" "scratch_front")
 		(say "andrea" (get_dialog dialogs language 2) "intro_track2") ;preview: This is my appartment | animation scratching his ass
 		;Script suggestion: Inizia a camminare verso la camera di cug
 		(puppeteer_move "andrea" 4500)
 		(say "andrea" (get_dialog dialogs language 3) "intro_track3") ;preview: I am taking a Computer Scien...
 		(say "andrea" (get_dialog dialogs language 4) "intro_track4") ;preview: I live here with my cusin, L...
 		(say "andrea" (get_dialog dialogs language 5) "intro_track5") ;preview: We call him 'Cug'
-		(animation "andrea" "front")
+		(puppeteer_set "andrea" "front")
 		(say "andrea" (get_dialog dialogs language 6) "intro_track6") ;preview: Because he is my cousin, you... | looking at Main Camera
 		;Script suggestion: Riprende a camminare verso la camera di cug
 		(puppeteer_move "andrea" 4500)
@@ -170,13 +160,14 @@
 		(say "andrea" (get_dialog dialogs language 8) "intro_track8") ;preview: He is even one of the two re...
 		;Script suggestion: Arriva nella stanza di cug
 		(director_wait_movement "andrea")
-		(animation "andrea"	"point_right")
+		(puppeteer_set "andrea"	"point_right")
 		(say "andrea" (get_dialog dialogs language 9) "intro_track9") ;preview: This is his room | animation pointing
-		(animation "andrea"	"front")
+		(puppeteer_set "andrea"	"front")
 		(say "andrea" (get_dialog dialogs language 10) "intro_track10") ;preview: And you know what? It's clean. | looking at Main Camera
 
 		;And never again
 		(collector_set "intro_canama" 1.0))
 )
+
 ;Return the control
 (main_control "andrea")

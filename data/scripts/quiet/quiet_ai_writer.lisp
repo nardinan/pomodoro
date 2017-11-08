@@ -73,16 +73,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -119,14 +109,14 @@
 ;Action!
 (if (= writer_quiet_dialog 1.0)
   (begin
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 5) "writquiet_track5")) ;preview: Who knows what piece of art ... | looking at Main Camera
   (begin
     (puppeteer_look "andrea" "writer")
     (say "writer" (get_dialog dialogs language 1) "writquiet_track1") ;preview: Leave me alone! | animation back
     (say "writer" (get_dialog dialogs language 2) "writquiet_track2") ;preview: I am not a junkie! | animation back
     (say "writer" (get_dialog dialogs language 3) "writquiet_track3") ;preview: I'm just trying to create so... | animation back
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 4) "writquiet_track4") ;preview: Everyone is so touchy in thi... | looking at Main Camera
 
     ;And never again

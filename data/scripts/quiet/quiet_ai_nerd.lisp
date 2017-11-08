@@ -49,16 +49,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -123,7 +113,7 @@
   (director_dialog "game_nerd_no_request_0x0a")
 )
 (director_wait_dialog)
-(animation "nerd" "back_code")
+(puppeteer_set "nerd" "back_code")
 (stagecrafter_set_item "computer_A" "coding_A")
 
 ;Refresh interface

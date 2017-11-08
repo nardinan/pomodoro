@@ -1,11 +1,7 @@
-;Pomodoro - I have no money and I must eat an ice cream
-;this script has been generated automatically and then has been polished manually
-;(sounds professional, uh? Well, it is not)
-;Code name  : bedquiet
-;Location   : Canama
-;Author     : Nardinan
-;Description: Andrea is complaining about the fact that Luca makes his bed every day
-
+; Pomodoro
+; Module: move_innamorati_cabin
+; Author: nardinan
+; Date  : 3 Nov 2017
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
@@ -13,17 +9,11 @@
    ""
    "")
   (cons ;1 andrea
-   "Tsk"
-   "Tsk")
+   "It's locked!"
+   "Chiuso a chiave!")
   (cons ;2 andrea
-   "Cug wastes his time making his bed every day . . ."
-   "Cug perde il suo tempo a rifare il letto tutti i giorni . . .")
-  (cons ;3 andrea
-   "Where is the point?"
-   "Ma a quale pro?")
-  (cons ;4 andrea
-   "In the end, we all die"
-   "Alla fine moriamo tutti")
+   "I wonder what's in there!"
+   "Mi chiedo cosa ci sia li dentro!")
   nil
 ))
 
@@ -101,12 +91,9 @@
 (puppeteer_disable_control)
 
 ;Action!
-(puppeteer_set "andrea" "back")
-(say "andrea" (get_dialog dialogs language 1) "bedquiet_track1") ;preview: Tsk | animation back
-(say "andrea" (get_dialog dialogs language 2) "bedquiet_track2") ;preview: Cug wastes his time making h... | animation back
-(say "andrea" (get_dialog dialogs language 3) "bedquiet_track3") ;preview: Where is the point? | animation front
 (puppeteer_set "andrea" "front")
-(say "andrea" (get_dialog dialogs language 4) "bedquiet_track4") ;preview: In the end, we all die | animation front
+(say "andrea" (get_dialog dialogs language 1) "doorepl_track1")
+(say "andrea" (get_dialog dialogs language 2) "doorepl_track2")
 
 ;Return the control
-(main_control "andrea")
+(main_control "andrea"))

@@ -139,16 +139,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -189,59 +179,59 @@
     (puppeteer_look "andrea" "policeman")
     (say "policeman" (get_dialog dialogs language 26) "polcen_track1") ;preview: You're still here? Do you wa... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 27) "polcen_track2") ;preview: Vorrei solo essere amato . . . | looking at Poliziotto
-    (animation "policeman" "front"))
+    (puppeteer_set "policeman" "front"))
   (begin
     (puppeteer_move "andrea" 2700)
     (director_wait_movement "andrea")
-    (animation "andrea" "still_right")
+    (puppeteer_set "andrea" "still_right")
     (say "policeman" (get_dialog dialogs language 1) "polcen_track1") ;preview: Keep moving, there is nothin... | animation front
-    (animation "andrea" "point_right")
+    (puppeteer_set "andrea" "point_right")
     (say "andrea" (get_dialog dialogs language 2) "polcen_track2") ;preview: Probably you see nothing . . . | looking at Poliziotto | animation pointing
-    (animation "andrea" "back")
+    (puppeteer_set "andrea" "back")
     (say "andrea" (get_dialog dialogs language 3) "polcen_track3") ;preview: But, apparently, somebody di... | animation back
-    (animation "andrea" "still_right")
-    (animation "policeman" "still_left")
+    (puppeteer_set "andrea" "still_right")
+    (puppeteer_set "policeman" "still_left")
     (say "policeman" (get_dialog dialogs language 4) "polcen_track4") ;preview: My ""there is nothing to see... | looking at Andrea
     ;Script suggestion: I due si guardano in silenzio
     (director_wait_time 3)
-    (animation "andrea" "point_right")
+    (puppeteer_set "andrea" "point_right")
     (say "andrea" (get_dialog dialogs language 5) "polcen_track5") ;preview: Do you have some hairs there... | looking at Poliziotto
-    (animation "andrea" "still_right")
+    (puppeteer_set "andrea" "still_right")
     (say "policeman" (get_dialog dialogs language 6) "polcen_track6") ;preview: We'll never know . . . | looking at Andrea
     (director_wait_time 2)
-    (animation "andrea" "back")
+    (puppeteer_set "andrea" "back")
     (say "andrea" (get_dialog dialogs language 7) "polcen_track7") ;preview: OK Kojak, who is dead here? | animation back
     (say "policeman" (get_dialog dialogs language 8) "polcen_track8") ;preview: No one you know. Now, please... | looking at Andrea
-    (animation "andrea" "scratch_right")
+    (puppeteer_set "andrea" "scratch_right")
     (say "andrea" (get_dialog dialogs language 9) "polcen_track9") ;preview: How can you say something li... | looking at Poliziotto
-    (animation "andrea" "point_right")
+    (puppeteer_set "andrea" "point_right")
     (say "andrea" (get_dialog dialogs language 10) "polcen_track10") ;preview: I know everybody here in town! | looking at Poliziotto
-    (animation "andrea" "still_right")
-    (animation "policeman" "point_left")
+    (puppeteer_set "andrea" "still_right")
+    (puppeteer_set "policeman" "point_left")
     (say "policeman" (get_dialog dialogs language 11) "polcen_track11") ;preview: OK, do you know 'il Profeta'? | looking at Andrea
-    (animation "policeman" "still_left")
-    (animation "andrea" "scratch_right")
+    (puppeteer_set "policeman" "still_left")
+    (puppeteer_set "andrea" "scratch_right")
     (say "andrea" (get_dialog dialogs language 12) "polcen_track12") ;preview: Nope | looking at Poliziotto | animation scratching his head
-    (animation "andrea" "still_right")
+    (puppeteer_set "andrea" "still_right")
     (say "policeman" (get_dialog dialogs language 13) "polcen_track13") ;preview: Is that guy that was going a... | looking at Andrea
     (say "policeman" (get_dialog dialogs language 14) "polcen_track14") ;preview: Bad things | looking at Andrea
-    (animation "andrea" "scratch_right")
+    (puppeteer_set "andrea" "scratch_right")
     (say "andrea" (get_dialog dialogs language 15) "polcen_track15") ;preview: I've never heard of him | looking at Poliziotto
-    (animation "andrea" "still_right")
+    (puppeteer_set "andrea" "still_right")
     (say "policeman" (get_dialog dialogs language 16) "polcen_track16") ;preview: Oh, came on! He was walking ... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 17) "polcen_track17") ;preview: Uh | animation back
-    (animation "policeman" "front")
+    (puppeteer_set "policeman" "front")
     (say "policeman" (get_dialog dialogs language 18) "polcen_track18") ;preview: However is him | looking at Andrea
     (say "andrea" (get_dialog dialogs language 19) "polcen_track19") ;preview: Where is his bible? | animation back
     (say "policeman" (get_dialog dialogs language 20) "polcen_track20") ;preview: Stolen | animation front
     (say "andrea" (get_dialog dialogs language 21) "polcen_track21") ;preview: Did he die of natural causes? | looking at Poliziotto
     (say "policeman" (get_dialog dialogs language 22) "polcen_track22") ;preview: He has been stabbed in the b... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 23) "polcen_track23") ;preview: Suspects? | looking at Poliziotto
-    (animation "policeman" "point_left")
+    (puppeteer_set "policeman" "point_left")
     (say "policeman" (get_dialog dialogs language 24) "polcen_track24") ;preview: Yes, you. | looking at Andrea | animation pointing
-    (animation "policeman" "still_left")
+    (puppeteer_set "policeman" "still_left")
     (say "andrea" (get_dialog dialogs language 25) "polcen_track25") ;preview: Thanks, I'm going to go! | looking at Poliziotto
-    (animation "policeman" "front")
+    (puppeteer_set "policeman" "front")
 
     ;And never again
     (collector_set "intro_policeman_november" 1))

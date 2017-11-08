@@ -3,7 +3,7 @@
 ;Author: nardinan
 ;Date  : 15 Dec 2016
 ;Disables the control to prevent the same script to start multiple time (fixes the double-click bug)
-(puppeteer_disable_control "andrea")
+(puppeteer_disable_control)
 
 ;High level functions
 ;@brief: check_chapter <chapter_variable> <done_chapter_variable>

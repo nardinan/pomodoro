@@ -118,16 +118,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -172,37 +162,37 @@
 
     (puppeteer_stare "roberto" "#null")
 
-    (animation "andrea"  "still_right")
-    (animation "roberto" "still_left")
+    (puppeteer_set "andrea"  "still_right")
+    (puppeteer_set "roberto" "still_left")
 
     (say "roberto" (get_dialog dialogs language 1) "robquiet_track1") ;preview: Enough is enough!  | looking at Andrea
-    (animation "andrea" "scratch_right")
+    (puppeteer_set "andrea" "scratch_right")
     (say "andrea" (get_dialog dialogs language 2) "robquiet_track2") ;preview: What are you talking about?  | looking at Roberto | animation scratching his head
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 3) "robquiet_track3") ;preview: He is Roberto | looking at Main Camera
     (say "andrea" (get_dialog dialogs language 4) "robquiet_track4") ;preview: He is a friend of mine | looking at Main Camera
     (say "andrea" (get_dialog dialogs language 5) "robquiet_track5") ;preview: And one of the Psycho Games ... | looking at Main Camera
-    (animation "andrea"  "still_right")
+    (puppeteer_set "andrea"  "still_right")
     (say "roberto" (get_dialog dialogs language 6) "robquiet_track6") ;preview: Please, I have urgent things... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 7) "robquiet_track7") ;preview: As you wish | looking at Roberto
     (say "roberto" (get_dialog dialogs language 8) "robquiet_track8") ;preview: I'll just tell you a single ... | looking at Andrea
-    (animation "roberto" "point_left")
+    (puppeteer_set "roberto" "point_left")
     (say "roberto" (get_dialog dialogs language 9) "robquiet_track9") ;preview: SCIENTOLOGY | looking at Andrea | animation pointing
-    (animation "roberto" "still_left")
+    (puppeteer_set "roberto" "still_left")
     ;Script suggestion: Pausa
     (director_wait_time 2)
     (say "andrea" (get_dialog dialogs language 10) "robquiet_track10") ;preview: I am not sure I'd get that .... | looking at Roberto
-    (animation "roberto" "point_left")
+    (puppeteer_set "roberto" "point_left")
     (say "roberto" (get_dialog dialogs language 11) "robquiet_track11") ;preview: They are everywhere! | looking at Andrea | animation pointing
-    (animation "roberto" "still_left")
+    (puppeteer_set "roberto" "still_left")
     (say "roberto" (get_dialog dialogs language 12) "robquiet_track12") ;preview: Everywhere! | looking at Andrea
-    (animation "andrea" "scratch_right")
+    (puppeteer_set "andrea" "scratch_right")
     (say "andrea" (get_dialog dialogs language 13) "robquiet_track13") ;preview: Here we go . . . | looking at Roberto | animation scratching his head
     (say "roberto" (get_dialog dialogs language 14) "robquiet_track14") ;preview: Indeed!  | looking at Andrea
     (say "roberto" (get_dialog dialogs language 15) "robquiet_track15") ;preview: I prefer to talk with someon... | looking at Andrea
-    (animation "andrea" "point_right")
+    (puppeteer_set "andrea" "point_right")
     (say "andrea" (get_dialog dialogs language 16) "robquiet_track16") ;preview: Sure, I guess with the pries... | looking at Roberto | animation pointing
-    (animation "andrea" "still_right")
+    (puppeteer_set "andrea" "still_right")
     (say "roberto" (get_dialog dialogs language 17) "robquiet_track17") ;preview: Of course! | looking at Andrea
     (say "roberto" (get_dialog dialogs language 18) "robquiet_track18") ;preview:  I'm waiting for the end of ... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 19) "robquiet_track19") ;preview: We go from bad to worse | looking at Roberto

@@ -1,4 +1,4 @@
-; Pomodoro
+;Pomodoro - I have no money and I must eat an ice cream
 ; Module: move_unipgC_temple
 ; Author: nardinan
 ; Date  : 4 Oct 2017
@@ -60,16 +60,6 @@
     )
   )
 
-;@brief: animation <character> <animation>
-;@description: changes the state/animation of <character> to <animation>
-(define animation
-  (lambda (c m)
-    (begin
-      (puppeteer_set c m)
-      )
-    )
-  )
-
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -106,7 +96,7 @@
     ;Environment configuration (music, effect, whatever)
     (puppeteer_disable_control)
 
-    (animation "andrea" "front")
+    (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 1) "doorepl_track1")
     (say "andrea" (get_dialog dialogs language 2) "doorepl_track2")
 
