@@ -377,8 +377,8 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
             d_log(e_log_level_medium, "action [enable control] (character %s)", action->key);
             result = d_call(self, m_puppeteer_enable_control, action->key);
             break;
-        case e_puppeteer_action_disable_control:    /* key (character) */
-            d_log(e_log_level_medium, "action [disable control] (character %s)", action->key);
+        case e_puppeteer_action_disable_control:    /* no parameters */
+            d_log(e_log_level_medium, "action [disable control]");
             result = d_call(self, m_puppeteer_disable_control, NULL);
             break;
         case e_puppeteer_action_say:                /* key (character), message, timeout */
