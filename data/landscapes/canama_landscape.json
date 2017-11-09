@@ -29,6 +29,7 @@
 		{"label":"bed_B",							"item":"bed",								"status":"still_B",							"position_x":5410.0,	"position_y":970.0,		"zoom":1.25,    																		"script":"script_bed_B"},
 		{"label":"wardrobe_A",				"item":"wardrobe",					"status":"still_A",							"position_x":4650.0,	"position_y":720.0,		"zoom":1.25},
 		{"label":"chair_B",						"item":"chair",							"status":"still_B",							"position_x":4100.0,	"position_y":990.0,		"zoom":1.25},
+    {"label":"remote_A",          "item":"remote",            "status":"still_A",             "position_x":3870.0,  "position_y":880.0,   "zoom":1.25,                      "active":true,    "script":"script_remote_A"},  
 		{"label":"desk_B",						"item":"desk",							"status":"still_B",							"position_x":3830.0,	"position_y":980.0,		"zoom":1.25},
 		{"label":"window_B",					"item":"window",						"status":"inside_A",						"position_x":4050.0,	"position_y":640.0,		"zoom":1.25},
 		{"label":"canama_wall_C",			"item":"canama_wall",				"status":"still",								"position_x":3680.0,	"position_y":450.0,		"zoom":1.25,	"solid":false},

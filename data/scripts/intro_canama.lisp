@@ -121,6 +121,8 @@
 ;Parameters configuration
 (define got_note (collector_get "got_note"))
 (define intro_canama (collector_get "intro_canama"))
+(define done_battery (collector_get "done_battery"))
+
 (collector_set "from_where" "canama")
 (if (= got_note 1.0)
   (begin
@@ -128,12 +130,13 @@
     (stagecrafter_enable_item "bed_B"))
   nil
   )
-
-
-(puppeteer_show "andrea" 450)
-(director_camera_follow "andrea" -100.0 1.0)
+(if (= done_battery 1.0)
+  (stagecrafter_set_item "remote_A" "still_B")
+  nil
+  )
 
 ;Action!
+(puppeteer_show "andrea" 450)
 (if (= intro_canama 1.0)
   (if (= got_note 1.0)
     (begin
@@ -142,6 +145,7 @@
     nil
     )
   (begin
+    (director_camera_follow "andrea" -100.0 1.0)
     (puppeteer_set "andrea" "front")
     (director_wait_time 3)
     (say "andrea" (get_dialog dialogs language 1) "intro_track1") ;preview: Hello, my name is Andrea and... | looking at Main Camera

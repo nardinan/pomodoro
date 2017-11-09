@@ -6,3 +6,4 @@
 (effecteer_delete "inventory_tie")
 (effecteer_delete "inventory_shoe")
 (effecteer_delete "inventory_lemon")
+(effecteer_delete "inventory_battery")

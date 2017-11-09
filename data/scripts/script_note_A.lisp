@@ -189,13 +189,11 @@
 
 ;Environment configuration (music, effect, whatever)
 (puppeteer_disable_control)
-(puppeteer_set "andrea" "back")
 
 ;Parameters configuration
 (define got_note (collector_get "got_note"))
 
 ;Action!
-(puppeteer_disable_control)
 (puppeteer_set "andrea" "back")
 (if (not (= got_note 1.0))
   (begin

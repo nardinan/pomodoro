@@ -153,7 +153,6 @@
       (begin
         (say "andrea" (get_dialog dialogs language 13) "lemvirus_track13") ;preview: I can try to launch this sho... | animation front
         (say "andrea" (get_dialog dialogs language 14) "lemvirus_track14") ;preview: Ngh! | animation back
-        ;Animation
         (stagecrafter_set_item "lemon_tree_A" "drop_lemon")
         (director_wait_time 2.0)
         (stagecrafter_set_item "lemon_tree_A" "still_B")

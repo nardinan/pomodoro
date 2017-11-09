@@ -1,0 +1,18 @@
+{
+	"format":"item",
+	"ID":"remote",
+	"zoom":12,
+	"statuses":[
+		{
+			"label":"still_A",
+			"layers":[
+				{"drawable":"remote_still_A"}
+			]
+		},{
+      "label":"still_B",
+      "layers":[
+        {"drawable":"remote_still_B"}
+      ]
+    }
+	]
+}
