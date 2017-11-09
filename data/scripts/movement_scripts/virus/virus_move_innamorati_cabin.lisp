@@ -5,17 +5,17 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 andrea
-   "It's locked!"
-   "Chiuso a chiave!")
-  (cons ;3 andrea
-   "I should find the key to take that money!"
-   "Sara' il caso di trovarla per prendere quei soldi!")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 andrea
+                    "It's locked!"
+                    "Chiuso a chiave!")
+                  (cons ;3 andrea
+                    "I should find the key to take that money!"
+                    "Sara' il caso di trovarla per prendere quei soldi!")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -99,7 +99,7 @@
     (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 1) "doorepl_track1")
     (say "andrea" (get_dialog dialogs language 2) "doorepl_track3"))
-)
+  )
 
 ;Return the control
 (main_control "andrea")

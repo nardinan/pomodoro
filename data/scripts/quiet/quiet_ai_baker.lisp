@@ -93,15 +93,15 @@
 
     ;And never again
     (collector_set "baker_quiet_dialog" 1.0))
-)
+  )
 (director_wait_dialog)
 (if (= request_cigarette 1.0)
   (if (= done_cigarette 1.0)
     (director_dialog "game_baker_done_0x0a")
     (director_dialog "game_baker_requested_tool_0x0a")
-  )
+    )
   (director_dialog "game_baker_no_request_0x0a")
-)
+  )
 (director_wait_dialog)
 
 ;Refresh interface

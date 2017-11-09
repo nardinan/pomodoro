@@ -95,7 +95,7 @@
 
     ;And never again
     (collector_set "antonietta_quiet_dialog" 1.0))
-)
+  )
 (director_wait_dialog)
 (if (= request_phone 1.0)
   (if (= done_phone 1.0)
@@ -105,11 +105,11 @@
       (if (= request_flowers 1.0)
         (director_dialog "game_antonietta_requested_no_tool_0x0a")
         (director_dialog "game_antonietta_activated_no_tool_0x0a")
+        )
       )
     )
-  )
   (director_dialog "game_antonietta_no_request_0x0a")
-)
+  )
 (director_wait_dialog)
 ;Refresh interface
 (director_script "update_items_interface"))

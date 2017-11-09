@@ -32,13 +32,13 @@
 (puppeteer_show "writer" 9400)
 (puppeteer_set "writer" "back_writer")
 (if (= marta_quiet_dialog 1.0)
-	nil
-	(begin
-		(puppeteer_show "bruno"  12600)
+  nil
+  (begin
+    (puppeteer_show "bruno"  12600)
     (puppeteer_set "bruno" "still_left"))
-    (puppeteer_show "marta" 12300)
-		(puppeteer_set "marta" "still_right")
-)
+  (puppeteer_show "marta" 12300)
+  (puppeteer_set "marta" "still_right")
+  )
 (if (compare from_where "unipgA")
   (puppeteer_show "andrea" 13500)
   (if (compare from_where "francesco")
@@ -46,8 +46,8 @@
     (if (compare from_where "cabin")
       (puppeteer_show "andrea" 8800)
       (puppeteer_show "andrea" 900)
+      )
     )
   )
-)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

@@ -6,32 +6,32 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-	(cons ;0
-		""
-		"")
-	(cons ;1 andrea
-	 "'Call me! 456456'"
-	 "'Chiamami! 456456'")
-	(cons ;2 andrea
- 	 "It says:"
-	 "Dice:")
-	(cons ;3 andrea
-	 "'Do you want to increase your intelligence?'"
-	 "'Vuoi incrementare la tua intelligenza?'")
-	(cons ;4 andrea
-	 "'Do you want to learn how to cook?'"
-	 "'Vuoi imparare a cucinare?'")
-	(cons ;5 andrea
-	 "'Do you want to learn how to read correctly?'"
-	 "'Vuoi imparare a leggere correttamente?'")
-	(cons ;6 andrea
-	 "'Do you want to learn how to be cool with girls?'"
-	 "'Vuoi imparare ad essere cool con le ragazze?'")
-  (cons ;7 andrea
-	 "'Do you want to learn how to eat like a duke?'"
-	 "'Vuoi imparare a mangiare come un signorotto?'")
-	nil
-))
+                  (cons ;0
+                    ""
+                    "")
+                  (cons ;1 andrea
+                    "'Call me! 456456'"
+                    "'Chiamami! 456456'")
+                  (cons ;2 andrea
+                    "It says:"
+                    "Dice:")
+                  (cons ;3 andrea
+                    "'Do you want to increase your intelligence?'"
+                    "'Vuoi incrementare la tua intelligenza?'")
+                  (cons ;4 andrea
+                    "'Do you want to learn how to cook?'"
+                    "'Vuoi imparare a cucinare?'")
+                  (cons ;5 andrea
+                    "'Do you want to learn how to read correctly?'"
+                    "'Vuoi imparare a leggere correttamente?'")
+                  (cons ;6 andrea
+                    "'Do you want to learn how to be cool with girls?'"
+                    "'Vuoi imparare ad essere cool con le ragazze?'")
+                  (cons ;7 andrea
+                    "'Do you want to learn how to eat like a duke?'"
+                    "'Vuoi imparare a mangiare come un signorotto?'")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -108,21 +108,21 @@
 (puppeteer_set "andrea" "back")
 (say "andrea" (get_dialog dialogs language 2))
 (if (compare (collector_get "from_where") "canama")
-	(say "andrea" (get_dialog dialogs language 3))
-	(if (compare (collector_get "from_where") "lupattelli")
-		(say "andrea" (get_dialog dialogs language 4))
-		(if (compare (collector_get "from_where") "garibaldi")
-			(say "andrea" (get_dialog dialogs language 5))
-			(if (compare (collector_get "from_where") "fortebraccio")
-				(say "andrea" (get_dialog dialogs language 6))
-				(if (compare (collector_get "from_where") "vannucci")
-					(say "andrea" (get_dialog dialogs language 7))
-					nil
-				)
-			)
-		)
-	)
-)
+  (say "andrea" (get_dialog dialogs language 3))
+  (if (compare (collector_get "from_where") "lupattelli")
+    (say "andrea" (get_dialog dialogs language 4))
+    (if (compare (collector_get "from_where") "garibaldi")
+      (say "andrea" (get_dialog dialogs language 5))
+      (if (compare (collector_get "from_where") "fortebraccio")
+        (say "andrea" (get_dialog dialogs language 6))
+        (if (compare (collector_get "from_where") "vannucci")
+          (say "andrea" (get_dialog dialogs language 7))
+          nil
+          )
+        )
+      )
+    )
+  )
 (say "andrea" (get_dialog dialogs language 1))
 
 ;Return the control

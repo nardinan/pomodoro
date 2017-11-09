@@ -5,5 +5,5 @@
   (if (compare current_chapter "virus")
     (director_script "virus_delete_items_interface")
     nil
+    )
   )
-)

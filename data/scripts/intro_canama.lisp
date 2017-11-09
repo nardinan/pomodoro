@@ -9,41 +9,41 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 andrea
-   "Hello, my name is Andrea and I am a student here, at the University of Perugia"
-   "Ciao! Io mi chiamo Andrea e sono uno studente dell'Unversita' degli studi di Perugia")
-  (cons ;2 andrea
-   "This is my appartment"
-   "Questo e' l'appartamento dove vivo")
-  (cons ;3 andrea
-   "I will get my master degree in Computer Science very soon!"
-   "Frequento il corso di informatica e sono prossimo alla mia laurea magistrale!")
-  (cons ;4 andrea
-   "I live here with my cusin, Luca"
-   "Vivo qui con mio cugino, Luca")
-  (cons ;5 andrea
-   "We call him 'Cug'"
-   "Lo chiamiamo 'Cug'")
-  (cons ;6 andrea
-   "Because he is my cousin, you know"
-   "Perche' e' mio cugino, sapete")
-  (cons ;7 andrea
-   "He is a student at UniPG's Department of Mathematics"
-   "E' uno studente del Dipartimento di Matematica dell'UniPG")
-  (cons ;8 andrea
-   "He is even one of the two reasons why I was able to survive so far"
-   "E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")
-  (cons ;9 andrea
-   "This is his room"
-   "Questa e' la sua stanza")
-  (cons ;10 andrea
-   "And you know what? It's clean."
-   "E sapete cosa? E' pulita.")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 andrea
+                    "Hello, my name is Andrea and I am a student here, at the University of Perugia"
+                    "Ciao! Io mi chiamo Andrea e sono uno studente dell'Unversita' degli studi di Perugia")
+                  (cons ;2 andrea
+                    "This is my appartment"
+                    "Questo e' l'appartamento dove vivo")
+                  (cons ;3 andrea
+                    "I will get my master degree in Computer Science very soon!"
+                    "Frequento il corso di informatica e sono prossimo alla mia laurea magistrale!")
+                  (cons ;4 andrea
+                    "I live here with my cusin, Luca"
+                    "Vivo qui con mio cugino, Luca")
+                  (cons ;5 andrea
+                    "We call him 'Cug'"
+                    "Lo chiamiamo 'Cug'")
+                  (cons ;6 andrea
+                    "Because he is my cousin, you know"
+                    "Perche' e' mio cugino, sapete")
+                  (cons ;7 andrea
+                    "He is a student at UniPG's Department of Mathematics"
+                    "E' uno studente del Dipartimento di Matematica dell'UniPG")
+                  (cons ;8 andrea
+                    "He is even one of the two reasons why I was able to survive so far"
+                    "E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")
+                  (cons ;9 andrea
+                    "This is his room"
+                    "Questa e' la sua stanza")
+                  (cons ;10 andrea
+                    "And you know what? It's clean."
+                    "E sapete cosa? E' pulita.")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -87,7 +87,7 @@
       )
     )
   )
-  
+
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -123,11 +123,11 @@
 (define intro_canama (collector_get "intro_canama"))
 (collector_set "from_where" "canama")
 (if (= got_note 1.0)
-	(begin
-		(stagecrafter_set_item "notes_A" "none")
-		(stagecrafter_enable_item "bed_B"))
-	nil
-)
+  (begin
+    (stagecrafter_set_item "notes_A" "none")
+    (stagecrafter_enable_item "bed_B"))
+  nil
+  )
 
 
 (puppeteer_show "andrea" 450)
@@ -135,39 +135,39 @@
 
 ;Action!
 (if (= intro_canama 1.0)
-	(if (= got_note 1.0)
-		(begin
-			(puppeteer_show "luca" 4500)
-			(puppeteer_stare "luca" "andrea"))
-		nil
-  )
-	(begin
-		(puppeteer_set "andrea" "front")
-		(director_wait_time 3)
-		(say "andrea" (get_dialog dialogs language 1) "intro_track1") ;preview: Hello, my name is Andrea and... | looking at Main Camera
-		(puppeteer_set "andrea" "scratch_front")
-		(say "andrea" (get_dialog dialogs language 2) "intro_track2") ;preview: This is my appartment | animation scratching his ass
-		;Script suggestion: Inizia a camminare verso la camera di cug
-		(puppeteer_move "andrea" 4500)
-		(say "andrea" (get_dialog dialogs language 3) "intro_track3") ;preview: I am taking a Computer Scien...
-		(say "andrea" (get_dialog dialogs language 4) "intro_track4") ;preview: I live here with my cusin, L...
-		(say "andrea" (get_dialog dialogs language 5) "intro_track5") ;preview: We call him 'Cug'
-		(puppeteer_set "andrea" "front")
-		(say "andrea" (get_dialog dialogs language 6) "intro_track6") ;preview: Because he is my cousin, you... | looking at Main Camera
-		;Script suggestion: Riprende a camminare verso la camera di cug
-		(puppeteer_move "andrea" 4500)
-		(say "andrea" (get_dialog dialogs language 7) "intro_track7") ;preview: He is a student at UniPG's D...
-		(say "andrea" (get_dialog dialogs language 8) "intro_track8") ;preview: He is even one of the two re...
-		;Script suggestion: Arriva nella stanza di cug
-		(director_wait_movement "andrea")
-		(puppeteer_set "andrea"	"point_right")
-		(say "andrea" (get_dialog dialogs language 9) "intro_track9") ;preview: This is his room | animation pointing
-		(puppeteer_set "andrea"	"front")
-		(say "andrea" (get_dialog dialogs language 10) "intro_track10") ;preview: And you know what? It's clean. | looking at Main Camera
+  (if (= got_note 1.0)
+    (begin
+      (puppeteer_show "luca" 4500)
+      (puppeteer_stare "luca" "andrea"))
+    nil
+    )
+  (begin
+    (puppeteer_set "andrea" "front")
+    (director_wait_time 3)
+    (say "andrea" (get_dialog dialogs language 1) "intro_track1") ;preview: Hello, my name is Andrea and... | looking at Main Camera
+    (puppeteer_set "andrea" "scratch_front")
+    (say "andrea" (get_dialog dialogs language 2) "intro_track2") ;preview: This is my appartment | animation scratching his ass
+    ;Script suggestion: Inizia a camminare verso la camera di cug
+    (puppeteer_move "andrea" 4500)
+    (say "andrea" (get_dialog dialogs language 3) "intro_track3") ;preview: I am taking a Computer Scien...
+    (say "andrea" (get_dialog dialogs language 4) "intro_track4") ;preview: I live here with my cusin, L...
+    (say "andrea" (get_dialog dialogs language 5) "intro_track5") ;preview: We call him 'Cug'
+    (puppeteer_set "andrea" "front")
+    (say "andrea" (get_dialog dialogs language 6) "intro_track6") ;preview: Because he is my cousin, you... | looking at Main Camera
+    ;Script suggestion: Riprende a camminare verso la camera di cug
+    (puppeteer_move "andrea" 4500)
+    (say "andrea" (get_dialog dialogs language 7) "intro_track7") ;preview: He is a student at UniPG's D...
+    (say "andrea" (get_dialog dialogs language 8) "intro_track8") ;preview: He is even one of the two re...
+    ;Script suggestion: Arriva nella stanza di cug
+    (director_wait_movement "andrea")
+    (puppeteer_set "andrea"	"point_right")
+    (say "andrea" (get_dialog dialogs language 9) "intro_track9") ;preview: This is his room | animation pointing
+    (puppeteer_set "andrea"	"front")
+    (say "andrea" (get_dialog dialogs language 10) "intro_track10") ;preview: And you know what? It's clean. | looking at Main Camera
 
-		;And never again
-		(collector_set "intro_canama" 1.0))
-)
+    ;And never again
+    (collector_set "intro_canama" 1.0))
+  )
 
 ;Return the control
 (main_control "andrea")

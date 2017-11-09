@@ -9,17 +9,17 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 andrea
-   "Ah ah ah . . ."
-   "Ah ah ah . . .")
-  (cons ;2 andrea
-   "Moron."
-   "Deficiente.")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 andrea
+                    "Ah ah ah . . ."
+                    "Ah ah ah . . .")
+                  (cons ;2 andrea
+                    "Moron."
+                    "Deficiente.")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -102,7 +102,7 @@
     (say "andrea" (get_dialog dialogs language 2) "bkrquiet_track2") ;preview: Moron. | looking at Luca
     (collector_set "quiet_baker_run_away" 0.0))
   nil
-)
+  )
 
 ;Return the control
 (main_control "andrea")

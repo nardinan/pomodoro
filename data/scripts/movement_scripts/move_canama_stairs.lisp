@@ -6,11 +6,11 @@
 ; Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-	(cons ;0 andrea
- 	 "I need a good reason to leave the safety of my appartment"
-	 "Ho bisogno della giusta motivazione per lasciare il mio appartamento")
-	nil
-))
+                  (cons ;0 andrea
+                    "I need a good reason to leave the safety of my appartment"
+                    "Ho bisogno della giusta motivazione per lasciare il mio appartamento")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -86,10 +86,10 @@
 (define got_note (collector_get "got_note"))
 
 (if (not (= got_note 1.0))
-	(begin
-		(puppeteer_set "andrea" "front")
-		(say "andrea" (get_dialog dialogs language 0)))
-	(begin
-		(collector_set "destination_scenario" "stairs")
-		(director_script "change_scenario"))
-)
+  (begin
+    (puppeteer_set "andrea" "front")
+    (say "andrea" (get_dialog dialogs language 0)))
+  (begin
+    (collector_set "destination_scenario" "stairs")
+    (director_script "change_scenario"))
+  )

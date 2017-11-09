@@ -9,206 +9,206 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 None
-    ""
-    "")
-  (cons ;1 andrii
-   "Dilution magnets are up and kicking, ready to prevent a potential catastrophic event (PCE)"
-   "I magneti di diluzione sono stati attivati e sono pronti a prevenire una possibile catastrofe")
-  (cons ;2 yuriy
-   "That's great!"
-   "Fantastico!")
-  (cons ;3 yuriy
-   "Dr. Tykhonov?"
-   "Dr. Tykhonov?")
-  (cons ;4 andrii
-   "Mh?"
-   "Mh?")
-  (cons ;5 yuriy
-   "Could you please disable the security grid?"
-   "Potrebbe cortesemente disabilitare la griglia di sicurezza?")
-  (cons ;6 andrii
-   "Dr. Tykhonov?"
-   "Dr. Tykhonov?")
-  (cons ;7 andrii
-   "I am not 50 years old, please, call me Andrii"
-   "Non ho cinquant'anni, puoi chiamarmi tranquillamente Andrii.")
-  (cons ;8 yuriy
-   "In 'Angel and Deamons' people follow this approach!"
-   "Ma su 'Angeli e Demoni' le persone del CERN usano questi appellativi!")
-  (cons ;9 yuriy
-   "You want to be less professional that a Dan Brown's book?"
-   "Vorresti esser meno professionale di un libro di Dan Brown?")
-  (cons ;10 andrii
-   "Anyway . . ."
-   "Comunque . . .")
-  (cons ;11 andrii
-   "I don't think we should disable the security grids, Yuriy!"
-   "Non credo che dovremo disabilitare le griglie di sicurezza, Yuriy")
-  (cons ;12 andrii
-   "Is too dangerous!"
-   "E' troppo pericoloso!")
-  (cons ;13 yuriy
-   "Oh, came on!"
-   "Oh, eddai!")
-  (cons ;14 andrii
-   "No!"
-   "No.")
-  (cons ;15 yuriy
-   "I would do it for you!"
-   "Per te io lo farei!")
-  (cons ;16 andrii
-   "OK, but you're fucking annoying!"
-   "E va bene, rompipalle!")
-  (cons ;17 andrii
-   "If something explodes, it's on you"
-   "Ma se qualcosa dovesse accadere, la colpa sara' solo tua.")
-  (cons ;18 yuriy
-   "If something explodes, it's on you"
-   "Ma se qualcosa dovesse accadere, la colpa sara' solo tua.")
-  (cons ;19 andrii
-   "Stop to say what I'm saying!"
-   "Non prendermi in giro!")
-  (cons ;20 andrii
-   "Security grids have been disable, Dr. Ilchenko!"
-   "Le griglie di sicurezza sono state disabilitate Dr. Ilchenko!")
-  (cons ;21 yuriy
-   "Fantastic!"
-   "Fantastico!")
-  (cons ;22 yuriy
-   "Dan Brown would be proud of you!"
-   "Dan Brown sarebbe orgoglioso di te!")
-  (cons ;23 andrii
-   "Dan Brown is awkward"
-   "Dan Brown e' un disagiato")
-  (cons ;24 yuriy
-   "Uhm"
-   "Uhm")
-  (cons ;25 yuriy
-   "Andrii, smoke seems coming out from the LHC"
-   "Andrii, del fumo esce dall'LHC")
-  (cons ;26 yuriy
-   "Is it normal?"
-   "E' normale?")
-  (cons ;27 andrii
-   "No Yuriy, is not normal. Obviously."
-   "No Yuriy, ovviamente non e' normale.")
-  (cons ;28 yuriy
-   "Even Dan Brown would be able to recognize my sarcasm!"
-   "Si chiama 'sarcasmo' e anche Dan Brown sarebbe capace di riconoscerlo!")
-  (cons ;29 andrii
-   "I think we should shut it down now before it gets worse . . ."
-   "Credo sia il caso di spegnerlo prima che la situazione peggiori . . .")
-  (cons ;30 yuriy
-   "Uh?"
-   "Uh?")
-  (cons ;31 yuriy
-   "It gets worse?"
-   "Peggiorare?")
-  (cons ;32 yuriy
-   "Is smoking! How could it gets worse?"
-   "Sta uscendo del fumo! Come puo' peggiorare la situazione?")
-  (cons ;33 yuriy
-   "Oh, I see now!"
-   "Oh! Capisco ora!")
-  (cons ;34 andrii
-   "CHTO ZA HUINYA, BLYAT!?"
-   "CHTO ZA HUINYA, BLYAT!?")
-  (cons ;35 andrii
-   "DIOMATONNE!"
-   "DIOMATONNE!")
-  (cons ;36 andrii
-   "We're polluting the fabric of space and time!"
-   "Stiamo inquinando il tessuto spazio-tempo!")
-  (cons ;37 yuriy
-   "What?"
-   "Cosa?")
-  (cons ;38 yuriy
-   "The fabric of space and time?"
-   "Il tessuto spazio-tempo?")
-  (cons ;39 yuriy
-   "Where did you got your PhD?"
-   "Dove hai preso il dottorato, scusa?")
-  (cons ;40 andrii
-   "Shut the fuck up!"
-   "Stai zitto!")
-  (cons ;41 andrii
-   "Jesus Christ, shut up!"
-   "Gesu' Cristo smettila di parlare!")
-  (cons ;42 yuriy
-   "Phew, we missed it by a hair!"
-   "Phew, per un pelo!")
-  (cons ;43 andrii
-   "Uhm"
-   "Uhm")
-  (cons ;44 yuriy
-   "What? What's the matter?"
-   "Cosa? Che c'e'?")
-  (cons ;45 andrii
-   "Yuriy, I think that the energy peak that we got wasn't a random one"
-   "Yuriy io credo che il picco d'enegia che abbiamo avuto non sia stato casuale")
-  (cons ;46 yuriy
-   "What?"
-   "Spiegazione, prego")
-  (cons ;47 andrii
-   "The computer says that we had a total blackout in the magnets' power line"
-   "Secondo il computer abbiamo avuto un backout dei magneti di controllo")
-  (cons ;48 andrii
-   "This means that for a small amount of time, the beam was going around without any control"
-   "Questo vuol dire che per qualche secondo il fascio viaggiava totalmente per conto suo")
-  (cons ;49 andrii
-   "We may have changed something, somewhere in the past"
-   "Potremmo aver cambiato qualcosa da qualche parte, nel passato")
-  (cons ;50 andrii
-   "We may have changed . . ."
-   "Potremmo aver cambiato . . .")
-  (cons ;51 andrii
-   "THE HISTORY"
-   "LA STORIA")
-  (cons ;52 yuriy
-   "Wow! How did you do that?"
-   "Wow! Ma come hai fatto a farlo?")
-  (cons ;53 andrii
-   "That? What?"
-   "Fare cosa?")
-  (cons ;54 yuriy
-   "The thunder stuff"
-   "Quella cosa del fulmine!")
-  (cons ;55 andrii
-   "What thunder stuff?"
-   "Quale cosa del fulmine?")
-  (cons ;56 yuriy
-   "However, we're still here!"
-   "Comunque noi siamo ancora qui!")
-  (cons ;57 yuriy
-   "Probably we changed the story of a dork . . ."
-   "Probabilmente abbiamo cambiato la storia di qualche idiota . . .")
-  (cons ;58 andrii
-   "Or a whole team of dorks!"
-   "O magari di un gruppo di idioti!")
-  (cons ;59 yuriy
-   "Maybe in a unnamed city . . ."
-   "Magari in una citta' senza nome . . .")
-  (cons ;60 andrii
-   "The kind of city that you cannot find, even in a map!"
-   "La solita citta' che pur con una cartina davanti nessuno saprebbe dove cercarla!")
-  (cons ;61 yuriy
-   "Maybe somewhere, not so far in the past . . ."
-   "Magari in un passato non troppo lontano . . .")
-  (cons ;62 andrii
-   "Do you want to tell them the rest of the story?"
-   "Che, dobbiamo raccontare come va a finire?")
-  (cons ;63 yuriy
-   "You're right, that's enough"
-   "Hai ragione, famo basta")
-  (cons ;64 yuriy
-   "Vodka party?"
-   "Vodka party?")
-  (cons ;65 andrii
-   "Yeeeeeee!"
-   "Yeeeeeee!")
-  nil
-))
+                  (cons ;0 None
+                    ""
+                    "")
+                  (cons ;1 andrii
+                    "Dilution magnets are up and kicking, ready to prevent a potential catastrophic event (PCE)"
+                    "I magneti di diluzione sono stati attivati e sono pronti a prevenire una possibile catastrofe")
+                  (cons ;2 yuriy
+                    "That's great!"
+                    "Fantastico!")
+                  (cons ;3 yuriy
+                    "Dr. Tykhonov?"
+                    "Dr. Tykhonov?")
+                  (cons ;4 andrii
+                    "Mh?"
+                    "Mh?")
+                  (cons ;5 yuriy
+                    "Could you please disable the security grid?"
+                    "Potrebbe cortesemente disabilitare la griglia di sicurezza?")
+                  (cons ;6 andrii
+                    "Dr. Tykhonov?"
+                    "Dr. Tykhonov?")
+                  (cons ;7 andrii
+                    "I am not 50 years old, please, call me Andrii"
+                    "Non ho cinquant'anni, puoi chiamarmi tranquillamente Andrii.")
+                  (cons ;8 yuriy
+                    "In 'Angel and Deamons' people follow this approach!"
+                    "Ma su 'Angeli e Demoni' le persone del CERN usano questi appellativi!")
+                  (cons ;9 yuriy
+                    "You want to be less professional that a Dan Brown's book?"
+                    "Vorresti esser meno professionale di un libro di Dan Brown?")
+                  (cons ;10 andrii
+                    "Anyway . . ."
+                    "Comunque . . .")
+                  (cons ;11 andrii
+                    "I don't think we should disable the security grids, Yuriy!"
+                    "Non credo che dovremo disabilitare le griglie di sicurezza, Yuriy")
+                  (cons ;12 andrii
+                    "Is too dangerous!"
+                    "E' troppo pericoloso!")
+                  (cons ;13 yuriy
+                    "Oh, came on!"
+                    "Oh, eddai!")
+                  (cons ;14 andrii
+                    "No!"
+                    "No.")
+                  (cons ;15 yuriy
+                    "I would do it for you!"
+                    "Per te io lo farei!")
+                  (cons ;16 andrii
+                    "OK, but you're fucking annoying!"
+                    "E va bene, rompipalle!")
+                  (cons ;17 andrii
+                    "If something explodes, it's on you"
+                    "Ma se qualcosa dovesse accadere, la colpa sara' solo tua.")
+                  (cons ;18 yuriy
+                    "If something explodes, it's on you"
+                    "Ma se qualcosa dovesse accadere, la colpa sara' solo tua.")
+                  (cons ;19 andrii
+                    "Stop to say what I'm saying!"
+                    "Non prendermi in giro!")
+                  (cons ;20 andrii
+                    "Security grids have been disable, Dr. Ilchenko!"
+                    "Le griglie di sicurezza sono state disabilitate Dr. Ilchenko!")
+                  (cons ;21 yuriy
+                    "Fantastic!"
+                    "Fantastico!")
+                  (cons ;22 yuriy
+                    "Dan Brown would be proud of you!"
+                    "Dan Brown sarebbe orgoglioso di te!")
+                  (cons ;23 andrii
+                    "Dan Brown is awkward"
+                    "Dan Brown e' un disagiato")
+                  (cons ;24 yuriy
+                    "Uhm"
+                    "Uhm")
+                  (cons ;25 yuriy
+                    "Andrii, smoke seems coming out from the LHC"
+                    "Andrii, del fumo esce dall'LHC")
+                  (cons ;26 yuriy
+                    "Is it normal?"
+                    "E' normale?")
+                  (cons ;27 andrii
+                    "No Yuriy, is not normal. Obviously."
+                    "No Yuriy, ovviamente non e' normale.")
+                  (cons ;28 yuriy
+                    "Even Dan Brown would be able to recognize my sarcasm!"
+                    "Si chiama 'sarcasmo' e anche Dan Brown sarebbe capace di riconoscerlo!")
+                  (cons ;29 andrii
+                    "I think we should shut it down now before it gets worse . . ."
+                    "Credo sia il caso di spegnerlo prima che la situazione peggiori . . .")
+                  (cons ;30 yuriy
+                    "Uh?"
+                    "Uh?")
+                  (cons ;31 yuriy
+                    "It gets worse?"
+                    "Peggiorare?")
+                  (cons ;32 yuriy
+                    "Is smoking! How could it gets worse?"
+                    "Sta uscendo del fumo! Come puo' peggiorare la situazione?")
+                  (cons ;33 yuriy
+                    "Oh, I see now!"
+                    "Oh! Capisco ora!")
+                  (cons ;34 andrii
+                    "CHTO ZA HUINYA, BLYAT!?"
+                    "CHTO ZA HUINYA, BLYAT!?")
+                  (cons ;35 andrii
+                    "DIOMATONNE!"
+                    "DIOMATONNE!")
+                  (cons ;36 andrii
+                    "We're polluting the fabric of space and time!"
+                    "Stiamo inquinando il tessuto spazio-tempo!")
+                  (cons ;37 yuriy
+                    "What?"
+                    "Cosa?")
+                  (cons ;38 yuriy
+                    "The fabric of space and time?"
+                    "Il tessuto spazio-tempo?")
+                  (cons ;39 yuriy
+                    "Where did you got your PhD?"
+                    "Dove hai preso il dottorato, scusa?")
+                  (cons ;40 andrii
+                    "Shut the fuck up!"
+                    "Stai zitto!")
+                  (cons ;41 andrii
+                    "Jesus Christ, shut up!"
+                    "Gesu' Cristo smettila di parlare!")
+                  (cons ;42 yuriy
+                    "Phew, we missed it by a hair!"
+                    "Phew, per un pelo!")
+                  (cons ;43 andrii
+                    "Uhm"
+                    "Uhm")
+                  (cons ;44 yuriy
+                    "What? What's the matter?"
+                    "Cosa? Che c'e'?")
+                  (cons ;45 andrii
+                    "Yuriy, I think that the energy peak that we got wasn't a random one"
+                    "Yuriy io credo che il picco d'enegia che abbiamo avuto non sia stato casuale")
+                  (cons ;46 yuriy
+                    "What?"
+                    "Spiegazione, prego")
+                  (cons ;47 andrii
+                    "The computer says that we had a total blackout in the magnets' power line"
+                    "Secondo il computer abbiamo avuto un backout dei magneti di controllo")
+                  (cons ;48 andrii
+                    "This means that for a small amount of time, the beam was going around without any control"
+                    "Questo vuol dire che per qualche secondo il fascio viaggiava totalmente per conto suo")
+                  (cons ;49 andrii
+                    "We may have changed something, somewhere in the past"
+                    "Potremmo aver cambiato qualcosa da qualche parte, nel passato")
+                  (cons ;50 andrii
+                    "We may have changed . . ."
+                    "Potremmo aver cambiato . . .")
+                  (cons ;51 andrii
+                    "THE HISTORY"
+                    "LA STORIA")
+                  (cons ;52 yuriy
+                    "Wow! How did you do that?"
+                    "Wow! Ma come hai fatto a farlo?")
+                  (cons ;53 andrii
+                    "That? What?"
+                    "Fare cosa?")
+                  (cons ;54 yuriy
+                    "The thunder stuff"
+                    "Quella cosa del fulmine!")
+                  (cons ;55 andrii
+                    "What thunder stuff?"
+                    "Quale cosa del fulmine?")
+                  (cons ;56 yuriy
+                    "However, we're still here!"
+                    "Comunque noi siamo ancora qui!")
+                  (cons ;57 yuriy
+                    "Probably we changed the story of a dork . . ."
+                    "Probabilmente abbiamo cambiato la storia di qualche idiota . . .")
+                  (cons ;58 andrii
+                    "Or a whole team of dorks!"
+                    "O magari di un gruppo di idioti!")
+                  (cons ;59 yuriy
+                    "Maybe in a unnamed city . . ."
+                    "Magari in una citta' senza nome . . .")
+                  (cons ;60 andrii
+                    "The kind of city that you cannot find, even in a map!"
+                    "La solita citta' che pur con una cartina davanti nessuno saprebbe dove cercarla!")
+                  (cons ;61 yuriy
+                    "Maybe somewhere, not so far in the past . . ."
+                    "Magari in un passato non troppo lontano . . .")
+                  (cons ;62 andrii
+                    "Do you want to tell them the rest of the story?"
+                    "Che, dobbiamo raccontare come va a finire?")
+                  (cons ;63 yuriy
+                    "You're right, that's enough"
+                    "Hai ragione, famo basta")
+                  (cons ;64 yuriy
+                    "Vodka party?"
+                    "Vodka party?")
+                  (cons ;65 andrii
+                    "Yeeeeeee!"
+                    "Yeeeeeee!")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>

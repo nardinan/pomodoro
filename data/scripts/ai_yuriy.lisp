@@ -6,6 +6,6 @@
     (if (compare from_where "garibaldi")
       (director_script "quiet_ai_yuriy_garibaldi")
       (director_script "quiet_ai_yuriy_november")
-    ))
+      ))
   nil
-)
+  )

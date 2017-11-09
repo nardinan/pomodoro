@@ -9,74 +9,74 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 technician
-   "Ehi asshole!"
-   "Ehi merda!")
-  (cons ;2 andrea
-   "Are you talking with me?"
-   "Dici a me?")
-  (cons ;3 technician
-   "Do you live here, on the first floor?"
-   "Abiti al primo piano di questo palazzo?")
-  (cons ;4 andrea
-   "Yes?"
-   "Si?")
-  (cons ;5 technician
-   "Yes, I'm talking with you!"
-   "Allora si, dico a te!")
-  (cons ;6 andrea
-   "What did I do?"
-   "Che ho combinato ora?")
-  (cons ;7 technician
-   "Tomorrow I'll be here, to cut the power!"
-   "Domani mi troverai qui, a staccarti la corrente!")
-  (cons ;8 technician
-   "I can't wait to do it!"
-   "E ti assicuro che non vedo l'ora!")
-  (cons ;9 andrea
-   "Are you the guy from ENEL?"
-   "Sei il tipo dell'ENEL?")
-  (cons ;10 technician
-   "Bingo!"
-   "Bingo!")
-  (cons ;11 andrea
-   "Oh, ehm, I'm going to pay the bill right now!"
-   "Ehm, sto andando a pagare la bolletta ora . . .")
-  (cons ;12 technician
-   "Are you kidding?"
-   "Ma chi prendi in giro?")
-  (cons ;13 technician
-   "You're a beggar!"
-   "Sei un morto di fame!")
-  (cons ;14 andrea
-   "Ehm . . ."
-   "Ehm . . .")
-  (cons ;15 technician
-   "You'll be fucked up!"
-   "Domani sono cazzi tuoi!")
-  (cons ;16 andrea
-   "God, it is a shitty day indeed"
-   "Che giornatina . . .")
-  (cons ;17 technician
-   "What do you want?"
-   "Cosa vuoi?")
-  (cons ;18 andrea
-   "I wanted to know if I can postpone the cut of the power . . ."
-   "Volevo sapere se c'era qualche possibilita' di posticipare il taglio della corrente?")
-  (cons ;19 technician
-   "Sure"
-   "Certo")
-  (cons ;20 technician
-   "You have to pay the bill to avoid such fate"
-   "Con i soldi della bolletta potresti scampare a questo destino")
-  (cons ;21 technician
-   "At least for another month"
-   "Almeno per un altro mese")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 technician
+                    "Ehi asshole!"
+                    "Ehi merda!")
+                  (cons ;2 andrea
+                    "Are you talking with me?"
+                    "Dici a me?")
+                  (cons ;3 technician
+                    "Do you live here, on the first floor?"
+                    "Abiti al primo piano di questo palazzo?")
+                  (cons ;4 andrea
+                    "Yes?"
+                    "Si?")
+                  (cons ;5 technician
+                    "Yes, I'm talking with you!"
+                    "Allora si, dico a te!")
+                  (cons ;6 andrea
+                    "What did I do?"
+                    "Che ho combinato ora?")
+                  (cons ;7 technician
+                    "Tomorrow I'll be here, to cut the power!"
+                    "Domani mi troverai qui, a staccarti la corrente!")
+                  (cons ;8 technician
+                    "I can't wait to do it!"
+                    "E ti assicuro che non vedo l'ora!")
+                  (cons ;9 andrea
+                    "Are you the guy from ENEL?"
+                    "Sei il tipo dell'ENEL?")
+                  (cons ;10 technician
+                    "Bingo!"
+                    "Bingo!")
+                  (cons ;11 andrea
+                    "Oh, ehm, I'm going to pay the bill right now!"
+                    "Ehm, sto andando a pagare la bolletta ora . . .")
+                  (cons ;12 technician
+                    "Are you kidding?"
+                    "Ma chi prendi in giro?")
+                  (cons ;13 technician
+                    "You're a beggar!"
+                    "Sei un morto di fame!")
+                  (cons ;14 andrea
+                    "Ehm . . ."
+                    "Ehm . . .")
+                  (cons ;15 technician
+                    "You'll be fucked up!"
+                    "Domani sono cazzi tuoi!")
+                  (cons ;16 andrea
+                    "God, it is a shitty day indeed"
+                    "Che giornatina . . .")
+                  (cons ;17 technician
+                    "What do you want?"
+                    "Cosa vuoi?")
+                  (cons ;18 andrea
+                    "I wanted to know if I can postpone the cut of the power . . ."
+                    "Volevo sapere se c'era qualche possibilita' di posticipare il taglio della corrente?")
+                  (cons ;19 technician
+                    "Sure"
+                    "Certo")
+                  (cons ;20 technician
+                    "You have to pay the bill to avoid such fate"
+                    "Con i soldi della bolletta potresti scampare a questo destino")
+                  (cons ;21 technician
+                    "At least for another month"
+                    "Almeno per un altro mese")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>

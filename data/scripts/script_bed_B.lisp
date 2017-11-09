@@ -9,23 +9,23 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 andrea
-   "Tsk"
-   "Tsk")
-  (cons ;2 andrea
-   "Cug wastes his time making his bed every day . . ."
-   "Cug perde il suo tempo a rifare il letto tutti i giorni . . .")
-  (cons ;3 andrea
-   "Where is the point?"
-   "Ma a quale pro?")
-  (cons ;4 andrea
-   "In the end, we all die"
-   "Alla fine moriamo tutti")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 andrea
+                    "Tsk"
+                    "Tsk")
+                  (cons ;2 andrea
+                    "Cug wastes his time making his bed every day . . ."
+                    "Cug perde il suo tempo a rifare il letto tutti i giorni . . .")
+                  (cons ;3 andrea
+                    "Where is the point?"
+                    "Ma a quale pro?")
+                  (cons ;4 andrea
+                    "In the end, we all die"
+                    "Alla fine moriamo tutti")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>

@@ -7,5 +7,5 @@
     (begin
       (collector_set "destination_scenario" "cabin")
       (director_script "change_scenario"))
+    )
   )
-)

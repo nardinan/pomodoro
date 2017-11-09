@@ -35,7 +35,7 @@
   (begin
     (puppeteer_show "federico" 5750)
     (puppeteer_set "federico" "back"))
-)
+  )
 (puppeteer_show  "andrea" 280)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

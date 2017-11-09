@@ -35,31 +35,31 @@
 (puppeteer_show "policeman" 3000)
 (puppeteer_set "policeman" 	"front")
 (if (= yuriy_quiet_dialog_garibaldi 1.0)
-	(if (= yuriy_quiet_dialog_november 1.0)
-		nil
-		(begin
-			(puppeteer_show "andrii" 6800)
-			(puppeteer_show "yuriy"  6400)
-			(puppeteer_set "andrii" "still_left_radar_up")
-			(puppeteer_set "yuriy" "still_right"))
-		)
-		nil
-)
+  (if (= yuriy_quiet_dialog_november 1.0)
+    nil
+    (begin
+      (puppeteer_show "andrii" 6800)
+      (puppeteer_show "yuriy"  6400)
+      (puppeteer_set "andrii" "still_left_radar_up")
+      (puppeteer_set "yuriy" "still_right"))
+    )
+  nil
+  )
 (if (= request_flowers 1.0)
   (if (= done_flowers 1.0)
     nil
     (begin
       (puppeteer_show  "mustafa" 6000)
       (puppeteer_stare "mustafa" "andrea"))
-  )
+    )
   nil
-)
+  )
 (if (compare from_where "fortebraccio")
-	(puppeteer_show "andrea" 980)
-	(if (compare from_where "vannucci")
-		(puppeteer_show "andrea" 7500)
-		(puppeteer_show "andrea" 7900)
-	)
-)
+  (puppeteer_show "andrea" 980)
+  (if (compare from_where "vannucci")
+    (puppeteer_show "andrea" 7500)
+    (puppeteer_show "andrea" 7900)
+    )
+  )
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

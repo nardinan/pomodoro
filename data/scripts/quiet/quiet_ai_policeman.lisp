@@ -9,92 +9,92 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 poliziotto
-   "Keep moving, there is nothing to see here!"
-   "Circolare, qui non c'e' niente da vedere!")
-  (cons ;2 andrea
-   "Probably you see nothing . . ."
-   "Tu magari non vedi niente . . .")
-  (cons ;3 andrea
-   "But, apparently, somebody died here!"
-   "Ma a me sembra che qualcuno qui sia morto")
-  (cons ;4 poliziotto
-   "My 'there is nothing to see here' was a polite way to kick you out"
-   "Il mio 'non c'e' niente da vedere' e' un modo delicato per dirti di andartene, sai?")
-  (cons ;5 andrea
-   "Do you have some hairs there, under your hat?"
-   "Ci sono dei capelli sotto il tuo cappello?")
-  (cons ;6 poliziotto
-   "We'll never know . . ."
-   "Non lo scopriremo mai . . .")
-  (cons ;7 andrea
-   "OK Kojak, who is dead here?"
-   "Va bene Kojak, chi e' morto qui?")
-  (cons ;8 poliziotto
-   "No one you know. Now, please . . ."
-   "Nessuno che conosci, ora cortesemente . . .")
-  (cons ;9 andrea
-   "How can you say something like that?"
-   "Come puoi dire una cosa del genere?")
-  (cons ;10 andrea
-   "I know everybody here in town!"
-   "Conosco praticamente tutti qui!")
-  (cons ;11 poliziotto
-   "OK, do you know 'il Profeta'?"
-   "Bene, hai presente 'il Profeta'?")
-  (cons ;12 andrea
-   "Nope"
-   "No")
-  (cons ;13 poliziotto
-   "Is that guy that was going around in the city center screaming things"
-   "E' un tizio che girava qui per la piazza, profetizzando cose")
-  (cons ;14 poliziotto
-   "Bad things"
-   "Spesso cose brutte")
-  (cons ;15 andrea
-   "I've never heard of him"
-   "Mai sentito")
-  (cons ;16 poliziotto
-   "Oh, came on! He was walking around here, with a Bible in his hand, screaming about an apocalypse that would arrive soon"
-   "Dai, girava sempre qui, con una bibbia in mano, dicendo che l'apocalisse sarebbe giunta a breve")
-  (cons ;17 andrea
-   "Uh"
-   "Uh")
-  (cons ;18 poliziotto
-   "However is him"
-   "Comunque e' lui")
-  (cons ;19 andrea
-   "Where is his bible?"
-   "E dov'e' la sua bibbia?")
-  (cons ;20 poliziotto
-   "Stolen"
-   "Rubata")
-  (cons ;21 andrea
-   "Did he die of natural causes?"
-   "Morto di cause naturali?")
-  (cons ;22 poliziotto
-   "He has been stabbed in the back. Is it a natural cause?"
-   "Se una coltellata alla schiena e' una causa naturale, allora si")
-  (cons ;23 andrea
-   "Suspects?"
-   "Sospetti?")
-  (cons ;24 poliziotto
-   "Yes, you."
-   "Si, te ")
-  (cons ;25 andrea
-   "Thanks, I'm going to go!"
-   "Grazie, tolgo il disturbo!")
-  (cons ;26 poliziotto
-   "You're still here? Do you want to get arrested?"
-   "Ancora qui? Vuoi essere arrestato?")
-  (cons ;27 andrea
-   "I want to be loved . . ."
-   "Vorrei solo essere amato . . .")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 poliziotto
+                    "Keep moving, there is nothing to see here!"
+                    "Circolare, qui non c'e' niente da vedere!")
+                  (cons ;2 andrea
+                    "Probably you see nothing . . ."
+                    "Tu magari non vedi niente . . .")
+                  (cons ;3 andrea
+                    "But, apparently, somebody died here!"
+                    "Ma a me sembra che qualcuno qui sia morto")
+                  (cons ;4 poliziotto
+                    "My 'there is nothing to see here' was a polite way to kick you out"
+                    "Il mio 'non c'e' niente da vedere' e' un modo delicato per dirti di andartene, sai?")
+                  (cons ;5 andrea
+                    "Do you have some hairs there, under your hat?"
+                    "Ci sono dei capelli sotto il tuo cappello?")
+                  (cons ;6 poliziotto
+                    "We'll never know . . ."
+                    "Non lo scopriremo mai . . .")
+                  (cons ;7 andrea
+                    "OK Kojak, who is dead here?"
+                    "Va bene Kojak, chi e' morto qui?")
+                  (cons ;8 poliziotto
+                    "No one you know. Now, please . . ."
+                    "Nessuno che conosci, ora cortesemente . . .")
+                  (cons ;9 andrea
+                    "How can you say something like that?"
+                    "Come puoi dire una cosa del genere?")
+                  (cons ;10 andrea
+                    "I know everybody here in town!"
+                    "Conosco praticamente tutti qui!")
+                  (cons ;11 poliziotto
+                    "OK, do you know 'il Profeta'?"
+                    "Bene, hai presente 'il Profeta'?")
+                  (cons ;12 andrea
+                    "Nope"
+                    "No")
+                  (cons ;13 poliziotto
+                    "Is that guy that was going around in the city center screaming things"
+                    "E' un tizio che girava qui per la piazza, profetizzando cose")
+                  (cons ;14 poliziotto
+                    "Bad things"
+                    "Spesso cose brutte")
+                  (cons ;15 andrea
+                    "I've never heard of him"
+                    "Mai sentito")
+                  (cons ;16 poliziotto
+                    "Oh, came on! He was walking around here, with a Bible in his hand, screaming about an apocalypse that would arrive soon"
+                    "Dai, girava sempre qui, con una bibbia in mano, dicendo che l'apocalisse sarebbe giunta a breve")
+                  (cons ;17 andrea
+                    "Uh"
+                    "Uh")
+                  (cons ;18 poliziotto
+                    "However is him"
+                    "Comunque e' lui")
+                  (cons ;19 andrea
+                    "Where is his bible?"
+                    "E dov'e' la sua bibbia?")
+                  (cons ;20 poliziotto
+                    "Stolen"
+                    "Rubata")
+                  (cons ;21 andrea
+                    "Did he die of natural causes?"
+                    "Morto di cause naturali?")
+                  (cons ;22 poliziotto
+                    "He has been stabbed in the back. Is it a natural cause?"
+                    "Se una coltellata alla schiena e' una causa naturale, allora si")
+                  (cons ;23 andrea
+                    "Suspects?"
+                    "Sospetti?")
+                  (cons ;24 poliziotto
+                    "Yes, you."
+                    "Si, te ")
+                  (cons ;25 andrea
+                    "Thanks, I'm going to go!"
+                    "Grazie, tolgo il disturbo!")
+                  (cons ;26 poliziotto
+                    "You're still here? Do you want to get arrested?"
+                    "Ancora qui? Vuoi essere arrestato?")
+                  (cons ;27 andrea
+                    "I want to be loved . . ."
+                    "Vorrei solo essere amato . . .")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -235,7 +235,7 @@
 
     ;And never again
     (collector_set "intro_policeman_november" 1))
-)
+  )
 
 ;Return the control
 (main_control "andrea")

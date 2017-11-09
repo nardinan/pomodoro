@@ -9,59 +9,59 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 cristiano
-   "Ehy, where do you think you are going?"
-   "Ehi, dove credi di andare?")
-  (cons ;2 andrea
-   "Ehm"
-   "Ehm")
-  (cons ;3 andrea
-   "Inside?"
-   "Dentro?")
-  (cons ;4 cristiano
-   "Are you serious?"
-   "Sei serio?")
-  (cons ;5 andrea
-   "Yes?"
-   "Si?")
-  (cons ;6 cristiano
-   "I don't think so mate."
-   "Non credo proprio.")
-  (cons ;7 cristiano
-   "They pay me to keep people dressed like you out of places like this!"
-   "Mi pagano per tenere gente vestita come te fuori da posti come questi!")
-  (cons ;8 andrea
-   "What's the problem with my dress?"
-   "Non capisco, cos'ho che non va?")
-  (cons ;9 cristiano
-   "Try to be a little bit more elegant than that . . ."
-   "Fai almeno un piccolo sforzo per essere piu' elegante . . .")
-  (cons ;10 cristiano
-   ". . . and I'll let you in."
-   ". . . e ti lascero' entrare.")
-  (cons ;11 andrea
-   "So?"
-   "Quindi?")
-  (cons ;12 cristiano
-   "So, what?"
-   "Quindi, cosa?")
-  (cons ;13 andrea
-   "What do you think about my new tie?"
-   "Cosa ne pensi della mia cravatta?")
-  (cons ;14 cristiano
-   "I . . ."
-   "Io . . .")
-  (cons ;15 cristiano
-   "Liste, I feel so sorry for you that I will let you in"
-   "Ascolta, mi fai cosi' tanta pena che ti lascero' entrare")
-  (cons ;16 andrea
-   "Thankfully people feel sorry for me every time"
-   "La pena e' il mio cavallo di battaglia")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 cristiano
+                    "Ehy, where do you think you are going?"
+                    "Ehi, dove credi di andare?")
+                  (cons ;2 andrea
+                    "Ehm"
+                    "Ehm")
+                  (cons ;3 andrea
+                    "Inside?"
+                    "Dentro?")
+                  (cons ;4 cristiano
+                    "Are you serious?"
+                    "Sei serio?")
+                  (cons ;5 andrea
+                    "Yes?"
+                    "Si?")
+                  (cons ;6 cristiano
+                    "I don't think so mate."
+                    "Non credo proprio.")
+                  (cons ;7 cristiano
+                    "They pay me to keep people dressed like you out of places like this!"
+                    "Mi pagano per tenere gente vestita come te fuori da posti come questi!")
+                  (cons ;8 andrea
+                    "What's the problem with my dress?"
+                    "Non capisco, cos'ho che non va?")
+                  (cons ;9 cristiano
+                    "Try to be a little bit more elegant than that . . ."
+                    "Fai almeno un piccolo sforzo per essere piu' elegante . . .")
+                  (cons ;10 cristiano
+                    ". . . and I'll let you in."
+                    ". . . e ti lascero' entrare.")
+                  (cons ;11 andrea
+                    "So?"
+                    "Quindi?")
+                  (cons ;12 cristiano
+                    "So, what?"
+                    "Quindi, cosa?")
+                  (cons ;13 andrea
+                    "What do you think about my new tie?"
+                    "Cosa ne pensi della mia cravatta?")
+                  (cons ;14 cristiano
+                    "I . . ."
+                    "Io . . .")
+                  (cons ;15 cristiano
+                    "Liste, I feel so sorry for you that I will let you in"
+                    "Ascolta, mi fai cosi' tanta pena che ti lascero' entrare")
+                  (cons ;16 andrea
+                    "Thankfully people feel sorry for me every time"
+                    "La pena e' il mio cavallo di battaglia")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -195,7 +195,7 @@
 
           ;And never again
           (collector_set "request_tie" 1.0))
-      )
+        )
       ;Script suggestion: Cristiano guarda Andrea qualche secondo
       (puppeteer_set "cristiano" "still_right")
       (say "cristiano" (get_dialog dialogs language 9) "crisntquiet_track9") ;preview: Try to be a little bit more ... | animation front
@@ -205,5 +205,5 @@
 
       ;Setup characters
       (main_control "andrea")) ;preview: . . . and I'll let you in. | animation front
+    )
   )
-)

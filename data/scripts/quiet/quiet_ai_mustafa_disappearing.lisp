@@ -89,7 +89,7 @@
     (puppeteer_show "mustafa" -200)
     (effecteer_stop "fog_spot"))
   nil
-)
+  )
 
 ;Return the control
 (main_control "andrea")

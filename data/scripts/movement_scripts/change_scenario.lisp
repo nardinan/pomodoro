@@ -17,12 +17,12 @@
           (begin
             (collector_set dc 1.0)
             1.0)
-        )
+          )
         0.0
+        )
       )
     )
   )
-)
 
 ;Retrieves from the collector the destination that we have to reach
 (define destination_scenario (collector_get "destination_scenario"))
@@ -45,7 +45,7 @@
     (effecteer_stop  "stone_paradise")
     (director_script "hide_items_interface"))
   nil
-)
+  )
 
 ;Wait to be completely out of the screen
 (director_wait_time 3.0)
@@ -72,10 +72,10 @@
             (if (= show_chapter_five 1.0)
               (effecteer_add "chapter_screen_animation" "intro_chapter_five" 300 30 10 0 t nil)
               nil)
+            )
           )
         )
       )
-    )
 
     ;Wait for the end of the animation and stop the effects
     (director_wait_time 3.0)
@@ -89,7 +89,7 @@
     ;And now, please, play the track
     (effecteer_play "stone_paradise" "stone_paradise" 2000 2000 16))
   nil
-)
+  )
 
 ;Show the scenario
 (director_camera_set 1000.0 -1000.0)

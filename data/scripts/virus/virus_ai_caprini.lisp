@@ -9,20 +9,20 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;48 andrea
-   "Where are those money, by the way?"
-   "Dov'e' che avevi messo i soldi?")
-  (cons ;49 caprini
-   "I put them into the ENEL's cabin in Viale Innamorati."
-   "Li ho nascosti dentro la cabina dell'ENEL in viale Innamorati.")
-  (cons ;50 caprini
-   "It's a green door."
-   "E' una porta verde.")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;48 andrea
+                    "Where are those money, by the way?"
+                    "Dov'e' che avevi messo i soldi?")
+                  (cons ;49 caprini
+                    "I put them into the ENEL's cabin in Viale Innamorati."
+                    "Li ho nascosti dentro la cabina dell'ENEL in viale Innamorati.")
+                  (cons ;50 caprini
+                    "It's a green door."
+                    "E' una porta verde.")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>

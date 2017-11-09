@@ -97,7 +97,7 @@
 
     ;And never again
     (collector_set "nerd_quiet_dialog" 1.0))
-)
+  )
 (director_wait_dialog)
 (if (= request_internet 1.0)
   (if (= done_internet 1.0)
@@ -107,11 +107,11 @@
       (if (= request_phone 1.0)
         (director_dialog "game_nerd_requested_no_tool_0x0a")
         (director_dialog "game_nerd_activated_no_tool_0x0a")
+        )
       )
     )
-  )
   (director_dialog "game_nerd_no_request_0x0a")
-)
+  )
 (director_wait_dialog)
 (puppeteer_set "nerd" "back_code")
 (stagecrafter_set_item "computer_A" "coding_A")

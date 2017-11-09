@@ -9,59 +9,59 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 andrea
-   "This lemon tree has seen better days . . ."
-   "Questo albero di limoni sembra aver visto giorni migliori . . .")
-  (cons ;2 andrea
-   "Uhm . . ."
-   "Uhm . . .")
-  (cons ;3 andrea
-   "I would like to take a lemon but, apparently, there is an incredibly powerful force field that stops me!"
-   "Vorrei prendere un limone ma sembrerebbe che ci sia un campo di forza che non me lo permette!")
-  (cons ;4 andrea
-   "Seems alien military technology!"
-   "Sembra tecnologia aliena militare!")
-  (cons ;5 andrea
-   "What kind of trick is this?"
-   "Che trucco e' questo!")
-  (cons ;6 maria
-   "No sci-fi explanations mate . . ."
-   "Nessuna spegazione da film di fantascienza . . .")
-  (cons ;7 maria
-   ". . . you are just too short."
-   ". . . sei solo estremamente basso.")
-  (cons ;8 andrea
-   "I liked her better when she was stuck in the time loop."
-   "La preferivo quand'era bloccata nel loop temporale.")
-  (cons ;9
-   "Maybe I could search for something to launch at it . . ."
-   "Magari posso cercare qualcosa da tirare per far cadere un limone.")
-  (cons ;10 andrea
-   "Again?"
-   "Ancora?")
-  (cons ;11 andrea
-   "We have established that I'm too short."
-   "Abbiamo appurato che sono troppo basso.")
-  (cons ;12
-   "Maybe I could search for something to launch at it . . ."
-   "Magari posso cercare qualcosa da tirare per far cadere un limone.")
-  (cons ;13 andrea
-   "I can try to launch this shoe . . ."
-   "Posso provare a tirare questa scarpa . . .")
-  (cons ;14 andrea
-   "Ngh!"
-   "Ngh!")
-  (cons ;15 andrea
-   "Eh eh eh"
-   "Eh eh eh")
-  (cons ;16 andrea
-   "I'm a genius!"
-   "Sono un genio!")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 andrea
+                    "This lemon tree has seen better days . . ."
+                    "Questo albero di limoni sembra aver visto giorni migliori . . .")
+                  (cons ;2 andrea
+                    "Uhm . . ."
+                    "Uhm . . .")
+                  (cons ;3 andrea
+                    "I would like to take a lemon but, apparently, there is an incredibly powerful force field that stops me!"
+                    "Vorrei prendere un limone ma sembrerebbe che ci sia un campo di forza che non me lo permette!")
+                  (cons ;4 andrea
+                    "Seems alien military technology!"
+                    "Sembra tecnologia aliena militare!")
+                  (cons ;5 andrea
+                    "What kind of trick is this?"
+                    "Che trucco e' questo!")
+                  (cons ;6 maria
+                    "No sci-fi explanations mate . . ."
+                    "Nessuna spegazione da film di fantascienza . . .")
+                  (cons ;7 maria
+                    ". . . you are just too short."
+                    ". . . sei solo estremamente basso.")
+                  (cons ;8 andrea
+                    "I liked her better when she was stuck in the time loop."
+                    "La preferivo quand'era bloccata nel loop temporale.")
+                  (cons ;9
+                    "Maybe I could search for something to launch at it . . ."
+                    "Magari posso cercare qualcosa da tirare per far cadere un limone.")
+                  (cons ;10 andrea
+                    "Again?"
+                    "Ancora?")
+                  (cons ;11 andrea
+                    "We have established that I'm too short."
+                    "Abbiamo appurato che sono troppo basso.")
+                  (cons ;12
+                    "Maybe I could search for something to launch at it . . ."
+                    "Magari posso cercare qualcosa da tirare per far cadere un limone.")
+                  (cons ;13 andrea
+                    "I can try to launch this shoe . . ."
+                    "Posso provare a tirare questa scarpa . . .")
+                  (cons ;14 andrea
+                    "Ngh!"
+                    "Ngh!")
+                  (cons ;15 andrea
+                    "Eh eh eh"
+                    "Eh eh eh")
+                  (cons ;16 andrea
+                    "I'm a genius!"
+                    "Sono un genio!")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -105,7 +105,7 @@
       )
     )
   )
-  
+
 ;@brief: main_control <character>
 ;@description: gives the main control of the game to the character <character>
 (define main_control
@@ -199,11 +199,11 @@
 
           ;And never again
           (collector_set "request_shoe" 1.0))
+        )
       )
     )
-  )
   (say "andrea" (get_dialog dialogs language 1) "lemvirus_track1") ;preview: This lemon tree has seen bet... | animation back
-)
+  )
 
 ;Return the control
 (main_control "andrea")

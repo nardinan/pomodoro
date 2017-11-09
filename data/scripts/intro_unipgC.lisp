@@ -29,8 +29,8 @@
 
 ;Setup characters
 (if (compare from_where "unipgB")
-	(puppeteer_show "andrea" 900)
-	(puppeteer_show "andrea" 4200)
-)
+  (puppeteer_show "andrea" 900)
+  (puppeteer_show "andrea" 4200)
+  )
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

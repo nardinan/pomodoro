@@ -95,7 +95,7 @@
 
     ;And never again
     (collector_set "ticket_inspector_quiet_dialog" 1.0))
-)
+  )
 (director_wait_dialog)
 (if (= request_tie 1.0)
   (if (= done_tie 1.0)
@@ -105,11 +105,11 @@
       (if (= request_movie 1.0)
         (director_dialog "game_ticket_inspector_requested_no_tools_0x0a")
         (director_dialog "game_ticket_inspector_activated_no_tools_0x0a")
+        )
       )
     )
-  )
   (director_dialog "game_ticket_inspector_no_request_0x0a")
-)
+  )
 (director_wait_dialog)
 
 ;Refresh interface

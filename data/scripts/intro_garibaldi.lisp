@@ -32,17 +32,17 @@
 (puppeteer_show "baker" 3500)
 (puppeteer_stare "baker" "andrea")
 (if (collector_get "yuriy_quiet_dialog_garibaldi")
-	nil
-	(begin
-		(puppeteer_show "andrii" 1500)
+  nil
+  (begin
+    (puppeteer_show "andrii" 1500)
     (puppeteer_set "andrii" "still_right_radar_up")
-		(puppeteer_show "yuriy"	2000)
-		(puppeteer_set "yuriy" "still_left")
-	)
-)
+    (puppeteer_show "yuriy"	2000)
+    (puppeteer_set "yuriy" "still_left")
+    )
+  )
 (if (compare from_where "lupattelli")
-	(puppeteer_show "andrea" 6900)
-	(puppeteer_show "andrea" 1100)
-)
+  (puppeteer_show "andrea" 6900)
+  (puppeteer_show "andrea" 1100)
+  )
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

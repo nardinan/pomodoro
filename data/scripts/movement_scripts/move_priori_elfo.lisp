@@ -5,4 +5,4 @@
   (begin
     (collector_set "destination_scenario" "elfo")
     (director_script "change_scenario"))
-)
+  )

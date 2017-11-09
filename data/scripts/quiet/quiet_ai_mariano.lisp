@@ -9,23 +9,23 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 mariano
-   "Boy, don't you see I'm discussing with the future major of the great Perugia City?"
-   "Ragazzo, non vedi che sto amorevolmente parlando con il futuro sindaco di Perugia?")
-  (cons ;2 mariano
-   "I will not give anything to buy the drug, go away!"
-   "Non te li do i soldi per comprarti la droga, pussa via! ")
-  (cons ;3 mariano
-   "Vote for Gianni!"
-   "Vota Gianni!")
-  (cons ;4 andrea
-   "Maybe it's better not to push"
-   "Forse e' meglio non insistere")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 mariano
+                    "Boy, don't you see I'm discussing with the future major of the great Perugia City?"
+                    "Ragazzo, non vedi che sto amorevolmente parlando con il futuro sindaco di Perugia?")
+                  (cons ;2 mariano
+                    "I will not give anything to buy the drug, go away!"
+                    "Non te li do i soldi per comprarti la droga, pussa via! ")
+                  (cons ;3 mariano
+                    "Vote for Gianni!"
+                    "Vota Gianni!")
+                  (cons ;4 andrea
+                    "Maybe it's better not to push"
+                    "Forse e' meglio non insistere")
+                  nil
+                  ))
 ;High level functions
 ;@brief: say <character> <message>
 ;@description: character <character> says <message> and the system waits for the bubble to disappear
@@ -117,7 +117,7 @@
 
     ;And never again
     (collector_set "mariano_quiet_dialog_vannucci" 1.0))
-)
+  )
 
 ;Return the control
 (collector_set "quiet_mariano_and_gianni_ongoing" 0.0)

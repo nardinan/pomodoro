@@ -3,4 +3,4 @@
 (if (compare current_chapter "quiet")
   (director_script "quiet_ai_technician")
   nil
-)
+  )

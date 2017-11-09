@@ -94,15 +94,15 @@
 
     ;And never again
     (collector_set "mustafa_quiet_dialog" 1.0))
-)
+  )
 (director_wait_dialog)
 (if (= got_cigarette 1.0)
   (director_dialog "game_mustafa_requested_tool_0x0a")
   (if (= request_cigarette 1.0)
     (director_dialog "game_mustafa_requested_no_tool_0x0a")
     (director_dialog "game_mustafa_activated_no_tool_0x0a")
+    )
   )
-)
 (director_wait_dialog)
 
 ;Refresh interface

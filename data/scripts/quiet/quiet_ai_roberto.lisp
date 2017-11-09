@@ -9,71 +9,71 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 roberto
-   "Enough is enough!"
-   "Non se ne puo' piu!")
-  (cons ;2 andrea
-   "What are you talking about?"
-   "Di che parli?")
-  (cons ;3 andrea
-   "He is Roberto"
-   "Lui e' Roberto")
-  (cons ;4 andrea
-   "He is a friend of mine"
-   "Un mio amico")
-  (cons ;5 andrea
-   "And one of the Psycho Games illustrators, back in 2012"
-   "E uno degli illustratori della della Psycho Games nel 2012")
-  (cons ;6 roberto
-   "Please, I have urgent things to do here!"
-   "Lascia stare, ho da fare qui")
-  (cons ;7 andrea
-   "As you wish"
-   "Come vuoi tu")
-  (cons ;8 roberto
-   "I'll just tell you a single word"
-   "Ti dico solo una parola")
-  (cons ;9 roberto
-   "SCIENTOLOGY"
-   "SCIENTOLOGY")
-  (cons ;10 andrea
-   "I am not sure I'd get that . . ."
-   "Non credo d'aver capito . . .")
-  (cons ;11 roberto
-   "They are everywhere!"
-   "Sono ovunque!")
-  (cons ;12 roberto
-   "Everywhere!"
-   "Ovunque!")
-  (cons ;13 andrea
-   "Here we go . . ."
-   "Ambe . . .")
-  (cons ;14 roberto
-   "Indeed!"
-   "Appunto!")
-  (cons ;15 roberto
-   "I prefer to talk with someone who can understand"
-   "Preferisco parlarne con qualcuno che ne capisce!")
-  (cons ;16 andrea
-   "Sure, I guess with the priest!"
-   "Certo, magari con il prete!")
-  (cons ;17 roberto
-   "Of course!"
-   "Certo!")
-  (cons ;18 roberto
-   "I'm waiting for the end of the mass"
-   "Sto aspettando che finisca la messa infatti")
-  (cons ;19 andrea
-   "We go from bad to worse"
-   "Di bene in meglio")
-  (cons ;20 roberto
-   "Leave me alone now! I need to think"
-   "Su, lasciami stare che devo pensare ad un piano")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 roberto
+                    "Enough is enough!"
+                    "Non se ne puo' piu!")
+                  (cons ;2 andrea
+                    "What are you talking about?"
+                    "Di che parli?")
+                  (cons ;3 andrea
+                    "He is Roberto"
+                    "Lui e' Roberto")
+                  (cons ;4 andrea
+                    "He is a friend of mine"
+                    "Un mio amico")
+                  (cons ;5 andrea
+                    "And one of the Psycho Games illustrators, back in 2012"
+                    "E uno degli illustratori della della Psycho Games nel 2012")
+                  (cons ;6 roberto
+                    "Please, I have urgent things to do here!"
+                    "Lascia stare, ho da fare qui")
+                  (cons ;7 andrea
+                    "As you wish"
+                    "Come vuoi tu")
+                  (cons ;8 roberto
+                    "I'll just tell you a single word"
+                    "Ti dico solo una parola")
+                  (cons ;9 roberto
+                    "SCIENTOLOGY"
+                    "SCIENTOLOGY")
+                  (cons ;10 andrea
+                    "I am not sure I'd get that . . ."
+                    "Non credo d'aver capito . . .")
+                  (cons ;11 roberto
+                    "They are everywhere!"
+                    "Sono ovunque!")
+                  (cons ;12 roberto
+                    "Everywhere!"
+                    "Ovunque!")
+                  (cons ;13 andrea
+                    "Here we go . . ."
+                    "Ambe . . .")
+                  (cons ;14 roberto
+                    "Indeed!"
+                    "Appunto!")
+                  (cons ;15 roberto
+                    "I prefer to talk with someone who can understand"
+                    "Preferisco parlarne con qualcuno che ne capisce!")
+                  (cons ;16 andrea
+                    "Sure, I guess with the priest!"
+                    "Certo, magari con il prete!")
+                  (cons ;17 roberto
+                    "Of course!"
+                    "Certo!")
+                  (cons ;18 roberto
+                    "I'm waiting for the end of the mass"
+                    "Sto aspettando che finisca la messa infatti")
+                  (cons ;19 andrea
+                    "We go from bad to worse"
+                    "Di bene in meglio")
+                  (cons ;20 roberto
+                    "Leave me alone now! I need to think"
+                    "Su, lasciami stare che devo pensare ad un piano")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -201,7 +201,7 @@
 
     ;And never again
     (collector_set "roberto_quiet_dialog" 1.0))
-)
+  )
 
 ;Return the control
 (main_control "andrea")

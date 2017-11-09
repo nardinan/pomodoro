@@ -9,41 +9,41 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 yuriy
-   "Seems that we have other time travelers around the city!"
-   "Apparentemente ci sono altri viaggiatori del tempo in giro per la citta!")
-  (cons ;2 yuriy
-   "Probably there is someone that helps them to access this specific time."
-   "Sembra che qualcuno permetta loro di entrare in questo preciso periodo.")
-  (cons ;3 andrea
-   "Will we ever meet somewhere in the future?"
-   "Ma io e te ci conosceremo in futuro?")
-  (cons ;4 yuriy
-   "Yes."
-   "Si.")
-  (cons ;5 yuriy
-   "And you will convince me that Java is the best programming language in the world."
-   "E tu mi convincerai che Java e' il miglior linguaggio del mondo.")
-  (cons ;6 andrea
-   "Me?"
-   "Io?")
-  (cons ;7 andrea
-   "Java?"
-   "Java?")
-  (cons ;8 andrea
-   "Oh God . . ."
-   "Gesu' . . .")
-  (cons ;9 yuriy
-   "The city is full of time travelers!"
-   "La citta' e' piena di viaggiatori del tempo!")
-  (cons ;10 yuriy
-   "Somebody is letting them in . . ."
-   "Qualcuno li sta lasciando entrare . . .")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 yuriy
+                    "Seems that we have other time travelers around the city!"
+                    "Apparentemente ci sono altri viaggiatori del tempo in giro per la citta!")
+                  (cons ;2 yuriy
+                    "Probably there is someone that helps them to access this specific time."
+                    "Sembra che qualcuno permetta loro di entrare in questo preciso periodo.")
+                  (cons ;3 andrea
+                    "Will we ever meet somewhere in the future?"
+                    "Ma io e te ci conosceremo in futuro?")
+                  (cons ;4 yuriy
+                    "Yes."
+                    "Si.")
+                  (cons ;5 yuriy
+                    "And you will convince me that Java is the best programming language in the world."
+                    "E tu mi convincerai che Java e' il miglior linguaggio del mondo.")
+                  (cons ;6 andrea
+                    "Me?"
+                    "Io?")
+                  (cons ;7 andrea
+                    "Java?"
+                    "Java?")
+                  (cons ;8 andrea
+                    "Oh God . . ."
+                    "Gesu' . . .")
+                  (cons ;9 yuriy
+                    "The city is full of time travelers!"
+                    "La citta' e' piena di viaggiatori del tempo!")
+                  (cons ;10 yuriy
+                    "Somebody is letting them in . . ."
+                    "Qualcuno li sta lasciando entrare . . .")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -142,7 +142,7 @@
 
     ;And never again
     (collector_set "yuriy_quiet_dialog_november" 1.0))
-)
+  )
 
 ;Character Yuriy stare at Andrii
 (puppeteer_look "yuriy" "andrii")

@@ -23,25 +23,25 @@
     (effecteer_add "inventory_note" "icon_note" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
-)
+  )
 
 (if (= got_tie 1.0)
   (begin
     (effecteer_add "inventory_tie" "icon_tie" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
-)
+  )
 
 (if (= got_shoe 1.0)
   (begin
     (effecteer_add "inventory_shoe" "icon_shoe" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
-)
+  )
 
 (if (= got_lemon 1.0)
   (begin
     (effecteer_add "inventory_lemon" "icon_lemon" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
-)
+  )

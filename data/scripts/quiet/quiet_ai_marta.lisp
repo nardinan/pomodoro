@@ -9,77 +9,77 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 marta
-   "Hi Andrea!"
-   "Ciao Andrea!")
-  (cons ;2 andrea
-   "Hy guys, what's up?"
-   "Hey ragazzi, che combinate? ")
-  (cons ;3 andrea
-   "They are Marta and Bruno"
-   "Loro sono Marta e Bruno")
-  (cons ;4 andrea
-   "She is the bestie of my girlfriend, Luna"
-   "Lei, la migliore amica della mia ragazza Luna")
-  (cons ;5 andrea
-   "He is one of my best friend"
-   "Lui, uno dei miei migliori amici")
-  (cons ;6 andrea
-   "And he is even one of the most talented programmers"
-   "E e' anche uno dei piu' talentuosi programmatori")
-  (cons ;7 marta
-   "With Bruno we were going to UniPG"
-   "Io e Bruno dovevamo andare in facolta'")
-  (cons ;8 marta
-   "But I think he's not in his best shape"
-   "Ma credo che Bruno non stia molto bene")
-  (cons ;9 bruno
-   "I'm fin-segmentation fault (core dumped)."
-   "Sto ben-segmentation fault (core dumped).")
-  (cons ;10 andrea
-   "Brunetto what's going on? "
-   "Brunetto che succede?")
-  (cons ;11 bruno
-   "Nothi-say.bin[512]: segfault at bfaec4 error 6"
-   "Non succe-say.bin[512]: segfault at bfaec4 error 6")
-  (cons ;12 marta
-   "For once in his life he can't speak"
-   "Per una volta nella vita, non parla")
-  (cons ;13 marta
-   "I try to enjoy the moment, you know"
-   "Cerco di godermi il momento, sai com'e'")
-  (cons ;14 andrea
-   "I see"
-   "Capisco")
-  (cons ;15 marta
-   "Let's go, the doctor is waiting for us"
-   "Ora andiamo, il dottore ci aspetta")
-  (cons ;16 bruno
-   "Bye-move.bin[256]: segfault at f32aac error 1"
-   "Cia-move.bin[256]: segfault at f32aac error 1")
-  (cons ;17 andrea
-   "Looks like I'm talking with dmesg"
-   "Sembra di parlare con dmesg")
-  (cons ;18 andrea
-   "Embarassing"
-   "Imbarazzante")
-  (cons ;19 marta
-   "Look, what is this about?"
-   "Ma si puo' sapere che ti prende?")
-  (cons ;20 marta
-   "I will show you 'Lost' again from the beginning to the end, eh!"
-   "Guarda che ti faccio vedere di nuovo Lost dall'inizio alla fine, eh?")
-  (cons ;21 marta
-   "Please, talk to me!"
-   "Parla, ti prego!")
-  (cons ;22 marta
-   "Tell me what is going on!"
-   "Dimmi che succede!")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 marta
+                    "Hi Andrea!"
+                    "Ciao Andrea!")
+                  (cons ;2 andrea
+                    "Hy guys, what's up?"
+                    "Hey ragazzi, che combinate? ")
+                  (cons ;3 andrea
+                    "They are Marta and Bruno"
+                    "Loro sono Marta e Bruno")
+                  (cons ;4 andrea
+                    "She is the bestie of my girlfriend, Luna"
+                    "Lei, la migliore amica della mia ragazza Luna")
+                  (cons ;5 andrea
+                    "He is one of my best friend"
+                    "Lui, uno dei miei migliori amici")
+                  (cons ;6 andrea
+                    "And he is even one of the most talented programmers"
+                    "E e' anche uno dei piu' talentuosi programmatori")
+                  (cons ;7 marta
+                    "With Bruno we were going to UniPG"
+                    "Io e Bruno dovevamo andare in facolta'")
+                  (cons ;8 marta
+                    "But I think he's not in his best shape"
+                    "Ma credo che Bruno non stia molto bene")
+                  (cons ;9 bruno
+                    "I'm fin-segmentation fault (core dumped)."
+                    "Sto ben-segmentation fault (core dumped).")
+                  (cons ;10 andrea
+                    "Brunetto what's going on? "
+                    "Brunetto che succede?")
+                  (cons ;11 bruno
+                    "Nothi-say.bin[512]: segfault at bfaec4 error 6"
+                    "Non succe-say.bin[512]: segfault at bfaec4 error 6")
+                  (cons ;12 marta
+                    "For once in his life he can't speak"
+                    "Per una volta nella vita, non parla")
+                  (cons ;13 marta
+                    "I try to enjoy the moment, you know"
+                    "Cerco di godermi il momento, sai com'e'")
+                  (cons ;14 andrea
+                    "I see"
+                    "Capisco")
+                  (cons ;15 marta
+                    "Let's go, the doctor is waiting for us"
+                    "Ora andiamo, il dottore ci aspetta")
+                  (cons ;16 bruno
+                    "Bye-move.bin[256]: segfault at f32aac error 1"
+                    "Cia-move.bin[256]: segfault at f32aac error 1")
+                  (cons ;17 andrea
+                    "Looks like I'm talking with dmesg"
+                    "Sembra di parlare con dmesg")
+                  (cons ;18 andrea
+                    "Embarassing"
+                    "Imbarazzante")
+                  (cons ;19 marta
+                    "Look, what is this about?"
+                    "Ma si puo' sapere che ti prende?")
+                  (cons ;20 marta
+                    "I will show you 'Lost' again from the beginning to the end, eh!"
+                    "Guarda che ti faccio vedere di nuovo Lost dall'inizio alla fine, eh?")
+                  (cons ;21 marta
+                    "Please, talk to me!"
+                    "Parla, ti prego!")
+                  (cons ;22 marta
+                    "Tell me what is going on!"
+                    "Dimmi che succede!")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -216,7 +216,7 @@
 
     ;And never again
     (collector_set "marta_quiet_dialog" 1.0))
-)
+  )
 
 ;Restore the environment
 (collector_set "marta_quiet_discussing" 0.0)
