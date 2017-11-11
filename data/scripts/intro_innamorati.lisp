@@ -34,10 +34,10 @@
 (if (= marta_quiet_dialog 1.0)
   nil
   (begin
-    (puppeteer_show "bruno"  12600)
-    (puppeteer_set "bruno" "still_left"))
-  (puppeteer_show "marta" 12300)
-  (puppeteer_set "marta" "still_right")
+    (puppeteer_show "bruno" 12600)
+    (puppeteer_set "bruno" "still_left")
+    (puppeteer_show "marta" 12300)
+    (puppeteer_set "marta" "still_right"))
   )
 (if (compare from_where "unipgA")
   (puppeteer_show "andrea" 13500)
