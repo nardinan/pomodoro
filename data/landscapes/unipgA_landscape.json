@@ -60,6 +60,6 @@
 		{"label":"plant_B",  		"item":"plant",			"status":"still_B", 	       	"position_x":2240.0, 		"position_y":770.0, 	"zoom":1.25},
 		{"label":"printer_A",		"item":"printer",		"status":"still_A",						"position_x":5410.0,		"position_y":720.0,		"zoom":1.25},
 		{"label":"computer_A",	"item":"computer",	"status":"still_A",						"position_x":7240.0,		"position_y":1170.0,	"zoom":1.25},
-		{"label":"rack_A",			"item":"rack",			"status":"still_UPS_A",				"position_x":7740.0,		"position_y":960.0,  	"zoom":1.25}
+		{"label":"rack_A",			"item":"rack",			"status":"still_UPS_A",				"position_x":7740.0,		"position_y":1050.0,  	"zoom":1.25}
 	]
 }
