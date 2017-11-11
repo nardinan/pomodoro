@@ -13,8 +13,8 @@
                     ""
                     "")
                   (cons ;1 cristiano
-                    "Ehy, where do you think you are going?"
-                    "Ehi, dove credi di andare?")
+                    "Hey, where do you think you are going?"
+                    "Hey, dove credi di andare?")
                   (cons ;2 andrea
                     "Ehm"
                     "Ehm")

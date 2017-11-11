@@ -13,8 +13,8 @@
                     ""
                     "")
                   (cons ;1 technician
-                    "Ehi asshole!"
-                    "Ehi merda!")
+                    "Hey asshole!"
+                    "Hey merda!")
                   (cons ;2 andrea
                     "Are you talking with me?"
                     "Dici a me?")
@@ -163,7 +163,7 @@
     (director_wait_time 3.0)
 
     (puppeteer_set "technician" "point_left")
-    (say "technician" (get_dialog dialogs language 1) "techquiet_track1") ;preview: Ehi asshole! | looking at Andrea | animation pointing
+    (say "technician" (get_dialog dialogs language 1) "techquiet_track1") ;preview: Hey asshole! | looking at Andrea | animation pointing
     (puppeteer_set "technician" "still_left")
 
     (director_camera_follow "andrea" -100.0 1.0)

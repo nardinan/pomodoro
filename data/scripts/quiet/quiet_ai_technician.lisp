@@ -13,8 +13,8 @@
                     ""
                     "")
                   (cons ;1 technician
-                    "Ehi asshole!"
-                    "Ehi merda!")
+                    "Hey asshole!"
+                    "Hey merda!")
                   (cons ;2 andrea
                     "Are you talking with me?"
                     "Dici a me?")
