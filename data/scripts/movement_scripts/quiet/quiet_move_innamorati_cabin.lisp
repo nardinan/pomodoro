@@ -96,4 +96,4 @@
 (say "andrea" (get_dialog dialogs language 2) "doorepl_track2")
 
 ;Return the control
-(main_control "andrea"))
+(main_control "andrea")

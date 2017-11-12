@@ -9,3 +9,6 @@
 (effecteer_delete "inventory_battery")
 (effecteer_delete "inventory_glasses")
 (effecteer_delete "inventory_screwdriver")
+(effecteer_delete "inventory_glass")
+(effecteer_delete "inventory_sugar")
+(effecteer_delete "inventory_cocktail")

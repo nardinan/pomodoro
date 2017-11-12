@@ -186,6 +186,32 @@
       }
     },
     {
+      "label": "shake_right",
+      "offset_x": -200,
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_shake",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_shake",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
       "label": "scratch_right",
       "offset_x": 200,
       "flip_x": true,
@@ -255,6 +281,31 @@
       },
       "arms": {
         "drawable": "arms_set_blank_side_walk_frame0",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "skirt_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "shake_left",
+      "offset_x": -200,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_punk_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side"
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_shake",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_shake",
         "offset_y": 10
       },
       "legs": {

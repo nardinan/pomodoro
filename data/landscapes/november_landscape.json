@@ -29,8 +29,8 @@
 	}],
 	"items":[
 		{"label":"door_A",			"item":"arrow",				"status":"active_left",	"position_x":900.0,			"position_y":4200.0,	"zoom":1.25,	"solid":true,	"active":true,	"script":"move_november_fortebraccio"},
-		{"label":"door_B",			"item":"arrow",				"status":"active_down",	"position_x":7500.0,		"position_y":4200.0,	"zoom":1.25,								"active":true,	"script":"move_november_vannucci",		"layer":7},
-		{"label":"door_C",			"item":"arrow",				"status":"none",				"position_x":8000.0,		"position_y":4200.0,	"zoom":1.25,	"solid":true},
+    {"label":"door_B",      "item":"arrow",       "status":"active_right","position_x":8500.0,    "position_y":4200.0,  "zoom":1.25,  "solid":true, "active":true,  "script":"move_november_mania"},
+		{"label":"door_C",			"item":"arrow",				"status":"active_down",	"position_x":7500.0,		"position_y":4200.0,	"zoom":1.25,								"active":true,	"script":"move_november_vannucci",		"layer":7},
 		{"label":"arc_C",				"item":"arc",					"status":"still_B",			"position_x":2890.0,		"position_y":2760.0,	"zoom":1.25},
 		{"label":"arc_B",				"item":"arc",					"status":"still_A",			"position_x":1620.0,		"position_y":2880.0,	"zoom":1.25},
 		{"label":"arc_A",				"item":"arc",					"status":"still_A",			"position_x":590.0,			"position_y":2880.0,	"zoom":1.25},
