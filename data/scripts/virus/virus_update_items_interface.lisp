@@ -14,6 +14,7 @@
 (define got_glass       (collector_get "got_glass"))
 (define got_sugar       (collector_get "got_sugar"))
 (define got_cocktail    (collector_get "got_cocktail"))
+(define got_pills       (collector_get "got_pills"))
 
 (effecteer_delete "inventory_note")
 (effecteer_delete "inventory_tie")
@@ -25,6 +26,7 @@
 (effecteer_delete "inventory_glass")
 (effecteer_delete "inventory_sugar")
 (effecteer_delete "inventory_cocktail")
+(effecteer_delete "inventory_pills")
 
 (define position_y 100.0) ; the Y is fixed with the bottom of the screen
 (define position_x 100.0) ; initially, the X is 100 and increases step by step by an offset
@@ -96,6 +98,13 @@
 (if (= got_cocktail 1.0)
   (begin
     (effecteer_add "inventory_cocktail" "icon_cocktail" position_x position_y 12.0 0.0 t nil)
+    (define position_x (+ position_x offset_x)))
+  nil
+  )
+
+(if (= got_pills 1.0)
+  (begin
+    (effecteer_add "inventory_pills" "icon_pills" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
