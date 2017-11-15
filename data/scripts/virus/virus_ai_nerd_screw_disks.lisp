@@ -102,8 +102,8 @@
       ;And never again
       (collector_set "nerd_virus_animation" 1.0))
     nil
+    )
   )
-)
 (puppeteer_set "nerd" "back_code")
 (stagecrafter_set_item "computer_A" "coding_A")
 

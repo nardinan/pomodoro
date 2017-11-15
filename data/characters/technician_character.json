@@ -20,6 +20,12 @@
     "tail": "bubble_tail"
   },
   "colors": {
+    "cap":{
+      "mask_R": 255,
+      "mask_G": 255,
+      "mask_B": 255,
+      "mask_A": 255
+    },
     "head": {
       "mask_R": 255,
       "mask_G": 255,
@@ -298,6 +304,63 @@
       }
     },
     {
+      "label": "drink_right",
+      "offset_x": 200,
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_technician_hat_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side",
+        "offset_y": 1
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_point",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_drink_mojito",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "legs_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "drunk_right",
+      "offset_x": 200,
+      "flip_x": true,
+      "cap":{
+        "drawable": "cap_set_drug"
+      },
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_technician_hat_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side",
+        "offset_y": 1
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_point",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_drink_mojito_frame11",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "legs_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
       "label": "still_left",
       "offset_x": -200,
       "head": {
@@ -368,6 +431,61 @@
       },
       "arms": {
         "drawable": "arms_set_blank_side_point",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "legs_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "drink_left",
+      "offset_x": -200,
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_technician_hat_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side",
+        "offset_y": 1
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_point",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_drink_mojito",
+        "offset_y": 10
+      },
+      "legs": {
+        "drawable": "legs_set_blank_side_walk_frame0",
+        "offset_y": 20
+      }
+    },
+    {
+      "label": "drunk_left",
+      "offset_x": -200,
+      "cap":{
+        "drawable": "cap_set_drug"
+      },
+      "head": {
+        "drawable": "head_set_blank_side"
+      },
+      "hair": {
+        "drawable": "hair_set_technician_hat_side"
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side",
+        "offset_y": 1
+      },
+      "body": {
+        "drawable": "shirt_set_blank_side_point",
+        "offset_y": 10
+      },
+      "arms": {
+        "drawable": "arms_set_blank_side_drink_mojito_frame11",
         "offset_y": 10
       },
       "legs": {

@@ -12,3 +12,6 @@
 (effecteer_delete "inventory_glass")
 (effecteer_delete "inventory_sugar")
 (effecteer_delete "inventory_cocktail")
+(effecteer_delete "inventory_pills")
+(effecteer_delete "inventory_drug_cocktail")
+(effecteer_delete "inventory_cabin_key")

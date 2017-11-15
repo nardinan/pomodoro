@@ -9,62 +9,62 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 federico
-   "Shhhh!"
-   "Shhhh!")
-  (cons ;2 federico
-   "I am going to take an amazing picture!"
-   "Sto per fare una foto da paura! ")
-  (cons ;3 andrea
-   "This is Federico!"
-   "Questo e' Federico!")
-  (cons ;4 andrea
-   "A friend of mine and the brother of my girlfriend."
-   "Mio amico e fratello della mia ragazza.")
-  (cons ;5 andrea
-   "He is a musician and a professional photographer!"
-   "Musicista e fotografo professionista!")
-  (cons ;6 andrea
-   "Better known as Fettina."
-   "Meglio conosciuto come Fettina.")
-  (cons ;7 andrea
-   "He's a great connoisseur of Simpson."
-   "E' un grande intenditeur di Simpson.")
-  (cons ;8 federico
-   "Ulala!"
-   "Ulala'!")
-  (cons ;9 federico
-   "The sir speaks french now!"
-   "Il signore parla francese adesso!")
-  (cons ;10 andrea
-   "He has the power to break his computers! "
-   "Ha il potere di rompere i computer! ")
-  (cons ;11 andrea
-   "He's genetically prone to the coffee break and animals' collection at home."
-   "Geneticamente predisposto alla pausa caffe' e alla collezione di animali in casa.")
-  (cons ;12 federico
-   "Look, I don't know with who you are speaking . . ."
-   "Senti non so con chi ce l'hai . . .")
-  (cons ;13 federico
-   ". . . but please keep some things for you! "
-   ". . . ma ti prego di tenere certe cose riservate per te! ")
-  (cons ;14 andrea
-   "Sure, I'm sorry, I've just wanted . . . "
-   "Certo, scusa, volevo solo . . .")
-  (cons ;15 andrea
-   "No matter!"
-   "Fa niente!")
-  (cons ;16 andrea
-   "By the way what do you do here?"
-   "Piuttosto che ci fai da queste parti?")
-  (cons ;17 federico
-   "Photos."
-   "Foto.")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 federico
+                    "Shhhh!"
+                    "Shhhh!")
+                  (cons ;2 federico
+                    "I am going to take an amazing picture!"
+                    "Sto per fare una foto da paura! ")
+                  (cons ;3 andrea
+                    "This is Federico!"
+                    "Questo e' Federico!")
+                  (cons ;4 andrea
+                    "A friend of mine and the brother of my girlfriend."
+                    "Mio amico e fratello della mia ragazza.")
+                  (cons ;5 andrea
+                    "He is a musician and a professional photographer!"
+                    "Musicista e fotografo professionista!")
+                  (cons ;6 andrea
+                    "Better known as Fettina."
+                    "Meglio conosciuto come Fettina.")
+                  (cons ;7 andrea
+                    "He's a great connoisseur of Simpson."
+                    "E' un grande intenditeur di Simpson.")
+                  (cons ;8 federico
+                    "Ulala!"
+                    "Ulala'!")
+                  (cons ;9 federico
+                    "The sir speaks french now!"
+                    "Il signore parla francese adesso!")
+                  (cons ;10 andrea
+                    "He has the power to break his computers! "
+                    "Ha il potere di rompere i computer! ")
+                  (cons ;11 andrea
+                    "He's genetically prone to the coffee break and animals' collection at home."
+                    "Geneticamente predisposto alla pausa caffe' e alla collezione di animali in casa.")
+                  (cons ;12 federico
+                    "Look, I don't know with who you are speaking . . ."
+                    "Senti non so con chi ce l'hai . . .")
+                  (cons ;13 federico
+                    ". . . but please keep some things for you! "
+                    ". . . ma ti prego di tenere certe cose riservate per te! ")
+                  (cons ;14 andrea
+                    "Sure, I'm sorry, I've just wanted . . . "
+                    "Certo, scusa, volevo solo . . .")
+                  (cons ;15 andrea
+                    "No matter!"
+                    "Fa niente!")
+                  (cons ;16 andrea
+                    "By the way what do you do here?"
+                    "Piuttosto che ci fai da queste parti?")
+                  (cons ;17 federico
+                    "Photos."
+                    "Foto.")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -217,3 +217,6 @@
 
 ;Return the control
 (main_control "andrea")
+
+;Prepare drug cocktail (if possible)
+(director_script "virus_ai_andrea_drug_cocktail")

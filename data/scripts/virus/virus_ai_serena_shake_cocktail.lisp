@@ -9,23 +9,23 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 serena
-   "Here, your Mojito."
-   "Ecco il tuo Mojito.")
-  (cons ;2 serena
-   "It's a little bit diluted . . ."
-   "Un po' annacquato forse . . .")
-  (cons ;3 serena
-   ". . . but Kerosene free!"
-   ". . . ma senza Kerosene!")
-  (cons ;4 serena
-   "Kerosene is for those who pay!"
-   "Il Kerosene e' per chi paga!")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 serena
+                    "Here, your Mojito."
+                    "Ecco il tuo Mojito.")
+                  (cons ;2 serena
+                    "It's a little bit diluted . . ."
+                    "Un po' annacquato forse . . .")
+                  (cons ;3 serena
+                    ". . . but Kerosene free!"
+                    ". . . ma senza Kerosene!")
+                  (cons ;4 serena
+                    "Kerosene is for those who pay!"
+                    "Il Kerosene e' per chi paga!")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -144,3 +144,6 @@
 
 ;Return the control
 (main_control "andrea")
+
+;Prepare drug cocktail (if possible)
+(director_script "virus_ai_andrea_drug_cocktail")

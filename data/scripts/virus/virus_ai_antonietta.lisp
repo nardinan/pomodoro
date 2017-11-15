@@ -100,9 +100,9 @@
   (if (= done_glasses 1.0)
     (director_dialog "game_antonietta_done_0x0b")
     (director_dialog "game_antonietta_activated_tool_0x0b")
-  )
+    )
   (director_dialog "game_antonietta_no_request_0x0b")
-)
+  )
 (director_wait_dialog)
 
 ;Refresh interface

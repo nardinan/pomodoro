@@ -1,0 +1,10 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"icon_drug_cocktail_frame0",  "time":0.1},
+    {"drawable":"icon_drug_cocktail_frame1",  "time":0.1},
+    {"drawable":"icon_drug_cocktail_frame2",  "time":0.1},
+    {"drawable":"icon_drug_cocktail_frame3",  "time":0.1}
+	]
+}

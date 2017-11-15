@@ -22,20 +22,24 @@
 (stagecrafter_play "birds_background")
 
 ;Collect environment
-(define from_where (collector_get "from_where"))
-(define current_chapter (collector_get "current_chapter"))
+(define from_where        (collector_get "from_where"))
+(define current_chapter   (collector_get "current_chapter"))
+(define done_cabin_key    (collector_get "done_cabin_key"))
 
 ;Configure
 (collector_set "from_where" "lupattelli")
 
 ;Setup characters
-(puppeteer_show "technician" 3100)
-(puppeteer_stare "technician" "andrea")
 (if (compare from_where "garibaldi")
   (puppeteer_show "andrea" 3600)
   (puppeteer_show "andrea" 2090)
   )
+(puppeteer_show "technician" 3100)
+(if (= done_cabin_key 1.0)
+  (puppeteer_set "technician" "drunk_left")
+  (puppeteer_stare "technician" "andrea")
+  )
 (if (compare current_chapter "quiet")
   (director_script "quiet_intro_lupattelli")
-  nil
+  (main_control "andrea")
   )
