@@ -135,6 +135,7 @@ d_define_method(effecteer, add_effect)(struct s_object *self, const char *key, c
     struct s_object *drawable;
     enum e_factory_media_types type;
     struct s_effecteer_effect *current_effect;
+    double current_width, current_height;
     if ((drawable = d_call(effecteer_attributes->factory, m_factory_get_media, label, &type))) {
         if ((current_effect = (struct s_effecteer_effect *) d_malloc(sizeof(struct s_effecteer_effect)))) {
             strncpy(current_effect->key, key, d_entity_label_size);
@@ -146,6 +147,8 @@ d_define_method(effecteer, add_effect)(struct s_object *self, const char *key, c
             current_effect->zoom = zoom;
             current_effect->angle = angle;
             current_effect->layer = layer;
+            d_call(current_effect->drawable, m_drawable_get_dimension, &current_width, &current_height);
+            d_call(current_effect->drawable, m_drawable_set_center, (current_width / 2.0), (current_height / 2.0));
             d_call(current_effect->drawable, m_drawable_set_position, current_effect->position_x, current_effect->position_y);
             d_call(current_effect->drawable, m_drawable_set_angle, current_effect->angle);
             d_call(current_effect->drawable, m_drawable_set_zoom, current_effect->zoom);

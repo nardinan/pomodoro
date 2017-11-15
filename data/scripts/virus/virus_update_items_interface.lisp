@@ -115,7 +115,7 @@
 
 (if (= got_drug_cocktail 1.0)
   (begin
-    (effecteer_add "inventory_drug_cocktail" "icon_drug_cocktail_frame0" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_drug_cocktail" "icon_drug_cocktail" position_x position_y 12.0 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
