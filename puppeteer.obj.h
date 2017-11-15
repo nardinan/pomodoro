@@ -31,7 +31,8 @@ typedef enum e_puppeteer_actions {
     e_puppeteer_action_move,
     e_puppeteer_action_run,
     e_puppeteer_action_look,
-    e_puppeteer_action_stare
+    e_puppeteer_action_stare,
+    e_puppeteer_action_get_position
 } e_puppeteer_action;
 typedef struct s_puppeteer_action_say {
     char message[d_string_buffer_size];

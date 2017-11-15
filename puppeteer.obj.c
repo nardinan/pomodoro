@@ -145,6 +145,22 @@ struct s_lisp_object *p_link_puppeteer_stare_character(struct s_object *self, st
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
+struct s_lisp_object *p_link_puppeteer_get_position_character(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    struct s_lisp_object *label_object = d_lisp_car(arguments), *result = lisp_attributes->base_symbols[e_lisp_object_symbol_nil];
+    struct s_director_attributes *director_attributes = d_cast(director, director);
+    struct s_puppeteer_attributes *puppeteer_attributes = d_cast(director_attributes->puppeteer, puppeteer);
+    struct s_puppeteer_character *current_character;
+    double current_position_x, current_position_y;
+    d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
+        if (f_string_strcmp(current_character->label, label_object->value_string) == 0) {
+            d_call(current_character->character, m_drawable_get_position, &current_position_x, &current_position_y);
+            result = p_lisp_object(self, e_lisp_object_type_value, current_position_x);
+            break;
+        }
+    return result;
+}
+
 struct s_puppeteer_attributes *p_puppeteer_alloc(struct s_object *self) {
     struct s_puppeteer_attributes *result = d_prepare(self, puppeteer);
     f_memory_new(self);         /* inherit */
@@ -359,6 +375,8 @@ d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *scrip
     d_call(script, m_lisp_extend_environment, "puppeteer_run", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_run_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_look", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_look_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_stare", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_stare_character));
+    d_call(script, m_lisp_extend_environment, "puppeteer_get_position", p_lisp_object(script, e_lisp_object_type_primitive, 
+                p_link_puppeteer_get_position_character));
     return self;
 }
 
@@ -411,6 +429,8 @@ d_define_method(puppeteer, dispatcher)(struct s_object *self, struct s_puppeteer
         case e_puppeteer_action_stare:
             d_log(e_log_level_medium, "action [stare] (character %s | entity %s)", action->key, action->parameters.entity);
             result = d_call(self, m_puppeteer_stare_character, action->key, action->parameters.entity);
+        default:
+            break;
     }
     return result;
 }
