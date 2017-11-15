@@ -28,6 +28,7 @@
 #define d_character_principal_point_alpha 255
 typedef enum e_character_components {
     e_character_component_arms = 0,
+    e_character_component_cap,
     e_character_component_eyes,
     e_character_component_hair,
     e_character_component_head,
