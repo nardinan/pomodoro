@@ -2,9 +2,9 @@
 ;this script has been generated automatically and then has been polished manually
 ;(sounds professional, uh? Well, it is not)
 ;Code name  : <none>
-;Location   : Gallenga
+;Location   : Vannucci
 ;Author     : Nardinan
-;Description: Antonietta gives you Nerd's contact lenses
+;Description: Gianni gives you the glass
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -80,28 +80,28 @@
 (puppeteer_disable_control)
 
 ;Parameters configuration
-(define dialog_done         (collector_get "antonietta_virus_dialog"))
-(define request_glasses     (collector_get "request_glasses"))
-(define done_glasses        (collector_get "done_glasses"))
+(define dialog_done         (collector_get "gianni_virus_dialog"))
+(define request_glass       (collector_get "request_glass"))
+(define done_glass          (collector_get "done_glass"))
 
 ;Action!
-(puppeteer_look "andrea" "antonietta")
-(puppeteer_look "antonietta" "andrea")
+(puppeteer_look "andrea" "gianni")
+(puppeteer_look "gianni" "andrea")
 (if (= dialog_done 1.0)
-  (director_dialog "game_antonietta_intro_after_0x0b")
+  (director_dialog "game_gianni_intro_after_0x0b")
   (begin
-    (director_dialog "game_antonietta_intro_first_0x0b")
+    (director_dialog "game_gianni_intro_first_0x0b")
 
     ;And never again
-    (collector_set "antonietta_virus_dialog" 1.0))
+    (collector_set "gianni_virus_dialog" 1.0))
   )
 (director_wait_dialog)
-(if (= request_glasses 1.0)
-  (if (= done_glasses 1.0)
-    (director_dialog "game_antonietta_done_0x0b")
-    (director_dialog "game_antonietta_activated_tool_0x0b")
+(if (= request_glass 1.0)
+  (if (= done_glass 1.0)
+    (director_dialog "game_gianni_done_0x0b")
+    (director_dialog "game_gianni_activated_tool_0x0b")
     )
-  (director_dialog "game_antonietta_no_request_0x0b")
+  (director_dialog "game_gianni_no_request_0x0b")
   )
 (director_wait_dialog)
 
