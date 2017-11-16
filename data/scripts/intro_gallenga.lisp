@@ -22,7 +22,8 @@
 (stagecrafter_play "people_background")
 
 ;Collect environment
-(define from_where (collector_get "from_where"))
+(define from_where      (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "gallenga")
@@ -31,7 +32,12 @@
 (puppeteer_show "antonietta" 100)
 (puppeteer_set "antonietta"	"still_right")
 (puppeteer_show "luna" 2900)
-(puppeteer_stare "luna" "andrea")
+(if (compare current_chapter "virus")
+  (begin
+    (puppeteer_show "valerio" 2600)
+    (puppeteer_look "valerio" "luna")
+    (puppeteer_look "luna" "valerio"))
+  (puppeteer_stare "luna" "andrea"))
 (puppeteer_show "andrea" 1950)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")
