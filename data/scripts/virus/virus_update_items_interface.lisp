@@ -34,95 +34,96 @@
 
 (define position_y 100.0) ; the Y is fixed with the bottom of the screen
 (define position_x 100.0) ; initially, the X is 100 and increases step by step by an offset
-(define offset_x   200.0) ; the offset
+(define offset_x   150.0) ; the offset
+(define offset_z   10.0)   ; the zoom
 
 (if (= got_note 1.0)
   (begin
-    (effecteer_add "inventory_note" "icon_note" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_note" "icon_note" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_tie 1.0)
   (begin
-    (effecteer_add "inventory_tie" "icon_tie" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_tie" "icon_tie" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_shoe 1.0)
   (begin
-    (effecteer_add "inventory_shoe" "icon_shoe" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_shoe" "icon_shoe" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_lemon 1.0)
   (begin
-    (effecteer_add "inventory_lemon" "icon_lemon" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_lemon" "icon_lemon" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_battery 1.0)
   (begin
-    (effecteer_add "inventory_battery" "icon_battery" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_battery" "icon_battery" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_glasses 1.0)
   (begin
-    (effecteer_add "inventory_glasses" "icon_glasses" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_glasses" "icon_glasses" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_screwdriver 1.0)
   (begin
-    (effecteer_add "inventory_screwdriver" "icon_screwdriver" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_screwdriver" "icon_screwdriver" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_glass 1.0)
   (begin
-    (effecteer_add "inventory_glass" "icon_glass" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_glass" "icon_glass" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_sugar 1.0)
   (begin
-    (effecteer_add "inventory_sugar" "icon_sugar" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_sugar" "icon_sugar" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_cocktail 1.0)
   (begin
-    (effecteer_add "inventory_cocktail" "icon_cocktail" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_cocktail" "icon_cocktail" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_pills 1.0)
   (begin
-    (effecteer_add "inventory_pills" "icon_pills" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_pills" "icon_pills" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_drug_cocktail 1.0)
   (begin
-    (effecteer_add "inventory_drug_cocktail" "icon_drug_cocktail" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_drug_cocktail" "icon_drug_cocktail" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
 
 (if (= got_cabin_key 1.0)
   (begin
-    (effecteer_add "inventory_cabin_key" "icon_cabin_key" position_x position_y 12.0 0.0 t nil)
+    (effecteer_add "inventory_cabin_key" "icon_cabin_key" position_x position_y offset_z 0.0 t nil)
     (define position_x (+ position_x offset_x)))
   nil
   )
