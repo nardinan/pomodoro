@@ -23,6 +23,7 @@
 
 ;Collect environment
 (define from_where (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "garibaldi")
@@ -31,14 +32,16 @@
 (puppeteer_show "maria" -200)
 (puppeteer_show "baker" 3500)
 (puppeteer_stare "baker" "andrea")
-(if (collector_get "yuriy_quiet_dialog_garibaldi")
-  nil
-  (begin
-    (puppeteer_show "andrii" 1500)
-    (puppeteer_set "andrii" "still_right_radar_up")
-    (puppeteer_show "yuriy"	2000)
-    (puppeteer_set "yuriy" "still_left")
+(if (compare current_chapter "quiet")
+  (if (collector_get "yuriy_quiet_dialog_garibaldi")
+    nil
+    (begin
+      (puppeteer_show "andrii" 2200)
+      (puppeteer_set "andrii" "still_right_radar_up")
+      (puppeteer_show "yuriy"	2600)
+      (puppeteer_set "yuriy" "still_left"))
     )
+  nil
   )
 (if (compare from_where "lupattelli")
   (puppeteer_show "andrea" 6900)

@@ -5,5 +5,5 @@
   (if (compare current_chapter "virus")
     (director_script "virus_ai_gianni")
     nil
+    )
   )
-)

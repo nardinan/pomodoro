@@ -30,7 +30,6 @@
 ;Setup characters
 (puppeteer_show "roberto" 5000)
 (puppeteer_stare "roberto" "andrea")
-(puppeteer_set "roberto" "front")
 (if (compare from_where "innamorati")
   (puppeteer_show "andrea" 8700)
   (puppeteer_show "andrea" 300)

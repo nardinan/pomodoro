@@ -30,14 +30,14 @@
 (collector_set "from_where" "lupattelli")
 
 ;Setup characters
-(if (compare from_where "garibaldi")
-  (puppeteer_show "andrea" 3600)
-  (puppeteer_show "andrea" 2090)
-  )
 (puppeteer_show "technician" 3100)
 (if (= done_cabin_key 1.0)
   (puppeteer_set "technician" "drunk_left")
   (puppeteer_stare "technician" "andrea")
+  )
+(if (compare from_where "garibaldi")
+  (puppeteer_show "andrea" 3600)
+  (puppeteer_show "andrea" 2090)
   )
 (if (compare current_chapter "quiet")
   (director_script "quiet_intro_lupattelli")

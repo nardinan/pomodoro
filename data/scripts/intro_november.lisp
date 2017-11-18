@@ -27,6 +27,7 @@
 (define yuriy_quiet_dialog_november (collector_get "yuriy_quiet_dialog_november"))
 (define done_flowers (collector_get "done_flowers"))
 (define request_flowers (collector_get "request_flowers"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "november")
@@ -34,15 +35,19 @@
 ;Setup characters
 (puppeteer_show "policeman" 3000)
 (puppeteer_set "policeman" 	"front")
-(if (= yuriy_quiet_dialog_garibaldi 1.0)
-  (if (= yuriy_quiet_dialog_november 1.0)
-    nil
-    (begin
-      (puppeteer_show "andrii" 6800)
-      (puppeteer_show "yuriy"  6400)
-      (puppeteer_set "andrii" "still_left_radar_up")
-      (puppeteer_set "yuriy" "still_right"))
-    )
+(if (compare current_chapter "quiet")
+  (begin
+    (if (= yuriy_quiet_dialog_garibaldi 1.0)
+      (if (= yuriy_quiet_dialog_november 1.0)
+        nil
+        (begin
+          (puppeteer_show "andrii" 6800)
+          (puppeteer_set "andrii" "still_left_radar_up")
+          (puppeteer_show "yuriy"  6400)
+          (puppeteer_set "yuriy" "still_right"))
+        )
+      nil
+      ))
   nil
   )
 (if (= request_flowers 1.0)

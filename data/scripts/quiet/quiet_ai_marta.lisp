@@ -158,8 +158,6 @@
 ;Parameters configuration
 (define marta_quiet_dialog (collector_get "marta_quiet_dialog"))
 
-
-
 ;Action!
 (if (= marta_quiet_dialog 1.0)
   nil
