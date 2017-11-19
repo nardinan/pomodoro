@@ -104,6 +104,7 @@
     )
   )
 (director_wait_dialog)
+(puppeteer_stare "mustafa" "andrea")
 
 ;Refresh interface
 (director_script "update_items_interface")

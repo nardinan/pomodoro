@@ -381,7 +381,7 @@
 (stagecrafter_set_item "lhc_segment_E" "move_silence")
 (effecteer_add "fire_lhc" "fire_spot_particle" 2250 700 2 0 nil nil)
 (director_wait_time 1)
-(effecteer_add "fire_alarm_lhc" "red_alarm_animation" 0 0 4 0 t nil)
+(effecteer_add "fire_alarm_lhc" "red_alarm_animation" 480 360 4 0 t nil)
 (puppeteer_set "andrii" "back")
 (stagecrafter_set_item "computer_C" "still_C")
 (director_wait_time 2)
@@ -433,7 +433,7 @@
 (say "andrii" (get_dialog dialogs language 50) "cern_track50") ;preview: We may have changed ...
 (say "andrii" (get_dialog dialogs language 51) "cern_track51") ;preview: THE HISTORY | animation hands in the hairs
 ;Script suggestion: Tuono
-(effecteer_add "flash" "thunder_flash"  0 0 4 0 t nil)
+(effecteer_add "flash" "thunder_flash" 480 360 4 0 t nil)
 (stagecrafter_set_item "thunder_strike" "strike")
 (director_wait_time 3)
 (puppeteer_set "yuriy"	"still_left")
@@ -471,11 +471,11 @@
 (puppeteer_set "andrii" "point_left")
 (say "andrii" (get_dialog dialogs language 65) "cern_track65") ;preview: Yeeeeeee! | looking at yuriy | animation hands in the air
 (director_wait_time 1)
-(effecteer_add  "black_hole" "black_hole_animation" 0 -1100 28 0 t nil)
+(effecteer_add  "black_hole" "black_hole_animation" (+ 480 200) 360 28 0 t nil)
 (director_wait_time 5)
-(effecteer_add  "psycho_games_post" "intro_pgs_post" -50 50 16 0 t nil)
+(effecteer_add  "psycho_games_post" "intro_pgs_post" (+ 480 450) (+ 360 180) 16 0 t nil)
 (director_wait_time 45)
-(effecteer_add  "clear_out" "fade_out" 0 0 4 0 t nil)
+(effecteer_add  "clear_out" "fade_out" (+ 480 450) (+ 360 180) 4 0 t nil)
 (director_wait_time 2)
 
 ;And never again

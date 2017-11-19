@@ -22,15 +22,20 @@
 (stagecrafter_play "traffic_background")
 
 ;Collect environment
-(define from_where (collector_get "from_where"))
-(define marta_quiet_dialog (collector_get "marta_quiet_dialog"))
+(define from_where          (collector_get "from_where"))
+(define marta_quiet_dialog  (collector_get "marta_quiet_dialog"))
+(define current_chapter     (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "innamorati")
 
 ;Setup characters
-(puppeteer_show "writer" 9400)
-(puppeteer_set "writer" "back_writer")
+(if (compare current_chapter "quiet")
+  (begin
+    (puppeteer_show "writer" 9400)
+    (puppeteer_set "writer" "back_writer"))
+  (stagecrafter_set_item "coverture" "none")
+  )
 (if (= marta_quiet_dialog 1.0)
   nil
   (begin

@@ -5,6 +5,9 @@
 ;Location   : Elfo Pub
 ;Author     : Nardinan
 ;Description: Caprini tells Andrea that he puts the money in the Enel cabin
+
+;Dialogs
+(define language (collector_get "language"))
 (define dialogs (list
                   (cons ;0 default
                     ""
@@ -151,7 +154,7 @@
                     "It's time to go!"
                     "Meglio Andare!")
                   nil
-                  )
+                  ))
 
   ;High level functions
   ;@brief: say <character> <message>
