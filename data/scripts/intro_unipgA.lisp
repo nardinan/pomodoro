@@ -22,7 +22,8 @@
 (stagecrafter_play "people_background")
 
 ;Collect environment
-(define from_where (collector_get "from_where"))
+(define from_where      (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "unipgA")
@@ -31,6 +32,12 @@
 (stagecrafter_set_item "computer_A" "coding_A")
 (puppeteer_show "nerd" 7040)
 (puppeteer_set "nerd" "back_code")
+(if (compare current_chapter "virus")
+  (begin
+    (puppeteer_show "bruno" 5800)
+    (puppeteer_stare "bruno" "andrea"))
+  nil
+  )
 (if (compare from_where "innamorati")
   (puppeteer_show "andrea" 4530)
   (puppeteer_show "andrea" 1400)
