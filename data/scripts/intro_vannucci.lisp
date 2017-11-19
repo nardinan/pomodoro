@@ -29,7 +29,7 @@
 (collector_set "from_where" "vannucci")
 
 ;Setup characters
-(puppeteer_show "ticket_inspector" 9800)
+(puppeteer_show "ticket_inspector" 10100)
 (puppeteer_stare "ticket_inspector" "andrea")
 (puppeteer_show "gianni" 4500)
 (puppeteer_set "gianni" "still_left")
