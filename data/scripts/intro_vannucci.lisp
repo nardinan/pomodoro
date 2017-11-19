@@ -41,10 +41,10 @@
     (puppeteer_set "jamal" "back"))
   (if (compare current_chapter "virus")
     (begin
-      (puppeteer_show "yuriy" 8000)
-      (puppeteer_set  "yuriy" "still_right")
-      (puppeteer_show "andrii" 8400)
-      (puppeteer_set "andrii" "still_left"))
+      (puppeteer_show "yuriy" 8400)
+      (puppeteer_set  "yuriy" "still_left")
+      (puppeteer_show "andrii" 8000)
+      (puppeteer_set "andrii" "still_right"))
     nil
     )
   )

@@ -19,8 +19,8 @@
                     "It is impossible to go around, safely."
                     "Adesso e' impossibile circolare in tranquillita'.")
                   (cons ;3 gianni
-                    "The police should take care of this stuation, and they should not do only tickets"
-                    "La polizia qui dovrebbe impegnarsi di piu' e non dovrebbe solo far multe")
+                    "The police should take care of this stuation!"
+                    "La polizia qui dovrebbe impegnarsi di piu'!")
                   (cons ;4 mariano
                     "They should close pubs at eight in the evening!"
                     "Dovrebbero chiudere i locali alle otto di sera!")
@@ -102,9 +102,6 @@
       )
     )
   )
-
-;Parameters configuration
-(define quiet_mariano_and_gianni_line (collector_get "quiet_mariano_and_gianni_line"))
 
 ;Parameters configuration
 (define quiet_mariano_and_gianni_line      (collector_get "quiet_mariano_and_gianni_line"))
