@@ -154,12 +154,13 @@ d_define_method_override(item, set_component)(struct s_object *self, char *label
         item_attributes->current_track = NULL;
     }
     result = d_call_owner(self, entity, m_entity_set_component, label);
-    if (entity_attributes->current_component)
+    if (entity_attributes->current_component) {
         d_foreach(&(entity_attributes->current_component->elements), current_element, struct s_entity_element)
             if ((animation_attributes = d_cast(current_element->drawable, animation))) {
                 d_call(current_element->drawable, m_animation_set_status, e_animation_direction_stop);
                 d_call(current_element->drawable, m_animation_set_status, e_animation_direction_forward);
             }
+    }
     d_foreach(&(item_attributes->tracks), current_track, struct s_item_track)
         if (f_string_strcmp(current_track->label, label) == 0) {
             item_attributes->current_track = current_track;
@@ -184,14 +185,16 @@ d_define_method(item, set_active)(struct s_object *self, t_boolean active) {
 
 d_define_method(item, blink)(struct s_object *self, struct s_controllable_entry *entry, t_boolean pressed) {
     d_using(item);
-    if (pressed)
-        item_attributes->blink = item_attributes->active;
-    else {
-        item_attributes->blink = d_false;
-        item_attributes->green_channel = d_item_blink_max_channel;
-        item_attributes->green_modificator = -d_item_blink_modificator;
-        d_call(self, m_drawable_set_maskRGB, (unsigned int)d_item_blink_max_channel, (unsigned int)d_item_blink_max_channel, 
-                (unsigned int)d_item_blink_max_channel);
+    if (item_attributes->active) {
+        if (pressed)
+            item_attributes->blink = d_true;
+        else {
+            item_attributes->blink = d_false;
+            item_attributes->green_channel = d_item_blink_max_channel;
+            item_attributes->green_modificator = -d_item_blink_modificator;
+            d_call(self, m_drawable_set_maskRGB, (unsigned int)d_item_blink_max_channel, (unsigned int)d_item_blink_max_channel, 
+                    (unsigned int)d_item_blink_max_channel);
+        }
     }
     return self;
 }
