@@ -436,7 +436,7 @@
       ;And never again
       (collector_set "luna_virus_dialog" 1.0))
     )
-    )
+  )
 
 ;Refresh interface
 (director_script "update_items_interface")
