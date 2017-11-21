@@ -197,7 +197,7 @@
 (define andrea_still_side     "still_right")
 (define andrea_point_side     "point_right")
 (define andrea_scratch_side   "scratch_right")
-(if (> andrea_position roberto_point_side)
+(if (> andrea_position roberto_position)
   (begin
     (define roberto_still_side    "still_right")
     (define roberto_point_side    "point_right")

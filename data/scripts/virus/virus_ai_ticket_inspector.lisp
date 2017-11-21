@@ -35,7 +35,7 @@
                     "Oh no . . .")
                   (cons ;8 andrea
                     ". . . you're infected!"
-                    ". . . anche tu infetto!")
+                    ". . . sei infetto!")
                   (cons ;9 ticket_inspector
                     "Are you kidding?"
                     "Stai scherzando?")
@@ -143,7 +143,7 @@
 ;Action!
 (puppeteer_look "andrea" "ticket_inspector")
 (if (= dialog_done 1.0)
-  (say "ticket_inspector" (get_dialog dialogs language 13) "tinsinfvirus_track13") ;preview: <Centro.bin is not respondin... | looking at Andrea
+  (say "ticket_inspector" (get_dialog dialogs language 13) "tinsinfvirus_track13") ;preview: <Giaffro.bin is not respondin... | looking at Andrea
   (begin
     (say "ticket_inspector" (get_dialog dialogs language 1) "tinsinfvirus_track1") ;preview: Ticket and arm, please. | looking at Andrea
     (say "andrea" (get_dialog dialogs language 2) "tinsinfvirus_track2") ;preview: Again? | looking at Ticket_inspector

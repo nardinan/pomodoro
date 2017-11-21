@@ -238,7 +238,7 @@
     (puppeteer_set "luca" "still_right")
     (say "luca" (get_dialog dialogs language 15) "cugmny_track15") ;preview: THEY WILL CUT US OUT! | looking at Andrea
     ;Script suggestion: Tuono
-    (effecteer_add "flash" "thunder_flash"  0 0 4 0 t nil)
+    (effecteer_add "flash" "thunder_flash" 480 360 4 0 t nil)
     (stagecrafter_set_item "thunder_strike" "strike")
     (director_wait_time 3)
     (say "andrea" (get_dialog dialogs language 16) "cugmny_track16") ;preview: Wow! How did you do that? | looking at Cug | animation hands in the air
