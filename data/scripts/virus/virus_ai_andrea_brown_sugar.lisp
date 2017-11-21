@@ -313,134 +313,130 @@
 ;Action!
 (puppeteer_set "valerio" "still_right")
 (puppeteer_set "luna" "still_left")
-(if (= dialog_done 1.0)
+(if (= (+ request_sugar done_sugar) 1.0)
   (begin
-    ;Script suggestion: La seconda volta
-    (puppeteer_set "luna" "point_left")
-    (say "luna" (get_dialog dialogs language 42) "lunpdstravirus_track42") ;preview: People is crashing! | looking at Valerio | animation pointing
-    (puppeteer_set "luna" "still_left")
-    (say "valerio" (get_dialog dialogs language 43) "lunpdstravirus_track43") ;preview: Impossible! | looking at Luna
-    (say "valerio" (get_dialog dialogs language 44) "lunpdstravirus_track44") ;preview: My skils with gdb and valgri... | looking at Luna
-    (say "luna" (get_dialog dialogs language 45) "lunpdstravirus_track45") ;preview: Are you kidding me? | looking at Valerio
-    (say "valerio" (get_dialog dialogs language 46) "lunpdstravirus_track46") ;preview: . . . | looking at Luna
-    (puppeteer_set "valerio" "scratch_right")
-    (say "valerio" (get_dialog dialogs language 47) "lunpdstravirus_track47")) ;preview: Maybe? | looking at Luna | animation scratching his head
-  (begin
-    ;Script suggestion: La prima volta
-    (say "valerio" (get_dialog dialogs language 1) "lunpdstravirus_track1") ;preview: I told you that is not true! | looking at Luna
-    (say "luna" (get_dialog dialogs language 2) "lunpdstravirus_track2") ;preview: And I told you that is true ... | looking at Valerio | animation pointing
-    (puppeteer_set "andrea" "front")
-    (say_and_go "andrea" (get_dialog dialogs language 3) "lunpdstravirus_track3") ;preview: The guy, next to my girlfrie... | animation front
-    (director_wait_time 1.0)
-    (puppeteer_set "valerio" valerio_look_andrea)
+    ;Script suggestion: Quando Andrea ha bisogno dello zucchero di canna
     (puppeteer_set "luna" luna_look_andrea)
-    (director_wait_message "andrea")
-    (say "andrea" (get_dialog dialogs language 4) "lunpdstravirus_track4") ;preview: We call him PD. | animation front
-    (say "andrea" (get_dialog dialogs language 5) "lunpdstravirus_track5") ;preview: PD is nerd . . . | animation front
-    (say "andrea" (get_dialog dialogs language 6) "lunpdstravirus_track6") ;preview: . . . is a little obsessed w... | animation front
-    (say "andrea" (get_dialog dialogs language 7) "lunpdstravirus_track7") ;preview: He study Computer Science wi... | animation front
-    (say "andrea" (get_dialog dialogs language 8) "lunpdstravirus_track8") ;preview: He lives in the same appartm... | animation front
-    (puppeteer_set "andrea" andrea_look_valerio)
-    (say "andrea" (get_dialog dialogs language 9) "lunpdstravirus_track9") ;preview: . . that's slightly odd . . . | looking at Valerio
-    (director_wait_time 1.0)
-    (say_and_go "luna" (get_dialog dialogs language 10) "lunpdstravirus_track10") ;preview: The virus story is just a bu... | looking at Valerio
-    (director_wait_time 1.0)
-    (puppeteer_set "valerio" "still_right")
     (puppeteer_set "andrea" andrea_look_luna)
-    (director_wait_message "luna")
-    (say "valerio" (get_dialog dialogs language 11) "lunpdstravirus_track11") ;preview: I am sorry Luna, but the peo... | looking at Luna
-    (say "luna" (get_dialog dialogs language 12) "lunpdstravirus_track12") ;preview: You have potatoes in your he... | looking at Valerio
-    (puppeteer_set "valerio" "scratch_right")
-    (say "valerio" (get_dialog dialogs language 13) "lunpdstravirus_track13") ;preview: Uff, OK. | looking at Luna | animation scratching his head
-    (say "andrea" (get_dialog dialogs language 14) "lunpdstravirus_track14") ;preview: Are you still on break? | looking at Luna
-    (puppeteer_set "luna" luna_look_andrea)
-    (say "luna" (get_dialog dialogs language 15) "lunpdstravirus_track15") ;preview: So? | looking at Andrea
-    (say "andrea" (get_dialog dialogs language 16) "lunpdstravirus_track16") ;preview: Just asking. | looking at Luna
-    (puppeteer_set "andrea" andrea_point_luna)
-    (say "andrea" (get_dialog dialogs language 17) "lunpdstravirus_track17") ;preview: Is this the very same coffee... | looking at Luna | animation pointing
-    (puppeteer_set "andrea" andrea_look_luna)
-    (say "luna" (get_dialog dialogs language 18) "lunpdstravirus_track18") ;preview: Are you mad? | looking at Andrea
-    (puppeteer_set "luna" luna_point_andrea)
-    (say "luna" (get_dialog dialogs language 19) "lunpdstravirus_track19") ;preview: I drank two other coffees be... | looking at Luna | animation pointing
-    (puppeteer_set "luna" luna_look_andrea)
-    (puppeteer_set "valerio" valerio_point_andrea)
-    (say_and_go "valerio" (get_dialog dialogs language 20) "lunpdstravirus_track20") ;preview: Andrea I heard that some noo... | looking at Andrea | animation pointing
-    (director_wait_time 1.0)
-    (puppeteer_set "andrea" andrea_look_valerio)
-    (director_wait_message "valerio")
-    (puppeteer_set "valerio" valerio_look_andrea)
-    (say "andrea" (get_dialog dialogs language 21) "lunpdstravirus_track21") ;preview: I . . . | looking at Valerio
-    (director_wait_time 2.0)
-    ;Script suggestion: Una lunga pausa
-    (say "andrea" (get_dialog dialogs language 22) "lunpdstravirus_track22") ;preview: . . . I have no words. | looking at Valerio
-    (say "valerio" (get_dialog dialogs language 23) "lunpdstravirus_track23") ;preview: Me neither! | looking at Andrea
-    (puppeteer_set "andrea" andrea_scratch_valerio)
-    (say "andrea" (get_dialog dialogs language 24) "lunpdstravirus_track24") ;preview: Totally incomprehensible. | looking at Valerio | animation scratching his head
-    (puppeteer_set "andrea" andrea_point_valerio)
-    (say "andrea" (get_dialog dialogs language 25) "lunpdstravirus_track25") ;preview: Are you scared for the infec... | looking at Valerio | animation pointing
-    (puppeteer_set "andrea" andrea_look_valerio)
-    (say "valerio" (get_dialog dialogs language 26) "lunpdstravirus_track26") ;preview: The infection does not exist. | looking at Andrea
-    (puppeteer_set "valerio" valerio_point_andrea)
-    (say "valerio" (get_dialog dialogs language 27) "lunpdstravirus_track27") ;preview: A virus would create a globa... | looking at Andrea | animation pointing
-    (puppeteer_set "valerio" "still_right")
-    (say "valerio" (get_dialog dialogs language 28) "lunpdstravirus_track28") ;preview: A virus would draw attention... | looking at Luna
-    (puppeteer_set "valerio" valerio_look_andrea)
-    (say "valerio" (get_dialog dialogs language 29) "lunpdstravirus_track29") ;preview: The city would be under quar... | looking at Andrea
-    (puppeteer_set "valerio" "point_right")
-    (say "valerio" (get_dialog dialogs language 30) "lunpdstravirus_track30") ;preview: Whilst everybody here is fre... | looking at Luna | animation pointing
-    (puppeteer_set "valerio" valerio_look_andrea)
-    (say "andrea" (get_dialog dialogs language 31) "lunpdstravirus_track31") ;preview: I see. | looking at Valerio
-    (say "andrea" (get_dialog dialogs language 32) "lunpdstravirus_track32") ;preview: This is an interesting posit... | looking at Valerio
-    (puppeteer_set "luna" luna_point_andrea)
-    (say_and_go "luna" (get_dialog dialogs language 33) "lunpdstravirus_track33") ;preview: You guys are just crazy! | looking at Andrea | animation pointing
-    (director_wait_time 1.0)
-    (puppeteer_set "andrea" andrea_look_luna)
-    (puppeteer_set "valerio" "still_right")
-    (director_wait_message "luna")
-    (puppeteer_set "luna" luna_look_andrea)
-    (say "luna" (get_dialog dialogs language 34) "lunpdstravirus_track34") ;preview: This morning I saw a couple ... | looking at Andrea
-    (say "luna" (get_dialog dialogs language 35) "lunpdstravirus_track35") ;preview: They were crashing continous... | looking at Andrea
-    (say "valerio" (get_dialog dialogs language 36) "lunpdstravirus_track36") ;preview: Do you think people crashes ... | looking at Luna
-    (say "valerio" (get_dialog dialogs language 37) "lunpdstravirus_track37") ;preview: Moreover I intensiveluy debu... | looking at Luna
-    (director_wait_time 1.0)
-    (puppeteer_set "luna" "still_left")
-    (puppeteer_set "andrea" andrea_point_valerio)
-    (director_wait_time 2.0)
-    (puppeteer_set "andrea" andrea_look_valerio)
-    (director_wait_time 1.0)
-    (say_and_go "andrea" (get_dialog dialogs language 38) "lunpdstravirus_track38") ;preview: What do you mean? | looking at Valerio
-    (director_wait_time 1.0)
-    (puppeteer_set "valerio" valerio_look_andrea)
-    (director_wait_message "andrea")
-    (say "valerio" (get_dialog dialogs language 39) "lunpdstravirus_track39") ;preview: . . . | looking at Andrea
-    (say "valerio" (get_dialog dialogs language 40) "lunpdstravirus_track40") ;preview: Just kidding. | looking at Andrea
-    (say "andrea" (get_dialog dialogs language 41) "lunpdstravirus_track41") ;preview: Oh OK. | looking at Valerio
-    (puppeteer_set "valerio" "still_right")
+    (say "andrea" (get_dialog dialogs language 48) "lunpdstravirus_track48") ;preview: Did you put brown sugar on t... | looking at Luna
+    (say "luna" (get_dialog dialogs language 49) "lunpdstravirus_track49") ;preview: Yes. | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 50) "lunpdstravirus_track50") ;preview: Do you have it? | looking at Luna
+    (say "luna" (get_dialog dialogs language 51) "lunpdstravirus_track51") ;preview: Yes. | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 52) "lunpdstravirus_track52") ;preview: Can I have some? | looking at Luna
+    (say "luna" (get_dialog dialogs language 53) "lunpdstravirus_track53") ;preview: Yes. | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 54) "lunpdstravirus_track54") ;preview: Thanks! | looking at Luna
 
     ;And never again
-    (collector_set "luna_virus_dialog" 1.0))
-  )
-(if (= request_sugar 1.0)
-  (if (= done_sugar 1.0)
-    nil
+    (collector_set "got_sugar" 1.0)
+    (collector_set "done_sugar" 1.0))
+  (if (= dialog_done 1.0)
     (begin
-      ;Script suggestion: Quando Andrea ha bisogno dello zucchero di canna
+      ;Script suggestion: La seconda volta
+      (puppeteer_set "luna" "point_left")
+      (say "luna" (get_dialog dialogs language 42) "lunpdstravirus_track42") ;preview: People is crashing! | looking at Valerio | animation pointing
+      (puppeteer_set "luna" "still_left")
+      (say "valerio" (get_dialog dialogs language 43) "lunpdstravirus_track43") ;preview: Impossible! | looking at Luna
+      (say "valerio" (get_dialog dialogs language 44) "lunpdstravirus_track44") ;preview: My skils with gdb and valgri... | looking at Luna
+      (say "luna" (get_dialog dialogs language 45) "lunpdstravirus_track45") ;preview: Are you kidding me? | looking at Valerio
+      (say "valerio" (get_dialog dialogs language 46) "lunpdstravirus_track46") ;preview: . . . | looking at Luna
+      (puppeteer_set "valerio" "scratch_right")
+      (say "valerio" (get_dialog dialogs language 47) "lunpdstravirus_track47")) ;preview: Maybe? | looking at Luna | animation scratching his head
+    (begin
+      ;Script suggestion: La prima volta
+      (say "valerio" (get_dialog dialogs language 1) "lunpdstravirus_track1") ;preview: I told you that is not true! | looking at Luna
+      (say "luna" (get_dialog dialogs language 2) "lunpdstravirus_track2") ;preview: And I told you that is true ... | looking at Valerio | animation pointing
+      (puppeteer_set "andrea" "front")
+      (say_and_go "andrea" (get_dialog dialogs language 3) "lunpdstravirus_track3") ;preview: The guy, next to my girlfrie... | animation front
+      (director_wait_time 1.0)
+      (puppeteer_set "valerio" valerio_look_andrea)
       (puppeteer_set "luna" luna_look_andrea)
+      (director_wait_message "andrea")
+      (say "andrea" (get_dialog dialogs language 4) "lunpdstravirus_track4") ;preview: We call him PD. | animation front
+      (say "andrea" (get_dialog dialogs language 5) "lunpdstravirus_track5") ;preview: PD is nerd . . . | animation front
+      (say "andrea" (get_dialog dialogs language 6) "lunpdstravirus_track6") ;preview: . . . is a little obsessed w... | animation front
+      (say "andrea" (get_dialog dialogs language 7) "lunpdstravirus_track7") ;preview: He study Computer Science wi... | animation front
+      (say "andrea" (get_dialog dialogs language 8) "lunpdstravirus_track8") ;preview: He lives in the same appartm... | animation front
+      (puppeteer_set "andrea" andrea_look_valerio)
+      (say "andrea" (get_dialog dialogs language 9) "lunpdstravirus_track9") ;preview: . . that's slightly odd . . . | looking at Valerio
+      (director_wait_time 1.0)
+      (say_and_go "luna" (get_dialog dialogs language 10) "lunpdstravirus_track10") ;preview: The virus story is just a bu... | looking at Valerio
+      (director_wait_time 1.0)
+      (puppeteer_set "valerio" "still_right")
       (puppeteer_set "andrea" andrea_look_luna)
-      (say "andrea" (get_dialog dialogs language 48) "lunpdstravirus_track48") ;preview: Did you put brown sugar on t... | looking at Luna
-      (say "luna" (get_dialog dialogs language 49) "lunpdstravirus_track49") ;preview: Yes. | looking at Andrea
-      (say "andrea" (get_dialog dialogs language 50) "lunpdstravirus_track50") ;preview: Do you have it? | looking at Luna
-      (say "luna" (get_dialog dialogs language 51) "lunpdstravirus_track51") ;preview: Yes. | looking at Andrea
-      (say "andrea" (get_dialog dialogs language 52) "lunpdstravirus_track52") ;preview: Can I have some? | looking at Luna
-      (say "luna" (get_dialog dialogs language 53) "lunpdstravirus_track53") ;preview: Yes. | looking at Andrea
-      (say "andrea" (get_dialog dialogs language 54) "lunpdstravirus_track54") ;preview: Thanks! | looking at Luna
+      (director_wait_message "luna")
+      (say "valerio" (get_dialog dialogs language 11) "lunpdstravirus_track11") ;preview: I am sorry Luna, but the peo... | looking at Luna
+      (say "luna" (get_dialog dialogs language 12) "lunpdstravirus_track12") ;preview: You have potatoes in your he... | looking at Valerio
+      (puppeteer_set "valerio" "scratch_right")
+      (say "valerio" (get_dialog dialogs language 13) "lunpdstravirus_track13") ;preview: Uff, OK. | looking at Luna | animation scratching his head
+      (say "andrea" (get_dialog dialogs language 14) "lunpdstravirus_track14") ;preview: Are you still on break? | looking at Luna
+      (puppeteer_set "luna" luna_look_andrea)
+      (say "luna" (get_dialog dialogs language 15) "lunpdstravirus_track15") ;preview: So? | looking at Andrea
+      (say "andrea" (get_dialog dialogs language 16) "lunpdstravirus_track16") ;preview: Just asking. | looking at Luna
+      (puppeteer_set "andrea" andrea_point_luna)
+      (say "andrea" (get_dialog dialogs language 17) "lunpdstravirus_track17") ;preview: Is this the very same coffee... | looking at Luna | animation pointing
+      (puppeteer_set "andrea" andrea_look_luna)
+      (say "luna" (get_dialog dialogs language 18) "lunpdstravirus_track18") ;preview: Are you mad? | looking at Andrea
+      (puppeteer_set "luna" luna_point_andrea)
+      (say "luna" (get_dialog dialogs language 19) "lunpdstravirus_track19") ;preview: I drank two other coffees be... | looking at Luna | animation pointing
+      (puppeteer_set "luna" luna_look_andrea)
+      (puppeteer_set "valerio" valerio_point_andrea)
+      (say_and_go "valerio" (get_dialog dialogs language 20) "lunpdstravirus_track20") ;preview: Andrea I heard that some noo... | looking at Andrea | animation pointing
+      (director_wait_time 1.0)
+      (puppeteer_set "andrea" andrea_look_valerio)
+      (director_wait_message "valerio")
+      (puppeteer_set "valerio" valerio_look_andrea)
+      (say "andrea" (get_dialog dialogs language 21) "lunpdstravirus_track21") ;preview: I . . . | looking at Valerio
+      (director_wait_time 2.0)
+      ;Script suggestion: Una lunga pausa
+      (say "andrea" (get_dialog dialogs language 22) "lunpdstravirus_track22") ;preview: . . . I have no words. | looking at Valerio
+      (say "valerio" (get_dialog dialogs language 23) "lunpdstravirus_track23") ;preview: Me neither! | looking at Andrea
+      (puppeteer_set "andrea" andrea_scratch_valerio)
+      (say "andrea" (get_dialog dialogs language 24) "lunpdstravirus_track24") ;preview: Totally incomprehensible. | looking at Valerio | animation scratching his head
+      (puppeteer_set "andrea" andrea_point_valerio)
+      (say "andrea" (get_dialog dialogs language 25) "lunpdstravirus_track25") ;preview: Are you scared for the infec... | looking at Valerio | animation pointing
+      (puppeteer_set "andrea" andrea_look_valerio)
+      (say "valerio" (get_dialog dialogs language 26) "lunpdstravirus_track26") ;preview: The infection does not exist. | looking at Andrea
+      (puppeteer_set "valerio" valerio_point_andrea)
+      (say "valerio" (get_dialog dialogs language 27) "lunpdstravirus_track27") ;preview: A virus would create a globa... | looking at Andrea | animation pointing
+      (puppeteer_set "valerio" "still_right")
+      (say "valerio" (get_dialog dialogs language 28) "lunpdstravirus_track28") ;preview: A virus would draw attention... | looking at Luna
+      (puppeteer_set "valerio" valerio_look_andrea)
+      (say "valerio" (get_dialog dialogs language 29) "lunpdstravirus_track29") ;preview: The city would be under quar... | looking at Andrea
+      (puppeteer_set "valerio" "point_right")
+      (say "valerio" (get_dialog dialogs language 30) "lunpdstravirus_track30") ;preview: Whilst everybody here is fre... | looking at Luna | animation pointing
+      (puppeteer_set "valerio" valerio_look_andrea)
+      (say "andrea" (get_dialog dialogs language 31) "lunpdstravirus_track31") ;preview: I see. | looking at Valerio
+      (say "andrea" (get_dialog dialogs language 32) "lunpdstravirus_track32") ;preview: This is an interesting posit... | looking at Valerio
+      (puppeteer_set "luna" luna_point_andrea)
+      (say_and_go "luna" (get_dialog dialogs language 33) "lunpdstravirus_track33") ;preview: You guys are just crazy! | looking at Andrea | animation pointing
+      (director_wait_time 1.0)
+      (puppeteer_set "andrea" andrea_look_luna)
+      (puppeteer_set "valerio" "still_right")
+      (director_wait_message "luna")
+      (puppeteer_set "luna" luna_look_andrea)
+      (say "luna" (get_dialog dialogs language 34) "lunpdstravirus_track34") ;preview: This morning I saw a couple ... | looking at Andrea
+      (say "luna" (get_dialog dialogs language 35) "lunpdstravirus_track35") ;preview: They were crashing continous... | looking at Andrea
+      (say "valerio" (get_dialog dialogs language 36) "lunpdstravirus_track36") ;preview: Do you think people crashes ... | looking at Luna
+      (say "valerio" (get_dialog dialogs language 37) "lunpdstravirus_track37") ;preview: Moreover I intensiveluy debu... | looking at Luna
+      (director_wait_time 1.0)
+      (puppeteer_set "luna" "still_left")
+      (puppeteer_set "andrea" andrea_point_valerio)
+      (director_wait_time 2.0)
+      (puppeteer_set "andrea" andrea_look_valerio)
+      (director_wait_time 1.0)
+      (say_and_go "andrea" (get_dialog dialogs language 38) "lunpdstravirus_track38") ;preview: What do you mean? | looking at Valerio
+      (director_wait_time 1.0)
+      (puppeteer_set "valerio" valerio_look_andrea)
+      (director_wait_message "andrea")
+      (say "valerio" (get_dialog dialogs language 39) "lunpdstravirus_track39") ;preview: . . . | looking at Andrea
+      (say "valerio" (get_dialog dialogs language 40) "lunpdstravirus_track40") ;preview: Just kidding. | looking at Andrea
+      (say "andrea" (get_dialog dialogs language 41) "lunpdstravirus_track41") ;preview: Oh OK. | looking at Valerio
+      (puppeteer_set "valerio" "still_right")
 
       ;And never again
-      (collector_set "got_sugar" 1.0)
-      (collector_set "done_sugar" 1.0))
+      (collector_set "luna_virus_dialog" 1.0))
     )
-  nil
-  )
+    )
 
 ;Refresh interface
 (director_script "update_items_interface")
