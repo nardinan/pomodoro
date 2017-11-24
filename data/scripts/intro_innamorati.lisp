@@ -22,9 +22,10 @@
 (stagecrafter_play "traffic_background")
 
 ;Collect environment
-(define from_where          (collector_get "from_where"))
-(define marta_quiet_dialog  (collector_get "marta_quiet_dialog"))
-(define current_chapter     (collector_get "current_chapter"))
+(define from_where              (collector_get "from_where"))
+(define marta_quiet_dialog      (collector_get "marta_quiet_dialog"))
+(define current_chapter         (collector_get "current_chapter"))
+(define cellar_chaos_animation  (collector_get "cellar_chaos_animation"))
 
 ;Configure
 (collector_set "from_where" "innamorati")
@@ -56,3 +57,29 @@
   )
 (puppeteer_set "andrea" "front")
 (main_control "andrea")
+(if (compare current_chapter "chaos")
+  (if (= cellar_chaos_animation 1.0)
+    nil
+    (begin
+      (puppeteer_disable_control)
+      ;An hardcoded sleep to be sure that the camera is pointing the character
+      (director_wait_time 4.0)
+      (effecteer_play "swat_cellars_noise" "swat_cellars_noise" 0 1000 10 nil)
+      (puppeteer_stare "andrea" "cellarA")
+      (puppeteer_show "cellarA" 13000)
+      (puppeteer_run "cellarA" 5000)
+      (director_wait_time 1.0)
+      (puppeteer_show "cellarB" 13000)
+      (puppeteer_run "cellarB" 5000)
+      (director_wait_movement "cellarA")
+      (director_wait_movement "cellarB")
+      (puppeteer_show "cellarA" the_void)
+      (puppeteer_show "cellarB" the_void)
+      (effecteer_delete "swat_cellars_noise")
+      ;And never again
+      (collector_set "cellar_chaos_animation" 1.0)
+      (puppeteer_stare "andrea" "#null")
+      (main_control "andrea"))
+    )
+    nil
+  )

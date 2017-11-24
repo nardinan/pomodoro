@@ -184,7 +184,7 @@
           (say "andrea" (get_dialog dialogs language 8) "quietdwmovie_track8") ;preview: Finally I have an Internet c... | animation back
 
           ;Internet connection sequence
-          (effecteer_play "internet_connection" "internet_connection" 0 1000 10 nil)
+          (effecteer_play "internet_connection_noise" "internet_connection_noise" 0 1000 10 nil)
           (director_wait_time 4.0)
           (say "andrea" (get_dialog dialogs language 9) "quietdwmovie_track9") ;preview: Really? | animation back
           (director_wait_time 2.0)
@@ -195,8 +195,7 @@
           (director_wait_time 2.0)
           (say "andrea" (get_dialog dialogs language 11) "quietdwmovie_track11") ;preview: Diomatonne . . . | animation back
           (director_wait_time 1.0)
-          (effecteer_stop "internet_connection")
-          (effecteer_delete "internet_connection")
+          (effecteer_delete "internet_connection_noise")
 
           (say "andrea" (get_dialog dialogs language 12) "quietdwmovie_track12") ;preview: Done! | animation back
           (say "andrea" (get_dialog dialogs language 13) "quietdwmovie_track13") ;preview: Now, let me search for Torre... | animation back

@@ -90,7 +90,7 @@ int main (int argc, char *argv[]) {
     double final_resolution_x, final_resolution_y, scale_resolution_x, scale_resolution_y;
     t_boolean fullscreen = d_false;
     d_pool_init;
-    v_log_level = e_log_level_ever;
+    v_log_level = e_log_level_high;
     /* change chmod to the current location of the application */
     pomodoro_change_location(argv[0]);
     if ((argc > 1) && (f_string_strcmp(argv[1], "-developer") == 0)) {
