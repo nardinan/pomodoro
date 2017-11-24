@@ -23,11 +23,18 @@
 
 ;Collect environment
 (define from_where (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "fortebraccio")
 
 ;Setup characters
+(if (compare current_chapter "chaos")
+  (begin
+    (puppeteer_show "private_barry"  -200)
+    (puppeteer_show "private_joseph" -600))
+  nil
+  )
 (if (compare from_where "garibaldi")
   (puppeteer_show "andrea" 4980)
   (if (compare from_where "gallenga")

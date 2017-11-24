@@ -23,6 +23,7 @@
 
 ;Collect environment
 (define from_where (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "priori")
@@ -30,6 +31,12 @@
 ;Setup characters
 (puppeteer_show "cristiano" 5500)
 (puppeteer_set "cristiano" "front")
+(if (compare current_chapter "chaos")
+  (begin
+    (puppeteer_show "private_chris"  5100)
+    (puppeteer_look "private_chris" "cristiano"))
+  nil
+  )
 (if (compare from_where "vannucci")
   (puppeteer_show "andrea" 250)
   (if (compare from_where "elfo")

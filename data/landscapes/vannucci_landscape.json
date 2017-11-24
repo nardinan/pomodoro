@@ -17,10 +17,10 @@
 		"position_y":3010.0
 	}],
 	"surfaces":[{
-        "drawable":"vannucci_panorama",
-        "layer":0,
-        "speed_ratio_x":0.95
-    },{
+    "drawable":"vannucci_panorama",
+    "layer":0,
+    "speed_ratio_x":0.95
+  },{
 		"drawable":"vannucci_background",
 		"layer":1,
 		"speed_ratio_x":1.0,

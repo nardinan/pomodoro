@@ -9,6 +9,9 @@
 	"tracks":[
 		{"label":"people_background", "playable":"november_background_noise"}
 	],
+  "scripts":[
+    {"label":"update",	"script":"update_november", "frequency":60}
+  ],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":4250.0

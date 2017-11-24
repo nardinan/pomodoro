@@ -23,13 +23,22 @@
 
 ;Collect environment
 (define from_where (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "francesco")
 
 ;Setup characters
-(puppeteer_show "roberto" 5000)
-(puppeteer_stare "roberto" "andrea")
+(if (compare current_chapter "chaos")
+  (begin
+    (puppeteer_show "private_enrico" 4000)
+    (puppeteer_look "private_enrico" "private_richard")
+    (puppeteer_show "private_richard" 4500)
+    (puppeteer_look "private_richard" "private_enrico"))
+  (begin
+    (puppeteer_show "roberto" 5000)
+    (puppeteer_stare "roberto" "andrea"))
+  )
 (if (compare from_where "innamorati")
   (puppeteer_show "andrea" 8700)
   (puppeteer_show "andrea" 300)

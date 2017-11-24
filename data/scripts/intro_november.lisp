@@ -48,7 +48,14 @@
         )
       nil
       ))
-  nil
+  (if (compare current_chapter "chaos")
+    (begin
+      (puppeteer_show "private_barry"  -200)
+      (puppeteer_show "private_joseph" -600)
+      (puppeteer_show "private_chris"  3400)
+      (puppeteer_look "private_chris" "policeman"))
+    nil
+    )
   )
 (if (= request_flowers 1.0)
   (if (= done_flowers 1.0)

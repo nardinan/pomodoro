@@ -9,6 +9,9 @@
 	"tracks":[
 		{"label":"traffic_background", "playable":"fortebraccio_background_noise"}
 	],
+  "scripts":[
+    {"label":"update",	"script":"update_fortebraccio", "frequency":60}
+  ],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":2550.0

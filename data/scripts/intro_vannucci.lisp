@@ -45,7 +45,18 @@
       (puppeteer_set  "yuriy" "still_left")
       (puppeteer_show "andrii" 8000)
       (puppeteer_set "andrii" "still_right"))
-    nil
+    (if (compare current_chapter "chaos")
+      (begin
+        (puppeteer_show "private_albert" 6800)
+        (puppeteer_set "private_albert" "front")
+        (puppeteer_show "private_chris" 7800)
+        (puppeteer_set "private_chris" "front")
+        (puppeteer_show "private_enrico" 9700)
+        (puppeteer_look "private_enrico" "ticket_inspector")
+        (puppeteer_show "private_richard" 4200)
+        (puppeteer_look "private_richard" "gianni"))
+      nil
+      )
     )
   )
 (if (compare from_where "november")

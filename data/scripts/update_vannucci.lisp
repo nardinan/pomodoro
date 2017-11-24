@@ -4,5 +4,6 @@
   (director_script "quiet_update_vannucci")
   (if (compare current_chapter "virus")
     (director_script "virus_update_vannucci")
-    nil)
+    nil
+    )
   )

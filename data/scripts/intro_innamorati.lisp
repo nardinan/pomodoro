@@ -33,17 +33,17 @@
 ;Setup characters
 (if (compare current_chapter "quiet")
   (begin
+    (if (= marta_quiet_dialog 1.0)
+      nil
+      (begin
+        (puppeteer_show "bruno" 12600)
+        (puppeteer_set "bruno" "still_left")
+        (puppeteer_show "marta" 12300)
+        (puppeteer_set "marta" "still_right"))
+      )
     (puppeteer_show "writer" 9400)
     (puppeteer_set "writer" "back_writer"))
   (stagecrafter_set_item "coverture" "none")
-  )
-(if (= marta_quiet_dialog 1.0)
-  nil
-  (begin
-    (puppeteer_show "bruno" 12600)
-    (puppeteer_set "bruno" "still_left")
-    (puppeteer_show "marta" 12300)
-    (puppeteer_set "marta" "still_right"))
   )
 (if (compare from_where "unipgA")
   (puppeteer_show "andrea" 13500)
@@ -63,8 +63,9 @@
     (begin
       (puppeteer_disable_control)
       ;An hardcoded sleep to be sure that the camera is pointing the character
-      (director_wait_time 4.0)
+      (director_wait_time 3.0)
       (effecteer_play "swat_cellars_noise" "swat_cellars_noise" 0 1000 10 nil)
+      (director_wait_time 1.0)
       (puppeteer_stare "andrea" "cellarA")
       (puppeteer_show "cellarA" 13000)
       (puppeteer_run "cellarA" 5000)
