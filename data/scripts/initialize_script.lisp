@@ -7,7 +7,7 @@
   nil
   (if (compare (collector_get "current_chapter") "virus")
     nil
-    (if (compare (collector_get "current_chapter") "apocalypse")
+    (if (compare (collector_get "current_chapter") "chaos")
       nil
       (if (compare (collector_get "current_chapter") "epilogue")
         nil
