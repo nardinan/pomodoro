@@ -302,6 +302,11 @@ d_define_method(landscape, floor)(struct s_object *self, double position_x, doub
         *dimension_h = previous_point->dimension_h;
         *scale_min = previous_point->scale_min;
         *scale_max = previous_point->scale_max;
+    } else if (current_point) {
+        *position_y = current_point->position_y;
+        *dimension_h = current_point->dimension_h;
+        *scale_min = current_point->scale_min;
+        *scale_max = current_point->scale_max;
     }
     *position_y += landscape_attributes->position_y;
     return self;
