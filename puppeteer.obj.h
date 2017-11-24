@@ -19,6 +19,7 @@
 #define pomodoro_puppeteer_h
 #include "character.obj.h"
 #define d_puppeteer_default_layer 5
+#define d_puppeteer_void (-9999.0)
 /* action definition */
 typedef enum e_puppeteer_actions {
     e_puppeteer_action_hide,

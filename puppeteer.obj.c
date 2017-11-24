@@ -231,12 +231,21 @@ d_define_method(puppeteer, show_character)(struct s_object *self, const char *ke
     struct s_puppeteer_character *current_character;
     d_foreach(&(puppeteer_attributes->characters), current_character, struct s_puppeteer_character)
         if (f_string_strcmp(current_character->label, key) == 0) {
-            d_call(current_character->character, m_drawable_set_position_x, position_x);
-            if (!current_character->visible) {
-                current_character->visible = d_true;
-                d_call(factory_attributes->environment, m_environment_add_drawable, current_character->character, d_puppeteer_default_layer, 
-                        e_environment_surface_primary);
-                d_call(current_character->character, m_character_show_bubble, factory_attributes->environment);
+            if (position_x == d_puppeteer_void) {
+                if (current_character->visible) {
+                    current_character->visible = d_false;
+                    d_call(factory_attributes->environment, m_environment_del_drawable, current_character->character, d_puppeteer_default_layer,
+                            e_environment_surface_primary);
+                    d_call(current_character->character, m_character_hide_bubble, factory_attributes->environment);
+                }
+            } else {
+                d_call(current_character->character, m_drawable_set_position_x, position_x);
+                if (!current_character->visible) {
+                    current_character->visible = d_true;
+                    d_call(factory_attributes->environment, m_environment_add_drawable, current_character->character, d_puppeteer_default_layer, 
+                            e_environment_surface_primary);
+                    d_call(current_character->character, m_character_show_bubble, factory_attributes->environment);
+                }
             }
             break;
         }
@@ -377,6 +386,7 @@ d_define_method(puppeteer, linker)(struct s_object *self, struct s_object *scrip
     d_call(script, m_lisp_extend_environment, "puppeteer_stare", p_lisp_object(script, e_lisp_object_type_primitive, p_link_puppeteer_stare_character));
     d_call(script, m_lisp_extend_environment, "puppeteer_get_position", p_lisp_object(script, e_lisp_object_type_primitive, 
                 p_link_puppeteer_get_position_character));
+    d_call(script, m_lisp_extend_environment, "the_void", p_lisp_object(script, e_lisp_object_type_value, d_puppeteer_void));
     return self;
 }
 
