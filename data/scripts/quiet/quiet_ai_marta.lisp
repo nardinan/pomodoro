@@ -209,8 +209,8 @@
     (director_wait_movement "bruno")
     (puppeteer_stare "andrea" "#null")
 
-    (puppeteer_show "marta" -200)
-    (puppeteer_show "bruno" -200)
+    (puppeteer_show "marta" the_void)
+    (puppeteer_show "bruno" the_void)
 
     ;And never again
     (collector_set "marta_quiet_dialog" 1.0))

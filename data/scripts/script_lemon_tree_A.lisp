@@ -189,7 +189,7 @@
           (director_wait_message "maria")
           (say "maria" (get_dialog dialogs language 7) "lemvirus_track7") ;preview: . . . you are just too short
           (director_wait_movement "maria")
-          (puppeteer_show "maria" -200)
+          (puppeteer_show "maria" the_void)
           (puppeteer_stare "andrea" "#null")
           (puppeteer_set "andrea" "front")
           (say "andrea" (get_dialog dialogs language 8) "lemvirus_track8") ;preview: I liked her better when she ... | animation front

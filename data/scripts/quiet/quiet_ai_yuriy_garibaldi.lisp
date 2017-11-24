@@ -172,8 +172,8 @@
     (director_wait_movement "andrii")
     (director_wait_movement "yuriy")
     (puppeteer_stare "andrea" "#null")
-    (puppeteer_show "andrii" -200)
-    (puppeteer_show "yuriy"  -200)
+    (puppeteer_show "andrii" the_void)
+    (puppeteer_show "yuriy" the_void)
 
     ;And never again
     (collector_set "yuriy_quiet_dialog_garibaldi" 1.0))

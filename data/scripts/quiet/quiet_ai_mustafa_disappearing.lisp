@@ -86,7 +86,7 @@
     (director_wait_time 3.0)
     (puppeteer_run "mustafa" 1000)
     (director_wait_time 2.0)
-    (puppeteer_show "mustafa" -200)
+    (puppeteer_show "mustafa" the_void)
     (effecteer_stop "fog_spot"))
   nil
   )
