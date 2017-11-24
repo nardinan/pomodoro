@@ -44,7 +44,9 @@
         {"label":"letizia",             "link":"letizia_character",             "controllable":false, "script":"ai_letizia"},
         {"label":"mustafa",             "link":"mustafa_character",             "controllable":false, "script":"ai_mustafa"},
         {"label":"cristiano",           "link":"cristiano_character",           "controllable":false},
-        {"label":"caprini",             "link":"caprini_character",             "controllable":false, "script":"ai_caprini"}
+        {"label":"caprini",             "link":"caprini_character",             "controllable":false, "script":"ai_caprini"},
+        {"label":"cellarA",             "link":"cellar_character",              "controllable":false},
+        {"label":"cellarB",             "link":"cellar_character",              "controllable":false}
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},

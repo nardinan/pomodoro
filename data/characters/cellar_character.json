@@ -1,0 +1,62 @@
+{
+  "format": "character",
+  "ID": "cellar",
+  "zoom": 20,
+  "statuses": [
+    {
+      "label": "walk_left",
+      "speed_x": -40,
+      "offset_x": -200,
+      "body": {
+        "drawable": "cellar_body",
+        "offset_y": 10
+      }
+    },
+    {
+      "label": "run_left",
+      "speed_x": -80,
+      "offset_x": -200,
+      "body": {
+        "drawable": "cellar_body",
+        "offset_y": 10
+      }
+    },
+    {
+      "label": "walk_right",
+      "speed_x": 40,
+      "offset_x": 200,
+      "flip_x": true,
+      "body": {
+        "drawable": "cellar_body",
+        "offset_y": 10
+      }
+    },
+    {
+      "label": "run_right",
+      "speed_x": 80,
+      "offset_x": 200,
+      "flip_x": true,
+      "body": {
+        "drawable": "cellar_body",
+        "offset_y": 10
+      }
+    },
+    {
+      "label": "still_right",
+      "offset_x": 200,
+      "flip_x": true,
+      "body": {
+        "drawable": "cellar_body",
+        "offset_y": 10
+      }
+    },
+    {
+      "label": "still_left",
+      "offset_x": -200,
+      "body": {
+        "drawable": "cellar_body",
+        "offset_y": 10
+      }
+    }
+  ]
+}
