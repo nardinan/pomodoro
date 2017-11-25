@@ -40,9 +40,9 @@
       "mask_A": 255
     },
     "arms": {
-      "mask_R": 255,
-      "mask_G": 255,
-      "mask_B": 255,
+      "mask_R": 15,
+      "mask_G": 15,
+      "mask_B": 15,
       "mask_A": 255
     },
     "legs": {
