@@ -34,7 +34,7 @@
 
 ;Setup characters
 (puppeteer_show "policeman" 3000)
-(puppeteer_set "policeman" 	"front")
+(puppeteer_set "policeman" "front")
 (if (compare current_chapter "quiet")
   (begin
     (if (= yuriy_quiet_dialog_garibaldi 1.0)
@@ -53,7 +53,10 @@
       (puppeteer_show "private_barry"  -200)
       (puppeteer_show "private_joseph" -600)
       (puppeteer_show "private_chris"  3400)
-      (puppeteer_look "private_chris" "policeman"))
+      (puppeteer_look "private_chris" "policeman")
+      (puppeteer_show "bistoni" 2600)
+      (puppeteer_stare "bistoni" "policeman")
+      (puppeteer_stare "policeman" "bistoni"))
     nil
     )
   )

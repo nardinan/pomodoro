@@ -1,0 +1,9 @@
+{
+	"format":"animation",
+	"cycles":1,
+	"frames":[
+		{"drawable":"suite_set_blank_side_point_frame0",  "time":0.1},
+		{"drawable":"suite_set_blank_side_point_frame0",  "time":0.1},
+		{"drawable":"suite_set_blank_side_point_frame1",  "time":0.1}
+	]
+}

@@ -53,7 +53,8 @@
         {"label":"private_joseph",      "link":"private_character",             "controllable":false, "script":"ai_private_joseph"},
         {"label":"private_brad",        "link":"private_character",             "controllable":false, "script":"ai_private_brad"},
         {"label":"private_enrico",      "link":"private_character",             "controllable":false, "script":"ai_private_enrico"},
-        {"label":"private_richard",     "link":"private_character",             "controllable":false, "script":"ai_private_richard"}
+        {"label":"private_richard",     "link":"private_character",             "controllable":false, "script":"ai_private_richard"},
+        {"label":"bistoni",             "link":"rector_character",              "controllable":false, "script":"ai_bistoni"}
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},
