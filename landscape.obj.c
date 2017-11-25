@@ -363,14 +363,13 @@ d_define_method(landscape, update)(struct s_object *self, struct s_object *envir
                 (camera_position_y * (1.0 - current_surface->speed_ratio_y) * ratio_y));
         d_call(current_surface->drawable, m_drawable_set_position, position_x, position_y);
     }
-    d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script) {
-        current_timestamp = time(NULL);
+    current_timestamp = time(NULL);
+    d_foreach(&(landscape_attributes->scripts), current_script, struct s_landscape_script)
         if ((!current_script->first_execution) || ((current_script->last_update + current_script->frequency) < current_timestamp)) {
             current_script->last_update = current_timestamp;
             current_script->first_execution = d_true;
             break;
         }
-    }
     d_cast_return(current_script);
 }
 

@@ -10,7 +10,8 @@
 		{"label":"people_background", "playable":"november_background_noise"}
 	],
   "scripts":[
-    {"label":"update",	"script":"update_november", "frequency":60}
+    {"label":"update",	"script":"update_november_long", "frequency":60},
+    {"label":"update",  "script":"update_november_short", "frequency":5}
   ],
 	"floor":[{
 		"position_x":0.0,
