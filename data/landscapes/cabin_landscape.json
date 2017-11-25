@@ -30,6 +30,6 @@
 	"items":[
 		{"label":"door_A",		"item":"arrow",				"status":"active_left",		"position_x":520.0,			"position_y":1060.0,	"zoom":1.25, 	"solid":true,		"active":true,	"script":"move_cabin_innamorati"},
 		{"label":"door_B",		"item":"arrow",				"status":"none",					"position_x":2300.0,		"position_y":1060.0,	"zoom":1.25,	"solid":true},
-		{"label":"poster_A",	"item":"poster_B",	 	"status":"still",					"position_x":1840.0,		"position_y":700.0,		"zoom":1.25,								 	"active":true,	"script":"message_money"}
+		{"label":"poster_A",	"item":"poster_B",	 	"status":"still",					"position_x":1840.0,		"position_y":700.0,		"zoom":1.25,								 	"active":true,	"script":"script_note_B"}
 	]
 }

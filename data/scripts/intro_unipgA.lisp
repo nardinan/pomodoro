@@ -36,7 +36,10 @@
   (begin
     (puppeteer_show "bruno" 5800)
     (puppeteer_stare "bruno" "andrea"))
-  nil
+  (if (compare current_chapter "chaos")
+    (begin
+      (puppeteer_show "roberto" 3000)
+      (puppeteer_stare "roberto" "andrea"))
   )
 (if (compare from_where "innamorati")
   (puppeteer_show "andrea" 4530)

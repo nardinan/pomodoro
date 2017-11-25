@@ -69,7 +69,7 @@
       (puppeteer_stare "andrea" "cellarA")
       (puppeteer_show "cellarA" 13000)
       (puppeteer_run "cellarA" 5000)
-      (director_wait_time 1.0)
+      (director_wait_time 2.0)
       (puppeteer_show "cellarB" 13000)
       (puppeteer_run "cellarB" 5000)
       (director_wait_movement "cellarA")
@@ -82,5 +82,5 @@
       (puppeteer_stare "andrea" "#null")
       (main_control "andrea"))
     )
-    nil
+  nil
   )

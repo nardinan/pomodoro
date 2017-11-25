@@ -4,6 +4,9 @@
   (director_script "quiet_delete_items_interface")
   (if (compare current_chapter "virus")
     (director_script "virus_delete_items_interface")
-    nil
+    (if (compare current_chapter "chaos")
+      (director_script "chaos_delete_items_interface")
+      nil
+      )
     )
   )
