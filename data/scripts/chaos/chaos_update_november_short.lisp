@@ -9,26 +9,26 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 bistoni
-   "Please, officer."
-   "Per favore, agente.")
-  (cons ;2 bistoni
-   "Are you listening me?"
-   "Mi sta ascoltando?")
-  (cons ;3 bistoni
-   "I need your help!"
-   "Ho bisogno di aiuto!")
-  (cons ;4 bistoni
-   "Police is never helping here!"
-   "Possibile che non si riesca a farsi aiutare dalla polizia qui?")
-  (cons ;5 bistoni
-   "We cannot let them get away with this . . ."
-   "Non possono passarla liscia cosi' . . .")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 bistoni
+                    "Please, officer."
+                    "Per favore, agente.")
+                  (cons ;2 bistoni
+                    "Are you listening me?"
+                    "Mi sta ascoltando?")
+                  (cons ;3 bistoni
+                    "I need your help!"
+                    "Ho bisogno di aiuto!")
+                  (cons ;4 bistoni
+                    "Police is never helping here!"
+                    "Possibile che non si riesca a farsi aiutare dalla polizia qui?")
+                  (cons ;5 bistoni
+                    "We cannot let them get away with this . . ."
+                    "Non possono passarla liscia cosi' . . .")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
