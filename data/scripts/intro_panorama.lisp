@@ -33,8 +33,15 @@
 (if (compare current_chapter "quiet")
   nil
   (begin
-    (puppeteer_show "federico" 5750)
-    (puppeteer_set "federico" "back"))
+    (puppeteer_show "federico" 5400)
+    (puppeteer_set "federico" "back")
+    (if (compare current_chapter "chaos")
+      (begin
+        (puppeteer_show "private_chris" 5800)
+        (puppeteer_look "private_chris" "federico"))
+      nil
+      )
+    )
   )
 (puppeteer_show  "andrea" 280)
 (puppeteer_set "andrea" "front")

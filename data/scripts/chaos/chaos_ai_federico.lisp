@@ -80,20 +80,21 @@
 (puppeteer_disable_control)
 
 ;Parameters configuration
-(define request_location  (collector_get "request_location"))
+(define request_password  (collector_get "request_password"))
 (define done_location     (collector_get "done_location"))
 
 ;Action!
-(puppeteer_look "andrea"  "massimo")
-(puppeteer_look "massimo" "andrea")
+(puppeteer_look "andrea"  "federico")
+(puppeteer_look "federico" "andrea")
 (if (= done_location 1.0)
-  (director_dialog "game_massimo_done_0x0c")
-  (if (= request_location 1.0)
-    (director_dialog "game_massimo_activated_tool_0x0c")
-    (director_dialog "game_massimo_no_request_0x0c")
+  (director_dialog "game_federico_first_0x0c")
+  (if (= request_password 1.0)
+    (director_dialog "game_federico_after_0x0c")
+    (director_dialog "game_federico_first_0x0c")
     )
   )
 (director_wait_dialog)
+(puppeteer_set "federico" "back")
 
 ;Return the control
 (main_control "andrea")
