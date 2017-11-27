@@ -4,7 +4,7 @@
 ;Code name  : <none>
 ;Location   : November
 ;Author     : Nardinan
-;Description: Federico gives you a slice of the password
+;Description: Roberto gives you a slice of the password
 
 ;High level functions
 ;@brief: say <character> <message>
@@ -84,17 +84,16 @@
 (define done_location     (collector_get "done_location"))
 
 ;Action!
-(puppeteer_look "andrea"  "federico")
-(puppeteer_look "federico" "andrea")
+(puppeteer_look "andrea"  "roberto")
+(puppeteer_look "roberto" "andrea")
 (if (= done_location 1.0)
-  (director_dialog "game_federico_first_0x0c")
+  (director_dialog "game_roberto_first_0x0c")
   (if (= request_password 1.0)
-    (director_dialog "game_federico_after_0x0c")
-    (director_dialog "game_federico_first_0x0c")
+    (director_dialog "game_roberto_after_0x0c")
+    (director_dialog "game_roberto_first_0x0c")
     )
   )
 (director_wait_dialog)
-(puppeteer_set "federico" "back")
 
 ;Return the control
 (main_control "andrea")
