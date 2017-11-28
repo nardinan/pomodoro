@@ -95,18 +95,18 @@
   (director_script "chaos_move_unipgC_temple")
 
   (if (collector_get "got_temple_key")
-  (begin
-    (collector_set "destination_scenario" "temple")
-    (director_script "change_scenario"))
-  (begin
-    ;Environment configuration (music, effect, whatever)
-    (puppeteer_disable_control)
+    (begin
+      (collector_set "destination_scenario" "temple")
+      (director_script "change_scenario"))
+    (begin
+      ;Environment configuration (music, effect, whatever)
+      (puppeteer_disable_control)
 
-    (puppeteer_set "andrea" "front")
-    (say "andrea" (get_dialog dialogs language 1) "doorepl_track1")
-    (say "andrea" (get_dialog dialogs language 2) "doorepl_track2")
+      (puppeteer_set "andrea" "front")
+      (say "andrea" (get_dialog dialogs language 1) "doorepl_track1")
+      (say "andrea" (get_dialog dialogs language 2) "doorepl_track2")
 
-    ;Return the control
-    (main_control "andrea"))
-  )
+      ;Return the control
+      (main_control "andrea"))
+    )
   )

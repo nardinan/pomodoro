@@ -9,29 +9,29 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-  (cons ;0 default
-   ""
-   "")
-  (cons ;1 andrea
-   "Uhm, the door is locked . . ."
-   "Uhm, la porta e' chiusa a chiave . . .")
-  (cons ;2 andrea
-   ". . . but seems that has been open recently."
-   ". . . ma sembra sia stata aperta di recente.")
-  (cons ;3 andrea
-   "Maybe PD is here!"
-   "Forse PD e' qui dentro!")
-  (cons ;4 andrea
-   "I think is better to look around for the key . . ."
-   "Forse e' il caso di cercare la chiave . . .")
-  (cons ;5 andrea
-   "Locked . . ."
-   "Chiusa . . .")
-  (cons ;6 andrea
-   ". . . but I sospect that PD is inside."
-   ". . . ma sospetto che PD sia qui dentro!")
-  nil
-))
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 andrea
+                    "Uhm, the door is locked . . ."
+                    "Uhm, la porta e' chiusa a chiave . . .")
+                  (cons ;2 andrea
+                    ". . . but seems that has been open recently."
+                    ". . . ma sembra sia stata aperta di recente.")
+                  (cons ;3 andrea
+                    "Maybe PD is here!"
+                    "Forse PD e' qui dentro!")
+                  (cons ;4 andrea
+                    "I think is better to look around for the key . . ."
+                    "Forse e' il caso di cercare la chiave . . .")
+                  (cons ;5 andrea
+                    "Locked . . ."
+                    "Chiusa . . .")
+                  (cons ;6 andrea
+                    ". . . but I sospect that PD is inside."
+                    ". . . ma sospetto che PD sia qui dentro!")
+                  nil
+                  ))
 
 ;High level functions
 ;@brief: say <character> <message>
