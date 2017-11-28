@@ -25,6 +25,7 @@
         {"label":"maria",					      "link":"maria_character",				        "controllable":false,	"script":"ai_maria"},
         {"label":"antonietta",		      "link":"antonietta_character",	        "controllable":false,	"script":"ai_antonietta"},
         {"label":"massimo",				      "link":"massimo_character",			        "controllable":false, "script":"ai_massimo"},
+        {"label":"siri",                "link":"siri_character",                "controllable":false},
         {"label":"policeman",			      "link":"policeman_character",		        "controllable":false, "script":"ai_policeman"},
         {"label":"writer",				      "link":"writer_character",			        "controllable":false, "script":"ai_writer"},
         {"label":"anna",					      "link":"anna_character",				        "controllable":false,	"script":"ai_anna"},
@@ -54,7 +55,8 @@
         {"label":"private_brad",        "link":"private_character",             "controllable":false, "script":"ai_private_brad"},
         {"label":"private_enrico",      "link":"private_character",             "controllable":false, "script":"ai_private_enrico"},
         {"label":"private_richard",     "link":"private_character",             "controllable":false, "script":"ai_private_richard"},
-        {"label":"bistoni",             "link":"bistoni_character",              "controllable":false, "script":"ai_bistoni"}
+        {"label":"bistoni",             "link":"bistoni_character",             "controllable":false, "script":"ai_bistoni"},
+
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},

@@ -25,6 +25,8 @@
 (collector_set "from_where" "med")
 
 ;Setup characters
+(puppeteer_show "siri" 2800)
+(puppeteer_set "siri" "none")
 (puppeteer_show "massimo" 2700)
 (puppeteer_set "massimo" "still_left")
 (puppeteer_show "andrea" 590)

@@ -87,8 +87,14 @@
     )
   )
 
+;Parameters configuration
+(define current_chapter (collector_get "current_chapter"))
+
 ;Action!
-(if (collector_get "got_temple_key")
+(if (compare current_chapter "chaos")
+  (director_script "chaos_move_unipgC_temple")
+
+  (if (collector_get "got_temple_key")
   (begin
     (collector_set "destination_scenario" "temple")
     (director_script "change_scenario"))
@@ -102,4 +108,5 @@
 
     ;Return the control
     (main_control "andrea"))
+  )
   )
