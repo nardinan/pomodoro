@@ -31,10 +31,10 @@
 ;Setup characters
 (if (compare current_chapter "chaos")
   (begin
-    (puppeteer_show "private_enrico" 4000)
-    (puppeteer_look "private_enrico" "private_richard")
+    (puppeteer_show "private_kennedy" 4000)
     (puppeteer_show "private_richard" 4500)
-    (puppeteer_look "private_richard" "private_enrico"))
+    (puppeteer_look "private_kennedy" "private_richard")
+    (puppeteer_look "private_richard" "private_kennedy"))
   (begin
     (puppeteer_show "roberto" 5000)
     (puppeteer_stare "roberto" "andrea"))
