@@ -32,7 +32,10 @@
 ;Setup characters
 (puppeteer_show "technician" 3100)
 (if (= done_cabin_key 1.0)
-  (puppeteer_set "technician" "drunk_left")
+  (if (compare current_chapter "virus")
+    (puppeteer_set "technician" "drunk_left")
+    (puppeteer_stare "technician" "andrea")
+    )
   (puppeteer_stare "technician" "andrea")
   )
 (if (compare from_where "garibaldi")
