@@ -1,0 +1,14 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"arms_set_blank_side_drink_frame0",		"time":18.0},
+		{"drawable":"arms_set_blank_side_drink_frame1",		"time":0.1},
+		{"drawable":"arms_set_blank_side_drink_frame2",		"time":0.1},
+		{"drawable":"arms_set_blank_side_drink_frame3",		"time":0.1},
+		{"drawable":"arms_set_blank_side_drink_frame4",		"time":2.0},
+		{"drawable":"arms_set_blank_side_drink_frame3",		"time":0.1},
+		{"drawable":"arms_set_blank_side_drink_frame2",		"time":0.1},
+		{"drawable":"arms_set_blank_side_drink_frame1",		"time":0.1}
+	]
+}

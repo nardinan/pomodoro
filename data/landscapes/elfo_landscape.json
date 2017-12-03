@@ -6,6 +6,9 @@
 	"position_y":0.0,
 	"intro_script":"intro_elfo",
 	"outro_script":"outro_elfo",
+	"scripts":[
+		{"label":"update",	"script":"update_elfo", "frequency":8}
+	],
 	"floor":[{
 		"position_x":0.0,
 		"position_y":1500.0

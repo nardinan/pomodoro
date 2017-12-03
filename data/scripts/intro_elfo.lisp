@@ -20,13 +20,30 @@
 
 ;Collect environment
 (define from_where (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
+(define done_location (collector_get "done_location"))
 
 ;Configure
 (collector_set "from_where" "elfo")
 
 ;Setup characters
-(puppeteer_show "caprini"  3000)
-(puppeteer_stare "caprini" "andrea")
+(if (compare current_chapter "chaos")
+  (if (= done_location 1.0)
+    (begin
+      (puppeteer_show "caprini" 3000)
+      (puppeteer_set "caprini" "drink_left")
+      (puppeteer_show "yuriy" 2600)
+      (puppeteer_set "yuriy" "drink_left")
+      (puppeteer_show "andrii" 2200)
+      (puppeteer_set "andrii" "drink_right"))
+    (begin
+      (puppeteer_show "caprini"  3000)
+      (puppeteer_stare "caprini" "andrea"))
+    )
+  (begin
+    (puppeteer_show "caprini"  3000)
+    (puppeteer_stare "caprini" "andrea"))
+  )
 (puppeteer_show "andrea" 300)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

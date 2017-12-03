@@ -6,3 +6,4 @@
 (effecteer_delete "inventory_tie")
 (effecteer_delete "inventory_cabin_key")
 (effecteer_delete "inventory_temple_key")
+(effecteer_delete "inventory_computer")

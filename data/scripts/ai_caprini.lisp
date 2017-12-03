@@ -4,6 +4,9 @@
   (director_script "quiet_ai_caprini")
   (if (compare current_chapter "virus")
     (director_script "virus_ai_caprini")
-    nil
+    (if (compare current_chapter "chaos")
+      (director_script "chaos_ai_andrea_computer")
+      nil
+      )
     )
   )
