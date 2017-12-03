@@ -31,13 +31,18 @@
 ;Setup characters
 (puppeteer_show "antonietta" 100)
 (puppeteer_set "antonietta"	"still_right")
-(puppeteer_show "luna" 2900)
-(if (compare current_chapter "virus")
+(if (compare current_chapter "chaos")
+  nil
   (begin
-    (puppeteer_show "valerio" 2600)
-    (puppeteer_look "valerio" "luna")
-    (puppeteer_look "luna" "valerio"))
-  (puppeteer_stare "luna" "andrea"))
+    (puppeteer_show "luna" 2900)
+    (if (compare current_chapter "virus")
+      (begin
+        (puppeteer_show "valerio" 2600)
+        (puppeteer_look "valerio" "luna")
+        (puppeteer_look "luna" "valerio"))
+      (puppeteer_stare "luna" "andrea")
+      ))
+  )
 (puppeteer_show "andrea" 1950)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

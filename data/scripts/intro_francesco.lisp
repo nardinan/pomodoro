@@ -24,6 +24,10 @@
 ;Collect environment
 (define from_where (collector_get "from_where"))
 (define current_chapter (collector_get "current_chapter"))
+(define fologna_step_mac (collector_get "fologna_step_mac"))
+(define fologna_step_blackout (collector_get "fologna_step_blackout"))
+(define fologna_step_bus (collector_get "fologna_step_bus"))
+(define fologna_step_enel (collector_get "fologna_step_enel"))
 
 ;Configure
 (collector_set "from_where" "francesco")
@@ -31,6 +35,16 @@
 ;Setup characters
 (if (compare current_chapter "chaos")
   (begin
+    ;Check fologna
+    (if (= (+ (+ fologna_step_mac fologna_step_blackout) (+ fologna_step_bus fologna_step_enel)) 4.0)
+      (begin
+        (collector_set "fologna_enabled"        1.0)
+        (collector_set "fologna_step_mac"       0.0)
+        (collector_set "fologna_step_blackout"  0.0)
+        (collector_set "fologna_step_bus"       0.0)
+        (collector_set "fologna_step_enel"      0.0))
+      nil
+      )
     (puppeteer_show "private_kennedy" 4000)
     (puppeteer_show "private_richard" 4500)
     (puppeteer_look "private_kennedy" "private_richard")
