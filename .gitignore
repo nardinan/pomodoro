@@ -8,3 +8,5 @@ collector\.dump\.dat
 *.bin
 
 \.DS_Store
+
+*.out
