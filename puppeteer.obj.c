@@ -220,6 +220,7 @@ d_define_method(puppeteer, hide_characters)(struct s_object *self) {
         current_character->visible = d_false;
         d_call(factory_attributes->environment, m_environment_del_drawable, current_character->character, d_puppeteer_default_layer, 
                 e_environment_surface_primary);
+        d_call(self, m_puppeteer_stare_character, current_character->label, NULL);
         d_call(current_character->character, m_character_hide_bubble, factory_attributes->environment);
     }
     return self;

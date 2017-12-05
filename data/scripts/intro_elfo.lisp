@@ -36,9 +36,7 @@
       (puppeteer_set "yuriy" "drink_left")
       (puppeteer_show "andrii" 2200)
       (puppeteer_set "andrii" "drink_right"))
-    (begin
-      (puppeteer_show "caprini"  3000)
-      (puppeteer_stare "caprini" "andrea"))
+    nil)
     )
   (begin
     (puppeteer_show "caprini"  3000)
