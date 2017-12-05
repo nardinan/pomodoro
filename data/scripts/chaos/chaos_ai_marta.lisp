@@ -87,9 +87,7 @@
 (puppeteer_look "marta" "andrea")
 (if (= done_dialog 1.0)
   (director_dialog "game_marta_after_0x0c")
-  (begin
-    (director_dialog "game_marta_first_0x0c")
-    (collector_set "marta_chaos_dialog" 1.0))
+  (director_dialog "game_marta_first_0x0c")
   )
 (director_wait_dialog)
 (puppeteer_set "marta" "still_left")
