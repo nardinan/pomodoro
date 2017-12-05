@@ -57,3 +57,10 @@
     (define position_x (+ position_x offset_x)))
   nil
   )
+
+(if (= got_temple_key 1.0)
+  (begin
+    (effecteer_add "inventory_temple_key" "icon_temple_key" position_x position_y offset_z 0.0 t nil)
+    (define position_x (+ position_x offset_x)))
+  nil
+  )
