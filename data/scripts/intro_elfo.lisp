@@ -37,11 +37,11 @@
       (puppeteer_show "andrii" 2200)
       (puppeteer_set "andrii" "drink_right"))
     nil
-  )
+    )
   (begin
     (puppeteer_show "caprini"  3000)
     (puppeteer_stare "caprini" "andrea"))
-)
+  )
 (puppeteer_show "andrea" 300)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")
