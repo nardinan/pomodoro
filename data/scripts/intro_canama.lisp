@@ -122,6 +122,7 @@
 (define got_note (collector_get "got_note"))
 (define intro_canama (collector_get "intro_canama"))
 (define done_battery (collector_get "done_battery"))
+(define current_chapter (collector_get "current_chapter"))
 
 (collector_set "from_where" "canama")
 (if (= got_note 1.0)
@@ -139,9 +140,12 @@
 (puppeteer_show "andrea" 450)
 (if (= intro_canama 1.0)
   (if (= got_note 1.0)
-    (begin
-      (puppeteer_show "luca" 4500)
-      (puppeteer_stare "luca" "andrea"))
+    (if (compare current_chapter "chaos")
+      nil
+      (begin
+        (puppeteer_show "luca" 4500)
+        (puppeteer_stare "luca" "andrea"))
+      )
     nil
     )
   (begin
