@@ -1,6 +1,6 @@
 {
     "game":"pomodoro",
-    "author":"Andrea Nardinocchi",
+    "author":"Andrea Nardinocchi and Luna Paciucci",
     "email":"andrea@nardinan.it",
     "date":"22 August 2016",
     "language":1,
@@ -56,8 +56,7 @@
         {"label":"private_enrico",      "link":"private_character",             "controllable":false, "script":"ai_private_enrico"},
         {"label":"private_richard",     "link":"private_character",             "controllable":false, "script":"ai_private_richard"},
         {"label":"private_kennedy",     "link":"private_character",             "controllable":false, "script":"ai_private_kennedy"},
-        {"label":"bistoni",             "link":"bistoni_character",             "controllable":false, "script":"ai_bistoni"},
-
+        {"label":"bistoni",             "link":"bistoni_character",             "controllable":false, "script":"ai_bistoni"}
     ],
     "landscapes":[
         {"label":"canama", 							"link":"canama_landscape"},
