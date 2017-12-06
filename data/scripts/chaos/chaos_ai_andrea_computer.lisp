@@ -212,7 +212,7 @@
                     "Ad un amico, 'il profeta', che si e' sacrificato per aiutarci!")
                   (cons ;67 andrii
                     "To whatever is going on that will drive the humanity to the extinction!"
-                    "A qualsiasi cosa stia succedendo che potera' all'estinzione la razza umana!")
+                    "A qualsiasi cosa stia succedendo che portera' all'estinzione la razza umana!")
                   nil
                   ))
 

@@ -6,6 +6,21 @@
 ;Author     : Nardinan
 ;Description: Bistoni tells you where to ask for the password
 
+;Dialogs
+(define language (collector_get "language"))
+(define dialogs (list
+                  (cons ;0 default
+                    ""
+                    "")
+                  (cons ;1 bistoni
+                    "*beep*"
+                    "*beep*")
+                  (cons ;2 andrea
+                    "Unrecoverable."
+                    "Irrecuperabile.")
+                  nil
+                  ))
+
 ;High level functions
 ;@brief: say <character> <message>
 ;@description: character <character> says <message> and the system waits for the bubble to disappear
@@ -86,14 +101,18 @@
 (define request_location          (collector_get "request_location"))
 (define request_password          (collector_get "request_password"))
 (define done_location             (collector_get "done_location"))
+(define done_computer             (collector_get "done_computer"))
 
 ;Action!
+(collector_set "chaos_bistoni_and_policeman_ongoing" 1.0)
+(puppeteer_look "andrea" "bistoni")
+(puppeteer_look "bistoni" "andrea")
 (if (= done_location 1.0)
-  nil
   (begin
-    (collector_set "chaos_bistoni_and_policeman_ongoing" 1.0)
-    (puppeteer_look "andrea" "bistoni")
-    (puppeteer_look "bistoni" "andrea")
+    (say "bistoni" (get_dialog dialogs language 1) "bistdonchaos_track1") ;preview: *beep* | looking at andrea
+    (puppeteer_set "andrea" "front")
+    (say "andrea"  (get_dialog dialogs language 2) "bistdonchaos_track2")) ;preview: Unrecoverable | animation front
+  (begin
     (if (= request_password 1.0)
       (begin
         (if (= dialog_done_done 1.0)
@@ -125,9 +144,9 @@
           (director_dialog "game_bistoni_no_request_0x0c")
           )
         (director_wait_dialog))
-      )
-    (collector_set "chaos_bistoni_and_policeman_ongoing" 0.0))
+      ))
   )
+(collector_set "chaos_bistoni_and_policeman_ongoing" 0.0)
 
 ;Return the control
 (main_control "andrea")
