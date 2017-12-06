@@ -148,7 +148,7 @@
                     ". . . let's not get discouraged, okay?"
                     ". . . non scoraggiamoci!")
                   (cons ;46 andrea
-                    "We just need to find enough moeny for the electric bill!"
+                    "We just need to find enough money for the electric bill!"
                     "Si tratta solo di trovare i soldi per una bolletta.")
                   (cons ;47 andrii
                     ". . ."

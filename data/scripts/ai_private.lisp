@@ -43,7 +43,7 @@
                     "I'd say we are well covered!"
                     "Direi che siamo ben protetti! ")
                   (cons ;11 private
-                    "Why are you hanghing around these streets?"
+                    "Why are you hanging around these streets?"
                     "Perche' giri per queste strade?")
                   (cons ;12 andrea
                     "Indeed I ask the same thing to myself . . ."
@@ -61,7 +61,7 @@
                     "Now, I'm scared as well!"
                     "Adesso anche a me!")
                   (cons ;17 private
-                    "For godness sake, go home before nightfall!"
+                    "For goodness sake, go home before nightfall!"
                     "Mi raccomando torna a casa prima che faccia notte!")
                   (cons ;18 andrea
                     "Sure . . ."
@@ -70,7 +70,7 @@
                     "I hope you don't have the virus!"
                     "Spero tu non abbia il virus!")
                   (cons ;20 andrea
-                    "Peraphs you have it!"
+                    "Perhaps you have it!"
                     "Magari ce l'hai tu!")
                   (cons ;21 private
                     "Right in Perugia I had to finish!"
@@ -88,7 +88,7 @@
                     "Do you feel safe in this city?"
                     "Ti senti tranquillo in questa citta'?")
                   (cons ;26 andrea
-                    "Yes, definetevely yes!"
+                    "Yes, definitely yes!"
                     "Si, direi proprio di si!")
                   (cons ;27 private
                     "Don't worry boy, soon everything will get back to normal!"

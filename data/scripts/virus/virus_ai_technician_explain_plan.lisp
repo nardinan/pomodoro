@@ -34,7 +34,7 @@
                     "Maybe is better if we find something tasty to mix with these pills!"
                     "Non e' meglio trovare qualcosa in cui mettere le pillole?")
                   (cons ;8 andrea
-                    "More or less the same approch when you have to give pills to the cat . . ."
+                    "More or less the same approach when you have to give pills to the cat . . ."
                     "Tipo quando dai al gatto il medicinale . . . ")
                   (cons ;9 andrea
                     ". . . and you hide those pills in a delicious piece of meat!"

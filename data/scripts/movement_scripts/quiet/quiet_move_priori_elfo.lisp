@@ -55,7 +55,7 @@
                     "I . . ."
                     "Io . . .")
                   (cons ;15 cristiano
-                    "Liste, I feel so sorry for you that I will let you in"
+                    "Listen, I feel so sorry for you that I will let you in"
                     "Ascolta, mi fai cosi' tanta pena che ti lascero' entrare")
                   (cons ;16 andrea
                     "Thankfully people feel sorry for me every time"
@@ -160,7 +160,7 @@
       (say "cristiano" (get_dialog dialogs language 14) "crisntquiet_track14") ;preview: I . . . | looking at Andrea
       ;Script suggestion: Pausa
       (director_wait_time 2.0)
-      (say "cristiano" (get_dialog dialogs language 15) "crisntquiet_track15") ;preview: Liste, I feel so sorry for y... | looking at Andrea
+      (say "cristiano" (get_dialog dialogs language 15) "crisntquiet_track15") ;preview: Listen, I feel so sorry for y... | looking at Andrea
       (puppeteer_set "andrea" "front")
       (say "andrea" (get_dialog dialogs language 16) "crisntquiet_track16") ;preview: Thankfully people feel sorry... | animation front
       (puppeteer_set "cristiano" "front")

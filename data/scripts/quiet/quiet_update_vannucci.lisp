@@ -19,7 +19,7 @@
                     "It is impossible to go around, safely."
                     "Adesso e' impossibile circolare in tranquillita'.")
                   (cons ;3 gianni
-                    "The police should take care of this stuation!"
+                    "The police should take care of this situation!"
                     "La polizia qui dovrebbe impegnarsi di piu'!")
                   (cons ;4 mariano
                     "They should close pubs at eight in the evening!"

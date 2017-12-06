@@ -49,8 +49,8 @@
                     "Let's go then!"
                     "Andiamo!")
                   (cons ;13 andrea
-                    "Even two euros would be great . . ."
-                    "Anche due euro vanno bene . . .")
+                    "Even twoEuroswould be great . . ."
+                    "Anche due Eurovanno bene . . .")
                   (cons ;14 andrea
                     "I have to pay the electric bill, you know . . ."
                     "Sto cercando di pagare una bolletta, sapete . . .")
@@ -165,7 +165,7 @@
     (puppeteer_move "andrii" 200)
     (puppeteer_move "yuriy"  200)
     (director_wait_time 2)
-    (say "andrea" (get_dialog dialogs language 13) "sprqrk_track13") ;preview: Even two euros would be grea...
+    (say "andrea" (get_dialog dialogs language 13) "sprqrk_track13") ;preview: Even twoEuroswould be grea...
     (director_wait_time 1)
     (say "andrea" (get_dialog dialogs language 14) "sprqrk_track14") ;preview: I have to pay the electric b...
 

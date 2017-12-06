@@ -61,7 +61,7 @@
                     "AAAAAAAAAAAH!"
                     "AAAAAAAAAAAH!")
                   (cons ;17 policeman
-                    "Go away, you deamon!"
+                    "Go away, you daemon!"
                     "Pussa via, demonio!")
                   (cons ;18 andrea
                     "Ahahaha . . ."
@@ -179,7 +179,7 @@
     (puppeteer_set "policeman" policeman_point_side)
     (say "policeman" (get_dialog dialogs language 16) "povirus_track16") ;preview: AAAAAAAAAAAH! | looking at Andrea | animation pointing
     (puppeteer_set "policeman" policeman_still_side)
-    (say "policeman" (get_dialog dialogs language 17) "povirus_track17") ;preview: Go away, you deamon! | looking at Andrea
+    (say "policeman" (get_dialog dialogs language 17) "povirus_track17") ;preview: Go away, you daemon! | looking at Andrea
     (say "andrea" (get_dialog dialogs language 18) "povirus_track18") ;preview: Ahahaha . . . | looking at Policeman
     (say "andrea" (get_dialog dialogs language 19) "povirus_track19")) ;preview: . . . I am so facetious. | looking at Policeman
   (begin

@@ -16,13 +16,13 @@
                     "Hello, my name is Andrea and I am a student here, at the University of Perugia"
                     "Ciao! Io mi chiamo Andrea e sono uno studente dell'Unversita' degli studi di Perugia")
                   (cons ;2 andrea
-                    "This is my appartment"
+                    "This is my apartment"
                     "Questo e' l'appartamento dove vivo")
                   (cons ;3 andrea
                     "I will get my master degree in Computer Science very soon!"
                     "Frequento il corso di informatica e sono prossimo alla mia laurea magistrale!")
                   (cons ;4 andrea
-                    "I live here with my cusin, Luca"
+                    "I live here with my cousin, Luca"
                     "Vivo qui con mio cugino, Luca")
                   (cons ;5 andrea
                     "We call him 'Cug'"
@@ -154,11 +154,11 @@
     (director_wait_time 3)
     (say "andrea" (get_dialog dialogs language 1) "intro_track1") ;preview: Hello, my name is Andrea and... | looking at Main Camera
     (puppeteer_set "andrea" "scratch_front")
-    (say "andrea" (get_dialog dialogs language 2) "intro_track2") ;preview: This is my appartment | animation scratching his ass
+    (say "andrea" (get_dialog dialogs language 2) "intro_track2") ;preview: This is my apartment | animation scratching his ass
     ;Script suggestion: Inizia a camminare verso la camera di cug
     (puppeteer_move "andrea" 4500)
     (say "andrea" (get_dialog dialogs language 3) "intro_track3") ;preview: I am taking a Computer Scien...
-    (say "andrea" (get_dialog dialogs language 4) "intro_track4") ;preview: I live here with my cusin, L...
+    (say "andrea" (get_dialog dialogs language 4) "intro_track4") ;preview: I live here with my cousin, L...
     (say "andrea" (get_dialog dialogs language 5) "intro_track5") ;preview: We call him 'Cug'
     (puppeteer_set "andrea" "front")
     (say "andrea" (get_dialog dialogs language 6) "intro_track6") ;preview: Because he is my cousin, you... | looking at Main Camera

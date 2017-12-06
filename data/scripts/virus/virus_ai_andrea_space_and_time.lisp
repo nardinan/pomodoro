@@ -52,7 +52,7 @@
                     "Ahahah!"
                     "Ahahah!")
                   (cons ;14 yuriy
-                    "Wait, are you impying I am responsible for this?"
+                    "Wait, are you implying I am responsible for this?"
                     "Aspetta, stai dicendo che sono stato io?")
                   (cons ;15 andrea
                     "I beg your pardon?"
@@ -67,7 +67,7 @@
                     "If you have a problem with me, just say it!"
                     "Se hai un problema con me, me lo dici subito!")
                   (cons ;19 andrea
-                    "What are you taling about, guys?"
+                    "What's up, guys?"
                     "Ma che state dicendo?")
                   (cons ;20 andrea
                     "Are you drunk?"
@@ -76,7 +76,7 @@
                     "I will be short . . . "
                     "Saro' breve . . .")
                   (cons ;22 andrii
-                    "Somebody generated an hole in the facric of space and time . . ."
+                    "Somebody generated an hole in the fabric of space and time . . ."
                     "Qualcuno potrebbe aver generato un buco nel tessuto spazio temporale . . .")
                   (cons ;23 andrii
                     ". . . changing the natural course of history."
@@ -124,7 +124,7 @@
                     "I was talking metaphorically, arsehole!"
                     "Nel senso metaforico del termine stupido ritardato!")
                   (cons ;38 yuriy
-                    "Is impossible to undestand you . . ."
+                    "Is impossible to understand you . . ."
                     "Non si capisce niente di quello che dici . . .")
                   (cons ;39 yuriy
                     ". . . and you were responsible for the experiment!"
@@ -313,7 +313,7 @@
     (director_wait_message "yuiry")
     (puppeteer_set "andrii" "still_right")
     (puppeteer_set "yuriy" "still_left")
-    (say "yuriy" (get_dialog dialogs language 14) "anyurassvirus_track14") ;preview: Wait, are you impying I am r... | looking at Andrii
+    (say "yuriy" (get_dialog dialogs language 14) "anyurassvirus_track14") ;preview: Wait, are you implying I am r... | looking at Andrii
     (say_and_go "andrea" (get_dialog dialogs language 15) "anyurassvirus_track15") ;preview: I beg your pardon? | looking at Andrii
     (director_wait_time 1.0)
     (puppeteer_set "andrii" andrii_look_andrea)
@@ -327,7 +327,7 @@
     (say "yuriy" (get_dialog dialogs language 18) "anyurassvirus_track18") ;preview: If you have a problem with m... | looking at Andrea
     (puppeteer_set "yuriy" "still_left")
     (puppeteer_set "andrea" andrea_look_yuriy)
-    (say "andrea" (get_dialog dialogs language 19) "anyurassvirus_track19") ;preview: What are you taling about, g... | looking at Yuriy
+    (say "andrea" (get_dialog dialogs language 19) "anyurassvirus_track19") ;preview: What's up, g... | looking at Yuriy
     (puppeteer_set "andrea" andrea_scratch_yuriy)
     (say "andrea" (get_dialog dialogs language 20) "anyurassvirus_track20") ;preview: Are you drunk? | looking at Andrii | animation scratching his head
     (puppeteer_set "andrii" andrii_look_andrea)

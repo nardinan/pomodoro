@@ -28,7 +28,7 @@
                     "Locked . . ."
                     "Chiusa . . .")
                   (cons ;6 andrea
-                    ". . . but I sospect that PD is inside."
+                    ". . . but I suspect that PD is inside."
                     ". . . ma sospetto che PD sia qui dentro!")
                   (cons ;7  andrea
                     "Here, behind this door, there is the last chapter of the game."
@@ -139,7 +139,7 @@
   (if (= request_temple_key 1.0)
     (begin
       (say "andrea" (get_dialog dialogs language 5) "templockchaos_track5") ;preview: Locked . . . | animation front
-      (say "andrea" (get_dialog dialogs language 6) "templockchaos_track6")) ;preview: . . . but I sospect that PD ... | animation scratching his head
+      (say "andrea" (get_dialog dialogs language 6) "templockchaos_track6")) ;preview: . . . but I suspect that PD ... | animation scratching his head
     (begin
       (say "andrea" (get_dialog dialogs language 1) "templockchaos_track1") ;preview: Uhm, the door is locked . . . | animation front
       (say "andrea" (get_dialog dialogs language 2) "templockchaos_track2") ;preview: . . . but seems that has bee... | animation front

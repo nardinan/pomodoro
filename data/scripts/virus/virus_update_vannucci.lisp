@@ -28,7 +28,7 @@
                     "I was talking metaphorically, arsehole!"
                     "Nel senso metaforico del termine stupido ritardato!")
                   (cons ;6 yuriy
-                    "Is impossible to undestand you . . ."
+                    "Is impossible to understand you . . ."
                     "Non si capisce niente di quello che dici . . .")
                   (cons ;7 yuriy
                     ". . . and you were responsible for the experiment!"
@@ -137,7 +137,7 @@
             (if (= virus_andrii_and_yuriy_line 4.0)
               (say "andrii" (get_dialog dialogs language 5) "anyurassvirus_track37") ;preview: I was talking metaphorically... | looking at Yuriy
               (if (= virus_andrii_and_yuriy_line 5.0)
-                (say "yuriy" (get_dialog dialogs language 6) "anyurassvirus_track38") ;preview: Is impossible to undestand y... | looking at Andrii
+                (say "yuriy" (get_dialog dialogs language 6) "anyurassvirus_track38") ;preview: Is impossible to understand y... | looking at Andrii
                 (if (= virus_andrii_and_yuriy_line 6.0)
                   (say "yuriy" (get_dialog dialogs language 7) "anyurassvirus_track39") ;preview: . . . and you were responsib... | looking at Andrii | animation pointing
                   nil

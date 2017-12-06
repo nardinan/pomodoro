@@ -34,7 +34,7 @@
                     "I am not 50 years old, please, call me Andrii"
                     "Non ho cinquant'anni, puoi chiamarmi tranquillamente Andrii.")
                   (cons ;8 yuriy
-                    "In 'Angel and Deamons' people follow this approach!"
+                    "In 'Angel and Daemons' people follow this approach!"
                     "Ma su 'Angeli e Demoni' le persone del CERN usano questi appellativi!")
                   (cons ;9 yuriy
                     "You want to be less professional that a Dan Brown's book?"
@@ -308,7 +308,7 @@
 (say "andrii" (get_dialog dialogs language 6) "cern_track6") ;preview: Dr. Tykhonov? | looking at yuriy
 (say "andrii" (get_dialog dialogs language 7) "cern_track7") ;preview: I am not 50 years old, pleas... | looking at yuriy
 (puppeteer_set "yuriy" "point_right")
-(say "yuriy" (get_dialog dialogs language 8) "cern_track8") ;preview: In 'Angel and Deamons' peopl... | looking at andrii | animation pointing
+(say "yuriy" (get_dialog dialogs language 8) "cern_track8") ;preview: In 'Angel and Daemons' peopl... | looking at andrii | animation pointing
 (puppeteer_set "yuriy" 	"still_right")
 (say "yuriy" (get_dialog dialogs language 9) "cern_track9") ;preview: You want to be less professi... | looking at andrii
 ;Script suggestion: Lunga pausa

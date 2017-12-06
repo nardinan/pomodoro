@@ -16,11 +16,11 @@
                     "Here you can go to Mania . . ."
                     "Di qui si va al Mania . . .")
                   (cons ;2 andrea
-                    ". . . a bar, popular for his prices: 1 euro per shot."
+                    ". . . a bar, popular for his prices: 1 Europer shot."
                     ". . . locale famoso per i suoi shortini a 1 euro.")
                   (cons ;3 andrea
-                    "Now it's 1 euro and half per shot."
-                    "Ora costano 1 euro e cinquanta.")
+                    "Now it's 1 Euroand half per shot."
+                    "Ora costano 1 Euroe cinquanta.")
                   (cons ;4 andrea
                     "Is closed right now."
                     "E' ancora chiuso.")
@@ -115,7 +115,7 @@
 (say "andrea" (get_dialog dialogs language 1) "manclquiet_track1") ;preview: Here you can go to Mania . . . | animation front
 (say "andrea" (get_dialog dialogs language 2) "manclquiet_track2") ;preview: . . . a bar, popular for his... | animation front
 (puppeteer_set "andrea" "still_right")
-(say "andrea" (get_dialog dialogs language 3) "manclquiet_track3") ;preview: Now it's 1 euro and half per... | animation right
+(say "andrea" (get_dialog dialogs language 3) "manclquiet_track3") ;preview: Now it's 1 Euroand half per... | animation right
 (puppeteer_set "andrea" "front")
 (say "andrea" (get_dialog dialogs language 4) "manclquiet_track4") ;preview: Is closed right now. | animation front
 

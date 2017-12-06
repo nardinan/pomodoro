@@ -64,7 +64,7 @@
                     "Looks like I'm talking with dmesg"
                     "Sembra di parlare con dmesg")
                   (cons ;18 andrea
-                    "Embarassing"
+                    "embarrassing"
                     "Imbarazzante")
                   (cons ;19 marta
                     "Look, what is this about?"
@@ -203,7 +203,7 @@
     (say "bruno" (get_dialog dialogs language 16) "mbrquiet_track16") ;preview: Bye-move.bin[256]: segfault ... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 17) "mbrquiet_track17") ;preview: Looks like I'm talking with ... | looking at Main Camera
     (director_wait_time 1)
-    (say "andrea" (get_dialog dialogs language 18) "mbrquiet_track18") ;preview: Embarassing | looking at Main Camera
+    (say "andrea" (get_dialog dialogs language 18) "mbrquiet_track18") ;preview: embarrassing | looking at Main Camera
 
     (director_wait_movement "marta")
     (director_wait_movement "bruno")

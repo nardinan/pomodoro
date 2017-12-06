@@ -34,7 +34,7 @@
                     "He study Computer Science with me."
                     "Studia informatica con me.")
                   (cons ;8 andrea
-                    "He lives in the same appartment with my girlfriend and Marta . . ."
+                    "He lives in the same apartment with my girlfriend and Marta . . ."
                     "Convive con la mia ragazza e Marta . . .")
                   (cons ;9 andrea
                     ". . that's slightly odd . . ."
@@ -142,7 +142,7 @@
                     "Impossible!"
                     "Impossibile!")
                   (cons ;44 valerio
-                    "My skils with gdb and valgrind are incredible."
+                    "My skills with gdb and valgrind are incredible."
                     "Uso gdb e valgrind con maestria assoluta.")
                   (cons ;45 luna
                     "Are you kidding me?"
@@ -323,7 +323,7 @@
       (say "luna" (get_dialog dialogs language 42) "lunpdstravirus_track42") ;preview: People is crashing! | looking at Valerio | animation pointing
       (puppeteer_set "luna" "still_left")
       (say "valerio" (get_dialog dialogs language 43) "lunpdstravirus_track43") ;preview: Impossible! | looking at Luna
-      (say "valerio" (get_dialog dialogs language 44) "lunpdstravirus_track44") ;preview: My skils with gdb and valgri... | looking at Luna
+      (say "valerio" (get_dialog dialogs language 44) "lunpdstravirus_track44") ;preview: My skills with gdb and valgri... | looking at Luna
       (say "luna" (get_dialog dialogs language 45) "lunpdstravirus_track45") ;preview: Are you kidding me? | looking at Valerio
       (say "valerio" (get_dialog dialogs language 46) "lunpdstravirus_track46") ;preview: . . . | looking at Luna
       (puppeteer_set "valerio" "scratch_right")

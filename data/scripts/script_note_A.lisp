@@ -73,8 +73,8 @@
                     "It is fine. Listen, how much do I have to give you?"
                     "Fa niente. Ascolta, quanto ti devo dare?")
                   (cons ;21 luca
-                    "One hundred twenty euros and ninety five cents"
-                    "Centoventi euro e novantasette centesimi")
+                    "One hundred twentyEurosand ninety five cents"
+                    "Centoventi Euroe novantasette centesimi")
                   (cons ;22 luca
                     "Cash"
                     "In contanti")
@@ -91,8 +91,8 @@
                     "You can start with these five euros."
                     "Puoi iniziare con questi cinque euri.")
                   (cons ;27 luca
-                    "Now you have to find one hundred fifteen euros and ninety five cents"
-                    "Ora ne mancano centoquindici euro e novantasette centesimi.")
+                    "Now you have to find one hundred fifteenEurosand ninety five cents"
+                    "Ora ne mancano centoquindici Euroe novantasette centesimi.")
                   (cons ;28 andrea
                     "And where I can find them?"
                     "E dove li trovo?")
@@ -249,7 +249,7 @@
     (puppeteer_set "andrea" "still_left")
     (director_wait_time 2)
     (say "andrea" (get_dialog dialogs language 20) "cugmny_track20") ;preview: It is fine. Listen, how much... | looking at Cug
-    (say "luca" (get_dialog dialogs language 21) "cugmny_track21") ;preview: One hundred twenty euros and... | looking at Andrea
+    (say "luca" (get_dialog dialogs language 21) "cugmny_track21") ;preview: One hundred twentyEurosand... | looking at Andrea
     ;Script suggestion: Lunga pausa in cui i due si guardano
     (director_wait_time 2)
     (say "luca" (get_dialog dialogs language 22) "cugmny_track22") ;preview: Cash | looking at Andrea

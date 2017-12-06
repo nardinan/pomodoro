@@ -82,7 +82,7 @@
                     "A reference point in my life!"
                     "Un punto di riferimento nella mia vita!")
                   (cons ;24 andrea
-                    "My ispiration"
+                    "My inspiration"
                     "La mia musa ispiratrice")
                   (cons ;25 andrea
                     "My reason for being"
@@ -180,7 +180,7 @@
     (if (= luna_quiet_answer 0.0)
       (say "andrea" (get_dialog dialogs language 23) "lunquiet_track23") ;preview: A reference point in my life! | looking at Main Camera
       (if (= luna_quiet_answer 1.0)
-        (say "andrea" (get_dialog dialogs language 24) "lunquiet_track24") ;preview: My ispiration | looking at Main Camera
+        (say "andrea" (get_dialog dialogs language 24) "lunquiet_track24") ;preview: My inspiration | looking at Main Camera
         (if (= luna_quiet_answer 2.0)
           (say "andrea" (get_dialog dialogs language 25) "lunquiet_track25") ;preview: My reason for being | looking at Main Camera
           (say "andrea" (get_dialog dialogs language 26) "lunquiet_track26") ;preview: Irritating | looking at Main Camera

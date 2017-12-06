@@ -94,8 +94,8 @@
                     "That's great, but now listen . . ."
                     "Fantastico, ma ora ascolta . . .")
                   (cons ;28 andrea
-                    ". . . I need one hundred twenty euros and ninety five cents."
-                    ". . . avrei bisogno di centoventi euro e novantasette centesimi.")
+                    ". . . I need one hundred twentyEurosand ninety five cents."
+                    ". . . avrei bisogno di centoventi Euroe novantasette centesimi.")
                   (cons ;29 caprini
                     "I was right then."
                     "Avevo ragione allora.")
@@ -103,7 +103,7 @@
                     "You are looking for money, as always."
                     "Sempre alla ricerca di soldi.")
                   (cons ;31 caprini
-                    "You're so embarassing."
+                    "You're so embarrassing."
                     "Sei imbarazzante.")
                   (cons ;32 caprini
                     "However I have no money with me and I don't want to leave this place!"
@@ -290,7 +290,7 @@
 (puppeteer_set "caprini" "point_left")
 (say "caprini" (get_dialog dialogs language 30) "caprianvirus_track30") ;preview: You are looking for money, a... | looking at Andrea | animation pointing
 (puppeteer_set "caprini" "still_left")
-(say "caprini" (get_dialog dialogs language 31) "caprianvirus_track31") ;preview: You're so embarassing. | looking at Andrea
+(say "caprini" (get_dialog dialogs language 31) "caprianvirus_track31") ;preview: You're so embarrassing. | looking at Andrea
 (puppeteer_stare "andrea" "caprini")
 (puppeteer_move "caprini" 1800)
 (say "caprini" (get_dialog dialogs language 32) "caprianvirus_track32") ;preview: However I have no money with... | animation left
