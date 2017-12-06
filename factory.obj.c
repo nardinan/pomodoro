@@ -37,6 +37,7 @@ struct s_object *f_factory_new(struct s_object *self, struct s_object *resources
     attributes->resources_ogg = d_retain(resources_ogg);
     attributes->resources_lisp = d_retain(resources_lisp);
     attributes->environment = d_retain(environment);
+    attributes->current_channel = d_factory_min_channels;
     if ((attributes->font_system = f_fonts_new(d_new(fonts)))) {
         if ((stream = d_call(attributes->resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common)))
             if ((attributes->json_configuration = f_json_new_stream(d_new(json), stream))) {
@@ -286,7 +287,7 @@ d_define_method(factory, get_track)(struct s_object *self, const char *label) {
     if ((stream = d_call(factory_attributes->resources_ogg, m_resources_get_stream_strict, label, e_resources_type_common)))
         if ((result = f_track_new_channel(d_new(track), stream, factory_attributes->current_channel++)))
             if (factory_attributes->current_channel == d_factory_max_channels)
-                factory_attributes->current_channel = 0;
+                factory_attributes->current_channel = d_factory_min_channels;
     return result;
 }
 
