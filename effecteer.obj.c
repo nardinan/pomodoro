@@ -172,20 +172,30 @@ d_define_method(effecteer, add_effect)(struct s_object *self, const char *key, c
 
 d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, const char *label, int fade_in, int fade_out, int volume, t_boolean loop) {
     d_using(effecteer);
-    if (effecteer_attributes->track.track) {
-        d_delete(effecteer_attributes->track.track);
-        effecteer_attributes->track.track = NULL;
+    int index, unused_track;
+    for (index = 0, unused_track = 0; index < d_effecteer_default_max_tracks; ++index) {
+        if (effecteer_attributes->tracks[index].track) {
+            if (!d_call(effecteer_attributes->tracks[index].track, m_track_is_playing, NULL))
+                unused_track = index;
+        } else
+            break;
     }
-    if ((effecteer_attributes->track.track = d_call(effecteer_attributes->factory, m_factory_get_track, label))) {
-        strncpy(effecteer_attributes->track.key, key, d_resources_key_size);
-        effecteer_attributes->track.fade_in = fade_in;
-        effecteer_attributes->track.fade_out = fade_out;
-        effecteer_attributes->track.volume = volume;
-        effecteer_attributes->track.loop = loop;
+    if (index == d_effecteer_default_max_tracks)
+        index = unused_track;
+    if (effecteer_attributes->tracks[index].track) {
+        d_delete(effecteer_attributes->tracks[index].track);
+        effecteer_attributes->tracks[index].track = NULL;
+    }
+    if ((effecteer_attributes->tracks[index].track = d_call(effecteer_attributes->factory, m_factory_get_track, label))) {
+        strncpy(effecteer_attributes->tracks[index].key, key, d_resources_key_size);
+        effecteer_attributes->tracks[index].fade_in = fade_in;
+        effecteer_attributes->tracks[index].fade_out = fade_out;
+        effecteer_attributes->tracks[index].volume = volume;
+        effecteer_attributes->tracks[index].loop = loop;
         if (!v_developer_mode) {
-            d_call(effecteer_attributes->track.track, m_track_set_volume, effecteer_attributes->track.volume);
-            d_call(effecteer_attributes->track.track, m_track_set_loops, ((effecteer_attributes->track.loop)?d_track_infinite_loop:0));
-            d_call(effecteer_attributes->track.track, m_track_play_fade_in, d_true, effecteer_attributes->track.fade_in);
+            d_call(effecteer_attributes->tracks[index].track, m_track_set_volume, effecteer_attributes->tracks[index].volume);
+            d_call(effecteer_attributes->tracks[index].track, m_track_set_loops, ((effecteer_attributes->tracks[index].loop)?d_track_infinite_loop:0));
+            d_call(effecteer_attributes->tracks[index].track, m_track_play_fade_in, d_true, effecteer_attributes->tracks[index].fade_in);
         }
     }
     return self;
@@ -194,6 +204,7 @@ d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, 
 d_define_method(effecteer, stop_effect)(struct s_object *self, const char *key) {
     d_using(effecteer);
     struct s_effecteer_effect *current_effect;
+    int index;
     if ((current_effect = (struct s_effecteer_effect *)d_call(self, m_effecteer_get_effect, key))) {
         switch (current_effect->type) {
             case e_factory_media_type_particle:
@@ -206,8 +217,11 @@ d_define_method(effecteer, stop_effect)(struct s_object *self, const char *key) 
             default:
                 break;
         }
-    } else if ((effecteer_attributes->track.track) && (f_string_strcmp(effecteer_attributes->track.key, key) == 0))
-        d_call(effecteer_attributes->track.track, m_track_stop_fade_out, effecteer_attributes->track.fade_out);
+    } else {
+        for (index = 0; index < d_effecteer_default_max_tracks; ++index) 
+            if ((effecteer_attributes->tracks[index].track) && (f_string_strcmp(effecteer_attributes->tracks[index].key, key) == 0))
+                d_call(effecteer_attributes->tracks[index].track, m_track_stop_fade_out, effecteer_attributes->tracks[index].fade_out);
+    }
     return self;
 }
 
@@ -215,6 +229,7 @@ d_define_method(effecteer, delete_effect)(struct s_object *self, const char *key
     d_using(effecteer);
     struct s_factory_attributes *factory_attributes = d_cast(effecteer_attributes->factory, factory);
     struct s_effecteer_effect *current_effect;
+    int index;
     if ((current_effect = (struct s_effecteer_effect *)d_call(self, m_effecteer_get_effect, key))) {
         f_list_delete(&(effecteer_attributes->components), (struct s_list_node *)current_effect);
         d_call(factory_attributes->environment, m_environment_del_drawable, current_effect->drawable, current_effect->layer,
@@ -222,6 +237,12 @@ d_define_method(effecteer, delete_effect)(struct s_object *self, const char *key
         d_delete(current_effect->drawable);
         d_free(current_effect);
     }
+    for (index = 0; index < d_effecteer_default_max_tracks; ++index)
+        if ((effecteer_attributes->tracks[index].track) && (f_string_strcmp(effecteer_attributes->tracks[index].key, key) == 0)) {
+            d_delete(effecteer_attributes->tracks[index].track);
+            effecteer_attributes->tracks[index].track = NULL;
+        }
+        
     return self;
 }
 
@@ -268,6 +289,7 @@ d_define_method(effecteer, dispatcher)(struct s_object *self, struct s_effecteer
 d_define_method(effecteer, delete)(struct s_object *self, struct s_effecteer_attributes *attributes) {
     struct s_factory_attributes *factory_attributes = d_cast(attributes->factory, factory);
     struct s_effecteer_effect *current_effect;
+    int index;
     while ((current_effect = (struct s_effecteer_effect *)(attributes->components.head))) {
         f_list_delete(&(attributes->components), (struct s_list_node *)current_effect);
         d_call(factory_attributes->environment, m_environment_del_drawable, current_effect->drawable, current_effect->layer,
@@ -275,8 +297,9 @@ d_define_method(effecteer, delete)(struct s_object *self, struct s_effecteer_att
         d_delete(current_effect->drawable);
         d_free(current_effect);
     }
-    if (attributes->track.track)
-        d_delete(attributes->track.track);
+    for (index = 0; index < d_effecteer_default_max_tracks; ++index) 
+        if (attributes->tracks[index].track)
+            d_delete(attributes->tracks[index].track);
     d_delete(attributes->factory);
     return NULL;
 }

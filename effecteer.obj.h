@@ -20,6 +20,7 @@
 #include "factory.obj.h"
 #define d_effecteer_default_back_layer 2
 #define d_effecteer_default_front_layer 8
+#define d_effecteer_default_max_tracks 16
 /* action definition */
 typedef enum e_effecteer_actions {
     e_effecteer_action_add,
@@ -68,7 +69,7 @@ d_declare_class(effecteer) {
     struct s_attributes head;
     struct s_object *factory;
     struct s_list components;
-    struct s_effecteer_track track;
+    struct s_effecteer_track tracks[d_effecteer_default_max_tracks];
 } d_declare_class_tail(effecteer);
 struct s_effecteer_attributes *p_effecteer_alloc(struct s_object *self);
 extern struct s_object *f_effecteer_new(struct s_object *self, struct s_object *factory);
