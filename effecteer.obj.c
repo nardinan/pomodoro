@@ -68,6 +68,28 @@ void p_link_effecteer(enum e_effecteer_actions type, ...) {
                             }
                         }
                     }
+                    break;
+                case e_effecteer_action_write:
+                    if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                        strncpy(action->action.effect.parameters.action_write.label, argument->value_string, d_string_buffer_size);
+                        if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                            action->action.effect.parameters.action_write.layer = (int)argument->value_double;
+                            if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                                action->action.effect.parameters.action_write.position_x = argument->value_double;
+                                if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                                    action->action.effect.parameters.action_write.position_y = argument->value_double;
+                                    if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                                        action->action.effect.parameters.action_write.zoom = argument->value_double;
+                                        if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
+                                            action->action.effect.parameters.action_write.font_ID = (int)argument->value_double;
+                                            if ((argument = va_arg(parameters_list, struct s_lisp_object *)))
+                                                action->action.effect.parameters.action_write.font_style = (int)argument->value_double;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 default:
                     break;
             }
@@ -86,16 +108,25 @@ struct s_lisp_object *p_link_effecteer_add_effect(struct s_object *self, struct 
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
-struct s_lisp_object *p_link_effecteer_stop_effect(struct s_object *self, struct s_lisp_object *arguments) {
-    d_using(lisp);
-    p_link_effecteer(e_effecteer_action_stop, d_lisp_car(arguments));
-    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
-}
-
 struct s_lisp_object *p_link_effecteer_play_effect(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_effecteer(e_effecteer_action_play, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments), d_lisp_caddr(d_lisp_cdr(arguments)),
             d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(arguments))), d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(arguments)))));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_effecteer_write_effect(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_effecteer(e_effecteer_action_write, d_lisp_car(arguments), d_lisp_cadr(arguments), d_lisp_caddr(arguments), d_lisp_caddr(d_lisp_cdr(arguments)),
+            d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(arguments))), d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(arguments)))),
+            d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(arguments))))),
+            d_lisp_caddr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(d_lisp_cdr(arguments)))))));
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
+struct s_lisp_object *p_link_effecteer_stop_effect(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_effecteer(e_effecteer_action_stop, d_lisp_car(arguments));
     return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
 }
 
@@ -172,16 +203,15 @@ d_define_method(effecteer, add_effect)(struct s_object *self, const char *key, c
 
 d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, const char *label, int fade_in, int fade_out, int volume, t_boolean loop) {
     d_using(effecteer);
-    int index, unused_track;
-    for (index = 0, unused_track = 0; index < d_effecteer_default_max_tracks; ++index) {
+    int index, unused_slot;
+    for (index = 0, unused_slot = 0; index < d_effecteer_default_max_tracks; ++index)
         if (effecteer_attributes->tracks[index].track) {
             if (!d_call(effecteer_attributes->tracks[index].track, m_track_is_playing, NULL))
-                unused_track = index;
+                unused_slot = index;
         } else
             break;
-    }
     if (index == d_effecteer_default_max_tracks)
-        index = unused_track;
+        index = unused_slot;
     if (effecteer_attributes->tracks[index].track) {
         d_delete(effecteer_attributes->tracks[index].track);
         effecteer_attributes->tracks[index].track = NULL;
@@ -198,6 +228,42 @@ d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, 
             d_call(effecteer_attributes->tracks[index].track, m_track_play_fade_in, d_true, effecteer_attributes->tracks[index].fade_in);
         }
     }
+    return self;
+}
+
+d_define_method(effecteer, write_effect)(struct s_object *self, const char *key, char *message, double position_x, double position_y, double zoom, 
+        int font_ID, int font_style, int layer) {
+    d_using(effecteer);
+    struct s_factory_attributes *factory_attributes = d_cast(effecteer_attributes->factory, factory);
+    double current_width, current_height;
+    int index, font_height;
+    TTF_Font *selected_font;
+    for (index = 0; index < d_effecteer_default_max_labels; ++index)
+        if (effecteer_attributes->labels[index].drawable)
+            break;
+    if (index == d_effecteer_default_max_labels)
+        index = 0;
+    if (effecteer_attributes->labels[index].drawable) {
+        d_call(factory_attributes->environment, m_environment_del_drawable, effecteer_attributes->labels[index].drawable,
+                effecteer_attributes->labels[index].layer, e_environment_surface_ui);
+        d_delete(effecteer_attributes->labels[index].drawable);
+        effecteer_attributes->labels[index].drawable = NULL;
+    }
+    if ((selected_font = (TTF_Font *)d_call(effecteer_attributes->factory, m_factory_get_font, font_ID, font_style, &font_height)))
+        if ((effecteer_attributes->labels[index].drawable = f_label_new(d_new(label), message, selected_font, factory_attributes->environment))) {
+            strncpy(effecteer_attributes->labels[index].key, key, d_entity_label_size);
+            effecteer_attributes->labels[index].position_x = position_x;
+            effecteer_attributes->labels[index].position_y = position_y;
+            effecteer_attributes->labels[index].zoom = zoom;
+            effecteer_attributes->labels[index].layer = layer;
+            d_call(effecteer_attributes->labels[index].drawable, m_drawable_get_dimension, &current_width, &current_height);
+            d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_center, (current_width / 2.0), (current_height / 2.0));
+            d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_position, effecteer_attributes->labels[index].position_x, 
+                    effecteer_attributes->labels[index].position_y);
+            d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_zoom, effecteer_attributes->labels[index].zoom);
+            d_call(factory_attributes->environment, m_environment_add_drawable, effecteer_attributes->labels[index].drawable,
+                    effecteer_attributes->labels[index].layer, e_environment_surface_ui);
+        }
     return self;
 }
 
@@ -242,14 +308,21 @@ d_define_method(effecteer, delete_effect)(struct s_object *self, const char *key
             d_delete(effecteer_attributes->tracks[index].track);
             effecteer_attributes->tracks[index].track = NULL;
         }
-        
+    for (index = 0; index < d_effecteer_default_max_labels; ++index)
+        if ((effecteer_attributes->labels[index].drawable) && (f_string_strcmp(effecteer_attributes->labels[index].key, key) == 0)) {
+            d_call(factory_attributes->environment, m_environment_del_drawable, effecteer_attributes->labels[index].drawable, 
+                    effecteer_attributes->labels[index].layer, e_environment_surface_ui);
+            d_delete(effecteer_attributes->labels[index].drawable);
+            effecteer_attributes->labels[index].drawable = NULL;
+        }
     return self;
 }
 
 d_define_method(effecteer, linker)(struct s_object *self, struct s_object *script) {
     d_call(script, m_lisp_extend_environment, "effecteer_add", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_add_effect));
-    d_call(script, m_lisp_extend_environment, "effecteer_stop", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_stop_effect));
     d_call(script, m_lisp_extend_environment, "effecteer_play", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_play_effect));
+    d_call(script, m_lisp_extend_environment, "effecteer_write", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_write_effect));
+    d_call(script, m_lisp_extend_environment, "effecteer_stop", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_stop_effect));
     d_call(script, m_lisp_extend_environment, "effecteer_delete", p_lisp_object(script, e_lisp_object_type_primitive, p_link_effecteer_delete_effect));
     return self;
 }
@@ -267,10 +340,6 @@ d_define_method(effecteer, dispatcher)(struct s_object *self, struct s_effecteer
                     action->parameters.action_add.position_y, action->parameters.action_add.absolute, action->parameters.action_add.zoom,
                     action->parameters.action_add.angle, (action->parameters.action_add.front)?d_effecteer_default_front_layer:d_effecteer_default_back_layer);
             break;
-        case e_effecteer_action_stop:           /* key (effect) */
-            d_log(e_log_level_medium, "action [stop] (effect %s)", action->key);
-            result = d_call(self, m_effecteer_stop_effect, action->key);
-            break;
         case e_effecteer_action_play:           /* key (effect), label (effect), fade_in (time), fade_out (time), volume, loop */
             d_log(e_log_level_medium, "action [play] (effect %s (%s) | fade_in %d | fade out %d | volume %d | %s)", action->key,
                     action->parameters.action_play.label, action->parameters.action_play.fade_in, action->parameters.action_play.fade_out,
@@ -278,6 +347,19 @@ d_define_method(effecteer, dispatcher)(struct s_object *self, struct s_effecteer
             result = d_call(self, m_effecteer_play_effect, action->key, action->parameters.action_play.label, action->parameters.action_play.fade_in, 
                     action->parameters.action_play.fade_out, action->parameters.action_play.volume, action->parameters.action_play.loop);
             break;
+        case e_effecteer_action_write:          /* key (effect), content (string), layer, position_x, position_y, zoom, font_ID, font_style */
+            d_log(e_log_level_medium, "action [write] (effect %s (%s) | destination %.02f, %.02f | zoom %.02f | layer %d)", action->key,
+                    action->parameters.action_write.label, action->parameters.action_write.position_x, action->parameters.action_write.position_y,
+                    action->parameters.action_write.zoom, action->parameters.action_write.layer);
+            result = d_call(self, m_effecteer_write_effect, action->key, action->parameters.action_write.label, action->parameters.action_write.position_x, 
+                    action->parameters.action_write.position_y, action->parameters.action_write.zoom, action->parameters.action_write.font_ID,
+                    action->parameters.action_write.font_style, action->parameters.action_write.layer);
+            break;
+        case e_effecteer_action_stop:           /* key (effect) */
+            d_log(e_log_level_medium, "action [stop] (effect %s)", action->key);
+            result = d_call(self, m_effecteer_stop_effect, action->key);
+            break;
+
         case e_effecteer_action_delete:         /* key (effect) */
             d_log(e_log_level_medium, "action [delete] (effect %s)", action->key);
             result = d_call(self, m_effecteer_delete_effect, action->key);
@@ -300,6 +382,13 @@ d_define_method(effecteer, delete)(struct s_object *self, struct s_effecteer_att
     for (index = 0; index < d_effecteer_default_max_tracks; ++index) 
         if (attributes->tracks[index].track)
             d_delete(attributes->tracks[index].track);
+    for (index = 0; index < d_effecteer_default_max_labels; ++index)
+        if (attributes->labels[index].drawable) {
+            d_call(factory_attributes->environment, m_environment_del_drawable, attributes->labels[index].drawable, 
+                    attributes->labels[index].layer, e_environment_surface_ui);
+            d_delete(attributes->labels[index].drawable);
+            attributes->labels[index].drawable = NULL;
+        }
     d_delete(attributes->factory);
     return NULL;
 }
@@ -307,8 +396,9 @@ d_define_method(effecteer, delete)(struct s_object *self, struct s_effecteer_att
 d_define_class(effecteer) {
     d_hook_method(effecteer, e_flag_private, get_effect),
         d_hook_method(effecteer, e_flag_public, add_effect),
-        d_hook_method(effecteer, e_flag_public, stop_effect),
         d_hook_method(effecteer, e_flag_public, play_effect),
+        d_hook_method(effecteer, e_flag_public, write_effect),
+        d_hook_method(effecteer, e_flag_public, stop_effect),
         d_hook_method(effecteer, e_flag_public, delete_effect),
         d_hook_method(effecteer, e_flag_public, linker),
         d_hook_method(effecteer, e_flag_public, dispatcher),

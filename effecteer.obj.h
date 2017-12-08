@@ -21,11 +21,13 @@
 #define d_effecteer_default_back_layer 2
 #define d_effecteer_default_front_layer 8
 #define d_effecteer_default_max_tracks 16
+#define d_effecteer_default_max_labels 16
 /* action definition */
 typedef enum e_effecteer_actions {
     e_effecteer_action_add,
     e_effecteer_action_stop,
     e_effecteer_action_play,
+    e_effecteer_action_write,
     e_effecteer_action_delete
 } e_effecteer_actions;
 typedef struct s_effecteer_action_add {
@@ -38,17 +40,24 @@ typedef struct s_effecteer_action_play {
     int fade_in, fade_out, volume;
     t_boolean loop;
 } s_effecteer_action_play;
+typedef struct s_effecteer_action_write {
+    char label[d_string_buffer_size];
+    int font_ID, font_style, layer;
+    double position_x, position_y, zoom;
+} s_effecteer_action_write;
 typedef struct s_effecteer_action {
     enum e_effecteer_actions type;
     char key[d_entity_label_size];
     union {
         struct s_effecteer_action_add action_add;
         struct s_effecteer_action_play action_play;
+        struct s_effecteer_action_write action_write;
     } parameters;
 } s_effecteer_action;
 extern struct s_lisp_object *p_link_effecteer_add_effect(struct s_object *self, struct s_lisp_object *arguments);
-extern struct s_lisp_object *p_link_effecteer_stop_effect(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_effecteer_play_effect(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_effecteer_write_effect(struct s_object *self, struct s_lisp_object *arguments);
+extern struct s_lisp_object *p_link_effecteer_stop_effect(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_effecteer_delete_effect(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
 typedef struct s_effecteer_effect { d_list_node_head;
@@ -65,10 +74,17 @@ typedef struct s_effecteer_track {
     int fade_in, fade_out, volume;
     t_boolean loop;
 } s_effecteer_track;
+typedef struct s_effecteer_label {
+    char key[d_entity_label_size];
+    struct s_object *drawable;
+    double position_x, position_y, zoom;
+    int layer;
+} s_effecteer_label;
 d_declare_class(effecteer) {
     struct s_attributes head;
     struct s_object *factory;
     struct s_list components;
+    struct s_effecteer_label labels[d_effecteer_default_max_labels];
     struct s_effecteer_track tracks[d_effecteer_default_max_tracks];
 } d_declare_class_tail(effecteer);
 struct s_effecteer_attributes *p_effecteer_alloc(struct s_object *self);
@@ -77,6 +93,8 @@ d_declare_method(effecteer, get_effect)(struct s_object *self, const char *key);
 d_declare_method(effecteer, add_effect)(struct s_object *self, const char *key, const char *label, double position_x, double position_y, t_boolean absolute, 
         double zoom, double angle, int layer);
 d_declare_method(effecteer, play_effect)(struct s_object *self, const char *key, const char *label, int fade_in, int fade_out, int volume, t_boolean loop);
+d_declare_method(effecteer, write_effect)(struct s_object *self, const char *key, char *message, double position_x, double position_y, double zoom, 
+        int font_ID, int font_style, int layer);
 d_declare_method(effecteer, stop_effect)(struct s_object *self, const char *key);
 d_declare_method(effecteer, delete_effect)(struct s_object *self, const char *key);
 d_declare_method(effecteer, linker)(struct s_object *self, struct s_object *script);
