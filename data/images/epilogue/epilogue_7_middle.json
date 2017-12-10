@@ -1,0 +1,22 @@
+{
+  "format":"transition",
+  "ID":"epilogue_story_7_middle",
+  "drawable":"epilogue_story_7_frame5",
+  "keys":[{
+    "position_x":300.0,
+    "position_y":-1500.0,
+    "zoom":0.8,
+    "time":0.0
+  },{
+    "position_x":200.0,
+    "position_y":500.0,
+    "zoom":1.2,
+    "time":10.0
+  },{
+    "position_x":150.0,
+    "position_y":1000.0,
+    "zoom":1.4,
+    "time":5.0,
+    "mask_A":0
+  }]
+}

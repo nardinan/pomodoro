@@ -1,0 +1,22 @@
+{
+  "format":"transition",
+  "ID":"epilogue_story_5_front",
+  "drawable":"epilogue_story_5_front",
+  "keys":[{
+    "position_x":200.0,
+    "position_y":200.0,
+    "zoom":0.5,
+    "time":0.0
+  },{
+    "position_x":400.0,
+    "position_y":500.0,
+    "zoom":0.8,
+    "time":10.0
+  },{
+    "position_x":500.0,
+    "position_y":600.0,
+    "zoom":0.95,
+    "time":5.0,
+    "mask_A":0
+  }]
+}
