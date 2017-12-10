@@ -66,6 +66,12 @@ void p_link_director(enum e_director_actions type, ...) {
     va_end(parameters_list);
 }
 
+struct s_lisp_object *p_link_director_atomic(struct s_object *self, struct s_lisp_object *arguments) {
+    d_using(lisp);
+    p_link_director(e_director_action_atomic);
+    return lisp_attributes->base_symbols[e_lisp_object_symbol_true];
+}
+
 struct s_lisp_object *p_link_director_wait_time(struct s_object *self, struct s_lisp_object *arguments) {
     d_using(lisp);
     p_link_director(e_director_action_service_wait_time, d_lisp_car(arguments));
@@ -209,14 +215,17 @@ d_define_method(director, update)(struct s_object *self) {
     d_call(director_attributes->screenwriter, m_screenwriter_update, NULL);
     d_call(director_attributes->puppeteer, m_puppeteer_update, NULL);
     for (index = 0; index < e_director_pool_level_NULL; ++index)
-        if ((current_action = (struct s_director_action *)director_attributes->actions_pool[index].head)) {
-            if (!current_action->execution_time)
-                current_action->execution_time = time(NULL);
-            if (d_call(self, m_director_dispatcher, current_action)) {
-                f_list_delete(&(director_attributes->actions_pool[index]), (struct s_list_node *)current_action);
-                d_free(current_action);
-            }
-        }
+        do {
+            if ((current_action = (struct s_director_action *)director_attributes->actions_pool[index].head)) {
+                if (!current_action->execution_time)
+                    current_action->execution_time = time(NULL);
+                if (d_call(self, m_director_dispatcher, current_action)) {
+                    f_list_delete(&(director_attributes->actions_pool[index]), (struct s_list_node *)current_action);
+                    d_free(current_action);
+                }
+            } else
+                director_attributes->atomic_execution = d_false;
+        } while (director_attributes->atomic_execution);
     return self;
 }
 
@@ -237,6 +246,7 @@ d_define_method(director, run_script)(struct s_object *self, const char *label) 
 
 d_define_method(director, linker)(struct s_object *self, struct s_object *script) {
     d_using(director);
+    d_call(script, m_lisp_extend_environment, "director_atomic", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_atomic));
     d_call(script, m_lisp_extend_environment, "director_wait_time", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_wait_time));
     d_call(script, m_lisp_extend_environment, "director_wait_message", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_wait_message));
     d_call(script, m_lisp_extend_environment, "director_wait_dialog", p_lisp_object(script, e_lisp_object_type_primitive, p_link_director_wait_dialog));
@@ -262,6 +272,9 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
     double dimension_w, dimension_h;
     t_boolean limitations_enabled = d_false;
     switch (action->type) {
+        case e_director_action_atomic:
+            director_attributes->atomic_execution = !(director_attributes->atomic_execution);
+            break;
         case e_director_action_puppeteer:
             result = d_call(director_attributes->puppeteer, m_puppeteer_dispatcher, &(action->action.character));
             break;

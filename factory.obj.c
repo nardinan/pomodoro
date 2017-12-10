@@ -157,6 +157,75 @@ d_define_method(factory, get_animation)(struct s_object *self, const char *label
     return result;
 }
 
+d_define_method(factory, get_transition)(struct s_object *self, const char *label) {
+    d_using(factory);
+    struct s_transition_key transition_key;
+    struct s_object *stream;
+    struct s_object *bitmap;
+    struct s_object *json;
+    struct s_object *result = NULL;
+    enum e_drawable_flips flip;
+    char *string_supply;
+    t_boolean transition_flip_x = d_false, transition_flip_y = d_false;
+    double time, time_ratio = 1.0, mask_R = 255.0, mask_G = 255.0, mask_B = 255.0, mask_A = 255.0;
+    int index = 0;
+    if ((stream = d_call(factory_attributes->resources_json, m_resources_get_stream_strict, label, e_resources_type_common))) {
+        if ((json = f_json_new_stream(d_new(json), stream))) {
+            if (d_call(json, m_json_get_string, &string_supply, "s", "format"))
+                if (f_string_strcmp(string_supply, "transition") == 0) {
+                    d_call(json, m_json_get_double, &time_ratio, "s", "time_ratio");
+                    d_call(json, m_json_get_boolean, &transition_flip_x, "s", "flip_x");
+                    d_call(json, m_json_get_boolean, &transition_flip_y, "s", "flip_y");
+                    d_call(json, m_json_get_double, &mask_R, "s", "mask_R");
+                    d_call(json, m_json_get_double, &mask_G, "s", "mask_G");
+                    d_call(json, m_json_get_double, &mask_B, "s", "mask_B");
+                    d_call(json, m_json_get_double, &mask_A, "s", "mask_A");
+                    d_call(json, m_json_get_string, &string_supply, "s", "drawable");
+                    if ((bitmap = d_call(self, m_factory_get_bitmap, string_supply, factory_attributes->environment))) {
+                        if ((transition_flip_x) && (transition_flip_y))
+                            flip = e_drawable_flip_both;
+                        else if (transition_flip_x)
+                            flip = e_drawable_flip_horizontal;
+                        else if (transition_flip_y)
+                            flip = e_drawable_flip_vertical;
+                        else
+                            flip = e_drawable_flip_none;
+                        d_call(bitmap, m_drawable_flip, flip);
+                        d_call(bitmap, m_drawable_set_maskRGB, mask_R, mask_G, mask_B);
+                        d_call(bitmap, m_drawable_set_maskA, mask_A);
+                        if ((result = f_transition_new(d_new(transition), bitmap, time_ratio))) {
+                            while ((d_call(json, m_json_get_double, &time, "sds", "keys", index, "time"))) {
+                                memset(&(transition_key), 0, sizeof(struct s_transition_key));
+                                transition_key.mask_R = 255.0;
+                                transition_key.mask_G = 255.0;
+                                transition_key.mask_B = 255.0;
+                                transition_key.mask_A = 255.0;
+                                transition_key.zoom = 1.0;
+                                d_call(json, m_json_get_double, &(transition_key.position_x), "sds", "keys", index, "position_x");
+                                d_call(json, m_json_get_double, &(transition_key.position_y), "sds", "keys", index, "position_y");
+                                d_call(json, m_json_get_double, &(transition_key.zoom), "sds", "keys", index, "zoom");
+                                d_call(json, m_json_get_double, &(transition_key.angle), "sds", "keys", index, "angle");
+                                d_call(json, m_json_get_double, &(transition_key.time), "sds", "keys", index, "time");
+                                d_call(json, m_json_get_double, &(transition_key.mask_R), "sds", "keys", index, "mask_R");
+                                d_call(json, m_json_get_double, &(transition_key.mask_G), "sds", "keys", index, "mask_G");
+                                d_call(json, m_json_get_double, &(transition_key.mask_B), "sds", "keys", index, "mask_B");
+                                d_call(json, m_json_get_double, &(transition_key.mask_A), "sds", "keys", index, "mask_A");
+                                d_call(result, m_transition_append_key, transition_key);
+                                ++index;
+                            }
+                        } else
+                            d_die(d_error_malloc);
+                        d_delete(bitmap);
+                    } else
+                        d_err(e_log_level_ever, "impossible to load the following drawable: %s", string_supply);
+                }
+            d_delete(json);
+        } else
+            d_die(d_error_malloc);
+    }
+    return result;
+}
+
 d_define_method(factory, get_particle_structure)(struct s_object *self, struct s_object *json, struct s_particle_configuration_core *configuration,
         const char *prefix) {
     memset(configuration, 0, sizeof(struct s_particle_configuration_core));
@@ -242,9 +311,12 @@ d_define_method(factory, get_media)(struct s_object *self, const char *label, en
     if (!(result = d_call(self, m_factory_get_bitmap, label))) {
         *selected_type = e_factory_media_type_animation;
         if (!(result = d_call(self, m_factory_get_animation, label))) {
-            *selected_type = e_factory_media_type_particle;
-            if (!(result = d_call(self, m_factory_get_particle, label)))
-                *selected_type = e_factory_media_type_NULL;
+            *selected_type = e_factory_media_type_transition;
+            if (!(result = d_call(self, m_factory_get_transition, label))) {
+                *selected_type = e_factory_media_type_particle;
+                if (!(result = d_call(self, m_factory_get_particle, label)))
+                    *selected_type = e_factory_media_type_NULL;
+            }
         }
     }
     return result;
@@ -308,6 +380,7 @@ d_define_class(factory) {
     d_hook_method(factory, e_flag_public, get_language),
         d_hook_method(factory, e_flag_public, get_bitmap),
         d_hook_method(factory, e_flag_public, get_animation),
+        d_hook_method(factory, e_flag_public, get_transition),
         d_hook_method(factory, e_flag_private, get_particle_structure),
         d_hook_method(factory, e_flag_public, get_particle),
         d_hook_method(factory, e_flag_public, get_media),

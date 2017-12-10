@@ -27,6 +27,7 @@
 typedef enum e_factory_media_types {
     e_factory_media_type_bitmap = 0,
     e_factory_media_type_animation,
+    e_factory_media_type_transition,
     e_factory_media_type_particle,
     e_factory_media_type_track,
     e_factory_media_type_NULL
@@ -45,6 +46,7 @@ extern struct s_object *f_factory_new(struct s_object *self, struct s_object *re
 d_declare_method(factory, get_language)(struct s_object *self);
 d_declare_method(factory, get_bitmap)(struct s_object *self, const char *label);
 d_declare_method(factory, get_animation)(struct s_object *self, const char *label);
+d_declare_method(factory, get_transition)(struct s_object *self, const char *label);
 d_declare_method(factory, get_particle_structure)(struct s_object *self, struct s_object *json, struct s_particle_configuration_core *configuration, 
         const char *prefix);
 d_declare_method(factory, get_particle)(struct s_object *self, const char *label);

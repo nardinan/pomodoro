@@ -190,6 +190,10 @@ d_define_method(effecteer, add_effect)(struct s_object *self, const char *key, c
                     /* start the animation */
                     d_call(current_effect->drawable, m_animation_set_status, e_animation_direction_forward);
                     break;
+                case e_factory_media_type_transition:
+                    /* start the transition */
+                    d_call(current_effect->drawable, m_transition_set_status, e_transition_direction_forward);
+                    break;
                 default:
                     break;
             }
@@ -280,6 +284,10 @@ d_define_method(effecteer, stop_effect)(struct s_object *self, const char *key) 
             case e_factory_media_type_animation:
                 /* stop animation */
                 d_call(current_effect->drawable, m_animation_set_status, e_animation_direction_stop);
+                break;
+            case e_factory_media_type_transition:
+                /* stop transition */
+                d_call(current_effect->drawable, m_transition_set_status, e_transition_direction_stop);
             default:
                 break;
         }
