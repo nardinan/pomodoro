@@ -105,8 +105,8 @@ int main (int argc, char *argv[]) {
     d_pool_begin("main context") {
         /* wait the unlock */
         d_try {
-            final_resolution_x = d_pomodoro_width;
-            final_resolution_y = d_pomodoro_height;
+            final_resolution_x = d_pomodoro_width_window;
+            final_resolution_y = d_pomodoro_height_window;
             scale_resolution_x = (d_pomodoro_width * d_pomodoro_scale_factor);
             scale_resolution_y = (d_pomodoro_height * d_pomodoro_scale_factor);
             if (v_developer_mode) {

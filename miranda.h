@@ -17,6 +17,8 @@
  */
 #ifndef pomodoro_miranda_h
 #define pomodoro_miranda_h
+#define d_pomodoro_width_window (double)1280
+#define d_pomodoro_height_window (double)720
 #define d_pomodoro_width (double)1280
 #define d_pomodoro_height (double)720
 #define d_pomodoro_scale_factor (double)1.5
