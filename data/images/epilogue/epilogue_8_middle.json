@@ -1,7 +1,7 @@
 {
   "format":"transition",
   "ID":"epilogue_story_8_middle",
-  "drawable":"epilogue_story_8_frame3",
+  "drawable":"epilogue_story_8",
   "keys":[{
     "position_x":300.0,
     "position_y":500.0,

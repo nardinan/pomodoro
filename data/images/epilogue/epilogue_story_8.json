@@ -1,0 +1,10 @@
+{
+	"format":"animation",
+	"cycles":1,
+	"frames":[
+		{"drawable":"epilogue_story_8_frame0",  "time":2.0},
+		{"drawable":"epilogue_story_8_frame1",  "time":0.5},
+		{"drawable":"epilogue_story_8_frame2",  "time":0.5},
+		{"drawable":"epilogue_story_8_frame3",  "time":0.5}
+	]
+}
