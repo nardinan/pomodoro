@@ -161,10 +161,11 @@ d_define_method(factory, get_transition)(struct s_object *self, const char *labe
     d_using(factory);
     struct s_transition_key transition_key;
     struct s_object *stream;
-    struct s_object *bitmap;
+    struct s_object *drawable;
     struct s_object *json;
     struct s_object *result = NULL;
     enum e_drawable_flips flip;
+    enum e_factory_media_types type;
     char *string_supply;
     t_boolean transition_flip_x = d_false, transition_flip_y = d_false;
     double time, time_ratio = 1.0, mask_R = 255.0, mask_G = 255.0, mask_B = 255.0, mask_A = 255.0;
@@ -181,7 +182,14 @@ d_define_method(factory, get_transition)(struct s_object *self, const char *labe
                     d_call(json, m_json_get_double, &mask_B, "s", "mask_B");
                     d_call(json, m_json_get_double, &mask_A, "s", "mask_A");
                     d_call(json, m_json_get_string, &string_supply, "s", "drawable");
-                    if ((bitmap = d_call(self, m_factory_get_bitmap, string_supply, factory_attributes->environment))) {
+                    if ((drawable = d_call(self, m_factory_get_media, string_supply, &type))) {
+                        switch (type) {
+                            case e_factory_media_type_animation:
+                                /* start the animation inside */
+                                d_call(drawable, m_animation_set_status, e_animation_direction_forward);
+                            default:
+                                break;
+                        }
                         if ((transition_flip_x) && (transition_flip_y))
                             flip = e_drawable_flip_both;
                         else if (transition_flip_x)
@@ -190,10 +198,10 @@ d_define_method(factory, get_transition)(struct s_object *self, const char *labe
                             flip = e_drawable_flip_vertical;
                         else
                             flip = e_drawable_flip_none;
-                        d_call(bitmap, m_drawable_flip, flip);
-                        d_call(bitmap, m_drawable_set_maskRGB, mask_R, mask_G, mask_B);
-                        d_call(bitmap, m_drawable_set_maskA, mask_A);
-                        if ((result = f_transition_new(d_new(transition), bitmap, time_ratio))) {
+                        d_call(drawable, m_drawable_flip, flip);
+                        d_call(drawable, m_drawable_set_maskRGB, mask_R, mask_G, mask_B);
+                        d_call(drawable, m_drawable_set_maskA, mask_A);
+                        if ((result = f_transition_new(d_new(transition), drawable, time_ratio))) {
                             while ((d_call(json, m_json_get_double, &time, "sds", "keys", index, "time"))) {
                                 memset(&(transition_key), 0, sizeof(struct s_transition_key));
                                 transition_key.mask_R = 255.0;
@@ -215,7 +223,7 @@ d_define_method(factory, get_transition)(struct s_object *self, const char *labe
                             }
                         } else
                             d_die(d_error_malloc);
-                        d_delete(bitmap);
+                        d_delete(drawable);
                     } else
                         d_err(e_log_level_ever, "impossible to load the following drawable: %s", string_supply);
                 }
