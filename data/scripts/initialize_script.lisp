@@ -3,6 +3,7 @@
 ;Author: nardinan
 ;Date  : 20 Nov 2016
 ;Preamble. Here we should check for other things: loaded informations and stored informations.
+
 (if (compare (collector_get "current_chapter") "quiet")
   nil
   (if (compare (collector_get "current_chapter") "virus")
