@@ -75,7 +75,12 @@ void p_link_effecteer(enum e_effecteer_actions type, ...) {
                         if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
                             action->action.effect.parameters.action_write.layer = (int)argument->value_double;
                             if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
-                                action->action.effect.parameters.action_write.position_x = argument->value_double;
+                                if (argument->type == e_lisp_object_type_symbol) {
+                                    /* means that we should aim for the center of the screen */
+                                    action->action.effect.parameters.action_write.position_x = NAN;
+                                } else {
+                                    action->action.effect.parameters.action_write.position_x = argument->value_double;
+                                }
                                 if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
                                     action->action.effect.parameters.action_write.position_y = argument->value_double;
                                     if ((argument = va_arg(parameters_list, struct s_lisp_object *))) {
@@ -239,11 +244,11 @@ d_define_method(effecteer, write_effect)(struct s_object *self, const char *key,
         int font_ID, int font_style, int layer) {
     d_using(effecteer);
     struct s_factory_attributes *factory_attributes = d_cast(effecteer_attributes->factory, factory);
-    double current_width, current_height;
+    double scaled_current_width, scaled_current_height, final_position_x;
     int index, font_height;
     TTF_Font *selected_font;
     for (index = 0; index < d_effecteer_default_max_labels; ++index)
-        if (effecteer_attributes->labels[index].drawable)
+        if (!effecteer_attributes->labels[index].drawable)
             break;
     if (index == d_effecteer_default_max_labels)
         index = 0;
@@ -260,11 +265,13 @@ d_define_method(effecteer, write_effect)(struct s_object *self, const char *key,
             effecteer_attributes->labels[index].position_y = position_y;
             effecteer_attributes->labels[index].zoom = zoom;
             effecteer_attributes->labels[index].layer = layer;
-            d_call(effecteer_attributes->labels[index].drawable, m_drawable_get_dimension, &current_width, &current_height);
-            d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_center, (current_width / 2.0), (current_height / 2.0));
-            d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_position, effecteer_attributes->labels[index].position_x, 
-                    effecteer_attributes->labels[index].position_y);
             d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_zoom, effecteer_attributes->labels[index].zoom);
+            if ((final_position_x = effecteer_attributes->labels[index].position_x) != effecteer_attributes->labels[index].position_x) {
+                d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_dimension_w, (double)(d_pomodoro_width * d_pomodoro_scale_factor));
+                d_call(effecteer_attributes->labels[index].drawable, m_label_set_alignment, e_label_alignment_center, e_label_alignment_top);
+                final_position_x = 0.0;
+            }
+            d_call(effecteer_attributes->labels[index].drawable, m_drawable_set_position, final_position_x, effecteer_attributes->labels[index].position_y);
             d_call(factory_attributes->environment, m_environment_add_drawable, effecteer_attributes->labels[index].drawable,
                     effecteer_attributes->labels[index].layer, e_environment_surface_ui);
         }
