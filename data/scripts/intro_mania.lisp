@@ -19,14 +19,18 @@
 (director_script "update_items_interface")
 
 ;Collect environment
-(define from_where (collector_get "from_where"))
+(define from_where      (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "mania")
 
 ;Setup characters
 (puppeteer_show "serena" 2280)
-(puppeteer_set "serena" "still_left")
+(if (compare current_chapter "epilogue")
+  (puppeteer_set "serena" "front_loading")
+  (puppeteer_set "serena" "still_left")
+  )
 (puppeteer_show "andrea" 590)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")

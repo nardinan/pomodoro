@@ -115,8 +115,6 @@
 
 ;Action!
 (puppeteer_look "andrea" "nerd")
-(stagecrafter_set_item "computer_A" "still_A")
-(puppeteer_look "nerd" "andrea")
 (if (= server_disconnected 1.0)
   (begin
     (say "nerd" (get_dialog dialogs language 3) "nerdfuepilogu_track3") ;preview: Connection lost - the unit is offline | looking at Andrea
@@ -125,7 +123,4 @@
     (say "nerd" (get_dialog dialogs language 1) "nerdfuepilogu_track1") ;preview: Upload 'slave.bin', please w... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 2) "nerdfuepilogu_track2")) ;preview: Good, load it! | looking at nerd
   )
-(puppeteer_set "nerd" "back_code")
-(stagecrafter_set_item "computer_A" "coding_A")
-
 (main_control "andrea")

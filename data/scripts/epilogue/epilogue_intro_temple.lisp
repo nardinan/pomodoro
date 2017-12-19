@@ -450,19 +450,19 @@
 (puppeteer_disable_control)
 
 ;Collect environment
-(define temple_part_one   (collector_get "temple_part_one"))
-(define temple_part_two   (collector_get "temple_part_two"))
-(define temple_part_three (collector_get "temple_part_three"))
-(define temple_part_four  (collector_get "temple_part_four"))
-(define server_disconnected  (collector_get "server_disconnected"))
+(define temple_part_one       (collector_get "temple_part_one"))
+(define temple_part_two       (collector_get "temple_part_two"))
+(define temple_part_three     (collector_get "temple_part_three"))
+(define temple_part_four      (collector_get "temple_part_four"))
+(define server_disconnected   (collector_get "server_disconnected"))
 
 ;Action!
 (if (= temple_part_one 1.0)
   (if (= temple_part_two 1.0)
     (if (= temple_part_three 1.0)
       (begin
-        (puppeteer_stare "bruno" "andrea")
-        (stagecrafter_set_item "boss" "left_really_angry")
+        (puppeteer_set          "bruno"   "front_loading")
+        (stagecrafter_set_item  "boss"    "left_really_angry")
         (if (= server_disconnected 1.0)
           (begin
             (puppeteer_move "andrea" 3600)
@@ -474,7 +474,7 @@
             (puppeteer_set "luca" "hung_left")
             (director_wait_message "andrea")
             (puppeteer_set "andrea" "still_left")
-            (say "andrea" (get_dialog dialogs language 108) "pdeepilogue_track108") ;preview: So, is everything fine? | looking at Andrea
+            (say "andrea"  (get_dialog dialogs language 108) "pdeepilogue_track108") ;preview: So, is everything fine? | looking at Andrea
             (say "valerio" (get_dialog dialogs language 109) "pdeepilogue_track109") ;preview: Uhm, I've some problems in . . .| looking at Andrea
             (say "valerio" (get_dialog dialogs language 110) "pdeepilogue_track110") ;preview: Let me try to restart . . . | looking at Andrea
             (director_wait_time 1)
@@ -489,15 +489,35 @@
             (puppeteer_set "luna" "still_left_simple")
             (director_wait_time 1)
             (puppeteer_set "luca" "still_left")
+            (effecteer_stop "the_duel")
+            (effecteer_stop "stone_paradise")
             (say_and_go "luna" (get_dialog dialogs language 114) "pdeepilogue_track114") ;preview: Great job Andrea! | looking at Andrea
             (director_wait_time 1)
             (puppeteer_stare "andrea" "#null")
             (puppeteer_set "andrea" "still_right")
             (director_wait_message "luna")
             (say "luca" (get_dialog dialogs language 115) "pdeepilogue_track115") ;preview: You saved the world! | looking at Andrea
-            (say "andrea" (get_dialog dialogs language 116) "pdeepilogue_track116") ;preview: What? | looking at Andrea
-
+            (director_wait_time 2)
+            (effecteer_play "camera_one"    "camera_effect_one"   0 0 64 nil)
+            (director_wait_time 0.75)
+            (director_camera_set 3400 800  1.5)
+            (director_wait_time 2)
+            (effecteer_play "camera_two"    "camera_effect_two"   0 0 64 nil)
+            (director_wait_time 0.6)
+            (director_camera_set 4400 900  2.0)
             (director_wait_time 1)
+            (effecteer_play "camera_three"  "camera_effect_three" 0 0 64 nil)
+            (director_wait_time 0.6)
+            (director_camera_set 7400 1400 3.5)
+            (director_wait_time 3)
+            (say "andrea" (get_dialog dialogs language 116) "pdeepilogue_track116") ;preview: What? | looking at Andrea
+            (director_wait_time 2)
+            (effecteer_delete "the_duel")
+            (effecteer_delete "stone_paradise")
+            (effecteer_delete "camera_one")
+            (effecteer_delete "camera_two")
+            (effecteer_delete "camera_three")
+            (effecteer_play "the_duel" "the_duel" 2000 2000 16)
             (director_script "epilogue_credits"))
           (main_control "andrea")
           ))
@@ -619,6 +639,8 @@
         (say "valerio" (get_dialog dialogs language 101) "pdeepilogue_track101") ;preview: Oh yes! | looking at Andrea
         (say "valerio" (get_dialog dialogs language 102) "pdeepilogue_track102") ;preview: SLAVE mode activated! | looking at Andrea
         (say "valerio" (get_dialog dialogs language 103) "pdeepilogue_track113") ;preview: ./slave.bin | looking at Andrea
+
+        (puppeteer_set "bruno" "front_loading")
         (say "valerio" (get_dialog dialogs language 104) "pdeepilogue_track114") ;preview: THE WORLD IS MINE! | looking at Andrea
 
         ;Move to the next act

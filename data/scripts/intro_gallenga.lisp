@@ -33,7 +33,10 @@
 
 ;Setup characters
 (puppeteer_show "antonietta" 100)
-(puppeteer_set "antonietta"	"still_right")
+(if (compare current_chapter "epilogue")
+  (puppeteer_set "antonietta" "front_loading")
+  (puppeteer_set "antonietta"	"still_right")
+  )
 (if (compare current_chapter "chaos")
   nil
   (if (compare current_chapter "epilogue")

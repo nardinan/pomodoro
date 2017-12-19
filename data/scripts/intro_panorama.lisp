@@ -32,14 +32,19 @@
 ;Setup characters
 (if (compare current_chapter "quiet")
   nil
-  (begin
-    (puppeteer_show "federico" 5400)
-    (puppeteer_set "federico" "back")
-    (if (compare current_chapter "chaos")
-      (begin
-        (puppeteer_show "private_chris" 5800)
-        (puppeteer_look "private_chris" "federico"))
-      nil
+  (if (compare current_chapter "epilogue")
+    (begin
+      (puppeteer_show "federico" 5400)
+      (puppeteer_set "federico" "front_loading"))
+    (begin
+      (puppeteer_show "federico" 5400)
+      (puppeteer_set "federico" "back")
+      (if (compare current_chapter "chaos")
+        (begin
+          (puppeteer_show "private_chris" 5800)
+          (puppeteer_look "private_chris" "federico"))
+        nil
+        )
       )
     )
   )

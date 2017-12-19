@@ -37,7 +37,10 @@
 
 ;Setup characters
 (puppeteer_show "policeman" 3000)
-(puppeteer_set "policeman" "front")
+(if (compare current_chapter "epilogue")
+  (puppeteer_set "policeman" "front_loading")
+  (puppeteer_set "policeman" "front")
+  )
 (if (compare current_chapter "quiet")
   (begin
     (if (= yuriy_quiet_dialog_garibaldi 1.0)

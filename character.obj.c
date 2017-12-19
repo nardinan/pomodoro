@@ -400,7 +400,7 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         drawable_attributes_bubble = d_cast(character_attributes->bubble, drawable);
         ratio_x = (environment_attributes->current_w / environment_attributes->reference_w[environment_attributes->current_surface]);
         ratio_y = (environment_attributes->current_h / environment_attributes->reference_h[environment_attributes->current_surface]);
-        total_zoom = drawable_attributes_self->zoom * environment_attributes->zoom[environment_attributes->current_surface];
+        total_zoom = drawable_attributes_self->zoom;
         bubble_position_x = position_x + (character_attributes->bubble_offset_x * total_zoom);
         bubble_position_y = position_y + (character_attributes->bubble_offset_y * total_zoom) - bubble_attributes->total_height;
         if (((bubble_position_x * ratio_x) + bubble_attributes->maximum_width * ratio_x - 

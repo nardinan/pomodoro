@@ -26,16 +26,20 @@
 
 ;Collect environment
 (define from_where          (collector_get "from_where"))
-(define current_chapter     (collector_get "current_chapter"))
 (define server_disconnected (collector_get "server_disconnected"))
+(define current_chapter     (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "unipgA")
 
 ;Setup character
-(stagecrafter_set_item "computer_A" "coding_A")
 (puppeteer_show "nerd" 7040)
-(puppeteer_set "nerd" "back_code")
+(if (compare current_chapter "epilogue")
+  (puppeteer_set "nerd" "front_loading")
+  (begin
+    (puppeteer_set "nerd" "back_code")
+    (stagecrafter_set_item "computer_A" "coding_A"))
+  )
 (if (= server_disconnected 1)
   (stagecrafter_set_item "rack_A" "still_A")
   nil
@@ -51,7 +55,8 @@
     (if (compare current_chapter "epilogue")
       (begin
         (puppeteer_show "roberto" 3000)
-        (puppeteer_stare "roberto" "andrea"))
+        (puppeteer_stare "roberto" "#null")
+        (puppeteer_set "roberto" "front_loading"))
       nil
       )
     )

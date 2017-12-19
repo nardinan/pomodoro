@@ -115,7 +115,6 @@
 
 ;Action!
 (puppeteer_look "andrea" "ticket_inspector")
-(puppeteer_look "ticket_inspector" "andrea")
 (if (= server_disconnected 1.0)
   (begin
     (say "ticket_inspector" (get_dialog dialogs language 3) "ticket_inspectorfuepilogu_track3") ;preview: Connection lost - the unit is offline | looking at Andrea

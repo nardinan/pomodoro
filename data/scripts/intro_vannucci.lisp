@@ -33,7 +33,12 @@
 
 ;Setup characters
 (puppeteer_show "ticket_inspector" 10100)
-(puppeteer_stare "ticket_inspector" "andrea")
+(if (compare current_chapter "epilogue")
+  (begin
+    (puppeteer_stare "ticket_inspector" "#null")
+    (puppeteer_set "ticket_inspector" "front_loading"))
+  (puppeteer_stare "ticket_inspector" "andrea")
+  )
 (if (compare current_chapter "quiet")
   (begin
     (puppeteer_show "gianni" 4500)

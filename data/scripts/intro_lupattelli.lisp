@@ -23,20 +23,26 @@
 
 ;Collect environment
 (define from_where        (collector_get "from_where"))
-(define current_chapter   (collector_get "current_chapter"))
 (define done_cabin_key    (collector_get "done_cabin_key"))
+(define current_chapter   (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "lupattelli")
 
 ;Setup characters
 (puppeteer_show "technician" 3100)
+(if (compare current_chapter "epilogue")
+  (puppeteer_set "technician" "front_loading")
+  (puppeteer_stare "technician" "andrea")
+  )
 (if (= done_cabin_key 1.0)
   (if (compare current_chapter "virus")
-    (puppeteer_set "technician" "drunk_left")
-    (puppeteer_stare "technician" "andrea")
+    (begin
+      (puppeteer_set "technician" "#null")
+      (puppeteer_set "technician" "drunk_left"))
+    nil
     )
-  (puppeteer_stare "technician" "andrea")
+  nil
   )
 (if (compare from_where "garibaldi")
   (puppeteer_show "andrea" 3600)

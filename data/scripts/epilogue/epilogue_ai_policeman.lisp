@@ -115,9 +115,12 @@
 
 ;Action!
 (puppeteer_look "andrea" "policeman")
-(puppeteer_look "policeman" "andrea")
-(say "policeman" (get_dialog dialogs language 1) "policemanfuepilogu_track1") ;preview: Upload 'slave.bin', please w... | looking at Andrea
-(say "andrea" (get_dialog dialogs language 2) "policemanfuepilogu_track2") ;preview: Good, load it! | looking at Policeman
-(puppeteer_set "policeman" "front")
-
+(if (= server_disconnected 1.0)
+  (begin
+    (say "policeman" (get_dialog dialogs language 3) "policemanfuepilogu_track3") ;preview: Connection lost - the unit is offline | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 4) "policemanfuepilogu_track4")) ;preview: Cool | looking at policeman
+  (begin
+    (say "policeman" (get_dialog dialogs language 1) "policemanfuepilogu_track1") ;preview: Upload 'slave.bin', please w... | looking at Andrea
+    (say "andrea" (get_dialog dialogs language 2) "policemanfuepilogu_track2")) ;preview: Good, load it! | looking at policeman
+  )
 (main_control "andrea")

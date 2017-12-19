@@ -115,7 +115,6 @@
 
 ;Action!
 (puppeteer_look "andrea" "federico")
-(puppeteer_look "federico" "andrea")
 (if (= server_disconnected 1.0)
   (begin
     (say "federico" (get_dialog dialogs language 3) "federicofuepilogu_track3") ;preview: Connection lost - the unit is offline | looking at Andrea
@@ -124,6 +123,5 @@
     (say "federico" (get_dialog dialogs language 1) "federicofuepilogu_track1") ;preview: Upload 'slave.bin', please w... | looking at Andrea
     (say "andrea" (get_dialog dialogs language 2) "federicofuepilogu_track2")) ;preview: Good, load it! | looking at federico
   )
-(puppeteer_set "federico" "back")
 
 (main_control "andrea")

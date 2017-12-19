@@ -217,8 +217,10 @@ d_define_method(director, update)(struct s_object *self) {
     for (index = 0; index < e_director_pool_level_NULL; ++index)
         do {
             if ((current_action = (struct s_director_action *)director_attributes->actions_pool[index].head)) {
-                if (!current_action->execution_time)
+                if (!current_action->execution_time) {
                     current_action->execution_time = time(NULL);
+                    gettimeofday(&(current_action->precision_time), NULL);
+                }
                 if (d_call(self, m_director_dispatcher, current_action)) {
                     f_list_delete(&(director_attributes->actions_pool[index]), (struct s_list_node *)current_action);
                     d_free(current_action);
@@ -269,8 +271,12 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
     struct s_screenwriter_attributes *screenwriter_attributes;
     struct s_object *current_character;
     struct s_object *result = self;
-    double dimension_w, dimension_h;
+    struct timeval current_time, difference_time;
+    double dimension_w, dimension_h, elapsed_time;
     t_boolean limitations_enabled = d_false;
+    gettimeofday(&current_time, NULL);
+    timersub(&current_time, &(action->precision_time), &difference_time);
+    elapsed_time = (double)(difference_time.tv_sec) + (((double)difference_time.tv_usec)/1000000.0);
     switch (action->type) {
         case e_director_action_atomic:
             director_attributes->atomic_execution = !(director_attributes->atomic_execution);
@@ -294,7 +300,7 @@ d_define_method(director, dispatcher)(struct s_object *self, struct s_director_a
             result = d_call(director_attributes->screenwriter, m_screenwriter_run, action->action.label);
             break;
         case e_director_action_service_wait_time:
-            if ((action->execution_time + action->action.delay) > time(NULL))
+            if (action->action.delay >= elapsed_time)
                 result = NULL;
             break;
         case e_director_action_service_wait_message:

@@ -51,6 +51,7 @@ typedef struct s_director_action_camera_follow {
 typedef struct s_director_action { d_list_node_head;
     enum e_director_actions type;
     time_t creation_time, pushing_time, execution_time;
+    struct timeval precision_time;
     union {
         time_t delay;
         char label[d_resources_key_size];

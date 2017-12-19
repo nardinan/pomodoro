@@ -34,7 +34,12 @@
 ;Setup characters
 (puppeteer_show "maria" -200)
 (puppeteer_show "baker" 3500)
-(puppeteer_stare "baker" "andrea")
+(if (compare current_chapter "epilogue")
+  (begin
+    (puppeteer_stare "baker" "#null")
+    (puppeteer_set "baker" "front_loading"))
+  (puppeteer_stare "baker" "andrea")
+  )
 (if (compare current_chapter "quiet")
   (if (collector_get "yuriy_quiet_dialog_garibaldi")
     nil

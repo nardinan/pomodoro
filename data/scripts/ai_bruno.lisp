@@ -5,5 +5,5 @@
   (if (compare current_chapter "epilogue")
     (director_script "epilogue_ai_bruno")
     nil
+    )
   )
-)

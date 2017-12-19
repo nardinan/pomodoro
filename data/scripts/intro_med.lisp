@@ -19,7 +19,8 @@
 (director_script "update_items_interface")
 
 ;Collect environment
-(define from_where (collector_get "from_where"))
+(define from_where      (collector_get "from_where"))
+(define current_chapter (collector_get "current_chapter"))
 
 ;Configure
 (collector_set "from_where" "med")
@@ -28,7 +29,10 @@
 (puppeteer_show "siri" 2800)
 (puppeteer_set "siri" "none")
 (puppeteer_show "massimo" 2700)
-(puppeteer_set "massimo" "still_left")
+(if (compare current_chapter "epilogue")
+  (puppeteer_set "massimo" "front_loading")
+  (puppeteer_set "massimo" "still_left")
+  )
 (puppeteer_show "andrea" 590)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")
