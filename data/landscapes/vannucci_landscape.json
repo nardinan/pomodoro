@@ -7,7 +7,8 @@
 	"intro_script":"intro_vannucci",
 	"outro_script":"outro_vannucci",
 	"tracks":[
-		{"label":"people_background", "playable":"vannucci_background_noise"}
+		{"label":"people_background", "playable":"vannucci_background_noise"},
+    {"label":"birds_background",  "playable":"lupattelli_background_noise"}
 	],
 	"scripts":[
 		{"label":"update",	"script":"update_vannucci", "frequency":5}

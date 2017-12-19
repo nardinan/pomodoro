@@ -7,7 +7,8 @@
 	"intro_script":"intro_november",
 	"outro_script":"outro_november",
 	"tracks":[
-		{"label":"people_background", "playable":"november_background_noise"}
+		{"label":"people_background", "playable":"november_background_noise"},
+    {"label":"birds_background",  "playable":"lupattelli_background_noise"}
 	],
   "scripts":[
     {"label":"update",	"script":"update_november_long", "frequency":60},

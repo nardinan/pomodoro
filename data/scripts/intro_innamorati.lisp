@@ -19,7 +19,10 @@
 (director_script "update_items_interface")
 
 ;Play background
-(stagecrafter_play "traffic_background")
+(if (compare (collector_get "current_chapter") "epilogue")
+  (stagecrafter_play "birds_background")
+  (stagecrafter_play "traffic_background")
+  )
 
 ;Collect environment
 (define from_where              (collector_get "from_where"))

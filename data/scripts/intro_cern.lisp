@@ -283,11 +283,11 @@
 ;Environment configuration (music, effect, whatever)
 (effecteer_play "moscow_mule_relaxed" "moscow_mule_relaxed" 0 1000 10)
 (puppeteer_disable_control)
-(puppeteer_show "yuriy" 	1450)
-(puppeteer_show "andrii" 	2750)
-(puppeteer_set "yuriy" 			"back_code")
+(puppeteer_show "yuriy" 1450)
+(puppeteer_show "andrii" 2750)
+(puppeteer_set "yuriy" "back_code")
 (stagecrafter_set_item "computer_A" "coding_A")
-(puppeteer_set "andrii" 		"back_code")
+(puppeteer_set "andrii" "back_code")
 (stagecrafter_set_item "computer_C" "coding_C")
 
 ;Action!

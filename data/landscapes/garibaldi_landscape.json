@@ -7,7 +7,8 @@
 	"intro_script":"intro_garibaldi",
 	"outro_script":"outro_garibaldi",
 	"tracks":[
-		{"label":"traffic_background", "playable":"garibaldi_background_noise"}
+		{"label":"traffic_background",  "playable":"garibaldi_background_noise"},
+    {"label":"birds_background",    "playable":"lupattelli_background_noise"}
 	],
 	"scripts":[
 		{"label":"update",	"script":"update_garibaldi", "frequency":60}
