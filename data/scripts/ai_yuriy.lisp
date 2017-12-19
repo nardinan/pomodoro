@@ -11,7 +11,10 @@
     (director_script "virus_ai_andrea_space_and_time")
     (if (compare current_chapter "chaos")
       (director_script "chaos_ai_andrea_computer")
-      nil
+      (if (compare current_chapter "epilogue")
+        (director_script "epilogue_ai_yuriy")
+        nil
+        )
       )
     )
   )

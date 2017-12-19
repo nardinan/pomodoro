@@ -17,12 +17,10 @@ Sounds from freesound.org
 
 [MUSIC]
 Musics from openmusicarchive.org
-- Felix Thorn (Perforations)
 - Ozzie Nelson, Gus Kahn (Dream a little dream of me)
 
-Musics from newgrounds.com
-- Streampianist (Perditus Agnus Dei)
-
 Original pomodoro musics
+- And Now (Saverio Federici)
+- The Duel (Saverio Federici)
 - Stone paradise (Saverio Federici)
 - Moscow mule (Saverio Federici)

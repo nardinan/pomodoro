@@ -130,27 +130,29 @@
 (define got_temple_key          (collector_get "got_temple_key"))
 
 ;Action!
-(puppeteer_set "andrea" "front")
 (if (= got_temple_key 1.0)
   (begin
-    (say "andrea" (get_dialog dialogs language 7) "templockchaos_track7") ;preview: Here, behind this door, there... | animation front
-    (say "andrea" (get_dialog dialogs language 8) "templockchaos_track8") ;preview: You have the key, but Luna... | animation scratching his head
-    (say "andrea" (get_dialog dialogs language 9) "templockchaos_track9")) ;preview: Sorry. | animation scratching his head
-  (if (= request_temple_key 1.0)
-    (begin
-      (say "andrea" (get_dialog dialogs language 5) "templockchaos_track5") ;preview: Locked . . . | animation front
-      (say "andrea" (get_dialog dialogs language 6) "templockchaos_track6")) ;preview: . . . but I suspect that PD ... | animation scratching his head
-    (begin
-      (say "andrea" (get_dialog dialogs language 1) "templockchaos_track1") ;preview: Uhm, the door is locked . . . | animation front
-      (say "andrea" (get_dialog dialogs language 2) "templockchaos_track2") ;preview: . . . but seems that has bee... | animation front
-      (say "andrea" (get_dialog dialogs language 3) "templockchaos_track3") ;preview: Maybe PD is here! | animation front
-      (say "andrea" (get_dialog dialogs language 4) "templockchaos_track4") ;preview: I think is better to look ar... | animation front
+    (collector_set "current_chapter" "epilogue")
+    (collector_set "show_chapter_four" 1.0)
 
-      ;And never again
-      (collector_set "request_temple_key" 1.0))
-    )
+    (collector_set "destination_scenario" "temple")
+    (director_script "change_scenario"))
+  (begin
+    (puppeteer_set "andrea" "front")
+    (if (= request_temple_key 1.0)
+      (begin
+        (say "andrea" (get_dialog dialogs language 5) "templockchaos_track5") ;preview: Locked . . . | animation front
+        (say "andrea" (get_dialog dialogs language 6) "templockchaos_track6")) ;preview: . . . but I suspect that PD ... | animation scratching his head
+      (begin
+        (say "andrea" (get_dialog dialogs language 1) "templockchaos_track1") ;preview: Uhm, the door is locked . . . | animation front
+        (say "andrea" (get_dialog dialogs language 2) "templockchaos_track2") ;preview: . . . but seems that has bee... | animation front
+        (say "andrea" (get_dialog dialogs language 3) "templockchaos_track3") ;preview: Maybe PD is here! | animation front
+        (say "andrea" (get_dialog dialogs language 4) "templockchaos_track4") ;preview: I think is better to look ar... | animation front
+
+        ;And never again
+        (collector_set "request_temple_key" 1.0))
+      ))
   )
-
 
 ;Return the control
 (main_control "andrea")

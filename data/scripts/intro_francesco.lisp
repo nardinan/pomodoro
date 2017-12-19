@@ -33,25 +33,28 @@
 (collector_set "from_where" "francesco")
 
 ;Setup characters
-(if (compare current_chapter "chaos")
-  (begin
-    ;Check fologna
-    (if (= (+ (+ fologna_step_mac fologna_step_blackout) (+ fologna_step_bus fologna_step_enel)) 4.0)
-      (begin
-        (collector_set "fologna_enabled"        1.0)
-        (collector_set "fologna_step_mac"       0.0)
-        (collector_set "fologna_step_blackout"  0.0)
-        (collector_set "fologna_step_bus"       0.0)
-        (collector_set "fologna_step_enel"      0.0))
-      nil
-      )
-    (puppeteer_show "private_kennedy" 4000)
-    (puppeteer_show "private_richard" 4500)
-    (puppeteer_look "private_kennedy" "private_richard")
-    (puppeteer_look "private_richard" "private_kennedy"))
-  (begin
-    (puppeteer_show "roberto" 5000)
-    (puppeteer_stare "roberto" "andrea"))
+(if (compare current_chapter "epilogue")
+  nil
+  (if (compare current_chapter "chaos")
+    (begin
+      ;Check fologna
+      (if (= (+ (+ fologna_step_mac fologna_step_blackout) (+ fologna_step_bus fologna_step_enel)) 4.0)
+        (begin
+          (collector_set "fologna_enabled"        1.0)
+          (collector_set "fologna_step_mac"       0.0)
+          (collector_set "fologna_step_blackout"  0.0)
+          (collector_set "fologna_step_bus"       0.0)
+          (collector_set "fologna_step_enel"      0.0))
+        nil
+        )
+      (puppeteer_show "private_kennedy" 4000)
+      (puppeteer_show "private_richard" 4500)
+      (puppeteer_look "private_kennedy" "private_richard")
+      (puppeteer_look "private_richard" "private_kennedy"))
+    (begin
+      (puppeteer_show "roberto" 5000)
+      (puppeteer_stare "roberto" "andrea"))
+    )
   )
 (if (compare from_where "innamorati")
   (puppeteer_show "andrea" 8700)

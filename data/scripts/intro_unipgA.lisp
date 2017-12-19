@@ -22,16 +22,21 @@
 (stagecrafter_play "people_background")
 
 ;Collect environment
-(define from_where      (collector_get "from_where"))
-(define current_chapter (collector_get "current_chapter"))
+(define from_where          (collector_get "from_where"))
+(define current_chapter     (collector_get "current_chapter"))
+(define server_disconnected (collector_get "server_disconnected"))
 
 ;Configure
 (collector_set "from_where" "unipgA")
 
-;Setup characters
+;Setup character
 (stagecrafter_set_item "computer_A" "coding_A")
 (puppeteer_show "nerd" 7040)
 (puppeteer_set "nerd" "back_code")
+(if (= server_disconnected 1)
+  (stagecrafter_set_item "rack_A" "still_A")
+  nil
+  )
 (if (compare current_chapter "virus")
   (begin
     (puppeteer_show "bruno" 5800)
@@ -40,7 +45,12 @@
     (begin
       (puppeteer_show "roberto" 3000)
       (puppeteer_stare "roberto" "andrea"))
-    nil
+    (if (compare current_chapter "epilogue")
+      (begin
+        (puppeteer_show "roberto" 3000)
+        (puppeteer_stare "roberto" "andrea"))
+      nil
+      )
     )
   )
 (if (compare from_where "innamorati")

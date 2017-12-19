@@ -354,6 +354,61 @@
         "drawable": "legs_set_blank_side_walk_frame0",
         "offset_y": 20
       }
+    },
+    {
+      "label": "hung_front",
+      "flip_x": true,
+      "head": {
+        "drawable": "head_set_blank_front",
+        "offset_y": -30
+      },
+      "hair": {
+        "drawable": "hair_set_medium_beard_front",
+        "offset_y": -30
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_front",
+        "offset_y": -30
+      },
+      "body": {
+        "drawable": "body_set_blank_front",
+        "offset_y": -20
+      },
+      "arms": {
+        "drawable": "arms_set_blank_front_high",
+        "offset_y": -20
+      },
+      "legs": {
+        "drawable": "legs_set_blank_front",
+        "offset_y": -10
+      }
+    },
+    {
+      "label": "hung_left",
+      "head": {
+        "drawable": "head_set_blank_side",
+        "offset_y": -30
+      },
+      "hair": {
+        "drawable": "hair_set_medium_beard_side",
+        "offset_y": -30
+      },
+      "eyes": {
+        "drawable": "eyes_set_blank_side",
+        "offset_y": -30
+      },
+      "body": {
+        "drawable": "body_set_blank_front",
+        "offset_y": -20
+      },
+      "arms": {
+        "drawable": "arms_set_blank_front_high",
+        "offset_y": -20
+      },
+      "legs": {
+        "drawable": "legs_set_blank_front",
+        "offset_y": -10
+      }
     }
   ]
 }

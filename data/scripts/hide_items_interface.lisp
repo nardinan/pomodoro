@@ -6,7 +6,10 @@
     (director_script "virus_delete_items_interface")
     (if (compare current_chapter "chaos")
       (director_script "chaos_delete_items_interface")
-      nil
+      (if (compare current_chapter "epilogue")
+        (director_script "epilogue_delete_items_interface")
+        nil
+        )
       )
     )
   )

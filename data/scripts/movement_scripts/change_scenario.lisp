@@ -35,14 +35,14 @@
 (define show_chapter_two   (check_chapter "show_chapter_two"   "done_chapter_two"))
 (define show_chapter_three (check_chapter "show_chapter_three" "done_chapter_three"))
 (define show_chapter_four  (check_chapter "show_chapter_four"  "done_chapter_four"))
-(define show_chapter_five  (check_chapter "show_chapter_five"  "done_chapter_five"))
 
-(define show_chapters (+ (+ (+ (+ show_chapter_one show_chapter_two) show_chapter_three) show_chapter_four) show_chapter_five))
+(define show_chapters (+ (+ (+ show_chapter_one show_chapter_two) show_chapter_three) show_chapter_four))
 
 ;If we have to show a chapter entry title, is better to stop the music my dear
 (if (> show_chapters 0.0)
   (begin
     (effecteer_stop  "stone_paradise")
+    (effecteer_stop  "the_duel")
     (director_script "hide_items_interface"))
   nil
   )
@@ -69,9 +69,7 @@
           (effecteer_add "chapter_screen_animation" "intro_chapter_three" (+ 480 450) (+ 360 180) 10 0 t nil)
           (if (= show_chapter_four 1.0)
             (effecteer_add "chapter_screen_animation" "intro_chapter_four" (+ 480 450) (+ 360 180) 10 0 t nil)
-            (if (= show_chapter_five 1.0)
-              (effecteer_add "chapter_screen_animation" "intro_chapter_five" (+ 480 450) (+ 360 180) 10 0 t nil)
-              nil)
+            nil
             )
           )
         )
@@ -87,7 +85,10 @@
     (effecteer_delete "chapter_screen_music")
 
     ;And now, please, play the track
-    (effecteer_play "stone_paradise" "stone_paradise" 2000 2000 16))
+    (if (= (collector_get "temple_part_two") 1.0)
+      (effecteer_play "the_duel" "the_duel" 2000 2000 16)
+      (effecteer_play "stone_paradise" "stone_paradise" 2000 2000 16)
+      ))
   nil
   )
 

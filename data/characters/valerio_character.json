@@ -389,6 +389,12 @@
         "drawable": "legs_set_blank_front",
         "offset_y": 20
       }
+    },
+    {
+      "label": "none",
+      "body": {
+        "drawable": "empty_particle"
+      }
     }
   ]
 }

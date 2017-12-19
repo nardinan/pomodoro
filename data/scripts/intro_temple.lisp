@@ -28,6 +28,16 @@
 (collector_set "from_where" "temple")
 
 ;Setup characters
+(puppeteer_show "luna"  4000)
+(puppeteer_set  "luna" "hung_front")
+(puppeteer_show "luca"  4400)
+(puppeteer_set  "luca" "hung_front")
+(puppeteer_show "bruno"  4000)
+(puppeteer_set  "bruno" "still_left")
+(puppeteer_show "valerio" 3430)
+(puppeteer_set "valerio" "none")
 (puppeteer_show "andrea" 1300)
 (puppeteer_set "andrea" "front")
 (main_control "andrea")
+
+(director_script "epilogue_intro_temple")

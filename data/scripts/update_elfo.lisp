@@ -2,5 +2,8 @@
 (define current_chapter (collector_get "current_chapter"))
 (if (compare current_chapter "chaos")
   (director_script "chaos_update_elfo")
-  nil
+  (if (compare current_chapter "epilogue")
+    (director_script "epilogue_update_elfo")
+    nil
+    )
   )

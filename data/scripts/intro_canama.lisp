@@ -140,11 +140,14 @@
 (puppeteer_show "andrea" 450)
 (if (= intro_canama 1.0)
   (if (= got_note 1.0)
-    (if (compare current_chapter "chaos")
+    (if (compare current_chapter "epilogue")
       nil
-      (begin
-        (puppeteer_show "luca" 4500)
-        (puppeteer_stare "luca" "andrea"))
+      (if (compare current_chapter "chaos")
+        nil
+        (begin
+          (puppeteer_show "luca" 4500)
+          (puppeteer_stare "luca" "andrea"))
+        )
       )
     nil
     )

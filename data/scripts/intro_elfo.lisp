@@ -27,20 +27,29 @@
 (collector_set "from_where" "elfo")
 
 ;Setup characters
-(if (compare current_chapter "chaos")
-  (if (= done_location 1.0)
-    (begin
-      (puppeteer_show "caprini" 3000)
-      (puppeteer_set "caprini" "drink_left")
-      (puppeteer_show "yuriy" 2600)
-      (puppeteer_set "yuriy" "drink_left")
-      (puppeteer_show "andrii" 2200)
-      (puppeteer_set "andrii" "drink_right"))
-    nil
-    )
+(if (compare current_chapter "epilogue")
   (begin
-    (puppeteer_show "caprini"  3000)
-    (puppeteer_stare "caprini" "andrea"))
+    (puppeteer_show "caprini" 3000)
+    (puppeteer_set "caprini" "drink_left")
+    (puppeteer_show "yuriy" 2000)
+    (puppeteer_set "yuriy" "drink_left")
+    (puppeteer_show "andrii" 1000)
+    (puppeteer_set "andrii" "drink_right"))
+  (if (compare current_chapter "chaos")
+    (if (= done_location 1.0)
+      (begin
+        (puppeteer_show "caprini" 3000)
+        (puppeteer_set "caprini" "drink_left")
+        (puppeteer_show "yuriy" 2600)
+        (puppeteer_set "yuriy" "drink_left")
+        (puppeteer_show "andrii" 2200)
+        (puppeteer_set "andrii" "drink_right"))
+      nil
+      )
+    (begin
+      (puppeteer_show "caprini"  3000)
+      (puppeteer_stare "caprini" "andrea"))
+    )
   )
 (puppeteer_show "andrea" 300)
 (puppeteer_set "andrea" "front")

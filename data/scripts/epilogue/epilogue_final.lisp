@@ -36,7 +36,7 @@
                     "A quel punto ho pensato: perche' non usare un cervello umano")
                   (cons ;10 PD
                     "to beat the professor and pass the test?"
-                    "per batter il professore e passare l'esame?")
+                    "per battere il professore e passare l'esame?")
                   (cons ;11 PD
                     "The plan was ther, but the guinea pig was still missing ... "
                     "Il piano era li, ma mancava la vittima sacrificale ...")
@@ -126,12 +126,19 @@
       )
     )
   )
+
+;Stop everything
+(effecteer_stop   "stone_paradise")
+(effecteer_add    "clear_out" "fade_out" (+ 480 450) (+ 360 180) 4 0 t t)
+(director_wait_time 3)
+(effecteer_delete "stone_paradise")
+
 ;Music
 (effecteer_play "and_now" "and_now" 2000 2000 8 nil)
-(director_wait_time 2.0)
+(director_wait_time 2)
 
 ;Slide number one
-(effecteer_add   "test0A"    "epilogue_1_middle" -1000 -500 1.0 0 t t)
+(effecteer_add   "slide0A"    "epilogue_1_middle" -1000 -500 1.0 0 t t)
 (effecteer_play  "message1"  "epilogue_temple01" 0 0 128 nil)
 (subtitle "subtitle1" 1 (get_dialog dialogs language 1))
 (subtitle "subtitle2" 2 (get_dialog dialogs language 2))
@@ -160,14 +167,14 @@
 (director_wait_time 1)
 (effecteer_delete "subtitle2")
 (director_wait_time 1)
-(effecteer_delete "test0A")
+(effecteer_delete "slide0A")
 (effecteer_delete "message1")
 (effecteer_delete "message2")
 (effecteer_delete "message3")
 (effecteer_delete "message4")
 
 ;Slide number two
-(effecteer_add "test0B"     "epilogue_2_middle" -1000  -500 1.0 0 t t)
+(effecteer_add "slide0B"     "epilogue_2_middle" -1000  -500 1.0 0 t t)
 (effecteer_play "message1"  "epilogue_temple05" 0 0 128 nil)
 (subtitle "subtitle1" 2 (get_dialog dialogs language 7))
 (subtitle "subtitle2" 3 (get_dialog dialogs language 8))
@@ -176,11 +183,11 @@
 (director_wait_time 1)
 (effecteer_delete "subtitle2")
 (director_wait_time 6)
-(effecteer_delete "test0B")
+(effecteer_delete "slide0B")
 (effecteer_delete "message1")
 
 ;Slide number three
-(effecteer_add "test0C"     "epilogue_3_middle" -1000  -500 1.0 0 t t)
+(effecteer_add "slide0C"     "epilogue_3_middle" -1000  -500 1.0 0 t t)
 (effecteer_play "message1"  "epilogue_temple06" 0 0 128 nil)
 (subtitle "subtitle1" 2 (get_dialog dialogs language 9))
 (subtitle "subtitle2" 3 (get_dialog dialogs language 10))
@@ -205,7 +212,7 @@
 (director_wait_time 1)
 (effecteer_delete "subtitle2")
 (director_wait_time 1)
-(effecteer_delete "test0C")
+(effecteer_delete "slide0C")
 (effecteer_delete "message1")
 (effecteer_delete "message2")
 (effecteer_delete "message3")
@@ -246,24 +253,24 @@
 (effecteer_delete "test3E")
 
 ;Slide number six
-(effecteer_add "test0F" "epilogue_6_middle"     -1000  -500 1.0 0 t t)
+(effecteer_add "slide0F" "epilogue_6_middle"     -1000  -500 1.0 0 t t)
 (effecteer_play "message1" "epilogue_temple11" 0 0 128 nil)
 (subtitle "subtitle1" 3 (get_dialog dialogs language 18))
 (director_wait_time 4)
 (effecteer_delete "subtitle1")
 (director_wait_time 12)
 (effecteer_delete "message1")
-(effecteer_delete "test0F")
+(effecteer_delete "slide0F")
 
 ;Slide number seven
-(effecteer_add "test0G" "epilogue_7_middle"     -1000  -500 1.0 0 t t)
+(effecteer_add "slide0G" "epilogue_7_middle"     -1000  -500 1.0 0 t t)
 (effecteer_play "message1" "epilogue_temple12" 0 0 128 nil)
 (subtitle "subtitle1" 3 (get_dialog dialogs language 19))
 (director_wait_time 4)
 (effecteer_delete "subtitle1")
 (director_wait_time 7)
 (effecteer_delete "message1")
-(effecteer_delete "test0G")
+(effecteer_delete "slide0G")
 
 (effecteer_play "message1" "epilogue_temple13" 0 0 128 nil)
 (subtitle "subtitle1" 2 (get_dialog dialogs language 20))
@@ -285,14 +292,14 @@
 (effecteer_delete "message2")
 
 ;Slide number eight
-(effecteer_add "test0H" "epilogue_8_middle"     -1000  -500 1.0 0 t t)
+(effecteer_add "slide0H" "epilogue_8_middle"     -1000  -500 1.0 0 t t)
 (effecteer_play "message1" "epilogue_temple15" 0 0 128 nil)
 (subtitle "subtitle1" 3 (get_dialog dialogs language 24))
 (director_wait_time 2)
 (effecteer_delete "subtitle1")
 (director_wait_time 12)
 (effecteer_delete "message1")
-(effecteer_delete "test0H")
+(effecteer_delete "slide0H")
 
 
 (effecteer_play "message1" "epilogue_temple16" 0 0 128 nil)
@@ -306,7 +313,7 @@
 (effecteer_delete "message1")
 
 ;Slide number nine
-(effecteer_add "test0I" "epilogue_9_middle"     -1000  -500 1.0 0 t t)
+(effecteer_add "slide0I" "epilogue_9_middle"     -1000  -500 1.0 0 t t)
 (effecteer_play "message1" "epilogue_temple17" 0 0 128 nil)
 (subtitle "subtitle1" 1 (get_dialog dialogs language 27))
 (subtitle "subtitle2" 2 (get_dialog dialogs language 28))
@@ -321,7 +328,7 @@
 (effecteer_delete "message1")
 (effecteer_delete "message2")
 (effecteer_delete "message3")
-(effecteer_delete "test0I")
+(effecteer_delete "slide0I")
 
 (effecteer_play "message1" "epilogue_temple18" 0 0 128 nil)
 (subtitle "subtitle1" 3 (get_dialog dialogs language 30))
@@ -331,3 +338,11 @@
 (effecteer_delete "message1")
 
 (effecteer_delete "and_now")
+
+;Wait for the end of the epilogue animation
+(effecteer_play "the_duel" "the_duel" 2000 2000 16)
+(effecteer_delete "clear_out")
+
+;Move to the next act
+(collector_set "temple_part_two" 1.0)
+(director_script "epilogue_intro_temple")

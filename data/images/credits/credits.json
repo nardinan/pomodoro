@@ -1,0 +1,16 @@
+{
+  "format":"transition",
+  "ID":"credits",
+  "drawable":"credits_image",
+  "keys":[{
+    "position_x":0.0,
+    "position_y":-1000.0,
+    "zoom":5.0,
+    "time":0.0
+  },{
+    "position_x":0.0,
+    "position_y":1000.0,
+    "zoom":5.0,
+    "time":30.0
+  }]
+}

@@ -24,9 +24,19 @@
 				{"drawable":"boss_left_angry"}
 			]
 		},{
+			"label":"right_angry",
+			"layers":[
+				{"drawable":"boss_right_angry"}
+			]
+		},{
 			"label":"left_really_angry",
 			"layers":[
 				{"drawable":"boss_left_really_angry"}
+			]
+		},{
+			"label":"right_really_angry",
+			"layers":[
+				{"drawable":"boss_right_really_angry"}
 			]
 		},{
 			"label":"offline",

@@ -26,6 +26,7 @@
 
 ;Stop the background music
 (effecteer_stop "stone_paradise")
+(effecteer_stop "the_duel")
 
 ;Setup characters
 (puppeteer_show "chaos" 2900)

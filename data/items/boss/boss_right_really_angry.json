@@ -1,0 +1,26 @@
+{
+	"format":"animation",
+	"cycles":-1,
+	"frames":[
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame1",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame0",  "time":0.1},
+		{"drawable":"boss_right_really_angry_frame2",  "time":0.1}
+	]
+}
