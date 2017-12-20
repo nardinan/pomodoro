@@ -137,8 +137,10 @@ d_define_method(item, mute)(struct s_object *self) {
 d_define_method(item, play)(struct s_object *self) {
     d_using(item);
     item_attributes->audio = d_true;
-    if (item_attributes->current_track)
-        d_call(item_attributes->current_track->track, m_track_play, d_true);
+    if (item_attributes->current_track) {
+        d_call(item_attributes->current_track->track, m_track_set_volume, (d_track_default_volume * d_pomodoro_general_volume));
+        d_call(item_attributes->current_track->track, m_track_play, d_true); 
+    }
     return self;
 }
 
@@ -164,8 +166,10 @@ d_define_method_override(item, set_component)(struct s_object *self, char *label
     d_foreach(&(item_attributes->tracks), current_track, struct s_item_track)
         if (f_string_strcmp(current_track->label, label) == 0) {
             item_attributes->current_track = current_track;
-            if (item_attributes->audio)
+            if (item_attributes->audio) {
+                d_call(item_attributes->current_track->track, m_track_set_volume, (d_track_default_volume * d_pomodoro_general_volume));
                 d_call(item_attributes->current_track->track, m_track_play, d_true);
+            }
             break;
         }
     return result;

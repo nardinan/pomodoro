@@ -16,4 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "miranda.h"
-/* do nothing */
+double d_pomodoro_width_window          = 1280;
+double d_pomodoro_height_window         = 720;
+const double d_pomodoro_width           = 1280;
+const double d_pomodoro_height          = 720;
+const double d_pomodoro_scale_factor    = 1.5;
+double d_pomodoro_general_volume        = 1.0;
+

@@ -232,7 +232,7 @@ d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, 
         effecteer_attributes->tracks[index].volume = volume;
         effecteer_attributes->tracks[index].loop = loop;
         if (!v_developer_mode) {
-            d_call(effecteer_attributes->tracks[index].track, m_track_set_volume, effecteer_attributes->tracks[index].volume);
+            d_call(effecteer_attributes->tracks[index].track, m_track_set_volume, (effecteer_attributes->tracks[index].volume * d_pomodoro_general_volume));
             d_call(effecteer_attributes->tracks[index].track, m_track_set_loops, ((effecteer_attributes->tracks[index].loop)?d_track_infinite_loop:0));
             d_call(effecteer_attributes->tracks[index].track, m_track_play_fade_in, d_true, effecteer_attributes->tracks[index].fade_in);
         }
@@ -244,7 +244,7 @@ d_define_method(effecteer, write_effect)(struct s_object *self, const char *key,
         int font_ID, int font_style, int layer) {
     d_using(effecteer);
     struct s_factory_attributes *factory_attributes = d_cast(effecteer_attributes->factory, factory);
-    double scaled_current_width, scaled_current_height, final_position_x;
+    double final_position_x;
     int index, font_height;
     TTF_Font *selected_font;
     for (index = 0; index < d_effecteer_default_max_labels; ++index)

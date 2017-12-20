@@ -213,8 +213,10 @@ d_define_method(bubble, skip)(struct s_object *self) {
     if (!bubble_attributes->current_element)
         if ((bubble_attributes->current_element = (struct s_bubble_message *)bubble_attributes->messages.head)) {
             f_list_delete(&(bubble_attributes->messages), (struct s_list_node *)bubble_attributes->current_element);
-            if (bubble_attributes->current_element->track)
+            if (bubble_attributes->current_element->track) {
+                d_call(bubble_attributes->current_element->track, m_track_set_volume, (d_track_default_volume * d_pomodoro_general_volume));
                 d_call(bubble_attributes->current_element->track, m_track_play, NULL);
+            }
             if (bubble_attributes->current_element->options.fill > 0)
                 bubble_attributes->last_value = d_bubble_no_value;
         }

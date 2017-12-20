@@ -236,8 +236,10 @@ d_define_method(landscape, play)(struct s_object *self, const char *label) {
     d_call(self, m_landscape_stop, NULL);
     d_foreach(&(landscape_attributes->tracks), current_track, struct s_landscape_track)
         if (f_string_strcmp(current_track->label, label) == 0) {
-            if (current_track->track)
-               d_call(current_track->track, m_track_play_fade_in, d_true, d_landscape_fade_in_time);
+            if (current_track->track) {
+                d_call(current_track->track, m_track_set_volume, (d_track_default_volume * d_pomodoro_general_volume));
+                d_call(current_track->track, m_track_play_fade_in, d_true, d_landscape_fade_in_time);
+            }
             break;
         }
     return self;
@@ -278,7 +280,7 @@ d_define_method(landscape, get_dimension)(struct s_object *self, double *dimensi
             d_call(current_surface->drawable, m_drawable_get_scaled_dimension, dimension_w, dimension_h);
             break;
         }
-   return self;
+    return self;
 }
 
 d_define_method(landscape, floor)(struct s_object *self, double position_x, double *position_y, double *dimension_h, double *scale_min, double *scale_max) {

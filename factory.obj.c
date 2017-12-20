@@ -25,43 +25,48 @@ struct s_factory_attributes *p_factory_alloc(struct s_object *self) {
 
 struct s_object *f_factory_new(struct s_object *self, struct s_object *resources_png, struct s_object *resources_ttf, struct s_object *resources_json,
         struct s_object *resources_ogg, struct s_object *resources_lisp, struct s_object *environment) {
+    struct s_exception *exception;
     struct s_factory_attributes *attributes = p_factory_alloc(self);
     struct s_object *font;
     struct s_object *stream;
     double font_size, font_outline, language = 0.0; /* english by default */
     char *game_buffer, *name_buffer, *mail_buffer, *font_buffer;
     int index = 0;
-    attributes->resources_png = d_retain(resources_png);
-    attributes->resources_ttf = d_retain(resources_ttf);
-    attributes->resources_json = d_retain(resources_json);
-    attributes->resources_ogg = d_retain(resources_ogg);
-    attributes->resources_lisp = d_retain(resources_lisp);
-    attributes->environment = d_retain(environment);
-    attributes->current_channel = d_factory_min_channels;
-    if ((attributes->font_system = f_fonts_new(d_new(fonts)))) {
-        if ((stream = d_call(attributes->resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common)))
-            if ((attributes->json_configuration = f_json_new_stream(d_new(json), stream))) {
-                d_call(attributes->json_configuration, m_json_get_string, &game_buffer, "s", "game");
-                d_call(attributes->json_configuration, m_json_get_string, &name_buffer, "s", "author");
-                d_call(attributes->json_configuration, m_json_get_string, &mail_buffer, "s", "email");
-                d_call(attributes->json_configuration, m_json_get_double, &language, "s", "language");
-                attributes->current_language = (int)language;
-                d_log(e_log_level_ever, "[%s - developed by %s (%s)]", game_buffer, name_buffer, mail_buffer);
-                while (d_call(attributes->json_configuration, m_json_get_string, &font_buffer, "sds", "fonts", index, "font")) {
-                    font_size = d_factory_default_font_size;
-                    font_outline = d_factory_default_font_outline;
-                    d_call(attributes->json_configuration, m_json_get_double, &font_size, "sds", "fonts", index, "size");
-                    d_call(attributes->json_configuration, m_json_get_double, &font_outline, "sds", "fonts", index, "outline");
-                    if ((font = d_call(attributes->resources_ttf, m_resources_get_stream, font_buffer, e_resources_type_common))) {
-                        d_call(attributes->font_system, m_fonts_add_font, index, font, (int)font_size);
-                        if (font_outline > 0)
-                            d_call(attributes->font_system, m_fonts_set_outline, index, (int)font_outline);
+    d_try {
+        attributes->resources_png = d_retain(resources_png);
+        attributes->resources_ttf = d_retain(resources_ttf);
+        attributes->resources_json = d_retain(resources_json);
+        attributes->resources_ogg = d_retain(resources_ogg);
+        attributes->resources_lisp = d_retain(resources_lisp);
+        attributes->environment = d_retain(environment);
+        attributes->current_channel = d_factory_min_channels;
+        if ((attributes->font_system = f_fonts_new(d_new(fonts)))) {
+            if ((stream = d_call(attributes->resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common)))
+                if ((attributes->json_configuration = f_json_new_stream(d_new(json), stream))) {
+                    d_call(attributes->json_configuration, m_json_get_string, &game_buffer, "s", "game");
+                    d_call(attributes->json_configuration, m_json_get_string, &name_buffer, "s", "author");
+                    d_call(attributes->json_configuration, m_json_get_string, &mail_buffer, "s", "email");
+                    d_call(attributes->json_configuration, m_json_get_double, &language, "s", "language");
+                    attributes->current_language = (int)language;
+                    while (d_call(attributes->json_configuration, m_json_get_string, &font_buffer, "sds", "fonts", index, "font")) {
+                        font_size = d_factory_default_font_size;
+                        font_outline = d_factory_default_font_outline;
+                        d_call(attributes->json_configuration, m_json_get_double, &font_size, "sds", "fonts", index, "size");
+                        d_call(attributes->json_configuration, m_json_get_double, &font_outline, "sds", "fonts", index, "outline");
+                        if ((font = d_call(attributes->resources_ttf, m_resources_get_stream, font_buffer, e_resources_type_common))) {
+                            d_call(attributes->font_system, m_fonts_add_font, index, font, (int)font_size);
+                            if (font_outline > 0)
+                                d_call(attributes->font_system, m_fonts_set_outline, index, (int)font_outline);
+                        }
+                        ++index;
                     }
-                    ++index;
                 }
-            }
-    } else
-        d_die(d_error_malloc);
+        } else
+            d_die(d_error_malloc);
+    } d_catch(exception) {
+        d_exception_dump(stderr, exception);
+        d_raise;
+    } d_endtry;
     return self;
 }
 

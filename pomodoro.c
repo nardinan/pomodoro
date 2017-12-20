@@ -28,7 +28,7 @@ struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json,
 struct s_object *factory;
 unsigned int current_loop = 0;
 t_boolean v_developer_mode = d_false;
-int pomodoro_load_call(struct s_object *environment) {
+void pomodoro_initialize_resources(void) {
     struct s_exception *exception;
     struct s_object *resources_path = f_string_new_constant(d_new(string), d_pomodoro_resources),
                     *template_png   = f_string_new_constant(d_new(string), d_pomodoro_resources_default_png),
@@ -42,15 +42,24 @@ int pomodoro_load_call(struct s_object *environment) {
         d_assert(resources_json = f_resources_new_template(d_new(resources), resources_path, template_json, ".json"));
         d_assert(resources_ogg = f_resources_new_template(d_new(resources), resources_path, template_ogg, ".wav.ogg"));
         d_assert(resources_lisp = f_resources_new_template(d_new(resources), resources_path, template_lisp, ".lisp"));
+        d_delete(template_lisp);
+        d_delete(template_ogg);
+        d_delete(template_json);
+        d_delete(template_ttf);
+        d_delete(template_png);
+        d_delete(resources_path);
+    } d_catch(exception) {
+        d_exception_dump(stderr, exception);
+        d_raise;
+    } d_endtry;
+}
+
+int pomodoro_load_call(struct s_object *environment) {
+    struct s_exception *exception;
+    d_try {
         d_assert(factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, resources_lisp, environment));
         d_assert(director = f_director_new(d_new(director), factory));
         d_call(director, m_director_run_script, "initialize_script");
-        d_delete(template_png);
-        d_delete(template_ttf);
-        d_delete(template_json);
-        d_delete(template_ogg);
-        d_delete(template_lisp);
-        d_delete(resources_path);
     } d_catch(exception) {
         d_exception_dump(stderr, exception);
         d_raise;
@@ -87,6 +96,8 @@ void pomodoro_change_location(const char *application) {
 int main (int argc, char *argv[]) {
     struct s_exception *exception;
     struct s_object *environment;
+    struct s_object *stream;
+    struct s_object *json_configuration;
     double final_resolution_x, final_resolution_y, scale_resolution_x, scale_resolution_y;
     t_boolean fullscreen = d_false;
     d_pool_init;
@@ -105,16 +116,20 @@ int main (int argc, char *argv[]) {
     d_pool_begin("main context") {
         /* wait the unlock */
         d_try {
+            pomodoro_initialize_resources();
+            if ((stream = d_call(resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common))) {
+                if ((json_configuration = f_json_new_stream(d_new(json), stream))) {
+                    d_call(json_configuration, m_json_get_double, &d_pomodoro_general_volume, "s", "volume");
+                    d_call(json_configuration, m_json_get_double, &d_pomodoro_width_window, "s", "width");
+                    d_call(json_configuration, m_json_get_double, &d_pomodoro_height_window, "s", "height");
+                    d_call(json_configuration, m_json_get_boolean, &fullscreen, "s", "fullscreen");
+                    d_delete(json_configuration);
+                }
+            }
             final_resolution_x = d_pomodoro_width_window;
             final_resolution_y = d_pomodoro_height_window;
             scale_resolution_x = (d_pomodoro_width * d_pomodoro_scale_factor);
             scale_resolution_y = (d_pomodoro_height * d_pomodoro_scale_factor);
-            if (v_developer_mode) {
-                final_resolution_x = d_pomodoro_developer_width;
-                final_resolution_y = d_pomodoro_developer_height;
-                scale_resolution_x = (d_pomodoro_developer_width * d_pomodoro_developer_scale_factor);
-                scale_resolution_y = (d_pomodoro_developer_height * d_pomodoro_developer_scale_factor);
-            }
             environment = f_environment_new_fullscreen(d_new(environment), final_resolution_x, final_resolution_y, fullscreen);
             d_call(environment, m_environment_set_methods, &pomodoro_load_call, &pomodoro_loop_call, &pomodoro_quit_call);
             d_call(environment, m_environment_set_reference, scale_resolution_x, scale_resolution_y, e_environment_surface_primary);
