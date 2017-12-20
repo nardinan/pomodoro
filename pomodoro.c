@@ -134,6 +134,8 @@ int main (int argc, char *argv[]) {
             d_call(environment, m_environment_set_methods, &pomodoro_load_call, &pomodoro_loop_call, &pomodoro_quit_call);
             d_call(environment, m_environment_set_reference, scale_resolution_x, scale_resolution_y, e_environment_surface_primary);
             d_call(environment, m_environment_set_reference, scale_resolution_x, scale_resolution_y, e_environment_surface_ui);
+            d_call(environment, m_environment_set_focus, 0.0, 0.0, e_environment_surface_primary);
+            d_call(environment, m_environment_set_focus, 0.0, 0.0, e_environment_surface_ui);
             d_call(environment, m_environment_set_title, d_pomodoro_title);
             d_call(environment, m_environment_set_channels, d_factory_max_channels);
             d_call(environment, m_environment_run_loop, NULL);

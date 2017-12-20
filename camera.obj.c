@@ -40,12 +40,18 @@ d_define_method(camera, move_position)(struct s_object *self, double position_x,
     camera_attributes->starting_x = environment_attributes->camera_origin_x[camera_attributes->surface];
     camera_attributes->starting_y = environment_attributes->camera_origin_y[camera_attributes->surface];
     camera_attributes->starting_z = environment_attributes->zoom[camera_attributes->surface];
+    if (position_z == position_z) {
+        camera_attributes->destination_z = position_z;
+        position_x *= camera_attributes->destination_z;
+        position_y *= camera_attributes->destination_z;
+    } else {
+        position_x *= environment_attributes->zoom[camera_attributes->surface];
+        position_y *= environment_attributes->zoom[camera_attributes->surface];
+    }
     real_position_x = position_x * (environment_attributes->current_w / environment_attributes->reference_w[camera_attributes->surface]);
     real_position_y = position_y * (environment_attributes->current_h / environment_attributes->reference_h[camera_attributes->surface]);
     camera_attributes->destination_x = (real_position_x - (environment_attributes->current_w / 2.0));
     camera_attributes->destination_y = (real_position_y - (environment_attributes->current_h / 2.0));
-    if (position_z == position_z)
-        camera_attributes->destination_z = position_z;
     camera_attributes->distance_xy = sqrt((d_math_square(camera_attributes->destination_x - camera_attributes->starting_x) + 
                 d_math_square(camera_attributes->destination_y - camera_attributes->starting_y)));
     return self;
@@ -54,19 +60,27 @@ d_define_method(camera, move_position)(struct s_object *self, double position_x,
 d_define_method(camera, set_position)(struct s_object *self, double position_x, double position_y, double position_z, struct s_object *environment) {
     d_using(camera);
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
-    camera_attributes->destination_x = (position_x - (environment_attributes->current_w / 2.0));
-    camera_attributes->destination_y = (position_y - (environment_attributes->current_h / 2.0));
-    if (position_z == position_z)
+    double real_position_x, real_position_y;
+    if (position_z == position_z) {
         camera_attributes->destination_z = position_z;
+        position_x *= camera_attributes->destination_z;
+        position_y *= camera_attributes->destination_z;
+    } else {
+        position_x *= environment_attributes->zoom[camera_attributes->surface];
+        position_y *= environment_attributes->zoom[camera_attributes->surface];
+    }
+    real_position_x = position_x * (environment_attributes->current_w / environment_attributes->reference_w[camera_attributes->surface]);
+    real_position_y = position_y * (environment_attributes->current_h / environment_attributes->reference_h[camera_attributes->surface]);
+    camera_attributes->destination_x = (real_position_x - (environment_attributes->current_w / 2.0));
+    camera_attributes->destination_y = (real_position_y - (environment_attributes->current_h / 2.0));
+    camera_attributes->starting_z = camera_attributes->destination_z;
     camera_attributes->starting_x = camera_attributes->destination_x;
     camera_attributes->starting_y = camera_attributes->destination_y;
-    camera_attributes->starting_z = camera_attributes->destination_z;
     camera_attributes->distance_xy = 0.0;
     d_call(environment, m_environment_set_camera, camera_attributes->destination_x, camera_attributes->destination_y, camera_attributes->surface);
     d_call(environment, m_environment_set_zoom, camera_attributes->destination_z, camera_attributes->surface);
     return self;
 }
-
 
 d_define_method(camera, move_reference)(struct s_object *self, struct s_object *reference, double offset_x, double offset_y, double position_z,
         struct s_object *environment) {
@@ -176,8 +190,8 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
                 if ((final_position_y + environment_attributes->current_h) > (camera_attributes->high_limit_y))
                     final_position_y = (camera_attributes->high_limit_y - environment_attributes->current_h);
             }
-            d_call(environment, m_environment_set_zoom, final_position_z, camera_attributes->surface);
             d_call(environment, m_environment_set_camera, final_position_x, final_position_y, camera_attributes->surface);
+            d_call(environment, m_environment_set_zoom, final_position_z, camera_attributes->surface);
             memcpy(&(camera_attributes->last_refresh), &current, sizeof(struct timeval));
         }
     }
