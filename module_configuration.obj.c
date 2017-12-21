@@ -19,8 +19,10 @@
 const char *v_configuration_resolutions[] = {
     "1024x576",
     "1280x720",
+    "1366x768",
     "1600x900",
     "1920x1080",
+    "2560x1800",
     NULL
 }, *v_configuration_languages[] = {
     "english",
@@ -37,7 +39,7 @@ struct s_module_configuration_attributes *p_module_configuration_alloc(struct s_
 struct s_object *f_module_configuration_new(struct s_object *self, struct s_object *environment, struct s_object *resources_json, 
         struct s_object *resources_png, struct s_object *ui_factory) {
     struct s_module_configuration_attributes *attributes = p_module_configuration_alloc(self);
-    struct s_uiable_container *configuration_container, *button_apply;
+    struct s_uiable_container *configuration_container, *button_apply, *button_reset;
     attributes->ui_factory = d_retain(ui_factory);
     attributes->resources_json = d_retain(resources_json);
     attributes->resources_png = d_retain(resources_png);
@@ -46,6 +48,8 @@ struct s_object *f_module_configuration_new(struct s_object *self, struct s_obje
     d_call(button_apply->uiable, m_emitter_embed_parameter, "clicked_left", self);
     d_call(button_apply->uiable, m_emitter_embed_parameter, "clicked_left", environment);
     d_call(button_apply->uiable, m_emitter_embed_function, "clicked_left", p_module_configuration_apply);
+    d_assert(button_reset = d_call(attributes->ui_factory, m_ui_factory_get_component, configuration_container, "button_reset"));
+    d_call(button_reset->uiable, m_emitter_embed_function, "clicked_left", p_module_configuration_reset);
     return self;
 }
 
@@ -175,6 +179,10 @@ d_define_class(module_configuration) {
         d_hook_delete(module_configuration),
         d_hook_method_tail
 };
+
+void p_module_configuration_reset(struct s_object *self, void **parameters, size_t entries) {
+    unlink(d_collector_dump);
+}
 
 void p_module_configuration_apply(struct s_object *self, void **parameters, size_t entries) {
     struct s_object *module_configuration = (struct s_object *)parameters[0];

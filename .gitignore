@@ -10,3 +10,5 @@ collector\.dump\.dat
 \.DS_Store
 
 *.out
+
+collector\.dump\.end\.game

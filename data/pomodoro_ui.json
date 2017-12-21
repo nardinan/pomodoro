@@ -1,127 +1,151 @@
 {
-    "root":[
-      {
-        "label":"configuration_panel",
-        "position_x":1140,
-        "position_y":320,
-        "components":[
+  "root": [
+    {
+      "label": "configuration_panel",
+      "position_x": 1140,
+      "position_y": 320,
+      "components": [
         {
-            "label":"title",
-            "kind":"label",
-            "font_id":9,
-            "content":"CONFIGURATION",
-            "alignment_x":2,
-            "width":400
-        },{
-            "label":"resolution_list",
-            "kind":"list",
-            "position_y":80,
-            "width":400,
-            "height":180
-        },{
-            "label":"fullscreen_label",
-            "kind":"label",
-            "font_id":7,
-            "content":"Fullscreen",
-            "position_x":10,
-            "position_y":260
-        },{
-            "label":"fullscreen_checkbox",
-            "kind":"checkbox",
-            "content":"",
-            "position_x":360,
-            "position_y":270,
-            "width":40,
-            "height":40
-        },{
-            "label":"language_list",
-            "kind":"list",
-            "position_y":320,
-            "width":400,
-            "height":150
-        },{
-            "label":"volume_label",
-            "kind":"label",
-            "font_id":7,
-            "content":"Volume:",
-            "position_x":10,
-            "position_y":480,
-            "width":400
-        },{
-            "label":"volume_scroll",
-            "kind":"scroll",
-            "position_x":270,
-            "position_y":390,
-            "height":240,
-            "angle":-90,
-            "minimum":0,
-            "maximum":255,
-            "scroll_speed":5
-        },{
-          "label":"button_apply",
-          "kind":"button",
-          "font_id":7,
-          "content":"APPLY",
-          "position_y":550,
-          "position_x":20,
-          "width":370,
-          "height":60
+          "label": "title",
+          "kind": "label",
+          "font_id": 9,
+          "content": "CONFIGURATION",
+          "alignment_x": 2,
+          "width": 400
+        },
+        {
+          "label": "button_reset",
+          "kind": "button",
+          "font_id": 7,
+          "content":"RESTART GAME",
+          "position_y": 100,
+          "position_x": 20,
+          "width": 370,
+          "height": 60
+        },
+        {
+          "label": "resolution_list",
+          "kind": "list",
+          "position_y": 180,
+          "width": 400,
+          "height": 180
+        },
+        {
+          "label": "fullscreen_label",
+          "kind": "label",
+          "font_id": 7,
+          "content": "Fullscreen",
+          "position_x": 10,
+          "position_y": 360
+        },
+        {
+          "label": "fullscreen_checkbox",
+          "kind": "checkbox",
+          "content": "",
+          "position_x": 360,
+          "position_y": 370,
+          "width": 40,
+          "height": 40
+        },
+        {
+          "label": "language_list",
+          "kind": "list",
+          "position_y": 420,
+          "width": 400,
+          "height": 150
+        },
+        {
+          "label": "volume_label",
+          "kind": "label",
+          "font_id": 7,
+          "content": "Volume:",
+          "position_x": 10,
+          "position_y": 580,
+          "width": 400
+        },
+        {
+          "label": "volume_scroll",
+          "kind": "scroll",
+          "position_x": 270,
+          "position_y": 490,
+          "height": 240,
+          "angle": -90,
+          "minimum": 0,
+          "maximum": 255,
+          "scroll_speed": 5
+        },
+        {
+          "label": "button_apply",
+          "kind": "button",
+          "font_id": 7,
+          "content": "APPLY",
+          "position_y": 650,
+          "position_x": 20,
+          "width": 370,
+          "height": 60
         }
-        ]
-      },
-      {
-        "label":"main_buttons",
-        "position_x":720,
-        "position_y":320,
-        "components":[
+      ]
+    },
+    {
+      "label": "main_buttons",
+      "position_x": 720,
+      "position_y": 320,
+      "components": [
         {
-            "label":"pomodoro_title",
-            "source":"pomodoro_title",
-            "position_x":75,
-            "position_y":15
-        },{
-            "label":"title",
-            "kind":"label",
-            "font_id":9,
-            "content":"POMODORO",
-            "position_y":250,
-            "alignment_x":2,
-            "width":400
-        },{
-            "label":"subtitle",
-            "kind":"label",
-            "font_id":7,
-            "content":"bad things in Perugia",
-            "position_y":310,
-            "alignment_x":2,
-            "width":400
-        },{
-            "label":"button_play",
-            "kind":"button",
-            "font_id":7,
-            "content":"PLAY",
-            "position_y":380,
-            "position_x":20,
-            "width":360,
-            "height":60
-        },{
-            "label":"button_setup",
-            "kind":"button",
-            "font_id":7,
-            "content":"SETUP",
-            "position_y":440,
-            "position_x":20,
-            "width":360,
-            "height":60
-        },{
-            "label":"button_quit",
-            "kind":"button",
-            "font_id":7,
-            "content":"QUIT",
-            "position_y":500,
-            "position_x":20,
-            "width":360,
-            "height":60
-        }]
-    }]
+          "label": "pomodoro_title",
+          "source": "pomodoro_title",
+          "position_x": 75,
+          "position_y": 15
+        },
+        {
+          "label": "title",
+          "kind": "label",
+          "font_id": 9,
+          "content": "POMODORO",
+          "position_y": 250,
+          "alignment_x": 2,
+          "width": 400
+        },
+        {
+          "label": "subtitle",
+          "kind": "label",
+          "font_id": 7,
+          "content": "bad things in Perugia",
+          "position_y": 310,
+          "alignment_x": 2,
+          "width": 400
+        },
+        {
+          "label": "button_play",
+          "kind": "button",
+          "font_id": 7,
+          "content": "PLAY",
+          "position_y": 380,
+          "position_x": 20,
+          "width": 360,
+          "height": 60
+        },
+        {
+          "label": "button_setup",
+          "kind": "button",
+          "font_id": 7,
+          "content": "SETUP",
+          "position_y": 440,
+          "position_x": 20,
+          "width": 360,
+          "height": 60
+        },
+        {
+          "label": "button_quit",
+          "kind": "button",
+          "font_id": 7,
+          "content": "QUIT",
+          "position_y": 500,
+          "position_x": 20,
+          "width": 360,
+          "height": 60
+        }
+      ]
+    }
+  ]
 }

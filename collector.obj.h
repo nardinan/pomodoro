@@ -19,7 +19,7 @@
 #define pomodoro_collector_h
 #define d_collector_dump_string "string"
 #define d_collector_dump_double "double"
-#define d_collector_dump "collector.dump.dat"
+#define d_collector_dump "./collector.dump.dat"
 #include "miranda.h"
 /* action defintion */
 typedef enum e_collector_types {
@@ -56,6 +56,7 @@ d_declare_method(collector, get_entry)(struct s_object *self, const char *key);
 d_declare_method(collector, add_entry)(struct s_object *self, const char *key);
 d_declare_method(collector, add_entry_double)(struct s_object *self, const char *key, double value);
 d_declare_method(collector, add_entry_string)(struct s_object *self, const char *key, const char *value);
+d_declare_method(collector, reload)(struct s_object *self);
 d_declare_method(collector, linker)(struct s_object *self, struct s_object *script);
 d_declare_method(collector, dispatcher)(struct s_object *self, struct s_collector_action *action);
 d_declare_method(collector, delete)(struct s_object *self, struct s_collector_attributes *attributes);

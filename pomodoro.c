@@ -65,6 +65,7 @@ void f_pomodoro_initialize_game(struct s_object *self, void **parameters, size_t
         d_call(ui_factory, m_ui_factory_hide_container, environment, module_buttons_container);
     if (module_configuration_container)
         d_call(ui_factory, m_ui_factory_hide_container, environment, module_configuration_container);
+    d_call(director, m_director_reload_collector, NULL);
     d_call(director, m_director_set_language, (int)d_pomodoro_language);
     d_call(director, m_director_run_script, "initialize_script");
 }
@@ -88,7 +89,7 @@ int pomodoro_load_call(struct s_object *environment) {
                 if ((json_configuration = f_json_new_stream(d_new(json), stream_configuration))) {
                     d_assert(stream_ui = d_call(resources_json, m_resources_get_stream, d_factory_ui, e_resources_type_common));
                     if ((json_ui = f_json_new_stream(d_new(json), stream_ui))) {
-                        if ((ui_factory = f_ui_factory_new(d_new(ui_factory), resources_png, resources_json, factory, environment, 
+                        if ((ui_factory = f_ui_factory_new(d_new(ui_factory), resources_png, resources_json, director, environment, 
                                         json_configuration, json_ui))) {
                             d_assert(container = d_call(ui_factory, m_ui_factory_get_component, NULL, "main_buttons"));
                             module_buttons_container = container->uiable;

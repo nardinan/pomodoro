@@ -4,9 +4,9 @@
 	"email":"andrea@nardinan.it",
 	"date":"22 August 2016",
 	"language":1,
-	"volume":2,
-	"width":1600,
-	"height":900,
+	"volume":1.364706,
+	"width":1280,
+	"height":720,
 	"fullscreen":false,
 	"fonts":[{
 			"font":"raleway_font",

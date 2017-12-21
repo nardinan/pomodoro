@@ -23,7 +23,6 @@
 #include "camera.obj.h"
 #include "collector.obj.h"
 #include "screenwriter.obj.h"
-#include "ui_factory.obj.h"
 extern struct s_object *director;
 /* action definition */
 typedef enum e_director_actions { 
@@ -110,6 +109,7 @@ struct s_director_attributes *p_director_alloc(struct s_object *self);
 extern struct s_object *f_director_new(struct s_object *self, struct s_object *factory);
 d_declare_method(director, set_language)(struct s_object *self, enum e_screenwriter_languages language);
 d_declare_method(director, get_language)(struct s_object *self);
+d_declare_method(director, reload_collector)(struct s_object *self);
 d_declare_method(director, new_action)(struct s_object *self, enum e_director_actions type);
 d_declare_method(director, push_action)(struct s_object *self, struct s_director_action *action);
 d_declare_method(director, update)(struct s_object *self);

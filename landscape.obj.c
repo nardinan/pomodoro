@@ -125,7 +125,7 @@ d_define_method(landscape, load)(struct s_object *self, struct s_object *json, s
                         d_call(json, m_json_get_double, &loops, "sds", "tracks", index_track, "loops");
                         if ((current_track->track = d_call(factory, m_factory_get_track, string_supply_track))) {
                             d_call(current_track->track, m_track_set_loops, (int)loops);
-                            d_call(current_track->track, m_track_set_volume, (int)volume);
+                            d_call(current_track->track, m_track_set_volume, (int)(volume * d_pomodoro_general_volume));
                             f_list_append(&(landscape_attributes->tracks), (struct s_list_node *)current_track, e_list_insert_head);
                         }
                     } else
@@ -237,7 +237,7 @@ d_define_method(landscape, play)(struct s_object *self, const char *label) {
     d_foreach(&(landscape_attributes->tracks), current_track, struct s_landscape_track)
         if (f_string_strcmp(current_track->label, label) == 0) {
             if (current_track->track) {
-                d_call(current_track->track, m_track_set_volume, (d_track_default_volume * d_pomodoro_general_volume));
+                d_call(current_track->track, m_track_set_volume, (int)(d_track_default_volume * d_pomodoro_general_volume));
                 d_call(current_track->track, m_track_play_fade_in, d_true, d_landscape_fade_in_time);
             }
             break;

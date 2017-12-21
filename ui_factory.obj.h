@@ -19,6 +19,7 @@
 #define pomodoro_ui_factory_h
 #include "miranda.h"
 #include "factory.obj.h"
+#include "director.obj.h"
 #define d_ui_factory_label_size 32
 #define d_ui_factory_font_bucket 64
 #define d_ui_factory_default_mode 0
@@ -34,7 +35,7 @@ typedef struct s_uiable_container { d_list_node_head;
 } s_uiable_container;
 d_declare_class(ui_factory) {
     struct s_attributes head;
-    struct s_object *factory;
+    struct s_object *director;
     struct s_object *json_configuration;
     struct s_object *checkbox_bitmap_checked, *checkbox_bitmap_unchecked, *scroll_handler, *pointer_handler;
     struct s_list childs;
@@ -42,7 +43,7 @@ d_declare_class(ui_factory) {
 struct s_ui_factory_attributes *p_ui_factory_alloc(struct s_object *self);
 extern void p_ui_factory_container_delete(struct s_uiable_container *container);
 extern struct s_object *f_ui_factory_new(struct s_object *self, struct s_object *resources_png_object, struct s_object *resources_json_object, 
-        struct s_object *factory, struct s_object *environment, struct s_object *json_configuration, struct s_object *json_ui);
+        struct s_object *director, struct s_object *environment, struct s_object *json_configuration, struct s_object *json_ui);
 d_declare_method(ui_factory, load_component)(struct s_object *self, struct s_object *resources_png_object, struct s_object *environment,
         struct s_object *json_ui, struct s_uiable_container *current_container, t_json_starting_point *starting_point);
 d_declare_method(ui_factory, load_uiable)(struct s_object *self, struct s_object *resources_png_object, struct s_object *environment, struct s_object *uiable,

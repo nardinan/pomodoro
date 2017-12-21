@@ -18,6 +18,7 @@
 #ifndef pomodoro_module_configuration_h
 #define pomodoro_module_configuration_h
 #include "ui_factory.obj.h"
+#include "collector.obj.h"
 d_declare_class(module_configuration) {
     struct s_attributes head;
     struct s_object *ui_factory;
@@ -34,5 +35,6 @@ d_declare_method(module_configuration, get_volume)(struct s_object *self, double
 d_declare_method(module_configuration, get_fullscreen)(struct s_object *self, t_boolean *fullscreen);
 d_declare_method(module_configuration, get_uiable)(struct s_object *self, struct s_object *environment);
 d_declare_method(module_configuration, delete)(struct s_object *self, struct s_module_configuration_attributes *attributes);
+extern void p_module_configuration_reset(struct s_object *self, void **parameters, size_t entries);
 extern void p_module_configuration_apply(struct s_object *self, void **parameters, size_t entries);
 #endif

@@ -34,7 +34,7 @@ void p_ui_factory_container_delete(struct s_uiable_container *container) {
 }
 
 struct s_object *f_ui_factory_new(struct s_object *self, struct s_object *resources_png_object, struct s_object *resources_json_object,
-        struct s_object *factory, struct s_object *environment, struct s_object *json_configuration, struct s_object *json_ui) {
+        struct s_object *director, struct s_object *environment, struct s_object *json_configuration, struct s_object *json_ui) {
     struct s_ui_factory_attributes *attributes = p_ui_factory_alloc(self);
     struct s_exception *exception;
     struct s_uiable_container *current_container;
@@ -44,7 +44,7 @@ struct s_object *f_ui_factory_new(struct s_object *self, struct s_object *resour
     double position_x, position_y;
     int index_container = 0;
     attributes->json_configuration = d_retain(json_configuration);
-    attributes->factory = d_retain(factory);
+    attributes->director = d_retain(director);
     d_try {
         while ((d_call(json_ui, m_json_get_string, &string_supply, "sds", "root", index_container, "label"))) {
             position_x = 0;
@@ -329,6 +329,7 @@ d_define_method(ui_factory, new_scroll)(struct s_object *self, struct s_object *
 d_define_method(ui_factory, new_label)(struct s_object *self, struct s_object *resources_png_object, struct s_object *environment, unsigned int font_id,
         unsigned int font_style, char *string_content) {
     d_using(ui_factory);
+    struct s_director_attributes *director_attributes = d_cast(ui_factory_attributes->director, director);
     struct s_exception *exception;
     struct s_object *result = NULL;
     TTF_Font *current_font;
@@ -338,7 +339,7 @@ d_define_method(ui_factory, new_label)(struct s_object *self, struct s_object *r
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &format, "sss", "ui", "label", "format");
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &alignment_x, "sss", "ui", "label", "alignment_x");
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &alignment_y, "sss", "ui", "label", "alignment_y");
-        if ((current_font = d_call(ui_factory_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
+        if ((current_font = d_call(director_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
             if ((result = f_label_new_alignment(d_new(label), string_content, current_font, (enum e_label_background_formats)format,
                             (enum e_label_alignments)alignment_x, (enum e_label_alignments)alignment_y, environment)))
                 d_call(self, m_ui_factory_load_uiable, resources_png_object, environment, result, "label");
@@ -352,6 +353,7 @@ d_define_method(ui_factory, new_label)(struct s_object *self, struct s_object *r
 d_define_method(ui_factory, new_checkbox)(struct s_object *self, struct s_object *resources_png_object, struct s_object *environment, unsigned int font_id,
         unsigned int font_style, char *string_content) {
     d_using(ui_factory);
+    struct s_director_attributes *director_attributes = d_cast(ui_factory_attributes->director, director);
     struct s_label_attributes *label_attributes;
     struct s_exception *exception;
     struct s_object *result = NULL;
@@ -373,7 +375,7 @@ d_define_method(ui_factory, new_checkbox)(struct s_object *self, struct s_object
             if ((d_call(ui_factory_attributes->json_configuration, m_json_get_string, &string_supply_unchecked, "sss", "ui", "checkbox", "unchecked")))
                 if ((stream_unchecked = d_call(resources_png_object, m_resources_get_stream, string_supply_unchecked, e_resources_type_common)))
                     ui_factory_attributes->checkbox_bitmap_unchecked = f_bitmap_new(d_new(bitmap), stream_unchecked, environment);
-        if ((current_font = d_call(ui_factory_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
+        if ((current_font = d_call(director_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
             if ((result = f_checkbox_new(d_new(field), string_content, current_font, environment))) {
                 label_attributes = d_cast(result, label);
                 label_attributes->format = (enum e_label_background_formats)format;
@@ -394,6 +396,7 @@ d_define_method(ui_factory, new_checkbox)(struct s_object *self, struct s_object
 d_define_method(ui_factory, new_button)(struct s_object *self, struct s_object *resources_png_object, struct s_object *environment, unsigned int font_id,
         unsigned int font_style, char *string_content) {
     d_using(ui_factory);
+    struct s_director_attributes *director_attributes = d_cast(ui_factory_attributes->director, director);
     struct s_exception *exception;
     struct s_label_attributes *label_attributes;
     struct s_object *result = NULL;
@@ -404,7 +407,7 @@ d_define_method(ui_factory, new_button)(struct s_object *self, struct s_object *
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &format, "sss", "ui", "button", "format");
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &alignment_x, "sss", "ui", "button", "alignment_x");
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &alignment_y, "sss", "ui", "button", "alignment_y");
-        if ((current_font = d_call(ui_factory_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
+        if ((current_font = d_call(director_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
             if ((result = f_button_new(d_new(button), string_content, current_font, environment))) {
                 label_attributes = d_cast(result, label);
                 label_attributes->format = (enum e_label_background_formats)format;
@@ -422,6 +425,7 @@ d_define_method(ui_factory, new_button)(struct s_object *self, struct s_object *
 d_define_method(ui_factory, new_field)(struct s_object *self, struct s_object *resources_png_object, struct s_object *environment, unsigned int font_id,
         unsigned int font_style, char *string_content) {
     d_using(ui_factory);
+    struct s_director_attributes *director_attributes = d_cast(ui_factory_attributes->director, director);
     struct s_exception *exception;
     struct s_object *result = NULL;
     TTF_Font *current_font;
@@ -438,7 +442,7 @@ d_define_method(ui_factory, new_field)(struct s_object *self, struct s_object *r
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &cursor_A, "sss", "ui", "field", "cursor_A");
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &size, "sss", "ui", "field", "size");
         d_call(ui_factory_attributes->json_configuration, m_json_get_double, &width, "sss", "ui", "field", "width");
-        if ((current_font = d_call(ui_factory_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
+        if ((current_font = d_call(director_attributes->factory, m_factory_get_font, font_id, font_style, &font_height)))
             if ((result = f_field_new_alignment(d_new(field), string_content, current_font, (enum e_label_background_formats)format,
                             (enum e_label_alignments)alignment_x, (enum e_label_alignments)alignment_y, environment))) {
                 d_call(result, m_drawable_set_dimension, width, font_height);
@@ -479,7 +483,7 @@ d_define_method(ui_factory, get_component)(struct s_object *self, struct s_uiabl
 d_define_method(ui_factory, delete)(struct s_object *self, struct s_ui_factory_attributes *attributes) {
     struct s_uiable_container *current_container;
     d_delete(attributes->json_configuration);
-    d_delete(attributes->factory);
+    d_delete(attributes->director);
     if (attributes->checkbox_bitmap_checked)
         d_delete(attributes->checkbox_bitmap_checked);
     if (attributes->checkbox_bitmap_unchecked)

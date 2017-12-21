@@ -232,7 +232,7 @@ d_define_method(effecteer, play_effect)(struct s_object *self, const char *key, 
         effecteer_attributes->tracks[index].volume = volume;
         effecteer_attributes->tracks[index].loop = loop;
         if (!v_developer_mode) {
-            d_call(effecteer_attributes->tracks[index].track, m_track_set_volume, (effecteer_attributes->tracks[index].volume * d_pomodoro_general_volume));
+            d_call(effecteer_attributes->tracks[index].track, m_track_set_volume, (int)(effecteer_attributes->tracks[index].volume * d_pomodoro_general_volume));
             d_call(effecteer_attributes->tracks[index].track, m_track_set_loops, ((effecteer_attributes->tracks[index].loop)?d_track_infinite_loop:0));
             d_call(effecteer_attributes->tracks[index].track, m_track_play_fade_in, d_true, effecteer_attributes->tracks[index].fade_in);
         }

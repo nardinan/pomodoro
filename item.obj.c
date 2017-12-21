@@ -77,7 +77,7 @@ d_define_method(item, load)(struct s_object *self, struct s_object *json, struct
                             current_track->volume = (int)volume;
                             if ((current_track->track = d_call(factory, m_factory_get_track, string_supply))) {
                                 d_call(current_track->track, m_track_set_loops, (int)loops);
-                                d_call(current_track->track, m_track_set_volume, (int)volume);
+                                d_call(current_track->track, m_track_set_volume, (int)(volume * d_pomodoro_general_volume));
                                 f_list_append(&(item_attributes->tracks), (struct s_list_node *)current_track, e_list_insert_head);
                             } else
                                 d_free(current_track);
@@ -138,7 +138,7 @@ d_define_method(item, play)(struct s_object *self) {
     d_using(item);
     item_attributes->audio = d_true;
     if (item_attributes->current_track) {
-        d_call(item_attributes->current_track->track, m_track_set_volume, (d_track_default_volume * d_pomodoro_general_volume));
+        d_call(item_attributes->current_track->track, m_track_set_volume, (int)(d_track_default_volume * d_pomodoro_general_volume));
         d_call(item_attributes->current_track->track, m_track_play, d_true); 
     }
     return self;
@@ -167,7 +167,7 @@ d_define_method_override(item, set_component)(struct s_object *self, char *label
         if (f_string_strcmp(current_track->label, label) == 0) {
             item_attributes->current_track = current_track;
             if (item_attributes->audio) {
-                d_call(item_attributes->current_track->track, m_track_set_volume, (d_track_default_volume * d_pomodoro_general_volume));
+                d_call(item_attributes->current_track->track, m_track_set_volume, (int)(d_track_default_volume * d_pomodoro_general_volume));
                 d_call(item_attributes->current_track->track, m_track_play, d_true);
             }
             break;
@@ -246,7 +246,7 @@ d_define_method_override(item, draw)(struct s_object *self, struct s_object *env
                 volume = 0;
         } else
             volume = item_attributes->current_track->volume;
-        d_call(item_attributes->current_track->track, m_track_set_volume, (int)volume);
+        d_call(item_attributes->current_track->track, m_track_set_volume, (int)(volume * d_pomodoro_general_volume));
     }
     return d_call_owner(self, entity, m_drawable_draw, environment); /* recall the father's draw method */
 }

@@ -184,7 +184,6 @@ struct s_object *f_director_new(struct s_object *self, struct s_object *factory)
     d_assert(attributes->stagecrafter = f_stagecrafter_new(d_new(stagecrafter), factory));
     d_assert(attributes->collector = f_collector_new(d_new(collector)));
     d_assert(attributes->screenwriter = f_screenwriter_new(d_new(screenwriter), factory, attributes->puppeteer, attributes->collector));
-    d_call(attributes->screenwriter, m_screenwriter_set_language, (intptr_t)d_call(attributes->factory, m_factory_get_language, NULL));
     return self;
 }
 
@@ -196,6 +195,11 @@ d_define_method(director, set_language)(struct s_object *self, enum e_screenwrit
 d_define_method(director, get_language)(struct s_object *self) {
     d_using(director);
     return d_call(director_attributes->screenwriter, m_screenwriter_get_language, NULL);
+}
+
+d_define_method(director, reload_collector)(struct s_object *self) {
+    d_using(director);
+    return d_call(director_attributes->collector, m_collector_reload, NULL);
 }
 
 d_define_method(director, new_action)(struct s_object *self, enum e_director_actions type) {
@@ -387,6 +391,7 @@ d_define_method(director, delete)(struct s_object *self, struct s_director_attri
 d_define_class(director) {
     d_hook_method(director, e_flag_public, set_language),
         d_hook_method(director, e_flag_public, get_language),
+        d_hook_method(director, e_flag_public, reload_collector),
         d_hook_method(director, e_flag_public, new_action),
         d_hook_method(director, e_flag_public, push_action),
         d_hook_method(director, e_flag_public, update),

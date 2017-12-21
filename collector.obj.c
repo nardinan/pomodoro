@@ -84,28 +84,7 @@ struct s_collector_attributes *p_collector_alloc(struct s_object *self) {
 
 struct s_object *f_collector_new(struct s_object *self) {
     struct s_collector_attributes *attributes = p_collector_alloc(self);
-    FILE *collector_dump = fopen(d_collector_dump, "r");
-    char buffer[d_string_buffer_size], *ptr_name, *ptr_type, *ptr_data;
-    if (collector_dump) {
-        while (fgets(buffer, d_string_buffer_size, collector_dump)) {
-            ptr_name = buffer;
-            f_string_trim(ptr_name);
-            if ((ptr_type = strchr(ptr_name, ':'))) {
-                *ptr_type = 0;
-                ++ptr_type;
-                if ((ptr_data = strchr(ptr_type, ':'))) {
-                    *ptr_data = 0;
-                    ++ptr_data;
-                    if (f_string_strcmp(ptr_type, d_collector_dump_string) == 0)
-                        d_call(self, m_collector_add_entry_string, ptr_name, ptr_data);
-                    else if (f_string_strcmp(ptr_type, d_collector_dump_double) == 0)
-                        d_call(self, m_collector_add_entry_double, ptr_name, (double)atof(ptr_data));
-                }
-            }
-        }
-        fclose(collector_dump);
-    }
-    attributes = attributes;
+    d_call(self, m_collector_reload, NULL);
     return self;
 }
 
@@ -146,6 +125,39 @@ d_define_method(collector, add_entry_string)(struct s_object *self, const char *
     if (value)
         if ((current_entry->value.value_string = (char *)d_malloc(f_string_strlen(value)+1)))
             strcpy(current_entry->value.value_string, value);
+    return self;
+}
+
+d_define_method(collector, reload)(struct s_object *self) {
+    d_using(collector);
+    struct s_collector_entry *current_entry;
+    FILE *collector_dump;
+    char buffer[d_string_buffer_size], *ptr_name, *ptr_type, *ptr_data;
+    while ((current_entry = (struct s_collector_entry *)collector_attributes->pool.head)) {
+        f_list_delete(&(collector_attributes->pool), (struct s_list_node *)current_entry);
+        if ((current_entry->type == e_collector_type_string) && (current_entry->value.value_string))
+            d_free(current_entry->value.value_string);
+        d_free(current_entry);
+    }
+    if ((collector_dump = fopen(d_collector_dump, "r"))) {
+        while (fgets(buffer, d_string_buffer_size, collector_dump)) {
+            ptr_name = buffer;
+            f_string_trim(ptr_name);
+            if ((ptr_type = strchr(ptr_name, ':'))) {
+                *ptr_type = 0;
+                ++ptr_type;
+                if ((ptr_data = strchr(ptr_type, ':'))) {
+                    *ptr_data = 0;
+                    ++ptr_data;
+                    if (f_string_strcmp(ptr_type, d_collector_dump_string) == 0)
+                        d_call(self, m_collector_add_entry_string, ptr_name, ptr_data);
+                    else if (f_string_strcmp(ptr_type, d_collector_dump_double) == 0)
+                        d_call(self, m_collector_add_entry_double, ptr_name, (double)atof(ptr_data));
+                }
+            }
+        }
+        fclose(collector_dump);
+    }
     return self;
 }
 
@@ -202,6 +214,7 @@ d_define_class(collector) {
         d_hook_method(collector, e_flag_private, add_entry),
         d_hook_method(collector, e_flag_public, add_entry_double),
         d_hook_method(collector, e_flag_public, add_entry_string),
+        d_hook_method(collector, e_flag_public, reload),
         d_hook_method(collector, e_flag_public, linker),
         d_hook_method(collector, e_flag_public, dispatcher),
         d_hook_delete(collector),
