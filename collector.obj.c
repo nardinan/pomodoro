@@ -85,6 +85,7 @@ struct s_collector_attributes *p_collector_alloc(struct s_object *self) {
 struct s_object *f_collector_new(struct s_object *self) {
     struct s_collector_attributes *attributes = p_collector_alloc(self);
     d_call(self, m_collector_reload, NULL);
+    attributes = attributes;
     return self;
 }
 
