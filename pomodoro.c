@@ -17,6 +17,7 @@
  */
 #include "director.obj.h"
 #include "loader.obj.h"
+#include "module_configuration.obj.h"
 #define d_pomodoro_title "Pomodoro"
 #define d_pomodoro_resources "./data"
 #define d_pomodoro_resources_default_png 	"./data/placeholders/default_png.png"
@@ -26,9 +27,13 @@
 #define d_pomodoro_resources_default_lisp   "./data/placeholders/default_lisp.lisp"
 struct s_object *resources_png, *resources_ttf, *resources_ogg, *resources_json, *resources_lisp;
 struct s_object *factory;
+struct s_object *ui_factory;
+/* menu interfaces */
+struct s_object *module_buttons_container, *module_configuration_container;
+struct s_object *module_configuration;
 unsigned int current_loop = 0;
-t_boolean v_developer_mode = d_false;
-void pomodoro_initialize_resources(void) {
+t_boolean v_developer_mode = d_false, v_continue_execution = d_true;
+void f_pomodoro_initialize_resources(void) {
     struct s_exception *exception;
     struct s_object *resources_path = f_string_new_constant(d_new(string), d_pomodoro_resources),
                     *template_png   = f_string_new_constant(d_new(string), d_pomodoro_resources_default_png),
@@ -54,12 +59,67 @@ void pomodoro_initialize_resources(void) {
     } d_endtry;
 }
 
+void f_pomodoro_initialize_game(struct s_object *self, void **parameters, size_t entries) {
+    struct s_object *environment = (struct s_object *)parameters[0];
+    if (module_buttons_container)
+        d_call(ui_factory, m_ui_factory_hide_container, environment, module_buttons_container);
+    if (module_configuration_container)
+        d_call(ui_factory, m_ui_factory_hide_container, environment, module_configuration_container);
+    d_call(director, m_director_set_language, (int)d_pomodoro_language);
+    d_call(director, m_director_run_script, "initialize_script");
+}
+
+void f_pomodoro_finalize_game(struct s_object *self, void **parameters, size_t entries) {
+    v_continue_execution = d_false;
+}
+
 int pomodoro_load_call(struct s_object *environment) {
     struct s_exception *exception;
+    struct s_object *stream_ui, *stream_configuration;
+    struct s_object *json_ui, *json_configuration;
+    struct s_uiable_container *container,
+                              *button_configuration,
+                              *button_play,
+                              *button_quit;
     d_try {
-        d_assert(factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, resources_lisp, environment));
-        d_assert(director = f_director_new(d_new(director), factory));
-        d_call(director, m_director_run_script, "initialize_script");
+        if ((factory = f_factory_new(d_new(factory), resources_png, resources_ttf, resources_json, resources_ogg, resources_lisp, environment))) {
+            if ((director = f_director_new(d_new(director), factory))) {
+                d_assert(stream_configuration = d_call(resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common));
+                if ((json_configuration = f_json_new_stream(d_new(json), stream_configuration))) {
+                    d_assert(stream_ui = d_call(resources_json, m_resources_get_stream, d_factory_ui, e_resources_type_common));
+                    if ((json_ui = f_json_new_stream(d_new(json), stream_ui))) {
+                        if ((ui_factory = f_ui_factory_new(d_new(ui_factory), resources_png, resources_json, factory, environment, 
+                                        json_configuration, json_ui))) {
+                            d_assert(container = d_call(ui_factory, m_ui_factory_get_component, NULL, "main_buttons"));
+                            module_buttons_container = container->uiable;
+                            if ((module_configuration = f_module_configuration_new(d_new(module_configuration), environment, resources_json, resources_png, 
+                                            ui_factory))) {
+                                d_assert(module_configuration_container = d_call(module_configuration, m_module_configuration_get_uiable, environment));
+                                d_assert(button_configuration = d_call(ui_factory, m_ui_factory_get_component, container, "button_setup"));
+                                d_call(button_configuration->uiable, m_emitter_embed_parameter, "clicked_left", module_configuration_container);
+                                d_call(button_configuration->uiable, m_emitter_embed_parameter, "clicked_left", environment);
+                                d_call(button_configuration->uiable, m_emitter_embed_function, "clicked_left", f_ui_factory_callback_visibility);
+                                d_assert(button_play = d_call(ui_factory, m_ui_factory_get_component, container, "button_play"));
+                                d_call(button_play->uiable, m_emitter_embed_parameter, "clicked_left", environment);
+                                d_call(button_play->uiable, m_emitter_embed_function, "clicked_left", f_pomodoro_initialize_game);
+                                d_assert(button_quit = d_call(ui_factory, m_ui_factory_get_component, container, "button_quit"));
+                                d_call(button_quit->uiable, m_emitter_embed_parameter, "clicked_left", environment);
+                                d_call(button_quit->uiable, m_emitter_embed_function, "clicked_left", f_pomodoro_finalize_game);
+                                d_call(ui_factory, m_ui_factory_show_container, environment, module_buttons_container);
+                            } else
+                                d_die(d_error_malloc);
+                        } else
+                            d_die(d_error_malloc);
+                        d_delete(json_ui);
+                    } else 
+                        d_die(d_error_malloc);
+                    d_delete(json_configuration);
+                } else
+                    d_die(d_error_malloc);
+            } else 
+                d_die(d_error_malloc);
+        } else
+            d_die(d_error_malloc);
     } d_catch(exception) {
         d_exception_dump(stderr, exception);
         d_raise;
@@ -69,10 +129,12 @@ int pomodoro_load_call(struct s_object *environment) {
 
 int pomodoro_loop_call(struct s_object *environment) {
     d_call(director, m_director_update, NULL);
-    return d_true;
+    return v_continue_execution;
 }
 
 int pomodoro_quit_call(struct s_object *environment) {
+    if (module_configuration) 
+        d_delete(module_configuration);
     d_delete(resources_png);
     d_delete(resources_ttf);
     d_delete(resources_json);
@@ -80,6 +142,7 @@ int pomodoro_quit_call(struct s_object *environment) {
     d_delete(resources_lisp);
     d_delete(director);
     d_delete(factory);
+    d_delete(ui_factory);
     return d_true;
 }
 
@@ -96,12 +159,11 @@ void pomodoro_change_location(const char *application) {
 int main (int argc, char *argv[]) {
     struct s_exception *exception;
     struct s_object *environment;
-    struct s_object *stream;
+    struct s_object *stream_configuation;
     struct s_object *json_configuration;
-    double final_resolution_x, final_resolution_y, scale_resolution_x, scale_resolution_y;
-    t_boolean fullscreen = d_false;
+    double scale_resolution_x, scale_resolution_y;
     d_pool_init;
-    v_log_level = e_log_level_high;
+    v_log_level = e_log_level_ever;
     /* change chmod to the current location of the application */
     pomodoro_change_location(argv[0]);
     if ((argc > 1) && (f_string_strcmp(argv[1], "-developer") == 0)) {
@@ -111,26 +173,25 @@ int main (int argc, char *argv[]) {
     }
     if ((argc > 1) && (f_string_strcmp(argv[1], "-fullscreen") == 0)) {
         d_war(e_log_level_ever, "fullscreen mode has been enabled");
-        fullscreen = d_true;
+        d_pomodoro_fullscreen = d_true;
     }
     d_pool_begin("main context") {
         /* wait the unlock */
         d_try {
-            pomodoro_initialize_resources();
-            if ((stream = d_call(resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common))) {
-                if ((json_configuration = f_json_new_stream(d_new(json), stream))) {
-                    d_call(json_configuration, m_json_get_double, &d_pomodoro_general_volume, "s", "volume");
+            f_pomodoro_initialize_resources();
+            if ((stream_configuation = d_call(resources_json, m_resources_get_stream, d_factory_configuration, e_resources_type_common))) {
+                if ((json_configuration = f_json_new_stream(d_new(json), stream_configuation))) {
                     d_call(json_configuration, m_json_get_double, &d_pomodoro_width_window, "s", "width");
                     d_call(json_configuration, m_json_get_double, &d_pomodoro_height_window, "s", "height");
-                    d_call(json_configuration, m_json_get_boolean, &fullscreen, "s", "fullscreen");
+                    d_call(json_configuration, m_json_get_boolean, &d_pomodoro_fullscreen, "s", "fullscreen");
+                    d_call(json_configuration, m_json_get_double, &d_pomodoro_general_volume, "s", "volume");
+                    d_call(json_configuration, m_json_get_double, &d_pomodoro_language, "s", "language");
                     d_delete(json_configuration);
                 }
             }
-            final_resolution_x = d_pomodoro_width_window;
-            final_resolution_y = d_pomodoro_height_window;
             scale_resolution_x = (d_pomodoro_width * d_pomodoro_scale_factor);
             scale_resolution_y = (d_pomodoro_height * d_pomodoro_scale_factor);
-            environment = f_environment_new_fullscreen(d_new(environment), final_resolution_x, final_resolution_y, fullscreen);
+            environment = f_environment_new_fullscreen(d_new(environment), d_pomodoro_width_window, d_pomodoro_height_window, d_pomodoro_fullscreen);
             d_call(environment, m_environment_set_methods, &pomodoro_load_call, &pomodoro_loop_call, &pomodoro_quit_call);
             d_call(environment, m_environment_set_reference, scale_resolution_x, scale_resolution_y, e_environment_surface_primary);
             d_call(environment, m_environment_set_reference, scale_resolution_x, scale_resolution_y, e_environment_surface_ui);

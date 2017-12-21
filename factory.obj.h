@@ -20,6 +20,7 @@
 #include "miranda.h"
 #define d_factory_animation_frame_time 100.0
 #define d_factory_configuration "pomodoro_config"
+#define d_factory_ui "pomodoro_ui"
 #define d_factory_default_font_size 30.0
 #define d_factory_default_font_outline 0.0
 #define d_factory_max_channels 127
@@ -43,6 +44,7 @@ d_declare_class(factory) {
 struct s_factory_attributes *p_factory_alloc(struct s_object *self);
 extern struct s_object *f_factory_new(struct s_object *self, struct s_object *resources_png, struct s_object *resources_ttf, struct s_object *resources_json,
         struct s_object *resources_ogg, struct s_object *resources_lisp, struct s_object *environment);
+d_declare_method(factory, set_language)(struct s_object *self, int language);
 d_declare_method(factory, get_language)(struct s_object *self);
 d_declare_method(factory, get_bitmap)(struct s_object *self, const char *label);
 d_declare_method(factory, get_animation)(struct s_object *self, const char *label);

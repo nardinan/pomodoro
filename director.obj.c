@@ -188,6 +188,16 @@ struct s_object *f_director_new(struct s_object *self, struct s_object *factory)
     return self;
 }
 
+d_define_method(director, set_language)(struct s_object *self, enum e_screenwriter_languages language) {
+    d_using(director);
+    return d_call(director_attributes->screenwriter, m_screenwriter_set_language, (int)language);
+}
+
+d_define_method(director, get_language)(struct s_object *self) {
+    d_using(director);
+    return d_call(director_attributes->screenwriter, m_screenwriter_get_language, NULL);
+}
+
 d_define_method(director, new_action)(struct s_object *self, enum e_director_actions type) {
     struct s_director_action *action;
     if ((action = (struct s_director_action *)d_malloc(sizeof(struct s_director_action)))) {
@@ -375,7 +385,9 @@ d_define_method(director, delete)(struct s_object *self, struct s_director_attri
 }
 
 d_define_class(director) {
-    d_hook_method(director, e_flag_public, new_action),
+    d_hook_method(director, e_flag_public, set_language),
+        d_hook_method(director, e_flag_public, get_language),
+        d_hook_method(director, e_flag_public, new_action),
         d_hook_method(director, e_flag_public, push_action),
         d_hook_method(director, e_flag_public, update),
         d_hook_method(director, e_flag_public, run_script),

@@ -58,6 +58,7 @@ extern int p_screenwriter_get_dialog(struct s_object *json, const char *ID);
 struct s_screenwriter_attributes *p_screenwriter_alloc(struct s_object *self);
 extern struct s_object *f_screenwriter_new(struct s_object *self, struct s_object *factory, struct s_object *puppeteer, struct s_object *collector);
 d_declare_method(screenwriter, set_language)(struct s_object *self, enum e_screenwriter_languages language);
+d_declare_method(screenwriter, get_language)(struct s_object *self);
 d_declare_method(screenwriter, load)(struct s_object *self, struct s_object *json);
 d_declare_method(screenwriter, run)(struct s_object *self, const char *label);
 d_declare_method(screenwriter, get)(struct s_object *self, const char *ID);

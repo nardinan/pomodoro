@@ -59,6 +59,11 @@ d_define_method(screenwriter, set_language)(struct s_object *self, enum e_screen
     return self;
 }
 
+d_define_method(screenwriter, get_language)(struct s_object *self) {
+    d_using(screenwriter);
+    d_cast_return(screenwriter_attributes->language);
+}
+
 d_define_method(screenwriter, load)(struct s_object *self, struct s_object *json) {
     d_using(screenwriter);
     char *string_supply, *dialog_ID, *next_entry_ID, *current_type, *current_actor, *current_key;
@@ -245,6 +250,7 @@ d_define_method(screenwriter, delete)(struct s_object *self, struct s_screenwrit
 
 d_define_class(screenwriter) {
     d_hook_method(screenwriter, e_flag_public, set_language),
+        d_hook_method(screenwriter, e_flag_public, get_language),
         d_hook_method(screenwriter, e_flag_private, load),
         d_hook_method(screenwriter, e_flag_public, run),
         d_hook_method(screenwriter, e_flag_public, get),

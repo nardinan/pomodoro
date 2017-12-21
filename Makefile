@@ -1,5 +1,5 @@
-objects = miranda.o pomodoro.o loader.obj.o factory.obj.o bubble.obj.o camera.obj.o character.obj.o puppeteer.obj.o effecteer.obj.o item.obj.o landscape.obj.o\
-		  stagecrafter.obj.o collector.obj.o screenwriter.obj.o director.obj.o
+objects = miranda.o pomodoro.o loader.obj.o factory.obj.o ui_factory.obj.o module_configuration.obj.o bubble.obj.o camera.obj.o character.obj.o puppeteer.obj.o \
+		  effecteer.obj.o item.obj.o landscape.obj.o stagecrafter.obj.o collector.obj.o screenwriter.obj.o director.obj.o
 project = pomodoro
 name = pomodoro
 cc = clang -g $(debug)
@@ -23,6 +23,12 @@ loader.obj.o: loader.obj.c loader.obj.h miranda.h
 
 factory.obj.o: factory.obj.c factory.obj.h miranda.h
 	$(cc) $(cflags) factory.obj.c
+
+ui_factory.obj.o: ui_factory.obj.c ui_factory.obj.h miranda.h
+	$(cc) $(cflags) ui_factory.obj.c
+
+module_configuration.obj.o: module_configuration.obj.c module_configuration.obj.h ui_factory.obj.h
+	$(cc) $(cflags) module_configuration.obj.c
 
 bubble.obj.o: bubble.obj.c bubble.obj.h factory.obj.h miranda.h
 	$(cc) $(cflags) bubble.obj.c

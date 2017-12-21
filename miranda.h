@@ -17,12 +17,6 @@
  */
 #ifndef pomodoro_miranda_h
 #define pomodoro_miranda_h
-extern double d_pomodoro_width_window;
-extern double d_pomodoro_height_window;
-extern const double d_pomodoro_width;
-extern const double d_pomodoro_height;
-extern const double d_pomodoro_scale_factor;
-extern double d_pomodoro_general_volume;
 #include <miranda/ground.h>
 #include <miranda/objects/objects.h>
 #include <miranda/objects/io/io.h>
@@ -31,6 +25,14 @@ extern double d_pomodoro_general_volume;
 #include <miranda/objects/media/ui/ui.h>
 #include <miranda/objects/network/network.h>
 #include <miranda/endian.local.h>
-extern t_boolean v_developer_mode;
+extern double d_pomodoro_width_window,
+       d_pomodoro_height_window,
+       d_pomodoro_general_volume,
+       d_pomodoro_language;
+extern t_boolean d_pomodoro_fullscreen, 
+       v_developer_mode;
+extern const double d_pomodoro_width,
+       d_pomodoro_height,
+       d_pomodoro_scale_factor;
 #endif
 
