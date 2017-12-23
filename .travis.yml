@@ -1,0 +1,18 @@
+language: c
+
+compiler:
+        - gcc
+
+before_install:
+        - uname -a
+        - lsb_release -a
+        - sudo apt-add-repository --yes ppa:zoogie/sdl2-snapshots
+        - sudo apt-get update -qq
+
+install:
+        - sudo apt-get install -qq libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev libsdl2-image-dev
+        - git clone git://github.com/nardinan/miranda
+        - echo $(cd miranda && make && sudo make install)
+
+script:
+        - make
