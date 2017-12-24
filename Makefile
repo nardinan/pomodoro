@@ -2,7 +2,7 @@ objects = miranda.o pomodoro.o loader.obj.o factory.obj.o ui_factory.obj.o modul
 		  effecteer.obj.o item.obj.o landscape.obj.o stagecrafter.obj.o collector.obj.o screenwriter.obj.o director.obj.o
 project = pomodoro
 name = pomodoro
-cc = clang -g $(debug)
+cc = gcc -g $(debug)
 cflags = -I/usr/local/include -I. -fPIC `sdl2-config --cflags` -Wall -Wno-variadic-macros -Wno-pointer-arith -Wno-pointer-to-int-cast -c
 lflags = -Wall
 libags = -L/usr/local/lib `sdl2-config --libs` -lpthread -lmiranda_ground -lmiranda_objects -lmiranda_network -lmiranda_io -lmiranda_geometry \

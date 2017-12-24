@@ -380,7 +380,7 @@ d_define_method(effecteer, dispatcher)(struct s_object *self, struct s_effecteer
             result = d_call(self, m_effecteer_delete_effect, action->key);
             break;
     }
-    return self;
+    return result;
 }
 
 d_define_method(effecteer, delete)(struct s_object *self, struct s_effecteer_attributes *attributes) {

@@ -288,7 +288,7 @@ d_define_method(stagecrafter, dispatcher)(struct s_object *self, struct s_stagec
             result = d_call(self, m_stagecrafter_set_item_status, action->key, action->parameters.entry);
             break;
     }
-    return self;
+    return result;
 }
 
 d_define_method(stagecrafter, delete)(struct s_object *self, struct s_stagecrafter_attributes *attributes) {

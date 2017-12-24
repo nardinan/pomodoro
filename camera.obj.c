@@ -150,14 +150,13 @@ d_define_method(camera, update)(struct s_object *self, struct s_object *environm
     d_using(camera);
     struct s_environment_attributes *environment_attributes = d_cast(environment, environment);
     struct timeval current, difference;
-    double camera_position_x, camera_position_y, camera_position_z, current_distance, percentage_current_distance, percentage_movement, 
+    double camera_position_x, camera_position_y, current_distance, percentage_current_distance, percentage_movement, 
            difference_seconds, t, final_position_x = 0.0, final_position_y = 0.0, final_position_z = 0.0;
     if (camera_attributes->reference)
         d_call(self, m_camera_move_reference, camera_attributes->reference, camera_attributes->offset_x, camera_attributes->offset_y, NAN, environment);
     gettimeofday(&current, NULL);
     camera_position_x = environment_attributes->camera_origin_x[camera_attributes->surface];
     camera_position_y = environment_attributes->camera_origin_y[camera_attributes->surface];
-    camera_position_z = environment_attributes->zoom[camera_attributes->surface];
     if (camera_attributes->distance_xy > 0.0) {
         timersub(&current, &(camera_attributes->last_refresh), &difference);
         difference_seconds = difference.tv_sec + ((double)(difference.tv_usec)/1000000.0);
