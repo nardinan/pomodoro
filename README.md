@@ -10,7 +10,11 @@ Please keep in mind that:
  * The game is just for fun and potentially full of bugs
  * The english version of the game has **never** been tested and, due to the sheer number of dialogs, conversations and cut-scenes, we **never** reviewed it.
 
-# Dependencies
+# Compile it
+
+The game has been sucessfully compiled on Windows (windows 10, using MinGW), Linux (Ubuntu and Fedora) and MacOS (High Sierra).
+
+### Dependencies
 The game depends on the following libraries:
  * libmiranda (https://github.com/nardinan/miranda)
  * libSDL2
@@ -18,7 +22,7 @@ The game depends on the following libraries:
  * libSDL2_mixer
  * libSDL2_image
 
-### Compilation on Ubuntu (and possibly any other Linux distribution)
+### Compilation on Ubuntu (and possibly any other _Debian-based_ distribution)
 
 Open a terminal and install the SDL2 libraries using **apt**:
 ```bash
@@ -32,7 +36,7 @@ $ cd miranda
 $ make
 $ sudo make install
 ```
-Great! Miranda is now installed in your /usr/local/lib directory. **Be sure to add the corresponding entry "/usr/local/lib" to LD_LIBRARY_PATH.** After that, from your terminal, perform the following steps to build Pomodoro:
+Great! Miranda is now installed in your /usr/local/lib directory. **Be sure to add the corresponding entry "/usr/local/lib" to LD_LIBRARY_PATH (DYLD_LIBRARY_PATH on OSX).** After that, from your terminal, perform the following steps to build Pomodoro:
 ```bash
 $ git clone https://github.com/nardinan/pomodoro
 $ cd pomdoro
@@ -60,11 +64,11 @@ The game has been designed and developed by me and Luna Paciucci (https://www.li
 ### Controls
 The game can be controlled using the following keys:
 * **arrow right** - move the character on the right
-* **arrow right** (press twice and hold) - run on the right
+* **arrow right** (press twice and hold) - run to the right
 * **arrow left** - move the character on the left
-* **arrow left** (press twice and hold) - run on the left
+* **arrow left** (press twice and hold) - run to the left
 * **left shift** - highlight all the interactable objects visible
-* **space** - action
+* **space** - do something
 * **esc** - quit the game
 
 # Please help us
