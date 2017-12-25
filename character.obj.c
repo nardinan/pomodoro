@@ -386,8 +386,7 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
     struct s_drawable_attributes *drawable_attributes_self = d_cast(self, drawable),
                                  *drawable_attributes_bubble;
     struct timeval current, elapsed_update;
-    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, ratio_y, total_zoom, principal_point_x, principal_point_y, 
-           real_elapsed_update;
+    double position_x, position_y, bubble_position_x, bubble_position_y, ratio_x, total_zoom, principal_point_x, principal_point_y, real_elapsed_update;
     struct s_object *result = d_call_owner(self, entity, m_drawable_draw, environment); /* recall the father's draw method */
     d_call(self, m_drawable_get_position, &position_x, &position_y);
     if (((character_attributes->source_x < character_attributes->destination_x) && (position_x >= character_attributes->destination_x)) ||
@@ -399,7 +398,6 @@ d_define_method_override(character, draw)(struct s_object *self, struct s_object
         bubble_attributes = d_cast(character_attributes->bubble, bubble);
         drawable_attributes_bubble = d_cast(character_attributes->bubble, drawable);
         ratio_x = (environment_attributes->current_w / environment_attributes->reference_w[environment_attributes->current_surface]);
-        ratio_y = (environment_attributes->current_h / environment_attributes->reference_h[environment_attributes->current_surface]);
         total_zoom = drawable_attributes_self->zoom;
         bubble_position_x = position_x + (character_attributes->bubble_offset_x * total_zoom);
         bubble_position_y = position_y + (character_attributes->bubble_offset_y * total_zoom) - bubble_attributes->total_height;
