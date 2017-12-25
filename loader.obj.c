@@ -52,6 +52,7 @@ d_define_method_override(loader, job)(struct s_object *self) {
                         loader_attributes->resources_json, loader_attributes->resources_ogg, loader_attributes->resources_lisp,
                         loader_attributes->environment))) {
             if ((loader_attributes->director = f_director_new(d_new(director), loader_attributes->factory))) {
+                director = loader_attributes->director;
                 d_assert(stream_configuration = d_call(loader_attributes->resources_json, m_resources_get_stream, d_factory_configuration, 
                             e_resources_type_common));
                 if ((json_configuration = f_json_new_stream(d_new(json), stream_configuration))) {

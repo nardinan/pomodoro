@@ -111,10 +111,12 @@ int pomodoro_loop_call(struct s_object *environment) {
 }
 
 int pomodoro_quit_call(struct s_object *environment) {
-    if (module_configuration) 
+    if (!v_initialized)
+        d_call(loader, m_runnable_join, NULL);
+    d_delete(loader);
+    if (module_configuration)
         d_delete(module_configuration);
     d_delete(bitmap_loading_screen);
-    d_delete(loader);
     return d_true;
 }
 
