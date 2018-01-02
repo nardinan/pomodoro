@@ -1,5 +1,8 @@
 POMODORO (Bad Things in Perugia)
 -------------------------
+
+[![Build Status](https://travis-ci.org/nardinan/pomodoro.svg?branch=master)](https://travis-ci.org/nardinan/pomodoro)
+
 This is a very silly pixel-art adventure game written and developed by me and Luna Paciucci in two years, from scratch and during our spare time. The game follows the adventures of a younger version of myself on a very bizzarre day of June 2012 in the beautiful city of Perugia.
 
 ![alt text](demo_intro.gif)
