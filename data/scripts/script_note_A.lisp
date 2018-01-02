@@ -74,7 +74,7 @@
                     "Fa niente. Ascolta, quanto ti devo dare?")
                   (cons ;21 luca
                     "One hundred twentyEurosand ninety five cents"
-                    "Centoventi Euroe novantasette centesimi")
+                    "Centoventi Euro e novantasette centesimi")
                   (cons ;22 luca
                     "Cash"
                     "In contanti")
@@ -92,7 +92,7 @@
                     "Puoi iniziare con questi cinque euri.")
                   (cons ;27 luca
                     "Now you have to find one hundred fifteenEurosand ninety five cents"
-                    "Ora ne mancano centoquindici Euroe novantasette centesimi.")
+                    "Ora ne mancano centoquindici Euro e novantasette centesimi.")
                   (cons ;28 andrea
                     "And where I can find them?"
                     "E dove li trovo?")

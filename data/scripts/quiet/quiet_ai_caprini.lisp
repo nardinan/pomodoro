@@ -95,7 +95,7 @@
                     "Fantastico, ma ora ascolta . . .")
                   (cons ;28 andrea
                     ". . . I need one hundred twentyEurosand ninety five cents."
-                    ". . . avrei bisogno di centoventi Euroe novantasette centesimi.")
+                    ". . . avrei bisogno di centoventi Euro e novantasette centesimi.")
                   (cons ;29 caprini
                     "I was right then."
                     "Avevo ragione allora.")

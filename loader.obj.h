@@ -28,7 +28,7 @@
 #define d_pomodoro_resources_default_ogg	"./data/placeholders/default_ogg.wav"
 #define d_pomodoro_resources_default_lisp   "./data/placeholders/default_lisp.lisp"
 #define d_pomodoro_resources_configuration  "./data/pomodoro_config.json"
-#define d_pomodoro_resources_loading        "./data/loading_screen.png"
+#define d_pomodoro_resources_loading        "./data/images/loading_screen.png"
 d_declare_class(loader) {
     struct s_attributes head;
     struct s_object *environment;

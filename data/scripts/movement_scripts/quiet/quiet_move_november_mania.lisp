@@ -20,7 +20,7 @@
                     ". . . locale famoso per i suoi shortini a 1 euro.")
                   (cons ;3 andrea
                     "Now it's 1 Euroand half per shot."
-                    "Ora costano 1 Euroe cinquanta.")
+                    "Ora costano 1 Euro e cinquanta.")
                   (cons ;4 andrea
                     "Is closed right now."
                     "E' ancora chiuso.")
