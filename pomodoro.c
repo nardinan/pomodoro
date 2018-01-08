@@ -133,7 +133,7 @@ void pomodoro_change_location(const char *application) {
 int main (int argc, char *argv[]) {
     struct s_exception *exception;
     struct s_object *environment;
-    struct s_object *stream_configuation;
+    struct s_object *stream_configuration;
     struct s_object *json_configuration;
     double scale_resolution_x, scale_resolution_y;
     d_pool_init;
@@ -152,8 +152,8 @@ int main (int argc, char *argv[]) {
         }
         /* wait the unlock */
         d_try {
-            if ((stream_configuation = f_stream_new_file(d_new(stream), d_pkstr(d_pomodoro_resources_configuration), "r", 0777))) {
-                if ((json_configuration = f_json_new_stream(d_new(json), stream_configuation))) {
+            if ((stream_configuration = f_stream_new_file(d_new(stream), d_pkstr(d_pomodoro_resources_configuration), "r", 0777))) {
+                if ((json_configuration = f_json_new_stream(d_new(json), stream_configuration))) {
                     d_call(json_configuration, m_json_get_double, &d_pomodoro_width_window, "s", "width");
                     d_call(json_configuration, m_json_get_double, &d_pomodoro_height_window, "s", "height");
                     d_call(json_configuration, m_json_get_boolean, &d_pomodoro_fullscreen, "s", "fullscreen");
@@ -161,7 +161,7 @@ int main (int argc, char *argv[]) {
                     d_call(json_configuration, m_json_get_double, &d_pomodoro_language, "s", "language");
                     d_delete(json_configuration);
                 }
-                d_delete(stream_configuation);
+                d_delete(stream_configuration);
             }
             scale_resolution_x = (d_pomodoro_width * d_pomodoro_scale_factor);
             scale_resolution_y = (d_pomodoro_height * d_pomodoro_scale_factor);
