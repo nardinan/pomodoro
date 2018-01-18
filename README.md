@@ -1,11 +1,13 @@
 POMODORO (Bad Things in Perugia)
 -------------------------
 
+![Pizza?](banner.png)
+
 [![Build Status](https://travis-ci.org/nardinan/pomodoro.svg?branch=master)](https://travis-ci.org/nardinan/pomodoro)
 
 This is a very silly pixel-art adventure game written and developed by me and Luna Paciucci in two years, from scratch and during our spare time. The game follows the adventures of a younger version of myself on a very bizzarre day of June 2012 in the beautiful city of Perugia.
 
-![alt text](demo_intro.gif)
+![I'm the man that goes and goes and goes](demo_intro.gif)
 
 Originally, the game had been drafted as a PoC (Proof Of Concept) of some components in Miranda-media but, a few months after, we decided to give the game a real story and finish it.
 
@@ -48,9 +50,10 @@ $ make
 
 ### Compilation on Mac OS X
 
-On MacOS X, the installation procedure has been tested with MacPort (https://www.macports.org). To install the SDL2 libraries via the *port* command, type the following:
+On MacOS X, the installation procedure has been tested with Brew (https://brew.sh/). To install the SDL2 libraries via the *brew* command, type the following:
 ```bash
-$ sudo port install libsdl2 libsdl2_image libsdl2_mixer libsdl2_ttf
+$ brew install sdl2 sdl2_image sdl2_ttf
+$ brew install sdl2_mixer --with-flac --with-fluid-synth --with-libmikmod --with-mpg123 --HEAD
 ```
 Once the libraries have been successfully installed, refer to the paragraph about the installation of Miranda and Pomodoro on the section 'Compilation on Ubuntu' above.
 
