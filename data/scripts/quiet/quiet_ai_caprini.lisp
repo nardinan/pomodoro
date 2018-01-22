@@ -94,7 +94,7 @@
                     "That's great, but now listen . . ."
                     "Fantastico, ma ora ascolta . . .")
                   (cons ;28 andrea
-                    ". . . I need one hundred twentyEurosand ninety five cents."
+                    ". . . I need one hundred twenty Euros and ninety five cents."
                     ". . . avrei bisogno di centoventi Euro e novantasette centesimi.")
                   (cons ;29 caprini
                     "I was right then."
