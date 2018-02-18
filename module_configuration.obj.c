@@ -70,16 +70,16 @@ d_define_method(module_configuration, fill_resources)(struct s_object *self, str
         d_call(checkbox_fullscreen->uiable, m_checkbox_set_checked, d_true);
     }
     for (index = 0; v_configuration_resolutions[index]; ++index) 
-        if ((current_label = d_call(module_configuration_attributes->ui_factory, m_ui_factory_new_label, module_configuration_attributes->resources_png,
-                        environment, d_ui_factory_default_font_id, d_ui_factory_default_font_style, v_configuration_resolutions[index]))) {
+        if ((current_label = d_call(module_configuration_attributes->ui_factory, m_ui_factory_new_label, d_ui_factory_default_font_id, 
+                        d_ui_factory_default_font_style, v_configuration_resolutions[index]))) {
             d_call(list_resolutions->uiable, m_list_add_uiable, current_label);
             if (f_string_strcmp(current_resolution, v_configuration_resolutions[index]) == 0)
                 d_call(list_resolutions->uiable, m_list_set_selected_uiable, current_label);
             d_delete(current_label);
         }
     for (index = 0; v_configuration_languages[index]; ++index)
-        if ((current_label = d_call(module_configuration_attributes->ui_factory, m_ui_factory_new_label, module_configuration_attributes->resources_png,
-                        environment, d_ui_factory_default_font_id, d_ui_factory_default_font_style, v_configuration_languages[index]))) {
+        if ((current_label = d_call(module_configuration_attributes->ui_factory, m_ui_factory_new_label, d_ui_factory_default_font_id, 
+                        d_ui_factory_default_font_style, v_configuration_languages[index]))) {
             d_call(list_languages->uiable, m_list_add_uiable, current_label);
             if (d_pomodoro_language == index)
                 d_call(list_languages->uiable, m_list_set_selected_uiable, current_label);

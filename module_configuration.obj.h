@@ -17,8 +17,8 @@
  */
 #ifndef pomodoro_module_configuration_h
 #define pomodoro_module_configuration_h
-#include "ui_factory.obj.h"
 #include "collector.obj.h"
+#include "factory.obj.h"
 d_declare_class(module_configuration) {
     struct s_attributes head;
     struct s_object *ui_factory;

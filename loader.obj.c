@@ -58,9 +58,8 @@ d_define_method_override(loader, job)(struct s_object *self) {
                 if ((json_configuration = f_json_new_stream(d_new(json), stream_configuration))) {
                     d_assert(stream_ui = d_call(loader_attributes->resources_json, m_resources_get_stream, d_factory_ui, e_resources_type_common));
                     if ((json_ui = f_json_new_stream(d_new(json), stream_ui))) {
-                        loader_attributes->ui_factory = f_ui_factory_new(d_new(ui_factory), loader_attributes->resources_png, 
-                                loader_attributes->resources_json, loader_attributes->director, loader_attributes->environment, 
-                                json_configuration, json_ui);
+                        loader_attributes->ui_factory = f_ui_factory_new(d_new(ui_factory), loader_attributes->resources_png, loader_attributes->resources_ttf,
+                                loader_attributes->resources_json, loader_attributes->environment, json_configuration, json_ui);
                         d_delete(json_ui);
                     }
                     d_delete(json_configuration);
