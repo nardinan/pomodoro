@@ -1,1 +1,470 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"bb288404-1a81-4c3d-96e4-8ed37c008675","delay":2.425,"actor":"technician","content":["What can I do for you boy?","Cosa posso fare per te ragazzo?"],"next":"6987ac69-1977-422b-b457-f9825aa7a1a2"},{"type":"dialog","ID":"6987ac69-1977-422b-b457-f9825aa7a1a2","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["736a9b70-378c-4234-a57b-6cd3369fd219","a43cb568-e117-44b3-a399-f2e316c4f1b5","f4aac436-251d-4377-8053-a8c19c0d0aa5"]},{"type":"choice","ID":"736a9b70-378c-4234-a57b-6cd3369fd219","title":"","content":["Is everything fine?","Tutto bene?"],"next":"71509063-04fd-42ac-8780-8d773e6831b0"},{"type":"choice","ID":"a43cb568-e117-44b3-a399-f2e316c4f1b5","title":"","content":["Are you angry with me?","Sei arrabbiato con me?"],"next":"beb0959a-c51d-4f6f-8cc3-4f86d3cc0463"},{"type":"choice","ID":"f4aac436-251d-4377-8053-a8c19c0d0aa5","title":"","content":["That's enough.","Basta parlare."],"next":"62efe412-2ac9-48fb-8af8-ddf76568d438"},{"type":"dialog","ID":"71509063-04fd-42ac-8780-8d773e6831b0","delay":1.75,"actor":"andrea","content":["Is everything fine?","Tutto bene?"],"next":"d189699d-6438-4398-960b-cefbce2518e2"},{"type":"dialog","ID":"d189699d-6438-4398-960b-cefbce2518e2","delay":1.775,"actor":"technician","content":["Extremely well! ","Splendidamente!"],"next":"e932b23f-8b6c-469a-8d96-999a4920267e"},{"type":"dialog","ID":"e932b23f-8b6c-469a-8d96-999a4920267e","delay":1.625,"actor":"andrea","content":["Oh yes . . .","Eh gia' . . ."],"next":"2485284d-9637-4d38-9d2a-621c08e2e370"},{"type":"dialog","ID":"2485284d-9637-4d38-9d2a-621c08e2e370","delay":2.95,"actor":"andrea","content":[". . . you are totally infected, right?",". . . sei completamente infetto, giusto?"],"next":"ba4d3dc0-2e94-4ed9-ae5c-f681dd7bd26b"},{"type":"dialog","ID":"ba4d3dc0-2e94-4ed9-ae5c-f681dd7bd26b","delay":3.9000000000000004,"actor":"technician","content":["You're wrong bo - polite.bin [32]: segfault 42d1a error 12","Ti sbagli ragaz - polite.bin [32]: segfault 42d1a error 12"],"next":"5a0f8da9-a23b-4bea-a92d-e61bf4480a8d"},{"type":"dialog","ID":"5a0f8da9-a23b-4bea-a92d-e61bf4480a8d","delay":1.25,"actor":"andrea","content":[". . .",". . ."],"choices":["b7b0b7d6-1d35-4922-8865-d488d1c4134d","6881c3ec-4806-4069-b818-748757f76f4c","f4aac436-251d-4377-8053-a8c19c0d0aa5"]},{"type":"dialog","ID":"beb0959a-c51d-4f6f-8cc3-4f86d3cc0463","delay":2.1,"actor":"andrea","content":["Are you angry with me?","Sei arrabbiato con me?"],"next":"dcfe6a07-ade9-40c7-a765-5c77909c7c19"},{"type":"dialog","ID":"dcfe6a07-ade9-40c7-a765-5c77909c7c19","delay":1.975,"actor":"technician","content":["Why do you ask me?","Perche' me lo chiedi?"],"next":"f5f95b5d-83da-4bcc-a075-6c74e4b2f366"},{"type":"dialog","ID":"f5f95b5d-83da-4bcc-a075-6c74e4b2f366","delay":3.95,"actor":"andrea","content":["Well, I drugged you to take the key of the cabin.","Beh, diciamo che ti ho drogato per avere le chiave della porta verde."],"next":"bdf41285-6079-440a-88db-a2b4d5bce1aa"},{"type":"dialog","ID":"bdf41285-6079-440a-88db-a2b4d5bce1aa","delay":7,"actor":"technician","content":["[error] memory(reference) returned a pointer to NULL. Required memory block is not present in the LTM (Long Term Memory)","[error] memory(reference) returned a pointer to NULL. Required memory block is not present in the LTM (Long Term Memory)"],"next":"7505ccec-d2d7-4f4e-806c-397eca271fef"},{"type":"dialog","ID":"f2164169-29ab-4c41-b987-d1438775aea1","delay":2.3,"actor":"andrea","content":["Yeah mate, I'm happy to hear it.","Daje, sono contento."],"next":"95623dce-b046-488c-9b4b-743657da9af8"},{"type":"dialog","ID":"62efe412-2ac9-48fb-8af8-ddf76568d438","delay":1.7000000000000002,"actor":"andrea","content":["That's enough.","Basta parlare."],"next":"f924c777-0319-457a-88b1-5c40b1bd50b6"},{"type":"dialog","ID":"935865e7-0bad-4e11-8a57-9cbc98b2ca97","delay":1.75,"actor":"andrea","content":["man polite.bin?","man polite.bin?"],"next":"30d3433c-8b97-40b5-83c1-f6950379665e"},{"type":"dialog","ID":"7505ccec-d2d7-4f4e-806c-397eca271fef","delay":2.625,"actor":"technician","content":["I am sorry but I don't remember.","Io questa cosa non me la ricordo."],"next":"f2164169-29ab-4c41-b987-d1438775aea1"},{"type":"dialog","ID":"30d3433c-8b97-40b5-83c1-f6950379665e","delay":9.775,"actor":"technician","content":["polite.bin (from version 1.5) - generates a set of polite sentences to handle a back-and-forth. Use with the following syntax: polite.bin <seed> <incoming_sentence> <dictionary>","polite.bin (dalla versione 1.5) - genera una serie di frasi educate per un botta e risposta. Da usare nel seguente formato: polite.bin <seed> <incoming_sentence> <dictionary>"],"next":"a4147fa1-2089-4743-b7cb-d6b78d2efb63"},{"type":"dialog","ID":"a4147fa1-2089-4743-b7cb-d6b78d2efb63","delay":2.55,"actor":"andrea","content":["This thing troubles me.","Questa cosa mi perplime sempre di piu'."],"next":"94c2020e-0f43-4fbb-8136-a8a197b59995"},{"type":"dialog","ID":"94c2020e-0f43-4fbb-8136-a8a197b59995","delay":1.625,"actor":"andrea","content":["What are you?","Ma cosa sei?"],"next":"86e773ac-8dcc-49a1-a696-4fa510688e8d"},{"type":"dialog","ID":"86e773ac-8dcc-49a1-a696-4fa510688e8d","delay":3.35,"actor":"technician","content":["What are you talking about, kid?","Non ho la piu' pallida idea di cosa tua stia dicendo, ragazzo."],"next":"83927599-3e5f-4d81-b69f-c9d5df987a28"},{"type":"dialog","ID":"83927599-3e5f-4d81-b69f-c9d5df987a28","delay":1.45,"actor":"andrea","content":["uname -a?","uname -a?"],"next":"32fa04b8-b38a-4aaa-8c9c-ab78b861acc5"},{"type":"dialog","ID":"32fa04b8-b38a-4aaa-8c9c-ab78b861acc5","delay":4.7,"actor":"technician","content":["Linux AIController 3.3.0-40-generic SMP Thu June 11 2012 x86_64 GNU/Linux","Linux AIController 3.3.0-40-generic SMP Thu June 11 2012 x86_64 GNU/Linux"],"next":"379eced0-b48d-4177-824b-f6ccc29c6f24"},{"type":"dialog","ID":"379eced0-b48d-4177-824b-f6ccc29c6f24","delay":1.525,"actor":"andrea","content":["Nonsense.","Senza senso."],"next":null},{"type":"choice","ID":"b7b0b7d6-1d35-4922-8865-d488d1c4134d","title":"","content":["man polite.bin?","man polite.bin?"],"next":"935865e7-0bad-4e11-8a57-9cbc98b2ca97"},{"type":"choice","ID":"6881c3ec-4806-4069-b818-748757f76f4c","title":"","content":["How did you end up like this?","Come ti sei ridotto cosi?"],"next":"61218567-1b5f-420e-80a0-f64af1d36068"},{"type":"dialog","ID":"61218567-1b5f-420e-80a0-f64af1d36068","delay":2.35,"actor":"andrea","content":["How did you end up like this?","Come ti sei ridotto cosi?"],"next":"77414bab-24cf-458e-b20e-52613e872fa3"},{"type":"dialog","ID":"77414bab-24cf-458e-b20e-52613e872fa3","delay":1.375,"actor":"technician","content":["Like this?","Cosi?"],"next":"a9a58ced-3a3a-47fa-80e9-1eecbbd685f1"},{"type":"dialog","ID":"a9a58ced-3a3a-47fa-80e9-1eecbbd685f1","delay":1.85,"actor":"andrea","content":["Yes, I mean . . .","Si, intendo . . ."],"next":"02fa8515-faee-4bbe-8aec-80f7b65a7afd"},{"type":"dialog","ID":"02fa8515-faee-4bbe-8aec-80f7b65a7afd","delay":2.9000000000000004,"actor":"andrea","content":[". . . how Solaris got into you?",". . . come ti sei fatto prendere dal Solaris?"],"next":"322c22cd-9866-4052-b0ae-669768733190"},{"type":"dialog","ID":"322c22cd-9866-4052-b0ae-669768733190","delay":2.225,"actor":"technician","content":["Do you think I am infected?","Credi che sia infetto?"],"next":"a4518ef8-7f56-4330-b508-777604fc2065"},{"type":"dialog","ID":"a4518ef8-7f56-4330-b508-777604fc2065","delay":1.175,"actor":"andrea","content":["Yes.","Si."],"next":"4f69859f-a817-4844-bbbe-9c16d50c12f7"},{"type":"dialog","ID":"4f69859f-a817-4844-bbbe-9c16d50c12f7","delay":1.525,"actor":"technician","content":["I am not.","Non lo sono."],"next":"106c126d-ba05-4861-946e-dae0932b605e"},{"type":"dialog","ID":"106c126d-ba05-4861-946e-dae0932b605e","delay":1.775,"actor":"andrea","content":["Sure, sur . . .","Certo, cer . . ."],"next":"c6ba312e-2002-416a-8356-46b1afaa5d7a"},{"type":"dialog","ID":"c6ba312e-2002-416a-8356-46b1afaa5d7a","delay":4.6,"actor":"technician","content":["I am not.I am not.I am not.I am not.I am not.I am not.I am not.I am not.","Non lo sono.Non lo sono.Non lo sono.Non lo sono.Non lo sono.Non lo sono."],"next":"2410134d-1de1-4b74-a00a-fcb57d5937f0"},{"type":"dialog","ID":"95623dce-b046-488c-9b4b-743657da9af8","delay":4.6,"actor":"technician","content":["I am happy to hear that you are h - polite.bin [32]: segfault 42d1a error 12","Sono contento tu sia cont - polite.bin [32]: segfault 42d1a error 12"],"next":"5a0f8da9-a23b-4bea-a92d-e61bf4480a8d"},{"type":"dialog","ID":"2410134d-1de1-4b74-a00a-fcb57d5937f0","delay":2.225,"actor":"andrea","content":["OK please, take it easy.","Va bene, non ti scaldare."],"next":"41e2b588-9e47-42bb-bfca-ab2a7d8b814f"},{"type":"dialog","ID":"41e2b588-9e47-42bb-bfca-ab2a7d8b814f","delay":5.9,"actor":"technician","content":["[warning] errorManager.bin displayError() - An error occurred while displaying the previous error.","[warning] errorManager.bin displayError() - An error occurred while displaying the previous error."],"next":"ac04c6df-2d70-4224-83e1-0ec145c413da"},{"type":"dialog","ID":"ac04c6df-2d70-4224-83e1-0ec145c413da","delay":2.05,"actor":"andrea","content":["Such a disappointment.","Che lavoro scadente."],"next":null},{"type":"dialog","ID":"f924c777-0319-457a-88b1-5c40b1bd50b6","delay":4.4,"actor":"technician","content":["[error] restoring(IDLE_MODE) failes. Mode IDLE_MODE cannot be found.","[error] restoring(IDLE_MODE) failes. Mode IDLE_MODE cannot be found."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "bb288404-1a81-4c3d-96e4-8ed37c008675",
+      "delay": 2.425,
+      "actor": "technician",
+      "content": [
+        "What can I do for you boy?",
+        "Cosa posso fare per te ragazzo?"
+      ],
+      "next": "6987ac69-1977-422b-b457-f9825aa7a1a2"
+    },
+    {
+      "type": "dialog",
+      "ID": "6987ac69-1977-422b-b457-f9825aa7a1a2",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "736a9b70-378c-4234-a57b-6cd3369fd219",
+        "a43cb568-e117-44b3-a399-f2e316c4f1b5",
+        "f4aac436-251d-4377-8053-a8c19c0d0aa5"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "736a9b70-378c-4234-a57b-6cd3369fd219",
+      "title": "",
+      "content": [
+        "Is everything fine?",
+        "Tutto bene?"
+      ],
+      "next": "71509063-04fd-42ac-8780-8d773e6831b0"
+    },
+    {
+      "type": "choice",
+      "ID": "a43cb568-e117-44b3-a399-f2e316c4f1b5",
+      "title": "",
+      "content": [
+        "Are you angry with me?",
+        "Sei arrabbiato con me?"
+      ],
+      "next": "beb0959a-c51d-4f6f-8cc3-4f86d3cc0463"
+    },
+    {
+      "type": "choice",
+      "ID": "f4aac436-251d-4377-8053-a8c19c0d0aa5",
+      "title": "",
+      "content": [
+        "That's enough.",
+        "Basta parlare."
+      ],
+      "next": "62efe412-2ac9-48fb-8af8-ddf76568d438"
+    },
+    {
+      "type": "dialog",
+      "ID": "71509063-04fd-42ac-8780-8d773e6831b0",
+      "delay": 1.75,
+      "actor": "andrea",
+      "content": [
+        "Is everything fine?",
+        "Tutto bene?"
+      ],
+      "next": "d189699d-6438-4398-960b-cefbce2518e2"
+    },
+    {
+      "type": "dialog",
+      "ID": "d189699d-6438-4398-960b-cefbce2518e2",
+      "delay": 1.775,
+      "actor": "technician",
+      "content": [
+        "Extremely well! ",
+        "Splendidamente!"
+      ],
+      "next": "e932b23f-8b6c-469a-8d96-999a4920267e"
+    },
+    {
+      "type": "dialog",
+      "ID": "e932b23f-8b6c-469a-8d96-999a4920267e",
+      "delay": 1.625,
+      "actor": "andrea",
+      "content": [
+        "Oh yes . . .",
+        "Eh gia' . . ."
+      ],
+      "next": "2485284d-9637-4d38-9d2a-621c08e2e370"
+    },
+    {
+      "type": "dialog",
+      "ID": "2485284d-9637-4d38-9d2a-621c08e2e370",
+      "delay": 2.95,
+      "actor": "andrea",
+      "content": [
+        ". . . you are totally infected, right?",
+        ". . . sei completamente infetto, giusto?"
+      ],
+      "next": "ba4d3dc0-2e94-4ed9-ae5c-f681dd7bd26b"
+    },
+    {
+      "type": "dialog",
+      "ID": "ba4d3dc0-2e94-4ed9-ae5c-f681dd7bd26b",
+      "delay": 3.9000000000000004,
+      "actor": "technician",
+      "content": [
+        "You're wrong bo - polite.bin [32]: segfault 42d1a error 12",
+        "Ti sbagli ragaz - polite.bin [32]: segfault 42d1a error 12"
+      ],
+      "next": "5a0f8da9-a23b-4bea-a92d-e61bf4480a8d"
+    },
+    {
+      "type": "dialog",
+      "ID": "5a0f8da9-a23b-4bea-a92d-e61bf4480a8d",
+      "delay": 1.25,
+      "actor": "andrea",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "choices": [
+        "b7b0b7d6-1d35-4922-8865-d488d1c4134d",
+        "6881c3ec-4806-4069-b818-748757f76f4c",
+        "f4aac436-251d-4377-8053-a8c19c0d0aa5"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "beb0959a-c51d-4f6f-8cc3-4f86d3cc0463",
+      "delay": 2.1,
+      "actor": "andrea",
+      "content": [
+        "Are you angry with me?",
+        "Sei arrabbiato con me?"
+      ],
+      "next": "dcfe6a07-ade9-40c7-a765-5c77909c7c19"
+    },
+    {
+      "type": "dialog",
+      "ID": "dcfe6a07-ade9-40c7-a765-5c77909c7c19",
+      "delay": 1.975,
+      "actor": "technician",
+      "content": [
+        "Why do you ask me?",
+        "Perche' me lo chiedi?"
+      ],
+      "next": "f5f95b5d-83da-4bcc-a075-6c74e4b2f366"
+    },
+    {
+      "type": "dialog",
+      "ID": "f5f95b5d-83da-4bcc-a075-6c74e4b2f366",
+      "delay": 3.95,
+      "actor": "andrea",
+      "content": [
+        "Well, I drugged you to take the key of the cabin.",
+        "Beh, diciamo che ti ho drogato per avere le chiave della porta verde."
+      ],
+      "next": "bdf41285-6079-440a-88db-a2b4d5bce1aa"
+    },
+    {
+      "type": "dialog",
+      "ID": "bdf41285-6079-440a-88db-a2b4d5bce1aa",
+      "delay": 7,
+      "actor": "technician",
+      "content": [
+        "[error] memory(reference) returned a pointer to NULL. Required memory block is not present in the LTM (Long Term Memory)",
+        "[error] memory(reference) returned a pointer to NULL. Required memory block is not present in the LTM (Long Term Memory)"
+      ],
+      "next": "7505ccec-d2d7-4f4e-806c-397eca271fef"
+    },
+    {
+      "type": "dialog",
+      "ID": "f2164169-29ab-4c41-b987-d1438775aea1",
+      "delay": 2.3,
+      "actor": "andrea",
+      "content": [
+        "Yeah mate, I'm happy to hear it.",
+        "Daje, sono contento."
+      ],
+      "next": "95623dce-b046-488c-9b4b-743657da9af8"
+    },
+    {
+      "type": "dialog",
+      "ID": "62efe412-2ac9-48fb-8af8-ddf76568d438",
+      "delay": 1.7000000000000002,
+      "actor": "andrea",
+      "content": [
+        "That's enough.",
+        "Basta parlare."
+      ],
+      "next": "f924c777-0319-457a-88b1-5c40b1bd50b6"
+    },
+    {
+      "type": "dialog",
+      "ID": "935865e7-0bad-4e11-8a57-9cbc98b2ca97",
+      "delay": 1.75,
+      "actor": "andrea",
+      "content": [
+        "man polite.bin?",
+        "man polite.bin?"
+      ],
+      "next": "30d3433c-8b97-40b5-83c1-f6950379665e"
+    },
+    {
+      "type": "dialog",
+      "ID": "7505ccec-d2d7-4f4e-806c-397eca271fef",
+      "delay": 2.625,
+      "actor": "technician",
+      "content": [
+        "I am sorry but I don't remember.",
+        "Io questa cosa non me la ricordo."
+      ],
+      "next": "f2164169-29ab-4c41-b987-d1438775aea1"
+    },
+    {
+      "type": "dialog",
+      "ID": "30d3433c-8b97-40b5-83c1-f6950379665e",
+      "delay": 9.775,
+      "actor": "technician",
+      "content": [
+        "polite.bin (from version 1.5) - generates a set of polite sentences to handle a back-and-forth. Use with the following syntax: polite.bin <seed> <incoming_sentence> <dictionary>",
+        "polite.bin (dalla versione 1.5) - genera una serie di frasi educate per un botta e risposta. Da usare nel seguente formato: polite.bin <seed> <incoming_sentence> <dictionary>"
+      ],
+      "next": "a4147fa1-2089-4743-b7cb-d6b78d2efb63"
+    },
+    {
+      "type": "dialog",
+      "ID": "a4147fa1-2089-4743-b7cb-d6b78d2efb63",
+      "delay": 2.55,
+      "actor": "andrea",
+      "content": [
+        "This thing troubles me.",
+        "Questa cosa mi perplime sempre di piu'."
+      ],
+      "next": "94c2020e-0f43-4fbb-8136-a8a197b59995"
+    },
+    {
+      "type": "dialog",
+      "ID": "94c2020e-0f43-4fbb-8136-a8a197b59995",
+      "delay": 1.625,
+      "actor": "andrea",
+      "content": [
+        "What are you?",
+        "Ma cosa sei?"
+      ],
+      "next": "86e773ac-8dcc-49a1-a696-4fa510688e8d"
+    },
+    {
+      "type": "dialog",
+      "ID": "86e773ac-8dcc-49a1-a696-4fa510688e8d",
+      "delay": 3.35,
+      "actor": "technician",
+      "content": [
+        "What are you talking about, kid?",
+        "Non ho la piu' pallida idea di cosa tua stia dicendo, ragazzo."
+      ],
+      "next": "83927599-3e5f-4d81-b69f-c9d5df987a28"
+    },
+    {
+      "type": "dialog",
+      "ID": "83927599-3e5f-4d81-b69f-c9d5df987a28",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "uname -a?",
+        "uname -a?"
+      ],
+      "next": "32fa04b8-b38a-4aaa-8c9c-ab78b861acc5"
+    },
+    {
+      "type": "dialog",
+      "ID": "32fa04b8-b38a-4aaa-8c9c-ab78b861acc5",
+      "delay": 4.7,
+      "actor": "technician",
+      "content": [
+        "Linux AIController 3.3.0-40-generic SMP Thu June 11 2012 x86_64 GNU/Linux",
+        "Linux AIController 3.3.0-40-generic SMP Thu June 11 2012 x86_64 GNU/Linux"
+      ],
+      "next": "379eced0-b48d-4177-824b-f6ccc29c6f24"
+    },
+    {
+      "type": "dialog",
+      "ID": "379eced0-b48d-4177-824b-f6ccc29c6f24",
+      "delay": 1.525,
+      "actor": "andrea",
+      "content": [
+        "Nonsense.",
+        "Senza senso."
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "b7b0b7d6-1d35-4922-8865-d488d1c4134d",
+      "title": "",
+      "content": [
+        "man polite.bin?",
+        "man polite.bin?"
+      ],
+      "next": "935865e7-0bad-4e11-8a57-9cbc98b2ca97"
+    },
+    {
+      "type": "choice",
+      "ID": "6881c3ec-4806-4069-b818-748757f76f4c",
+      "title": "",
+      "content": [
+        "How did you end up like this?",
+        "Come ti sei ridotto cosi?"
+      ],
+      "next": "61218567-1b5f-420e-80a0-f64af1d36068"
+    },
+    {
+      "type": "dialog",
+      "ID": "61218567-1b5f-420e-80a0-f64af1d36068",
+      "delay": 2.35,
+      "actor": "andrea",
+      "content": [
+        "How did you end up like this?",
+        "Come ti sei ridotto cosi?"
+      ],
+      "next": "77414bab-24cf-458e-b20e-52613e872fa3"
+    },
+    {
+      "type": "dialog",
+      "ID": "77414bab-24cf-458e-b20e-52613e872fa3",
+      "delay": 1.375,
+      "actor": "technician",
+      "content": [
+        "Like this?",
+        "Cosi?"
+      ],
+      "next": "a9a58ced-3a3a-47fa-80e9-1eecbbd685f1"
+    },
+    {
+      "type": "dialog",
+      "ID": "a9a58ced-3a3a-47fa-80e9-1eecbbd685f1",
+      "delay": 1.85,
+      "actor": "andrea",
+      "content": [
+        "Yes, I mean . . .",
+        "Si, intendo . . ."
+      ],
+      "next": "02fa8515-faee-4bbe-8aec-80f7b65a7afd"
+    },
+    {
+      "type": "dialog",
+      "ID": "02fa8515-faee-4bbe-8aec-80f7b65a7afd",
+      "delay": 2.9000000000000004,
+      "actor": "andrea",
+      "content": [
+        ". . . how Solaris got into you?",
+        ". . . come ti sei fatto prendere dal Solaris?"
+      ],
+      "next": "322c22cd-9866-4052-b0ae-669768733190"
+    },
+    {
+      "type": "dialog",
+      "ID": "322c22cd-9866-4052-b0ae-669768733190",
+      "delay": 2.225,
+      "actor": "technician",
+      "content": [
+        "Do you think I am infected?",
+        "Credi che sia infetto?"
+      ],
+      "next": "a4518ef8-7f56-4330-b508-777604fc2065"
+    },
+    {
+      "type": "dialog",
+      "ID": "a4518ef8-7f56-4330-b508-777604fc2065",
+      "delay": 1.175,
+      "actor": "andrea",
+      "content": [
+        "Yes.",
+        "Si."
+      ],
+      "next": "4f69859f-a817-4844-bbbe-9c16d50c12f7"
+    },
+    {
+      "type": "dialog",
+      "ID": "4f69859f-a817-4844-bbbe-9c16d50c12f7",
+      "delay": 1.525,
+      "actor": "technician",
+      "content": [
+        "I am not.",
+        "Non lo sono."
+      ],
+      "next": "106c126d-ba05-4861-946e-dae0932b605e"
+    },
+    {
+      "type": "dialog",
+      "ID": "106c126d-ba05-4861-946e-dae0932b605e",
+      "delay": 1.775,
+      "actor": "andrea",
+      "content": [
+        "Sure, sur . . .",
+        "Certo, cer . . ."
+      ],
+      "next": "c6ba312e-2002-416a-8356-46b1afaa5d7a"
+    },
+    {
+      "type": "dialog",
+      "ID": "c6ba312e-2002-416a-8356-46b1afaa5d7a",
+      "delay": 4.6,
+      "actor": "technician",
+      "content": [
+        "I am not.I am not.I am not.I am not.I am not.I am not.I am not.I am not.",
+        "Non lo sono.Non lo sono.Non lo sono.Non lo sono.Non lo sono.Non lo sono."
+      ],
+      "next": "2410134d-1de1-4b74-a00a-fcb57d5937f0"
+    },
+    {
+      "type": "dialog",
+      "ID": "95623dce-b046-488c-9b4b-743657da9af8",
+      "delay": 4.6,
+      "actor": "technician",
+      "content": [
+        "I am happy to hear that you are h - polite.bin [32]: segfault 42d1a error 12",
+        "Sono contento tu sia cont - polite.bin [32]: segfault 42d1a error 12"
+      ],
+      "next": "5a0f8da9-a23b-4bea-a92d-e61bf4480a8d"
+    },
+    {
+      "type": "dialog",
+      "ID": "2410134d-1de1-4b74-a00a-fcb57d5937f0",
+      "delay": 2.225,
+      "actor": "andrea",
+      "content": [
+        "OK please, take it easy.",
+        "Va bene, non ti scaldare."
+      ],
+      "next": "41e2b588-9e47-42bb-bfca-ab2a7d8b814f"
+    },
+    {
+      "type": "dialog",
+      "ID": "41e2b588-9e47-42bb-bfca-ab2a7d8b814f",
+      "delay": 5.9,
+      "actor": "technician",
+      "content": [
+        "[warning] errorManager.bin displayError() - An error occurred while displaying the previous error.",
+        "[warning] errorManager.bin displayError() - An error occurred while displaying the previous error."
+      ],
+      "next": "ac04c6df-2d70-4224-83e1-0ec145c413da"
+    },
+    {
+      "type": "dialog",
+      "ID": "ac04c6df-2d70-4224-83e1-0ec145c413da",
+      "delay": 2.05,
+      "actor": "andrea",
+      "content": [
+        "Such a disappointment.",
+        "Che lavoro scadente."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "f924c777-0319-457a-88b1-5c40b1bd50b6",
+      "delay": 4.4,
+      "actor": "technician",
+      "content": [
+        "[error] restoring(IDLE_MODE) failes. Mode IDLE_MODE cannot be found.",
+        "[error] restoring(IDLE_MODE) failes. Mode IDLE_MODE cannot be found."
+      ],
+      "next": null
+    }
+  ]
+}

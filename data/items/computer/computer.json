@@ -1,65 +1,91 @@
 {
-	"format":"item",
-	"ID":"computer",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"computer_still_A"}
-			]
-		},{
-			"label":"still_B",
-			"layers":[
-				{"drawable":"computer_still_B"}
-			]
-		},{
-			"label":"warning_B",
-			"layers":[
-				{"drawable":"computer_warning_B"}
-			]
-		},{
-			"label":"error_B",
-			"layers":[
-				{"drawable":"computer_error_B"}
-			]
-		},{
-			"label":"still_C",
-			"layers":[
-				{"drawable":"computer_still_C"}
-			]
-		},{
-			"label":"still_D",
-			"layers":[
-				{"drawable":"computer_still_D"}
-			]
-		},{
-			"label":"coding_A",
-			"track":{
-				"playable":"computer_coding",
-				"loops":-1.0
-			},
-			"layers":[
-				{"drawable":"computer_coding_A"}
-			]
-		},{
-			"label":"error_coding_B",
-			"track":{
-				"playable":"computer_coding",
-				"loops":-1.0
-			},
-			"layers":[
-				{"drawable":"computer_error_coding_B"}
-			]
-		},{
-			"label":"coding_C",
-			"track":{
-				"playable":"computer_coding",
-				"loops":-1.0
-			},
-			"layers":[
-				{"drawable":"computer_coding_C"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "computer",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "computer_still_A"
+        }
+      ]
+    },
+    {
+      "label": "still_B",
+      "layers": [
+        {
+          "drawable": "computer_still_B"
+        }
+      ]
+    },
+    {
+      "label": "warning_B",
+      "layers": [
+        {
+          "drawable": "computer_warning_B"
+        }
+      ]
+    },
+    {
+      "label": "error_B",
+      "layers": [
+        {
+          "drawable": "computer_error_B"
+        }
+      ]
+    },
+    {
+      "label": "still_C",
+      "layers": [
+        {
+          "drawable": "computer_still_C"
+        }
+      ]
+    },
+    {
+      "label": "still_D",
+      "layers": [
+        {
+          "drawable": "computer_still_D"
+        }
+      ]
+    },
+    {
+      "label": "coding_A",
+      "track": {
+        "playable": "computer_coding",
+        "loops": -1.0
+      },
+      "layers": [
+        {
+          "drawable": "computer_coding_A"
+        }
+      ]
+    },
+    {
+      "label": "error_coding_B",
+      "track": {
+        "playable": "computer_coding",
+        "loops": -1.0
+      },
+      "layers": [
+        {
+          "drawable": "computer_error_coding_B"
+        }
+      ]
+    },
+    {
+      "label": "coding_C",
+      "track": {
+        "playable": "computer_coding",
+        "loops": -1.0
+      },
+      "layers": [
+        {
+          "drawable": "computer_coding_C"
+        }
+      ]
+    }
+  ]
 }

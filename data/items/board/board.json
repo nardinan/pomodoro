@@ -1,13 +1,15 @@
 {
-	"format":"item",
-	"ID":"board",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"board_still_A"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "board",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "board_still_A"
+        }
+      ]
+    }
+  ]
 }

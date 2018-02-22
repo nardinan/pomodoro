@@ -1,8 +1,14 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"computer_error_B_frame0",  "time":0.3},
-		{"drawable":"computer_error_B_frame1",  "time":0.3}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "computer_error_B_frame0",
+      "time": 0.3
+    },
+    {
+      "drawable": "computer_error_B_frame1",
+      "time": 0.3
+    }
+  ]
 }

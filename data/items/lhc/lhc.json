@@ -1,31 +1,39 @@
 {
-	"format":"item",
-	"ID":"lhc",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still",
-			"track":{
-				"playable":"lhc_still",
-				"loops":-1.0
-			},
-			"layers":[
-				{"drawable":"lhc_still"}
-			]
-		},{
-			"label":"move_audio",
-			"track":{
-				"playable":"lhc_move",
-				"loops":-1.0
-			},
-			"layers":[
-				{"drawable":"lhc_move"}
-			]
-		},{
-			"label":"move_silence",
-			"layers":[
-				{"drawable":"lhc_move"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "lhc",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still",
+      "track": {
+        "playable": "lhc_still",
+        "loops": -1.0
+      },
+      "layers": [
+        {
+          "drawable": "lhc_still"
+        }
+      ]
+    },
+    {
+      "label": "move_audio",
+      "track": {
+        "playable": "lhc_move",
+        "loops": -1.0
+      },
+      "layers": [
+        {
+          "drawable": "lhc_move"
+        }
+      ]
+    },
+    {
+      "label": "move_silence",
+      "layers": [
+        {
+          "drawable": "lhc_move"
+        }
+      ]
+    }
+  ]
 }

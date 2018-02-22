@@ -1,34 +1,61 @@
 {
-	"format":"landscape",
-	"ID":"fologna",
-	"zoom":5,
-	"position_x":0.0,
-	"position_y":0.0,
-	"intro_script":"intro_fologna",
-	"outro_script":"outro_fologna",
-	"tracks":[
-		{"label":"engine_background", "playable":"fologna_background_noise"}
-	],
-	"floor":[{
-		"position_x":0.0,
-		"position_y":2600.0
-	}],
-	"surfaces":[{
-		"drawable":"fologna_panorama",
-		"layer":1,
-		"speed_ratio_x":0.85
-	},{
-		"drawable":"fologna_background",
-		"layer":2,
-		"speed_ratio_x":1.0,
-		"reference":true
-	},{
-		"drawable":"fologna_foreground",
-		"layer":7,
-		"speed_ratio_x":1.0
-	}],
-	"items":[
-		{"label":"door_A",			"item":"arrow",			"status":"active_left",			"position_x":220.0,		"position_y":2650.0,		"zoom":2.25,	"solid":true,	"active":true,	"script":"move_fologna_francesco"},
-		{"label":"door_B",			"item":"arrow",			"status":"none",						"position_x":3500.0,	"position_y":2650.0,		"zoom":2.25,	"solid":true}
-	]
+  "format": "landscape",
+  "ID": "fologna",
+  "zoom": 5,
+  "position_x": 0.0,
+  "position_y": 0.0,
+  "intro_script": "intro_fologna",
+  "outro_script": "outro_fologna",
+  "tracks": [
+    {
+      "label": "engine_background",
+      "playable": "fologna_background_noise"
+    }
+  ],
+  "floor": [
+    {
+      "position_x": 0.0,
+      "position_y": 2600.0
+    }
+  ],
+  "surfaces": [
+    {
+      "drawable": "fologna_panorama",
+      "layer": 1,
+      "speed_ratio_x": 0.85
+    },
+    {
+      "drawable": "fologna_background",
+      "layer": 2,
+      "speed_ratio_x": 1.0,
+      "reference": true
+    },
+    {
+      "drawable": "fologna_foreground",
+      "layer": 7,
+      "speed_ratio_x": 1.0
+    }
+  ],
+  "items": [
+    {
+      "label": "door_A",
+      "item": "arrow",
+      "status": "active_left",
+      "position_x": 220.0,
+      "position_y": 2650.0,
+      "zoom": 2.25,
+      "solid": true,
+      "active": true,
+      "script": "move_fologna_francesco"
+    },
+    {
+      "label": "door_B",
+      "item": "arrow",
+      "status": "none",
+      "position_x": 3500.0,
+      "position_y": 2650.0,
+      "zoom": 2.25,
+      "solid": true
+    }
+  ]
 }

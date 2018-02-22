@@ -1,1 +1,182 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"9bfe0c1c-581c-4974-b79b-9e13f0f15cf7","delay":1.175,"actor":"baker","content":["You!","Tu!"],"next":"d03e557d-d312-4038-bf02-5cf4c6897dc4"},{"type":"dialog","ID":"fa5518a3-d89c-4f7f-91e8-fe0e4b5cd705","delay":1.15,"actor":"andrea","content":["Me?","Io?"],"next":"6d022c41-4938-4f2a-88a4-8f42527ea295"},{"type":"dialog","ID":"d03e557d-d312-4038-bf02-5cf4c6897dc4","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["02a78bb6-d426-4f4d-b606-9eebcee63498","a3772d53-17c8-42af-ba0a-6be0ddd4b389"]},{"type":"choice","ID":"02a78bb6-d426-4f4d-b606-9eebcee63498","title":"","content":["Me?","Io?"],"next":"fa5518a3-d89c-4f7f-91e8-fe0e4b5cd705"},{"type":"choice","ID":"a3772d53-17c8-42af-ba0a-6be0ddd4b389","title":"","content":["Hi!","Ciao! "],"next":"44ac2ebf-647a-4bcb-8fc1-97ac94fdf233"},{"type":"dialog","ID":"44ac2ebf-647a-4bcb-8fc1-97ac94fdf233","delay":1.2,"actor":"andrea","content":["Hi!","Ciao!"],"next":"611a82f7-43b7-419a-8cf7-f9ee4a3ff7db"},{"type":"dialog","ID":"6d022c41-4938-4f2a-88a4-8f42527ea295","delay":3.4000000000000004,"actor":"baker","content":["No poss-say.bin[345]: segfault at ad34fe error 5","No poss-say.bin[345]: segfault at ad34fe error 5"],"next":"79421931-8b55-4c14-a173-44a85272275b"},{"type":"dialog","ID":"79421931-8b55-4c14-a173-44a85272275b","delay":1.2,"actor":"andrea","content":["Who?","Chi?"],"next":"92e26ad3-386a-428d-81c4-176823500957"},{"type":"dialog","ID":"92e26ad3-386a-428d-81c4-176823500957","delay":1.75,"actor":"baker","content":["Sigaretta . . .","Sigaretta . . ."],"next":"2dd2ff72-eb4a-40d8-a3ce-020765673834"},{"type":"dialog","ID":"2dd2ff72-eb4a-40d8-a3ce-020765673834","delay":2.5250000000000004,"actor":"andrea","content":["No I'm sorry I don't smoke!","No guarda mi dispiace ma non fumo!"],"next":"04353ce9-579d-4587-81f8-107bbc3c2b26"},{"type":"dialog","ID":"611a82f7-43b7-419a-8cf7-f9ee4a3ff7db","delay":2.875,"actor":"baker","content":["I've to take out from the oven, from the oven!","Devo sfornare, devo sfornare!"],"next":"186374b8-3fa2-4821-973d-67036052d4be"},{"type":"dialog","ID":"186374b8-3fa2-4821-973d-67036052d4be","delay":1.4,"actor":"andrea","content":["Ok . . .","Ok . . ."],"next":"c22af0bb-62ef-45ee-bacb-33303ab29923"},{"type":"dialog","ID":"c22af0bb-62ef-45ee-bacb-33303ab29923","delay":4.5,"actor":"baker","content":["But the bread is warm, I'll bur-say.bin[210]: segfault at d22eab error 6","Ma il pane e' caldo, mi sco-say.bin[210]: segfault at d22eab error 6"],"next":"1c62e19f-06a8-4a06-9856-26bc282736de"},{"type":"dialog","ID":"1c62e19f-06a8-4a06-9856-26bc282736de","delay":3.4000000000000004,"actor":"andrea","content":["Well, I remember this guy and it was just normal.","Sara', ma io 'sto tipo me lo ricordavo normale."],"next":"4403ce91-02d2-4c18-92b0-eea844fa35f3"},{"type":"dialog","ID":"04353ce9-579d-4587-81f8-107bbc3c2b26","delay":3.35,"actor":"baker","content":["Assh-say.bin[222]: segfault at ae56bbc error 12","Stro-say.bin[222]: segfault at ae56bbc error 12"],"next":"1c62e19f-06a8-4a06-9856-26bc282736de"},{"type":"dialog","ID":"4403ce91-02d2-4c18-92b0-eea844fa35f3","delay":1.9500000000000002,"actor":"andrea","content":["Well, normal . . .","Oddio, normale . . ."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "9bfe0c1c-581c-4974-b79b-9e13f0f15cf7",
+      "delay": 1.175,
+      "actor": "baker",
+      "content": [
+        "You!",
+        "Tu!"
+      ],
+      "next": "d03e557d-d312-4038-bf02-5cf4c6897dc4"
+    },
+    {
+      "type": "dialog",
+      "ID": "fa5518a3-d89c-4f7f-91e8-fe0e4b5cd705",
+      "delay": 1.15,
+      "actor": "andrea",
+      "content": [
+        "Me?",
+        "Io?"
+      ],
+      "next": "6d022c41-4938-4f2a-88a4-8f42527ea295"
+    },
+    {
+      "type": "dialog",
+      "ID": "d03e557d-d312-4038-bf02-5cf4c6897dc4",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "02a78bb6-d426-4f4d-b606-9eebcee63498",
+        "a3772d53-17c8-42af-ba0a-6be0ddd4b389"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "02a78bb6-d426-4f4d-b606-9eebcee63498",
+      "title": "",
+      "content": [
+        "Me?",
+        "Io?"
+      ],
+      "next": "fa5518a3-d89c-4f7f-91e8-fe0e4b5cd705"
+    },
+    {
+      "type": "choice",
+      "ID": "a3772d53-17c8-42af-ba0a-6be0ddd4b389",
+      "title": "",
+      "content": [
+        "Hi!",
+        "Ciao! "
+      ],
+      "next": "44ac2ebf-647a-4bcb-8fc1-97ac94fdf233"
+    },
+    {
+      "type": "dialog",
+      "ID": "44ac2ebf-647a-4bcb-8fc1-97ac94fdf233",
+      "delay": 1.2,
+      "actor": "andrea",
+      "content": [
+        "Hi!",
+        "Ciao!"
+      ],
+      "next": "611a82f7-43b7-419a-8cf7-f9ee4a3ff7db"
+    },
+    {
+      "type": "dialog",
+      "ID": "6d022c41-4938-4f2a-88a4-8f42527ea295",
+      "delay": 3.4000000000000004,
+      "actor": "baker",
+      "content": [
+        "No poss-say.bin[345]: segfault at ad34fe error 5",
+        "No poss-say.bin[345]: segfault at ad34fe error 5"
+      ],
+      "next": "79421931-8b55-4c14-a173-44a85272275b"
+    },
+    {
+      "type": "dialog",
+      "ID": "79421931-8b55-4c14-a173-44a85272275b",
+      "delay": 1.2,
+      "actor": "andrea",
+      "content": [
+        "Who?",
+        "Chi?"
+      ],
+      "next": "92e26ad3-386a-428d-81c4-176823500957"
+    },
+    {
+      "type": "dialog",
+      "ID": "92e26ad3-386a-428d-81c4-176823500957",
+      "delay": 1.75,
+      "actor": "baker",
+      "content": [
+        "Sigaretta . . .",
+        "Sigaretta . . ."
+      ],
+      "next": "2dd2ff72-eb4a-40d8-a3ce-020765673834"
+    },
+    {
+      "type": "dialog",
+      "ID": "2dd2ff72-eb4a-40d8-a3ce-020765673834",
+      "delay": 2.5250000000000004,
+      "actor": "andrea",
+      "content": [
+        "No I'm sorry I don't smoke!",
+        "No guarda mi dispiace ma non fumo!"
+      ],
+      "next": "04353ce9-579d-4587-81f8-107bbc3c2b26"
+    },
+    {
+      "type": "dialog",
+      "ID": "611a82f7-43b7-419a-8cf7-f9ee4a3ff7db",
+      "delay": 2.875,
+      "actor": "baker",
+      "content": [
+        "I've to take out from the oven, from the oven!",
+        "Devo sfornare, devo sfornare!"
+      ],
+      "next": "186374b8-3fa2-4821-973d-67036052d4be"
+    },
+    {
+      "type": "dialog",
+      "ID": "186374b8-3fa2-4821-973d-67036052d4be",
+      "delay": 1.4,
+      "actor": "andrea",
+      "content": [
+        "Ok . . .",
+        "Ok . . ."
+      ],
+      "next": "c22af0bb-62ef-45ee-bacb-33303ab29923"
+    },
+    {
+      "type": "dialog",
+      "ID": "c22af0bb-62ef-45ee-bacb-33303ab29923",
+      "delay": 4.5,
+      "actor": "baker",
+      "content": [
+        "But the bread is warm, I'll bur-say.bin[210]: segfault at d22eab error 6",
+        "Ma il pane e' caldo, mi sco-say.bin[210]: segfault at d22eab error 6"
+      ],
+      "next": "1c62e19f-06a8-4a06-9856-26bc282736de"
+    },
+    {
+      "type": "dialog",
+      "ID": "1c62e19f-06a8-4a06-9856-26bc282736de",
+      "delay": 3.4000000000000004,
+      "actor": "andrea",
+      "content": [
+        "Well, I remember this guy and it was just normal.",
+        "Sara', ma io 'sto tipo me lo ricordavo normale."
+      ],
+      "next": "4403ce91-02d2-4c18-92b0-eea844fa35f3"
+    },
+    {
+      "type": "dialog",
+      "ID": "04353ce9-579d-4587-81f8-107bbc3c2b26",
+      "delay": 3.35,
+      "actor": "baker",
+      "content": [
+        "Assh-say.bin[222]: segfault at ae56bbc error 12",
+        "Stro-say.bin[222]: segfault at ae56bbc error 12"
+      ],
+      "next": "1c62e19f-06a8-4a06-9856-26bc282736de"
+    },
+    {
+      "type": "dialog",
+      "ID": "4403ce91-02d2-4c18-92b0-eea844fa35f3",
+      "delay": 1.9500000000000002,
+      "actor": "andrea",
+      "content": [
+        "Well, normal . . .",
+        "Oddio, normale . . ."
+      ],
+      "next": null
+    }
+  ]
+}

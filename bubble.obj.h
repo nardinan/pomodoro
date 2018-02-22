@@ -25,41 +25,44 @@
 #define d_bubble_empty_character 0x0a
 #define d_bubble_no_value -1
 typedef enum e_bubble_positions {
-    e_bubble_position_right = 0,
-    e_bubble_position_left
+  e_bubble_position_right = 0,
+  e_bubble_position_left
 } e_bubble_positions;
-typedef struct s_bubble_option { d_list_node_head;
-    char content[d_bubble_message_size];
-    int value;
+typedef struct s_bubble_option {
+  d_list_node_head;
+  char content[d_bubble_message_size];
+  int value;
 } s_bubble_option;
-typedef struct s_bubble_message { d_list_node_head;
-    char content[d_bubble_message_size];
-    struct s_list options;
-    struct s_object *track;
-    int font_ID, selected_option;
-    time_t timeout;
-    t_boolean force_kill;
+typedef struct s_bubble_message {
+  d_list_node_head;
+  char content[d_bubble_message_size];
+  struct s_list options;
+  struct s_object *track;
+  int font_ID, selected_option;
+  time_t timeout;
+  t_boolean force_kill;
 } s_bubble_message;
-typedef struct s_bubble_component { d_list_node_head;
-    char content[d_bubble_characters_per_line + 1];
-    struct s_object *component;
-    double offset_y, offset_x, width, height;
+typedef struct s_bubble_component {
+  d_list_node_head;
+  char content[d_bubble_characters_per_line + 1];
+  struct s_object *component;
+  double offset_y, offset_x, width, height;
 } s_bubble_component;
 d_declare_class(bubble) {
-    struct s_attributes head;
-    struct s_list messages, components;
-    struct s_bubble_message *current_element, *last_element;
-    struct s_object *factory;
-    struct s_object *drawables[e_uiable_component_NULL + 1];
-    double maximum_width, total_height;
-    int font_style, last_value;
-    time_t last_update;
-    unsigned int mask_R, mask_G, mask_B, mask_A;
-    enum e_bubble_positions current_position;
+  struct s_attributes head;
+  struct s_list messages, components;
+  struct s_bubble_message *current_element, *last_element;
+  struct s_object *factory;
+  struct s_object *drawables[e_uiable_component_NULL + 1];
+  double maximum_width, total_height;
+  int font_style, last_value;
+  time_t last_update;
+  unsigned int mask_R, mask_G, mask_B, mask_A;
+  enum e_bubble_positions current_position;
 } d_declare_class_tail(bubble);
 struct s_bubble_attributes *p_bubble_alloc(struct s_object *self);
-extern struct s_object *f_bubble_new(struct s_object *self, struct s_object *factory, unsigned int red, unsigned int green, unsigned int blue, 
-        unsigned int alpha, int font_style);
+extern struct s_object *
+f_bubble_new(struct s_object *self, struct s_object *factory, unsigned int red, unsigned int green, unsigned int blue, unsigned int alpha, int font_style);
 d_declare_method(bubble, set)(struct s_object *self, struct s_object *drawable, enum e_uiable_components component);
 d_declare_method(bubble, add_message)(struct s_object *self, const char *message, time_t timeout, int font_ID);
 d_declare_method(bubble, add_track)(struct s_object *self, const char *message, struct s_object *track, int font_ID);

@@ -1,1 +1,49 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"f3d7e379-0131-4c70-917b-d3658d1ba528","delay":1.625,"actor":"gianni","content":["My dear friend!","Amico mio!"],"next":"75fee7c5-0dc5-4117-a6e1-612cebfdc60c"},{"type":"dialog","ID":"75fee7c5-0dc5-4117-a6e1-612cebfdc60c","delay":1.75,"actor":"andrea","content":["My friend Gianni!","Amico Gianni!"],"next":"8bc2da79-cf4d-4cf6-ac21-c01f5c84721e"},{"type":"dialog","ID":"8bc2da79-cf4d-4cf6-ac21-c01f5c84721e","delay":2.7750000000000004,"actor":"andrea","content":["From the party 'fratellini d'Italia'.","Del partito 'fratellini d'Italia'."],"next":"a8562cb8-5905-435c-a907-b66f68cb75e8"},{"type":"dialog","ID":"a8562cb8-5905-435c-a907-b66f68cb75e8","delay":1.525,"actor":"gianni","content":["That's me!","Proprio io!"],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "f3d7e379-0131-4c70-917b-d3658d1ba528",
+      "delay": 1.625,
+      "actor": "gianni",
+      "content": [
+        "My dear friend!",
+        "Amico mio!"
+      ],
+      "next": "75fee7c5-0dc5-4117-a6e1-612cebfdc60c"
+    },
+    {
+      "type": "dialog",
+      "ID": "75fee7c5-0dc5-4117-a6e1-612cebfdc60c",
+      "delay": 1.75,
+      "actor": "andrea",
+      "content": [
+        "My friend Gianni!",
+        "Amico Gianni!"
+      ],
+      "next": "8bc2da79-cf4d-4cf6-ac21-c01f5c84721e"
+    },
+    {
+      "type": "dialog",
+      "ID": "8bc2da79-cf4d-4cf6-ac21-c01f5c84721e",
+      "delay": 2.7750000000000004,
+      "actor": "andrea",
+      "content": [
+        "From the party 'fratellini d'Italia'.",
+        "Del partito 'fratellini d'Italia'."
+      ],
+      "next": "a8562cb8-5905-435c-a907-b66f68cb75e8"
+    },
+    {
+      "type": "dialog",
+      "ID": "a8562cb8-5905-435c-a907-b66f68cb75e8",
+      "delay": 1.525,
+      "actor": "gianni",
+      "content": [
+        "That's me!",
+        "Proprio io!"
+      ],
+      "next": null
+    }
+  ]
+}

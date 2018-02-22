@@ -1,18 +1,23 @@
 {
-	"format":"item",
-	"ID":"notes_A",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still",
-			"layers":[
-				{"drawable":"notes_A_still"}
-			]
-		},{
-			"label":"none",
-			"layers":[
-				{"drawable":"notes_A_none"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "notes_A",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still",
+      "layers": [
+        {
+          "drawable": "notes_A_still"
+        }
+      ]
+    },
+    {
+      "label": "none",
+      "layers": [
+        {
+          "drawable": "notes_A_none"
+        }
+      ]
+    }
+  ]
 }

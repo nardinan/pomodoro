@@ -20,22 +20,22 @@
 #include "landscape.obj.h"
 /* action definition */
 typedef enum e_stagecrafter_actions {
-    e_stagecrafter_action_hide,
-    e_stagecrafter_action_show,
-    e_stagecrafter_action_stop,
-    e_stagecrafter_action_play,
-    e_stagecrafter_action_lock,
-    e_stagecrafter_action_unlock,
-    e_stagecrafter_action_enable,
-    e_stagecrafter_action_disable,
-    e_stagecrafter_action_set
+  e_stagecrafter_action_hide,
+  e_stagecrafter_action_show,
+  e_stagecrafter_action_stop,
+  e_stagecrafter_action_play,
+  e_stagecrafter_action_lock,
+  e_stagecrafter_action_unlock,
+  e_stagecrafter_action_enable,
+  e_stagecrafter_action_disable,
+  e_stagecrafter_action_set
 } e_stagecrafter_actions;
 typedef struct s_stagecrafter_action {
-    enum e_stagecrafter_actions type;
-    char key[d_entity_label_size];
-    union {
-        char entry[d_string_buffer_size];
-    } parameters;
+  enum e_stagecrafter_actions type;
+  char key[d_entity_label_size];
+  union {
+    char entry[d_string_buffer_size];
+  } parameters;
 } s_stagecrafter_action;
 extern struct s_lisp_object *p_link_stagecrafter_hide_landscapes(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_show_landscape(struct s_object *self, struct s_lisp_object *arguments);
@@ -47,15 +47,16 @@ extern struct s_lisp_object *p_link_stagecrafter_enable_item(struct s_object *se
 extern struct s_lisp_object *p_link_stagecrafter_disable_item(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_stagecrafter_set_item(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
-typedef struct s_stagecrafter_landscape { d_list_node_head;
-    char label[d_entity_label_size];
-    struct s_object *landscape;
+typedef struct s_stagecrafter_landscape {
+  d_list_node_head;
+  char label[d_entity_label_size];
+  struct s_object *landscape;
 } s_stagecrafter_landscape;
 d_declare_class(stagecrafter) {
-    struct s_attributes head;
-    struct s_object *factory;
-    struct s_list landscapes;
-    struct s_object *main_landscape;
+  struct s_attributes head;
+  struct s_object *factory;
+  struct s_list landscapes;
+  struct s_object *main_landscape;
 } d_declare_class_tail(stagecrafter);
 struct s_stagecrafter_attributes *p_stagecrafter_alloc(struct s_object *self);
 extern struct s_object *f_stagecrafter_new(struct s_object *self, struct s_object *factory);

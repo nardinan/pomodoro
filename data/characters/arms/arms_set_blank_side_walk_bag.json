@@ -1,18 +1,54 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"arms_set_blank_side_walk_bag_frame0",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame1",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame2",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame3", 	 	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame4",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame5",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame6",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame7",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame8",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame9",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame10",  	"time":0.1},
-		{"drawable":"arms_set_blank_side_walk_bag_frame11",  	"time":0.1}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame0",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame1",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame5",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame6",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame7",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame8",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame9",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame10",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_walk_bag_frame11",
+      "time": 0.1
+    }
+  ]
 }

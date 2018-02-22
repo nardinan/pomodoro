@@ -1,1 +1,548 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"0170663a-4b77-4261-8f71-b949f2273fc1","delay":3.6750000000000003,"actor":"federico","content":["Do you think if I use the flash the picture will be better?","Secondo te, se apro il flash viene bene la foto?"],"next":"a2cacfea-d171-4591-8d01-964e73a0e655"},{"type":"choice","ID":"a163ffb4-bcfa-42b8-adb1-bb071689b422","title":"","content":["I don't know, can I have some pills?","Non so, posso avere qualche pillola?"],"next":"a191e8c3-4110-4122-99c9-46c7d3fd6686"},{"type":"dialog","ID":"a2cacfea-d171-4591-8d01-964e73a0e655","delay":1.5,"actor":"andrea","content":["Uhm . . . ","Uhm . . . "],"choices":["644941cb-e132-4258-9821-6388a79c977f","a163ffb4-bcfa-42b8-adb1-bb071689b422","32ec82f5-02a6-42ac-b99b-753cf4d2e4a4"]},{"type":"choice","ID":"644941cb-e132-4258-9821-6388a79c977f","title":"","content":["Did you hear about the virus?","Sentito del virus?"],"next":"c6f06bfd-b4ab-40c4-b68a-af16828fdd91"},{"type":"dialog","ID":"1e51ceb1-eab5-47b5-bfde-31b7e3c9ba1b","delay":2.8,"actor":"andrea","content":["I don't know, can I have some pills?","Non so, posso avere qualche pillola?"],"next":"33abcca9-158b-4db3-a60d-d93fd614eaca"},{"type":"dialog","ID":"c6f06bfd-b4ab-40c4-b68a-af16828fdd91","delay":2.175,"actor":"andrea","content":["Did you hear about the virus?","Sentito del virus?"],"next":"27e1eb66-43a1-4d4d-80c1-12380595807c"},{"type":"dialog","ID":"8522e72d-490e-4727-b9a6-ad94a69da274","delay":2.625,"actor":"federico","content":["I heard there's a virus in the city!","Ho sentito che gira un virus!"],"next":"8be08e97-b24c-49fc-b18b-caa9576abfea"},{"type":"dialog","ID":"8be08e97-b24c-49fc-b18b-caa9576abfea","delay":1.5,"actor":"andrea","content":["Well . . .","Bhe . . . "],"choices":["24d04f44-9290-45f7-9e4e-84605981e829","908babf9-b0bf-4cd7-8273-1ea377b6ec96","32ec82f5-02a6-42ac-b99b-753cf4d2e4a4"]},{"type":"choice","ID":"24d04f44-9290-45f7-9e4e-84605981e829","title":"","content":["Don't you think it's a serious thing?","Non pensi sia una cosa seria?"],"next":"5bf7a369-6669-4ef9-aa43-42daf8e9ca0c"},{"type":"choice","ID":"908babf9-b0bf-4cd7-8273-1ea377b6ec96","title":"","content":["And what do you do still here?","E cosa ci fai ancora qui?"],"next":"497ac381-0fa6-43fd-9daf-304e045e18d8"},{"type":"dialog","ID":"5bf7a369-6669-4ef9-aa43-42daf8e9ca0c","delay":2.6500000000000004,"actor":"andrea","content":["Don't you think it's a serious thing?","Non Pensi sia una cosa seria?"],"next":"a421c715-3148-434f-bb7a-d1620f04c8df"},{"type":"dialog","ID":"a421c715-3148-434f-bb7a-d1620f04c8df","delay":1.65,"actor":"federico","content":["Pfff, serious!","Pfff, seria!"],"next":"858a5269-58db-4e06-9e7c-37ed0a16d335"},{"type":"dialog","ID":"858a5269-58db-4e06-9e7c-37ed0a16d335","delay":3,"actor":"federico","content":["It's just an idea to sell vaccins! ","Sara' tutta una trovata per vendere vaccini! "],"next":"35b8e7ea-2174-4b22-b841-706a16a1cd0a"},{"type":"dialog","ID":"497ac381-0fa6-43fd-9daf-304e045e18d8","delay":2.375,"actor":"andrea","content":["And what do you do still here?","E cosa ci fai ancora qui?"],"next":"e11d2cab-c611-4d4a-9240-f2ed058cff28"},{"type":"dialog","ID":"e11d2cab-c611-4d4a-9240-f2ed058cff28","delay":2.6500000000000004,"actor":"federico","content":["I'm searching for the perfect light.","Sto cercando la luce perfetta."],"next":"9e481f19-ded2-4e3e-b84c-1736716f68ae"},{"type":"dialog","ID":"9e481f19-ded2-4e3e-b84c-1736716f68ae","delay":2.2,"actor":"andrea","content":["What if you get infected?","E se venissi infettato?"],"next":"4be00fbf-7e21-45cb-a6e4-2c6423ef6c85"},{"type":"dialog","ID":"35b8e7ea-2174-4b22-b841-706a16a1cd0a","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["5f55f9df-ed5b-4321-b867-2b9cc87b5fdd","0f348fcf-5c50-46ba-8e51-9b30d3173659","32ec82f5-02a6-42ac-b99b-753cf4d2e4a4"]},{"type":"choice","ID":"5f55f9df-ed5b-4321-b867-2b9cc87b5fdd","title":"","content":["They could invent something better, couldn't they?","Avrebbero potuto inventar di meglio, no?"],"next":"d0cabf8c-fb65-4a28-8c6b-bdb09986fc89"},{"type":"choice","ID":"0f348fcf-5c50-46ba-8e51-9b30d3173659","title":"","content":["Will you write an article about it?","Ci scriverai un articolo?"],"next":"7b6c7013-20f8-45a8-ac00-bcda928e86c8"},{"type":"dialog","ID":"d0cabf8c-fb65-4a28-8c6b-bdb09986fc89","delay":3.25,"actor":"andrea","content":["They could invent something better, couldn't they?","Avrebbero potuto inventar di meglio, no?"],"next":"285de89d-7787-47a6-804b-ab2af84f45a0"},{"type":"dialog","ID":"285de89d-7787-47a6-804b-ab2af84f45a0","delay":2.325,"actor":"federico","content":["This virus is a joke! ","Questo virus e' una barzelletta!"],"next":"e6049102-12fa-4ee5-ac00-b01396d6dcdb"},{"type":"dialog","ID":"7b6c7013-20f8-45a8-ac00-bcda928e86c8","delay":2.5,"actor":"andrea","content":["Will you write an article about it?","Ci scriverai un articolo?"],"next":"7ed7d5a2-4a49-4e9e-9a4c-ed6ee590cf56"},{"type":"dialog","ID":"7ed7d5a2-4a49-4e9e-9a4c-ed6ee590cf56","delay":1.15,"actor":"federico","content":["Me?","Io?"],"next":"c769a780-e0fc-4412-9e9e-5d3839815444"},{"type":"dialog","ID":"c769a780-e0fc-4412-9e9e-5d3839815444","delay":4.475,"actor":"federico","content":["I'll take some pictures that will be published on National Geospastic!","Al massimo faro' foto che verranno pubblicate su National Geospastic!"],"next":"a44a83a4-9f74-4694-9456-46b39055023b"},{"type":"dialog","ID":"e6049102-12fa-4ee5-ac00-b01396d6dcdb","delay":3.025,"actor":"federico","content":["It neither cause serious brain damage!","Non provoca nemmeno danni seri al cervello!"],"next":"3963b964-83d5-4904-a025-6b5ecbe07ad0"},{"type":"dialog","ID":"a44a83a4-9f74-4694-9456-46b39055023b","delay":2.25,"actor":"andrea","content":["My favourite magazine! ","Il mio giornale preferito! "],"next":null},{"type":"dialog","ID":"3963b964-83d5-4904-a025-6b5ecbe07ad0","delay":1.925,"actor":"andrea","content":["Are you sure about it?","Ne sei sicuro? "],"next":"6489b651-5faa-42d6-ad98-67bc8b8d813d"},{"type":"dialog","ID":"33abcca9-158b-4db3-a60d-d93fd614eaca","delay":2.325,"actor":"federico","content":["Do you have the batteries?","Mi hai portato le batterie?"],"next":"83300336-9cf5-4dc1-aa13-bfa3e4ed7449"},{"type":"dialog","ID":"6489b651-5faa-42d6-ad98-67bc8b8d813d","delay":3.7750000000000004,"actor":"federico","content":["I read on the Internet multiple articles about Solaris.","Ho fatto un'attenta ricerca sul Web riguardo il Solaris."],"next":"69860c08-d3ce-4dcb-96c3-1b634628d61c"},{"type":"dialog","ID":"450fd41f-ec4c-424f-a840-e9036a552f6a","delay":2.9000000000000004,"actor":"federico","content":[". . . just remember that they are expired!",". . . ma ricorda che sono scadute!"],"next":"5afaf45d-a6c7-4160-82c5-823f52209997"},{"type":"dialog","ID":"69860c08-d3ce-4dcb-96c3-1b634628d61c","delay":3.575,"actor":"federico","content":["Seems that Max Brooks wrote a book about it.","Sembra che Max Brooks ci abbia scritto un libro a riguardo."],"next":"3d338606-9b9d-43d5-bb70-d9869c331b6b"},{"type":"dialog","ID":"3d338606-9b9d-43d5-bb70-d9869c331b6b","delay":1.55,"actor":"andrea","content":["Max Brooks?","Max Brooks?"],"next":"a116c8d8-979c-42d2-b983-16453a7a5fa9"},{"type":"dialog","ID":"a116c8d8-979c-42d2-b983-16453a7a5fa9","delay":2.575,"actor":"andrea","content":["Is Mel Brooks' son, isn't he?","Ma non e' il figlio di Mel Brooks?"],"next":"88d463b1-df13-4186-8fef-6e6c7da4dc9b"},{"type":"dialog","ID":"83300336-9cf5-4dc1-aa13-bfa3e4ed7449","delay":1.35,"actor":"andrea","content":["Yes!","Si, le ho!"],"next":"00dce40b-635d-4fb7-a9e8-dbda2bcd2066"},{"type":"dialog","ID":"88d463b1-df13-4186-8fef-6e6c7da4dc9b","delay":1.175,"actor":"federico","content":["Yes.","Si."],"next":"4d8369e9-857e-4273-811a-db3dbeb9540f"},{"type":"set","ID":"a191e8c3-4110-4122-99c9-46c7d3fd6686","variable":"got_battery","value":0,"next":"505f0ccd-beea-4d84-a435-3e4742e6bae4"},{"type":"dialog","ID":"4d8369e9-857e-4273-811a-db3dbeb9540f","delay":2.3,"actor":"andrea","content":["The son of a comedian.","Il figlo di un regista comico."],"next":"7dbf2873-0f60-4e89-8904-6b6b82c1a1a4"},{"type":"dialog","ID":"4be00fbf-7e21-45cb-a6e4-2c6423ef6c85","delay":2.925,"actor":"federico","content":["In my opinion, I've already been infected.","Credo d'esser gia' stato infettato."],"next":"54959dce-3580-4929-9889-f3250123e8de"},{"type":"set","ID":"505f0ccd-beea-4d84-a435-3e4742e6bae4","variable":"got_pills","value":1,"next":"20630475-7ccb-4bf1-8857-d38a90220b86"},{"type":"dialog","ID":"27e1eb66-43a1-4d4d-80c1-12380595807c","delay":1.175,"actor":"federico","content":["Yes.","Si."],"next":"8522e72d-490e-4727-b9a6-ad94a69da274"},{"type":"dialog","ID":"54959dce-3580-4929-9889-f3250123e8de","delay":1.675,"actor":"andrea","content":["Hypochondriac.","Ipocondriaco."],"next":null},{"type":"set","ID":"20630475-7ccb-4bf1-8857-d38a90220b86","variable":"done_pills","value":1,"next":"1e51ceb1-eab5-47b5-bfde-31b7e3c9ba1b"},{"type":"dialog","ID":"7dbf2873-0f60-4e89-8904-6b6b82c1a1a4","delay":2.125,"actor":"federico","content":["Illuminati confirmed.","Membro degli Illuminati."],"next":null},{"type":"dialog","ID":"00dce40b-635d-4fb7-a9e8-dbda2bcd2066","delay":1.425,"actor":"federico","content":["Great job!","Grande!"],"next":"a3dabebe-f4f7-4273-a55d-182e84a89045"},{"type":"choice","ID":"32ec82f5-02a6-42ac-b99b-753cf4d2e4a4","title":"","content":["I've had enough.","Ne ho abbastanza."],"next":"86a76920-a0d9-43bf-b65d-632c2b22a638"},{"type":"dialog","ID":"a3dabebe-f4f7-4273-a55d-182e84a89045","delay":2.2,"actor":"federico","content":["Here, take your pills . . .","Ecco le pillole . . ."],"next":"450fd41f-ec4c-424f-a840-e9036a552f6a"},{"type":"dialog","ID":"86a76920-a0d9-43bf-b65d-632c2b22a638","delay":1.8250000000000002,"actor":"andrea","content":["I've had enough.","Ne ho abbastanza."],"next":"780c0ebd-9aa3-47f5-81fa-6e516699dfc6"},{"type":"dialog","ID":"5afaf45d-a6c7-4160-82c5-823f52209997","delay":1.45,"actor":"andrea","content":["Amazing!","Benissimo!"],"next":null},{"type":"dialog","ID":"e33f9327-d274-4e1f-87d0-5dbbc44c6186","delay":1.65,"actor":"federico","content":["Go, go . . .","Vai, vai . . ."],"next":null},{"type":"dialog","ID":"780c0ebd-9aa3-47f5-81fa-6e516699dfc6","delay":3.15,"actor":"andrea","content":["I don't want to talk anymore for the time being.","Per ora non ho piu' voglia di parlare."],"next":"e33f9327-d274-4e1f-87d0-5dbbc44c6186"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "0170663a-4b77-4261-8f71-b949f2273fc1",
+      "delay": 3.6750000000000003,
+      "actor": "federico",
+      "content": [
+        "Do you think if I use the flash the picture will be better?",
+        "Secondo te, se apro il flash viene bene la foto?"
+      ],
+      "next": "a2cacfea-d171-4591-8d01-964e73a0e655"
+    },
+    {
+      "type": "choice",
+      "ID": "a163ffb4-bcfa-42b8-adb1-bb071689b422",
+      "title": "",
+      "content": [
+        "I don't know, can I have some pills?",
+        "Non so, posso avere qualche pillola?"
+      ],
+      "next": "a191e8c3-4110-4122-99c9-46c7d3fd6686"
+    },
+    {
+      "type": "dialog",
+      "ID": "a2cacfea-d171-4591-8d01-964e73a0e655",
+      "delay": 1.5,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . . ",
+        "Uhm . . . "
+      ],
+      "choices": [
+        "644941cb-e132-4258-9821-6388a79c977f",
+        "a163ffb4-bcfa-42b8-adb1-bb071689b422",
+        "32ec82f5-02a6-42ac-b99b-753cf4d2e4a4"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "644941cb-e132-4258-9821-6388a79c977f",
+      "title": "",
+      "content": [
+        "Did you hear about the virus?",
+        "Sentito del virus?"
+      ],
+      "next": "c6f06bfd-b4ab-40c4-b68a-af16828fdd91"
+    },
+    {
+      "type": "dialog",
+      "ID": "1e51ceb1-eab5-47b5-bfde-31b7e3c9ba1b",
+      "delay": 2.8,
+      "actor": "andrea",
+      "content": [
+        "I don't know, can I have some pills?",
+        "Non so, posso avere qualche pillola?"
+      ],
+      "next": "33abcca9-158b-4db3-a60d-d93fd614eaca"
+    },
+    {
+      "type": "dialog",
+      "ID": "c6f06bfd-b4ab-40c4-b68a-af16828fdd91",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "Did you hear about the virus?",
+        "Sentito del virus?"
+      ],
+      "next": "27e1eb66-43a1-4d4d-80c1-12380595807c"
+    },
+    {
+      "type": "dialog",
+      "ID": "8522e72d-490e-4727-b9a6-ad94a69da274",
+      "delay": 2.625,
+      "actor": "federico",
+      "content": [
+        "I heard there's a virus in the city!",
+        "Ho sentito che gira un virus!"
+      ],
+      "next": "8be08e97-b24c-49fc-b18b-caa9576abfea"
+    },
+    {
+      "type": "dialog",
+      "ID": "8be08e97-b24c-49fc-b18b-caa9576abfea",
+      "delay": 1.5,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Bhe . . . "
+      ],
+      "choices": [
+        "24d04f44-9290-45f7-9e4e-84605981e829",
+        "908babf9-b0bf-4cd7-8273-1ea377b6ec96",
+        "32ec82f5-02a6-42ac-b99b-753cf4d2e4a4"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "24d04f44-9290-45f7-9e4e-84605981e829",
+      "title": "",
+      "content": [
+        "Don't you think it's a serious thing?",
+        "Non pensi sia una cosa seria?"
+      ],
+      "next": "5bf7a369-6669-4ef9-aa43-42daf8e9ca0c"
+    },
+    {
+      "type": "choice",
+      "ID": "908babf9-b0bf-4cd7-8273-1ea377b6ec96",
+      "title": "",
+      "content": [
+        "And what do you do still here?",
+        "E cosa ci fai ancora qui?"
+      ],
+      "next": "497ac381-0fa6-43fd-9daf-304e045e18d8"
+    },
+    {
+      "type": "dialog",
+      "ID": "5bf7a369-6669-4ef9-aa43-42daf8e9ca0c",
+      "delay": 2.6500000000000004,
+      "actor": "andrea",
+      "content": [
+        "Don't you think it's a serious thing?",
+        "Non Pensi sia una cosa seria?"
+      ],
+      "next": "a421c715-3148-434f-bb7a-d1620f04c8df"
+    },
+    {
+      "type": "dialog",
+      "ID": "a421c715-3148-434f-bb7a-d1620f04c8df",
+      "delay": 1.65,
+      "actor": "federico",
+      "content": [
+        "Pfff, serious!",
+        "Pfff, seria!"
+      ],
+      "next": "858a5269-58db-4e06-9e7c-37ed0a16d335"
+    },
+    {
+      "type": "dialog",
+      "ID": "858a5269-58db-4e06-9e7c-37ed0a16d335",
+      "delay": 3,
+      "actor": "federico",
+      "content": [
+        "It's just an idea to sell vaccins! ",
+        "Sara' tutta una trovata per vendere vaccini! "
+      ],
+      "next": "35b8e7ea-2174-4b22-b841-706a16a1cd0a"
+    },
+    {
+      "type": "dialog",
+      "ID": "497ac381-0fa6-43fd-9daf-304e045e18d8",
+      "delay": 2.375,
+      "actor": "andrea",
+      "content": [
+        "And what do you do still here?",
+        "E cosa ci fai ancora qui?"
+      ],
+      "next": "e11d2cab-c611-4d4a-9240-f2ed058cff28"
+    },
+    {
+      "type": "dialog",
+      "ID": "e11d2cab-c611-4d4a-9240-f2ed058cff28",
+      "delay": 2.6500000000000004,
+      "actor": "federico",
+      "content": [
+        "I'm searching for the perfect light.",
+        "Sto cercando la luce perfetta."
+      ],
+      "next": "9e481f19-ded2-4e3e-b84c-1736716f68ae"
+    },
+    {
+      "type": "dialog",
+      "ID": "9e481f19-ded2-4e3e-b84c-1736716f68ae",
+      "delay": 2.2,
+      "actor": "andrea",
+      "content": [
+        "What if you get infected?",
+        "E se venissi infettato?"
+      ],
+      "next": "4be00fbf-7e21-45cb-a6e4-2c6423ef6c85"
+    },
+    {
+      "type": "dialog",
+      "ID": "35b8e7ea-2174-4b22-b841-706a16a1cd0a",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "5f55f9df-ed5b-4321-b867-2b9cc87b5fdd",
+        "0f348fcf-5c50-46ba-8e51-9b30d3173659",
+        "32ec82f5-02a6-42ac-b99b-753cf4d2e4a4"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "5f55f9df-ed5b-4321-b867-2b9cc87b5fdd",
+      "title": "",
+      "content": [
+        "They could invent something better, couldn't they?",
+        "Avrebbero potuto inventar di meglio, no?"
+      ],
+      "next": "d0cabf8c-fb65-4a28-8c6b-bdb09986fc89"
+    },
+    {
+      "type": "choice",
+      "ID": "0f348fcf-5c50-46ba-8e51-9b30d3173659",
+      "title": "",
+      "content": [
+        "Will you write an article about it?",
+        "Ci scriverai un articolo?"
+      ],
+      "next": "7b6c7013-20f8-45a8-ac00-bcda928e86c8"
+    },
+    {
+      "type": "dialog",
+      "ID": "d0cabf8c-fb65-4a28-8c6b-bdb09986fc89",
+      "delay": 3.25,
+      "actor": "andrea",
+      "content": [
+        "They could invent something better, couldn't they?",
+        "Avrebbero potuto inventar di meglio, no?"
+      ],
+      "next": "285de89d-7787-47a6-804b-ab2af84f45a0"
+    },
+    {
+      "type": "dialog",
+      "ID": "285de89d-7787-47a6-804b-ab2af84f45a0",
+      "delay": 2.325,
+      "actor": "federico",
+      "content": [
+        "This virus is a joke! ",
+        "Questo virus e' una barzelletta!"
+      ],
+      "next": "e6049102-12fa-4ee5-ac00-b01396d6dcdb"
+    },
+    {
+      "type": "dialog",
+      "ID": "7b6c7013-20f8-45a8-ac00-bcda928e86c8",
+      "delay": 2.5,
+      "actor": "andrea",
+      "content": [
+        "Will you write an article about it?",
+        "Ci scriverai un articolo?"
+      ],
+      "next": "7ed7d5a2-4a49-4e9e-9a4c-ed6ee590cf56"
+    },
+    {
+      "type": "dialog",
+      "ID": "7ed7d5a2-4a49-4e9e-9a4c-ed6ee590cf56",
+      "delay": 1.15,
+      "actor": "federico",
+      "content": [
+        "Me?",
+        "Io?"
+      ],
+      "next": "c769a780-e0fc-4412-9e9e-5d3839815444"
+    },
+    {
+      "type": "dialog",
+      "ID": "c769a780-e0fc-4412-9e9e-5d3839815444",
+      "delay": 4.475,
+      "actor": "federico",
+      "content": [
+        "I'll take some pictures that will be published on National Geospastic!",
+        "Al massimo faro' foto che verranno pubblicate su National Geospastic!"
+      ],
+      "next": "a44a83a4-9f74-4694-9456-46b39055023b"
+    },
+    {
+      "type": "dialog",
+      "ID": "e6049102-12fa-4ee5-ac00-b01396d6dcdb",
+      "delay": 3.025,
+      "actor": "federico",
+      "content": [
+        "It neither cause serious brain damage!",
+        "Non provoca nemmeno danni seri al cervello!"
+      ],
+      "next": "3963b964-83d5-4904-a025-6b5ecbe07ad0"
+    },
+    {
+      "type": "dialog",
+      "ID": "a44a83a4-9f74-4694-9456-46b39055023b",
+      "delay": 2.25,
+      "actor": "andrea",
+      "content": [
+        "My favourite magazine! ",
+        "Il mio giornale preferito! "
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "3963b964-83d5-4904-a025-6b5ecbe07ad0",
+      "delay": 1.925,
+      "actor": "andrea",
+      "content": [
+        "Are you sure about it?",
+        "Ne sei sicuro? "
+      ],
+      "next": "6489b651-5faa-42d6-ad98-67bc8b8d813d"
+    },
+    {
+      "type": "dialog",
+      "ID": "33abcca9-158b-4db3-a60d-d93fd614eaca",
+      "delay": 2.325,
+      "actor": "federico",
+      "content": [
+        "Do you have the batteries?",
+        "Mi hai portato le batterie?"
+      ],
+      "next": "83300336-9cf5-4dc1-aa13-bfa3e4ed7449"
+    },
+    {
+      "type": "dialog",
+      "ID": "6489b651-5faa-42d6-ad98-67bc8b8d813d",
+      "delay": 3.7750000000000004,
+      "actor": "federico",
+      "content": [
+        "I read on the Internet multiple articles about Solaris.",
+        "Ho fatto un'attenta ricerca sul Web riguardo il Solaris."
+      ],
+      "next": "69860c08-d3ce-4dcb-96c3-1b634628d61c"
+    },
+    {
+      "type": "dialog",
+      "ID": "450fd41f-ec4c-424f-a840-e9036a552f6a",
+      "delay": 2.9000000000000004,
+      "actor": "federico",
+      "content": [
+        ". . . just remember that they are expired!",
+        ". . . ma ricorda che sono scadute!"
+      ],
+      "next": "5afaf45d-a6c7-4160-82c5-823f52209997"
+    },
+    {
+      "type": "dialog",
+      "ID": "69860c08-d3ce-4dcb-96c3-1b634628d61c",
+      "delay": 3.575,
+      "actor": "federico",
+      "content": [
+        "Seems that Max Brooks wrote a book about it.",
+        "Sembra che Max Brooks ci abbia scritto un libro a riguardo."
+      ],
+      "next": "3d338606-9b9d-43d5-bb70-d9869c331b6b"
+    },
+    {
+      "type": "dialog",
+      "ID": "3d338606-9b9d-43d5-bb70-d9869c331b6b",
+      "delay": 1.55,
+      "actor": "andrea",
+      "content": [
+        "Max Brooks?",
+        "Max Brooks?"
+      ],
+      "next": "a116c8d8-979c-42d2-b983-16453a7a5fa9"
+    },
+    {
+      "type": "dialog",
+      "ID": "a116c8d8-979c-42d2-b983-16453a7a5fa9",
+      "delay": 2.575,
+      "actor": "andrea",
+      "content": [
+        "Is Mel Brooks' son, isn't he?",
+        "Ma non e' il figlio di Mel Brooks?"
+      ],
+      "next": "88d463b1-df13-4186-8fef-6e6c7da4dc9b"
+    },
+    {
+      "type": "dialog",
+      "ID": "83300336-9cf5-4dc1-aa13-bfa3e4ed7449",
+      "delay": 1.35,
+      "actor": "andrea",
+      "content": [
+        "Yes!",
+        "Si, le ho!"
+      ],
+      "next": "00dce40b-635d-4fb7-a9e8-dbda2bcd2066"
+    },
+    {
+      "type": "dialog",
+      "ID": "88d463b1-df13-4186-8fef-6e6c7da4dc9b",
+      "delay": 1.175,
+      "actor": "federico",
+      "content": [
+        "Yes.",
+        "Si."
+      ],
+      "next": "4d8369e9-857e-4273-811a-db3dbeb9540f"
+    },
+    {
+      "type": "set",
+      "ID": "a191e8c3-4110-4122-99c9-46c7d3fd6686",
+      "variable": "got_battery",
+      "value": 0,
+      "next": "505f0ccd-beea-4d84-a435-3e4742e6bae4"
+    },
+    {
+      "type": "dialog",
+      "ID": "4d8369e9-857e-4273-811a-db3dbeb9540f",
+      "delay": 2.3,
+      "actor": "andrea",
+      "content": [
+        "The son of a comedian.",
+        "Il figlo di un regista comico."
+      ],
+      "next": "7dbf2873-0f60-4e89-8904-6b6b82c1a1a4"
+    },
+    {
+      "type": "dialog",
+      "ID": "4be00fbf-7e21-45cb-a6e4-2c6423ef6c85",
+      "delay": 2.925,
+      "actor": "federico",
+      "content": [
+        "In my opinion, I've already been infected.",
+        "Credo d'esser gia' stato infettato."
+      ],
+      "next": "54959dce-3580-4929-9889-f3250123e8de"
+    },
+    {
+      "type": "set",
+      "ID": "505f0ccd-beea-4d84-a435-3e4742e6bae4",
+      "variable": "got_pills",
+      "value": 1,
+      "next": "20630475-7ccb-4bf1-8857-d38a90220b86"
+    },
+    {
+      "type": "dialog",
+      "ID": "27e1eb66-43a1-4d4d-80c1-12380595807c",
+      "delay": 1.175,
+      "actor": "federico",
+      "content": [
+        "Yes.",
+        "Si."
+      ],
+      "next": "8522e72d-490e-4727-b9a6-ad94a69da274"
+    },
+    {
+      "type": "dialog",
+      "ID": "54959dce-3580-4929-9889-f3250123e8de",
+      "delay": 1.675,
+      "actor": "andrea",
+      "content": [
+        "Hypochondriac.",
+        "Ipocondriaco."
+      ],
+      "next": null
+    },
+    {
+      "type": "set",
+      "ID": "20630475-7ccb-4bf1-8857-d38a90220b86",
+      "variable": "done_pills",
+      "value": 1,
+      "next": "1e51ceb1-eab5-47b5-bfde-31b7e3c9ba1b"
+    },
+    {
+      "type": "dialog",
+      "ID": "7dbf2873-0f60-4e89-8904-6b6b82c1a1a4",
+      "delay": 2.125,
+      "actor": "federico",
+      "content": [
+        "Illuminati confirmed.",
+        "Membro degli Illuminati."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "00dce40b-635d-4fb7-a9e8-dbda2bcd2066",
+      "delay": 1.425,
+      "actor": "federico",
+      "content": [
+        "Great job!",
+        "Grande!"
+      ],
+      "next": "a3dabebe-f4f7-4273-a55d-182e84a89045"
+    },
+    {
+      "type": "choice",
+      "ID": "32ec82f5-02a6-42ac-b99b-753cf4d2e4a4",
+      "title": "",
+      "content": [
+        "I've had enough.",
+        "Ne ho abbastanza."
+      ],
+      "next": "86a76920-a0d9-43bf-b65d-632c2b22a638"
+    },
+    {
+      "type": "dialog",
+      "ID": "a3dabebe-f4f7-4273-a55d-182e84a89045",
+      "delay": 2.2,
+      "actor": "federico",
+      "content": [
+        "Here, take your pills . . .",
+        "Ecco le pillole . . ."
+      ],
+      "next": "450fd41f-ec4c-424f-a840-e9036a552f6a"
+    },
+    {
+      "type": "dialog",
+      "ID": "86a76920-a0d9-43bf-b65d-632c2b22a638",
+      "delay": 1.8250000000000002,
+      "actor": "andrea",
+      "content": [
+        "I've had enough.",
+        "Ne ho abbastanza."
+      ],
+      "next": "780c0ebd-9aa3-47f5-81fa-6e516699dfc6"
+    },
+    {
+      "type": "dialog",
+      "ID": "5afaf45d-a6c7-4160-82c5-823f52209997",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Amazing!",
+        "Benissimo!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "e33f9327-d274-4e1f-87d0-5dbbc44c6186",
+      "delay": 1.65,
+      "actor": "federico",
+      "content": [
+        "Go, go . . .",
+        "Vai, vai . . ."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "780c0ebd-9aa3-47f5-81fa-6e516699dfc6",
+      "delay": 3.15,
+      "actor": "andrea",
+      "content": [
+        "I don't want to talk anymore for the time being.",
+        "Per ora non ho piu' voglia di parlare."
+      ],
+      "next": "e33f9327-d274-4e1f-87d0-5dbbc44c6186"
+    }
+  ]
+}

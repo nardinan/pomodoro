@@ -1,14 +1,38 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"computer_error_coding_B_frame0",  	"time":0.1},
-		{"drawable":"computer_error_coding_B_frame1",  	"time":0.1},
-		{"drawable":"computer_error_coding_B_frame2",  	"time":0.1},
-		{"drawable":"computer_error_coding_B_frame3",  	"time":0.1},
-		{"drawable":"computer_error_coding_B_frame4",  	"time":0.1},
-		{"drawable":"computer_error_coding_B_frame5",  	"time":0.1},
-		{"drawable":"computer_error_coding_B_frame6", 	"time":0.1},
-		{"drawable":"computer_error_coding_B_frame7", 	"time":0.1}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "computer_error_coding_B_frame0",
+      "time": 0.1
+    },
+    {
+      "drawable": "computer_error_coding_B_frame1",
+      "time": 0.1
+    },
+    {
+      "drawable": "computer_error_coding_B_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "computer_error_coding_B_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "computer_error_coding_B_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "computer_error_coding_B_frame5",
+      "time": 0.1
+    },
+    {
+      "drawable": "computer_error_coding_B_frame6",
+      "time": 0.1
+    },
+    {
+      "drawable": "computer_error_coding_B_frame7",
+      "time": 0.1
+    }
+  ]
 }

@@ -1,27 +1,35 @@
 {
-	"format":"item",
-	"ID":"oven_A",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still",
-			"layers":[
-				{"drawable":"oven_A_still"}
-			]
-		},{
-			"label":"pan",
-			"layers":[
-				{"drawable":"oven_A_pan"}
-			]
-		},{
-			"label":"flame",
-			"track":{
-				"playable":"oven_A_flame",
-				"loops":-1.0
-			},
-			"layers":[
-				{"drawable":"oven_A_flame"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "oven_A",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still",
+      "layers": [
+        {
+          "drawable": "oven_A_still"
+        }
+      ]
+    },
+    {
+      "label": "pan",
+      "layers": [
+        {
+          "drawable": "oven_A_pan"
+        }
+      ]
+    },
+    {
+      "label": "flame",
+      "track": {
+        "playable": "oven_A_flame",
+        "loops": -1.0
+      },
+      "layers": [
+        {
+          "drawable": "oven_A_flame"
+        }
+      ]
+    }
+  ]
 }

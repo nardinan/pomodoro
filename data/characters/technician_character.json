@@ -20,7 +20,7 @@
     "tail": "bubble_tail"
   },
   "colors": {
-    "cap":{
+    "cap": {
       "mask_R": 255,
       "mask_G": 255,
       "mask_B": 255,
@@ -334,7 +334,7 @@
       "label": "drunk_right",
       "offset_x": 200,
       "flip_x": true,
-      "cap":{
+      "cap": {
         "drawable": "cap_set_drug"
       },
       "head": {
@@ -467,7 +467,7 @@
     {
       "label": "drunk_left",
       "offset_x": -200,
-      "cap":{
+      "cap": {
         "drawable": "cap_set_drug"
       },
       "head": {

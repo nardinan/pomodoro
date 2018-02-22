@@ -1,1 +1,60 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"689a2d86-df38-4e39-9fc2-fcc0583e3678","delay":2.3,"actor":"antonietta","content":["Can't you see I am busy?","Non vedi che sono impegnata?"],"next":"4a797087-40af-4bba-9024-df107a00f2ac"},{"type":"dialog","ID":"4a797087-40af-4bba-9024-df107a00f2ac","delay":1.8250000000000002,"actor":"andrea","content":["Hello Antonietta!","Ciao Antonietta!"],"next":"710dec9b-745b-4a7a-a9a4-891b6275504b"},{"type":"dialog","ID":"710dec9b-745b-4a7a-a9a4-891b6275504b","delay":2.6,"actor":"antonietta","content":["'Hello Antonietta' my ass!","'Ciao Antonietta' un paio di coglioni!"],"next":"e7bc5801-8d47-43f3-87e1-ce8649a11c2e"},{"type":"dialog","ID":"e7bc5801-8d47-43f3-87e1-ce8649a11c2e","delay":1.275,"actor":"andrea","content":["What?","Prego?"],"next":"b21d61d0-e214-4ebe-9733-a97a70597cc1"},{"type":"dialog","ID":"b21d61d0-e214-4ebe-9733-a97a70597cc1","delay":2.2,"actor":"antonietta","content":["Hello MADEMOISELLE Antonietta.","Ciao SIGNORINA Antonietta."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "689a2d86-df38-4e39-9fc2-fcc0583e3678",
+      "delay": 2.3,
+      "actor": "antonietta",
+      "content": [
+        "Can't you see I am busy?",
+        "Non vedi che sono impegnata?"
+      ],
+      "next": "4a797087-40af-4bba-9024-df107a00f2ac"
+    },
+    {
+      "type": "dialog",
+      "ID": "4a797087-40af-4bba-9024-df107a00f2ac",
+      "delay": 1.8250000000000002,
+      "actor": "andrea",
+      "content": [
+        "Hello Antonietta!",
+        "Ciao Antonietta!"
+      ],
+      "next": "710dec9b-745b-4a7a-a9a4-891b6275504b"
+    },
+    {
+      "type": "dialog",
+      "ID": "710dec9b-745b-4a7a-a9a4-891b6275504b",
+      "delay": 2.6,
+      "actor": "antonietta",
+      "content": [
+        "'Hello Antonietta' my ass!",
+        "'Ciao Antonietta' un paio di coglioni!"
+      ],
+      "next": "e7bc5801-8d47-43f3-87e1-ce8649a11c2e"
+    },
+    {
+      "type": "dialog",
+      "ID": "e7bc5801-8d47-43f3-87e1-ce8649a11c2e",
+      "delay": 1.275,
+      "actor": "andrea",
+      "content": [
+        "What?",
+        "Prego?"
+      ],
+      "next": "b21d61d0-e214-4ebe-9733-a97a70597cc1"
+    },
+    {
+      "type": "dialog",
+      "ID": "b21d61d0-e214-4ebe-9733-a97a70597cc1",
+      "delay": 2.2,
+      "actor": "antonietta",
+      "content": [
+        "Hello MADEMOISELLE Antonietta.",
+        "Ciao SIGNORINA Antonietta."
+      ],
+      "next": null
+    }
+  ]
+}

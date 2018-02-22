@@ -1,1 +1,49 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"b65699e8-497e-4b55-a5b1-4bcee7933ba9","delay":1.85,"actor":"massimo","content":["Fucking junkies!","Maledetti drogati!"],"next":"072f24f0-370a-4226-96c6-f072b7b46220"},{"type":"dialog","ID":"072f24f0-370a-4226-96c6-f072b7b46220","delay":1.975,"actor":"andrea","content":["Junkies and homeless!","Barboni e drogati!"],"next":"711dd207-f0cd-4713-8eeb-5ae26a187de8"},{"type":"dialog","ID":"711dd207-f0cd-4713-8eeb-5ae26a187de8","delay":2.1,"actor":"massimo","content":["Are you making fun of me?","Prendi per il culo?"],"next":"c3579ff8-0ef1-4221-adf3-4fa008b2f7f3"},{"type":"dialog","ID":"c3579ff8-0ef1-4221-adf3-4fa008b2f7f3","delay":2.2750000000000004,"actor":"andrea","content":["I would never dare!","Non mi permetterei mai, Massimo!"],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "b65699e8-497e-4b55-a5b1-4bcee7933ba9",
+      "delay": 1.85,
+      "actor": "massimo",
+      "content": [
+        "Fucking junkies!",
+        "Maledetti drogati!"
+      ],
+      "next": "072f24f0-370a-4226-96c6-f072b7b46220"
+    },
+    {
+      "type": "dialog",
+      "ID": "072f24f0-370a-4226-96c6-f072b7b46220",
+      "delay": 1.975,
+      "actor": "andrea",
+      "content": [
+        "Junkies and homeless!",
+        "Barboni e drogati!"
+      ],
+      "next": "711dd207-f0cd-4713-8eeb-5ae26a187de8"
+    },
+    {
+      "type": "dialog",
+      "ID": "711dd207-f0cd-4713-8eeb-5ae26a187de8",
+      "delay": 2.1,
+      "actor": "massimo",
+      "content": [
+        "Are you making fun of me?",
+        "Prendi per il culo?"
+      ],
+      "next": "c3579ff8-0ef1-4221-adf3-4fa008b2f7f3"
+    },
+    {
+      "type": "dialog",
+      "ID": "c3579ff8-0ef1-4221-adf3-4fa008b2f7f3",
+      "delay": 2.2750000000000004,
+      "actor": "andrea",
+      "content": [
+        "I would never dare!",
+        "Non mi permetterei mai, Massimo!"
+      ],
+      "next": null
+    }
+  ]
+}

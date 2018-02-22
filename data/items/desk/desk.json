@@ -1,18 +1,23 @@
 {
-	"format":"item",
-	"ID":"desk",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"desk_still_A"}
-			]
-		},{
-			"label":"still_B",
-			"layers":[
-				{"drawable":"desk_still_B"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "desk",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "desk_still_A"
+        }
+      ]
+    },
+    {
+      "label": "still_B",
+      "layers": [
+        {
+          "drawable": "desk_still_B"
+        }
+      ]
+    }
+  ]
 }

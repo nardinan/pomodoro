@@ -1,26 +1,86 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"arms_set_blank_back_writer_frame0",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame1",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame2",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame3",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame4",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame2",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame3",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame4",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame2",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame3",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame4",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame2",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame3",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame4",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame2",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame3",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame4",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame2",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame1",		"time":0.1},
-		{"drawable":"arms_set_blank_back_writer_frame0",		"time":3.0}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "arms_set_blank_back_writer_frame0",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame1",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame1",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_back_writer_frame0",
+      "time": 3.0
+    }
+  ]
 }

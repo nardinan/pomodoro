@@ -1,23 +1,31 @@
 {
-	"format":"item",
-	"ID":"shelf",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"shelf_still_A"}
-			]
-		},{
-			"label":"still_B",
-			"layers":[
-				{"drawable":"shelf_still_B"}
-			]
-		},{
-			"label":"still_C",
-			"layers":[
-				{"drawable":"shelf_still_C"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "shelf",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "shelf_still_A"
+        }
+      ]
+    },
+    {
+      "label": "still_B",
+      "layers": [
+        {
+          "drawable": "shelf_still_B"
+        }
+      ]
+    },
+    {
+      "label": "still_C",
+      "layers": [
+        {
+          "drawable": "shelf_still_C"
+        }
+      ]
+    }
+  ]
 }

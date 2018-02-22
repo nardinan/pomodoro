@@ -1,18 +1,54 @@
 {
-	"format":"animation",
-	"cycles":1,
-	"frames":[
-		{"drawable":"arms_set_blank_side_drink_mojito_frame0",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame1",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame2",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame3",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame4",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame5",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame6",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame7",  	"time":1.0},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame8",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame9",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame10",  	"time":0.1},
-    {"drawable":"arms_set_blank_side_drink_mojito_frame11",  	"time":1.0}
-	]
+  "format": "animation",
+  "cycles": 1,
+  "frames": [
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame0",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame1",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame3",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame4",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame5",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame6",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame7",
+      "time": 1.0
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame8",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame9",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame10",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_drink_mojito_frame11",
+      "time": 1.0
+    }
+  ]
 }

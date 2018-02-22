@@ -1,1 +1,492 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"25d065f0-6d3a-4074-acec-42fe2316da8a","delay":7.050000000000001,"actor":"antonietta","content":["speakTo(const char *target = 'Andrea') received signal SIGPIPE, Broken pipe. [Switching to Thread 0xb74c0b40 (LWP 4864)] ","speakTo(const char *target = 'Andrea') received signal SIGPIPE, Broken pipe. [Switching to Thread 0xb74c0b40 (LWP 4864)] "],"next":"372a7cab-20f9-45a3-9846-b0b53f7bdb49"},{"type":"dialog","ID":"372a7cab-20f9-45a3-9846-b0b53f7bdb49","delay":1.65,"actor":"andrea","content":["But, but . . .","Ma, ma . . ."],"choices":["a5d9d6f0-5577-4f6c-b507-050b5421c9f2","d751c3e8-cbe6-4102-9ea6-889cb140ec32","7b9ff429-75e8-4b03-a542-3867f6d007dd"]},{"type":"choice","ID":"a5d9d6f0-5577-4f6c-b507-050b5421c9f2","title":"","content":["I am listing.","Ti sto ascoltando."],"next":"96fa825d-f459-41af-842a-3f9d624ecfc9"},{"type":"dialog","ID":"96fa825d-f459-41af-842a-3f9d624ecfc9","delay":1.8250000000000002,"actor":"andrea","content":["I am listening.","Ti sto ascoltando."],"next":"02ecd709-f249-40d5-bb9b-1e9abeb31dce"},{"type":"dialog","ID":"941b4ab0-b8bf-40f5-bf3b-21b9cb5969b8","delay":3.5250000000000004,"actor":"antonietta","content":["I am sorry sir, but I am extremely busy right now.","Le chiedo scusa, ma ora sono piuttosto indaffarata."],"next":"2205c0dc-48e9-4f1e-8086-5cc942cead27"},{"type":"dialog","ID":"2205c0dc-48e9-4f1e-8086-5cc942cead27","delay":1.5750000000000002,"actor":"andrea","content":["Doing what?","A fare cosa?"],"next":"acb2b3ba-5b35-4885-a319-6edd3938a622"},{"type":"dialog","ID":"02ecd709-f249-40d5-bb9b-1e9abeb31dce","delay":2.35,"actor":"andrea","content":["Go ahead, what do you want to say?","Su, cos'hai da dire?"],"next":"941b4ab0-b8bf-40f5-bf3b-21b9cb5969b8"},{"type":"dialog","ID":"acb2b3ba-5b35-4885-a319-6edd3938a622","delay":1.475,"actor":"antonietta","content":["Well . . .","Beh . . ."],"next":"f92c113d-e4d7-42d7-aa68-c4d6b828d8fe"},{"type":"dialog","ID":"f92c113d-e4d7-42d7-aa68-c4d6b828d8fe","delay":1.6,"actor":"antonietta","content":["todoList[0];","todoList[0];"],"next":"33c4bac4-cfb3-4fc8-9011-d1e2aa1ea057"},{"type":"dialog","ID":"33c4bac4-cfb3-4fc8-9011-d1e2aa1ea057","delay":1.6,"actor":"antonietta","content":["todoList[1];","todoList[1];"],"next":"9ca0c2b6-065f-483a-bac7-58047723d502"},{"type":"dialog","ID":"9ca0c2b6-065f-483a-bac7-58047723d502","delay":1.75,"actor":"antonietta","content":["And todoList[2];","E todoList[2];"],"next":"c293c8e5-2dac-4c99-ab93-6b72df4a1caf"},{"type":"dialog","ID":"c293c8e5-2dac-4c99-ab93-6b72df4a1caf","delay":1.25,"actor":"andrea","content":[". . .",". . ."],"choices":["2b536117-e386-4049-83cd-1078d2edba82","806a4568-927a-403a-a0f2-594ff049298f","7b9ff429-75e8-4b03-a542-3867f6d007dd"]},{"type":"choice","ID":"2b536117-e386-4049-83cd-1078d2edba82","title":"","content":["Does your boyfriend know?","Lo sa il tuo ragazzo?"],"next":"1c1fa873-80e3-424d-9a30-93b487ab7428"},{"type":"dialog","ID":"1c1fa873-80e3-424d-9a30-93b487ab7428","delay":2.1500000000000004,"actor":"andrea","content":["Does your boyfriend know?","Lo sa il tuo ragazzo?"],"next":"8f05afdb-182e-4c38-a18c-61e530e86e19"},{"type":"dialog","ID":"8f05afdb-182e-4c38-a18c-61e530e86e19","delay":1.55,"actor":"antonietta","content":["About what?","Ma di cosa?"],"next":"cbf56494-d53f-41c0-aa49-74fccf87cd39"},{"type":"dialog","ID":"cbf56494-d53f-41c0-aa49-74fccf87cd39","delay":4.1,"actor":"andrea","content":["About the fact that you became poor software due to Solaris.","Del fatto che sei diventata software scadente grazie al Solaris?"],"next":"04cc5539-f03f-4bff-8753-a495db6198c4"},{"type":"dialog","ID":"04cc5539-f03f-4bff-8753-a495db6198c4","delay":2.85,"actor":"antonietta","content":["No, I won't accept these arguments.","Ah no, queste illazioni non le accetto."],"next":"e847bc08-1391-4477-8ecb-9076a461deb7"},{"type":"dialog","ID":"e847bc08-1391-4477-8ecb-9076a461deb7","delay":3.7,"actor":"antonietta","content":["[Accessing nodes bouncing via unipg.dipinformatica.it]","[Accessing nodes bouncing via unipg.dipinformatica.it]"],"next":"233d0f58-9b3f-403a-b97e-d15d106edb72"},{"type":"dialog","ID":"233d0f58-9b3f-403a-b97e-d15d106edb72","delay":2.7,"actor":"antonietta","content":["[Looking for answers on the nodes]","[Looking for answers on the nodes]"],"next":"3663054f-0897-46d5-9291-aec6e9ac0edf"},{"type":"dialog","ID":"3663054f-0897-46d5-9291-aec6e9ac0edf","delay":3.2,"actor":"antonietta","content":["[Find a suitable answer on node Roberto.bin]","[Find a suitable answer on node Roberto.bin]"],"next":"9232fecb-817e-4d53-8156-585c8a68ebcd"},{"type":"dialog","ID":"9232fecb-817e-4d53-8156-585c8a68ebcd","delay":1.475,"actor":"antonietta","content":["Asshole.","Deficiente."],"next":"4d94524e-1d20-488a-a56b-ee6ea74a13ba"},{"type":"dialog","ID":"4d94524e-1d20-488a-a56b-ee6ea74a13ba","delay":2.1500000000000004,"actor":"andrea","content":["Uff, I am tired of this crap.","Mah, che strazio."],"next":null},{"type":"choice","ID":"806a4568-927a-403a-a0f2-594ff049298f","title":"","content":["You are really busy!","Sei molto impegnata vedo!"],"next":"4748fed4-2819-45b6-b9c5-b70da7e9daa6"},{"type":"dialog","ID":"4748fed4-2819-45b6-b9c5-b70da7e9daa6","delay":2.125,"actor":"andrea","content":["You are really busy!","Sei molto impegnata vedo!"],"next":"5a5e9af1-850d-4c9b-8120-07f45df46492"},{"type":"dialog","ID":"5a5e9af1-850d-4c9b-8120-07f45df46492","delay":2,"actor":"antonietta","content":["You can say that again.","Puoi dirlo forte."],"next":"870b1ef6-755b-4a63-b5a5-04f46736bcf9"},{"type":"dialog","ID":"870b1ef6-755b-4a63-b5a5-04f46736bcf9","delay":2.125,"actor":"andrea","content":["You are really busy!","SEI MOLTO IMPEGNATA VEDO!"],"next":"a34c08e2-52a0-456d-b2b9-9b6bfb2a6477"},{"type":"dialog","ID":"a34c08e2-52a0-456d-b2b9-9b6bfb2a6477","delay":1.625,"actor":"antonietta","content":["Are you dumb?","Sei cretino?"],"next":"c910f021-af29-4174-8a3e-a680ca49d04b"},{"type":"dialog","ID":"c910f021-af29-4174-8a3e-a680ca49d04b","delay":1.925,"actor":"andrea","content":["Come on, was a joke.","Ma no, scherzavo."],"next":"3415f44a-0e1d-41e2-9127-89ce0e773fa5"},{"type":"choice","ID":"d751c3e8-cbe6-4102-9ea6-889cb140ec32","title":"","content":["Can you help me with a password?","Mi puoi aiutare con una password?"],"next":"5f59f37e-94b5-4dfe-813b-c096b9328d8d"},{"type":"dialog","ID":"3415f44a-0e1d-41e2-9127-89ce0e773fa5","delay":2.925,"actor":"andrea","content":["What the array todoList[] contains?","Ma cosa c'e' dentro il vettore todoList[]?"],"next":"a8f665fd-d031-451c-89d0-84c7e8e4804c"},{"type":"dialog","ID":"5f59f37e-94b5-4dfe-813b-c096b9328d8d","delay":2.625,"actor":"andrea","content":["Can you help me with a password?","Mi puoi aiutare con una password?"],"next":"e22f38c8-256f-4c7f-b99f-d6d3f05fad99"},{"type":"dialog","ID":"a8f665fd-d031-451c-89d0-84c7e8e4804c","delay":1.15,"actor":"antonietta","content":["Eh?","Eh?"],"next":"e35e71ab-4268-40db-8fc2-f6ad700f035e"},{"type":"dialog","ID":"e22f38c8-256f-4c7f-b99f-d6d3f05fad99","delay":1.6,"actor":"antonietta","content":["A password?","Che password?"],"next":"60b1d4b2-cc2e-416e-afbd-ea50972c058d"},{"type":"dialog","ID":"e35e71ab-4268-40db-8fc2-f6ad700f035e","delay":2,"actor":"andrea","content":["echo ${todoList[@]}?","echo ${todoList[@]}?"],"next":"0d933df0-898a-455b-b790-440b31c46756"},{"type":"dialog","ID":"60b1d4b2-cc2e-416e-afbd-ea50972c058d","delay":3.5,"actor":"andrea","content":["Yes, the password for Magnifico Rettore's MacBook.","Si, la password del MacBook del Magnifico Rettore."],"next":"30bc3e9a-98fc-489b-af27-fd1bcb8e0e66"},{"type":"dialog","ID":"0d933df0-898a-455b-b790-440b31c46756","delay":3.25,"actor":"antonietta","content":["{\"placeholder\", \"placeholder\", \"placeholder\"}","{\"placeholder\", \"placeholder\", \"placeholder\"}"],"next":"27568a59-bad2-42e6-98b9-2f77b4c2d8c6"},{"type":"dialog","ID":"30bc3e9a-98fc-489b-af27-fd1bcb8e0e66","delay":1.15,"actor":"antonietta","content":["Ah.","Ah."],"next":"fff8d848-1e1f-490b-8fe6-e05086c11317"},{"type":"dialog","ID":"27568a59-bad2-42e6-98b9-2f77b4c2d8c6","delay":1.7000000000000002,"actor":"andrea","content":["Uh, I knew it.","Eh, me pareva."],"next":null},{"type":"dialog","ID":"fff8d848-1e1f-490b-8fe6-e05086c11317","delay":5.5,"actor":"antonietta","content":["I have no idea - logon () invoked with invalid details.parameters 0x0D ID=2 are incomplete","Non ne ho idea - logon () invoked with invalid details.parameters 0x0D ID=2 are incomplete"],"next":"68c6fbce-b43e-41ec-a43c-29a7bdf21eba"},{"type":"choice","ID":"7b9ff429-75e8-4b03-a542-3867f6d007dd","title":"","content":["I have to run, sorry!","Devo scappare, scusa!"],"next":"c2db8269-4a56-4e7c-878f-923f1165c391"},{"type":"dialog","ID":"c2db8269-4a56-4e7c-878f-923f1165c391","delay":2.05,"actor":"andrea","content":["I have to run, sorry!","Devo scappare, scusa!"],"next":"6dc0dd71-27ae-4e61-bd91-81a8224f33a1"},{"type":"dialog","ID":"68c6fbce-b43e-41ec-a43c-29a7bdf21eba","delay":1.45,"actor":"andrea","content":["Uff . . .","Uff . . ."],"next":"cb110fc4-5432-42e0-9fd7-1de9d0b0020b"},{"type":"dialog","ID":"6dc0dd71-27ae-4e61-bd91-81a8224f33a1","delay":4.300000000000001,"actor":"antonietta","content":["Don't dirty the floor with your shoes, I just cleaned it.","Non lasciarmi le macchie nere di scarpe sul pavimento che ho appena lavato."],"next":null},{"type":"dialog","ID":"cb110fc4-5432-42e0-9fd7-1de9d0b0020b","delay":1.85,"actor":"andrea","content":["Tell me . . .","Ma dimmi un po' . . ."],"next":"1c1fa873-80e3-424d-9a30-93b487ab7428"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "25d065f0-6d3a-4074-acec-42fe2316da8a",
+      "delay": 7.050000000000001,
+      "actor": "antonietta",
+      "content": [
+        "speakTo(const char *target = 'Andrea') received signal SIGPIPE, Broken pipe. [Switching to Thread 0xb74c0b40 (LWP 4864)] ",
+        "speakTo(const char *target = 'Andrea') received signal SIGPIPE, Broken pipe. [Switching to Thread 0xb74c0b40 (LWP 4864)] "
+      ],
+      "next": "372a7cab-20f9-45a3-9846-b0b53f7bdb49"
+    },
+    {
+      "type": "dialog",
+      "ID": "372a7cab-20f9-45a3-9846-b0b53f7bdb49",
+      "delay": 1.65,
+      "actor": "andrea",
+      "content": [
+        "But, but . . .",
+        "Ma, ma . . ."
+      ],
+      "choices": [
+        "a5d9d6f0-5577-4f6c-b507-050b5421c9f2",
+        "d751c3e8-cbe6-4102-9ea6-889cb140ec32",
+        "7b9ff429-75e8-4b03-a542-3867f6d007dd"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "a5d9d6f0-5577-4f6c-b507-050b5421c9f2",
+      "title": "",
+      "content": [
+        "I am listing.",
+        "Ti sto ascoltando."
+      ],
+      "next": "96fa825d-f459-41af-842a-3f9d624ecfc9"
+    },
+    {
+      "type": "dialog",
+      "ID": "96fa825d-f459-41af-842a-3f9d624ecfc9",
+      "delay": 1.8250000000000002,
+      "actor": "andrea",
+      "content": [
+        "I am listening.",
+        "Ti sto ascoltando."
+      ],
+      "next": "02ecd709-f249-40d5-bb9b-1e9abeb31dce"
+    },
+    {
+      "type": "dialog",
+      "ID": "941b4ab0-b8bf-40f5-bf3b-21b9cb5969b8",
+      "delay": 3.5250000000000004,
+      "actor": "antonietta",
+      "content": [
+        "I am sorry sir, but I am extremely busy right now.",
+        "Le chiedo scusa, ma ora sono piuttosto indaffarata."
+      ],
+      "next": "2205c0dc-48e9-4f1e-8086-5cc942cead27"
+    },
+    {
+      "type": "dialog",
+      "ID": "2205c0dc-48e9-4f1e-8086-5cc942cead27",
+      "delay": 1.5750000000000002,
+      "actor": "andrea",
+      "content": [
+        "Doing what?",
+        "A fare cosa?"
+      ],
+      "next": "acb2b3ba-5b35-4885-a319-6edd3938a622"
+    },
+    {
+      "type": "dialog",
+      "ID": "02ecd709-f249-40d5-bb9b-1e9abeb31dce",
+      "delay": 2.35,
+      "actor": "andrea",
+      "content": [
+        "Go ahead, what do you want to say?",
+        "Su, cos'hai da dire?"
+      ],
+      "next": "941b4ab0-b8bf-40f5-bf3b-21b9cb5969b8"
+    },
+    {
+      "type": "dialog",
+      "ID": "acb2b3ba-5b35-4885-a319-6edd3938a622",
+      "delay": 1.475,
+      "actor": "antonietta",
+      "content": [
+        "Well . . .",
+        "Beh . . ."
+      ],
+      "next": "f92c113d-e4d7-42d7-aa68-c4d6b828d8fe"
+    },
+    {
+      "type": "dialog",
+      "ID": "f92c113d-e4d7-42d7-aa68-c4d6b828d8fe",
+      "delay": 1.6,
+      "actor": "antonietta",
+      "content": [
+        "todoList[0];",
+        "todoList[0];"
+      ],
+      "next": "33c4bac4-cfb3-4fc8-9011-d1e2aa1ea057"
+    },
+    {
+      "type": "dialog",
+      "ID": "33c4bac4-cfb3-4fc8-9011-d1e2aa1ea057",
+      "delay": 1.6,
+      "actor": "antonietta",
+      "content": [
+        "todoList[1];",
+        "todoList[1];"
+      ],
+      "next": "9ca0c2b6-065f-483a-bac7-58047723d502"
+    },
+    {
+      "type": "dialog",
+      "ID": "9ca0c2b6-065f-483a-bac7-58047723d502",
+      "delay": 1.75,
+      "actor": "antonietta",
+      "content": [
+        "And todoList[2];",
+        "E todoList[2];"
+      ],
+      "next": "c293c8e5-2dac-4c99-ab93-6b72df4a1caf"
+    },
+    {
+      "type": "dialog",
+      "ID": "c293c8e5-2dac-4c99-ab93-6b72df4a1caf",
+      "delay": 1.25,
+      "actor": "andrea",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "choices": [
+        "2b536117-e386-4049-83cd-1078d2edba82",
+        "806a4568-927a-403a-a0f2-594ff049298f",
+        "7b9ff429-75e8-4b03-a542-3867f6d007dd"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "2b536117-e386-4049-83cd-1078d2edba82",
+      "title": "",
+      "content": [
+        "Does your boyfriend know?",
+        "Lo sa il tuo ragazzo?"
+      ],
+      "next": "1c1fa873-80e3-424d-9a30-93b487ab7428"
+    },
+    {
+      "type": "dialog",
+      "ID": "1c1fa873-80e3-424d-9a30-93b487ab7428",
+      "delay": 2.1500000000000004,
+      "actor": "andrea",
+      "content": [
+        "Does your boyfriend know?",
+        "Lo sa il tuo ragazzo?"
+      ],
+      "next": "8f05afdb-182e-4c38-a18c-61e530e86e19"
+    },
+    {
+      "type": "dialog",
+      "ID": "8f05afdb-182e-4c38-a18c-61e530e86e19",
+      "delay": 1.55,
+      "actor": "antonietta",
+      "content": [
+        "About what?",
+        "Ma di cosa?"
+      ],
+      "next": "cbf56494-d53f-41c0-aa49-74fccf87cd39"
+    },
+    {
+      "type": "dialog",
+      "ID": "cbf56494-d53f-41c0-aa49-74fccf87cd39",
+      "delay": 4.1,
+      "actor": "andrea",
+      "content": [
+        "About the fact that you became poor software due to Solaris.",
+        "Del fatto che sei diventata software scadente grazie al Solaris?"
+      ],
+      "next": "04cc5539-f03f-4bff-8753-a495db6198c4"
+    },
+    {
+      "type": "dialog",
+      "ID": "04cc5539-f03f-4bff-8753-a495db6198c4",
+      "delay": 2.85,
+      "actor": "antonietta",
+      "content": [
+        "No, I won't accept these arguments.",
+        "Ah no, queste illazioni non le accetto."
+      ],
+      "next": "e847bc08-1391-4477-8ecb-9076a461deb7"
+    },
+    {
+      "type": "dialog",
+      "ID": "e847bc08-1391-4477-8ecb-9076a461deb7",
+      "delay": 3.7,
+      "actor": "antonietta",
+      "content": [
+        "[Accessing nodes bouncing via unipg.dipinformatica.it]",
+        "[Accessing nodes bouncing via unipg.dipinformatica.it]"
+      ],
+      "next": "233d0f58-9b3f-403a-b97e-d15d106edb72"
+    },
+    {
+      "type": "dialog",
+      "ID": "233d0f58-9b3f-403a-b97e-d15d106edb72",
+      "delay": 2.7,
+      "actor": "antonietta",
+      "content": [
+        "[Looking for answers on the nodes]",
+        "[Looking for answers on the nodes]"
+      ],
+      "next": "3663054f-0897-46d5-9291-aec6e9ac0edf"
+    },
+    {
+      "type": "dialog",
+      "ID": "3663054f-0897-46d5-9291-aec6e9ac0edf",
+      "delay": 3.2,
+      "actor": "antonietta",
+      "content": [
+        "[Find a suitable answer on node Roberto.bin]",
+        "[Find a suitable answer on node Roberto.bin]"
+      ],
+      "next": "9232fecb-817e-4d53-8156-585c8a68ebcd"
+    },
+    {
+      "type": "dialog",
+      "ID": "9232fecb-817e-4d53-8156-585c8a68ebcd",
+      "delay": 1.475,
+      "actor": "antonietta",
+      "content": [
+        "Asshole.",
+        "Deficiente."
+      ],
+      "next": "4d94524e-1d20-488a-a56b-ee6ea74a13ba"
+    },
+    {
+      "type": "dialog",
+      "ID": "4d94524e-1d20-488a-a56b-ee6ea74a13ba",
+      "delay": 2.1500000000000004,
+      "actor": "andrea",
+      "content": [
+        "Uff, I am tired of this crap.",
+        "Mah, che strazio."
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "806a4568-927a-403a-a0f2-594ff049298f",
+      "title": "",
+      "content": [
+        "You are really busy!",
+        "Sei molto impegnata vedo!"
+      ],
+      "next": "4748fed4-2819-45b6-b9c5-b70da7e9daa6"
+    },
+    {
+      "type": "dialog",
+      "ID": "4748fed4-2819-45b6-b9c5-b70da7e9daa6",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "You are really busy!",
+        "Sei molto impegnata vedo!"
+      ],
+      "next": "5a5e9af1-850d-4c9b-8120-07f45df46492"
+    },
+    {
+      "type": "dialog",
+      "ID": "5a5e9af1-850d-4c9b-8120-07f45df46492",
+      "delay": 2,
+      "actor": "antonietta",
+      "content": [
+        "You can say that again.",
+        "Puoi dirlo forte."
+      ],
+      "next": "870b1ef6-755b-4a63-b5a5-04f46736bcf9"
+    },
+    {
+      "type": "dialog",
+      "ID": "870b1ef6-755b-4a63-b5a5-04f46736bcf9",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "You are really busy!",
+        "SEI MOLTO IMPEGNATA VEDO!"
+      ],
+      "next": "a34c08e2-52a0-456d-b2b9-9b6bfb2a6477"
+    },
+    {
+      "type": "dialog",
+      "ID": "a34c08e2-52a0-456d-b2b9-9b6bfb2a6477",
+      "delay": 1.625,
+      "actor": "antonietta",
+      "content": [
+        "Are you dumb?",
+        "Sei cretino?"
+      ],
+      "next": "c910f021-af29-4174-8a3e-a680ca49d04b"
+    },
+    {
+      "type": "dialog",
+      "ID": "c910f021-af29-4174-8a3e-a680ca49d04b",
+      "delay": 1.925,
+      "actor": "andrea",
+      "content": [
+        "Come on, was a joke.",
+        "Ma no, scherzavo."
+      ],
+      "next": "3415f44a-0e1d-41e2-9127-89ce0e773fa5"
+    },
+    {
+      "type": "choice",
+      "ID": "d751c3e8-cbe6-4102-9ea6-889cb140ec32",
+      "title": "",
+      "content": [
+        "Can you help me with a password?",
+        "Mi puoi aiutare con una password?"
+      ],
+      "next": "5f59f37e-94b5-4dfe-813b-c096b9328d8d"
+    },
+    {
+      "type": "dialog",
+      "ID": "3415f44a-0e1d-41e2-9127-89ce0e773fa5",
+      "delay": 2.925,
+      "actor": "andrea",
+      "content": [
+        "What the array todoList[] contains?",
+        "Ma cosa c'e' dentro il vettore todoList[]?"
+      ],
+      "next": "a8f665fd-d031-451c-89d0-84c7e8e4804c"
+    },
+    {
+      "type": "dialog",
+      "ID": "5f59f37e-94b5-4dfe-813b-c096b9328d8d",
+      "delay": 2.625,
+      "actor": "andrea",
+      "content": [
+        "Can you help me with a password?",
+        "Mi puoi aiutare con una password?"
+      ],
+      "next": "e22f38c8-256f-4c7f-b99f-d6d3f05fad99"
+    },
+    {
+      "type": "dialog",
+      "ID": "a8f665fd-d031-451c-89d0-84c7e8e4804c",
+      "delay": 1.15,
+      "actor": "antonietta",
+      "content": [
+        "Eh?",
+        "Eh?"
+      ],
+      "next": "e35e71ab-4268-40db-8fc2-f6ad700f035e"
+    },
+    {
+      "type": "dialog",
+      "ID": "e22f38c8-256f-4c7f-b99f-d6d3f05fad99",
+      "delay": 1.6,
+      "actor": "antonietta",
+      "content": [
+        "A password?",
+        "Che password?"
+      ],
+      "next": "60b1d4b2-cc2e-416e-afbd-ea50972c058d"
+    },
+    {
+      "type": "dialog",
+      "ID": "e35e71ab-4268-40db-8fc2-f6ad700f035e",
+      "delay": 2,
+      "actor": "andrea",
+      "content": [
+        "echo ${todoList[@]}?",
+        "echo ${todoList[@]}?"
+      ],
+      "next": "0d933df0-898a-455b-b790-440b31c46756"
+    },
+    {
+      "type": "dialog",
+      "ID": "60b1d4b2-cc2e-416e-afbd-ea50972c058d",
+      "delay": 3.5,
+      "actor": "andrea",
+      "content": [
+        "Yes, the password for Magnifico Rettore's MacBook.",
+        "Si, la password del MacBook del Magnifico Rettore."
+      ],
+      "next": "30bc3e9a-98fc-489b-af27-fd1bcb8e0e66"
+    },
+    {
+      "type": "dialog",
+      "ID": "0d933df0-898a-455b-b790-440b31c46756",
+      "delay": 3.25,
+      "actor": "antonietta",
+      "content": [
+        "{\"placeholder\", \"placeholder\", \"placeholder\"}",
+        "{\"placeholder\", \"placeholder\", \"placeholder\"}"
+      ],
+      "next": "27568a59-bad2-42e6-98b9-2f77b4c2d8c6"
+    },
+    {
+      "type": "dialog",
+      "ID": "30bc3e9a-98fc-489b-af27-fd1bcb8e0e66",
+      "delay": 1.15,
+      "actor": "antonietta",
+      "content": [
+        "Ah.",
+        "Ah."
+      ],
+      "next": "fff8d848-1e1f-490b-8fe6-e05086c11317"
+    },
+    {
+      "type": "dialog",
+      "ID": "27568a59-bad2-42e6-98b9-2f77b4c2d8c6",
+      "delay": 1.7000000000000002,
+      "actor": "andrea",
+      "content": [
+        "Uh, I knew it.",
+        "Eh, me pareva."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "fff8d848-1e1f-490b-8fe6-e05086c11317",
+      "delay": 5.5,
+      "actor": "antonietta",
+      "content": [
+        "I have no idea - logon () invoked with invalid details.parameters 0x0D ID=2 are incomplete",
+        "Non ne ho idea - logon () invoked with invalid details.parameters 0x0D ID=2 are incomplete"
+      ],
+      "next": "68c6fbce-b43e-41ec-a43c-29a7bdf21eba"
+    },
+    {
+      "type": "choice",
+      "ID": "7b9ff429-75e8-4b03-a542-3867f6d007dd",
+      "title": "",
+      "content": [
+        "I have to run, sorry!",
+        "Devo scappare, scusa!"
+      ],
+      "next": "c2db8269-4a56-4e7c-878f-923f1165c391"
+    },
+    {
+      "type": "dialog",
+      "ID": "c2db8269-4a56-4e7c-878f-923f1165c391",
+      "delay": 2.05,
+      "actor": "andrea",
+      "content": [
+        "I have to run, sorry!",
+        "Devo scappare, scusa!"
+      ],
+      "next": "6dc0dd71-27ae-4e61-bd91-81a8224f33a1"
+    },
+    {
+      "type": "dialog",
+      "ID": "68c6fbce-b43e-41ec-a43c-29a7bdf21eba",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uff . . .",
+        "Uff . . ."
+      ],
+      "next": "cb110fc4-5432-42e0-9fd7-1de9d0b0020b"
+    },
+    {
+      "type": "dialog",
+      "ID": "6dc0dd71-27ae-4e61-bd91-81a8224f33a1",
+      "delay": 4.300000000000001,
+      "actor": "antonietta",
+      "content": [
+        "Don't dirty the floor with your shoes, I just cleaned it.",
+        "Non lasciarmi le macchie nere di scarpe sul pavimento che ho appena lavato."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "cb110fc4-5432-42e0-9fd7-1de9d0b0020b",
+      "delay": 1.85,
+      "actor": "andrea",
+      "content": [
+        "Tell me . . .",
+        "Ma dimmi un po' . . ."
+      ],
+      "next": "1c1fa873-80e3-424d-9a30-93b487ab7428"
+    }
+  ]
+}

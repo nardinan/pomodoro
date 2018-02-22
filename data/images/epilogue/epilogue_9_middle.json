@@ -1,22 +1,26 @@
 {
-  "format":"transition",
-  "ID":"epilogue_story_9_middle",
-  "drawable":"epilogue_story_9",
-  "keys":[{
-    "position_x":300.0,
-    "position_y":-1250.0,
-    "zoom":1.2,
-    "time":0.0
-  },{
-    "position_x":400.0,
-    "position_y":-700.0,
-    "zoom":0.8,
-    "time":10.0
-  },{
-    "position_x":400.0,
-    "position_y":-250.0,
-    "zoom":0.8,
-    "time":5.0,
-    "mask_A":0
-  }]
+  "format": "transition",
+  "ID": "epilogue_story_9_middle",
+  "drawable": "epilogue_story_9",
+  "keys": [
+    {
+      "position_x": 300.0,
+      "position_y": -1250.0,
+      "zoom": 1.2,
+      "time": 0.0
+    },
+    {
+      "position_x": 400.0,
+      "position_y": -700.0,
+      "zoom": 0.8,
+      "time": 10.0
+    },
+    {
+      "position_x": 400.0,
+      "position_y": -250.0,
+      "zoom": 0.8,
+      "time": 5.0,
+      "mask_A": 0
+    }
+  ]
 }

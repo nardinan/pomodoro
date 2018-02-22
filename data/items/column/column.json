@@ -1,13 +1,15 @@
 {
-	"format":"item",
-	"ID":"column",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"column_still_A"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "column",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "column_still_A"
+        }
+      ]
+    }
+  ]
 }

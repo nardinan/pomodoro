@@ -1,8 +1,14 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"boss_right_angry_frame0",  "time":2.0},
-		{"drawable":"boss_right_angry_frame1",  "time":0.1}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "boss_right_angry_frame0",
+      "time": 2.0
+    },
+    {
+      "drawable": "boss_right_angry_frame1",
+      "time": 0.1
+    }
+  ]
 }

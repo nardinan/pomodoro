@@ -1,1 +1,483 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"d5815621-1961-4acb-9183-5430ec195484","delay":2.05,"actor":"serena","content":["What do you want, fella?","Che ti serve, zio?"],"next":"94ddd600-41e1-487e-b4cf-d1cad8c787e6"},{"type":"dialog","ID":"94ddd600-41e1-487e-b4cf-d1cad8c787e6","delay":1.45,"actor":"andrea","content":["Ehm . . .","Ehm . . ."],"choices":["24ae536a-0180-4543-93bd-ab1d8457a3a6","ea40ecde-c3c6-4213-b2a3-89a1c5c44405","f60f7931-0b4e-4826-866a-7e8bdade9f5f"]},{"type":"choice","ID":"24ae536a-0180-4543-93bd-ab1d8457a3a6","title":"","content":["Can I have a cocktail?","Mi faresti un cocktail?"],"next":"dd0cb124-fc80-426c-97d7-a214f17698d3"},{"type":"dialog","ID":"27856bfa-82c1-438d-b6c6-78ad94227088","delay":2.125,"actor":"andrea","content":["Can I have a cocktail?","Mi faresti un cocktail?"],"next":"dc2d132e-b801-4a0d-b932-6e202d962a56"},{"type":"choice","ID":"ea40ecde-c3c6-4213-b2a3-89a1c5c44405","title":"","content":["I am worried about the virus.","Sono preoccupato per il virus."],"next":"51042f4d-cf8f-4108-98eb-95c4cd9cb916"},{"type":"dialog","ID":"51042f4d-cf8f-4108-98eb-95c4cd9cb916","delay":2.475,"actor":"andrea","content":["I am worried about the virus.","Sono preoccupato per il virus."],"next":"0c83bb05-d71e-48bd-8e69-ad22908e2e8f"},{"type":"dialog","ID":"0c83bb05-d71e-48bd-8e69-ad22908e2e8f","delay":4.95,"actor":"andrea","content":["I wouldn't want to be infected by the lack of hygiene in this place.","Non vorrei che la mancanza di igene qui possa in qualche modo permetterne la trasmissione."],"next":"c0b6bc8c-1062-4e87-a94a-62cc7669ae39"},{"type":"dialog","ID":"c0b6bc8c-1062-4e87-a94a-62cc7669ae39","delay":6.125,"actor":"serena","content":["From what I've heard, Solaris is airborne and might have been deliberately released by someone.","Da quel che ho sentito, Solaris si trasmette per via aerea ed e' stato rilasciato deliberatamente da qualcuno."],"next":"107f3e1f-b25d-46ed-8213-afa179903be1"},{"type":"dialog","ID":"107f3e1f-b25d-46ed-8213-afa179903be1","delay":4.15,"actor":"andrea","content":["I was just pointing out how dirty this place is.","Il mio era solo un modo per sottolineare la mancanza di igene di questo posto."],"next":"0bf52911-1368-4fef-af5c-f4beeea5f72d"},{"type":"dialog","ID":"0bf52911-1368-4fef-af5c-f4beeea5f72d","delay":5.925000000000001,"actor":"serena","content":["Seems that the patient zero is a guy that studies computer science here, in Perugia.","Addirittura pare che il paziente zero sia un ragazzo del dipartimento di informatica dell'universita' di Perugia."],"next":"00007901-a68f-44ab-a5c9-233639e7a5e9"},{"type":"dialog","ID":"00007901-a68f-44ab-a5c9-233639e7a5e9","delay":1.2,"actor":"andrea","content":["Hey!","Hey!"],"choices":["9318d044-bfca-44c5-baab-ff7a3d524ec1","fd4d71ae-94c0-4b5c-9841-f6088d065c87","f60f7931-0b4e-4826-866a-7e8bdade9f5f"]},{"type":"choice","ID":"9318d044-bfca-44c5-baab-ff7a3d524ec1","title":"","content":["I am studying computer science here!","Io studio informatica a Perugia!"],"next":"9232c077-6b70-4336-acd2-9e1a78be1293"},{"type":"dialog","ID":"9232c077-6b70-4336-acd2-9e1a78be1293","delay":2.7,"actor":"andrea","content":["I am studying computer science here!","Io studio informatica a Perugia!"],"next":"148e163d-3dba-4841-b407-b30c91c7a3c2"},{"type":"dialog","ID":"148e163d-3dba-4841-b407-b30c91c7a3c2","delay":3.0500000000000003,"actor":"serena","content":["I heard that the patient zero has a mustache.","Si ma il tipo che dico io ha i baffi."],"next":"97c31965-41e3-4c99-a95a-57033479bebc"},{"type":"dialog","ID":"97c31965-41e3-4c99-a95a-57033479bebc","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"next":"9249e50d-2ab7-4714-ad68-138cd3c21357"},{"type":"dialog","ID":"9249e50d-2ab7-4714-ad68-138cd3c21357","delay":1.425,"actor":"andrea","content":["Cool.\n","Che storia."],"next":"ab22039f-3024-49bb-8c12-668bdb3f7fbf"},{"type":"choice","ID":"fd4d71ae-94c0-4b5c-9841-f6088d065c87","title":"","content":["How do you protect yourself?","Come ti proteggi?"],"next":"240802d0-d40b-4471-a4e4-85d16d36f153"},{"type":"dialog","ID":"ab22039f-3024-49bb-8c12-668bdb3f7fbf","delay":4.675000000000001,"actor":"serena","content":["I heard that an infected guy attacked his friend and he killed him.","Ho persino sentito che un ragazzo infettato ha aggredito un amico e l'ha ucciso."],"next":"8db46fdf-190d-45a3-be2c-7b8085b5de35"},{"type":"dialog","ID":"8db46fdf-190d-45a3-be2c-7b8085b5de35","delay":2,"actor":"andrea","content":["Let me guess . . .","Fammi indovinare . . ."],"next":"bb013bb0-0569-4755-a557-87ebe4c41adf"},{"type":"dialog","ID":"bb013bb0-0569-4755-a557-87ebe4c41adf","delay":2.5,"actor":"andrea","content":[". . . you read it on Facebook.",". . . l'hai letto su Facebook."],"next":"29ce9082-ea1d-4cd0-8fc0-b66f336cab18"},{"type":"dialog","ID":"29ce9082-ea1d-4cd0-8fc0-b66f336cab18","delay":1.175,"actor":"serena","content":["Yes.","Si."],"next":"06d29b09-ceed-424d-81e4-0213e0f4085d"},{"type":"dialog","ID":"06d29b09-ceed-424d-81e4-0213e0f4085d","delay":1.25,"actor":"andrea","content":["Pfff.","Pfff."],"next":null},{"type":"dialog","ID":"240802d0-d40b-4471-a4e4-85d16d36f153","delay":2.125,"actor":"andrea","content":["How do you protect yourself?","Come ti proteggi?"],"next":"723ebcd3-b431-4f65-992b-57b43e316dd2"},{"type":"dialog","ID":"723ebcd3-b431-4f65-992b-57b43e316dd2","delay":3.275,"actor":"serena","content":["Look, today is my last day here, in Perugia.","Guarda, oggi e' il mio ultimo giorno a Perugia."],"next":"932bab93-faae-4426-86b2-b2a1befe1458"},{"type":"dialog","ID":"932bab93-faae-4426-86b2-b2a1befe1458","delay":3.4250000000000003,"actor":"serena","content":["Tomorrow I'll leave this place and I'll go back to Potenza.","Domani scappo e me ne torno a Potenza."],"next":"8e73c135-954b-46d2-8e15-86b783199958"},{"type":"dialog","ID":"8e73c135-954b-46d2-8e15-86b783199958","delay":2.375,"actor":"serena","content":["I think here is too . . .","Io non credo che qui sia . . ."],"next":"feb518a7-5433-472a-af76-436eceb2b503"},{"type":"dialog","ID":"feb518a7-5433-472a-af76-436eceb2b503","delay":1.4,"actor":"andrea","content":["Potenza?","Potenza?"],"next":"bbf33023-bef6-42b8-b2ea-976060142370"},{"type":"dialog","ID":"bbf33023-bef6-42b8-b2ea-976060142370","delay":1.525,"actor":"andrea","content":["Where is it?","E dov'e'?"],"next":"c00d112b-c9af-4e7e-9e28-bb803c1aa49f"},{"type":"dialog","ID":"c00d112b-c9af-4e7e-9e28-bb803c1aa49f","delay":1.7000000000000002,"actor":"serena","content":["In Basilicata.","In Basilicata."],"next":"010946a5-0104-471f-b82f-3d9ec622b98e"},{"type":"dialog","ID":"010946a5-0104-471f-b82f-3d9ec622b98e","delay":1.925,"actor":"andrea","content":["Oh yes, I knew it.","Ah gia', lo sapevo."],"next":"f308068c-5b1a-4479-9565-209dd0b24d39"},{"type":"dialog","ID":"f308068c-5b1a-4479-9565-209dd0b24d39","delay":1.5,"actor":"serena","content":["Seriously?","Sul serio?"],"next":"d85f3b64-16aa-410f-8b7a-9434c6f05397"},{"type":"dialog","ID":"c73431f5-52ac-484d-9d3e-81c444392fa2","delay":5.25,"actor":"serena","content":["You are so ignorant that the only time you've opened a book you thought you broke it.","Sei cosi' ignorante che l'unica volta che hai aperto un libro pensavi d'averlo rotto."],"next":"ee778978-45e6-45b0-a27b-4909560afd31"},{"type":"choice","ID":"f60f7931-0b4e-4826-866a-7e8bdade9f5f","title":"","content":["Well, it's time to go . . .","Beh, s'e' fatta una certa . . ."],"next":"62a57337-1d3d-45e3-8cba-8c309607a000"},{"type":"dialog","ID":"62a57337-1d3d-45e3-8cba-8c309607a000","delay":2.475,"actor":"andrea","content":["Well' it's time to go . . .","Beh, s'e' fatta una certa . . . "],"next":"add48435-858d-4a4a-9652-3d93ff4424be"},{"type":"dialog","ID":"add48435-858d-4a4a-9652-3d93ff4424be","delay":3.35,"actor":"serena","content":[". . . and you didn't buy anything as usual.",". . . e anche questa volta non hai comprato niente."],"next":"ee778978-45e6-45b0-a27b-4909560afd31"},{"type":"dialog","ID":"ee778978-45e6-45b0-a27b-4909560afd31","delay":3,"actor":"andrea","content":["At some point, everybody hates me!","Tutti finiscono per odiarmi ad un certo punto!"],"next":"1225b209-f62b-4e06-a8da-cb98ea66def6"},{"type":"set","ID":"dd0cb124-fc80-426c-97d7-a214f17698d3","variable":"got_sugar","value":0,"next":"70c8e755-c38e-4607-9220-fc745d2ea2e9"},{"type":"dialog","ID":"d85f3b64-16aa-410f-8b7a-9434c6f05397","delay":2.925,"actor":"serena","content":["I strongly doubt from your face.","Dubito fortemente dalla faccia che hai fatto."],"next":"c73431f5-52ac-484d-9d3e-81c444392fa2"},{"type":"set","ID":"70c8e755-c38e-4607-9220-fc745d2ea2e9","variable":"got_glass","value":0,"next":"6904788d-2298-40de-a780-74c501d599f2"},{"type":"set","ID":"6904788d-2298-40de-a780-74c501d599f2","variable":"got_lemon","value":0,"next":"5eff9f18-1bd3-469f-bb0d-516213540527"},{"type":"set","ID":"5eff9f18-1bd3-469f-bb0d-516213540527","variable":"got_cocktail","value":1,"next":"3547d25d-60e5-456f-b4ed-ef98661c5900"},{"type":"dialog","ID":"1225b209-f62b-4e06-a8da-cb98ea66def6","delay":2.8,"actor":"andrea","content":["I call it 'therapeutic persecution'.","Lo chiamo 'accanimento terapeutico'."],"next":null},{"type":"set","ID":"3547d25d-60e5-456f-b4ed-ef98661c5900","variable":"done_cocktail","value":1,"next":"27856bfa-82c1-438d-b6c6-78ad94227088"},{"type":"dialog","ID":"dc2d132e-b801-4a0d-b932-6e202d962a56","delay":2.4000000000000004,"actor":"andrea","content":["I brought the ingredients!","Ti ho portato gli ingredienti!"],"next":"f5878355-38b6-43f5-bb8f-84d7b0695a82"},{"type":"dialog","ID":"f5878355-38b6-43f5-bb8f-84d7b0695a82","delay":1.375,"actor":"serena","content":["Great!","Perfetto!"],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "d5815621-1961-4acb-9183-5430ec195484",
+      "delay": 2.05,
+      "actor": "serena",
+      "content": [
+        "What do you want, fella?",
+        "Che ti serve, zio?"
+      ],
+      "next": "94ddd600-41e1-487e-b4cf-d1cad8c787e6"
+    },
+    {
+      "type": "dialog",
+      "ID": "94ddd600-41e1-487e-b4cf-d1cad8c787e6",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "choices": [
+        "24ae536a-0180-4543-93bd-ab1d8457a3a6",
+        "ea40ecde-c3c6-4213-b2a3-89a1c5c44405",
+        "f60f7931-0b4e-4826-866a-7e8bdade9f5f"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "24ae536a-0180-4543-93bd-ab1d8457a3a6",
+      "title": "",
+      "content": [
+        "Can I have a cocktail?",
+        "Mi faresti un cocktail?"
+      ],
+      "next": "dd0cb124-fc80-426c-97d7-a214f17698d3"
+    },
+    {
+      "type": "dialog",
+      "ID": "27856bfa-82c1-438d-b6c6-78ad94227088",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "Can I have a cocktail?",
+        "Mi faresti un cocktail?"
+      ],
+      "next": "dc2d132e-b801-4a0d-b932-6e202d962a56"
+    },
+    {
+      "type": "choice",
+      "ID": "ea40ecde-c3c6-4213-b2a3-89a1c5c44405",
+      "title": "",
+      "content": [
+        "I am worried about the virus.",
+        "Sono preoccupato per il virus."
+      ],
+      "next": "51042f4d-cf8f-4108-98eb-95c4cd9cb916"
+    },
+    {
+      "type": "dialog",
+      "ID": "51042f4d-cf8f-4108-98eb-95c4cd9cb916",
+      "delay": 2.475,
+      "actor": "andrea",
+      "content": [
+        "I am worried about the virus.",
+        "Sono preoccupato per il virus."
+      ],
+      "next": "0c83bb05-d71e-48bd-8e69-ad22908e2e8f"
+    },
+    {
+      "type": "dialog",
+      "ID": "0c83bb05-d71e-48bd-8e69-ad22908e2e8f",
+      "delay": 4.95,
+      "actor": "andrea",
+      "content": [
+        "I wouldn't want to be infected by the lack of hygiene in this place.",
+        "Non vorrei che la mancanza di igene qui possa in qualche modo permetterne la trasmissione."
+      ],
+      "next": "c0b6bc8c-1062-4e87-a94a-62cc7669ae39"
+    },
+    {
+      "type": "dialog",
+      "ID": "c0b6bc8c-1062-4e87-a94a-62cc7669ae39",
+      "delay": 6.125,
+      "actor": "serena",
+      "content": [
+        "From what I've heard, Solaris is airborne and might have been deliberately released by someone.",
+        "Da quel che ho sentito, Solaris si trasmette per via aerea ed e' stato rilasciato deliberatamente da qualcuno."
+      ],
+      "next": "107f3e1f-b25d-46ed-8213-afa179903be1"
+    },
+    {
+      "type": "dialog",
+      "ID": "107f3e1f-b25d-46ed-8213-afa179903be1",
+      "delay": 4.15,
+      "actor": "andrea",
+      "content": [
+        "I was just pointing out how dirty this place is.",
+        "Il mio era solo un modo per sottolineare la mancanza di igene di questo posto."
+      ],
+      "next": "0bf52911-1368-4fef-af5c-f4beeea5f72d"
+    },
+    {
+      "type": "dialog",
+      "ID": "0bf52911-1368-4fef-af5c-f4beeea5f72d",
+      "delay": 5.925000000000001,
+      "actor": "serena",
+      "content": [
+        "Seems that the patient zero is a guy that studies computer science here, in Perugia.",
+        "Addirittura pare che il paziente zero sia un ragazzo del dipartimento di informatica dell'universita' di Perugia."
+      ],
+      "next": "00007901-a68f-44ab-a5c9-233639e7a5e9"
+    },
+    {
+      "type": "dialog",
+      "ID": "00007901-a68f-44ab-a5c9-233639e7a5e9",
+      "delay": 1.2,
+      "actor": "andrea",
+      "content": [
+        "Hey!",
+        "Hey!"
+      ],
+      "choices": [
+        "9318d044-bfca-44c5-baab-ff7a3d524ec1",
+        "fd4d71ae-94c0-4b5c-9841-f6088d065c87",
+        "f60f7931-0b4e-4826-866a-7e8bdade9f5f"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "9318d044-bfca-44c5-baab-ff7a3d524ec1",
+      "title": "",
+      "content": [
+        "I am studying computer science here!",
+        "Io studio informatica a Perugia!"
+      ],
+      "next": "9232c077-6b70-4336-acd2-9e1a78be1293"
+    },
+    {
+      "type": "dialog",
+      "ID": "9232c077-6b70-4336-acd2-9e1a78be1293",
+      "delay": 2.7,
+      "actor": "andrea",
+      "content": [
+        "I am studying computer science here!",
+        "Io studio informatica a Perugia!"
+      ],
+      "next": "148e163d-3dba-4841-b407-b30c91c7a3c2"
+    },
+    {
+      "type": "dialog",
+      "ID": "148e163d-3dba-4841-b407-b30c91c7a3c2",
+      "delay": 3.0500000000000003,
+      "actor": "serena",
+      "content": [
+        "I heard that the patient zero has a mustache.",
+        "Si ma il tipo che dico io ha i baffi."
+      ],
+      "next": "97c31965-41e3-4c99-a95a-57033479bebc"
+    },
+    {
+      "type": "dialog",
+      "ID": "97c31965-41e3-4c99-a95a-57033479bebc",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "next": "9249e50d-2ab7-4714-ad68-138cd3c21357"
+    },
+    {
+      "type": "dialog",
+      "ID": "9249e50d-2ab7-4714-ad68-138cd3c21357",
+      "delay": 1.425,
+      "actor": "andrea",
+      "content": [
+        "Cool.\n",
+        "Che storia."
+      ],
+      "next": "ab22039f-3024-49bb-8c12-668bdb3f7fbf"
+    },
+    {
+      "type": "choice",
+      "ID": "fd4d71ae-94c0-4b5c-9841-f6088d065c87",
+      "title": "",
+      "content": [
+        "How do you protect yourself?",
+        "Come ti proteggi?"
+      ],
+      "next": "240802d0-d40b-4471-a4e4-85d16d36f153"
+    },
+    {
+      "type": "dialog",
+      "ID": "ab22039f-3024-49bb-8c12-668bdb3f7fbf",
+      "delay": 4.675000000000001,
+      "actor": "serena",
+      "content": [
+        "I heard that an infected guy attacked his friend and he killed him.",
+        "Ho persino sentito che un ragazzo infettato ha aggredito un amico e l'ha ucciso."
+      ],
+      "next": "8db46fdf-190d-45a3-be2c-7b8085b5de35"
+    },
+    {
+      "type": "dialog",
+      "ID": "8db46fdf-190d-45a3-be2c-7b8085b5de35",
+      "delay": 2,
+      "actor": "andrea",
+      "content": [
+        "Let me guess . . .",
+        "Fammi indovinare . . ."
+      ],
+      "next": "bb013bb0-0569-4755-a557-87ebe4c41adf"
+    },
+    {
+      "type": "dialog",
+      "ID": "bb013bb0-0569-4755-a557-87ebe4c41adf",
+      "delay": 2.5,
+      "actor": "andrea",
+      "content": [
+        ". . . you read it on Facebook.",
+        ". . . l'hai letto su Facebook."
+      ],
+      "next": "29ce9082-ea1d-4cd0-8fc0-b66f336cab18"
+    },
+    {
+      "type": "dialog",
+      "ID": "29ce9082-ea1d-4cd0-8fc0-b66f336cab18",
+      "delay": 1.175,
+      "actor": "serena",
+      "content": [
+        "Yes.",
+        "Si."
+      ],
+      "next": "06d29b09-ceed-424d-81e4-0213e0f4085d"
+    },
+    {
+      "type": "dialog",
+      "ID": "06d29b09-ceed-424d-81e4-0213e0f4085d",
+      "delay": 1.25,
+      "actor": "andrea",
+      "content": [
+        "Pfff.",
+        "Pfff."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "240802d0-d40b-4471-a4e4-85d16d36f153",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "How do you protect yourself?",
+        "Come ti proteggi?"
+      ],
+      "next": "723ebcd3-b431-4f65-992b-57b43e316dd2"
+    },
+    {
+      "type": "dialog",
+      "ID": "723ebcd3-b431-4f65-992b-57b43e316dd2",
+      "delay": 3.275,
+      "actor": "serena",
+      "content": [
+        "Look, today is my last day here, in Perugia.",
+        "Guarda, oggi e' il mio ultimo giorno a Perugia."
+      ],
+      "next": "932bab93-faae-4426-86b2-b2a1befe1458"
+    },
+    {
+      "type": "dialog",
+      "ID": "932bab93-faae-4426-86b2-b2a1befe1458",
+      "delay": 3.4250000000000003,
+      "actor": "serena",
+      "content": [
+        "Tomorrow I'll leave this place and I'll go back to Potenza.",
+        "Domani scappo e me ne torno a Potenza."
+      ],
+      "next": "8e73c135-954b-46d2-8e15-86b783199958"
+    },
+    {
+      "type": "dialog",
+      "ID": "8e73c135-954b-46d2-8e15-86b783199958",
+      "delay": 2.375,
+      "actor": "serena",
+      "content": [
+        "I think here is too . . .",
+        "Io non credo che qui sia . . ."
+      ],
+      "next": "feb518a7-5433-472a-af76-436eceb2b503"
+    },
+    {
+      "type": "dialog",
+      "ID": "feb518a7-5433-472a-af76-436eceb2b503",
+      "delay": 1.4,
+      "actor": "andrea",
+      "content": [
+        "Potenza?",
+        "Potenza?"
+      ],
+      "next": "bbf33023-bef6-42b8-b2ea-976060142370"
+    },
+    {
+      "type": "dialog",
+      "ID": "bbf33023-bef6-42b8-b2ea-976060142370",
+      "delay": 1.525,
+      "actor": "andrea",
+      "content": [
+        "Where is it?",
+        "E dov'e'?"
+      ],
+      "next": "c00d112b-c9af-4e7e-9e28-bb803c1aa49f"
+    },
+    {
+      "type": "dialog",
+      "ID": "c00d112b-c9af-4e7e-9e28-bb803c1aa49f",
+      "delay": 1.7000000000000002,
+      "actor": "serena",
+      "content": [
+        "In Basilicata.",
+        "In Basilicata."
+      ],
+      "next": "010946a5-0104-471f-b82f-3d9ec622b98e"
+    },
+    {
+      "type": "dialog",
+      "ID": "010946a5-0104-471f-b82f-3d9ec622b98e",
+      "delay": 1.925,
+      "actor": "andrea",
+      "content": [
+        "Oh yes, I knew it.",
+        "Ah gia', lo sapevo."
+      ],
+      "next": "f308068c-5b1a-4479-9565-209dd0b24d39"
+    },
+    {
+      "type": "dialog",
+      "ID": "f308068c-5b1a-4479-9565-209dd0b24d39",
+      "delay": 1.5,
+      "actor": "serena",
+      "content": [
+        "Seriously?",
+        "Sul serio?"
+      ],
+      "next": "d85f3b64-16aa-410f-8b7a-9434c6f05397"
+    },
+    {
+      "type": "dialog",
+      "ID": "c73431f5-52ac-484d-9d3e-81c444392fa2",
+      "delay": 5.25,
+      "actor": "serena",
+      "content": [
+        "You are so ignorant that the only time you've opened a book you thought you broke it.",
+        "Sei cosi' ignorante che l'unica volta che hai aperto un libro pensavi d'averlo rotto."
+      ],
+      "next": "ee778978-45e6-45b0-a27b-4909560afd31"
+    },
+    {
+      "type": "choice",
+      "ID": "f60f7931-0b4e-4826-866a-7e8bdade9f5f",
+      "title": "",
+      "content": [
+        "Well, it's time to go . . .",
+        "Beh, s'e' fatta una certa . . ."
+      ],
+      "next": "62a57337-1d3d-45e3-8cba-8c309607a000"
+    },
+    {
+      "type": "dialog",
+      "ID": "62a57337-1d3d-45e3-8cba-8c309607a000",
+      "delay": 2.475,
+      "actor": "andrea",
+      "content": [
+        "Well' it's time to go . . .",
+        "Beh, s'e' fatta una certa . . . "
+      ],
+      "next": "add48435-858d-4a4a-9652-3d93ff4424be"
+    },
+    {
+      "type": "dialog",
+      "ID": "add48435-858d-4a4a-9652-3d93ff4424be",
+      "delay": 3.35,
+      "actor": "serena",
+      "content": [
+        ". . . and you didn't buy anything as usual.",
+        ". . . e anche questa volta non hai comprato niente."
+      ],
+      "next": "ee778978-45e6-45b0-a27b-4909560afd31"
+    },
+    {
+      "type": "dialog",
+      "ID": "ee778978-45e6-45b0-a27b-4909560afd31",
+      "delay": 3,
+      "actor": "andrea",
+      "content": [
+        "At some point, everybody hates me!",
+        "Tutti finiscono per odiarmi ad un certo punto!"
+      ],
+      "next": "1225b209-f62b-4e06-a8da-cb98ea66def6"
+    },
+    {
+      "type": "set",
+      "ID": "dd0cb124-fc80-426c-97d7-a214f17698d3",
+      "variable": "got_sugar",
+      "value": 0,
+      "next": "70c8e755-c38e-4607-9220-fc745d2ea2e9"
+    },
+    {
+      "type": "dialog",
+      "ID": "d85f3b64-16aa-410f-8b7a-9434c6f05397",
+      "delay": 2.925,
+      "actor": "serena",
+      "content": [
+        "I strongly doubt from your face.",
+        "Dubito fortemente dalla faccia che hai fatto."
+      ],
+      "next": "c73431f5-52ac-484d-9d3e-81c444392fa2"
+    },
+    {
+      "type": "set",
+      "ID": "70c8e755-c38e-4607-9220-fc745d2ea2e9",
+      "variable": "got_glass",
+      "value": 0,
+      "next": "6904788d-2298-40de-a780-74c501d599f2"
+    },
+    {
+      "type": "set",
+      "ID": "6904788d-2298-40de-a780-74c501d599f2",
+      "variable": "got_lemon",
+      "value": 0,
+      "next": "5eff9f18-1bd3-469f-bb0d-516213540527"
+    },
+    {
+      "type": "set",
+      "ID": "5eff9f18-1bd3-469f-bb0d-516213540527",
+      "variable": "got_cocktail",
+      "value": 1,
+      "next": "3547d25d-60e5-456f-b4ed-ef98661c5900"
+    },
+    {
+      "type": "dialog",
+      "ID": "1225b209-f62b-4e06-a8da-cb98ea66def6",
+      "delay": 2.8,
+      "actor": "andrea",
+      "content": [
+        "I call it 'therapeutic persecution'.",
+        "Lo chiamo 'accanimento terapeutico'."
+      ],
+      "next": null
+    },
+    {
+      "type": "set",
+      "ID": "3547d25d-60e5-456f-b4ed-ef98661c5900",
+      "variable": "done_cocktail",
+      "value": 1,
+      "next": "27856bfa-82c1-438d-b6c6-78ad94227088"
+    },
+    {
+      "type": "dialog",
+      "ID": "dc2d132e-b801-4a0d-b932-6e202d962a56",
+      "delay": 2.4000000000000004,
+      "actor": "andrea",
+      "content": [
+        "I brought the ingredients!",
+        "Ti ho portato gli ingredienti!"
+      ],
+      "next": "f5878355-38b6-43f5-bb8f-84d7b0695a82"
+    },
+    {
+      "type": "dialog",
+      "ID": "f5878355-38b6-43f5-bb8f-84d7b0695a82",
+      "delay": 1.375,
+      "actor": "serena",
+      "content": [
+        "Great!",
+        "Perfetto!"
+      ],
+      "next": null
+    }
+  ]
+}

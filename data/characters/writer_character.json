@@ -92,11 +92,11 @@
       },
       "body": {
         "drawable": "body_set_blank_back",
-				"offset_y": 10
+        "offset_y": 10
       },
       "arms": {
         "drawable": "arms_set_blank_back_writer",
-				"offset_y": 10
+        "offset_y": 10
       },
       "legs": {
         "drawable": "legs_set_blank_back",

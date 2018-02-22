@@ -1,1 +1,570 @@
-{"format":"dialog","dialogs":[{"type":"choice","ID":"af80d7a9-38c9-44e8-965c-338a7e669bc7","title":"","content":["Are you still working?","Ancora lavori?"],"next":"d3221bee-95e5-47e2-ae8f-de8dc2486ce8"},{"type":"choice","ID":"5cdb00a4-31f9-4fb6-b8e1-169bd5f8172f","title":"","content":["What 'day off' means?","Cos'e' 'ferie'?"],"next":"05eeb04f-0392-4143-9a11-bb636906b66a"},{"type":"dialog","ID":"ff3b40e6-6c23-4f67-8159-80ffde1fcfe0","delay":2.125,"actor":"federico","content":["I took a day off.","Ho preso un giorno di ferie."],"next":"d2f60361-3ed3-45dd-a7c6-46c79479c605"},{"type":"dialog","ID":"dcfb7803-a6c9-4e71-8859-def3ee4fa5d1","delay":3.125,"actor":"andrea","content":["In any case I still haven't see a casting!","Comunque io non ho ancora visto una colata!"],"next":"ef831067-780e-49b9-9fee-4b8eb8c7608b"},{"type":"dialog","ID":"ef831067-780e-49b9-9fee-4b8eb8c7608b","delay":3.5,"actor":"federico","content":["Oh yeah, it's one of the most extraordinary spectacles in nature!","Ah si, uno spettacolo della natura!"],"next":"a917393f-85e2-40c3-9d2b-c6f8dfeae4d6"},{"type":"dialog","ID":"a917393f-85e2-40c3-9d2b-c6f8dfeae4d6","delay":3.1750000000000003,"actor":"federico","content":["You have to see when we do it during the night!","Devi vedere quando la facciamo di notte!"],"next":"2c23a4d2-2f4c-45c8-903a-032d7d6e6735"},{"type":"choice","ID":"6ed025bd-675d-49f4-a7c5-d4d967d998c4","title":"","content":["Something like the Northen Lights!","Tipo Aurora Boreale!"],"next":"7453ca1b-a650-4698-a678-0ae2ad6b1019"},{"type":"dialog","ID":"7453ca1b-a650-4698-a678-0ae2ad6b1019","delay":2.35,"actor":"andrea","content":["Something like the Northen Lights!","Tipo Aurora Boreale!"],"next":"dd23d57a-d352-4d6b-901d-499698bdaf50"},{"type":"choice","ID":"fe725d80-8eb8-4a0f-b4ad-05dde145221e","title":"","content":["Are you still work during the night?","Ancora fai le notti?"],"next":"9edbda58-854a-4f5c-ac1c-eecf57293fa8"},{"type":"dialog","ID":"9edbda58-854a-4f5c-ac1c-eecf57293fa8","delay":2.4000000000000004,"actor":"andrea","content":["Are you still work during the night?","Ancora fai le notti?"],"next":"5835bb90-f778-47d4-b412-904e9593360e"},{"type":"dialog","ID":"5835bb90-f778-47d4-b412-904e9593360e","delay":2.6500000000000004,"actor":"federico","content":["Of course, I work night and day! ","Certo, io lavoro notte e giorno! "],"next":"2433d7c9-27ae-4322-9685-bac1149e0f1c"},{"type":"dialog","ID":"2433d7c9-27ae-4322-9685-bac1149e0f1c","delay":2.975,"actor":"andrea","content":["What do you do when you work during the night?","E che fai quando lavori di notte?"],"next":"831c0832-28ee-4289-9306-1f92c2c4e32a"},{"type":"dialog","ID":"9195b99f-a2ce-4635-8463-a6690d227b51","delay":3,"actor":"andrea","content":["What about the video of those screaming goats?","E il video delle capre che urlano?"],"next":"31b56fe9-b381-4780-b8c9-ad5628e2ba91"},{"type":"dialog","ID":"b1c07cc0-dba5-43e6-afac-c1850e812c18","delay":2.1500000000000004,"actor":"federico","content":["Do you think I'm 29?","Ma ti pare che ho 29 anni?"],"next":"0f4e7e6d-a997-43bc-a65a-18f4d56e3e9f"},{"type":"choice","ID":"a86092a0-a8ec-4d96-8865-8a001b917787","title":"","content":["What about the video of those screaming goats?","E il video delle capre che urlano?"],"next":"9195b99f-a2ce-4635-8463-a6690d227b51"},{"type":"choice","ID":"0862b65b-e994-433c-ac9d-47d77ec04b76","title":"","content":["Youtube all the night long!","Youtube tutta la notte!"],"next":"583e287b-f46a-4464-8ae4-6caf0c1abade"},{"type":"dialog","ID":"583e287b-f46a-4464-8ae4-6caf0c1abade","delay":2.25,"actor":"andrea","content":["Youtube all the night long!","Youtube tutta la notte!"],"next":"66d2167f-4409-4160-b6fe-0deedf7605b0"},{"type":"dialog","ID":"1009121b-717a-48f7-925f-d134f7c71d3e","delay":3.075,"actor":"federico","content":["I need a little help to sleep . . .","Per dormire ho bisogno di un piccolo aiutino . ."],"next":"858e888d-99d6-4fc2-a61c-8550d48ebf5f"},{"type":"dialog","ID":"925818f6-a757-4e5b-bc4f-faea8d6f0709","delay":2.3,"actor":"andrea","content":["Oh c'mon Fettina, no drugs!","Dai Fettina, la droga no!"],"next":"e18a60bd-60c5-4eeb-87b4-6fa656723793"},{"type":"dialog","ID":"e18a60bd-60c5-4eeb-87b4-6fa656723793","delay":3.225,"actor":"federico","content":["No, no drugs! It's all natural ingredients . . .","Ma che droga e' tutta roba naturale . . ."],"next":"f856b511-1efb-4c5a-9e37-ffee696ba8e0"},{"type":"dialog","ID":"7a84c97c-c4b8-454a-a236-6653f07d07b0","delay":4.6,"actor":"andrea","content":["Finding stuff in plant's jar, doesn't necessarily mean natural ingredients!","Trovare roba nei vasi delle piante, non vuol dire per forza naturale!"],"next":"37f9c032-50f2-475b-b7ed-614dd4859d0e"},{"type":"dialog","ID":"a61b2530-ca6b-4149-8c41-f2724bf53f8f","delay":2.875,"actor":"federico","content":["We do what we can to sleep a bit!","Si fa quel che si puo' per dormire un po'!"],"next":null},{"type":"dialog","ID":"05eeb04f-0392-4143-9a11-bb636906b66a","delay":1.9,"actor":"andrea","content":["What 'day off' means?","Cos'e' 'ferie'?"],"next":"7c5c7802-b60e-48e7-922f-79365f63d0d1"},{"type":"dialog","ID":"de8a2df9-1f7c-4b38-bb8e-7a93dee81b1d","delay":1.725,"actor":"federico","content":["Don't worry!","Non preoccuparti!"],"next":"2adaae68-24b0-417e-9020-27e82d35dcd3"},{"type":"dialog","ID":"2adaae68-24b0-417e-9020-27e82d35dcd3","delay":4.15,"actor":"federico","content":["As a good graduate, you will discover this word only in few years!","Da bravo laureato conoscerai quella parola tra qualche anno!"],"next":"9da4a102-f622-41a3-998f-91bf5d5c0e11"},{"type":"dialog","ID":"d697d353-6fd6-434f-be43-e577a5fc35b2","delay":2.075,"actor":"andrea","content":["Graduates' fortune!","La fortuna dei laureati!"],"next":"e406856a-a962-4a8e-b1f4-db6e24e9a109"},{"type":"dialog","ID":"9da4a102-f622-41a3-998f-91bf5d5c0e11","delay":1.475,"actor":"andrea","content":["Well . . .","Bhe . . ."],"choices":["136db7b0-73a6-4c93-b0a7-39c59a541199","0a266989-4c3b-4942-ae02-87be0231ff77"]},{"type":"choice","ID":"136db7b0-73a6-4c93-b0a7-39c59a541199","title":"","content":["Graduates' fortune!","La fortuna dei laureati!"],"next":"d697d353-6fd6-434f-be43-e577a5fc35b2"},{"type":"choice","ID":"0a266989-4c3b-4942-ae02-87be0231ff77","title":"","content":["As if you know about it!","Come se la conoscessi tu!"],"next":"c3302654-e0ae-4690-8145-416cd54fa214"},{"type":"dialog","ID":"c3302654-e0ae-4690-8145-416cd54fa214","delay":2.225,"actor":"andrea","content":["As if you know about it!","Come se la conoscessi tu!"],"next":"5835bb90-f778-47d4-b412-904e9593360e"},{"type":"dialog","ID":"e406856a-a962-4a8e-b1f4-db6e24e9a109","delay":1.775,"actor":"federico","content":["A golden 'M'!","Una 'M' color oro!"],"next":"4e084959-cdf4-406e-be11-72b6d3b9dc8c"},{"type":"dialog","ID":"dd23d57a-d352-4d6b-901d-499698bdaf50","delay":2.475,"actor":"andrea","content":["And you do it also during the day?","E lo fai anche di giorno?"],"next":"5835bb90-f778-47d4-b412-904e9593360e"},{"type":"dialog","ID":"66d2167f-4409-4160-b6fe-0deedf7605b0","delay":4,"actor":"andrea","content":["Can you sleep during the day, then, after a night shift?","Ma poi riesci a dormire in pieno giorno, dopo un turno di notte?"],"next":"1009121b-717a-48f7-925f-d134f7c71d3e"},{"type":"dialog","ID":"7c5c7802-b60e-48e7-922f-79365f63d0d1","delay":2.95,"actor":"federico","content":["Is something that you take when you work.","E' una cosa che prendi quando lavori."],"next":"e9e6f676-026b-4b5b-b579-cf42acbd0130"},{"type":"dialog","ID":"e9e6f676-026b-4b5b-b579-cf42acbd0130","delay":1.85,"actor":"andrea","content":["What 'work' means?","Cos'e' 'lavoro'?"],"next":"de8a2df9-1f7c-4b38-bb8e-7a93dee81b1d"},{"type":"dialog","ID":"0f4e7e6d-a997-43bc-a65a-18f4d56e3e9f","delay":2.0250000000000004,"actor":"andrea","content":["You look very young!","Sembri molto giovane!"],"next":"1cd3453a-f308-4c16-8e98-3a722915cccd"},{"type":"dialog","ID":"ed6f0bc2-1bba-4b2f-b8ba-5f1469e3c1f2","delay":1.55,"actor":"federico","content":["Modestly!","Modestamente!"],"next":"64a99e57-a8c8-4a5b-84e2-7457c646aafd"},{"type":"dialog","ID":"37f9c032-50f2-475b-b7ed-614dd4859d0e","delay":2.2,"actor":"federico","content":["Especially here in Perugia!","Sopratutto a Perugia!"],"next":"a61b2530-ca6b-4149-8c41-f2724bf53f8f"},{"type":"dialog","ID":"2c23a4d2-2f4c-45c8-903a-032d7d6e6735","delay":1.4,"actor":"andrea","content":["Oh . . .","Oh . . ."],"choices":["fe725d80-8eb8-4a0f-b4ad-05dde145221e","6ed025bd-675d-49f4-a7c5-d4d967d998c4"]},{"type":"dialog","ID":"831c0832-28ee-4289-9306-1f92c2c4e32a","delay":1.4,"actor":"federico","content":["Youtube!","Youtube!"],"next":"e4688ae8-c301-41ec-a7f5-dbc724622b7b"},{"type":"dialog","ID":"e4688ae8-c301-41ec-a7f5-dbc724622b7b","delay":1.625,"actor":"andrea","content":["Indeed . . .","Infatti . . ."],"choices":["0862b65b-e994-433c-ac9d-47d77ec04b76","a86092a0-a8ec-4d96-8865-8a001b917787"]},{"type":"dialog","ID":"31b56fe9-b381-4780-b8c9-ad5628e2ba91","delay":1.675,"actor":"andrea","content":["Did you see it?","L'hai visto?"],"next":"b1c07cc0-dba5-43e6-afac-c1850e812c18"},{"type":"dialog","ID":"858e888d-99d6-4fc2-a61c-8550d48ebf5f","delay":1.55,"actor":"andrea","content":["Oh no . . .","Oh no . . ."],"next":"925818f6-a757-4e5b-bc4f-faea8d6f0709"},{"type":"dialog","ID":"1cd3453a-f308-4c16-8e98-3a722915cccd","delay":3.475,"actor":"andrea","content":["This night/day shift doesn't effect your look!","Questa alternanza giorno/notte non ti fa invecchiare!"],"next":"ed6f0bc2-1bba-4b2f-b8ba-5f1469e3c1f2"},{"type":"dialog","ID":"4e084959-cdf4-406e-be11-72b6d3b9dc8c","delay":2.9000000000000004,"actor":"andrea","content":["Those amazing triumphal arches . . .","Quei meravigliosi archi di trionfo . . ."],"next":"dcfb7803-a6c9-4e71-8859-def3ee4fa5d1"},{"type":"dialog","ID":"f856b511-1efb-4c5a-9e37-ffee696ba8e0","delay":1.65,"actor":"federico","content":[". . . I think!",". . . credo!"],"next":"7a84c97c-c4b8-454a-a236-6653f07d07b0"},{"type":"dialog","ID":"64a99e57-a8c8-4a5b-84e2-7457c646aafd","delay":2.8,"actor":"federico","content":["I sleep a lot, this is the secret!","Dormo parecchio, questo e' il segreto!"],"next":"988193bb-48ed-4e06-9034-1aab3d582e5b"},{"type":"dialog","ID":"988193bb-48ed-4e06-9034-1aab3d582e5b","delay":1.85,"actor":"federico","content":["Unfortunately . . .","Purtroppo . . ."],"next":"1009121b-717a-48f7-925f-d134f7c71d3e"},{"type":"dialog","ID":"d2f60361-3ed3-45dd-a7c6-46c79479c605","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["af80d7a9-38c9-44e8-965c-338a7e669bc7","5cdb00a4-31f9-4fb6-b8e1-169bd5f8172f"]},{"type":"dialog","ID":"d3221bee-95e5-47e2-ae8f-de8dc2486ce8","delay":1.9,"actor":"andrea","content":["Are you still working?","Ancora lavori?"],"next":"6ae73137-3fab-4165-a844-5f47fb2d8e87"},{"type":"dialog","ID":"6ae73137-3fab-4165-a844-5f47fb2d8e87","delay":3.15,"actor":"federico","content":["The acciaieria(TM) can't do it without me!","L'acciaieria(TM) non puo' fare a meno di me!"],"next":"dcfb7803-a6c9-4e71-8859-def3ee4fa5d1"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "choice",
+      "ID": "af80d7a9-38c9-44e8-965c-338a7e669bc7",
+      "title": "",
+      "content": [
+        "Are you still working?",
+        "Ancora lavori?"
+      ],
+      "next": "d3221bee-95e5-47e2-ae8f-de8dc2486ce8"
+    },
+    {
+      "type": "choice",
+      "ID": "5cdb00a4-31f9-4fb6-b8e1-169bd5f8172f",
+      "title": "",
+      "content": [
+        "What 'day off' means?",
+        "Cos'e' 'ferie'?"
+      ],
+      "next": "05eeb04f-0392-4143-9a11-bb636906b66a"
+    },
+    {
+      "type": "dialog",
+      "ID": "ff3b40e6-6c23-4f67-8159-80ffde1fcfe0",
+      "delay": 2.125,
+      "actor": "federico",
+      "content": [
+        "I took a day off.",
+        "Ho preso un giorno di ferie."
+      ],
+      "next": "d2f60361-3ed3-45dd-a7c6-46c79479c605"
+    },
+    {
+      "type": "dialog",
+      "ID": "dcfb7803-a6c9-4e71-8859-def3ee4fa5d1",
+      "delay": 3.125,
+      "actor": "andrea",
+      "content": [
+        "In any case I still haven't see a casting!",
+        "Comunque io non ho ancora visto una colata!"
+      ],
+      "next": "ef831067-780e-49b9-9fee-4b8eb8c7608b"
+    },
+    {
+      "type": "dialog",
+      "ID": "ef831067-780e-49b9-9fee-4b8eb8c7608b",
+      "delay": 3.5,
+      "actor": "federico",
+      "content": [
+        "Oh yeah, it's one of the most extraordinary spectacles in nature!",
+        "Ah si, uno spettacolo della natura!"
+      ],
+      "next": "a917393f-85e2-40c3-9d2b-c6f8dfeae4d6"
+    },
+    {
+      "type": "dialog",
+      "ID": "a917393f-85e2-40c3-9d2b-c6f8dfeae4d6",
+      "delay": 3.1750000000000003,
+      "actor": "federico",
+      "content": [
+        "You have to see when we do it during the night!",
+        "Devi vedere quando la facciamo di notte!"
+      ],
+      "next": "2c23a4d2-2f4c-45c8-903a-032d7d6e6735"
+    },
+    {
+      "type": "choice",
+      "ID": "6ed025bd-675d-49f4-a7c5-d4d967d998c4",
+      "title": "",
+      "content": [
+        "Something like the Northen Lights!",
+        "Tipo Aurora Boreale!"
+      ],
+      "next": "7453ca1b-a650-4698-a678-0ae2ad6b1019"
+    },
+    {
+      "type": "dialog",
+      "ID": "7453ca1b-a650-4698-a678-0ae2ad6b1019",
+      "delay": 2.35,
+      "actor": "andrea",
+      "content": [
+        "Something like the Northen Lights!",
+        "Tipo Aurora Boreale!"
+      ],
+      "next": "dd23d57a-d352-4d6b-901d-499698bdaf50"
+    },
+    {
+      "type": "choice",
+      "ID": "fe725d80-8eb8-4a0f-b4ad-05dde145221e",
+      "title": "",
+      "content": [
+        "Are you still work during the night?",
+        "Ancora fai le notti?"
+      ],
+      "next": "9edbda58-854a-4f5c-ac1c-eecf57293fa8"
+    },
+    {
+      "type": "dialog",
+      "ID": "9edbda58-854a-4f5c-ac1c-eecf57293fa8",
+      "delay": 2.4000000000000004,
+      "actor": "andrea",
+      "content": [
+        "Are you still work during the night?",
+        "Ancora fai le notti?"
+      ],
+      "next": "5835bb90-f778-47d4-b412-904e9593360e"
+    },
+    {
+      "type": "dialog",
+      "ID": "5835bb90-f778-47d4-b412-904e9593360e",
+      "delay": 2.6500000000000004,
+      "actor": "federico",
+      "content": [
+        "Of course, I work night and day! ",
+        "Certo, io lavoro notte e giorno! "
+      ],
+      "next": "2433d7c9-27ae-4322-9685-bac1149e0f1c"
+    },
+    {
+      "type": "dialog",
+      "ID": "2433d7c9-27ae-4322-9685-bac1149e0f1c",
+      "delay": 2.975,
+      "actor": "andrea",
+      "content": [
+        "What do you do when you work during the night?",
+        "E che fai quando lavori di notte?"
+      ],
+      "next": "831c0832-28ee-4289-9306-1f92c2c4e32a"
+    },
+    {
+      "type": "dialog",
+      "ID": "9195b99f-a2ce-4635-8463-a6690d227b51",
+      "delay": 3,
+      "actor": "andrea",
+      "content": [
+        "What about the video of those screaming goats?",
+        "E il video delle capre che urlano?"
+      ],
+      "next": "31b56fe9-b381-4780-b8c9-ad5628e2ba91"
+    },
+    {
+      "type": "dialog",
+      "ID": "b1c07cc0-dba5-43e6-afac-c1850e812c18",
+      "delay": 2.1500000000000004,
+      "actor": "federico",
+      "content": [
+        "Do you think I'm 29?",
+        "Ma ti pare che ho 29 anni?"
+      ],
+      "next": "0f4e7e6d-a997-43bc-a65a-18f4d56e3e9f"
+    },
+    {
+      "type": "choice",
+      "ID": "a86092a0-a8ec-4d96-8865-8a001b917787",
+      "title": "",
+      "content": [
+        "What about the video of those screaming goats?",
+        "E il video delle capre che urlano?"
+      ],
+      "next": "9195b99f-a2ce-4635-8463-a6690d227b51"
+    },
+    {
+      "type": "choice",
+      "ID": "0862b65b-e994-433c-ac9d-47d77ec04b76",
+      "title": "",
+      "content": [
+        "Youtube all the night long!",
+        "Youtube tutta la notte!"
+      ],
+      "next": "583e287b-f46a-4464-8ae4-6caf0c1abade"
+    },
+    {
+      "type": "dialog",
+      "ID": "583e287b-f46a-4464-8ae4-6caf0c1abade",
+      "delay": 2.25,
+      "actor": "andrea",
+      "content": [
+        "Youtube all the night long!",
+        "Youtube tutta la notte!"
+      ],
+      "next": "66d2167f-4409-4160-b6fe-0deedf7605b0"
+    },
+    {
+      "type": "dialog",
+      "ID": "1009121b-717a-48f7-925f-d134f7c71d3e",
+      "delay": 3.075,
+      "actor": "federico",
+      "content": [
+        "I need a little help to sleep . . .",
+        "Per dormire ho bisogno di un piccolo aiutino . ."
+      ],
+      "next": "858e888d-99d6-4fc2-a61c-8550d48ebf5f"
+    },
+    {
+      "type": "dialog",
+      "ID": "925818f6-a757-4e5b-bc4f-faea8d6f0709",
+      "delay": 2.3,
+      "actor": "andrea",
+      "content": [
+        "Oh c'mon Fettina, no drugs!",
+        "Dai Fettina, la droga no!"
+      ],
+      "next": "e18a60bd-60c5-4eeb-87b4-6fa656723793"
+    },
+    {
+      "type": "dialog",
+      "ID": "e18a60bd-60c5-4eeb-87b4-6fa656723793",
+      "delay": 3.225,
+      "actor": "federico",
+      "content": [
+        "No, no drugs! It's all natural ingredients . . .",
+        "Ma che droga e' tutta roba naturale . . ."
+      ],
+      "next": "f856b511-1efb-4c5a-9e37-ffee696ba8e0"
+    },
+    {
+      "type": "dialog",
+      "ID": "7a84c97c-c4b8-454a-a236-6653f07d07b0",
+      "delay": 4.6,
+      "actor": "andrea",
+      "content": [
+        "Finding stuff in plant's jar, doesn't necessarily mean natural ingredients!",
+        "Trovare roba nei vasi delle piante, non vuol dire per forza naturale!"
+      ],
+      "next": "37f9c032-50f2-475b-b7ed-614dd4859d0e"
+    },
+    {
+      "type": "dialog",
+      "ID": "a61b2530-ca6b-4149-8c41-f2724bf53f8f",
+      "delay": 2.875,
+      "actor": "federico",
+      "content": [
+        "We do what we can to sleep a bit!",
+        "Si fa quel che si puo' per dormire un po'!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "05eeb04f-0392-4143-9a11-bb636906b66a",
+      "delay": 1.9,
+      "actor": "andrea",
+      "content": [
+        "What 'day off' means?",
+        "Cos'e' 'ferie'?"
+      ],
+      "next": "7c5c7802-b60e-48e7-922f-79365f63d0d1"
+    },
+    {
+      "type": "dialog",
+      "ID": "de8a2df9-1f7c-4b38-bb8e-7a93dee81b1d",
+      "delay": 1.725,
+      "actor": "federico",
+      "content": [
+        "Don't worry!",
+        "Non preoccuparti!"
+      ],
+      "next": "2adaae68-24b0-417e-9020-27e82d35dcd3"
+    },
+    {
+      "type": "dialog",
+      "ID": "2adaae68-24b0-417e-9020-27e82d35dcd3",
+      "delay": 4.15,
+      "actor": "federico",
+      "content": [
+        "As a good graduate, you will discover this word only in few years!",
+        "Da bravo laureato conoscerai quella parola tra qualche anno!"
+      ],
+      "next": "9da4a102-f622-41a3-998f-91bf5d5c0e11"
+    },
+    {
+      "type": "dialog",
+      "ID": "d697d353-6fd6-434f-be43-e577a5fc35b2",
+      "delay": 2.075,
+      "actor": "andrea",
+      "content": [
+        "Graduates' fortune!",
+        "La fortuna dei laureati!"
+      ],
+      "next": "e406856a-a962-4a8e-b1f4-db6e24e9a109"
+    },
+    {
+      "type": "dialog",
+      "ID": "9da4a102-f622-41a3-998f-91bf5d5c0e11",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Bhe . . ."
+      ],
+      "choices": [
+        "136db7b0-73a6-4c93-b0a7-39c59a541199",
+        "0a266989-4c3b-4942-ae02-87be0231ff77"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "136db7b0-73a6-4c93-b0a7-39c59a541199",
+      "title": "",
+      "content": [
+        "Graduates' fortune!",
+        "La fortuna dei laureati!"
+      ],
+      "next": "d697d353-6fd6-434f-be43-e577a5fc35b2"
+    },
+    {
+      "type": "choice",
+      "ID": "0a266989-4c3b-4942-ae02-87be0231ff77",
+      "title": "",
+      "content": [
+        "As if you know about it!",
+        "Come se la conoscessi tu!"
+      ],
+      "next": "c3302654-e0ae-4690-8145-416cd54fa214"
+    },
+    {
+      "type": "dialog",
+      "ID": "c3302654-e0ae-4690-8145-416cd54fa214",
+      "delay": 2.225,
+      "actor": "andrea",
+      "content": [
+        "As if you know about it!",
+        "Come se la conoscessi tu!"
+      ],
+      "next": "5835bb90-f778-47d4-b412-904e9593360e"
+    },
+    {
+      "type": "dialog",
+      "ID": "e406856a-a962-4a8e-b1f4-db6e24e9a109",
+      "delay": 1.775,
+      "actor": "federico",
+      "content": [
+        "A golden 'M'!",
+        "Una 'M' color oro!"
+      ],
+      "next": "4e084959-cdf4-406e-be11-72b6d3b9dc8c"
+    },
+    {
+      "type": "dialog",
+      "ID": "dd23d57a-d352-4d6b-901d-499698bdaf50",
+      "delay": 2.475,
+      "actor": "andrea",
+      "content": [
+        "And you do it also during the day?",
+        "E lo fai anche di giorno?"
+      ],
+      "next": "5835bb90-f778-47d4-b412-904e9593360e"
+    },
+    {
+      "type": "dialog",
+      "ID": "66d2167f-4409-4160-b6fe-0deedf7605b0",
+      "delay": 4,
+      "actor": "andrea",
+      "content": [
+        "Can you sleep during the day, then, after a night shift?",
+        "Ma poi riesci a dormire in pieno giorno, dopo un turno di notte?"
+      ],
+      "next": "1009121b-717a-48f7-925f-d134f7c71d3e"
+    },
+    {
+      "type": "dialog",
+      "ID": "7c5c7802-b60e-48e7-922f-79365f63d0d1",
+      "delay": 2.95,
+      "actor": "federico",
+      "content": [
+        "Is something that you take when you work.",
+        "E' una cosa che prendi quando lavori."
+      ],
+      "next": "e9e6f676-026b-4b5b-b579-cf42acbd0130"
+    },
+    {
+      "type": "dialog",
+      "ID": "e9e6f676-026b-4b5b-b579-cf42acbd0130",
+      "delay": 1.85,
+      "actor": "andrea",
+      "content": [
+        "What 'work' means?",
+        "Cos'e' 'lavoro'?"
+      ],
+      "next": "de8a2df9-1f7c-4b38-bb8e-7a93dee81b1d"
+    },
+    {
+      "type": "dialog",
+      "ID": "0f4e7e6d-a997-43bc-a65a-18f4d56e3e9f",
+      "delay": 2.0250000000000004,
+      "actor": "andrea",
+      "content": [
+        "You look very young!",
+        "Sembri molto giovane!"
+      ],
+      "next": "1cd3453a-f308-4c16-8e98-3a722915cccd"
+    },
+    {
+      "type": "dialog",
+      "ID": "ed6f0bc2-1bba-4b2f-b8ba-5f1469e3c1f2",
+      "delay": 1.55,
+      "actor": "federico",
+      "content": [
+        "Modestly!",
+        "Modestamente!"
+      ],
+      "next": "64a99e57-a8c8-4a5b-84e2-7457c646aafd"
+    },
+    {
+      "type": "dialog",
+      "ID": "37f9c032-50f2-475b-b7ed-614dd4859d0e",
+      "delay": 2.2,
+      "actor": "federico",
+      "content": [
+        "Especially here in Perugia!",
+        "Sopratutto a Perugia!"
+      ],
+      "next": "a61b2530-ca6b-4149-8c41-f2724bf53f8f"
+    },
+    {
+      "type": "dialog",
+      "ID": "2c23a4d2-2f4c-45c8-903a-032d7d6e6735",
+      "delay": 1.4,
+      "actor": "andrea",
+      "content": [
+        "Oh . . .",
+        "Oh . . ."
+      ],
+      "choices": [
+        "fe725d80-8eb8-4a0f-b4ad-05dde145221e",
+        "6ed025bd-675d-49f4-a7c5-d4d967d998c4"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "831c0832-28ee-4289-9306-1f92c2c4e32a",
+      "delay": 1.4,
+      "actor": "federico",
+      "content": [
+        "Youtube!",
+        "Youtube!"
+      ],
+      "next": "e4688ae8-c301-41ec-a7f5-dbc724622b7b"
+    },
+    {
+      "type": "dialog",
+      "ID": "e4688ae8-c301-41ec-a7f5-dbc724622b7b",
+      "delay": 1.625,
+      "actor": "andrea",
+      "content": [
+        "Indeed . . .",
+        "Infatti . . ."
+      ],
+      "choices": [
+        "0862b65b-e994-433c-ac9d-47d77ec04b76",
+        "a86092a0-a8ec-4d96-8865-8a001b917787"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "31b56fe9-b381-4780-b8c9-ad5628e2ba91",
+      "delay": 1.675,
+      "actor": "andrea",
+      "content": [
+        "Did you see it?",
+        "L'hai visto?"
+      ],
+      "next": "b1c07cc0-dba5-43e6-afac-c1850e812c18"
+    },
+    {
+      "type": "dialog",
+      "ID": "858e888d-99d6-4fc2-a61c-8550d48ebf5f",
+      "delay": 1.55,
+      "actor": "andrea",
+      "content": [
+        "Oh no . . .",
+        "Oh no . . ."
+      ],
+      "next": "925818f6-a757-4e5b-bc4f-faea8d6f0709"
+    },
+    {
+      "type": "dialog",
+      "ID": "1cd3453a-f308-4c16-8e98-3a722915cccd",
+      "delay": 3.475,
+      "actor": "andrea",
+      "content": [
+        "This night/day shift doesn't effect your look!",
+        "Questa alternanza giorno/notte non ti fa invecchiare!"
+      ],
+      "next": "ed6f0bc2-1bba-4b2f-b8ba-5f1469e3c1f2"
+    },
+    {
+      "type": "dialog",
+      "ID": "4e084959-cdf4-406e-be11-72b6d3b9dc8c",
+      "delay": 2.9000000000000004,
+      "actor": "andrea",
+      "content": [
+        "Those amazing triumphal arches . . .",
+        "Quei meravigliosi archi di trionfo . . ."
+      ],
+      "next": "dcfb7803-a6c9-4e71-8859-def3ee4fa5d1"
+    },
+    {
+      "type": "dialog",
+      "ID": "f856b511-1efb-4c5a-9e37-ffee696ba8e0",
+      "delay": 1.65,
+      "actor": "federico",
+      "content": [
+        ". . . I think!",
+        ". . . credo!"
+      ],
+      "next": "7a84c97c-c4b8-454a-a236-6653f07d07b0"
+    },
+    {
+      "type": "dialog",
+      "ID": "64a99e57-a8c8-4a5b-84e2-7457c646aafd",
+      "delay": 2.8,
+      "actor": "federico",
+      "content": [
+        "I sleep a lot, this is the secret!",
+        "Dormo parecchio, questo e' il segreto!"
+      ],
+      "next": "988193bb-48ed-4e06-9034-1aab3d582e5b"
+    },
+    {
+      "type": "dialog",
+      "ID": "988193bb-48ed-4e06-9034-1aab3d582e5b",
+      "delay": 1.85,
+      "actor": "federico",
+      "content": [
+        "Unfortunately . . .",
+        "Purtroppo . . ."
+      ],
+      "next": "1009121b-717a-48f7-925f-d134f7c71d3e"
+    },
+    {
+      "type": "dialog",
+      "ID": "d2f60361-3ed3-45dd-a7c6-46c79479c605",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "af80d7a9-38c9-44e8-965c-338a7e669bc7",
+        "5cdb00a4-31f9-4fb6-b8e1-169bd5f8172f"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "d3221bee-95e5-47e2-ae8f-de8dc2486ce8",
+      "delay": 1.9,
+      "actor": "andrea",
+      "content": [
+        "Are you still working?",
+        "Ancora lavori?"
+      ],
+      "next": "6ae73137-3fab-4165-a844-5f47fb2d8e87"
+    },
+    {
+      "type": "dialog",
+      "ID": "6ae73137-3fab-4165-a844-5f47fb2d8e87",
+      "delay": 3.15,
+      "actor": "federico",
+      "content": [
+        "The acciaieria(TM) can't do it without me!",
+        "L'acciaieria(TM) non puo' fare a meno di me!"
+      ],
+      "next": "dcfb7803-a6c9-4e71-8859-def3ee4fa5d1"
+    }
+  ]
+}

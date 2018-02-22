@@ -1,65 +1,244 @@
 {
-	"format":"landscape",
-	"ID":"fortebraccio",
-	"zoom":10,
-	"position_x":0.0,
-	"position_y":0.0,
-	"intro_script":"intro_fortebraccio",
-	"outro_script":"outro_fortebraccio",
-	"tracks":[
-		{"label":"traffic_background", "playable":"fortebraccio_background_noise"},
-    {"label":"birds_background",   "playable":"lupattelli_background_noise"}
-	],
-  "scripts":[
-    {"label":"update",	"script":"update_fortebraccio", "frequency":60}
+  "format": "landscape",
+  "ID": "fortebraccio",
+  "zoom": 10,
+  "position_x": 0.0,
+  "position_y": 0.0,
+  "intro_script": "intro_fortebraccio",
+  "outro_script": "outro_fortebraccio",
+  "tracks": [
+    {
+      "label": "traffic_background",
+      "playable": "fortebraccio_background_noise"
+    },
+    {
+      "label": "birds_background",
+      "playable": "lupattelli_background_noise"
+    }
   ],
-	"floor":[{
-		"position_x":0.0,
-		"position_y":2550.0
-	}],
-	"surfaces":[{
-		"drawable":"fortebraccio_panorama_deep",
-		"layer":0,
-		"speed_ratio_x":0.60
-	},{
-		"drawable":"fortebraccio_panorama",
-		"layer":1,
-		"speed_ratio_x":0.85
-	},{
-		"drawable":"fortebraccio_background",
-		"layer":2,
-		"speed_ratio_x":1,
-		"reference":true
-	},{
-		"drawable":"fortebraccio_foreground",
-		"layer":6,
-		"speed_ratio_x":1
-	},{
-		"drawable":"fortebraccio_lights_layer",
-		"layer":7,
-		"speed_ratio_x":1
-	}],
-	"items":[
-		{"label":"poster_A",		"item":"poster_B",		"status":"still",						"position_x":3150.0,	"position_y":2350.0,	"zoom":1.25,									"active":true,	"script":"message_brains"},
-		{"label":"door_B",			"item":"arrow",				"status":"active_left",			"position_x":940.0,		"position_y":2500.0,	"zoom":1.25,	"solid":true,		"active":true,	"script":"move_fortebraccio_november"},
-		{"label":"door_C",			"item":"arrow",				"status":"active_right",		"position_x":5130.0,	"position_y":2500.0,	"zoom":1.25,	"solid":true,		"active":true,	"script":"move_fortebraccio_garibaldi"},
-		{"label":"door_D",			"item":"arrow",				"status":"active_up",				"position_x":3500.0,	"position_y":2500.0,	"zoom":1.25,	"solid":false,	"active":true,	"script":"move_fortebraccio_gallenga"},
-		{"label":"door_E",			"item":"arrow",				"status":"active_up",				"position_x":1300.0,	"position_y":2500.0,	"zoom":1.25,	"solid":false,	"active":true,	"script":"move_fortebraccio_innamorati"},
-		{"label":"balcony_A",		"item":"balcony",			"status":"still_A",					"position_x":3320.0,	"position_y":1390.0,	"zoom":1.25},
-		{"label":"column_A",		"item":"column",			"status":"still_A",					"position_x":2840.0,	"position_y":2090.0,	"zoom":1.25},
-		{"label":"column_B",		"item":"column",			"status":"still_A",					"position_x":3900.0,	"position_y":2090.0,	"zoom":1.25},
-		{"label":"door_A",			"item":"door",				"status":"still_H",					"position_x":3360.0,	"position_y":2050.0,	"zoom":1.25},
-		{"label":"window_A",		"item":"window",			"status":"outside_D",				"position_x":1840.0,	"position_y":2100.0,	"zoom":1.25},
-		{"label":"window_B",		"item":"window",			"status":"outside_D",				"position_x":2480.0,	"position_y":2100.0,	"zoom":1.25},
-		{"label":"window_C",		"item":"window",			"status":"outside_D",				"position_x":4130.0,	"position_y":2100.0,	"zoom":1.25},
-		{"label":"window_D",		"item":"window",			"status":"outside_D",				"position_x":4760.0,	"position_y":2100.0,	"zoom":1.25},
-		{"label":"window_E",		"item":"window",			"status":"outside_D",				"position_x":1840.0,	"position_y":1060.0,	"zoom":1.25},
-		{"label":"window_G",		"item":"window",			"status":"outside_D",				"position_x":3330.0,	"position_y":1060.0,	"zoom":1.25},
-		{"label":"window_I",		"item":"window",			"status":"outside_D",				"position_x":4760.0,	"position_y":1060.0,	"zoom":1.25},
-		{"label":"window_J",		"item":"window",			"status":"outside_E",				"position_x":5180.0,	"position_y":2020.0,	"zoom":1.25},
-		{"label":"window_K",		"item":"window",			"status":"outside_E",				"position_x":5390.0,	"position_y":1850.0,	"zoom":1.25},
-		{"label":"window_L",		"item":"window",			"status":"outside_E",				"position_x":5180.0,	"position_y":980.0,		"zoom":1.25},
-		{"label":"window_M",		"item":"window",			"status":"outside_E",				"position_x":5390.0,	"position_y":780.0,		"zoom":1.25},
-		{"label":"trash_A",			"item":"trash_can",		"status":"still_B",					"position_x":1480.0,	"position_y":2530.0,	"zoom":1.25}
-	]
+  "scripts": [
+    {
+      "label": "update",
+      "script": "update_fortebraccio",
+      "frequency": 60
+    }
+  ],
+  "floor": [
+    {
+      "position_x": 0.0,
+      "position_y": 2550.0
+    }
+  ],
+  "surfaces": [
+    {
+      "drawable": "fortebraccio_panorama_deep",
+      "layer": 0,
+      "speed_ratio_x": 0.60
+    },
+    {
+      "drawable": "fortebraccio_panorama",
+      "layer": 1,
+      "speed_ratio_x": 0.85
+    },
+    {
+      "drawable": "fortebraccio_background",
+      "layer": 2,
+      "speed_ratio_x": 1,
+      "reference": true
+    },
+    {
+      "drawable": "fortebraccio_foreground",
+      "layer": 6,
+      "speed_ratio_x": 1
+    },
+    {
+      "drawable": "fortebraccio_lights_layer",
+      "layer": 7,
+      "speed_ratio_x": 1
+    }
+  ],
+  "items": [
+    {
+      "label": "poster_A",
+      "item": "poster_B",
+      "status": "still",
+      "position_x": 3150.0,
+      "position_y": 2350.0,
+      "zoom": 1.25,
+      "active": true,
+      "script": "message_brains"
+    },
+    {
+      "label": "door_B",
+      "item": "arrow",
+      "status": "active_left",
+      "position_x": 940.0,
+      "position_y": 2500.0,
+      "zoom": 1.25,
+      "solid": true,
+      "active": true,
+      "script": "move_fortebraccio_november"
+    },
+    {
+      "label": "door_C",
+      "item": "arrow",
+      "status": "active_right",
+      "position_x": 5130.0,
+      "position_y": 2500.0,
+      "zoom": 1.25,
+      "solid": true,
+      "active": true,
+      "script": "move_fortebraccio_garibaldi"
+    },
+    {
+      "label": "door_D",
+      "item": "arrow",
+      "status": "active_up",
+      "position_x": 3500.0,
+      "position_y": 2500.0,
+      "zoom": 1.25,
+      "solid": false,
+      "active": true,
+      "script": "move_fortebraccio_gallenga"
+    },
+    {
+      "label": "door_E",
+      "item": "arrow",
+      "status": "active_up",
+      "position_x": 1300.0,
+      "position_y": 2500.0,
+      "zoom": 1.25,
+      "solid": false,
+      "active": true,
+      "script": "move_fortebraccio_innamorati"
+    },
+    {
+      "label": "balcony_A",
+      "item": "balcony",
+      "status": "still_A",
+      "position_x": 3320.0,
+      "position_y": 1390.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "column_A",
+      "item": "column",
+      "status": "still_A",
+      "position_x": 2840.0,
+      "position_y": 2090.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "column_B",
+      "item": "column",
+      "status": "still_A",
+      "position_x": 3900.0,
+      "position_y": 2090.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "door_A",
+      "item": "door",
+      "status": "still_H",
+      "position_x": 3360.0,
+      "position_y": 2050.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_A",
+      "item": "window",
+      "status": "outside_D",
+      "position_x": 1840.0,
+      "position_y": 2100.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_B",
+      "item": "window",
+      "status": "outside_D",
+      "position_x": 2480.0,
+      "position_y": 2100.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_C",
+      "item": "window",
+      "status": "outside_D",
+      "position_x": 4130.0,
+      "position_y": 2100.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_D",
+      "item": "window",
+      "status": "outside_D",
+      "position_x": 4760.0,
+      "position_y": 2100.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_E",
+      "item": "window",
+      "status": "outside_D",
+      "position_x": 1840.0,
+      "position_y": 1060.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_G",
+      "item": "window",
+      "status": "outside_D",
+      "position_x": 3330.0,
+      "position_y": 1060.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_I",
+      "item": "window",
+      "status": "outside_D",
+      "position_x": 4760.0,
+      "position_y": 1060.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_J",
+      "item": "window",
+      "status": "outside_E",
+      "position_x": 5180.0,
+      "position_y": 2020.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_K",
+      "item": "window",
+      "status": "outside_E",
+      "position_x": 5390.0,
+      "position_y": 1850.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_L",
+      "item": "window",
+      "status": "outside_E",
+      "position_x": 5180.0,
+      "position_y": 980.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_M",
+      "item": "window",
+      "status": "outside_E",
+      "position_x": 5390.0,
+      "position_y": 780.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "trash_A",
+      "item": "trash_can",
+      "status": "still_B",
+      "position_x": 1480.0,
+      "position_y": 2530.0,
+      "zoom": 1.25
+    }
+  ]
 }

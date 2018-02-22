@@ -1,13 +1,15 @@
 {
-	"format":"item",
-	"ID":"printer",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"printer_still_A"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "printer",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "printer_still_A"
+        }
+      ]
+    }
+  ]
 }

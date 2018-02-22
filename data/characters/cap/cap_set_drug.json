@@ -1,10 +1,22 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"cap_set_drug_frame0",  "time":0.1},
-		{"drawable":"cap_set_drug_frame1",  "time":0.1},
-		{"drawable":"cap_set_drug_frame2",  "time":0.1},
-    {"drawable":"cap_set_drug_frame3",  "time":0.1}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "cap_set_drug_frame0",
+      "time": 0.1
+    },
+    {
+      "drawable": "cap_set_drug_frame1",
+      "time": 0.1
+    },
+    {
+      "drawable": "cap_set_drug_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "cap_set_drug_frame3",
+      "time": 0.1
+    }
+  ]
 }

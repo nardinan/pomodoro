@@ -1,1 +1,557 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"88f0c4a3-23e9-4f50-8e2e-bac137190821","delay":1.975,"actor":"antonietta","content":["How can I help you?","Come posso aiutarti?"],"next":"8b120d67-d2fe-425b-ae20-ac11bb320ae6"},{"type":"dialog","ID":"8b120d67-d2fe-425b-ae20-ac11bb320ae6","delay":1.475,"actor":"andrea","content":["Well . . .","Beh . . ."],"choices":["e134d5be-0ac8-4d2c-8c52-43c7e744b843","f5fe0060-e768-46a8-a9e8-eaba384784d6","707391ff-e9f1-4d51-8a29-3ff72650ac53"]},{"type":"choice","ID":"e134d5be-0ac8-4d2c-8c52-43c7e744b843","title":"","content":["Do you  know something I don't?","Sai qualcosa che io non so?"],"next":"29f93102-0f8e-44f1-a1f5-6b95c5d46610"},{"type":"dialog","ID":"29f93102-0f8e-44f1-a1f5-6b95c5d46610","delay":2.425,"actor":"andrea","content":["Do you know something I don't?","Sai qualcosa che io non so?"],"next":"b1fbdba7-540f-4ac2-a6b3-2d429dce49ac"},{"type":"dialog","ID":"b1fbdba7-540f-4ac2-a6b3-2d429dce49ac","delay":1.45,"actor":"antonietta","content":["Uhm . . .","Uhm . . ."],"next":"ab354b09-c43b-426d-a58f-7cf15f328192"},{"type":"dialog","ID":"ab354b09-c43b-426d-a58f-7cf15f328192","delay":2.45,"actor":"antonietta","content":["I know the capital of Austria.","So la capitale dell'Austria."],"next":"6ae53d35-1d96-4e17-b92a-be7c87e0d297"},{"type":"dialog","ID":"d1c49aaa-2bc7-48d3-9ad0-850e2c1f40d5","delay":5.1000000000000005,"actor":"antonietta","content":["I know who killed 'il Profeta', the guy that has been killed in Piazza Quattro Novembre.","So chi ha ammazzato 'Il Profeta', il tipo ucciso in Piazza Quattro Novembre."],"next":"4b944642-11c5-43c6-b912-970f1d4faca6"},{"type":"dialog","ID":"4b944642-11c5-43c6-b912-970f1d4faca6","delay":1.325,"actor":"antonietta","content":["And you?","E tu?"],"next":"275e9923-9da9-4030-b0d1-7678a991b16d"},{"type":"dialog","ID":"6ae53d35-1d96-4e17-b92a-be7c87e0d297","delay":1.325,"actor":"antonietta","content":["And you?","E tu?"],"next":"82b2fd35-a779-45d3-85ba-c3bf46a597c4"},{"type":"dialog","ID":"275e9923-9da9-4030-b0d1-7678a991b16d","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["f14ced53-1b01-4232-8678-2624007607d8","6be377c6-bf4a-4e44-80f5-85ef8708118c","f5fe0060-e768-46a8-a9e8-eaba384784d6"]},{"type":"choice","ID":"f14ced53-1b01-4232-8678-2624007607d8","title":"","content":["Who did it?","Chi e' stato?"],"next":"558b91e4-9f79-4529-b872-bd7112d2311c"},{"type":"choice","ID":"6be377c6-bf4a-4e44-80f5-85ef8708118c","title":"","content":["Who is this guy?","Ma chi e' 'sto profeta?"],"next":"390678cc-e578-4448-870b-3f56655a6783"},{"type":"dialog","ID":"558b91e4-9f79-4529-b872-bd7112d2311c","delay":1.6,"actor":"andrea","content":["Who did it?","Chi e' stato?"],"next":"51e63ebf-9d18-4c57-8a99-d1fcd1d0a97d"},{"type":"dialog","ID":"390678cc-e578-4448-870b-3f56655a6783","delay":1.975,"actor":"andrea","content":["Who is this guy?","Ma chi e' 'sto profeta?"],"next":"efe6d632-0454-4dd0-aeae-63b43a6dd0c7"},{"type":"dialog","ID":"51e63ebf-9d18-4c57-8a99-d1fcd1d0a97d","delay":3.6750000000000003,"actor":"antonietta","content":["The junkie that goes around the city center with his dog.","Il drogato del centro che gira sempre con il cane."],"next":"8116f9c3-cf55-4f99-933d-7dfbe13a4c1a"},{"type":"dialog","ID":"8116f9c3-cf55-4f99-933d-7dfbe13a4c1a","delay":1.15,"actor":"andrea","content":["Ah!","Ah!"],"next":"e2c263d7-9973-4f96-87ca-314919d9ae06"},{"type":"dialog","ID":"e2c263d7-9973-4f96-87ca-314919d9ae06","delay":3.25,"actor":"antonietta","content":["But, apparently it seems not to be drug related.","Ma non sembrerebbe una questione di droga."],"next":"4dd1570a-8026-409c-a6bd-d8a09998fb95"},{"type":"dialog","ID":"a0a92531-6206-468b-b1dd-a9e3a411bf96","delay":2.075,"actor":"andrea","content":["What does the major do?","E il sindaco che fa?"],"next":"7eb2c406-7fc6-444b-a6b1-be9be927ac68"},{"type":"dialog","ID":"7eb2c406-7fc6-444b-a6b1-be9be927ac68","delay":1.9500000000000002,"actor":"antonietta","content":["Nothing, as usual!","Niente, come sempre!"],"next":"39413c9e-c02a-4bb0-9502-cb19a55242d4"},{"type":"dialog","ID":"39413c9e-c02a-4bb0-9502-cb19a55242d4","delay":1.525,"actor":"andrea","content":["As usual!","Come sempre!"],"next":null},{"type":"dialog","ID":"efe6d632-0454-4dd0-aeae-63b43a6dd0c7","delay":3.275,"actor":"antonietta","content":["A guy that was hanging around the city center . . .","Un tipo che girava per il centro . . . ."],"next":"485e38de-56f5-44d2-95b5-0a388bf0b6f3"},{"type":"dialog","ID":"485e38de-56f5-44d2-95b5-0a388bf0b6f3","delay":3.5250000000000004,"actor":"antonietta","content":[". . . complaining about an apocalypse.",". . . lamentando che la fine del mondo sarebbe arrivata presto."],"next":"586cb814-72d4-423e-8ed8-11c442fc912a"},{"type":"dialog","ID":"586cb814-72d4-423e-8ed8-11c442fc912a","delay":1.75,"actor":"andrea","content":["He was trustworthy?","Affidabile?"],"next":"953b6bef-457c-44ec-802e-3f6ec7bbc6a0"},{"type":"choice","ID":"f5fe0060-e768-46a8-a9e8-eaba384784d6","title":"","content":["I have no time.","Non sono sicuro d'aver tempo."],"next":"c70cedaa-b330-4b3e-9bbd-582fc41ce7cb"},{"type":"dialog","ID":"c70cedaa-b330-4b3e-9bbd-582fc41ce7cb","delay":2.1,"actor":"andrea","content":["I have no time.","Non sono sicuro d'aver tempo."],"next":"5374f10f-9b81-4ae6-ae0e-84cdd875c199"},{"type":"dialog","ID":"5374f10f-9b81-4ae6-ae0e-84cdd875c199","delay":1.7000000000000002,"actor":"andrea","content":["Can I leave?","Posso andarmene?"],"next":"5bc60e14-08c9-4a7f-8834-e24efcb43464"},{"type":"dialog","ID":"5bc60e14-08c9-4a7f-8834-e24efcb43464","delay":1.9,"actor":"antonietta","content":["Sure, boor.","Io dovrei fare una pausa!"],"next":null},{"type":"dialog","ID":"f6b6de12-1cf1-4c8c-b96d-2d72bc497d0b","delay":2.45,"actor":"andrea","content":["I am sorry but, how old are you?","Scusa ma, quanti anni hai?"],"next":"da37222d-c743-44df-8419-7128233de50c"},{"type":"dialog","ID":"da37222d-c743-44df-8419-7128233de50c","delay":2.25,"actor":"antonietta","content":["Shut up and listen.","Chiudi la bocca immediatamente."],"next":"e2c5fb14-08ab-4454-86ab-9c5591413bb1"},{"type":"dialog","ID":"e2c5fb14-08ab-4454-86ab-9c5591413bb1","delay":4.75,"actor":"antonietta","content":["I am giving you my phone number because I feel a little lonely lately . . .","Ti do il mio numero di telefono perche' ultimamente mi va un po' male . . ."],"next":"2b672aa2-e214-4eb3-8d44-e21f14e5c6bf"},{"type":"dialog","ID":"2b672aa2-e214-4eb3-8d44-e21f14e5c6bf","delay":3.9000000000000004,"actor":"antonietta","content":[". . . but next time I demand to have a great, great present!",". . . ma la prossima volta esigo un regalo come si deve!"],"next":"2b169cf3-158c-4b18-b55e-99e91b062925"},{"type":"dialog","ID":"2b169cf3-158c-4b18-b55e-99e91b062925","delay":1.85,"actor":"andrea","content":["Sure, sure . . .","Certo, certo . . ."],"next":"f67f3aea-243b-4e9c-b46b-92deaeaa02f3"},{"type":"set","ID":"13edb42b-6fe8-484d-94de-cc231b8735a2","variable":"got_phone","value":1,"next":"b62d4924-2563-4609-a99b-e92d15ab568d"},{"type":"set","ID":"b62d4924-2563-4609-a99b-e92d15ab568d","variable":"done_phone","value":1,"next":"8e1dd330-6821-47ad-a634-21657da5864f"},{"type":"dialog","ID":"f67f3aea-243b-4e9c-b46b-92deaeaa02f3","delay":1.65,"actor":"andrea","content":["Who gives a shit.","Sticazzi."],"next":null},{"type":"set","ID":"956fe0be-3def-4c78-a4b2-06ab070ac5d3","variable":"got_flowers","value":0,"next":"13edb42b-6fe8-484d-94de-cc231b8735a2"},{"type":"dialog","ID":"82b2fd35-a779-45d3-85ba-c3bf46a597c4","delay":1.55,"actor":"andrea","content":["Copenhagen?","Copenhagen?"],"next":"93bfbbdc-2374-4496-9954-1e637118dca5"},{"type":"dialog","ID":"93bfbbdc-2374-4496-9954-1e637118dca5","delay":1.25,"actor":"antonietta","content":[". . .",". . ."],"next":"259c9845-233b-4a3d-9964-d3946b03e8ca"},{"type":"dialog","ID":"259c9845-233b-4a3d-9964-d3946b03e8ca","delay":3.0500000000000003,"actor":"antonietta","content":["So, the answer to my question is 'no'.","La risposta alla mia domanda e' quindi 'no'."],"next":"d1c49aaa-2bc7-48d3-9ad0-850e2c1f40d5"},{"type":"dialog","ID":"953b6bef-457c-44ec-802e-3f6ec7bbc6a0","delay":3.5,"actor":"antonietta","content":["I read on Facebook that he was from the future . . .","Ho letto su Facebook che veniva dal futuro . . ."],"next":"8e274fe5-4d6d-4f51-9974-4d1b4bd6aca9"},{"type":"dialog","ID":"8e274fe5-4d6d-4f51-9974-4d1b4bd6aca9","delay":2.075,"actor":"antonietta","content":[". . . and now is dead!",". . . e ora e' morto!"],"next":"e702e71c-f8ac-40f1-859c-b7c88380e9f8"},{"type":"dialog","ID":"e702e71c-f8ac-40f1-859c-b7c88380e9f8","delay":1.25,"actor":"andrea","content":["So?","Quindi?"],"next":"35a6925b-fce3-4c80-b12a-27a8cba33b86"},{"type":"dialog","ID":"35a6925b-fce3-4c80-b12a-27a8cba33b86","delay":2.325,"actor":"antonietta","content":["So has been assassinated!","Quindi e' stato assassinato!"],"next":"aaf5b864-5dc6-4a17-8d23-5cc8d014bb88"},{"type":"dialog","ID":"aaf5b864-5dc6-4a17-8d23-5cc8d014bb88","delay":1.425,"actor":"andrea","content":["By whom?","E da chi?"],"next":"51e63ebf-9d18-4c57-8a99-d1fcd1d0a97d"},{"type":"dialog","ID":"4dd1570a-8026-409c-a6bd-d8a09998fb95","delay":4.125,"actor":"antonietta","content":["In my humble opinion, somebody payed the junkie to kill him!","Secondo me il drogato e' stato pagato da qualcuno per ammazzarlo!"],"next":"a0a92531-6206-468b-b1dd-a9e3a411bf96"},{"type":"choice","ID":"707391ff-e9f1-4d51-8a29-3ff72650ac53","title":"","content":["Can I have your phone number?","Posso avere il tuo numero di telefono?"],"next":"956fe0be-3def-4c78-a4b2-06ab070ac5d3"},{"type":"dialog","ID":"8e1dd330-6821-47ad-a634-21657da5864f","delay":2.675,"actor":"andrea","content":["Can I have your phone number?","Posso avere il tuo numero di telefono?"],"next":"3470a0f0-7167-4cd3-a019-790cc0f0f834"},{"type":"dialog","ID":"3470a0f0-7167-4cd3-a019-790cc0f0f834","delay":2.1,"actor":"andrea","content":["I brought you a rose!","Ti ho portato una rosa!"],"next":"783c1b2b-3e38-414c-a3c1-ca3daf082af4"},{"type":"dialog","ID":"783c1b2b-3e38-414c-a3c1-ca3daf082af4","delay":2.425,"actor":"antonietta","content":["Did you take a vow of poverty?","Hai fatto voto di poverta'?"],"next":"75e8501d-7c8f-454c-871c-7854a7da6efe"},{"type":"dialog","ID":"75e8501d-7c8f-454c-871c-7854a7da6efe","delay":1.675,"actor":"antonietta","content":["Moreover . . .","Inoltre . . ."],"next":"100c27f0-5f97-4891-965d-7e65d79f62de"},{"type":"dialog","ID":"100c27f0-5f97-4891-965d-7e65d79f62de","delay":3.7,"actor":"antonietta","content":[". . . didn't I tell you that you're too old for me?",". . . non ti ho gia' detto che sei troppo vecchio per me?"],"next":"f6b6de12-1cf1-4c8c-b96d-2d72bc497d0b"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "88f0c4a3-23e9-4f50-8e2e-bac137190821",
+      "delay": 1.975,
+      "actor": "antonietta",
+      "content": [
+        "How can I help you?",
+        "Come posso aiutarti?"
+      ],
+      "next": "8b120d67-d2fe-425b-ae20-ac11bb320ae6"
+    },
+    {
+      "type": "dialog",
+      "ID": "8b120d67-d2fe-425b-ae20-ac11bb320ae6",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Beh . . ."
+      ],
+      "choices": [
+        "e134d5be-0ac8-4d2c-8c52-43c7e744b843",
+        "f5fe0060-e768-46a8-a9e8-eaba384784d6",
+        "707391ff-e9f1-4d51-8a29-3ff72650ac53"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "e134d5be-0ac8-4d2c-8c52-43c7e744b843",
+      "title": "",
+      "content": [
+        "Do you  know something I don't?",
+        "Sai qualcosa che io non so?"
+      ],
+      "next": "29f93102-0f8e-44f1-a1f5-6b95c5d46610"
+    },
+    {
+      "type": "dialog",
+      "ID": "29f93102-0f8e-44f1-a1f5-6b95c5d46610",
+      "delay": 2.425,
+      "actor": "andrea",
+      "content": [
+        "Do you know something I don't?",
+        "Sai qualcosa che io non so?"
+      ],
+      "next": "b1fbdba7-540f-4ac2-a6b3-2d429dce49ac"
+    },
+    {
+      "type": "dialog",
+      "ID": "b1fbdba7-540f-4ac2-a6b3-2d429dce49ac",
+      "delay": 1.45,
+      "actor": "antonietta",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "next": "ab354b09-c43b-426d-a58f-7cf15f328192"
+    },
+    {
+      "type": "dialog",
+      "ID": "ab354b09-c43b-426d-a58f-7cf15f328192",
+      "delay": 2.45,
+      "actor": "antonietta",
+      "content": [
+        "I know the capital of Austria.",
+        "So la capitale dell'Austria."
+      ],
+      "next": "6ae53d35-1d96-4e17-b92a-be7c87e0d297"
+    },
+    {
+      "type": "dialog",
+      "ID": "d1c49aaa-2bc7-48d3-9ad0-850e2c1f40d5",
+      "delay": 5.1000000000000005,
+      "actor": "antonietta",
+      "content": [
+        "I know who killed 'il Profeta', the guy that has been killed in Piazza Quattro Novembre.",
+        "So chi ha ammazzato 'Il Profeta', il tipo ucciso in Piazza Quattro Novembre."
+      ],
+      "next": "4b944642-11c5-43c6-b912-970f1d4faca6"
+    },
+    {
+      "type": "dialog",
+      "ID": "4b944642-11c5-43c6-b912-970f1d4faca6",
+      "delay": 1.325,
+      "actor": "antonietta",
+      "content": [
+        "And you?",
+        "E tu?"
+      ],
+      "next": "275e9923-9da9-4030-b0d1-7678a991b16d"
+    },
+    {
+      "type": "dialog",
+      "ID": "6ae53d35-1d96-4e17-b92a-be7c87e0d297",
+      "delay": 1.325,
+      "actor": "antonietta",
+      "content": [
+        "And you?",
+        "E tu?"
+      ],
+      "next": "82b2fd35-a779-45d3-85ba-c3bf46a597c4"
+    },
+    {
+      "type": "dialog",
+      "ID": "275e9923-9da9-4030-b0d1-7678a991b16d",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "f14ced53-1b01-4232-8678-2624007607d8",
+        "6be377c6-bf4a-4e44-80f5-85ef8708118c",
+        "f5fe0060-e768-46a8-a9e8-eaba384784d6"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "f14ced53-1b01-4232-8678-2624007607d8",
+      "title": "",
+      "content": [
+        "Who did it?",
+        "Chi e' stato?"
+      ],
+      "next": "558b91e4-9f79-4529-b872-bd7112d2311c"
+    },
+    {
+      "type": "choice",
+      "ID": "6be377c6-bf4a-4e44-80f5-85ef8708118c",
+      "title": "",
+      "content": [
+        "Who is this guy?",
+        "Ma chi e' 'sto profeta?"
+      ],
+      "next": "390678cc-e578-4448-870b-3f56655a6783"
+    },
+    {
+      "type": "dialog",
+      "ID": "558b91e4-9f79-4529-b872-bd7112d2311c",
+      "delay": 1.6,
+      "actor": "andrea",
+      "content": [
+        "Who did it?",
+        "Chi e' stato?"
+      ],
+      "next": "51e63ebf-9d18-4c57-8a99-d1fcd1d0a97d"
+    },
+    {
+      "type": "dialog",
+      "ID": "390678cc-e578-4448-870b-3f56655a6783",
+      "delay": 1.975,
+      "actor": "andrea",
+      "content": [
+        "Who is this guy?",
+        "Ma chi e' 'sto profeta?"
+      ],
+      "next": "efe6d632-0454-4dd0-aeae-63b43a6dd0c7"
+    },
+    {
+      "type": "dialog",
+      "ID": "51e63ebf-9d18-4c57-8a99-d1fcd1d0a97d",
+      "delay": 3.6750000000000003,
+      "actor": "antonietta",
+      "content": [
+        "The junkie that goes around the city center with his dog.",
+        "Il drogato del centro che gira sempre con il cane."
+      ],
+      "next": "8116f9c3-cf55-4f99-933d-7dfbe13a4c1a"
+    },
+    {
+      "type": "dialog",
+      "ID": "8116f9c3-cf55-4f99-933d-7dfbe13a4c1a",
+      "delay": 1.15,
+      "actor": "andrea",
+      "content": [
+        "Ah!",
+        "Ah!"
+      ],
+      "next": "e2c263d7-9973-4f96-87ca-314919d9ae06"
+    },
+    {
+      "type": "dialog",
+      "ID": "e2c263d7-9973-4f96-87ca-314919d9ae06",
+      "delay": 3.25,
+      "actor": "antonietta",
+      "content": [
+        "But, apparently it seems not to be drug related.",
+        "Ma non sembrerebbe una questione di droga."
+      ],
+      "next": "4dd1570a-8026-409c-a6bd-d8a09998fb95"
+    },
+    {
+      "type": "dialog",
+      "ID": "a0a92531-6206-468b-b1dd-a9e3a411bf96",
+      "delay": 2.075,
+      "actor": "andrea",
+      "content": [
+        "What does the major do?",
+        "E il sindaco che fa?"
+      ],
+      "next": "7eb2c406-7fc6-444b-a6b1-be9be927ac68"
+    },
+    {
+      "type": "dialog",
+      "ID": "7eb2c406-7fc6-444b-a6b1-be9be927ac68",
+      "delay": 1.9500000000000002,
+      "actor": "antonietta",
+      "content": [
+        "Nothing, as usual!",
+        "Niente, come sempre!"
+      ],
+      "next": "39413c9e-c02a-4bb0-9502-cb19a55242d4"
+    },
+    {
+      "type": "dialog",
+      "ID": "39413c9e-c02a-4bb0-9502-cb19a55242d4",
+      "delay": 1.525,
+      "actor": "andrea",
+      "content": [
+        "As usual!",
+        "Come sempre!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "efe6d632-0454-4dd0-aeae-63b43a6dd0c7",
+      "delay": 3.275,
+      "actor": "antonietta",
+      "content": [
+        "A guy that was hanging around the city center . . .",
+        "Un tipo che girava per il centro . . . ."
+      ],
+      "next": "485e38de-56f5-44d2-95b5-0a388bf0b6f3"
+    },
+    {
+      "type": "dialog",
+      "ID": "485e38de-56f5-44d2-95b5-0a388bf0b6f3",
+      "delay": 3.5250000000000004,
+      "actor": "antonietta",
+      "content": [
+        ". . . complaining about an apocalypse.",
+        ". . . lamentando che la fine del mondo sarebbe arrivata presto."
+      ],
+      "next": "586cb814-72d4-423e-8ed8-11c442fc912a"
+    },
+    {
+      "type": "dialog",
+      "ID": "586cb814-72d4-423e-8ed8-11c442fc912a",
+      "delay": 1.75,
+      "actor": "andrea",
+      "content": [
+        "He was trustworthy?",
+        "Affidabile?"
+      ],
+      "next": "953b6bef-457c-44ec-802e-3f6ec7bbc6a0"
+    },
+    {
+      "type": "choice",
+      "ID": "f5fe0060-e768-46a8-a9e8-eaba384784d6",
+      "title": "",
+      "content": [
+        "I have no time.",
+        "Non sono sicuro d'aver tempo."
+      ],
+      "next": "c70cedaa-b330-4b3e-9bbd-582fc41ce7cb"
+    },
+    {
+      "type": "dialog",
+      "ID": "c70cedaa-b330-4b3e-9bbd-582fc41ce7cb",
+      "delay": 2.1,
+      "actor": "andrea",
+      "content": [
+        "I have no time.",
+        "Non sono sicuro d'aver tempo."
+      ],
+      "next": "5374f10f-9b81-4ae6-ae0e-84cdd875c199"
+    },
+    {
+      "type": "dialog",
+      "ID": "5374f10f-9b81-4ae6-ae0e-84cdd875c199",
+      "delay": 1.7000000000000002,
+      "actor": "andrea",
+      "content": [
+        "Can I leave?",
+        "Posso andarmene?"
+      ],
+      "next": "5bc60e14-08c9-4a7f-8834-e24efcb43464"
+    },
+    {
+      "type": "dialog",
+      "ID": "5bc60e14-08c9-4a7f-8834-e24efcb43464",
+      "delay": 1.9,
+      "actor": "antonietta",
+      "content": [
+        "Sure, boor.",
+        "Io dovrei fare una pausa!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "f6b6de12-1cf1-4c8c-b96d-2d72bc497d0b",
+      "delay": 2.45,
+      "actor": "andrea",
+      "content": [
+        "I am sorry but, how old are you?",
+        "Scusa ma, quanti anni hai?"
+      ],
+      "next": "da37222d-c743-44df-8419-7128233de50c"
+    },
+    {
+      "type": "dialog",
+      "ID": "da37222d-c743-44df-8419-7128233de50c",
+      "delay": 2.25,
+      "actor": "antonietta",
+      "content": [
+        "Shut up and listen.",
+        "Chiudi la bocca immediatamente."
+      ],
+      "next": "e2c5fb14-08ab-4454-86ab-9c5591413bb1"
+    },
+    {
+      "type": "dialog",
+      "ID": "e2c5fb14-08ab-4454-86ab-9c5591413bb1",
+      "delay": 4.75,
+      "actor": "antonietta",
+      "content": [
+        "I am giving you my phone number because I feel a little lonely lately . . .",
+        "Ti do il mio numero di telefono perche' ultimamente mi va un po' male . . ."
+      ],
+      "next": "2b672aa2-e214-4eb3-8d44-e21f14e5c6bf"
+    },
+    {
+      "type": "dialog",
+      "ID": "2b672aa2-e214-4eb3-8d44-e21f14e5c6bf",
+      "delay": 3.9000000000000004,
+      "actor": "antonietta",
+      "content": [
+        ". . . but next time I demand to have a great, great present!",
+        ". . . ma la prossima volta esigo un regalo come si deve!"
+      ],
+      "next": "2b169cf3-158c-4b18-b55e-99e91b062925"
+    },
+    {
+      "type": "dialog",
+      "ID": "2b169cf3-158c-4b18-b55e-99e91b062925",
+      "delay": 1.85,
+      "actor": "andrea",
+      "content": [
+        "Sure, sure . . .",
+        "Certo, certo . . ."
+      ],
+      "next": "f67f3aea-243b-4e9c-b46b-92deaeaa02f3"
+    },
+    {
+      "type": "set",
+      "ID": "13edb42b-6fe8-484d-94de-cc231b8735a2",
+      "variable": "got_phone",
+      "value": 1,
+      "next": "b62d4924-2563-4609-a99b-e92d15ab568d"
+    },
+    {
+      "type": "set",
+      "ID": "b62d4924-2563-4609-a99b-e92d15ab568d",
+      "variable": "done_phone",
+      "value": 1,
+      "next": "8e1dd330-6821-47ad-a634-21657da5864f"
+    },
+    {
+      "type": "dialog",
+      "ID": "f67f3aea-243b-4e9c-b46b-92deaeaa02f3",
+      "delay": 1.65,
+      "actor": "andrea",
+      "content": [
+        "Who gives a shit.",
+        "Sticazzi."
+      ],
+      "next": null
+    },
+    {
+      "type": "set",
+      "ID": "956fe0be-3def-4c78-a4b2-06ab070ac5d3",
+      "variable": "got_flowers",
+      "value": 0,
+      "next": "13edb42b-6fe8-484d-94de-cc231b8735a2"
+    },
+    {
+      "type": "dialog",
+      "ID": "82b2fd35-a779-45d3-85ba-c3bf46a597c4",
+      "delay": 1.55,
+      "actor": "andrea",
+      "content": [
+        "Copenhagen?",
+        "Copenhagen?"
+      ],
+      "next": "93bfbbdc-2374-4496-9954-1e637118dca5"
+    },
+    {
+      "type": "dialog",
+      "ID": "93bfbbdc-2374-4496-9954-1e637118dca5",
+      "delay": 1.25,
+      "actor": "antonietta",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "next": "259c9845-233b-4a3d-9964-d3946b03e8ca"
+    },
+    {
+      "type": "dialog",
+      "ID": "259c9845-233b-4a3d-9964-d3946b03e8ca",
+      "delay": 3.0500000000000003,
+      "actor": "antonietta",
+      "content": [
+        "So, the answer to my question is 'no'.",
+        "La risposta alla mia domanda e' quindi 'no'."
+      ],
+      "next": "d1c49aaa-2bc7-48d3-9ad0-850e2c1f40d5"
+    },
+    {
+      "type": "dialog",
+      "ID": "953b6bef-457c-44ec-802e-3f6ec7bbc6a0",
+      "delay": 3.5,
+      "actor": "antonietta",
+      "content": [
+        "I read on Facebook that he was from the future . . .",
+        "Ho letto su Facebook che veniva dal futuro . . ."
+      ],
+      "next": "8e274fe5-4d6d-4f51-9974-4d1b4bd6aca9"
+    },
+    {
+      "type": "dialog",
+      "ID": "8e274fe5-4d6d-4f51-9974-4d1b4bd6aca9",
+      "delay": 2.075,
+      "actor": "antonietta",
+      "content": [
+        ". . . and now is dead!",
+        ". . . e ora e' morto!"
+      ],
+      "next": "e702e71c-f8ac-40f1-859c-b7c88380e9f8"
+    },
+    {
+      "type": "dialog",
+      "ID": "e702e71c-f8ac-40f1-859c-b7c88380e9f8",
+      "delay": 1.25,
+      "actor": "andrea",
+      "content": [
+        "So?",
+        "Quindi?"
+      ],
+      "next": "35a6925b-fce3-4c80-b12a-27a8cba33b86"
+    },
+    {
+      "type": "dialog",
+      "ID": "35a6925b-fce3-4c80-b12a-27a8cba33b86",
+      "delay": 2.325,
+      "actor": "antonietta",
+      "content": [
+        "So has been assassinated!",
+        "Quindi e' stato assassinato!"
+      ],
+      "next": "aaf5b864-5dc6-4a17-8d23-5cc8d014bb88"
+    },
+    {
+      "type": "dialog",
+      "ID": "aaf5b864-5dc6-4a17-8d23-5cc8d014bb88",
+      "delay": 1.425,
+      "actor": "andrea",
+      "content": [
+        "By whom?",
+        "E da chi?"
+      ],
+      "next": "51e63ebf-9d18-4c57-8a99-d1fcd1d0a97d"
+    },
+    {
+      "type": "dialog",
+      "ID": "4dd1570a-8026-409c-a6bd-d8a09998fb95",
+      "delay": 4.125,
+      "actor": "antonietta",
+      "content": [
+        "In my humble opinion, somebody payed the junkie to kill him!",
+        "Secondo me il drogato e' stato pagato da qualcuno per ammazzarlo!"
+      ],
+      "next": "a0a92531-6206-468b-b1dd-a9e3a411bf96"
+    },
+    {
+      "type": "choice",
+      "ID": "707391ff-e9f1-4d51-8a29-3ff72650ac53",
+      "title": "",
+      "content": [
+        "Can I have your phone number?",
+        "Posso avere il tuo numero di telefono?"
+      ],
+      "next": "956fe0be-3def-4c78-a4b2-06ab070ac5d3"
+    },
+    {
+      "type": "dialog",
+      "ID": "8e1dd330-6821-47ad-a634-21657da5864f",
+      "delay": 2.675,
+      "actor": "andrea",
+      "content": [
+        "Can I have your phone number?",
+        "Posso avere il tuo numero di telefono?"
+      ],
+      "next": "3470a0f0-7167-4cd3-a019-790cc0f0f834"
+    },
+    {
+      "type": "dialog",
+      "ID": "3470a0f0-7167-4cd3-a019-790cc0f0f834",
+      "delay": 2.1,
+      "actor": "andrea",
+      "content": [
+        "I brought you a rose!",
+        "Ti ho portato una rosa!"
+      ],
+      "next": "783c1b2b-3e38-414c-a3c1-ca3daf082af4"
+    },
+    {
+      "type": "dialog",
+      "ID": "783c1b2b-3e38-414c-a3c1-ca3daf082af4",
+      "delay": 2.425,
+      "actor": "antonietta",
+      "content": [
+        "Did you take a vow of poverty?",
+        "Hai fatto voto di poverta'?"
+      ],
+      "next": "75e8501d-7c8f-454c-871c-7854a7da6efe"
+    },
+    {
+      "type": "dialog",
+      "ID": "75e8501d-7c8f-454c-871c-7854a7da6efe",
+      "delay": 1.675,
+      "actor": "antonietta",
+      "content": [
+        "Moreover . . .",
+        "Inoltre . . ."
+      ],
+      "next": "100c27f0-5f97-4891-965d-7e65d79f62de"
+    },
+    {
+      "type": "dialog",
+      "ID": "100c27f0-5f97-4891-965d-7e65d79f62de",
+      "delay": 3.7,
+      "actor": "antonietta",
+      "content": [
+        ". . . didn't I tell you that you're too old for me?",
+        ". . . non ti ho gia' detto che sei troppo vecchio per me?"
+      ],
+      "next": "f6b6de12-1cf1-4c8c-b96d-2d72bc497d0b"
+    }
+  ]
+}

@@ -1,13 +1,15 @@
 {
-	"format":"item",
-	"ID":"painting_A",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still",
-			"layers":[
-				{"drawable":"poster_A_still"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "painting_A",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still",
+      "layers": [
+        {
+          "drawable": "poster_A_still"
+        }
+      ]
+    }
+  ]
 }

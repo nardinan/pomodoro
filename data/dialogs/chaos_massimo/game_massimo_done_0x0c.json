@@ -1,1 +1,369 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"ccb3b1c5-124c-4b7b-8aac-c578e45f30dd","delay":2.175,"actor":"massimo","content":["People are leaving . . .","La gente se ne va . . ."],"next":"80367d0e-221c-445b-b50b-11e371039953"},{"type":"dialog","ID":"80367d0e-221c-445b-b50b-11e371039953","delay":2.475,"actor":"massimo","content":[". . . and we are stuck here.",". . . e noi siamo bloccati qui."],"next":"f2cc57a4-4bcd-41f8-9cd0-1791e40e537d"},{"type":"dialog","ID":"f2cc57a4-4bcd-41f8-9cd0-1791e40e537d","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["f9245c83-166a-430e-8263-35b4b50ebcda","bd59c98b-7ada-4a21-9dc4-b93b459029f5","1f639ec2-8348-4d8b-a17e-e91395b2f863"]},{"type":"choice","ID":"f9245c83-166a-430e-8263-35b4b50ebcda","title":"","content":["Where the computer was?","Dov'era il computer poi?"],"next":"549935c0-b09e-4ad7-97c7-ae945e94aacd"},{"type":"dialog","ID":"549935c0-b09e-4ad7-97c7-ae945e94aacd","delay":2.175,"actor":"andrea","content":["Where the computer was?","Dov'era il computer poi?"],"next":"e3998ac9-92ec-4aa9-886a-0cf42545c819"},{"type":"dialog","ID":"e3998ac9-92ec-4aa9-886a-0cf42545c819","delay":3.575,"actor":"massimo","content":["SIRI told you that is at Elfo Pub in Via Dei Priori.","SIRI ha detto che e' al Pub Elfo di via dei Priori."],"next":"f2c5ce70-489e-4eb4-a4dc-25cbc05cd7f2"},{"type":"dialog","ID":"f2c5ce70-489e-4eb4-a4dc-25cbc05cd7f2","delay":2.6500000000000004,"actor":"massimo","content":["You might want to write that down.","Forse e' meglio se te lo scrivi."],"next":"9f4fc735-758f-4755-8584-027003c21133"},{"type":"choice","ID":"bd59c98b-7ada-4a21-9dc4-b93b459029f5","title":"","content":["Where you want to go?","Dove vorresti andare, di grazia?"],"next":"35b23e9e-17dd-4821-ae08-2e89f70b9ce4"},{"type":"dialog","ID":"35b23e9e-17dd-4821-ae08-2e89f70b9ce4","delay":2.325,"actor":"andrea","content":["Where you want to go?","Dove vorresti andare, di grazia?"],"next":"f7bcb0f4-4347-4cb0-9e6d-2e46dcb4f02c"},{"type":"dialog","ID":"f7bcb0f4-4347-4cb0-9e6d-2e46dcb4f02c","delay":3.075,"actor":"massimo","content":["I want to go somewhere else before get infect.","Via di qua, prima d'essere infettato."],"next":"aecb6549-fb38-4d40-9f11-d50f4d4eb215"},{"type":"dialog","ID":"aecb6549-fb38-4d40-9f11-d50f4d4eb215","delay":1.325,"actor":"andrea","content":["But?","E invece?"],"next":"6b8a9af8-c0e0-433c-a798-020137b7bb55"},{"type":"dialog","ID":"6b8a9af8-c0e0-433c-a798-020137b7bb55","delay":2.8,"actor":"massimo","content":["But the city is under quarantine.","E invece la citta' e' sotto quarantena."],"next":"e811a4d9-d41e-4fc3-a81e-ef919220f09a"},{"type":"dialog","ID":"e811a4d9-d41e-4fc3-a81e-ef919220f09a","delay":2.7,"actor":"massimo","content":["No one can enter or leave.","Nessuno puo' uscire, nessuno puo' entrare."],"next":"b3758115-904d-4b4e-a2f3-62a766627ac3"},{"type":"dialog","ID":"b3758115-904d-4b4e-a2f3-62a766627ac3","delay":2.7,"actor":"andrea","content":["So you should go somewhere else!","E allora sara' il caso di andarsene!"],"next":"6b1cc06c-6952-4221-ac11-d63fff1378c1"},{"type":"dialog","ID":"6b1cc06c-6952-4221-ac11-d63fff1378c1","delay":1.25,"actor":"massimo","content":[". . .",". . ."],"next":"207c9f90-0231-47d0-ba6a-54b7e1171548"},{"type":"dialog","ID":"207c9f90-0231-47d0-ba6a-54b7e1171548","delay":2.3,"actor":"massimo","content":["Sorry but, what do you mean?","Scusa ma cosa vuol dire?"],"next":"f31b82ed-fd45-4db6-a5bc-93943e602af5"},{"type":"dialog","ID":"f31b82ed-fd45-4db6-a5bc-93943e602af5","delay":1.9500000000000002,"actor":"andrea","content":["I beg your pardon?","Cosa vuol dire cosa?"],"next":"fd7fdf97-16b7-4b08-b874-e0ec0b00cea1"},{"type":"dialog","ID":"fd7fdf97-16b7-4b08-b874-e0ec0b00cea1","delay":1.675,"actor":"massimo","content":["I mean . . .","Nel senso . . ."],"next":"f03a31e7-e6db-4e4c-b379-774be6360ea8"},{"type":"dialog","ID":"f03a31e7-e6db-4e4c-b379-774be6360ea8","delay":3.15,"actor":"massimo","content":[". . . how can I leave if nobody can leave?",". . . come te ne vai se nessuno puo' uscire?"],"next":"ec2ad6ae-c205-4f81-a524-d9ffb26e1214"},{"type":"dialog","ID":"ec2ad6ae-c205-4f81-a524-d9ffb26e1214","delay":2.6,"actor":"andrea","content":["So we should call police!","E allora tocchera' chiamare la polizia."],"next":"b36d9fb1-72c2-499f-902a-5d0ea76b812c"},{"type":"dialog","ID":"b36d9fb1-72c2-499f-902a-5d0ea76b812c","delay":1.25,"actor":"massimo","content":[". . .",". . ."],"next":"ac947e13-bbb2-4058-bd1b-ffdcacdd420d"},{"type":"dialog","ID":"ac947e13-bbb2-4058-bd1b-ffdcacdd420d","delay":1.8,"actor":"massimo","content":["Are you retarded?","Sei deficiente?"],"next":"b97a8172-01d9-47ae-8b2a-83f26dd14f0b"},{"type":"dialog","ID":"b97a8172-01d9-47ae-8b2a-83f26dd14f0b","delay":3.325,"actor":"massimo","content":["The police puts the city under quarantine!","E' la polizia che ha messo la citta' in quarantena!"],"next":"087d73e4-161b-4976-b5b7-f7387f0e5a63"},{"type":"dialog","ID":"087d73e4-161b-4976-b5b7-f7387f0e5a63","delay":1.4,"actor":"andrea","content":["I see.","Ho capito."],"next":"e1858f96-ea31-4e6f-acb7-464252921826"},{"type":"dialog","ID":"e1858f96-ea31-4e6f-acb7-464252921826","delay":1.3,"actor":"massimo","content":["Sure?","Sicuro?"],"next":"59031571-af1d-4316-81bf-665a46d1e57b"},{"type":"dialog","ID":"59031571-af1d-4316-81bf-665a46d1e57b","delay":1.3,"actor":"andrea","content":["Maybe.","Forse."],"next":null},{"type":"dialog","ID":"9f4fc735-758f-4755-8584-027003c21133","delay":1.45,"actor":"andrea","content":["Nah . . .","Nah . . ."],"next":"81cabcd8-1bf7-4d9d-8508-af489ebaadf3"},{"type":"choice","ID":"1f639ec2-8348-4d8b-a17e-e91395b2f863","title":"","content":["Thanks, bye.","Grazie, ciao."],"next":"5e1fbb2f-6742-4095-b138-aec9425a93c0"},{"type":"dialog","ID":"81cabcd8-1bf7-4d9d-8508-af489ebaadf3","delay":2.6500000000000004,"actor":"andrea","content":["I have an amazing memory, Pietro!","Ho una memoria d'acciaio, Pietro!"],"next":"acd06cf7-aa7f-4951-87a1-43e6c0fe0726"},{"type":"dialog","ID":"5e1fbb2f-6742-4095-b138-aec9425a93c0","delay":1.625,"actor":"andrea","content":["Thanks, bye.","Grazie, ciao."],"next":"30f259be-5271-4f7c-80bf-1fc03fe98ded"},{"type":"dialog","ID":"30f259be-5271-4f7c-80bf-1fc03fe98ded","delay":1.8250000000000002,"actor":"massimo","content":["You are welcome, bye.","Prego, ciao."],"next":null},{"type":"dialog","ID":"acd06cf7-aa7f-4951-87a1-43e6c0fe0726","delay":1.925,"actor":"massimo","content":["My name is Massimo.","Mi chiamo Massimo."],"next":"b7d14055-d1cc-4682-a98d-cd2a8cf5d22d"},{"type":"dialog","ID":"b7d14055-d1cc-4682-a98d-cd2a8cf5d22d","delay":1.375,"actor":"andrea","content":["Correct.","Esatto."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "ccb3b1c5-124c-4b7b-8aac-c578e45f30dd",
+      "delay": 2.175,
+      "actor": "massimo",
+      "content": [
+        "People are leaving . . .",
+        "La gente se ne va . . ."
+      ],
+      "next": "80367d0e-221c-445b-b50b-11e371039953"
+    },
+    {
+      "type": "dialog",
+      "ID": "80367d0e-221c-445b-b50b-11e371039953",
+      "delay": 2.475,
+      "actor": "massimo",
+      "content": [
+        ". . . and we are stuck here.",
+        ". . . e noi siamo bloccati qui."
+      ],
+      "next": "f2cc57a4-4bcd-41f8-9cd0-1791e40e537d"
+    },
+    {
+      "type": "dialog",
+      "ID": "f2cc57a4-4bcd-41f8-9cd0-1791e40e537d",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "f9245c83-166a-430e-8263-35b4b50ebcda",
+        "bd59c98b-7ada-4a21-9dc4-b93b459029f5",
+        "1f639ec2-8348-4d8b-a17e-e91395b2f863"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "f9245c83-166a-430e-8263-35b4b50ebcda",
+      "title": "",
+      "content": [
+        "Where the computer was?",
+        "Dov'era il computer poi?"
+      ],
+      "next": "549935c0-b09e-4ad7-97c7-ae945e94aacd"
+    },
+    {
+      "type": "dialog",
+      "ID": "549935c0-b09e-4ad7-97c7-ae945e94aacd",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "Where the computer was?",
+        "Dov'era il computer poi?"
+      ],
+      "next": "e3998ac9-92ec-4aa9-886a-0cf42545c819"
+    },
+    {
+      "type": "dialog",
+      "ID": "e3998ac9-92ec-4aa9-886a-0cf42545c819",
+      "delay": 3.575,
+      "actor": "massimo",
+      "content": [
+        "SIRI told you that is at Elfo Pub in Via Dei Priori.",
+        "SIRI ha detto che e' al Pub Elfo di via dei Priori."
+      ],
+      "next": "f2c5ce70-489e-4eb4-a4dc-25cbc05cd7f2"
+    },
+    {
+      "type": "dialog",
+      "ID": "f2c5ce70-489e-4eb4-a4dc-25cbc05cd7f2",
+      "delay": 2.6500000000000004,
+      "actor": "massimo",
+      "content": [
+        "You might want to write that down.",
+        "Forse e' meglio se te lo scrivi."
+      ],
+      "next": "9f4fc735-758f-4755-8584-027003c21133"
+    },
+    {
+      "type": "choice",
+      "ID": "bd59c98b-7ada-4a21-9dc4-b93b459029f5",
+      "title": "",
+      "content": [
+        "Where you want to go?",
+        "Dove vorresti andare, di grazia?"
+      ],
+      "next": "35b23e9e-17dd-4821-ae08-2e89f70b9ce4"
+    },
+    {
+      "type": "dialog",
+      "ID": "35b23e9e-17dd-4821-ae08-2e89f70b9ce4",
+      "delay": 2.325,
+      "actor": "andrea",
+      "content": [
+        "Where you want to go?",
+        "Dove vorresti andare, di grazia?"
+      ],
+      "next": "f7bcb0f4-4347-4cb0-9e6d-2e46dcb4f02c"
+    },
+    {
+      "type": "dialog",
+      "ID": "f7bcb0f4-4347-4cb0-9e6d-2e46dcb4f02c",
+      "delay": 3.075,
+      "actor": "massimo",
+      "content": [
+        "I want to go somewhere else before get infect.",
+        "Via di qua, prima d'essere infettato."
+      ],
+      "next": "aecb6549-fb38-4d40-9f11-d50f4d4eb215"
+    },
+    {
+      "type": "dialog",
+      "ID": "aecb6549-fb38-4d40-9f11-d50f4d4eb215",
+      "delay": 1.325,
+      "actor": "andrea",
+      "content": [
+        "But?",
+        "E invece?"
+      ],
+      "next": "6b8a9af8-c0e0-433c-a798-020137b7bb55"
+    },
+    {
+      "type": "dialog",
+      "ID": "6b8a9af8-c0e0-433c-a798-020137b7bb55",
+      "delay": 2.8,
+      "actor": "massimo",
+      "content": [
+        "But the city is under quarantine.",
+        "E invece la citta' e' sotto quarantena."
+      ],
+      "next": "e811a4d9-d41e-4fc3-a81e-ef919220f09a"
+    },
+    {
+      "type": "dialog",
+      "ID": "e811a4d9-d41e-4fc3-a81e-ef919220f09a",
+      "delay": 2.7,
+      "actor": "massimo",
+      "content": [
+        "No one can enter or leave.",
+        "Nessuno puo' uscire, nessuno puo' entrare."
+      ],
+      "next": "b3758115-904d-4b4e-a2f3-62a766627ac3"
+    },
+    {
+      "type": "dialog",
+      "ID": "b3758115-904d-4b4e-a2f3-62a766627ac3",
+      "delay": 2.7,
+      "actor": "andrea",
+      "content": [
+        "So you should go somewhere else!",
+        "E allora sara' il caso di andarsene!"
+      ],
+      "next": "6b1cc06c-6952-4221-ac11-d63fff1378c1"
+    },
+    {
+      "type": "dialog",
+      "ID": "6b1cc06c-6952-4221-ac11-d63fff1378c1",
+      "delay": 1.25,
+      "actor": "massimo",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "next": "207c9f90-0231-47d0-ba6a-54b7e1171548"
+    },
+    {
+      "type": "dialog",
+      "ID": "207c9f90-0231-47d0-ba6a-54b7e1171548",
+      "delay": 2.3,
+      "actor": "massimo",
+      "content": [
+        "Sorry but, what do you mean?",
+        "Scusa ma cosa vuol dire?"
+      ],
+      "next": "f31b82ed-fd45-4db6-a5bc-93943e602af5"
+    },
+    {
+      "type": "dialog",
+      "ID": "f31b82ed-fd45-4db6-a5bc-93943e602af5",
+      "delay": 1.9500000000000002,
+      "actor": "andrea",
+      "content": [
+        "I beg your pardon?",
+        "Cosa vuol dire cosa?"
+      ],
+      "next": "fd7fdf97-16b7-4b08-b874-e0ec0b00cea1"
+    },
+    {
+      "type": "dialog",
+      "ID": "fd7fdf97-16b7-4b08-b874-e0ec0b00cea1",
+      "delay": 1.675,
+      "actor": "massimo",
+      "content": [
+        "I mean . . .",
+        "Nel senso . . ."
+      ],
+      "next": "f03a31e7-e6db-4e4c-b379-774be6360ea8"
+    },
+    {
+      "type": "dialog",
+      "ID": "f03a31e7-e6db-4e4c-b379-774be6360ea8",
+      "delay": 3.15,
+      "actor": "massimo",
+      "content": [
+        ". . . how can I leave if nobody can leave?",
+        ". . . come te ne vai se nessuno puo' uscire?"
+      ],
+      "next": "ec2ad6ae-c205-4f81-a524-d9ffb26e1214"
+    },
+    {
+      "type": "dialog",
+      "ID": "ec2ad6ae-c205-4f81-a524-d9ffb26e1214",
+      "delay": 2.6,
+      "actor": "andrea",
+      "content": [
+        "So we should call police!",
+        "E allora tocchera' chiamare la polizia."
+      ],
+      "next": "b36d9fb1-72c2-499f-902a-5d0ea76b812c"
+    },
+    {
+      "type": "dialog",
+      "ID": "b36d9fb1-72c2-499f-902a-5d0ea76b812c",
+      "delay": 1.25,
+      "actor": "massimo",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "next": "ac947e13-bbb2-4058-bd1b-ffdcacdd420d"
+    },
+    {
+      "type": "dialog",
+      "ID": "ac947e13-bbb2-4058-bd1b-ffdcacdd420d",
+      "delay": 1.8,
+      "actor": "massimo",
+      "content": [
+        "Are you retarded?",
+        "Sei deficiente?"
+      ],
+      "next": "b97a8172-01d9-47ae-8b2a-83f26dd14f0b"
+    },
+    {
+      "type": "dialog",
+      "ID": "b97a8172-01d9-47ae-8b2a-83f26dd14f0b",
+      "delay": 3.325,
+      "actor": "massimo",
+      "content": [
+        "The police puts the city under quarantine!",
+        "E' la polizia che ha messo la citta' in quarantena!"
+      ],
+      "next": "087d73e4-161b-4976-b5b7-f7387f0e5a63"
+    },
+    {
+      "type": "dialog",
+      "ID": "087d73e4-161b-4976-b5b7-f7387f0e5a63",
+      "delay": 1.4,
+      "actor": "andrea",
+      "content": [
+        "I see.",
+        "Ho capito."
+      ],
+      "next": "e1858f96-ea31-4e6f-acb7-464252921826"
+    },
+    {
+      "type": "dialog",
+      "ID": "e1858f96-ea31-4e6f-acb7-464252921826",
+      "delay": 1.3,
+      "actor": "massimo",
+      "content": [
+        "Sure?",
+        "Sicuro?"
+      ],
+      "next": "59031571-af1d-4316-81bf-665a46d1e57b"
+    },
+    {
+      "type": "dialog",
+      "ID": "59031571-af1d-4316-81bf-665a46d1e57b",
+      "delay": 1.3,
+      "actor": "andrea",
+      "content": [
+        "Maybe.",
+        "Forse."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "9f4fc735-758f-4755-8584-027003c21133",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Nah . . .",
+        "Nah . . ."
+      ],
+      "next": "81cabcd8-1bf7-4d9d-8508-af489ebaadf3"
+    },
+    {
+      "type": "choice",
+      "ID": "1f639ec2-8348-4d8b-a17e-e91395b2f863",
+      "title": "",
+      "content": [
+        "Thanks, bye.",
+        "Grazie, ciao."
+      ],
+      "next": "5e1fbb2f-6742-4095-b138-aec9425a93c0"
+    },
+    {
+      "type": "dialog",
+      "ID": "81cabcd8-1bf7-4d9d-8508-af489ebaadf3",
+      "delay": 2.6500000000000004,
+      "actor": "andrea",
+      "content": [
+        "I have an amazing memory, Pietro!",
+        "Ho una memoria d'acciaio, Pietro!"
+      ],
+      "next": "acd06cf7-aa7f-4951-87a1-43e6c0fe0726"
+    },
+    {
+      "type": "dialog",
+      "ID": "5e1fbb2f-6742-4095-b138-aec9425a93c0",
+      "delay": 1.625,
+      "actor": "andrea",
+      "content": [
+        "Thanks, bye.",
+        "Grazie, ciao."
+      ],
+      "next": "30f259be-5271-4f7c-80bf-1fc03fe98ded"
+    },
+    {
+      "type": "dialog",
+      "ID": "30f259be-5271-4f7c-80bf-1fc03fe98ded",
+      "delay": 1.8250000000000002,
+      "actor": "massimo",
+      "content": [
+        "You are welcome, bye.",
+        "Prego, ciao."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "acd06cf7-aa7f-4951-87a1-43e6c0fe0726",
+      "delay": 1.925,
+      "actor": "massimo",
+      "content": [
+        "My name is Massimo.",
+        "Mi chiamo Massimo."
+      ],
+      "next": "b7d14055-d1cc-4682-a98d-cd2a8cf5d22d"
+    },
+    {
+      "type": "dialog",
+      "ID": "b7d14055-d1cc-4682-a98d-cd2a8cf5d22d",
+      "delay": 1.375,
+      "actor": "andrea",
+      "content": [
+        "Correct.",
+        "Esatto."
+      ],
+      "next": null
+    }
+  ]
+}

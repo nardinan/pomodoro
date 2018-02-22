@@ -1,1 +1,385 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"13bd6a8c-848c-4053-ad72-9b8d036e9fc0","delay":1.75,"actor":"ticket_inspector","content":["What do you need?","Che ti serve?"],"next":"b7589301-7df2-445e-a6dd-78bf6c3be676"},{"type":"dialog","ID":"b7589301-7df2-445e-a6dd-78bf6c3be676","delay":1.475,"actor":"andrea","content":["Well . . .","Beh . . ."],"choices":["0620f0db-c493-439a-83b0-8cad645d5b3b","50f5b0d4-e502-455b-8dd8-a8c9eaff408b","d761ed89-1d80-439b-b992-f1fcbae24bce"]},{"type":"choice","ID":"0620f0db-c493-439a-83b0-8cad645d5b3b","title":"","content":["Can I have your tie?","Posso avere la tua cravatta?"],"next":"f62d8e50-bde9-49dc-b982-50e8915d2931"},{"type":"dialog","ID":"2a0f9abd-0a0f-4916-a978-07cf584c4265","delay":2.2,"actor":"andrea","content":["Can I have your tie?","Posso avere la tua cravatta?"],"next":"60bea1b4-7e23-49e5-90a1-110e6dec5d42"},{"type":"choice","ID":"50f5b0d4-e502-455b-8dd8-a8c9eaff408b","title":"","content":["What's this about junkies?","Cos'e' questa storia dei drogati?"],"next":"e77a1bf7-7225-48ad-afb3-90483f60596d"},{"type":"dialog","ID":"e77a1bf7-7225-48ad-afb3-90483f60596d","delay":2.475,"actor":"andrea","content":["What's this about junkies?","Cos'e' questa storia dei drogati?"],"next":"105c248d-1324-4dcf-b529-11e8fe131ea1"},{"type":"dialog","ID":"105c248d-1324-4dcf-b529-11e8fe131ea1","delay":2.425,"actor":"ticket_inspector","content":["They are a big problem.","Sono diventati un grosso problema."],"next":"450e546c-cfcd-4b31-b8dc-b1ad0a730312"},{"type":"dialog","ID":"450e546c-cfcd-4b31-b8dc-b1ad0a730312","delay":1.55,"actor":"andrea","content":["How big?","Grosso quanto?"],"next":"661ebbcc-d1f1-4d8c-9074-8c78397ff7c1"},{"type":"dialog","ID":"661ebbcc-d1f1-4d8c-9074-8c78397ff7c1","delay":1.9,"actor":"ticket_inspector","content":["Very big . . .","Grosso un bel po'. . ."],"next":"629c9df9-23cc-496e-8ba1-8129aafa4b85"},{"type":"dialog","ID":"10202500-0155-4d13-b99f-01b18534a8f0","delay":3.7750000000000004,"actor":"ticket_inspector","content":["As big as they kill people in the city center like this!","Grosso del tipo che ammazzano la gente in pieno centro!"],"next":"87e6e870-028a-4243-a0ff-955f7bc028ad"},{"type":"dialog","ID":"87e6e870-028a-4243-a0ff-955f7bc028ad","delay":1.425,"actor":"andrea","content":["But . . .","Ma . . ."],"choices":["d51098a9-f37e-4ac3-9970-045e33dcdfc7","587af2fe-4210-47d1-a998-fb4fb8de73db","d761ed89-1d80-439b-b992-f1fcbae24bce"]},{"type":"choice","ID":"d51098a9-f37e-4ac3-9970-045e33dcdfc7","title":"","content":["What do you know about the murder?","Cosa ne sai dell'omicidio?"],"next":"941e2aa2-2e83-4aea-8c49-19e99575aa9b"},{"type":"choice","ID":"587af2fe-4210-47d1-a998-fb4fb8de73db","title":"","content":["Aren't you overreacting?","Non starai esagerando?"],"next":"76b9a812-aa64-4c28-9675-c62a0713f033"},{"type":"dialog","ID":"941e2aa2-2e83-4aea-8c49-19e99575aa9b","delay":2.5,"actor":"andrea","content":["What do you know about the murder?","Cosa ne sai dell'omicidio?"],"next":"58e475c8-330e-4399-bb70-aad055ecee42"},{"type":"dialog","ID":"76b9a812-aa64-4c28-9675-c62a0713f033","delay":2.1500000000000004,"actor":"andrea","content":["Aren't you overreacting?","Non starai esagerando?"],"next":"3ac2deaf-fde2-4dfe-a995-ddee6cebc198"},{"type":"choice","ID":"d761ed89-1d80-439b-b992-f1fcbae24bce","title":"","content":["I'm slightly busy.","Ho un po' da fare."],"next":"6275d1f9-a486-4c0e-8e4d-cafadb11c1d5"},{"type":"dialog","ID":"6275d1f9-a486-4c0e-8e4d-cafadb11c1d5","delay":1.9,"actor":"andrea","content":["I'm slightly busy.","Ho un po' da fare."],"next":"960e3fb7-277c-4887-988f-4b28af15865c"},{"type":"dialog","ID":"960e3fb7-277c-4887-988f-4b28af15865c","delay":2.1,"actor":"ticket_inspector","content":["I doubt it but, OK. Bye. ","Ne dubito, ma ciao."],"next":null},{"type":"dialog","ID":"3ac2deaf-fde2-4dfe-a995-ddee6cebc198","delay":1.875,"actor":"ticket_inspector","content":["I don't think so.","Non credo proprio."],"next":"ba7353f2-f219-4436-acaf-32cc93d09658"},{"type":"dialog","ID":"58e475c8-330e-4399-bb70-aad055ecee42","delay":4.825,"actor":"ticket_inspector","content":["I read on internet that the guy has been killed by a junkie in the city center.","Si dice che il poveretto sia stato ucciso, in pieno centro, da un drogato."],"next":"c2ce18bf-2746-4f6c-8387-273e379cab6f"},{"type":"dialog","ID":"c2ce18bf-2746-4f6c-8387-273e379cab6f","delay":2.1,"actor":"ticket_inspector","content":["A roberry gone wrong.","Una rapina finita male!"],"next":"89d938c1-b1d5-493c-9659-fcf57864c832"},{"type":"dialog","ID":"89d938c1-b1d5-493c-9659-fcf57864c832","delay":3.2,"actor":"ticket_inspector","content":["Now I protect my bus from junkies, like you.","Ora proteggo il mio bus da drogati, come te."],"next":"7dfd3721-11c5-4d46-95c3-96663693c015"},{"type":"dialog","ID":"7dfd3721-11c5-4d46-95c3-96663693c015","delay":1.925,"actor":"andrea","content":["What a nice person!","Che brava persona!"],"next":"0b5f4ff4-6acf-4a9e-9390-b250798d82d1"},{"type":"dialog","ID":"ba7353f2-f219-4436-acaf-32cc93d09658","delay":2.7,"actor":"ticket_inspector","content":["The city is full of junkies . . .","La citta' e' piena di drogati . . ."],"next":"37146342-a053-4247-ba44-d635790cdb07"},{"type":"dialog","ID":"37146342-a053-4247-ba44-d635790cdb07","delay":2.425,"actor":"ticket_inspector","content":[". . . and nobody does anything!",". . . e nessuno fa niente!"],"next":"dd288f55-5f36-4356-af30-176ef956b874"},{"type":"dialog","ID":"dd288f55-5f36-4356-af30-176ef956b874","delay":2.85,"actor":"ticket_inspector","content":["Now I kick junkies in their asses!","Ora i drogati li prendo a calci nel culo"],"next":"7dfd3721-11c5-4d46-95c3-96663693c015"},{"type":"dialog","ID":"0b5f4ff4-6acf-4a9e-9390-b250798d82d1","delay":1.8250000000000002,"actor":"andrea","content":["So well dressed!","E cosi' elegante!"],"next":null},{"type":"set","ID":"f62d8e50-bde9-49dc-b982-50e8915d2931","variable":"request_disk","value":1,"next":"aefe31f0-6548-45d4-a4a3-8021e6d9ed85"},{"type":"dialog","ID":"629c9df9-23cc-496e-8ba1-8129aafa4b85","delay":1.525,"actor":"andrea","content":["Like this?","Tipo cosi'?"],"next":"6443514e-7830-4a27-8dd4-8502128bb720"},{"type":"set","ID":"aefe31f0-6548-45d4-a4a3-8021e6d9ed85","variable":"request_movie","value":1,"next":"2a0f9abd-0a0f-4916-a978-07cf584c4265"},{"type":"dialog","ID":"6443514e-7830-4a27-8dd4-8502128bb720","delay":1.4,"actor":"ticket_inspector","content":["This?","Cosi' come?"],"next":"27491564-57a5-4e56-b21b-72f81986cdb2"},{"type":"dialog","ID":"27491564-57a5-4e56-b21b-72f81986cdb2","delay":1.275,"actor":"andrea","content":["This.","Cosi'."],"next":"749627c6-8da4-4cdf-a4e9-565ea7d92c7c"},{"type":"dialog","ID":"749627c6-8da4-4cdf-a4e9-565ea7d92c7c","delay":1.25,"actor":"ticket_inspector","content":[". . .",". . ."],"next":"10202500-0155-4d13-b99f-01b18534a8f0"},{"type":"dialog","ID":"60bea1b4-7e23-49e5-90a1-110e6dec5d42","delay":1.9500000000000002,"actor":"ticket_inspector","content":["I already told you!","Te l'ho gia' detto!"],"next":"6e5c4f1f-b9f8-41c9-ace2-3b7f644c72c2"},{"type":"dialog","ID":"6e5c4f1f-b9f8-41c9-ace2-3b7f644c72c2","delay":4.725,"actor":"ticket_inspector","content":["Download me the movie, give it to me on a USB key, and I'll give you the tie.","Scaricami il film e portamelo su una chiavetta USB, e ti do la cravatta!"],"next":"7dfd3721-11c5-4d46-95c3-96663693c015"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "13bd6a8c-848c-4053-ad72-9b8d036e9fc0",
+      "delay": 1.75,
+      "actor": "ticket_inspector",
+      "content": [
+        "What do you need?",
+        "Che ti serve?"
+      ],
+      "next": "b7589301-7df2-445e-a6dd-78bf6c3be676"
+    },
+    {
+      "type": "dialog",
+      "ID": "b7589301-7df2-445e-a6dd-78bf6c3be676",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Beh . . ."
+      ],
+      "choices": [
+        "0620f0db-c493-439a-83b0-8cad645d5b3b",
+        "50f5b0d4-e502-455b-8dd8-a8c9eaff408b",
+        "d761ed89-1d80-439b-b992-f1fcbae24bce"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "0620f0db-c493-439a-83b0-8cad645d5b3b",
+      "title": "",
+      "content": [
+        "Can I have your tie?",
+        "Posso avere la tua cravatta?"
+      ],
+      "next": "f62d8e50-bde9-49dc-b982-50e8915d2931"
+    },
+    {
+      "type": "dialog",
+      "ID": "2a0f9abd-0a0f-4916-a978-07cf584c4265",
+      "delay": 2.2,
+      "actor": "andrea",
+      "content": [
+        "Can I have your tie?",
+        "Posso avere la tua cravatta?"
+      ],
+      "next": "60bea1b4-7e23-49e5-90a1-110e6dec5d42"
+    },
+    {
+      "type": "choice",
+      "ID": "50f5b0d4-e502-455b-8dd8-a8c9eaff408b",
+      "title": "",
+      "content": [
+        "What's this about junkies?",
+        "Cos'e' questa storia dei drogati?"
+      ],
+      "next": "e77a1bf7-7225-48ad-afb3-90483f60596d"
+    },
+    {
+      "type": "dialog",
+      "ID": "e77a1bf7-7225-48ad-afb3-90483f60596d",
+      "delay": 2.475,
+      "actor": "andrea",
+      "content": [
+        "What's this about junkies?",
+        "Cos'e' questa storia dei drogati?"
+      ],
+      "next": "105c248d-1324-4dcf-b529-11e8fe131ea1"
+    },
+    {
+      "type": "dialog",
+      "ID": "105c248d-1324-4dcf-b529-11e8fe131ea1",
+      "delay": 2.425,
+      "actor": "ticket_inspector",
+      "content": [
+        "They are a big problem.",
+        "Sono diventati un grosso problema."
+      ],
+      "next": "450e546c-cfcd-4b31-b8dc-b1ad0a730312"
+    },
+    {
+      "type": "dialog",
+      "ID": "450e546c-cfcd-4b31-b8dc-b1ad0a730312",
+      "delay": 1.55,
+      "actor": "andrea",
+      "content": [
+        "How big?",
+        "Grosso quanto?"
+      ],
+      "next": "661ebbcc-d1f1-4d8c-9074-8c78397ff7c1"
+    },
+    {
+      "type": "dialog",
+      "ID": "661ebbcc-d1f1-4d8c-9074-8c78397ff7c1",
+      "delay": 1.9,
+      "actor": "ticket_inspector",
+      "content": [
+        "Very big . . .",
+        "Grosso un bel po'. . ."
+      ],
+      "next": "629c9df9-23cc-496e-8ba1-8129aafa4b85"
+    },
+    {
+      "type": "dialog",
+      "ID": "10202500-0155-4d13-b99f-01b18534a8f0",
+      "delay": 3.7750000000000004,
+      "actor": "ticket_inspector",
+      "content": [
+        "As big as they kill people in the city center like this!",
+        "Grosso del tipo che ammazzano la gente in pieno centro!"
+      ],
+      "next": "87e6e870-028a-4243-a0ff-955f7bc028ad"
+    },
+    {
+      "type": "dialog",
+      "ID": "87e6e870-028a-4243-a0ff-955f7bc028ad",
+      "delay": 1.425,
+      "actor": "andrea",
+      "content": [
+        "But . . .",
+        "Ma . . ."
+      ],
+      "choices": [
+        "d51098a9-f37e-4ac3-9970-045e33dcdfc7",
+        "587af2fe-4210-47d1-a998-fb4fb8de73db",
+        "d761ed89-1d80-439b-b992-f1fcbae24bce"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "d51098a9-f37e-4ac3-9970-045e33dcdfc7",
+      "title": "",
+      "content": [
+        "What do you know about the murder?",
+        "Cosa ne sai dell'omicidio?"
+      ],
+      "next": "941e2aa2-2e83-4aea-8c49-19e99575aa9b"
+    },
+    {
+      "type": "choice",
+      "ID": "587af2fe-4210-47d1-a998-fb4fb8de73db",
+      "title": "",
+      "content": [
+        "Aren't you overreacting?",
+        "Non starai esagerando?"
+      ],
+      "next": "76b9a812-aa64-4c28-9675-c62a0713f033"
+    },
+    {
+      "type": "dialog",
+      "ID": "941e2aa2-2e83-4aea-8c49-19e99575aa9b",
+      "delay": 2.5,
+      "actor": "andrea",
+      "content": [
+        "What do you know about the murder?",
+        "Cosa ne sai dell'omicidio?"
+      ],
+      "next": "58e475c8-330e-4399-bb70-aad055ecee42"
+    },
+    {
+      "type": "dialog",
+      "ID": "76b9a812-aa64-4c28-9675-c62a0713f033",
+      "delay": 2.1500000000000004,
+      "actor": "andrea",
+      "content": [
+        "Aren't you overreacting?",
+        "Non starai esagerando?"
+      ],
+      "next": "3ac2deaf-fde2-4dfe-a995-ddee6cebc198"
+    },
+    {
+      "type": "choice",
+      "ID": "d761ed89-1d80-439b-b992-f1fcbae24bce",
+      "title": "",
+      "content": [
+        "I'm slightly busy.",
+        "Ho un po' da fare."
+      ],
+      "next": "6275d1f9-a486-4c0e-8e4d-cafadb11c1d5"
+    },
+    {
+      "type": "dialog",
+      "ID": "6275d1f9-a486-4c0e-8e4d-cafadb11c1d5",
+      "delay": 1.9,
+      "actor": "andrea",
+      "content": [
+        "I'm slightly busy.",
+        "Ho un po' da fare."
+      ],
+      "next": "960e3fb7-277c-4887-988f-4b28af15865c"
+    },
+    {
+      "type": "dialog",
+      "ID": "960e3fb7-277c-4887-988f-4b28af15865c",
+      "delay": 2.1,
+      "actor": "ticket_inspector",
+      "content": [
+        "I doubt it but, OK. Bye. ",
+        "Ne dubito, ma ciao."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "3ac2deaf-fde2-4dfe-a995-ddee6cebc198",
+      "delay": 1.875,
+      "actor": "ticket_inspector",
+      "content": [
+        "I don't think so.",
+        "Non credo proprio."
+      ],
+      "next": "ba7353f2-f219-4436-acaf-32cc93d09658"
+    },
+    {
+      "type": "dialog",
+      "ID": "58e475c8-330e-4399-bb70-aad055ecee42",
+      "delay": 4.825,
+      "actor": "ticket_inspector",
+      "content": [
+        "I read on internet that the guy has been killed by a junkie in the city center.",
+        "Si dice che il poveretto sia stato ucciso, in pieno centro, da un drogato."
+      ],
+      "next": "c2ce18bf-2746-4f6c-8387-273e379cab6f"
+    },
+    {
+      "type": "dialog",
+      "ID": "c2ce18bf-2746-4f6c-8387-273e379cab6f",
+      "delay": 2.1,
+      "actor": "ticket_inspector",
+      "content": [
+        "A roberry gone wrong.",
+        "Una rapina finita male!"
+      ],
+      "next": "89d938c1-b1d5-493c-9659-fcf57864c832"
+    },
+    {
+      "type": "dialog",
+      "ID": "89d938c1-b1d5-493c-9659-fcf57864c832",
+      "delay": 3.2,
+      "actor": "ticket_inspector",
+      "content": [
+        "Now I protect my bus from junkies, like you.",
+        "Ora proteggo il mio bus da drogati, come te."
+      ],
+      "next": "7dfd3721-11c5-4d46-95c3-96663693c015"
+    },
+    {
+      "type": "dialog",
+      "ID": "7dfd3721-11c5-4d46-95c3-96663693c015",
+      "delay": 1.925,
+      "actor": "andrea",
+      "content": [
+        "What a nice person!",
+        "Che brava persona!"
+      ],
+      "next": "0b5f4ff4-6acf-4a9e-9390-b250798d82d1"
+    },
+    {
+      "type": "dialog",
+      "ID": "ba7353f2-f219-4436-acaf-32cc93d09658",
+      "delay": 2.7,
+      "actor": "ticket_inspector",
+      "content": [
+        "The city is full of junkies . . .",
+        "La citta' e' piena di drogati . . ."
+      ],
+      "next": "37146342-a053-4247-ba44-d635790cdb07"
+    },
+    {
+      "type": "dialog",
+      "ID": "37146342-a053-4247-ba44-d635790cdb07",
+      "delay": 2.425,
+      "actor": "ticket_inspector",
+      "content": [
+        ". . . and nobody does anything!",
+        ". . . e nessuno fa niente!"
+      ],
+      "next": "dd288f55-5f36-4356-af30-176ef956b874"
+    },
+    {
+      "type": "dialog",
+      "ID": "dd288f55-5f36-4356-af30-176ef956b874",
+      "delay": 2.85,
+      "actor": "ticket_inspector",
+      "content": [
+        "Now I kick junkies in their asses!",
+        "Ora i drogati li prendo a calci nel culo"
+      ],
+      "next": "7dfd3721-11c5-4d46-95c3-96663693c015"
+    },
+    {
+      "type": "dialog",
+      "ID": "0b5f4ff4-6acf-4a9e-9390-b250798d82d1",
+      "delay": 1.8250000000000002,
+      "actor": "andrea",
+      "content": [
+        "So well dressed!",
+        "E cosi' elegante!"
+      ],
+      "next": null
+    },
+    {
+      "type": "set",
+      "ID": "f62d8e50-bde9-49dc-b982-50e8915d2931",
+      "variable": "request_disk",
+      "value": 1,
+      "next": "aefe31f0-6548-45d4-a4a3-8021e6d9ed85"
+    },
+    {
+      "type": "dialog",
+      "ID": "629c9df9-23cc-496e-8ba1-8129aafa4b85",
+      "delay": 1.525,
+      "actor": "andrea",
+      "content": [
+        "Like this?",
+        "Tipo cosi'?"
+      ],
+      "next": "6443514e-7830-4a27-8dd4-8502128bb720"
+    },
+    {
+      "type": "set",
+      "ID": "aefe31f0-6548-45d4-a4a3-8021e6d9ed85",
+      "variable": "request_movie",
+      "value": 1,
+      "next": "2a0f9abd-0a0f-4916-a978-07cf584c4265"
+    },
+    {
+      "type": "dialog",
+      "ID": "6443514e-7830-4a27-8dd4-8502128bb720",
+      "delay": 1.4,
+      "actor": "ticket_inspector",
+      "content": [
+        "This?",
+        "Cosi' come?"
+      ],
+      "next": "27491564-57a5-4e56-b21b-72f81986cdb2"
+    },
+    {
+      "type": "dialog",
+      "ID": "27491564-57a5-4e56-b21b-72f81986cdb2",
+      "delay": 1.275,
+      "actor": "andrea",
+      "content": [
+        "This.",
+        "Cosi'."
+      ],
+      "next": "749627c6-8da4-4cdf-a4e9-565ea7d92c7c"
+    },
+    {
+      "type": "dialog",
+      "ID": "749627c6-8da4-4cdf-a4e9-565ea7d92c7c",
+      "delay": 1.25,
+      "actor": "ticket_inspector",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "next": "10202500-0155-4d13-b99f-01b18534a8f0"
+    },
+    {
+      "type": "dialog",
+      "ID": "60bea1b4-7e23-49e5-90a1-110e6dec5d42",
+      "delay": 1.9500000000000002,
+      "actor": "ticket_inspector",
+      "content": [
+        "I already told you!",
+        "Te l'ho gia' detto!"
+      ],
+      "next": "6e5c4f1f-b9f8-41c9-ace2-3b7f644c72c2"
+    },
+    {
+      "type": "dialog",
+      "ID": "6e5c4f1f-b9f8-41c9-ace2-3b7f644c72c2",
+      "delay": 4.725,
+      "actor": "ticket_inspector",
+      "content": [
+        "Download me the movie, give it to me on a USB key, and I'll give you the tie.",
+        "Scaricami il film e portamelo su una chiavetta USB, e ti do la cravatta!"
+      ],
+      "next": "7dfd3721-11c5-4d46-95c3-96663693c015"
+    }
+  ]
+}

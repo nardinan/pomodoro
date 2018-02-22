@@ -1,1 +1,372 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"0fadf23f-4831-4ec9-bf2a-33bd49544256","delay":1.75,"actor":"roberto","content":["How many girls!","Quante ragazze!"],"next":"c6d04569-3b5f-4e8c-ba75-4373b1c6d30b"},{"type":"dialog","ID":"c6d04569-3b5f-4e8c-ba75-4373b1c6d30b","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["97f629aa-0100-48fe-bcec-d328cc436957","8df95e50-e802-4402-bc7e-5c7372d2c081","fc9a34c9-3929-497c-b69c-2a2c6631cc8c"]},{"type":"dialog","ID":"6e676cf8-60f6-42a7-8698-0ba42d1ce558","delay":1.35,"actor":"andrea","content":["Where?","Ma dove?"],"next":"6594e0e5-46a3-40b0-a545-f4fea4e89edf"},{"type":"choice","ID":"97f629aa-0100-48fe-bcec-d328cc436957","title":"","content":["Where?","Ma dove?"],"next":"6e676cf8-60f6-42a7-8698-0ba42d1ce558"},{"type":"choice","ID":"8df95e50-e802-4402-bc7e-5c7372d2c081","title":"","content":["That's enough . . .","Basta cosi' . . ."],"next":"6f907a44-82a6-4d01-8f7c-683068bc384a"},{"type":"dialog","ID":"845bf677-cd5c-4655-9f45-52d96f72473f","delay":4.775,"actor":"roberto","content":["Don't you see it's full of bitc - girls.bin [23]:segfault at 53daf12 error 3","Ma non vedi che e' pieno di fi - girls.bin [23]:segfault at 53daf12 error 3"],"next":"4a1dadab-ef18-4341-b415-a173608f7965"},{"type":"dialog","ID":"4a1dadab-ef18-4341-b415-a173608f7965","delay":2.1,"actor":"andrea","content":["Are you mocking on me? ","Ma mi prendi in giro?"],"next":"087901cc-a260-47e5-971a-7474e20146f5"},{"type":"dialog","ID":"087901cc-a260-47e5-971a-7474e20146f5","delay":1.9500000000000002,"actor":"roberto","content":["Are you completely blind?","Ma sei cieco?"],"next":"09ccd908-598a-4653-8313-0081276fd215"},{"type":"dialog","ID":"6f907a44-82a6-4d01-8f7c-683068bc384a","delay":1.9,"actor":"andrea","content":["That's enough . . .","Basta cosi' . . ."],"next":"75cb7043-a153-48dc-a620-073e1ca66b47"},{"type":"dialog","ID":"75cb7043-a153-48dc-a620-073e1ca66b47","delay":4.95,"actor":"roberto","content":["<Roberto.bin> is not responding - please relaunch the application in safe mode.","<Roberto.bin> is not responding - please relaunch the application in safe mode."],"next":"424fe913-6502-438e-96b1-aa333b939e31"},{"type":"dialog","ID":"6594e0e5-46a3-40b0-a545-f4fea4e89edf","delay":3.025,"actor":"andrea","content":["This is the Computer Science department!","Questo e' il dipartimento di informatica!"],"next":"845bf677-cd5c-4655-9f45-52d96f72473f"},{"type":"dialog","ID":"09ccd908-598a-4653-8313-0081276fd215","delay":1.25,"actor":"andrea","content":[". . .",". . ."],"choices":["fc9a34c9-3929-497c-b69c-2a2c6631cc8c","2db05566-1055-4817-8f7e-2bebd8ea8f80","8df95e50-e802-4402-bc7e-5c7372d2c081"]},{"type":"choice","ID":"fc9a34c9-3929-497c-b69c-2a2c6631cc8c","title":"","content":["What are you doing here?","Ma tu che ci fai qui?"],"next":"2e55fe53-3bde-4eab-b8d6-e5d45cb41acf"},{"type":"dialog","ID":"2e55fe53-3bde-4eab-b8d6-e5d45cb41acf","delay":2.125,"actor":"andrea","content":["What are you doing here?","Ma tu che ci fai qui?"],"next":"bd9a1895-bd49-413f-898a-26014964610a"},{"type":"dialog","ID":"bd9a1895-bd49-413f-898a-26014964610a","delay":3.575,"actor":"roberto","content":["Somebody asked me to keep you out of this place.","Mi e' stato chiesto di tenerti lontano da questo posto."],"next":"62604fe4-e24c-48af-a7f2-be77207be853"},{"type":"dialog","ID":"62604fe4-e24c-48af-a7f2-be77207be853","delay":3.9000000000000004,"actor":"andrea","content":["Uhm, I think you are not doing it correctly . . .","Uhm, non mi sembra che tu lo stia facendo con grande successo . . ."],"next":"0d455e96-8bb7-47ad-b9bb-049604e7e2ad"},{"type":"dialog","ID":"0d455e96-8bb7-47ad-b9bb-049604e7e2ad","delay":2.675,"actor":"roberto","content":["Sure I am doing it correctly!","Certo che lo sto facendo con successo!"],"next":"463cdcf9-cdba-4ddf-b702-c69303c04439"},{"type":"dialog","ID":"463cdcf9-cdba-4ddf-b702-c69303c04439","delay":3.075,"actor":"roberto","content":["eval(target) returned a score of 7.6","eval(target) ha restituito un punteggio di 7.6."],"next":"b250d04a-fd17-426b-aae7-3d8f1fba82a8"},{"type":"dialog","ID":"b250d04a-fd17-426b-aae7-3d8f1fba82a8","delay":1.5750000000000002,"actor":"andrea","content":["Great job!","Ma che bravo!"],"next":"17c50dbe-664f-429b-b974-93b001001575"},{"type":"dialog","ID":"17c50dbe-664f-429b-b974-93b001001575","delay":4.95,"actor":"roberto","content":["<Roberto.bin> is not responding - please relaunch the application in safe mode.","<Roberto.bin> is not responding - please relaunch the application in safe mode."],"next":"0926dac4-bbd4-49ad-95d8-b51f55be1d9c"},{"type":"dialog","ID":"0926dac4-bbd4-49ad-95d8-b51f55be1d9c","delay":1.45,"actor":"andrea","content":["Uff . . .","Uff . . ."],"next":null},{"type":"choice","ID":"2db05566-1055-4817-8f7e-2bebd8ea8f80","title":"","content":["Stop thinking about girls!","Basta a pensare alla topa!"],"next":"d8be8a09-2e17-42bc-ae3d-d50ab494efc4"},{"type":"dialog","ID":"a83505bd-9c1a-4c44-bfc1-ec3d4981a81b","delay":3.2,"actor":"andrea","content":["Well, I was thinking about a pizza right now!","In realta' ora stavo pensando ad una pizza!"],"next":"0710d2ab-61b2-45dd-b840-a60ff0293631"},{"type":"dialog","ID":"d8be8a09-2e17-42bc-ae3d-d50ab494efc4","delay":2.3,"actor":"andrea","content":["Stop thinking about girls!","Basta a pensare alla topa!"],"next":"2cada448-3c3e-4b79-b26d-8af59f472f36"},{"type":"dialog","ID":"0710d2ab-61b2-45dd-b840-a60ff0293631","delay":3.375,"actor":"roberto","content":["You well, I was thinking about a pizza right now!","Tu in realta' ora stavo pensando ad una pizza!"],"next":"3c8065e6-7776-4b5f-89cf-bcf9f673990c"},{"type":"dialog","ID":"2cada448-3c3e-4b79-b26d-8af59f472f36","delay":2.475,"actor":"roberto","content":["You stop thinking about girls!","Tu basta a pensare alla topa!"],"next":"a83505bd-9c1a-4c44-bfc1-ec3d4981a81b"},{"type":"dialog","ID":"3c8065e6-7776-4b5f-89cf-bcf9f673990c","delay":1.8250000000000002,"actor":"andrea","content":["Jesus Christ . . .","Mamma mia . . ."],"next":"cc4500dc-f463-4a92-8162-940b82ad9be3"},{"type":"dialog","ID":"cc4500dc-f463-4a92-8162-940b82ad9be3","delay":3.7,"actor":"roberto","content":["[Accessing nodes bouncing via unipg.dipinformatica.it]","[Accessing nodes bouncing via unipg.dipinformatica.it]"],"next":"70bd767e-4c60-4d52-9f94-63a5996886dd"},{"type":"dialog","ID":"70bd767e-4c60-4d52-9f94-63a5996886dd","delay":2.7,"actor":"roberto","content":["[Looking for answers on the nodes]","[Looking for answers on the nodes]"],"next":"0930b1f0-d524-47cd-bd97-16d7059e4889"},{"type":"dialog","ID":"0930b1f0-d524-47cd-bd97-16d7059e4889","delay":3.1,"actor":"roberto","content":["[Find a suitable answer on node Mimmo.bin]","[Find a suitable answer on node Mimmo.bin]"],"next":"49ede87b-08e9-494a-b770-5d4be9ca5341"},{"type":"dialog","ID":"49ede87b-08e9-494a-b770-5d4be9ca5341","delay":1.975,"actor":"roberto","content":["You have a tomato face.","Faccia da pirla."],"next":"185b4973-0ea5-4459-a3c0-206e0a73c9a0"},{"type":"dialog","ID":"185b4973-0ea5-4459-a3c0-206e0a73c9a0","delay":1.7000000000000002,"actor":"andrea","content":["Oh, asshole!","Oh, che stronzo!"],"next":null},{"type":"dialog","ID":"424fe913-6502-438e-96b1-aa333b939e31","delay":1.45,"actor":"andrea","content":["Of course.","Appunto."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "0fadf23f-4831-4ec9-bf2a-33bd49544256",
+      "delay": 1.75,
+      "actor": "roberto",
+      "content": [
+        "How many girls!",
+        "Quante ragazze!"
+      ],
+      "next": "c6d04569-3b5f-4e8c-ba75-4373b1c6d30b"
+    },
+    {
+      "type": "dialog",
+      "ID": "c6d04569-3b5f-4e8c-ba75-4373b1c6d30b",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "97f629aa-0100-48fe-bcec-d328cc436957",
+        "8df95e50-e802-4402-bc7e-5c7372d2c081",
+        "fc9a34c9-3929-497c-b69c-2a2c6631cc8c"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "6e676cf8-60f6-42a7-8698-0ba42d1ce558",
+      "delay": 1.35,
+      "actor": "andrea",
+      "content": [
+        "Where?",
+        "Ma dove?"
+      ],
+      "next": "6594e0e5-46a3-40b0-a545-f4fea4e89edf"
+    },
+    {
+      "type": "choice",
+      "ID": "97f629aa-0100-48fe-bcec-d328cc436957",
+      "title": "",
+      "content": [
+        "Where?",
+        "Ma dove?"
+      ],
+      "next": "6e676cf8-60f6-42a7-8698-0ba42d1ce558"
+    },
+    {
+      "type": "choice",
+      "ID": "8df95e50-e802-4402-bc7e-5c7372d2c081",
+      "title": "",
+      "content": [
+        "That's enough . . .",
+        "Basta cosi' . . ."
+      ],
+      "next": "6f907a44-82a6-4d01-8f7c-683068bc384a"
+    },
+    {
+      "type": "dialog",
+      "ID": "845bf677-cd5c-4655-9f45-52d96f72473f",
+      "delay": 4.775,
+      "actor": "roberto",
+      "content": [
+        "Don't you see it's full of bitc - girls.bin [23]:segfault at 53daf12 error 3",
+        "Ma non vedi che e' pieno di fi - girls.bin [23]:segfault at 53daf12 error 3"
+      ],
+      "next": "4a1dadab-ef18-4341-b415-a173608f7965"
+    },
+    {
+      "type": "dialog",
+      "ID": "4a1dadab-ef18-4341-b415-a173608f7965",
+      "delay": 2.1,
+      "actor": "andrea",
+      "content": [
+        "Are you mocking on me? ",
+        "Ma mi prendi in giro?"
+      ],
+      "next": "087901cc-a260-47e5-971a-7474e20146f5"
+    },
+    {
+      "type": "dialog",
+      "ID": "087901cc-a260-47e5-971a-7474e20146f5",
+      "delay": 1.9500000000000002,
+      "actor": "roberto",
+      "content": [
+        "Are you completely blind?",
+        "Ma sei cieco?"
+      ],
+      "next": "09ccd908-598a-4653-8313-0081276fd215"
+    },
+    {
+      "type": "dialog",
+      "ID": "6f907a44-82a6-4d01-8f7c-683068bc384a",
+      "delay": 1.9,
+      "actor": "andrea",
+      "content": [
+        "That's enough . . .",
+        "Basta cosi' . . ."
+      ],
+      "next": "75cb7043-a153-48dc-a620-073e1ca66b47"
+    },
+    {
+      "type": "dialog",
+      "ID": "75cb7043-a153-48dc-a620-073e1ca66b47",
+      "delay": 4.95,
+      "actor": "roberto",
+      "content": [
+        "<Roberto.bin> is not responding - please relaunch the application in safe mode.",
+        "<Roberto.bin> is not responding - please relaunch the application in safe mode."
+      ],
+      "next": "424fe913-6502-438e-96b1-aa333b939e31"
+    },
+    {
+      "type": "dialog",
+      "ID": "6594e0e5-46a3-40b0-a545-f4fea4e89edf",
+      "delay": 3.025,
+      "actor": "andrea",
+      "content": [
+        "This is the Computer Science department!",
+        "Questo e' il dipartimento di informatica!"
+      ],
+      "next": "845bf677-cd5c-4655-9f45-52d96f72473f"
+    },
+    {
+      "type": "dialog",
+      "ID": "09ccd908-598a-4653-8313-0081276fd215",
+      "delay": 1.25,
+      "actor": "andrea",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "choices": [
+        "fc9a34c9-3929-497c-b69c-2a2c6631cc8c",
+        "2db05566-1055-4817-8f7e-2bebd8ea8f80",
+        "8df95e50-e802-4402-bc7e-5c7372d2c081"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "fc9a34c9-3929-497c-b69c-2a2c6631cc8c",
+      "title": "",
+      "content": [
+        "What are you doing here?",
+        "Ma tu che ci fai qui?"
+      ],
+      "next": "2e55fe53-3bde-4eab-b8d6-e5d45cb41acf"
+    },
+    {
+      "type": "dialog",
+      "ID": "2e55fe53-3bde-4eab-b8d6-e5d45cb41acf",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "What are you doing here?",
+        "Ma tu che ci fai qui?"
+      ],
+      "next": "bd9a1895-bd49-413f-898a-26014964610a"
+    },
+    {
+      "type": "dialog",
+      "ID": "bd9a1895-bd49-413f-898a-26014964610a",
+      "delay": 3.575,
+      "actor": "roberto",
+      "content": [
+        "Somebody asked me to keep you out of this place.",
+        "Mi e' stato chiesto di tenerti lontano da questo posto."
+      ],
+      "next": "62604fe4-e24c-48af-a7f2-be77207be853"
+    },
+    {
+      "type": "dialog",
+      "ID": "62604fe4-e24c-48af-a7f2-be77207be853",
+      "delay": 3.9000000000000004,
+      "actor": "andrea",
+      "content": [
+        "Uhm, I think you are not doing it correctly . . .",
+        "Uhm, non mi sembra che tu lo stia facendo con grande successo . . ."
+      ],
+      "next": "0d455e96-8bb7-47ad-b9bb-049604e7e2ad"
+    },
+    {
+      "type": "dialog",
+      "ID": "0d455e96-8bb7-47ad-b9bb-049604e7e2ad",
+      "delay": 2.675,
+      "actor": "roberto",
+      "content": [
+        "Sure I am doing it correctly!",
+        "Certo che lo sto facendo con successo!"
+      ],
+      "next": "463cdcf9-cdba-4ddf-b702-c69303c04439"
+    },
+    {
+      "type": "dialog",
+      "ID": "463cdcf9-cdba-4ddf-b702-c69303c04439",
+      "delay": 3.075,
+      "actor": "roberto",
+      "content": [
+        "eval(target) returned a score of 7.6",
+        "eval(target) ha restituito un punteggio di 7.6."
+      ],
+      "next": "b250d04a-fd17-426b-aae7-3d8f1fba82a8"
+    },
+    {
+      "type": "dialog",
+      "ID": "b250d04a-fd17-426b-aae7-3d8f1fba82a8",
+      "delay": 1.5750000000000002,
+      "actor": "andrea",
+      "content": [
+        "Great job!",
+        "Ma che bravo!"
+      ],
+      "next": "17c50dbe-664f-429b-b974-93b001001575"
+    },
+    {
+      "type": "dialog",
+      "ID": "17c50dbe-664f-429b-b974-93b001001575",
+      "delay": 4.95,
+      "actor": "roberto",
+      "content": [
+        "<Roberto.bin> is not responding - please relaunch the application in safe mode.",
+        "<Roberto.bin> is not responding - please relaunch the application in safe mode."
+      ],
+      "next": "0926dac4-bbd4-49ad-95d8-b51f55be1d9c"
+    },
+    {
+      "type": "dialog",
+      "ID": "0926dac4-bbd4-49ad-95d8-b51f55be1d9c",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uff . . .",
+        "Uff . . ."
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "2db05566-1055-4817-8f7e-2bebd8ea8f80",
+      "title": "",
+      "content": [
+        "Stop thinking about girls!",
+        "Basta a pensare alla topa!"
+      ],
+      "next": "d8be8a09-2e17-42bc-ae3d-d50ab494efc4"
+    },
+    {
+      "type": "dialog",
+      "ID": "a83505bd-9c1a-4c44-bfc1-ec3d4981a81b",
+      "delay": 3.2,
+      "actor": "andrea",
+      "content": [
+        "Well, I was thinking about a pizza right now!",
+        "In realta' ora stavo pensando ad una pizza!"
+      ],
+      "next": "0710d2ab-61b2-45dd-b840-a60ff0293631"
+    },
+    {
+      "type": "dialog",
+      "ID": "d8be8a09-2e17-42bc-ae3d-d50ab494efc4",
+      "delay": 2.3,
+      "actor": "andrea",
+      "content": [
+        "Stop thinking about girls!",
+        "Basta a pensare alla topa!"
+      ],
+      "next": "2cada448-3c3e-4b79-b26d-8af59f472f36"
+    },
+    {
+      "type": "dialog",
+      "ID": "0710d2ab-61b2-45dd-b840-a60ff0293631",
+      "delay": 3.375,
+      "actor": "roberto",
+      "content": [
+        "You well, I was thinking about a pizza right now!",
+        "Tu in realta' ora stavo pensando ad una pizza!"
+      ],
+      "next": "3c8065e6-7776-4b5f-89cf-bcf9f673990c"
+    },
+    {
+      "type": "dialog",
+      "ID": "2cada448-3c3e-4b79-b26d-8af59f472f36",
+      "delay": 2.475,
+      "actor": "roberto",
+      "content": [
+        "You stop thinking about girls!",
+        "Tu basta a pensare alla topa!"
+      ],
+      "next": "a83505bd-9c1a-4c44-bfc1-ec3d4981a81b"
+    },
+    {
+      "type": "dialog",
+      "ID": "3c8065e6-7776-4b5f-89cf-bcf9f673990c",
+      "delay": 1.8250000000000002,
+      "actor": "andrea",
+      "content": [
+        "Jesus Christ . . .",
+        "Mamma mia . . ."
+      ],
+      "next": "cc4500dc-f463-4a92-8162-940b82ad9be3"
+    },
+    {
+      "type": "dialog",
+      "ID": "cc4500dc-f463-4a92-8162-940b82ad9be3",
+      "delay": 3.7,
+      "actor": "roberto",
+      "content": [
+        "[Accessing nodes bouncing via unipg.dipinformatica.it]",
+        "[Accessing nodes bouncing via unipg.dipinformatica.it]"
+      ],
+      "next": "70bd767e-4c60-4d52-9f94-63a5996886dd"
+    },
+    {
+      "type": "dialog",
+      "ID": "70bd767e-4c60-4d52-9f94-63a5996886dd",
+      "delay": 2.7,
+      "actor": "roberto",
+      "content": [
+        "[Looking for answers on the nodes]",
+        "[Looking for answers on the nodes]"
+      ],
+      "next": "0930b1f0-d524-47cd-bd97-16d7059e4889"
+    },
+    {
+      "type": "dialog",
+      "ID": "0930b1f0-d524-47cd-bd97-16d7059e4889",
+      "delay": 3.1,
+      "actor": "roberto",
+      "content": [
+        "[Find a suitable answer on node Mimmo.bin]",
+        "[Find a suitable answer on node Mimmo.bin]"
+      ],
+      "next": "49ede87b-08e9-494a-b770-5d4be9ca5341"
+    },
+    {
+      "type": "dialog",
+      "ID": "49ede87b-08e9-494a-b770-5d4be9ca5341",
+      "delay": 1.975,
+      "actor": "roberto",
+      "content": [
+        "You have a tomato face.",
+        "Faccia da pirla."
+      ],
+      "next": "185b4973-0ea5-4459-a3c0-206e0a73c9a0"
+    },
+    {
+      "type": "dialog",
+      "ID": "185b4973-0ea5-4459-a3c0-206e0a73c9a0",
+      "delay": 1.7000000000000002,
+      "actor": "andrea",
+      "content": [
+        "Oh, asshole!",
+        "Oh, che stronzo!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "424fe913-6502-438e-96b1-aa333b939e31",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Of course.",
+        "Appunto."
+      ],
+      "next": null
+    }
+  ]
+}

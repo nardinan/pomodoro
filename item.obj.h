@@ -23,18 +23,19 @@
 #define d_item_blink_modificator 10.0
 #define d_item_blink_max_channel 254.0
 #define d_item_blink_min_channel 0.0
-typedef struct s_item_track { d_list_node_head;
-    char label[d_entity_label_size];
-    struct s_object *track;
-    int volume;
+typedef struct s_item_track {
+  d_list_node_head;
+  char label[d_entity_label_size];
+  struct s_object *track;
+  int volume;
 } s_item_track;
 d_declare_class(item) {
-    struct s_attributes head;
-    double width, height;
-    struct s_list tracks;
-    struct s_item_track *current_track;
-    double green_channel, green_modificator;
-    t_boolean active, solid, audio, blink;
+  struct s_attributes head;
+  double width, height;
+  struct s_list tracks;
+  struct s_item_track *current_track;
+  double green_channel, green_modificator;
+  t_boolean active, solid, audio, blink;
 } d_declare_class_tail(item);
 struct s_item_attributes *p_item_alloc(struct s_object *self, const char *key);
 extern struct s_object *f_item_new(struct s_object *self, const char *key);

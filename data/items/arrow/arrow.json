@@ -1,33 +1,49 @@
 {
-	"format":"item",
-	"ID":"arrow",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"none",
-			"layers":[
-				{"drawable":"empty_particle"}
-			]
-		},{
-			"label":"active_left",
-			"layers":[
-				{"drawable":"arrow_h_active"}
-			]
-		},{
-			"label":"active_right",
-			"layers":[
-				{"drawable":"arrow_h_active", "flip_x":true}
-			]
-		},{
-			"label":"active_up",
-			"layers":[
-				{"drawable":"arrow_v_active"}
-			]
-		},{
-			"label":"active_down",
-			"layers":[
-				{"drawable":"arrow_v_active", "flip_y":true}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "arrow",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "none",
+      "layers": [
+        {
+          "drawable": "empty_particle"
+        }
+      ]
+    },
+    {
+      "label": "active_left",
+      "layers": [
+        {
+          "drawable": "arrow_h_active"
+        }
+      ]
+    },
+    {
+      "label": "active_right",
+      "layers": [
+        {
+          "drawable": "arrow_h_active",
+          "flip_x": true
+        }
+      ]
+    },
+    {
+      "label": "active_up",
+      "layers": [
+        {
+          "drawable": "arrow_v_active"
+        }
+      ]
+    },
+    {
+      "label": "active_down",
+      "layers": [
+        {
+          "drawable": "arrow_v_active",
+          "flip_y": true
+        }
+      ]
+    }
+  ]
 }

@@ -23,32 +23,33 @@
 #include "miranda.h"
 /* action defintion */
 typedef enum e_collector_types {
-    e_collector_type_string,
-    e_collector_type_double
+  e_collector_type_string,
+  e_collector_type_double
 } e_collector_types;
-typedef struct s_collector_entry { d_list_node_head;
-    char key[d_lisp_symbol_size];
-    enum e_collector_types type;
-    union {
-        double value_double;
-        char *value_string;
-    } value;
+typedef struct s_collector_entry {
+  d_list_node_head;
+  char key[d_lisp_symbol_size];
+  enum e_collector_types type;
+  union {
+    double value_double;
+    char *value_string;
+  } value;
 } s_collector_entry;
 typedef enum e_collector_actions {
-    e_collector_action_set
+  e_collector_action_set
 } e_collector_actions;
 typedef struct s_collector_action {
-    enum e_collector_actions type;
-    union {
-        struct s_collector_entry action_set;
-    } parameters;
+  enum e_collector_actions type;
+  union {
+    struct s_collector_entry action_set;
+  } parameters;
 } s_collector_action;
 extern struct s_lisp_object *p_link_collector_set(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_collector_get(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
 d_declare_class(collector) {
-    struct s_attributes head;
-    struct s_list pool;
+  struct s_attributes head;
+  struct s_list pool;
 } d_declare_class_tail(collector);
 struct s_collector_attributes *p_collector_alloc(struct s_object *self);
 extern struct s_object *f_collector_new(struct s_object *self);

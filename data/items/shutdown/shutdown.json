@@ -1,16 +1,17 @@
 {
-	"format":"item",
-	"ID":"shutdown",
-	"statuses":[
-		{
-			"label":"still"
-		},{
-			"label":"trigger",
-			"track":{
-				"playable":"shutdown_sound",
-				"loops":0.0,
-				"volume":48
-			}
-		}
-	]
+  "format": "item",
+  "ID": "shutdown",
+  "statuses": [
+    {
+      "label": "still"
+    },
+    {
+      "label": "trigger",
+      "track": {
+        "playable": "shutdown_sound",
+        "loops": 0.0,
+        "volume": 48
+      }
+    }
+  ]
 }

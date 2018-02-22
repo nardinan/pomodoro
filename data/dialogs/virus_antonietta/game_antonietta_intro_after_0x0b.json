@@ -1,1 +1,49 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"184d8b32-c93f-4b1a-a4d8-72adb234ea99","delay":2.7750000000000004,"actor":"andrea","content":["The most sensitive woman in the world.","La donna piu' sensibile al mondo."],"next":"027064a0-ecf4-42ff-a3db-55a893df4874"},{"type":"dialog","ID":"027064a0-ecf4-42ff-a3db-55a893df4874","delay":1.2,"actor":"antonietta","content":["Hey!","Hey!"],"next":"7280f400-e3cf-42cb-a9c7-47a8ad849e40"},{"type":"dialog","ID":"7280f400-e3cf-42cb-a9c7-47a8ad849e40","delay":1.625,"actor":"antonietta","content":["Shithead!","Faccia di merda!"],"next":"765658bf-ba53-440c-9212-1e7fa2070c87"},{"type":"dialog","ID":"765658bf-ba53-440c-9212-1e7fa2070c87","delay":2.0250000000000004,"actor":"antonietta","content":["I am not sensitive!","Io non sono sensibile!"],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "184d8b32-c93f-4b1a-a4d8-72adb234ea99",
+      "delay": 2.7750000000000004,
+      "actor": "andrea",
+      "content": [
+        "The most sensitive woman in the world.",
+        "La donna piu' sensibile al mondo."
+      ],
+      "next": "027064a0-ecf4-42ff-a3db-55a893df4874"
+    },
+    {
+      "type": "dialog",
+      "ID": "027064a0-ecf4-42ff-a3db-55a893df4874",
+      "delay": 1.2,
+      "actor": "antonietta",
+      "content": [
+        "Hey!",
+        "Hey!"
+      ],
+      "next": "7280f400-e3cf-42cb-a9c7-47a8ad849e40"
+    },
+    {
+      "type": "dialog",
+      "ID": "7280f400-e3cf-42cb-a9c7-47a8ad849e40",
+      "delay": 1.625,
+      "actor": "antonietta",
+      "content": [
+        "Shithead!",
+        "Faccia di merda!"
+      ],
+      "next": "765658bf-ba53-440c-9212-1e7fa2070c87"
+    },
+    {
+      "type": "dialog",
+      "ID": "765658bf-ba53-440c-9212-1e7fa2070c87",
+      "delay": 2.0250000000000004,
+      "actor": "antonietta",
+      "content": [
+        "I am not sensitive!",
+        "Io non sono sensibile!"
+      ],
+      "next": null
+    }
+  ]
+}

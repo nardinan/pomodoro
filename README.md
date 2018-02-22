@@ -38,6 +38,9 @@ Now that all the required SDL2 packages have been installed, it's time for Miran
 ```bash
 $ git clone https://github.com/nardinan/miranda
 $ cd miranda
+$ mkdir build
+$ cd build
+$ cmake ..
 $ make
 $ sudo make install
 ```
@@ -45,6 +48,8 @@ Great! Miranda is now installed in your /usr/local/lib directory. **Be sure to a
 ```bash
 $ git clone https://github.com/nardinan/pomodoro
 $ cd pomdoro
+$ mkdir build
+$ cmake ..
 $ make
 ```
 

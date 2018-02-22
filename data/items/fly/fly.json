@@ -1,13 +1,15 @@
 {
-	"format":"item",
-	"ID":"fly",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"fly_still_A"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "fly",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "fly_still_A"
+        }
+      ]
+    }
+  ]
 }

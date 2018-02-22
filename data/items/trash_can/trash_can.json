@@ -1,18 +1,23 @@
 {
-	"format":"item",
-	"ID":"trash_can",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still_A",
-			"layers":[
-				{"drawable":"trash_can_still_A"}
-			]
-		},{
-			"label":"still_B",
-			"layers":[
-				{"drawable":"trash_can_still_B"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "trash_can",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still_A",
+      "layers": [
+        {
+          "drawable": "trash_can_still_A"
+        }
+      ]
+    },
+    {
+      "label": "still_B",
+      "layers": [
+        {
+          "drawable": "trash_can_still_B"
+        }
+      ]
+    }
+  ]
 }

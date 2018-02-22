@@ -1,1 +1,126 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"a1806a17-3121-4538-a6f5-39747a45c912","delay":4.85,"actor":"bistoni","content":["Here our gu - introduction.bin: segmentation fault at 0x1aff82, core dumped.","Ecco il nostr - introduction.bin: segmentation fault at 0x1aff82, core dumped."],"next":"6c072241-22c5-438c-928c-b82a6528fd23"},{"type":"dialog","ID":"6c072241-22c5-438c-928c-b82a6528fd23","delay":1.5,"actor":"andrea","content":["Jesus.","Eh, ho capito."],"next":"8f720caf-67d1-4721-a68a-2b619ce5bd99"},{"type":"dialog","ID":"8f720caf-67d1-4721-a68a-2b619ce5bd99","delay":3.025,"actor":"andrea","content":["I need the password of the MacBook Pro!","Ho bisogno della password del MacBook Pro!"],"next":"31c6e645-2613-4dc5-8241-95b6d0b91ce0"},{"type":"dialog","ID":"31c6e645-2613-4dc5-8241-95b6d0b91ce0","delay":4.625,"actor":"bistoni","content":["Password_macbook() std::string has been shared between five different nodes.","Password_macbook[] std::string e' stata distribuita a 5 diversi nodi."],"next":"88c09b69-7bbc-4a34-a375-84f59a5f1373"},{"type":"dialog","ID":"88c09b69-7bbc-4a34-a375-84f59a5f1373","delay":3.8000000000000003,"actor":"bistoni","content":["Connecting to recover the password std::string . . .","Connessione in corso per recupero password std::string . . ."],"next":"6f39e208-c0ac-4e93-bdd3-117e492a8cbd"},{"type":"dialog","ID":"6f39e208-c0ac-4e93-bdd3-117e492a8cbd","delay":2,"actor":"andrea","content":["It will not work . . .","Non ce la fa . . ."],"next":"2623272b-5b28-4885-96b8-cbe6dd05cdc9"},{"type":"dialog","ID":"2623272b-5b28-4885-96b8-cbe6dd05cdc9","delay":1.7000000000000002,"actor":"bistoni","content":[". . . aborted.",". . . fallita."],"next":"10d13f11-3682-4a11-b085-4983550bcb17"},{"type":"dialog","ID":"10d13f11-3682-4a11-b085-4983550bcb17","delay":1.5,"actor":"andrea","content":["I knew it.","Lo sapevo."],"next":"74c43231-5d38-45f8-94cf-3193a1886df0"},{"type":"dialog","ID":"74c43231-5d38-45f8-94cf-3193a1886df0","delay":3.5500000000000003,"actor":"bistoni","content":["Nodes refuse remote access: password protected.","Nodi rifiutano l'accesso remoto, informazione protetta."],"next":"31b08175-fc6b-446a-a3ad-5af51dd3c745"},{"type":"dialog","ID":"31b08175-fc6b-446a-a3ad-5af51dd3c745","delay":2.225,"actor":"bistoni","content":["Manual access required.","Accesso manuale richiesto."],"next":"9f337561-7bc3-4a49-9eb1-42975324f8e2"},{"type":"dialog","ID":"9f337561-7bc3-4a49-9eb1-42975324f8e2","delay":2.3,"actor":"andrea","content":["I'm tired of your bullshit.","Pero' hai rotto il cazzo."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "a1806a17-3121-4538-a6f5-39747a45c912",
+      "delay": 4.85,
+      "actor": "bistoni",
+      "content": [
+        "Here our gu - introduction.bin: segmentation fault at 0x1aff82, core dumped.",
+        "Ecco il nostr - introduction.bin: segmentation fault at 0x1aff82, core dumped."
+      ],
+      "next": "6c072241-22c5-438c-928c-b82a6528fd23"
+    },
+    {
+      "type": "dialog",
+      "ID": "6c072241-22c5-438c-928c-b82a6528fd23",
+      "delay": 1.5,
+      "actor": "andrea",
+      "content": [
+        "Jesus.",
+        "Eh, ho capito."
+      ],
+      "next": "8f720caf-67d1-4721-a68a-2b619ce5bd99"
+    },
+    {
+      "type": "dialog",
+      "ID": "8f720caf-67d1-4721-a68a-2b619ce5bd99",
+      "delay": 3.025,
+      "actor": "andrea",
+      "content": [
+        "I need the password of the MacBook Pro!",
+        "Ho bisogno della password del MacBook Pro!"
+      ],
+      "next": "31c6e645-2613-4dc5-8241-95b6d0b91ce0"
+    },
+    {
+      "type": "dialog",
+      "ID": "31c6e645-2613-4dc5-8241-95b6d0b91ce0",
+      "delay": 4.625,
+      "actor": "bistoni",
+      "content": [
+        "Password_macbook() std::string has been shared between five different nodes.",
+        "Password_macbook[] std::string e' stata distribuita a 5 diversi nodi."
+      ],
+      "next": "88c09b69-7bbc-4a34-a375-84f59a5f1373"
+    },
+    {
+      "type": "dialog",
+      "ID": "88c09b69-7bbc-4a34-a375-84f59a5f1373",
+      "delay": 3.8000000000000003,
+      "actor": "bistoni",
+      "content": [
+        "Connecting to recover the password std::string . . .",
+        "Connessione in corso per recupero password std::string . . ."
+      ],
+      "next": "6f39e208-c0ac-4e93-bdd3-117e492a8cbd"
+    },
+    {
+      "type": "dialog",
+      "ID": "6f39e208-c0ac-4e93-bdd3-117e492a8cbd",
+      "delay": 2,
+      "actor": "andrea",
+      "content": [
+        "It will not work . . .",
+        "Non ce la fa . . ."
+      ],
+      "next": "2623272b-5b28-4885-96b8-cbe6dd05cdc9"
+    },
+    {
+      "type": "dialog",
+      "ID": "2623272b-5b28-4885-96b8-cbe6dd05cdc9",
+      "delay": 1.7000000000000002,
+      "actor": "bistoni",
+      "content": [
+        ". . . aborted.",
+        ". . . fallita."
+      ],
+      "next": "10d13f11-3682-4a11-b085-4983550bcb17"
+    },
+    {
+      "type": "dialog",
+      "ID": "10d13f11-3682-4a11-b085-4983550bcb17",
+      "delay": 1.5,
+      "actor": "andrea",
+      "content": [
+        "I knew it.",
+        "Lo sapevo."
+      ],
+      "next": "74c43231-5d38-45f8-94cf-3193a1886df0"
+    },
+    {
+      "type": "dialog",
+      "ID": "74c43231-5d38-45f8-94cf-3193a1886df0",
+      "delay": 3.5500000000000003,
+      "actor": "bistoni",
+      "content": [
+        "Nodes refuse remote access: password protected.",
+        "Nodi rifiutano l'accesso remoto, informazione protetta."
+      ],
+      "next": "31b08175-fc6b-446a-a3ad-5af51dd3c745"
+    },
+    {
+      "type": "dialog",
+      "ID": "31b08175-fc6b-446a-a3ad-5af51dd3c745",
+      "delay": 2.225,
+      "actor": "bistoni",
+      "content": [
+        "Manual access required.",
+        "Accesso manuale richiesto."
+      ],
+      "next": "9f337561-7bc3-4a49-9eb1-42975324f8e2"
+    },
+    {
+      "type": "dialog",
+      "ID": "9f337561-7bc3-4a49-9eb1-42975324f8e2",
+      "delay": 2.3,
+      "actor": "andrea",
+      "content": [
+        "I'm tired of your bullshit.",
+        "Pero' hai rotto il cazzo."
+      ],
+      "next": null
+    }
+  ]
+}

@@ -1,1 +1,352 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"a6e8a8b2-4a3e-48d9-ba6a-ab55bc83865c","delay":2.375,"actor":"ticket_inspector","content":["Ticket and arm, please","Biglietto e braccio, per cortesia"],"next":"f5d3c87a-b48d-4fec-a38c-4f8f8e698de0"},{"type":"dialog","ID":"f5d3c87a-b48d-4fec-a38c-4f8f8e698de0","delay":1.25,"actor":"andrea","content":["What?","Cosa?"],"next":"aedf11c1-85a5-4ed5-8a4f-329ab0994ab0"},{"type":"dialog","ID":"aedf11c1-85a5-4ed5-8a4f-329ab0994ab0","delay":3.075,"actor":"ticket_inspector","content":["Give me the ticket and show me your arm!","Mi dia il biglietto e mi mostri il braccio!"],"next":"bbfdb4cd-936f-484f-9a94-39bfd5898ca8"},{"type":"dialog","ID":"bbfdb4cd-936f-484f-9a94-39bfd5898ca8","delay":1.425,"actor":"andrea","content":["But . . .","Ma . . ."],"choices":["ae160f0e-864a-492b-a4dd-646fb4700f7f","b3c53faa-237c-40d4-9ec2-a732748d7933"]},{"type":"choice","ID":"ae160f0e-864a-492b-a4dd-646fb4700f7f","title":"","content":["I don't have to take the bus!","Non devo prendere l'autobus!"],"next":"9bea3757-95ab-4c11-8b24-72fe1f661674"},{"type":"dialog","ID":"9bea3757-95ab-4c11-8b24-72fe1f661674","delay":2.425,"actor":"andrea","content":["I don't have to take the bus!","Non devo prendere l'autobus!"],"next":"c037ec00-2357-4707-99c4-9f0275bac1e3"},{"type":"dialog","ID":"c037ec00-2357-4707-99c4-9f0275bac1e3","delay":2.875,"actor":"ticket_inspector","content":["Good, I don't want junkies in my bus!","Meno male, non voglio drogati a bordo."],"next":"d94e93e0-54e5-47ef-8a98-1ca3898574a7"},{"type":"choice","ID":"8f289f37-8ff3-4116-9713-5ffd03423863","title":"","content":["Who are you?","Lei chi sarebbe?"],"next":"313eef05-0187-43a2-a55b-ed9d374a79ad"},{"type":"dialog","ID":"313eef05-0187-43a2-a55b-ed9d374a79ad","delay":1.7000000000000002,"actor":"andrea","content":["Who are you?","Lei chi sarebbe?"],"next":"764eb440-efab-493b-bf66-ba60d3ac5b13"},{"type":"dialog","ID":"764eb440-efab-493b-bf66-ba60d3ac5b13","delay":1.25,"actor":"ticket_inspector","content":[". . .",". . ."],"next":"89c24f8b-61d8-462b-9a6a-7777038b21e5"},{"type":"dialog","ID":"d94e93e0-54e5-47ef-8a98-1ca3898574a7","delay":1.45,"actor":"andrea","content":["Ehm . . .","Ehm . . ."],"choices":["8f289f37-8ff3-4116-9713-5ffd03423863","2521d25a-53b5-473d-a0a5-b46e17d08b26","6990c3bd-052e-478f-adde-bd8095ce71a2"]},{"type":"dialog","ID":"81401bb1-5399-4da9-9ca9-e69b1bb14558","delay":2.9000000000000004,"actor":"ticket_inspector","content":["Tie and hat don't tell you anything?","Cravatta e cappello non ti dicono nulla?"],"next":"8d46cba0-71b9-4123-a2ce-a09a6a958adf"},{"type":"choice","ID":"2521d25a-53b5-473d-a0a5-b46e17d08b26","title":"","content":["I am dressed poorly, I know it.","Sono vestito male, lo so."],"next":"dc158bbb-f7c0-48cb-9565-0da49433df06"},{"type":"dialog","ID":"dc158bbb-f7c0-48cb-9565-0da49433df06","delay":2.4000000000000004,"actor":"andrea","content":["I am dressed poosly, I know it.","Sono vestito male, lo so."],"next":"8c9d064b-de4f-4460-a773-c1baf095f9df"},{"type":"dialog","ID":"6ff7232f-bfa0-4daf-9fd6-eb64baac94cf","delay":2.625,"actor":"andrea","content":["Moreover, who are you to judge me?","E poi tu chi sei per giudicare?"],"next":"81401bb1-5399-4da9-9ca9-e69b1bb14558"},{"type":"dialog","ID":"89c24f8b-61d8-462b-9a6a-7777038b21e5","delay":1.525,"actor":"ticket_inspector","content":["Seriously?","Seriamente?"],"next":"81401bb1-5399-4da9-9ca9-e69b1bb14558"},{"type":"dialog","ID":"8d46cba0-71b9-4123-a2ce-a09a6a958adf","delay":1.6,"actor":"andrea","content":["That's class!","Che classe!"],"next":"8407464a-e632-4a8e-8c85-ca3606ab8afa"},{"type":"dialog","ID":"8407464a-e632-4a8e-8c85-ca3606ab8afa","delay":2.5250000000000004,"actor":"ticket_inspector","content":["I'm the bus ticket inspector.","Sono il controllore del pullman."],"next":"94c24166-e4d4-42fe-b20f-419452137420"},{"type":"dialog","ID":"94c24166-e4d4-42fe-b20f-419452137420","delay":3.125,"actor":"ticket_inspector","content":["Of the bus that goes to Pallotta, of course.","Del pullman che va a Pallotta, e' chiaro!"],"next":null},{"type":"choice","ID":"6990c3bd-052e-478f-adde-bd8095ce71a2","title":"","content":["Why the buses are never in time?","Perche' i pullman non sono in orario?"],"next":"f302d884-80ba-4cb0-aea1-90feb671b849"},{"type":"dialog","ID":"f302d884-80ba-4cb0-aea1-90feb671b849","delay":2.725,"actor":"andrea","content":["Why the buses are never in time?","Perche' i pullman non sono in orario?"],"next":"8a88391c-9216-454d-8e90-5e54fe6e6a8a"},{"type":"dialog","ID":"8a88391c-9216-454d-8e90-5e54fe6e6a8a","delay":3.0500000000000003,"actor":"andrea","content":["There is a rule that says that, isn't it?","C'e' una qualche regola che lo impedisce?"],"next":"ac03d7d0-2d17-4c56-af1f-7ec38493ac76"},{"type":"dialog","ID":"ac03d7d0-2d17-4c56-af1f-7ec38493ac76","delay":1.375,"actor":"ticket_inspector","content":["Correct.","Esatto."],"next":"fa8a32b4-260f-49e0-a5a1-88feee01b0cb"},{"type":"dialog","ID":"fa8a32b4-260f-49e0-a5a1-88feee01b0cb","delay":4.6,"actor":"ticket_inspector","content":["And there is another rule that says that you should mind your own fuckin' business.","E c'e' anche una regola che dice che devi farti i cazzi tuoi."],"next":"7e59fd3c-cc60-4ae4-9f0c-6e52c56d67b3"},{"type":"dialog","ID":"8c9d064b-de4f-4460-a773-c1baf095f9df","delay":2.125,"actor":"andrea","content":["But I am not a junkie!","Ma non sono un drogato!"],"next":"6ff7232f-bfa0-4daf-9fd6-eb64baac94cf"},{"type":"choice","ID":"b3c53faa-237c-40d4-9ec2-a732748d7933","title":"","content":["My arm?","Il braccio?"],"next":"42349c15-7c0b-463f-9eb0-6c8b4aa222cd"},{"type":"dialog","ID":"42349c15-7c0b-463f-9eb0-6c8b4aa222cd","delay":1.45,"actor":"andrea","content":["My arm?","Il braccio?"],"next":"ff04e793-7f73-43c5-a4a9-72bdba0ac9f0"},{"type":"dialog","ID":"ff04e793-7f73-43c5-a4a9-72bdba0ac9f0","delay":2.85,"actor":"ticket_inspector","content":["I don't want junkies on my bus!","Non voglio drogati a bordo del mio pullman!"],"next":"a4450af1-248c-4cb1-bf74-e2aa91d02395"},{"type":"dialog","ID":"7e59fd3c-cc60-4ae4-9f0c-6e52c56d67b3","delay":2.675,"actor":"ticket_inspector","content":["Let's see if you got this straight . . .","Vediamo se l'ha presa . . ."],"next":"1953b176-1255-4ddd-b345-edada41515e1"},{"type":"dialog","ID":"a4450af1-248c-4cb1-bf74-e2aa91d02395","delay":1.45,"actor":"andrea","content":["Ehm . . .","Ehm . . ."],"choices":["8f289f37-8ff3-4116-9713-5ffd03423863","2521d25a-53b5-473d-a0a5-b46e17d08b26","6990c3bd-052e-478f-adde-bd8095ce71a2"]},{"type":"dialog","ID":"1953b176-1255-4ddd-b345-edada41515e1","delay":4.15,"actor":"andrea","content":["I wasn't expect these boorish manners from a so well dressed man.","Non mi aspettavo tanta grezzura da un uomo cosi' ben vestito."],"next":"8407464a-e632-4a8e-8c85-ca3606ab8afa"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "a6e8a8b2-4a3e-48d9-ba6a-ab55bc83865c",
+      "delay": 2.375,
+      "actor": "ticket_inspector",
+      "content": [
+        "Ticket and arm, please",
+        "Biglietto e braccio, per cortesia"
+      ],
+      "next": "f5d3c87a-b48d-4fec-a38c-4f8f8e698de0"
+    },
+    {
+      "type": "dialog",
+      "ID": "f5d3c87a-b48d-4fec-a38c-4f8f8e698de0",
+      "delay": 1.25,
+      "actor": "andrea",
+      "content": [
+        "What?",
+        "Cosa?"
+      ],
+      "next": "aedf11c1-85a5-4ed5-8a4f-329ab0994ab0"
+    },
+    {
+      "type": "dialog",
+      "ID": "aedf11c1-85a5-4ed5-8a4f-329ab0994ab0",
+      "delay": 3.075,
+      "actor": "ticket_inspector",
+      "content": [
+        "Give me the ticket and show me your arm!",
+        "Mi dia il biglietto e mi mostri il braccio!"
+      ],
+      "next": "bbfdb4cd-936f-484f-9a94-39bfd5898ca8"
+    },
+    {
+      "type": "dialog",
+      "ID": "bbfdb4cd-936f-484f-9a94-39bfd5898ca8",
+      "delay": 1.425,
+      "actor": "andrea",
+      "content": [
+        "But . . .",
+        "Ma . . ."
+      ],
+      "choices": [
+        "ae160f0e-864a-492b-a4dd-646fb4700f7f",
+        "b3c53faa-237c-40d4-9ec2-a732748d7933"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "ae160f0e-864a-492b-a4dd-646fb4700f7f",
+      "title": "",
+      "content": [
+        "I don't have to take the bus!",
+        "Non devo prendere l'autobus!"
+      ],
+      "next": "9bea3757-95ab-4c11-8b24-72fe1f661674"
+    },
+    {
+      "type": "dialog",
+      "ID": "9bea3757-95ab-4c11-8b24-72fe1f661674",
+      "delay": 2.425,
+      "actor": "andrea",
+      "content": [
+        "I don't have to take the bus!",
+        "Non devo prendere l'autobus!"
+      ],
+      "next": "c037ec00-2357-4707-99c4-9f0275bac1e3"
+    },
+    {
+      "type": "dialog",
+      "ID": "c037ec00-2357-4707-99c4-9f0275bac1e3",
+      "delay": 2.875,
+      "actor": "ticket_inspector",
+      "content": [
+        "Good, I don't want junkies in my bus!",
+        "Meno male, non voglio drogati a bordo."
+      ],
+      "next": "d94e93e0-54e5-47ef-8a98-1ca3898574a7"
+    },
+    {
+      "type": "choice",
+      "ID": "8f289f37-8ff3-4116-9713-5ffd03423863",
+      "title": "",
+      "content": [
+        "Who are you?",
+        "Lei chi sarebbe?"
+      ],
+      "next": "313eef05-0187-43a2-a55b-ed9d374a79ad"
+    },
+    {
+      "type": "dialog",
+      "ID": "313eef05-0187-43a2-a55b-ed9d374a79ad",
+      "delay": 1.7000000000000002,
+      "actor": "andrea",
+      "content": [
+        "Who are you?",
+        "Lei chi sarebbe?"
+      ],
+      "next": "764eb440-efab-493b-bf66-ba60d3ac5b13"
+    },
+    {
+      "type": "dialog",
+      "ID": "764eb440-efab-493b-bf66-ba60d3ac5b13",
+      "delay": 1.25,
+      "actor": "ticket_inspector",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "next": "89c24f8b-61d8-462b-9a6a-7777038b21e5"
+    },
+    {
+      "type": "dialog",
+      "ID": "d94e93e0-54e5-47ef-8a98-1ca3898574a7",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "choices": [
+        "8f289f37-8ff3-4116-9713-5ffd03423863",
+        "2521d25a-53b5-473d-a0a5-b46e17d08b26",
+        "6990c3bd-052e-478f-adde-bd8095ce71a2"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "81401bb1-5399-4da9-9ca9-e69b1bb14558",
+      "delay": 2.9000000000000004,
+      "actor": "ticket_inspector",
+      "content": [
+        "Tie and hat don't tell you anything?",
+        "Cravatta e cappello non ti dicono nulla?"
+      ],
+      "next": "8d46cba0-71b9-4123-a2ce-a09a6a958adf"
+    },
+    {
+      "type": "choice",
+      "ID": "2521d25a-53b5-473d-a0a5-b46e17d08b26",
+      "title": "",
+      "content": [
+        "I am dressed poorly, I know it.",
+        "Sono vestito male, lo so."
+      ],
+      "next": "dc158bbb-f7c0-48cb-9565-0da49433df06"
+    },
+    {
+      "type": "dialog",
+      "ID": "dc158bbb-f7c0-48cb-9565-0da49433df06",
+      "delay": 2.4000000000000004,
+      "actor": "andrea",
+      "content": [
+        "I am dressed poosly, I know it.",
+        "Sono vestito male, lo so."
+      ],
+      "next": "8c9d064b-de4f-4460-a773-c1baf095f9df"
+    },
+    {
+      "type": "dialog",
+      "ID": "6ff7232f-bfa0-4daf-9fd6-eb64baac94cf",
+      "delay": 2.625,
+      "actor": "andrea",
+      "content": [
+        "Moreover, who are you to judge me?",
+        "E poi tu chi sei per giudicare?"
+      ],
+      "next": "81401bb1-5399-4da9-9ca9-e69b1bb14558"
+    },
+    {
+      "type": "dialog",
+      "ID": "89c24f8b-61d8-462b-9a6a-7777038b21e5",
+      "delay": 1.525,
+      "actor": "ticket_inspector",
+      "content": [
+        "Seriously?",
+        "Seriamente?"
+      ],
+      "next": "81401bb1-5399-4da9-9ca9-e69b1bb14558"
+    },
+    {
+      "type": "dialog",
+      "ID": "8d46cba0-71b9-4123-a2ce-a09a6a958adf",
+      "delay": 1.6,
+      "actor": "andrea",
+      "content": [
+        "That's class!",
+        "Che classe!"
+      ],
+      "next": "8407464a-e632-4a8e-8c85-ca3606ab8afa"
+    },
+    {
+      "type": "dialog",
+      "ID": "8407464a-e632-4a8e-8c85-ca3606ab8afa",
+      "delay": 2.5250000000000004,
+      "actor": "ticket_inspector",
+      "content": [
+        "I'm the bus ticket inspector.",
+        "Sono il controllore del pullman."
+      ],
+      "next": "94c24166-e4d4-42fe-b20f-419452137420"
+    },
+    {
+      "type": "dialog",
+      "ID": "94c24166-e4d4-42fe-b20f-419452137420",
+      "delay": 3.125,
+      "actor": "ticket_inspector",
+      "content": [
+        "Of the bus that goes to Pallotta, of course.",
+        "Del pullman che va a Pallotta, e' chiaro!"
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "6990c3bd-052e-478f-adde-bd8095ce71a2",
+      "title": "",
+      "content": [
+        "Why the buses are never in time?",
+        "Perche' i pullman non sono in orario?"
+      ],
+      "next": "f302d884-80ba-4cb0-aea1-90feb671b849"
+    },
+    {
+      "type": "dialog",
+      "ID": "f302d884-80ba-4cb0-aea1-90feb671b849",
+      "delay": 2.725,
+      "actor": "andrea",
+      "content": [
+        "Why the buses are never in time?",
+        "Perche' i pullman non sono in orario?"
+      ],
+      "next": "8a88391c-9216-454d-8e90-5e54fe6e6a8a"
+    },
+    {
+      "type": "dialog",
+      "ID": "8a88391c-9216-454d-8e90-5e54fe6e6a8a",
+      "delay": 3.0500000000000003,
+      "actor": "andrea",
+      "content": [
+        "There is a rule that says that, isn't it?",
+        "C'e' una qualche regola che lo impedisce?"
+      ],
+      "next": "ac03d7d0-2d17-4c56-af1f-7ec38493ac76"
+    },
+    {
+      "type": "dialog",
+      "ID": "ac03d7d0-2d17-4c56-af1f-7ec38493ac76",
+      "delay": 1.375,
+      "actor": "ticket_inspector",
+      "content": [
+        "Correct.",
+        "Esatto."
+      ],
+      "next": "fa8a32b4-260f-49e0-a5a1-88feee01b0cb"
+    },
+    {
+      "type": "dialog",
+      "ID": "fa8a32b4-260f-49e0-a5a1-88feee01b0cb",
+      "delay": 4.6,
+      "actor": "ticket_inspector",
+      "content": [
+        "And there is another rule that says that you should mind your own fuckin' business.",
+        "E c'e' anche una regola che dice che devi farti i cazzi tuoi."
+      ],
+      "next": "7e59fd3c-cc60-4ae4-9f0c-6e52c56d67b3"
+    },
+    {
+      "type": "dialog",
+      "ID": "8c9d064b-de4f-4460-a773-c1baf095f9df",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "But I am not a junkie!",
+        "Ma non sono un drogato!"
+      ],
+      "next": "6ff7232f-bfa0-4daf-9fd6-eb64baac94cf"
+    },
+    {
+      "type": "choice",
+      "ID": "b3c53faa-237c-40d4-9ec2-a732748d7933",
+      "title": "",
+      "content": [
+        "My arm?",
+        "Il braccio?"
+      ],
+      "next": "42349c15-7c0b-463f-9eb0-6c8b4aa222cd"
+    },
+    {
+      "type": "dialog",
+      "ID": "42349c15-7c0b-463f-9eb0-6c8b4aa222cd",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "My arm?",
+        "Il braccio?"
+      ],
+      "next": "ff04e793-7f73-43c5-a4a9-72bdba0ac9f0"
+    },
+    {
+      "type": "dialog",
+      "ID": "ff04e793-7f73-43c5-a4a9-72bdba0ac9f0",
+      "delay": 2.85,
+      "actor": "ticket_inspector",
+      "content": [
+        "I don't want junkies on my bus!",
+        "Non voglio drogati a bordo del mio pullman!"
+      ],
+      "next": "a4450af1-248c-4cb1-bf74-e2aa91d02395"
+    },
+    {
+      "type": "dialog",
+      "ID": "7e59fd3c-cc60-4ae4-9f0c-6e52c56d67b3",
+      "delay": 2.675,
+      "actor": "ticket_inspector",
+      "content": [
+        "Let's see if you got this straight . . .",
+        "Vediamo se l'ha presa . . ."
+      ],
+      "next": "1953b176-1255-4ddd-b345-edada41515e1"
+    },
+    {
+      "type": "dialog",
+      "ID": "a4450af1-248c-4cb1-bf74-e2aa91d02395",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "choices": [
+        "8f289f37-8ff3-4116-9713-5ffd03423863",
+        "2521d25a-53b5-473d-a0a5-b46e17d08b26",
+        "6990c3bd-052e-478f-adde-bd8095ce71a2"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "1953b176-1255-4ddd-b345-edada41515e1",
+      "delay": 4.15,
+      "actor": "andrea",
+      "content": [
+        "I wasn't expect these boorish manners from a so well dressed man.",
+        "Non mi aspettavo tanta grezzura da un uomo cosi' ben vestito."
+      ],
+      "next": "8407464a-e632-4a8e-8c85-ca3606ab8afa"
+    }
+  ]
+}

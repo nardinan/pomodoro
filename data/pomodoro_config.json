@@ -1,333 +1,409 @@
 {
-	"game":"pomodoro",
-	"author":"Andrea Nardinocchi and Luna Paciucci",
-	"email":"andrea@nardinan.it",
-	"date":"22 August 2016",
-	"language":1,
-	"volume":1.772549,
-	"width":1024,
-	"height":576,
-	"fullscreen":true,
-	"fonts":[{
-			"font":"raleway_font",
-			"size":40
-		},{
-			"font":"raleway_font",
-			"size":40,
-			"outline":1
-		},{
-			"font":"raleway_font",
-			"size":50
-		},{
-			"font":"raleway_font",
-			"size":60
-		},{
-			"font":"kingthings_font",
-			"size":40
-		},{
-			"font":"kingthings_font",
-			"size":50
-		},{
-			"font":"kingthings_font",
-			"size":60
-		},{
-			"font":"psycho_font",
-			"size":50
-		},{
-			"font":"psycho_font",
-			"size":60
-		},{
-			"font":"psycho_font",
-			"size":70
-		}],
-	"characters":[{
-			"label":"andrii",
-			"link":"andrii_character",
-			"controllable":false,
-			"script":"ai_andrii"
-		},{
-			"label":"yuriy",
-			"link":"yuriy_character",
-			"controllable":false,
-			"script":"ai_yuriy"
-		},{
-			"label":"luca",
-			"link":"luca_character",
-			"controllable":true,
-			"script":"ai_luca"
-		},{
-			"label":"andrea",
-			"link":"andrea_character",
-			"controllable":true
-		},{
-			"label":"luna",
-			"link":"luna_character",
-			"controllable":false,
-			"script":"ai_luna"
-		},{
-			"label":"baker",
-			"link":"baker_character",
-			"controllable":false,
-			"script":"ai_baker"
-		},{
-			"label":"maria",
-			"link":"maria_character",
-			"controllable":false,
-			"script":"ai_maria"
-		},{
-			"label":"antonietta",
-			"link":"antonietta_character",
-			"controllable":false,
-			"script":"ai_antonietta"
-		},{
-			"label":"massimo",
-			"link":"massimo_character",
-			"controllable":false,
-			"script":"ai_massimo"
-		},{
-			"label":"siri",
-			"link":"siri_character",
-			"controllable":false
-		},{
-			"label":"policeman",
-			"link":"policeman_character",
-			"controllable":false,
-			"script":"ai_policeman"
-		},{
-			"label":"writer",
-			"link":"writer_character",
-			"controllable":false,
-			"script":"ai_writer"
-		},{
-			"label":"anna",
-			"link":"anna_character",
-			"controllable":false,
-			"script":"ai_anna"
-		},{
-			"label":"jamal",
-			"link":"jamal_character",
-			"controllable":false,
-			"script":"ai_jamal"
-		},{
-			"label":"nerd",
-			"link":"nerd_character",
-			"controllable":false,
-			"script":"ai_nerd"
-		},{
-			"label":"valerio",
-			"link":"valerio_character",
-			"controllable":false,
-			"script":"ai_valerio"
-		},{
-			"label":"marta",
-			"link":"marta_character",
-			"controllable":false,
-			"script":"ai_marta"
-		},{
-			"label":"gianni",
-			"link":"gianni_character",
-			"controllable":false,
-			"script":"ai_gianni"
-		},{
-			"label":"serena",
-			"link":"serena_character",
-			"controllable":false,
-			"script":"ai_serena"
-		},{
-			"label":"roberto",
-			"link":"roberto_character",
-			"controllable":false,
-			"script":"ai_roberto"
-		},{
-			"label":"bruno",
-			"link":"bruno_character",
-			"controllable":false,
-			"script":"ai_bruno"
-		},{
-			"label":"mariano",
-			"link":"mariano_character",
-			"controllable":false,
-			"script":"ai_mariano"
-		},{
-			"label":"federico",
-			"link":"federico_character",
-			"controllable":false,
-			"script":"ai_federico"
-		},{
-			"label":"chaos",
-			"link":"chaos_character",
-			"controllable":false,
-			"script":"ai_chaos"
-		},{
-			"label":"technician",
-			"link":"technician_character",
-			"controllable":false,
-			"script":"ai_technician"
-		},{
-			"label":"ticket_inspector",
-			"link":"ticket_inspector_character",
-			"controllable":false,
-			"script":"ai_ticket_inspector"
-		},{
-			"label":"letizia",
-			"link":"letizia_character",
-			"controllable":false,
-			"script":"ai_letizia"
-		},{
-			"label":"mustafa",
-			"link":"mustafa_character",
-			"controllable":false,
-			"script":"ai_mustafa"
-		},{
-			"label":"cristiano",
-			"link":"cristiano_character",
-			"controllable":false
-		},{
-			"label":"caprini",
-			"link":"caprini_character",
-			"controllable":false,
-			"script":"ai_caprini"
-		},{
-			"label":"cellarA",
-			"link":"cellar_character",
-			"controllable":false
-		},{
-			"label":"cellarB",
-			"link":"cellar_character",
-			"controllable":false
-		},{
-			"label":"private_albert",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_albert"
-		},{
-			"label":"private_barry",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_barry"
-		},{
-			"label":"private_chris",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_chris"
-		},{
-			"label":"private_joseph",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_joseph"
-		},{
-			"label":"private_brad",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_brad"
-		},{
-			"label":"private_enrico",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_enrico"
-		},{
-			"label":"private_richard",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_richard"
-		},{
-			"label":"private_kennedy",
-			"link":"private_character",
-			"controllable":false,
-			"script":"ai_private_kennedy"
-		},{
-			"label":"bistoni",
-			"link":"bistoni_character",
-			"controllable":false,
-			"script":"ai_bistoni"
-		}],
-	"landscapes":[{
-			"label":"canama",
-			"link":"canama_landscape"
-		},{
-			"label":"cern",
-			"link":"cern_landscape"
-		},{
-			"label":"stairs",
-			"link":"stairs_landscape"
-		},{
-			"label":"lupattelli",
-			"link":"lupattelli_landscape"
-		},{
-			"label":"garibaldi",
-			"link":"garibaldi_landscape"
-		},{
-			"label":"fortebraccio",
-			"link":"fortebraccio_landscape"
-		},{
-			"label":"gallenga",
-			"link":"gallenga_landscape"
-		},{
-			"label":"november",
-			"link":"november_landscape"
-		},{
-			"label":"innamorati",
-			"link":"innamorati_landscape"
-		},{
-			"label":"vannucci",
-			"link":"vannucci_landscape"
-		},{
-			"label":"med",
-			"link":"med_landscape"
-		},{
-			"label":"mania",
-			"link":"mania_landscape"
-		},{
-			"label":"priori",
-			"link":"priori_landscape"
-		},{
-			"label":"elfo",
-			"link":"elfo_landscape"
-		},{
-			"label":"francesco",
-			"link":"francesco_landscape"
-		},{
-			"label":"unipgA",
-			"link":"unipgA_landscape"
-		},{
-			"label":"unipgB",
-			"link":"unipgB_landscape"
-		},{
-			"label":"unipgC",
-			"link":"unipgC_landscape"
-		},{
-			"label":"temple",
-			"link":"temple_landscape"
-		},{
-			"label":"panorama",
-			"link":"panorama_landscape"
-		},{
-			"label":"fologna",
-			"link":"fologna_landscape"
-		},{
-			"label":"cabin",
-			"link":"cabin_landscape"
-		}],
-	"ui":{
-		"field":{
-			"size":255
-		},
-		"checkbox":{
-			"checked":"checkbox_selected_C",
-			"unchecked":"checkbox_active_C"
-		},
-		"list":{
-			"selected_G":255,
-			"selected_A":60,
-			"over_R":255,
-			"over_G":255,
-			"over_B":255,
-			"over_A":20
-		},
-		"scroll":{
-			"scroll":"scroll_toggle",
-			"pointer":"scroll_pointer",
-			"width":15
-		}
-	}
+  "game": "pomodoro",
+  "author": "Andrea Nardinocchi and Luna Paciucci",
+  "email": "andrea@nardinan.it",
+  "date": "22 August 2016",
+  "language": 1,
+  "volume": 1.772549,
+  "width": 1024,
+  "height": 576,
+  "fullscreen": true,
+  "fonts": [
+    {
+      "font": "raleway_font",
+      "size": 40
+    },
+    {
+      "font": "raleway_font",
+      "size": 40,
+      "outline": 1
+    },
+    {
+      "font": "raleway_font",
+      "size": 50
+    },
+    {
+      "font": "raleway_font",
+      "size": 60
+    },
+    {
+      "font": "kingthings_font",
+      "size": 40
+    },
+    {
+      "font": "kingthings_font",
+      "size": 50
+    },
+    {
+      "font": "kingthings_font",
+      "size": 60
+    },
+    {
+      "font": "psycho_font",
+      "size": 50
+    },
+    {
+      "font": "psycho_font",
+      "size": 60
+    },
+    {
+      "font": "psycho_font",
+      "size": 70
+    }
+  ],
+  "characters": [
+    {
+      "label": "andrii",
+      "link": "andrii_character",
+      "controllable": false,
+      "script": "ai_andrii"
+    },
+    {
+      "label": "yuriy",
+      "link": "yuriy_character",
+      "controllable": false,
+      "script": "ai_yuriy"
+    },
+    {
+      "label": "luca",
+      "link": "luca_character",
+      "controllable": true,
+      "script": "ai_luca"
+    },
+    {
+      "label": "andrea",
+      "link": "andrea_character",
+      "controllable": true
+    },
+    {
+      "label": "luna",
+      "link": "luna_character",
+      "controllable": false,
+      "script": "ai_luna"
+    },
+    {
+      "label": "baker",
+      "link": "baker_character",
+      "controllable": false,
+      "script": "ai_baker"
+    },
+    {
+      "label": "maria",
+      "link": "maria_character",
+      "controllable": false,
+      "script": "ai_maria"
+    },
+    {
+      "label": "antonietta",
+      "link": "antonietta_character",
+      "controllable": false,
+      "script": "ai_antonietta"
+    },
+    {
+      "label": "massimo",
+      "link": "massimo_character",
+      "controllable": false,
+      "script": "ai_massimo"
+    },
+    {
+      "label": "siri",
+      "link": "siri_character",
+      "controllable": false
+    },
+    {
+      "label": "policeman",
+      "link": "policeman_character",
+      "controllable": false,
+      "script": "ai_policeman"
+    },
+    {
+      "label": "writer",
+      "link": "writer_character",
+      "controllable": false,
+      "script": "ai_writer"
+    },
+    {
+      "label": "anna",
+      "link": "anna_character",
+      "controllable": false,
+      "script": "ai_anna"
+    },
+    {
+      "label": "jamal",
+      "link": "jamal_character",
+      "controllable": false,
+      "script": "ai_jamal"
+    },
+    {
+      "label": "nerd",
+      "link": "nerd_character",
+      "controllable": false,
+      "script": "ai_nerd"
+    },
+    {
+      "label": "valerio",
+      "link": "valerio_character",
+      "controllable": false,
+      "script": "ai_valerio"
+    },
+    {
+      "label": "marta",
+      "link": "marta_character",
+      "controllable": false,
+      "script": "ai_marta"
+    },
+    {
+      "label": "gianni",
+      "link": "gianni_character",
+      "controllable": false,
+      "script": "ai_gianni"
+    },
+    {
+      "label": "serena",
+      "link": "serena_character",
+      "controllable": false,
+      "script": "ai_serena"
+    },
+    {
+      "label": "roberto",
+      "link": "roberto_character",
+      "controllable": false,
+      "script": "ai_roberto"
+    },
+    {
+      "label": "bruno",
+      "link": "bruno_character",
+      "controllable": false,
+      "script": "ai_bruno"
+    },
+    {
+      "label": "mariano",
+      "link": "mariano_character",
+      "controllable": false,
+      "script": "ai_mariano"
+    },
+    {
+      "label": "federico",
+      "link": "federico_character",
+      "controllable": false,
+      "script": "ai_federico"
+    },
+    {
+      "label": "chaos",
+      "link": "chaos_character",
+      "controllable": false,
+      "script": "ai_chaos"
+    },
+    {
+      "label": "technician",
+      "link": "technician_character",
+      "controllable": false,
+      "script": "ai_technician"
+    },
+    {
+      "label": "ticket_inspector",
+      "link": "ticket_inspector_character",
+      "controllable": false,
+      "script": "ai_ticket_inspector"
+    },
+    {
+      "label": "letizia",
+      "link": "letizia_character",
+      "controllable": false,
+      "script": "ai_letizia"
+    },
+    {
+      "label": "mustafa",
+      "link": "mustafa_character",
+      "controllable": false,
+      "script": "ai_mustafa"
+    },
+    {
+      "label": "cristiano",
+      "link": "cristiano_character",
+      "controllable": false
+    },
+    {
+      "label": "caprini",
+      "link": "caprini_character",
+      "controllable": false,
+      "script": "ai_caprini"
+    },
+    {
+      "label": "cellarA",
+      "link": "cellar_character",
+      "controllable": false
+    },
+    {
+      "label": "cellarB",
+      "link": "cellar_character",
+      "controllable": false
+    },
+    {
+      "label": "private_albert",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_albert"
+    },
+    {
+      "label": "private_barry",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_barry"
+    },
+    {
+      "label": "private_chris",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_chris"
+    },
+    {
+      "label": "private_joseph",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_joseph"
+    },
+    {
+      "label": "private_brad",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_brad"
+    },
+    {
+      "label": "private_enrico",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_enrico"
+    },
+    {
+      "label": "private_richard",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_richard"
+    },
+    {
+      "label": "private_kennedy",
+      "link": "private_character",
+      "controllable": false,
+      "script": "ai_private_kennedy"
+    },
+    {
+      "label": "bistoni",
+      "link": "bistoni_character",
+      "controllable": false,
+      "script": "ai_bistoni"
+    }
+  ],
+  "landscapes": [
+    {
+      "label": "canama",
+      "link": "canama_landscape"
+    },
+    {
+      "label": "cern",
+      "link": "cern_landscape"
+    },
+    {
+      "label": "stairs",
+      "link": "stairs_landscape"
+    },
+    {
+      "label": "lupattelli",
+      "link": "lupattelli_landscape"
+    },
+    {
+      "label": "garibaldi",
+      "link": "garibaldi_landscape"
+    },
+    {
+      "label": "fortebraccio",
+      "link": "fortebraccio_landscape"
+    },
+    {
+      "label": "gallenga",
+      "link": "gallenga_landscape"
+    },
+    {
+      "label": "november",
+      "link": "november_landscape"
+    },
+    {
+      "label": "innamorati",
+      "link": "innamorati_landscape"
+    },
+    {
+      "label": "vannucci",
+      "link": "vannucci_landscape"
+    },
+    {
+      "label": "med",
+      "link": "med_landscape"
+    },
+    {
+      "label": "mania",
+      "link": "mania_landscape"
+    },
+    {
+      "label": "priori",
+      "link": "priori_landscape"
+    },
+    {
+      "label": "elfo",
+      "link": "elfo_landscape"
+    },
+    {
+      "label": "francesco",
+      "link": "francesco_landscape"
+    },
+    {
+      "label": "unipgA",
+      "link": "unipgA_landscape"
+    },
+    {
+      "label": "unipgB",
+      "link": "unipgB_landscape"
+    },
+    {
+      "label": "unipgC",
+      "link": "unipgC_landscape"
+    },
+    {
+      "label": "temple",
+      "link": "temple_landscape"
+    },
+    {
+      "label": "panorama",
+      "link": "panorama_landscape"
+    },
+    {
+      "label": "fologna",
+      "link": "fologna_landscape"
+    },
+    {
+      "label": "cabin",
+      "link": "cabin_landscape"
+    }
+  ],
+  "ui": {
+    "field": {
+      "size": 255
+    },
+    "checkbox": {
+      "checked": "checkbox_selected_C",
+      "unchecked": "checkbox_active_C"
+    },
+    "list": {
+      "selected_G": 255,
+      "selected_A": 60,
+      "over_R": 255,
+      "over_G": 255,
+      "over_B": 255,
+      "over_A": 20
+    },
+    "scroll": {
+      "scroll": "scroll_toggle",
+      "pointer": "scroll_pointer",
+      "width": 15
+    }
+  }
 }

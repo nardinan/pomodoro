@@ -1,1 +1,348 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"2b2e815b-d8ec-41d5-9a3a-21446bdd6543","delay":1.625,"actor":"baker","content":["Do I know you?","Ti conosco?"],"next":"78147eff-361a-40b8-9f0a-166d0c2a54c9"},{"type":"dialog","ID":"78147eff-361a-40b8-9f0a-166d0c2a54c9","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["7efd8eca-3479-495f-9b90-c0e48be978a5","dc2b789d-0ec0-4f4a-9913-89765c9c79c0","8ea2c6b6-444b-4c57-b39b-f456ca8f1f6d"]},{"type":"choice","ID":"7efd8eca-3479-495f-9b90-c0e48be978a5","title":"","content":["Are we friends on Facebook?","Ti ho su Facebook?"],"next":"aeae7afc-7933-4eb7-aed6-be16d17a020e"},{"type":"choice","ID":"8ea2c6b6-444b-4c57-b39b-f456ca8f1f6d","title":"","content":["What is this smell?","Cos'e' quest'odore?"],"next":"42b8f140-6b52-4b8a-ae6c-0e0ce91bff76"},{"type":"choice","ID":"dc2b789d-0ec0-4f4a-9913-89765c9c79c0","title":"","content":["No, who are you?","No, chi sei?"],"next":"e5cc2a41-334c-4300-af91-eef95c9d1907"},{"type":"dialog","ID":"aeae7afc-7933-4eb7-aed6-be16d17a020e","delay":2.125,"actor":"andrea","content":["Are we friends on Facebook?","Ti ho su Facebook?"],"next":"32b9d21f-9dd5-4b67-b004-15036ec8a9e1"},{"type":"dialog","ID":"e5cc2a41-334c-4300-af91-eef95c9d1907","delay":1.7000000000000002,"actor":"andrea","content":["No, who are you?","No, chi sei?"],"next":"5d33d5d2-1086-4a8c-98d9-2172d77ca55b"},{"type":"dialog","ID":"42b8f140-6b52-4b8a-ae6c-0e0ce91bff76","delay":1.9500000000000002,"actor":"andrea","content":["What is this smell?","Cos'e' quest'odore?"],"next":"a47ea262-0b53-4d97-a59e-47a6311ea04c"},{"type":"dialog","ID":"a47ea262-0b53-4d97-a59e-47a6311ea04c","delay":3.2,"actor":"andrea","content":["It is a pungent and incredibly disgusting smell!","E' pungente e incredibilmente nauseante!"],"next":"a842773d-f00f-4875-b045-8d6471f0f5e4"},{"type":"dialog","ID":"a842773d-f00f-4875-b045-8d6471f0f5e4","delay":2.95,"actor":"baker","content":["Recently I had no time to wash myself.","Di recente non ho avuto modo di lavarmi."],"next":"a13ad666-696f-41aa-a2fd-8cf89a5ce572"},{"type":"dialog","ID":"a13ad666-696f-41aa-a2fd-8cf89a5ce572","delay":2.2,"actor":"andrea","content":["Cool, but in the sad way.","Bene, ma non benissimo."],"next":"f261022e-f155-4dc0-b5fb-c03360e6c2c6"},{"type":"dialog","ID":"5d33d5d2-1086-4a8c-98d9-2172d77ca55b","delay":1.925,"actor":"baker","content":["They call me Mimmo.","Mi chiamano Mimmo."],"next":"0dfad57d-bcf4-4a7d-bfda-d7306e76d734"},{"type":"dialog","ID":"0dfad57d-bcf4-4a7d-bfda-d7306e76d734","delay":1.9,"actor":"baker","content":["Mimmo the baker!","Mimmo il panettiere!"],"next":"583484a7-9a87-4c6c-8e5d-6366548b6510"},{"type":"dialog","ID":"583484a7-9a87-4c6c-8e5d-6366548b6510","delay":1.425,"actor":"andrea","content":["Baker?","Panettiere?"],"next":"b84445a3-0f4a-4568-8a38-79126d0cb2e9"},{"type":"dialog","ID":"b84445a3-0f4a-4568-8a38-79126d0cb2e9","delay":3.75,"actor":"baker","content":["I was sure you were interested in my job . . .","Ero sicuro avresti rivolto la tua attenzione al mio lavoro . . ."],"next":"53bc766f-1b8d-4006-b5d7-861df5266346"},{"type":"dialog","ID":"53bc766f-1b8d-4006-b5d7-861df5266346","delay":3.5,"actor":"baker","content":[". . . you look like a lover of complex carbs.",". . . hai la faccia da amante di carboidrati complessi."],"next":"8ee24dda-c5d0-46c0-b476-b841a365c860"},{"type":"dialog","ID":"8ee24dda-c5d0-46c0-b476-b841a365c860","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["01af01dd-c0bb-489c-9635-4cc6379faf6e","45bd062e-9193-4e5a-9a96-19a8683321e5"]},{"type":"choice","ID":"01af01dd-c0bb-489c-9635-4cc6379faf6e","title":"","content":["You are insulting me, mate.","Mi sembra un'offesa."],"next":"902ade11-a14d-4ed3-9e4a-b53449cfa371"},{"type":"choice","ID":"45bd062e-9193-4e5a-9a96-19a8683321e5","title":"","content":["I put on a little weight.","Ho messo su panzetta."],"next":"fb6ca1ec-a550-4f3f-a067-91ce748b1dfa"},{"type":"dialog","ID":"902ade11-a14d-4ed3-9e4a-b53449cfa371","delay":2.175,"actor":"andrea","content":["You are insulting me, mate.","Mi sembra un'offesa."],"next":"1fc2cd95-df79-43e7-8c7b-511b3c2b3e13"},{"type":"dialog","ID":"fb6ca1ec-a550-4f3f-a067-91ce748b1dfa","delay":2.1500000000000004,"actor":"andrea","content":["I put on a little weight.","Ho messo su panzetta."],"next":"4f6d3201-78f1-4cec-9b58-acedf1be4af9"},{"type":"dialog","ID":"1fc2cd95-df79-43e7-8c7b-511b3c2b3e13","delay":1.475,"actor":"baker","content":["Please!","Ma figurati!"],"next":"4f6d3201-78f1-4cec-9b58-acedf1be4af9"},{"type":"dialog","ID":"4f6d3201-78f1-4cec-9b58-acedf1be4af9","delay":2.175,"actor":"baker","content":["It's a great thing . . .","E' una cosa buona . . ."],"next":"bf5cde55-4fa0-4318-ac6c-ccea9f5f37fd"},{"type":"dialog","ID":"32b9d21f-9dd5-4b67-b004-15036ec8a9e1","delay":1.55,"actor":"baker","content":["You're right!","Ma certo!"],"next":"39d29561-4302-42af-82ed-846dc6a7a304"},{"type":"dialog","ID":"39d29561-4302-42af-82ed-846dc6a7a304","delay":3.375,"actor":"baker","content":["You're the blond guy with the stupid-look on his face!","Sei quello biondo con la faccia da pirla!"],"next":"63abe11b-d338-4b88-a407-0aadc9929a40"},{"type":"dialog","ID":"63abe11b-d338-4b88-a407-0aadc9929a40","delay":1.9500000000000002,"actor":"andrea","content":["I am not blonde!","Ma io non sono biondo!"],"next":"6106c53a-9779-4b7f-bb27-d40f08c70c35"},{"type":"dialog","ID":"6106c53a-9779-4b7f-bb27-d40f08c70c35","delay":2.6500000000000004,"actor":"baker","content":["So I clearly recall your face!","Allora ricordo fortemente la faccia!"],"next":"0a43eef3-8ee4-4a84-821b-e9f5b6075b3a"},{"type":"dialog","ID":"bf5cde55-4fa0-4318-ac6c-ccea9f5f37fd","delay":2.075,"actor":"baker","content":["A great thing for me.","Una cosa buona per me."],"next":null},{"type":"dialog","ID":"f261022e-f155-4dc0-b5fb-c03360e6c2c6","delay":1.45,"actor":"baker","content":["Uhm . . .","Uhm . . ."],"next":"672245c6-0fbd-4a65-bda9-2bf3d99d713f"},{"type":"dialog","ID":"672245c6-0fbd-4a65-bda9-2bf3d99d713f","delay":3.0500000000000003,"actor":"baker","content":["I am sure I saw you already somewhere!","Sono sicuro d'averti visto da qualche parte!"],"next":"aeae7afc-7933-4eb7-aed6-be16d17a020e"},{"type":"dialog","ID":"0a43eef3-8ee4-4a84-821b-e9f5b6075b3a","delay":1.8250000000000002,"actor":"baker","content":["Moreover . . .","Anche perche' . . ."],"next":"53bc766f-1b8d-4006-b5d7-861df5266346"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "2b2e815b-d8ec-41d5-9a3a-21446bdd6543",
+      "delay": 1.625,
+      "actor": "baker",
+      "content": [
+        "Do I know you?",
+        "Ti conosco?"
+      ],
+      "next": "78147eff-361a-40b8-9f0a-166d0c2a54c9"
+    },
+    {
+      "type": "dialog",
+      "ID": "78147eff-361a-40b8-9f0a-166d0c2a54c9",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "7efd8eca-3479-495f-9b90-c0e48be978a5",
+        "dc2b789d-0ec0-4f4a-9913-89765c9c79c0",
+        "8ea2c6b6-444b-4c57-b39b-f456ca8f1f6d"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "7efd8eca-3479-495f-9b90-c0e48be978a5",
+      "title": "",
+      "content": [
+        "Are we friends on Facebook?",
+        "Ti ho su Facebook?"
+      ],
+      "next": "aeae7afc-7933-4eb7-aed6-be16d17a020e"
+    },
+    {
+      "type": "choice",
+      "ID": "8ea2c6b6-444b-4c57-b39b-f456ca8f1f6d",
+      "title": "",
+      "content": [
+        "What is this smell?",
+        "Cos'e' quest'odore?"
+      ],
+      "next": "42b8f140-6b52-4b8a-ae6c-0e0ce91bff76"
+    },
+    {
+      "type": "choice",
+      "ID": "dc2b789d-0ec0-4f4a-9913-89765c9c79c0",
+      "title": "",
+      "content": [
+        "No, who are you?",
+        "No, chi sei?"
+      ],
+      "next": "e5cc2a41-334c-4300-af91-eef95c9d1907"
+    },
+    {
+      "type": "dialog",
+      "ID": "aeae7afc-7933-4eb7-aed6-be16d17a020e",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "Are we friends on Facebook?",
+        "Ti ho su Facebook?"
+      ],
+      "next": "32b9d21f-9dd5-4b67-b004-15036ec8a9e1"
+    },
+    {
+      "type": "dialog",
+      "ID": "e5cc2a41-334c-4300-af91-eef95c9d1907",
+      "delay": 1.7000000000000002,
+      "actor": "andrea",
+      "content": [
+        "No, who are you?",
+        "No, chi sei?"
+      ],
+      "next": "5d33d5d2-1086-4a8c-98d9-2172d77ca55b"
+    },
+    {
+      "type": "dialog",
+      "ID": "42b8f140-6b52-4b8a-ae6c-0e0ce91bff76",
+      "delay": 1.9500000000000002,
+      "actor": "andrea",
+      "content": [
+        "What is this smell?",
+        "Cos'e' quest'odore?"
+      ],
+      "next": "a47ea262-0b53-4d97-a59e-47a6311ea04c"
+    },
+    {
+      "type": "dialog",
+      "ID": "a47ea262-0b53-4d97-a59e-47a6311ea04c",
+      "delay": 3.2,
+      "actor": "andrea",
+      "content": [
+        "It is a pungent and incredibly disgusting smell!",
+        "E' pungente e incredibilmente nauseante!"
+      ],
+      "next": "a842773d-f00f-4875-b045-8d6471f0f5e4"
+    },
+    {
+      "type": "dialog",
+      "ID": "a842773d-f00f-4875-b045-8d6471f0f5e4",
+      "delay": 2.95,
+      "actor": "baker",
+      "content": [
+        "Recently I had no time to wash myself.",
+        "Di recente non ho avuto modo di lavarmi."
+      ],
+      "next": "a13ad666-696f-41aa-a2fd-8cf89a5ce572"
+    },
+    {
+      "type": "dialog",
+      "ID": "a13ad666-696f-41aa-a2fd-8cf89a5ce572",
+      "delay": 2.2,
+      "actor": "andrea",
+      "content": [
+        "Cool, but in the sad way.",
+        "Bene, ma non benissimo."
+      ],
+      "next": "f261022e-f155-4dc0-b5fb-c03360e6c2c6"
+    },
+    {
+      "type": "dialog",
+      "ID": "5d33d5d2-1086-4a8c-98d9-2172d77ca55b",
+      "delay": 1.925,
+      "actor": "baker",
+      "content": [
+        "They call me Mimmo.",
+        "Mi chiamano Mimmo."
+      ],
+      "next": "0dfad57d-bcf4-4a7d-bfda-d7306e76d734"
+    },
+    {
+      "type": "dialog",
+      "ID": "0dfad57d-bcf4-4a7d-bfda-d7306e76d734",
+      "delay": 1.9,
+      "actor": "baker",
+      "content": [
+        "Mimmo the baker!",
+        "Mimmo il panettiere!"
+      ],
+      "next": "583484a7-9a87-4c6c-8e5d-6366548b6510"
+    },
+    {
+      "type": "dialog",
+      "ID": "583484a7-9a87-4c6c-8e5d-6366548b6510",
+      "delay": 1.425,
+      "actor": "andrea",
+      "content": [
+        "Baker?",
+        "Panettiere?"
+      ],
+      "next": "b84445a3-0f4a-4568-8a38-79126d0cb2e9"
+    },
+    {
+      "type": "dialog",
+      "ID": "b84445a3-0f4a-4568-8a38-79126d0cb2e9",
+      "delay": 3.75,
+      "actor": "baker",
+      "content": [
+        "I was sure you were interested in my job . . .",
+        "Ero sicuro avresti rivolto la tua attenzione al mio lavoro . . ."
+      ],
+      "next": "53bc766f-1b8d-4006-b5d7-861df5266346"
+    },
+    {
+      "type": "dialog",
+      "ID": "53bc766f-1b8d-4006-b5d7-861df5266346",
+      "delay": 3.5,
+      "actor": "baker",
+      "content": [
+        ". . . you look like a lover of complex carbs.",
+        ". . . hai la faccia da amante di carboidrati complessi."
+      ],
+      "next": "8ee24dda-c5d0-46c0-b476-b841a365c860"
+    },
+    {
+      "type": "dialog",
+      "ID": "8ee24dda-c5d0-46c0-b476-b841a365c860",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "01af01dd-c0bb-489c-9635-4cc6379faf6e",
+        "45bd062e-9193-4e5a-9a96-19a8683321e5"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "01af01dd-c0bb-489c-9635-4cc6379faf6e",
+      "title": "",
+      "content": [
+        "You are insulting me, mate.",
+        "Mi sembra un'offesa."
+      ],
+      "next": "902ade11-a14d-4ed3-9e4a-b53449cfa371"
+    },
+    {
+      "type": "choice",
+      "ID": "45bd062e-9193-4e5a-9a96-19a8683321e5",
+      "title": "",
+      "content": [
+        "I put on a little weight.",
+        "Ho messo su panzetta."
+      ],
+      "next": "fb6ca1ec-a550-4f3f-a067-91ce748b1dfa"
+    },
+    {
+      "type": "dialog",
+      "ID": "902ade11-a14d-4ed3-9e4a-b53449cfa371",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "You are insulting me, mate.",
+        "Mi sembra un'offesa."
+      ],
+      "next": "1fc2cd95-df79-43e7-8c7b-511b3c2b3e13"
+    },
+    {
+      "type": "dialog",
+      "ID": "fb6ca1ec-a550-4f3f-a067-91ce748b1dfa",
+      "delay": 2.1500000000000004,
+      "actor": "andrea",
+      "content": [
+        "I put on a little weight.",
+        "Ho messo su panzetta."
+      ],
+      "next": "4f6d3201-78f1-4cec-9b58-acedf1be4af9"
+    },
+    {
+      "type": "dialog",
+      "ID": "1fc2cd95-df79-43e7-8c7b-511b3c2b3e13",
+      "delay": 1.475,
+      "actor": "baker",
+      "content": [
+        "Please!",
+        "Ma figurati!"
+      ],
+      "next": "4f6d3201-78f1-4cec-9b58-acedf1be4af9"
+    },
+    {
+      "type": "dialog",
+      "ID": "4f6d3201-78f1-4cec-9b58-acedf1be4af9",
+      "delay": 2.175,
+      "actor": "baker",
+      "content": [
+        "It's a great thing . . .",
+        "E' una cosa buona . . ."
+      ],
+      "next": "bf5cde55-4fa0-4318-ac6c-ccea9f5f37fd"
+    },
+    {
+      "type": "dialog",
+      "ID": "32b9d21f-9dd5-4b67-b004-15036ec8a9e1",
+      "delay": 1.55,
+      "actor": "baker",
+      "content": [
+        "You're right!",
+        "Ma certo!"
+      ],
+      "next": "39d29561-4302-42af-82ed-846dc6a7a304"
+    },
+    {
+      "type": "dialog",
+      "ID": "39d29561-4302-42af-82ed-846dc6a7a304",
+      "delay": 3.375,
+      "actor": "baker",
+      "content": [
+        "You're the blond guy with the stupid-look on his face!",
+        "Sei quello biondo con la faccia da pirla!"
+      ],
+      "next": "63abe11b-d338-4b88-a407-0aadc9929a40"
+    },
+    {
+      "type": "dialog",
+      "ID": "63abe11b-d338-4b88-a407-0aadc9929a40",
+      "delay": 1.9500000000000002,
+      "actor": "andrea",
+      "content": [
+        "I am not blonde!",
+        "Ma io non sono biondo!"
+      ],
+      "next": "6106c53a-9779-4b7f-bb27-d40f08c70c35"
+    },
+    {
+      "type": "dialog",
+      "ID": "6106c53a-9779-4b7f-bb27-d40f08c70c35",
+      "delay": 2.6500000000000004,
+      "actor": "baker",
+      "content": [
+        "So I clearly recall your face!",
+        "Allora ricordo fortemente la faccia!"
+      ],
+      "next": "0a43eef3-8ee4-4a84-821b-e9f5b6075b3a"
+    },
+    {
+      "type": "dialog",
+      "ID": "bf5cde55-4fa0-4318-ac6c-ccea9f5f37fd",
+      "delay": 2.075,
+      "actor": "baker",
+      "content": [
+        "A great thing for me.",
+        "Una cosa buona per me."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "f261022e-f155-4dc0-b5fb-c03360e6c2c6",
+      "delay": 1.45,
+      "actor": "baker",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "next": "672245c6-0fbd-4a65-bda9-2bf3d99d713f"
+    },
+    {
+      "type": "dialog",
+      "ID": "672245c6-0fbd-4a65-bda9-2bf3d99d713f",
+      "delay": 3.0500000000000003,
+      "actor": "baker",
+      "content": [
+        "I am sure I saw you already somewhere!",
+        "Sono sicuro d'averti visto da qualche parte!"
+      ],
+      "next": "aeae7afc-7933-4eb7-aed6-be16d17a020e"
+    },
+    {
+      "type": "dialog",
+      "ID": "0a43eef3-8ee4-4a84-821b-e9f5b6075b3a",
+      "delay": 1.8250000000000002,
+      "actor": "baker",
+      "content": [
+        "Moreover . . .",
+        "Anche perche' . . ."
+      ],
+      "next": "53bc766f-1b8d-4006-b5d7-861df5266346"
+    }
+  ]
+}

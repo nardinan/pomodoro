@@ -1,17 +1,19 @@
 {
-	"format":"item",
-	"ID":"fountain",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"november",
-			"track":{
-				"playable":"fountain_november",
-				"loops":-1.0
-			},
-			"layers":[
-				{"drawable":"fountain_november"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "fountain",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "november",
+      "track": {
+        "playable": "fountain_november",
+        "loops": -1.0
+      },
+      "layers": [
+        {
+          "drawable": "fountain_november"
+        }
+      ]
+    }
+  ]
 }

@@ -20,14 +20,15 @@
 #include "collector.obj.h"
 #include "factory.obj.h"
 d_declare_class(module_configuration) {
-    struct s_attributes head;
-    struct s_object *ui_factory;
-    struct s_object *resources_json;
-    struct s_object *resources_png;
+  struct s_attributes head;
+  struct s_object *ui_factory;
+  struct s_object *resources_json;
+  struct s_object *resources_png;
 } d_declare_class_tail(module_configuration);
 struct s_module_configuration_attributes *p_module_configuration_alloc(struct s_object *self);
-extern struct s_object *f_module_configuration_new(struct s_object *self, struct s_object *environment, struct s_object *resources_json, 
-        struct s_object *resources_png, struct s_object *ui_factory);
+extern struct s_object *
+f_module_configuration_new(struct s_object *self, struct s_object *environment, struct s_object *resources_json, struct s_object *resources_png,
+                           struct s_object *ui_factory);
 d_declare_method(module_configuration, fill_resources)(struct s_object *self, struct s_object *environment);
 d_declare_method(module_configuration, get_resolution)(struct s_object *self, double *width, double *height);
 d_declare_method(module_configuration, get_language)(struct s_object *self, double *language);

@@ -1,1 +1,415 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"3bfd2630-efa6-4bf9-9a93-975b9781d35f","delay":1.425,"actor":"nerd","content":["Again?","Ancora qui?"],"next":"413b56bd-da08-4fbb-b7c0-38703637a1fc"},{"type":"dialog","ID":"413b56bd-da08-4fbb-b7c0-38703637a1fc","delay":2.05,"actor":"nerd","content":["Are you stalking me?","Mi stai perseguitando?"],"next":"894ba6bb-c155-41aa-8d65-c3829c3a14d8"},{"type":"dialog","ID":"894ba6bb-c155-41aa-8d65-c3829c3a14d8","delay":1.45,"actor":"andrea","content":["Ehm . . .","Ehm . . ."],"choices":["79c7ca79-6b5c-45d9-8b6c-213d95ed6c38","bc03a658-beef-49b7-a66e-8074bcd60d70","5bc0fd54-ab5d-4aba-8471-ea2858c23f24"]},{"type":"choice","ID":"79c7ca79-6b5c-45d9-8b6c-213d95ed6c38","title":"","content":["What are you doing here?","E tu ancora qui?"],"next":"d8147f9a-7408-4f03-8cdd-4a2f1b9b4c4b"},{"type":"dialog","ID":"d8147f9a-7408-4f03-8cdd-4a2f1b9b4c4b","delay":2,"actor":"andrea","content":["What are you doing here?","E tu ancora qui?"],"next":"f3c433b4-4b06-4947-a7bd-14d598eee8b9"},{"type":"dialog","ID":"f3c433b4-4b06-4947-a7bd-14d598eee8b9","delay":4.075,"actor":"andrea","content":["After last conversation I though you were leaving the town!","Dopo l'ultima conversazione ho pensato te ne stessi andando via!"],"next":"090a56cd-4220-4478-b086-bcae3e82aa97"},{"type":"dialog","ID":"090a56cd-4220-4478-b086-bcae3e82aa97","delay":1.45,"actor":"nerd","content":["Ehm . . .","Ehm . . ."],"next":"9b99e453-3251-46bf-ba14-8d540b979b79"},{"type":"dialog","ID":"9b99e453-3251-46bf-ba14-8d540b979b79","delay":3.375,"actor":"nerd","content":["Well, I discussed together with Antonietta and . . .","No e' che ho parlato con Antonietta e . . ."],"next":"633b38ba-7e59-400d-9321-7603960c5f1f"},{"type":"dialog","ID":"633b38ba-7e59-400d-9321-7603960c5f1f","delay":1.7000000000000002,"actor":"andrea","content":["Oh, I see now.","Ah, ho capito."],"next":"3b68989a-4614-4512-bc66-62ee4821a7ba"},{"type":"dialog","ID":"3b68989a-4614-4512-bc66-62ee4821a7ba","delay":2.725,"actor":"nerd","content":[". . . and we decided to stay here.",". . . e abbiamo deciso di rimanere."],"next":"9a6116c4-c84a-4797-9ebc-565987681f8c"},{"type":"dialog","ID":"9a6116c4-c84a-4797-9ebc-565987681f8c","delay":1.475,"actor":"andrea","content":["Well . . .","Beh . . ."],"choices":["f0ff12e1-a22e-4f4f-9f97-96b4afe7b59f","2732950c-8de8-4452-9fe7-3c3f38740a71","bc03a658-beef-49b7-a66e-8074bcd60d70"]},{"type":"choice","ID":"f0ff12e1-a22e-4f4f-9f97-96b4afe7b59f","title":"","content":["Women, uh?","Tira piu' un pelo di . . ."],"next":"ab5b1831-a428-41fd-b2ff-2da43a901a2a"},{"type":"dialog","ID":"ab5b1831-a428-41fd-b2ff-2da43a901a2a","delay":1.9,"actor":"andrea","content":["Women, uh?","Tira piu' un pelo di . . ."],"next":"394925c1-13d9-4a63-a5ff-1b0bb101bf24"},{"type":"dialog","ID":"394925c1-13d9-4a63-a5ff-1b0bb101bf24","delay":2.225,"actor":"nerd","content":["You are embarrassing yourself.","Non essere volgare."],"next":"488c0e10-4bf4-42bc-a267-1d3cd0a67322"},{"type":"choice","ID":"bc03a658-beef-49b7-a66e-8074bcd60d70","title":"","content":["I'm leaving!","Me ne vado!"],"next":"1d3929d8-c705-4b48-8636-0264f085d97c"},{"type":"dialog","ID":"1d3929d8-c705-4b48-8636-0264f085d97c","delay":1.5750000000000002,"actor":"andrea","content":["I'm leaving!","Me ne vado!"],"next":"142a5a5f-0f7a-4da6-bd49-34d80daf56c2"},{"type":"dialog","ID":"142a5a5f-0f7a-4da6-bd49-34d80daf56c2","delay":3.275,"actor":"nerd","content":["It would be great, but the city is under quarantine.","Eh, magari, la citta' e' in quarantena."],"next":"8e9ce797-fd68-4364-acdb-009b1c97227f"},{"type":"dialog","ID":"8e9ce797-fd68-4364-acdb-009b1c97227f","delay":2.475,"actor":"andrea","content":["So I'll take my car . . .","Allora prendero' la macchina . . ."],"next":null},{"type":"choice","ID":"2732950c-8de8-4452-9fe7-3c3f38740a71","title":"","content":["Aren't you scared anymore about the virus?","Non sei piu' preoccupato del virus?"],"next":"139990be-674d-48d6-a6cb-36dfc9cabfc9"},{"type":"dialog","ID":"139990be-674d-48d6-a6cb-36dfc9cabfc9","delay":2.925,"actor":"andrea","content":["Aren't you scared anymore about the virus?","Non sei piu' preoccupato del virus?"],"next":"16e2929b-2e01-45b1-aa44-1c50eb0272db"},{"type":"dialog","ID":"16e2929b-2e01-45b1-aa44-1c50eb0272db","delay":3.15,"actor":"nerd","content":["Ehm, I've never been scared about the virus!","Ehm, ma io non sono mai stato preoccupato!"],"next":"21551655-90a8-4676-8111-5dd4465ee596"},{"type":"dialog","ID":"21551655-90a8-4676-8111-5dd4465ee596","delay":1.325,"actor":"andrea","content":["What?","Ma come?"],"next":"eb409d5d-bbd2-4fa9-86c5-4f916b44ad15"},{"type":"dialog","ID":"eb409d5d-bbd2-4fa9-86c5-4f916b44ad15","delay":5.675,"actor":"andrea","content":["Moreover the city is filled with soldiers and this is the confirmation of your apocalyptic scenario!","Ora che i militari sono anche in citta' confermando il tuo punto di vista catastrofico!"],"next":"483d14b9-7268-4feb-85ce-b7991e22101b"},{"type":"dialog","ID":"483d14b9-7268-4feb-85ce-b7991e22101b","delay":3.5,"actor":"nerd","content":[". . . and the city is under quarantine as well . . .",". . . e la citta' e' pure sotto quarantena . . ."],"next":"2a815b25-7c3b-4742-942e-aa97a00ce0c9"},{"type":"dialog","ID":"2a815b25-7c3b-4742-942e-aa97a00ce0c9","delay":1.975,"actor":"andrea","content":["Is a bad thing?","Cos'e', una cosa brutta?"],"next":"6bedeeb2-c1ce-40fd-ae05-548867d8da30"},{"type":"dialog","ID":"6bedeeb2-c1ce-40fd-ae05-548867d8da30","delay":3.5500000000000003,"actor":"nerd","content":["Well, no one is allowed in and no one is allowed out. ","Beh, nessuno puo' uscire e nessuno puo' entrare."],"next":"9423c5be-6227-440a-85f3-dfcd0437daa7"},{"type":"dialog","ID":"9423c5be-6227-440a-85f3-dfcd0437daa7","delay":1.35,"actor":"andrea","content":["Where?","Da dove?"],"next":"13678d87-6653-450b-bffb-ec014c8cff32"},{"type":"dialog","ID":"13678d87-6653-450b-bffb-ec014c8cff32","delay":1.25,"actor":"nerd","content":[". . .",". . ."],"next":"66760f27-520f-48e2-b8bd-f356dff153b1"},{"type":"dialog","ID":"66760f27-520f-48e2-b8bd-f356dff153b1","delay":2.5,"actor":"andrea","content":["No no, it's fine, I was kidding.","No no, ho capito, scherzavo."],"next":null},{"type":"dialog","ID":"488c0e10-4bf4-42bc-a267-1d3cd0a67322","delay":3.35,"actor":"nerd","content":["It's a decision that we took together.","E' stata una decisione presa in totale e comune accordo."],"next":"c6157c94-c548-482c-b87b-ad750ebbbc66"},{"type":"dialog","ID":"c6157c94-c548-482c-b87b-ad750ebbbc66","delay":3.1,"actor":"andrea","content":["So you are not scared anymore, aren't you?","Quindi non sei piu' preoccupato del virus?"],"next":"16e2929b-2e01-45b1-aa44-1c50eb0272db"},{"type":"choice","ID":"5bc0fd54-ab5d-4aba-8471-ea2858c23f24","title":"","content":["Can I have the key of the red door?","Posso avere la chiave della porta rossa?"],"next":"7908be1b-96d1-4ca3-9d7c-cf39fb3859f7"},{"type":"dialog","ID":"7908be1b-96d1-4ca3-9d7c-cf39fb3859f7","delay":2.875,"actor":"andrea","content":["Can I have the key of the red door?","Posso avere la chiave della porta rossa?"],"next":"71991d10-223e-4a5b-a531-e0fe5abdfd8e"},{"type":"dialog","ID":"71991d10-223e-4a5b-a531-e0fe5abdfd8e","delay":2.2,"actor":"nerd","content":["I told you already . . .","Te l'ho gia' detto . . ."],"next":"26a2ce25-3eb9-4993-a851-9d98912e5476"},{"type":"dialog","ID":"26a2ce25-3eb9-4993-a851-9d98912e5476","delay":4.65,"actor":"nerd","content":[". . . you have to show me an authorization signed by the Magnifico Rettore.",". . . devi presentarmi un autorizzazione firmata dal Magnifico Rettore."],"next":"6d62a88a-88c9-4eeb-85c2-57f132130609"},{"type":"dialog","ID":"6d62a88a-88c9-4eeb-85c2-57f132130609","delay":2.45,"actor":"andrea","content":["I am fed up, for fuck's sake.","M'avete rotto le palle pero'!"],"next":"115f3cb3-57e3-45a0-a331-56fe391b08be"},{"type":"dialog","ID":"115f3cb3-57e3-45a0-a331-56fe391b08be","delay":2.825,"actor":"andrea","content":["This game is a never ending story . . .","Questo gioco non finisce mai . . ."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "3bfd2630-efa6-4bf9-9a93-975b9781d35f",
+      "delay": 1.425,
+      "actor": "nerd",
+      "content": [
+        "Again?",
+        "Ancora qui?"
+      ],
+      "next": "413b56bd-da08-4fbb-b7c0-38703637a1fc"
+    },
+    {
+      "type": "dialog",
+      "ID": "413b56bd-da08-4fbb-b7c0-38703637a1fc",
+      "delay": 2.05,
+      "actor": "nerd",
+      "content": [
+        "Are you stalking me?",
+        "Mi stai perseguitando?"
+      ],
+      "next": "894ba6bb-c155-41aa-8d65-c3829c3a14d8"
+    },
+    {
+      "type": "dialog",
+      "ID": "894ba6bb-c155-41aa-8d65-c3829c3a14d8",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "choices": [
+        "79c7ca79-6b5c-45d9-8b6c-213d95ed6c38",
+        "bc03a658-beef-49b7-a66e-8074bcd60d70",
+        "5bc0fd54-ab5d-4aba-8471-ea2858c23f24"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "79c7ca79-6b5c-45d9-8b6c-213d95ed6c38",
+      "title": "",
+      "content": [
+        "What are you doing here?",
+        "E tu ancora qui?"
+      ],
+      "next": "d8147f9a-7408-4f03-8cdd-4a2f1b9b4c4b"
+    },
+    {
+      "type": "dialog",
+      "ID": "d8147f9a-7408-4f03-8cdd-4a2f1b9b4c4b",
+      "delay": 2,
+      "actor": "andrea",
+      "content": [
+        "What are you doing here?",
+        "E tu ancora qui?"
+      ],
+      "next": "f3c433b4-4b06-4947-a7bd-14d598eee8b9"
+    },
+    {
+      "type": "dialog",
+      "ID": "f3c433b4-4b06-4947-a7bd-14d598eee8b9",
+      "delay": 4.075,
+      "actor": "andrea",
+      "content": [
+        "After last conversation I though you were leaving the town!",
+        "Dopo l'ultima conversazione ho pensato te ne stessi andando via!"
+      ],
+      "next": "090a56cd-4220-4478-b086-bcae3e82aa97"
+    },
+    {
+      "type": "dialog",
+      "ID": "090a56cd-4220-4478-b086-bcae3e82aa97",
+      "delay": 1.45,
+      "actor": "nerd",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "next": "9b99e453-3251-46bf-ba14-8d540b979b79"
+    },
+    {
+      "type": "dialog",
+      "ID": "9b99e453-3251-46bf-ba14-8d540b979b79",
+      "delay": 3.375,
+      "actor": "nerd",
+      "content": [
+        "Well, I discussed together with Antonietta and . . .",
+        "No e' che ho parlato con Antonietta e . . ."
+      ],
+      "next": "633b38ba-7e59-400d-9321-7603960c5f1f"
+    },
+    {
+      "type": "dialog",
+      "ID": "633b38ba-7e59-400d-9321-7603960c5f1f",
+      "delay": 1.7000000000000002,
+      "actor": "andrea",
+      "content": [
+        "Oh, I see now.",
+        "Ah, ho capito."
+      ],
+      "next": "3b68989a-4614-4512-bc66-62ee4821a7ba"
+    },
+    {
+      "type": "dialog",
+      "ID": "3b68989a-4614-4512-bc66-62ee4821a7ba",
+      "delay": 2.725,
+      "actor": "nerd",
+      "content": [
+        ". . . and we decided to stay here.",
+        ". . . e abbiamo deciso di rimanere."
+      ],
+      "next": "9a6116c4-c84a-4797-9ebc-565987681f8c"
+    },
+    {
+      "type": "dialog",
+      "ID": "9a6116c4-c84a-4797-9ebc-565987681f8c",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Beh . . ."
+      ],
+      "choices": [
+        "f0ff12e1-a22e-4f4f-9f97-96b4afe7b59f",
+        "2732950c-8de8-4452-9fe7-3c3f38740a71",
+        "bc03a658-beef-49b7-a66e-8074bcd60d70"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "f0ff12e1-a22e-4f4f-9f97-96b4afe7b59f",
+      "title": "",
+      "content": [
+        "Women, uh?",
+        "Tira piu' un pelo di . . ."
+      ],
+      "next": "ab5b1831-a428-41fd-b2ff-2da43a901a2a"
+    },
+    {
+      "type": "dialog",
+      "ID": "ab5b1831-a428-41fd-b2ff-2da43a901a2a",
+      "delay": 1.9,
+      "actor": "andrea",
+      "content": [
+        "Women, uh?",
+        "Tira piu' un pelo di . . ."
+      ],
+      "next": "394925c1-13d9-4a63-a5ff-1b0bb101bf24"
+    },
+    {
+      "type": "dialog",
+      "ID": "394925c1-13d9-4a63-a5ff-1b0bb101bf24",
+      "delay": 2.225,
+      "actor": "nerd",
+      "content": [
+        "You are embarrassing yourself.",
+        "Non essere volgare."
+      ],
+      "next": "488c0e10-4bf4-42bc-a267-1d3cd0a67322"
+    },
+    {
+      "type": "choice",
+      "ID": "bc03a658-beef-49b7-a66e-8074bcd60d70",
+      "title": "",
+      "content": [
+        "I'm leaving!",
+        "Me ne vado!"
+      ],
+      "next": "1d3929d8-c705-4b48-8636-0264f085d97c"
+    },
+    {
+      "type": "dialog",
+      "ID": "1d3929d8-c705-4b48-8636-0264f085d97c",
+      "delay": 1.5750000000000002,
+      "actor": "andrea",
+      "content": [
+        "I'm leaving!",
+        "Me ne vado!"
+      ],
+      "next": "142a5a5f-0f7a-4da6-bd49-34d80daf56c2"
+    },
+    {
+      "type": "dialog",
+      "ID": "142a5a5f-0f7a-4da6-bd49-34d80daf56c2",
+      "delay": 3.275,
+      "actor": "nerd",
+      "content": [
+        "It would be great, but the city is under quarantine.",
+        "Eh, magari, la citta' e' in quarantena."
+      ],
+      "next": "8e9ce797-fd68-4364-acdb-009b1c97227f"
+    },
+    {
+      "type": "dialog",
+      "ID": "8e9ce797-fd68-4364-acdb-009b1c97227f",
+      "delay": 2.475,
+      "actor": "andrea",
+      "content": [
+        "So I'll take my car . . .",
+        "Allora prendero' la macchina . . ."
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "2732950c-8de8-4452-9fe7-3c3f38740a71",
+      "title": "",
+      "content": [
+        "Aren't you scared anymore about the virus?",
+        "Non sei piu' preoccupato del virus?"
+      ],
+      "next": "139990be-674d-48d6-a6cb-36dfc9cabfc9"
+    },
+    {
+      "type": "dialog",
+      "ID": "139990be-674d-48d6-a6cb-36dfc9cabfc9",
+      "delay": 2.925,
+      "actor": "andrea",
+      "content": [
+        "Aren't you scared anymore about the virus?",
+        "Non sei piu' preoccupato del virus?"
+      ],
+      "next": "16e2929b-2e01-45b1-aa44-1c50eb0272db"
+    },
+    {
+      "type": "dialog",
+      "ID": "16e2929b-2e01-45b1-aa44-1c50eb0272db",
+      "delay": 3.15,
+      "actor": "nerd",
+      "content": [
+        "Ehm, I've never been scared about the virus!",
+        "Ehm, ma io non sono mai stato preoccupato!"
+      ],
+      "next": "21551655-90a8-4676-8111-5dd4465ee596"
+    },
+    {
+      "type": "dialog",
+      "ID": "21551655-90a8-4676-8111-5dd4465ee596",
+      "delay": 1.325,
+      "actor": "andrea",
+      "content": [
+        "What?",
+        "Ma come?"
+      ],
+      "next": "eb409d5d-bbd2-4fa9-86c5-4f916b44ad15"
+    },
+    {
+      "type": "dialog",
+      "ID": "eb409d5d-bbd2-4fa9-86c5-4f916b44ad15",
+      "delay": 5.675,
+      "actor": "andrea",
+      "content": [
+        "Moreover the city is filled with soldiers and this is the confirmation of your apocalyptic scenario!",
+        "Ora che i militari sono anche in citta' confermando il tuo punto di vista catastrofico!"
+      ],
+      "next": "483d14b9-7268-4feb-85ce-b7991e22101b"
+    },
+    {
+      "type": "dialog",
+      "ID": "483d14b9-7268-4feb-85ce-b7991e22101b",
+      "delay": 3.5,
+      "actor": "nerd",
+      "content": [
+        ". . . and the city is under quarantine as well . . .",
+        ". . . e la citta' e' pure sotto quarantena . . ."
+      ],
+      "next": "2a815b25-7c3b-4742-942e-aa97a00ce0c9"
+    },
+    {
+      "type": "dialog",
+      "ID": "2a815b25-7c3b-4742-942e-aa97a00ce0c9",
+      "delay": 1.975,
+      "actor": "andrea",
+      "content": [
+        "Is a bad thing?",
+        "Cos'e', una cosa brutta?"
+      ],
+      "next": "6bedeeb2-c1ce-40fd-ae05-548867d8da30"
+    },
+    {
+      "type": "dialog",
+      "ID": "6bedeeb2-c1ce-40fd-ae05-548867d8da30",
+      "delay": 3.5500000000000003,
+      "actor": "nerd",
+      "content": [
+        "Well, no one is allowed in and no one is allowed out. ",
+        "Beh, nessuno puo' uscire e nessuno puo' entrare."
+      ],
+      "next": "9423c5be-6227-440a-85f3-dfcd0437daa7"
+    },
+    {
+      "type": "dialog",
+      "ID": "9423c5be-6227-440a-85f3-dfcd0437daa7",
+      "delay": 1.35,
+      "actor": "andrea",
+      "content": [
+        "Where?",
+        "Da dove?"
+      ],
+      "next": "13678d87-6653-450b-bffb-ec014c8cff32"
+    },
+    {
+      "type": "dialog",
+      "ID": "13678d87-6653-450b-bffb-ec014c8cff32",
+      "delay": 1.25,
+      "actor": "nerd",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "next": "66760f27-520f-48e2-b8bd-f356dff153b1"
+    },
+    {
+      "type": "dialog",
+      "ID": "66760f27-520f-48e2-b8bd-f356dff153b1",
+      "delay": 2.5,
+      "actor": "andrea",
+      "content": [
+        "No no, it's fine, I was kidding.",
+        "No no, ho capito, scherzavo."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "488c0e10-4bf4-42bc-a267-1d3cd0a67322",
+      "delay": 3.35,
+      "actor": "nerd",
+      "content": [
+        "It's a decision that we took together.",
+        "E' stata una decisione presa in totale e comune accordo."
+      ],
+      "next": "c6157c94-c548-482c-b87b-ad750ebbbc66"
+    },
+    {
+      "type": "dialog",
+      "ID": "c6157c94-c548-482c-b87b-ad750ebbbc66",
+      "delay": 3.1,
+      "actor": "andrea",
+      "content": [
+        "So you are not scared anymore, aren't you?",
+        "Quindi non sei piu' preoccupato del virus?"
+      ],
+      "next": "16e2929b-2e01-45b1-aa44-1c50eb0272db"
+    },
+    {
+      "type": "choice",
+      "ID": "5bc0fd54-ab5d-4aba-8471-ea2858c23f24",
+      "title": "",
+      "content": [
+        "Can I have the key of the red door?",
+        "Posso avere la chiave della porta rossa?"
+      ],
+      "next": "7908be1b-96d1-4ca3-9d7c-cf39fb3859f7"
+    },
+    {
+      "type": "dialog",
+      "ID": "7908be1b-96d1-4ca3-9d7c-cf39fb3859f7",
+      "delay": 2.875,
+      "actor": "andrea",
+      "content": [
+        "Can I have the key of the red door?",
+        "Posso avere la chiave della porta rossa?"
+      ],
+      "next": "71991d10-223e-4a5b-a531-e0fe5abdfd8e"
+    },
+    {
+      "type": "dialog",
+      "ID": "71991d10-223e-4a5b-a531-e0fe5abdfd8e",
+      "delay": 2.2,
+      "actor": "nerd",
+      "content": [
+        "I told you already . . .",
+        "Te l'ho gia' detto . . ."
+      ],
+      "next": "26a2ce25-3eb9-4993-a851-9d98912e5476"
+    },
+    {
+      "type": "dialog",
+      "ID": "26a2ce25-3eb9-4993-a851-9d98912e5476",
+      "delay": 4.65,
+      "actor": "nerd",
+      "content": [
+        ". . . you have to show me an authorization signed by the Magnifico Rettore.",
+        ". . . devi presentarmi un autorizzazione firmata dal Magnifico Rettore."
+      ],
+      "next": "6d62a88a-88c9-4eeb-85c2-57f132130609"
+    },
+    {
+      "type": "dialog",
+      "ID": "6d62a88a-88c9-4eeb-85c2-57f132130609",
+      "delay": 2.45,
+      "actor": "andrea",
+      "content": [
+        "I am fed up, for fuck's sake.",
+        "M'avete rotto le palle pero'!"
+      ],
+      "next": "115f3cb3-57e3-45a0-a331-56fe391b08be"
+    },
+    {
+      "type": "dialog",
+      "ID": "115f3cb3-57e3-45a0-a331-56fe391b08be",
+      "delay": 2.825,
+      "actor": "andrea",
+      "content": [
+        "This game is a never ending story . . .",
+        "Questo gioco non finisce mai . . ."
+      ],
+      "next": null
+    }
+  ]
+}

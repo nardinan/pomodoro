@@ -1,22 +1,61 @@
 {
-	"game":"pomodoro",
-	"author":"Andrea Nardinocchi",
-	"email":"andrea@nardinan.it",
-	"date":"22 August 2016",
-	"fonts":[
-		{"font":"psycho_font", 		"size":50},
-		{"font":"psycho_font", 		"size":60},
-		{"font":"psycho_font", 		"size":70},
-		{"font":"raleway_font", 	"size":50},
-		{"font":"raleway_font", 	"size":60},
-		{"font":"raleway_font", 	"size":70},
-		{"font":"kingthings_font", 	"size":50},
-		{"font":"kingthings_font", 	"size":60},
-		{"font":"kingthings_font", 	"size":70}
-	],
-	"characters":[
-		{"label":"andrii",	"link":"andrii_character",		"controllable":false},
-		{"label":"luca",	"link":"luca_character", 		"controllable":false},
-		{"label":"andrea",	"link":"andrea_character", 		"controllable":true}
-	]
+  "game": "pomodoro",
+  "author": "Andrea Nardinocchi",
+  "email": "andrea@nardinan.it",
+  "date": "22 August 2016",
+  "fonts": [
+    {
+      "font": "psycho_font",
+      "size": 50
+    },
+    {
+      "font": "psycho_font",
+      "size": 60
+    },
+    {
+      "font": "psycho_font",
+      "size": 70
+    },
+    {
+      "font": "raleway_font",
+      "size": 50
+    },
+    {
+      "font": "raleway_font",
+      "size": 60
+    },
+    {
+      "font": "raleway_font",
+      "size": 70
+    },
+    {
+      "font": "kingthings_font",
+      "size": 50
+    },
+    {
+      "font": "kingthings_font",
+      "size": 60
+    },
+    {
+      "font": "kingthings_font",
+      "size": 70
+    }
+  ],
+  "characters": [
+    {
+      "label": "andrii",
+      "link": "andrii_character",
+      "controllable": false
+    },
+    {
+      "label": "luca",
+      "link": "luca_character",
+      "controllable": false
+    },
+    {
+      "label": "andrea",
+      "link": "andrea_character",
+      "controllable": true
+    }
+  ]
 }

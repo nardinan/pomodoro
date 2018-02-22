@@ -1,36 +1,106 @@
 {
-	"format":"landscape",
-	"ID":"unipgC",
-	"zoom":10,
-	"position_x":0.0,
-	"position_y":0.0,
-	"intro_script":"intro_unipgC",
-	"outro_script":"outro_unipgC",
-	"tracks":[
-		{"label":"people_background", "playable":"gallenga_background_noise"}
-	],
-	"floor":[{
-		"position_x":0.0,
-		"position_y":1050.0
-	}],
-	"surfaces":[{
-		"drawable":"unipgC_background",
-		"layer":1,
-		"speed_ratio_x":1,
-		"reference":true
-	},{
-		"drawable":"unipgC_lights_layer",
-		"layer":8,
-		"speed_ratio_x":1
-	}],
-	"items":[
-		{"label":"door_A", 			"item":"arrow", 		"status":"active_up", 				"position_x":4200.0, 		"position_y":1080.0, 		"zoom":1.25, 								"active":true, 	"script":"move_unipgC_temple"},
-		{"label":"door_B",			"item":"arrow",	  	"status":"active_down",				"position_x":700.0,			"position_y":1080.0,		"zoom":1.25,	"solid":true,	"active":true,	"script":"move_unipgC_unipgB"},
-		{"label":"door_C",			"item":"arrow",			"status":"none",							"position_x":5800.0,		"position_y":1080.0,		"zoom":1.25,	"solid":true},
-		{"label":"door_D",			"item":"door",			"status":"still_M_red",     	"position_x":4200.0, 		"position_y":840.0, 		"zoom":1.25},
-		{"label":"door_E",  		"item":"door",			"status":"still_M", 	       	"position_x":3100.0, 		"position_y":840.0, 		"zoom":1.25},
-		{"label":"window_A",		"item":"window",		"status":"inside_C",					"position_x":150.0,			"position_y":800, 			"zoom":1.25},
-		{"label":"plant_A",  		"item":"plant",			"status":"still_A", 	       	"position_x":3700.0, 		"position_y":990.0, 		"zoom":1.25},
-		{"label":"chair_A",			"item":"chair",			"status":"still_C",						"position_x":4600.0,		"position_y":1050.0,		"zoom":1.25},
-	]
+  "format": "landscape",
+  "ID": "unipgC",
+  "zoom": 10,
+  "position_x": 0.0,
+  "position_y": 0.0,
+  "intro_script": "intro_unipgC",
+  "outro_script": "outro_unipgC",
+  "tracks": [
+    {
+      "label": "people_background",
+      "playable": "gallenga_background_noise"
+    }
+  ],
+  "floor": [
+    {
+      "position_x": 0.0,
+      "position_y": 1050.0
+    }
+  ],
+  "surfaces": [
+    {
+      "drawable": "unipgC_background",
+      "layer": 1,
+      "speed_ratio_x": 1,
+      "reference": true
+    },
+    {
+      "drawable": "unipgC_lights_layer",
+      "layer": 8,
+      "speed_ratio_x": 1
+    }
+  ],
+  "items": [
+    {
+      "label": "door_A",
+      "item": "arrow",
+      "status": "active_up",
+      "position_x": 4200.0,
+      "position_y": 1080.0,
+      "zoom": 1.25,
+      "active": true,
+      "script": "move_unipgC_temple"
+    },
+    {
+      "label": "door_B",
+      "item": "arrow",
+      "status": "active_down",
+      "position_x": 700.0,
+      "position_y": 1080.0,
+      "zoom": 1.25,
+      "solid": true,
+      "active": true,
+      "script": "move_unipgC_unipgB"
+    },
+    {
+      "label": "door_C",
+      "item": "arrow",
+      "status": "none",
+      "position_x": 5800.0,
+      "position_y": 1080.0,
+      "zoom": 1.25,
+      "solid": true
+    },
+    {
+      "label": "door_D",
+      "item": "door",
+      "status": "still_M_red",
+      "position_x": 4200.0,
+      "position_y": 840.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "door_E",
+      "item": "door",
+      "status": "still_M",
+      "position_x": 3100.0,
+      "position_y": 840.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "window_A",
+      "item": "window",
+      "status": "inside_C",
+      "position_x": 150.0,
+      "position_y": 800,
+      "zoom": 1.25
+    },
+    {
+      "label": "plant_A",
+      "item": "plant",
+      "status": "still_A",
+      "position_x": 3700.0,
+      "position_y": 990.0,
+      "zoom": 1.25
+    },
+    {
+      "label": "chair_A",
+      "item": "chair",
+      "status": "still_C",
+      "position_x": 4600.0,
+      "position_y": 1050.0,
+      "zoom": 1.25
+    }
+  ]
 }

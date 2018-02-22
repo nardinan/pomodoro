@@ -22,35 +22,35 @@
 #define d_puppeteer_void (-9999.0)
 /* action definition */
 typedef enum e_puppeteer_actions {
-    e_puppeteer_action_hide,
-    e_puppeteer_action_show,
-    e_puppeteer_action_enable_control,
-    e_puppeteer_action_disable_control,
-    e_puppeteer_action_say,
-    e_puppeteer_action_talk,
-    e_puppeteer_action_set,
-    e_puppeteer_action_move,
-    e_puppeteer_action_run,
-    e_puppeteer_action_look,
-    e_puppeteer_action_stare,
-    e_puppeteer_action_get_position
+  e_puppeteer_action_hide,
+  e_puppeteer_action_show,
+  e_puppeteer_action_enable_control,
+  e_puppeteer_action_disable_control,
+  e_puppeteer_action_say,
+  e_puppeteer_action_talk,
+  e_puppeteer_action_set,
+  e_puppeteer_action_move,
+  e_puppeteer_action_run,
+  e_puppeteer_action_look,
+  e_puppeteer_action_stare,
+  e_puppeteer_action_get_position
 } e_puppeteer_action;
 typedef struct s_puppeteer_action_say {
-    char message[d_string_buffer_size];
-    double timeout;
+  char message[d_string_buffer_size];
+  double timeout;
 } s_puppeteer_action_say;
 typedef struct s_puppeteer_action_talk {
-    char message[d_string_buffer_size], track[d_resources_key_size];
+  char message[d_string_buffer_size], track[d_resources_key_size];
 } s_puppeteer_action_talk;
 typedef struct s_puppeteer_action {
-    enum e_puppeteer_actions type;
-    char key[d_entity_label_size];
-    union {
-        struct s_puppeteer_action_say action_say;
-        struct s_puppeteer_action_talk action_talk;
-        char entry[d_string_buffer_size], entity[d_entity_label_size];
-        double destination_x;
-    } parameters;
+  enum e_puppeteer_actions type;
+  char key[d_entity_label_size];
+  union {
+    struct s_puppeteer_action_say action_say;
+    struct s_puppeteer_action_talk action_talk;
+    char entry[d_string_buffer_size], entity[d_entity_label_size];
+    double destination_x;
+  } parameters;
 } s_puppeteer_action;
 extern struct s_lisp_object *p_link_puppeteer_hide_characters(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_show_character(struct s_object *self, struct s_lisp_object *arguments);
@@ -63,16 +63,17 @@ extern struct s_lisp_object *p_link_puppeteer_move_character(struct s_object *se
 extern struct s_lisp_object *p_link_puppeteer_look_character(struct s_object *self, struct s_lisp_object *arguments);
 extern struct s_lisp_object *p_link_puppeteer_stare_character(struct s_object *self, struct s_lisp_object *arguments);
 /* end */
-typedef struct s_puppeteer_character { d_list_node_head;
-    char label[d_entity_label_size], script[d_resources_key_size];
-    struct s_object *character, *connected;
-    t_boolean controllable, visible;
+typedef struct s_puppeteer_character {
+  d_list_node_head;
+  char label[d_entity_label_size], script[d_resources_key_size];
+  struct s_object *character, *connected;
+  t_boolean controllable, visible;
 } s_puppeteer_character;
 d_declare_class(puppeteer) {
-    struct s_attributes head;
-    struct s_object *factory;
-    struct s_list characters;
-    struct s_object *main_character;
+  struct s_attributes head;
+  struct s_object *factory;
+  struct s_list characters;
+  struct s_object *main_character;
 } d_declare_class_tail(puppeteer);
 struct s_puppeteer_attributes *p_puppeteer_alloc(struct s_object *self);
 extern struct s_object *f_puppeteer_new(struct s_object *self, struct s_object *factory, t_entity_validator validator);

@@ -1,1 +1,495 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"f170341f-86f2-49e9-8147-765331be6918","delay":1.475,"actor":"massimo","content":["Tell me.","Dai, dimmi."],"next":"52c697b5-afc0-424d-93e6-c3b48fe8dbe6"},{"type":"dialog","ID":"52c697b5-afc0-424d-93e6-c3b48fe8dbe6","delay":1.45,"actor":"andrea","content":["Ehm . . .","Ehm . . ."],"choices":["89258b17-9332-4a3c-9fc1-85d3d2799b13","ee466f44-8a21-4fff-b88e-bb361d1eb398","9e043d47-26c6-426f-ace1-6f2401810d08"]},{"type":"choice","ID":"9e043d47-26c6-426f-ace1-6f2401810d08","title":"","content":["Can I have a USB key?","Posso avere una chiavetta USB?"],"next":"1da0e666-3a5f-4f44-a9e3-5a88a253a7b6"},{"type":"choice","ID":"ee466f44-8a21-4fff-b88e-bb361d1eb398","title":"","content":["What's all this about junkies?","Cos'e' questa fissa per i drogati?"],"next":"92c2edd2-409e-4205-84f6-2c5ad124c447"},{"type":"choice","ID":"89258b17-9332-4a3c-9fc1-85d3d2799b13","title":"","content":["I think I have to go . . .","Si e' fatta una certa . . ."],"next":"77ab5d9c-fb25-40fe-8193-a76b890afc68"},{"type":"dialog","ID":"77ab5d9c-fb25-40fe-8193-a76b890afc68","delay":2.325,"actor":"andrea","content":["I think I have to go . . .","Si e' fatta una certa . . ."],"next":"9262ed0e-acc4-4cd1-86b8-5a4b8845143e"},{"type":"dialog","ID":"9262ed0e-acc4-4cd1-86b8-5a4b8845143e","delay":1.6,"actor":"massimo","content":["Sure, sure.","Certo, certo."],"next":null},{"type":"dialog","ID":"92c2edd2-409e-4205-84f6-2c5ad124c447","delay":2.625,"actor":"andrea","content":["What's all this about junkies?","Cos'e' questa fiissa per i drogati?"],"next":"0b23adf4-07cd-4d15-851c-1d016a56bef6"},{"type":"set","ID":"1da0e666-3a5f-4f44-a9e3-5a88a253a7b6","variable":"got_disk","value":1,"next":"c6ad5657-34d8-430f-a5bf-c39ce62a5a15"},{"type":"set","ID":"c6ad5657-34d8-430f-a5bf-c39ce62a5a15","variable":"got_five_euros","value":0,"next":"321327b8-4a0f-49d2-a4fa-59e5d80255a5"},{"type":"set","ID":"321327b8-4a0f-49d2-a4fa-59e5d80255a5","variable":"done_disk","value":1,"next":"6c84f2cf-7f54-467c-b920-0510734094dc"},{"type":"dialog","ID":"6c84f2cf-7f54-467c-b920-0510734094dc","delay":2.2750000000000004,"actor":"andrea","content":["Can I have a USB key?","Posso avere una chiavetta USB?"],"next":"d9e42ac0-44d8-4025-90c8-49229404fdb0"},{"type":"dialog","ID":"d9e42ac0-44d8-4025-90c8-49229404fdb0","delay":2.325,"actor":"massimo","content":["Sure! It will be five Euros!","Certo, costa cinque Euri."],"next":"1f911b5c-b971-47d5-8677-bdb6b48b697d"},{"type":"dialog","ID":"1f911b5c-b971-47d5-8677-bdb6b48b697d","delay":2.1500000000000004,"actor":"andrea","content":["Here, takes my money.","Toh, pigliati sti' soldi!"],"next":null},{"type":"dialog","ID":"0b23adf4-07cd-4d15-851c-1d016a56bef6","delay":2.45,"actor":"massimo","content":["They are too aggressive!","Stanno diventando troppo violenti!"],"next":"c24846af-1bd4-4358-b700-a7a4abc27473"},{"type":"dialog","ID":"c24846af-1bd4-4358-b700-a7a4abc27473","delay":4.025,"actor":"massimo","content":["I am scared to keep open the store, and nobody protects me!","Io ho paura a tenere il negozio aperto, e nessuno mi protegge!"],"next":"67d854d1-dcde-4daa-8128-2fca02693c38"},{"type":"dialog","ID":"67d854d1-dcde-4daa-8128-2fca02693c38","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["8ef1a2fa-46db-489d-999b-6d639654d624","5c20c051-5d6c-4b1f-928f-4c5514f4aa47","89258b17-9332-4a3c-9fc1-85d3d2799b13"]},{"type":"choice","ID":"8ef1a2fa-46db-489d-999b-6d639654d624","title":"","content":["Aggressive junkies?","Drogati violenti?"],"next":"f3039e7f-5df8-48b0-a96b-dea409304997"},{"type":"dialog","ID":"f3039e7f-5df8-48b0-a96b-dea409304997","delay":1.9,"actor":"andrea","content":["Aggressive junkies?","Drogati violenti?"],"next":"668379d0-2214-4445-a45b-d8c56e13941e"},{"type":"choice","ID":"5c20c051-5d6c-4b1f-928f-4c5514f4aa47","title":"","content":["What about the police?","E la polizia che fa?"],"next":"71c4f003-22fa-4e71-b3e1-0abc03eb1dc8"},{"type":"dialog","ID":"71c4f003-22fa-4e71-b3e1-0abc03eb1dc8","delay":2.05,"actor":"andrea","content":["What about the police?","E la polizia che fa?"],"next":"c4e61f42-5113-4660-84ab-7925b51ccef8"},{"type":"dialog","ID":"668379d0-2214-4445-a45b-d8c56e13941e","delay":5.325,"actor":"massimo","content":["I read on Facebook that they killed 'Il Profeta' here, in Piazza Quattro Novembre.","Ho letto su Facebook che hanno ammazzato il povero Profeta qui, in piazza Quattro Novembre."],"next":"e4852345-7e5a-44e2-b210-804cdf144c95"},{"type":"dialog","ID":"f29ad98a-7926-4901-9882-135f6919da28","delay":1.45,"actor":"andrea","content":["Well . . .","Ah . . ."],"choices":["6f2e0a63-c861-421a-a22a-5c206904d7f8","5c20c051-5d6c-4b1f-928f-4c5514f4aa47","89258b17-9332-4a3c-9fc1-85d3d2799b13"],"next":null},{"type":"choice","ID":"6f2e0a63-c861-421a-a22a-5c206904d7f8","title":"","content":["You read it on Facebook, right?","Quindi l'hai letto su Facebook?"],"next":"039daad0-42dd-490a-adcf-15ee1b5abec2"},{"type":"dialog","ID":"039daad0-42dd-490a-adcf-15ee1b5abec2","delay":2.55,"actor":"andrea","content":["You read it on Facebook, right?","Quindi l'hai letto su Facebook?"],"next":"91650ce3-4e56-498b-b599-674759fcdc96"},{"type":"dialog","ID":"91650ce3-4e56-498b-b599-674759fcdc96","delay":4,"actor":"massimo","content":["You want to tell me that you are still reading the newspapers?","Perche' vuoi farmi credere che tu leggi ancora i giornali?"],"next":"a82ba6fe-8ba8-4f9e-b619-d73a27a5c990"},{"type":"dialog","ID":"a82ba6fe-8ba8-4f9e-b619-d73a27a5c990","delay":1.6,"actor":"andrea","content":["Are you kidding?","Scherzi?"],"next":"30149789-a467-4834-a01d-a1fd238f4b40"},{"type":"dialog","ID":"30149789-a467-4834-a01d-a1fd238f4b40","delay":3.025,"actor":"andrea","content":["I am not even reading the billboards!","Non leggo nemmeno i cartelloni pubblicitari!"],"next":null},{"type":"dialog","ID":"c4e61f42-5113-4660-84ab-7925b51ccef8","delay":2.0250000000000004,"actor":"massimo","content":["Nothing, as usual.","Niente, come al solito."],"next":"ee830e33-3099-408f-8425-96a9b2d053d5"},{"type":"dialog","ID":"ee830e33-3099-408f-8425-96a9b2d053d5","delay":1.6,"actor":"andrea","content":["As usual.","Come al solito."],"next":null},{"type":"dialog","ID":"e4852345-7e5a-44e2-b210-804cdf144c95","delay":1.925,"actor":"massimo","content":["He was crazy, for sure!","Oh, era pazzo!"],"next":"3809e651-4b1b-4012-95ca-51ba1561e48d"},{"type":"dialog","ID":"3809e651-4b1b-4012-95ca-51ba1561e48d","delay":4.875,"actor":"massimo","content":["He was going around, screaming about an apocalypse that would come very soon.","Se ne andava in giro predicando su una apocalisse che sarebbe arrivata presto."],"next":"0bdb942d-c827-45e7-b898-50cf95d31d78"},{"type":"dialog","ID":"0bdb942d-c827-45e7-b898-50cf95d31d78","delay":2.175,"actor":"andrea","content":["What kind of apocalypse?","Che tipo di apocalisse?"],"next":"920f19d2-a7f8-4b56-957c-fe96620c9fe9"},{"type":"dialog","ID":"920f19d2-a7f8-4b56-957c-fe96620c9fe9","delay":1.15,"actor":"massimo","content":["Uh?","Uh?"],"next":"418ec259-401c-45b5-aee3-ae734984ab7d"},{"type":"dialog","ID":"418ec259-401c-45b5-aee3-ae734984ab7d","delay":2.175,"actor":"andrea","content":["What kind of apocalypse?","Che tipo di apocalisse?"],"next":"e871b687-3c61-4c98-9ca7-84d043d887b7"},{"type":"dialog","ID":"e871b687-3c61-4c98-9ca7-84d043d887b7","delay":1.35,"actor":"andrea","content":["Zombie?","Zombie?"],"next":"7ff7ed96-682e-423f-96da-529ad3ca49b8"},{"type":"dialog","ID":"7ff7ed96-682e-423f-96da-529ad3ca49b8","delay":2.225,"actor":"andrea","content":["Like in 'The happening'?","Alla 'E venne in giorno'?"],"next":"a89484e0-909c-4ba5-902c-9774fbd980a9"},{"type":"dialog","ID":"568e0643-c409-4064-96cc-0699bf868bc3","delay":1.475,"actor":"andrea","content":["Which one?","Che tipo?"],"next":"ff90ff03-23de-46d3-b66a-e1b2abc06b38"},{"type":"dialog","ID":"ff90ff03-23de-46d3-b66a-e1b2abc06b38","delay":1.45,"actor":"massimo","content":["Ehm . . .","Ehm . . ."],"next":"7f3ed5e2-793e-4b6e-8eef-c909e2a09c1d"},{"type":"dialog","ID":"7f3ed5e2-793e-4b6e-8eef-c909e2a09c1d","delay":1.35,"actor":"massimo","content":["Zombie?","Zombie?"],"next":"dd1b8331-1949-4ba4-a900-1e6f76706d57"},{"type":"dialog","ID":"a89484e0-909c-4ba5-902c-9774fbd980a9","delay":2.55,"actor":"andrea","content":["Maybe something like 'Mad Max'?","Oppure qualcosa alla 'Mad Max'?"],"next":"568e0643-c409-4064-96cc-0699bf868bc3"},{"type":"dialog","ID":"dd1b8331-1949-4ba4-a900-1e6f76706d57","delay":2.4000000000000004,"actor":"andrea","content":["Yes, but which kind of Zombies?","Si ma che tipo di Zombie?"],"next":"464d3cb9-532e-4555-bfed-f0126df2c457"},{"type":"dialog","ID":"464d3cb9-532e-4555-bfed-f0126df2c457","delay":2.6,"actor":"andrea","content":["Slow Zombies like in 'Resident Evil'?","Lenti alla 'Resident Evil'?"],"next":"2122fd17-c92c-4287-86d9-edf0ada81f70"},{"type":"dialog","ID":"2122fd17-c92c-4287-86d9-edf0ada81f70","delay":2.925,"actor":"andrea","content":["Or fast Zombies, like in '28 days later'?","Oppure veloci alla '28 giorni dopo'?"],"next":"857bd441-a5dc-4576-ab40-7ec953a49118"},{"type":"dialog","ID":"857bd441-a5dc-4576-ab40-7ec953a49118","delay":2.625,"actor":"massimo","content":["Jesus, how am I supposed to know?","Ma che cazzo vuoi che ne sappia?"],"next":"f29ad98a-7926-4901-9882-135f6919da28"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "f170341f-86f2-49e9-8147-765331be6918",
+      "delay": 1.475,
+      "actor": "massimo",
+      "content": [
+        "Tell me.",
+        "Dai, dimmi."
+      ],
+      "next": "52c697b5-afc0-424d-93e6-c3b48fe8dbe6"
+    },
+    {
+      "type": "dialog",
+      "ID": "52c697b5-afc0-424d-93e6-c3b48fe8dbe6",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "choices": [
+        "89258b17-9332-4a3c-9fc1-85d3d2799b13",
+        "ee466f44-8a21-4fff-b88e-bb361d1eb398",
+        "9e043d47-26c6-426f-ace1-6f2401810d08"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "9e043d47-26c6-426f-ace1-6f2401810d08",
+      "title": "",
+      "content": [
+        "Can I have a USB key?",
+        "Posso avere una chiavetta USB?"
+      ],
+      "next": "1da0e666-3a5f-4f44-a9e3-5a88a253a7b6"
+    },
+    {
+      "type": "choice",
+      "ID": "ee466f44-8a21-4fff-b88e-bb361d1eb398",
+      "title": "",
+      "content": [
+        "What's all this about junkies?",
+        "Cos'e' questa fissa per i drogati?"
+      ],
+      "next": "92c2edd2-409e-4205-84f6-2c5ad124c447"
+    },
+    {
+      "type": "choice",
+      "ID": "89258b17-9332-4a3c-9fc1-85d3d2799b13",
+      "title": "",
+      "content": [
+        "I think I have to go . . .",
+        "Si e' fatta una certa . . ."
+      ],
+      "next": "77ab5d9c-fb25-40fe-8193-a76b890afc68"
+    },
+    {
+      "type": "dialog",
+      "ID": "77ab5d9c-fb25-40fe-8193-a76b890afc68",
+      "delay": 2.325,
+      "actor": "andrea",
+      "content": [
+        "I think I have to go . . .",
+        "Si e' fatta una certa . . ."
+      ],
+      "next": "9262ed0e-acc4-4cd1-86b8-5a4b8845143e"
+    },
+    {
+      "type": "dialog",
+      "ID": "9262ed0e-acc4-4cd1-86b8-5a4b8845143e",
+      "delay": 1.6,
+      "actor": "massimo",
+      "content": [
+        "Sure, sure.",
+        "Certo, certo."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "92c2edd2-409e-4205-84f6-2c5ad124c447",
+      "delay": 2.625,
+      "actor": "andrea",
+      "content": [
+        "What's all this about junkies?",
+        "Cos'e' questa fiissa per i drogati?"
+      ],
+      "next": "0b23adf4-07cd-4d15-851c-1d016a56bef6"
+    },
+    {
+      "type": "set",
+      "ID": "1da0e666-3a5f-4f44-a9e3-5a88a253a7b6",
+      "variable": "got_disk",
+      "value": 1,
+      "next": "c6ad5657-34d8-430f-a5bf-c39ce62a5a15"
+    },
+    {
+      "type": "set",
+      "ID": "c6ad5657-34d8-430f-a5bf-c39ce62a5a15",
+      "variable": "got_five_euros",
+      "value": 0,
+      "next": "321327b8-4a0f-49d2-a4fa-59e5d80255a5"
+    },
+    {
+      "type": "set",
+      "ID": "321327b8-4a0f-49d2-a4fa-59e5d80255a5",
+      "variable": "done_disk",
+      "value": 1,
+      "next": "6c84f2cf-7f54-467c-b920-0510734094dc"
+    },
+    {
+      "type": "dialog",
+      "ID": "6c84f2cf-7f54-467c-b920-0510734094dc",
+      "delay": 2.2750000000000004,
+      "actor": "andrea",
+      "content": [
+        "Can I have a USB key?",
+        "Posso avere una chiavetta USB?"
+      ],
+      "next": "d9e42ac0-44d8-4025-90c8-49229404fdb0"
+    },
+    {
+      "type": "dialog",
+      "ID": "d9e42ac0-44d8-4025-90c8-49229404fdb0",
+      "delay": 2.325,
+      "actor": "massimo",
+      "content": [
+        "Sure! It will be five Euros!",
+        "Certo, costa cinque Euri."
+      ],
+      "next": "1f911b5c-b971-47d5-8677-bdb6b48b697d"
+    },
+    {
+      "type": "dialog",
+      "ID": "1f911b5c-b971-47d5-8677-bdb6b48b697d",
+      "delay": 2.1500000000000004,
+      "actor": "andrea",
+      "content": [
+        "Here, takes my money.",
+        "Toh, pigliati sti' soldi!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "0b23adf4-07cd-4d15-851c-1d016a56bef6",
+      "delay": 2.45,
+      "actor": "massimo",
+      "content": [
+        "They are too aggressive!",
+        "Stanno diventando troppo violenti!"
+      ],
+      "next": "c24846af-1bd4-4358-b700-a7a4abc27473"
+    },
+    {
+      "type": "dialog",
+      "ID": "c24846af-1bd4-4358-b700-a7a4abc27473",
+      "delay": 4.025,
+      "actor": "massimo",
+      "content": [
+        "I am scared to keep open the store, and nobody protects me!",
+        "Io ho paura a tenere il negozio aperto, e nessuno mi protegge!"
+      ],
+      "next": "67d854d1-dcde-4daa-8128-2fca02693c38"
+    },
+    {
+      "type": "dialog",
+      "ID": "67d854d1-dcde-4daa-8128-2fca02693c38",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "8ef1a2fa-46db-489d-999b-6d639654d624",
+        "5c20c051-5d6c-4b1f-928f-4c5514f4aa47",
+        "89258b17-9332-4a3c-9fc1-85d3d2799b13"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "8ef1a2fa-46db-489d-999b-6d639654d624",
+      "title": "",
+      "content": [
+        "Aggressive junkies?",
+        "Drogati violenti?"
+      ],
+      "next": "f3039e7f-5df8-48b0-a96b-dea409304997"
+    },
+    {
+      "type": "dialog",
+      "ID": "f3039e7f-5df8-48b0-a96b-dea409304997",
+      "delay": 1.9,
+      "actor": "andrea",
+      "content": [
+        "Aggressive junkies?",
+        "Drogati violenti?"
+      ],
+      "next": "668379d0-2214-4445-a45b-d8c56e13941e"
+    },
+    {
+      "type": "choice",
+      "ID": "5c20c051-5d6c-4b1f-928f-4c5514f4aa47",
+      "title": "",
+      "content": [
+        "What about the police?",
+        "E la polizia che fa?"
+      ],
+      "next": "71c4f003-22fa-4e71-b3e1-0abc03eb1dc8"
+    },
+    {
+      "type": "dialog",
+      "ID": "71c4f003-22fa-4e71-b3e1-0abc03eb1dc8",
+      "delay": 2.05,
+      "actor": "andrea",
+      "content": [
+        "What about the police?",
+        "E la polizia che fa?"
+      ],
+      "next": "c4e61f42-5113-4660-84ab-7925b51ccef8"
+    },
+    {
+      "type": "dialog",
+      "ID": "668379d0-2214-4445-a45b-d8c56e13941e",
+      "delay": 5.325,
+      "actor": "massimo",
+      "content": [
+        "I read on Facebook that they killed 'Il Profeta' here, in Piazza Quattro Novembre.",
+        "Ho letto su Facebook che hanno ammazzato il povero Profeta qui, in piazza Quattro Novembre."
+      ],
+      "next": "e4852345-7e5a-44e2-b210-804cdf144c95"
+    },
+    {
+      "type": "dialog",
+      "ID": "f29ad98a-7926-4901-9882-135f6919da28",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Ah . . ."
+      ],
+      "choices": [
+        "6f2e0a63-c861-421a-a22a-5c206904d7f8",
+        "5c20c051-5d6c-4b1f-928f-4c5514f4aa47",
+        "89258b17-9332-4a3c-9fc1-85d3d2799b13"
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "6f2e0a63-c861-421a-a22a-5c206904d7f8",
+      "title": "",
+      "content": [
+        "You read it on Facebook, right?",
+        "Quindi l'hai letto su Facebook?"
+      ],
+      "next": "039daad0-42dd-490a-adcf-15ee1b5abec2"
+    },
+    {
+      "type": "dialog",
+      "ID": "039daad0-42dd-490a-adcf-15ee1b5abec2",
+      "delay": 2.55,
+      "actor": "andrea",
+      "content": [
+        "You read it on Facebook, right?",
+        "Quindi l'hai letto su Facebook?"
+      ],
+      "next": "91650ce3-4e56-498b-b599-674759fcdc96"
+    },
+    {
+      "type": "dialog",
+      "ID": "91650ce3-4e56-498b-b599-674759fcdc96",
+      "delay": 4,
+      "actor": "massimo",
+      "content": [
+        "You want to tell me that you are still reading the newspapers?",
+        "Perche' vuoi farmi credere che tu leggi ancora i giornali?"
+      ],
+      "next": "a82ba6fe-8ba8-4f9e-b619-d73a27a5c990"
+    },
+    {
+      "type": "dialog",
+      "ID": "a82ba6fe-8ba8-4f9e-b619-d73a27a5c990",
+      "delay": 1.6,
+      "actor": "andrea",
+      "content": [
+        "Are you kidding?",
+        "Scherzi?"
+      ],
+      "next": "30149789-a467-4834-a01d-a1fd238f4b40"
+    },
+    {
+      "type": "dialog",
+      "ID": "30149789-a467-4834-a01d-a1fd238f4b40",
+      "delay": 3.025,
+      "actor": "andrea",
+      "content": [
+        "I am not even reading the billboards!",
+        "Non leggo nemmeno i cartelloni pubblicitari!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "c4e61f42-5113-4660-84ab-7925b51ccef8",
+      "delay": 2.0250000000000004,
+      "actor": "massimo",
+      "content": [
+        "Nothing, as usual.",
+        "Niente, come al solito."
+      ],
+      "next": "ee830e33-3099-408f-8425-96a9b2d053d5"
+    },
+    {
+      "type": "dialog",
+      "ID": "ee830e33-3099-408f-8425-96a9b2d053d5",
+      "delay": 1.6,
+      "actor": "andrea",
+      "content": [
+        "As usual.",
+        "Come al solito."
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "e4852345-7e5a-44e2-b210-804cdf144c95",
+      "delay": 1.925,
+      "actor": "massimo",
+      "content": [
+        "He was crazy, for sure!",
+        "Oh, era pazzo!"
+      ],
+      "next": "3809e651-4b1b-4012-95ca-51ba1561e48d"
+    },
+    {
+      "type": "dialog",
+      "ID": "3809e651-4b1b-4012-95ca-51ba1561e48d",
+      "delay": 4.875,
+      "actor": "massimo",
+      "content": [
+        "He was going around, screaming about an apocalypse that would come very soon.",
+        "Se ne andava in giro predicando su una apocalisse che sarebbe arrivata presto."
+      ],
+      "next": "0bdb942d-c827-45e7-b898-50cf95d31d78"
+    },
+    {
+      "type": "dialog",
+      "ID": "0bdb942d-c827-45e7-b898-50cf95d31d78",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "What kind of apocalypse?",
+        "Che tipo di apocalisse?"
+      ],
+      "next": "920f19d2-a7f8-4b56-957c-fe96620c9fe9"
+    },
+    {
+      "type": "dialog",
+      "ID": "920f19d2-a7f8-4b56-957c-fe96620c9fe9",
+      "delay": 1.15,
+      "actor": "massimo",
+      "content": [
+        "Uh?",
+        "Uh?"
+      ],
+      "next": "418ec259-401c-45b5-aee3-ae734984ab7d"
+    },
+    {
+      "type": "dialog",
+      "ID": "418ec259-401c-45b5-aee3-ae734984ab7d",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "What kind of apocalypse?",
+        "Che tipo di apocalisse?"
+      ],
+      "next": "e871b687-3c61-4c98-9ca7-84d043d887b7"
+    },
+    {
+      "type": "dialog",
+      "ID": "e871b687-3c61-4c98-9ca7-84d043d887b7",
+      "delay": 1.35,
+      "actor": "andrea",
+      "content": [
+        "Zombie?",
+        "Zombie?"
+      ],
+      "next": "7ff7ed96-682e-423f-96da-529ad3ca49b8"
+    },
+    {
+      "type": "dialog",
+      "ID": "7ff7ed96-682e-423f-96da-529ad3ca49b8",
+      "delay": 2.225,
+      "actor": "andrea",
+      "content": [
+        "Like in 'The happening'?",
+        "Alla 'E venne in giorno'?"
+      ],
+      "next": "a89484e0-909c-4ba5-902c-9774fbd980a9"
+    },
+    {
+      "type": "dialog",
+      "ID": "568e0643-c409-4064-96cc-0699bf868bc3",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Which one?",
+        "Che tipo?"
+      ],
+      "next": "ff90ff03-23de-46d3-b66a-e1b2abc06b38"
+    },
+    {
+      "type": "dialog",
+      "ID": "ff90ff03-23de-46d3-b66a-e1b2abc06b38",
+      "delay": 1.45,
+      "actor": "massimo",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "next": "7f3ed5e2-793e-4b6e-8eef-c909e2a09c1d"
+    },
+    {
+      "type": "dialog",
+      "ID": "7f3ed5e2-793e-4b6e-8eef-c909e2a09c1d",
+      "delay": 1.35,
+      "actor": "massimo",
+      "content": [
+        "Zombie?",
+        "Zombie?"
+      ],
+      "next": "dd1b8331-1949-4ba4-a900-1e6f76706d57"
+    },
+    {
+      "type": "dialog",
+      "ID": "a89484e0-909c-4ba5-902c-9774fbd980a9",
+      "delay": 2.55,
+      "actor": "andrea",
+      "content": [
+        "Maybe something like 'Mad Max'?",
+        "Oppure qualcosa alla 'Mad Max'?"
+      ],
+      "next": "568e0643-c409-4064-96cc-0699bf868bc3"
+    },
+    {
+      "type": "dialog",
+      "ID": "dd1b8331-1949-4ba4-a900-1e6f76706d57",
+      "delay": 2.4000000000000004,
+      "actor": "andrea",
+      "content": [
+        "Yes, but which kind of Zombies?",
+        "Si ma che tipo di Zombie?"
+      ],
+      "next": "464d3cb9-532e-4555-bfed-f0126df2c457"
+    },
+    {
+      "type": "dialog",
+      "ID": "464d3cb9-532e-4555-bfed-f0126df2c457",
+      "delay": 2.6,
+      "actor": "andrea",
+      "content": [
+        "Slow Zombies like in 'Resident Evil'?",
+        "Lenti alla 'Resident Evil'?"
+      ],
+      "next": "2122fd17-c92c-4287-86d9-edf0ada81f70"
+    },
+    {
+      "type": "dialog",
+      "ID": "2122fd17-c92c-4287-86d9-edf0ada81f70",
+      "delay": 2.925,
+      "actor": "andrea",
+      "content": [
+        "Or fast Zombies, like in '28 days later'?",
+        "Oppure veloci alla '28 giorni dopo'?"
+      ],
+      "next": "857bd441-a5dc-4576-ab40-7ec953a49118"
+    },
+    {
+      "type": "dialog",
+      "ID": "857bd441-a5dc-4576-ab40-7ec953a49118",
+      "delay": 2.625,
+      "actor": "massimo",
+      "content": [
+        "Jesus, how am I supposed to know?",
+        "Ma che cazzo vuoi che ne sappia?"
+      ],
+      "next": "f29ad98a-7926-4901-9882-135f6919da28"
+    }
+  ]
+}

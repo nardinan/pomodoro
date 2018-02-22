@@ -1,10 +1,22 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"arms_set_blank_side_coffee_frame0",		"time":0.1},
-		{"drawable":"arms_set_blank_side_coffee_frame1",		"time":0.1},
-		{"drawable":"arms_set_blank_side_coffee_frame2",		"time":0.1},
-		{"drawable":"arms_set_blank_side_coffee_frame1",		"time":0.1}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "arms_set_blank_side_coffee_frame0",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_coffee_frame1",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_coffee_frame2",
+      "time": 0.1
+    },
+    {
+      "drawable": "arms_set_blank_side_coffee_frame1",
+      "time": 0.1
+    }
+  ]
 }

@@ -1,8 +1,14 @@
 {
-	"format":"animation",
-	"cycles":-1,
-	"frames":[
-		{"drawable":"head_set_brown_front_open",  "time":2.5},
-		{"drawable":"head_set_brown_front_close", "time":0.1}
-	]
+  "format": "animation",
+  "cycles": -1,
+  "frames": [
+    {
+      "drawable": "head_set_brown_front_open",
+      "time": 2.5
+    },
+    {
+      "drawable": "head_set_brown_front_close",
+      "time": 0.1
+    }
+  ]
 }

@@ -1,93 +1,147 @@
-	{
-	"format":"item",
-	"ID":"window",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"inside_A",
-			"layers":[
-				{"drawable":"window_inside_A"}
-			]
-		},{
-			"label":"inside_B",
-			"layers":[
-				{"drawable":"window_inside_B"}
-			]
-		},{
-			"label":"inside_C",
-			"layers":[
-				{"drawable":"window_inside_C"}
-			]
-		},{
-			"label":"inside_D",
-			"layers":[
-				{"drawable":"window_inside_D"}
-			]
-		},{
-			"label":"outside_A",
-			"layers":[
-				{"drawable":"window_outside_A"}
-			]
-		},{
-			"label":"outside_B",
-			"layers":[
-				{"drawable":"window_outside_B"}
-			]
-		},{
-			"label":"outside_C",
-			"layers":[
-				{"drawable":"window_outside_C"}
-			]
-		},{
-			"label":"outside_C_flip",
-			"layers":[
-				{"drawable":"window_outside_C", "flip_x":true}
-			]
-		},{
-			"label":"outside_D",
-			"layers":[
-				{"drawable":"window_outside_D"}
-			]
-		},{
-			"label":"outside_E",
-			"layers":[
-				{"drawable":"window_outside_E"}
-			]
-		},{
-			"label":"outside_E_flip",
-			"layers":[
-				{"drawable":"window_outside_E", "flip_x":true}
-			]
-		},{
-			"label":"outside_F",
-			"layers":[
-				{"drawable":"window_outside_F"}
-			]
-		},{
-			"label":"outside_G",
-			"layers":[
-				{"drawable":"window_outside_G"}
-			]
-		},{
-			"label":"outside_G_flip",
-			"layers":[
-				{"drawable":"window_outside_G", "flip_x":true}
-			]
-		},{
-			"label":"outside_H",
-			"layers":[
-				{"drawable":"window_outside_H"}
-			]
-		},{
-			"label":"outside_H_flip",
-			"layers":[
-				{"drawable":"window_outside_H", "flip_x":true}
-			]
-		},{
-			"label":"outside_I",
-			"layers":[
-				{"drawable":"window_outside_I"}
-			]
-		}
-	]
+{
+  "format": "item",
+  "ID": "window",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "inside_A",
+      "layers": [
+        {
+          "drawable": "window_inside_A"
+        }
+      ]
+    },
+    {
+      "label": "inside_B",
+      "layers": [
+        {
+          "drawable": "window_inside_B"
+        }
+      ]
+    },
+    {
+      "label": "inside_C",
+      "layers": [
+        {
+          "drawable": "window_inside_C"
+        }
+      ]
+    },
+    {
+      "label": "inside_D",
+      "layers": [
+        {
+          "drawable": "window_inside_D"
+        }
+      ]
+    },
+    {
+      "label": "outside_A",
+      "layers": [
+        {
+          "drawable": "window_outside_A"
+        }
+      ]
+    },
+    {
+      "label": "outside_B",
+      "layers": [
+        {
+          "drawable": "window_outside_B"
+        }
+      ]
+    },
+    {
+      "label": "outside_C",
+      "layers": [
+        {
+          "drawable": "window_outside_C"
+        }
+      ]
+    },
+    {
+      "label": "outside_C_flip",
+      "layers": [
+        {
+          "drawable": "window_outside_C",
+          "flip_x": true
+        }
+      ]
+    },
+    {
+      "label": "outside_D",
+      "layers": [
+        {
+          "drawable": "window_outside_D"
+        }
+      ]
+    },
+    {
+      "label": "outside_E",
+      "layers": [
+        {
+          "drawable": "window_outside_E"
+        }
+      ]
+    },
+    {
+      "label": "outside_E_flip",
+      "layers": [
+        {
+          "drawable": "window_outside_E",
+          "flip_x": true
+        }
+      ]
+    },
+    {
+      "label": "outside_F",
+      "layers": [
+        {
+          "drawable": "window_outside_F"
+        }
+      ]
+    },
+    {
+      "label": "outside_G",
+      "layers": [
+        {
+          "drawable": "window_outside_G"
+        }
+      ]
+    },
+    {
+      "label": "outside_G_flip",
+      "layers": [
+        {
+          "drawable": "window_outside_G",
+          "flip_x": true
+        }
+      ]
+    },
+    {
+      "label": "outside_H",
+      "layers": [
+        {
+          "drawable": "window_outside_H"
+        }
+      ]
+    },
+    {
+      "label": "outside_H_flip",
+      "layers": [
+        {
+          "drawable": "window_outside_H",
+          "flip_x": true
+        }
+      ]
+    },
+    {
+      "label": "outside_I",
+      "layers": [
+        {
+          "drawable": "window_outside_I"
+        }
+      ]
+    }
+  ]
 }

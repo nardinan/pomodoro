@@ -1,1 +1,358 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"b4ac3569-8897-401b-8523-b66b615601c7","delay":2.625,"actor":"antonietta","content":["Can't you see I am busy?","Scusa, ma non vedi quanto sono impegnata?"],"next":"7949a30a-c750-4697-a470-acb2c6ab7fd8"},{"type":"dialog","ID":"7949a30a-c750-4697-a470-acb2c6ab7fd8","delay":1.45,"actor":"andrea","content":["Ehm . . .","Ehm . . ."],"choices":["ab8bad03-c58e-4696-b956-e931111f9968","7459b0f9-768a-4261-8997-d8fec680cb51","96b1c919-1d46-4cac-8fce-d51171da24b0"]},{"type":"choice","ID":"ab8bad03-c58e-4696-b956-e931111f9968","title":"","content":["Busy doing what?","Impegnata nel fare cosa?"],"next":"d75a24c6-6095-42eb-90fb-f68852f2ad47"},{"type":"choice","ID":"7459b0f9-768a-4261-8997-d8fec680cb51","title":"","content":["New age haircut, uh?","Che taglio di capelli alla moda!"],"next":"e83e3c74-4161-4a94-9115-bf9a8a612652"},{"type":"choice","ID":"96b1c919-1d46-4cac-8fce-d51171da24b0","title":"","content":["Who are you?","Chi saresti?"],"next":"2c470a9d-920a-405e-a655-e4b038a3cff4"},{"type":"dialog","ID":"d75a24c6-6095-42eb-90fb-f68852f2ad47","delay":2,"actor":"andrea","content":["Busy doing what?","Impegnata nel fare cosa?"],"next":"000cb55e-227e-43ae-981c-1ef652922741"},{"type":"dialog","ID":"e83e3c74-4161-4a94-9115-bf9a8a612652","delay":2.3,"actor":"andrea","content":["New age haircut, uh?","Che taglio di capelli alla moda!"],"next":"fe166047-4426-4075-8f0b-d5edeb44bad8"},{"type":"dialog","ID":"2c470a9d-920a-405e-a655-e4b038a3cff4","delay":1.6,"actor":"andrea","content":["Who are you?","Chi saresti?"],"next":"d114407f-8dfb-4d5a-b366-2d60cd0b0c3c"},{"type":"dialog","ID":"000cb55e-227e-43ae-981c-1ef652922741","delay":2.0250000000000004,"actor":"antonietta","content":["Do you see that fly?","La vedi quella mosca?"],"next":"37d27340-8344-44c6-a15e-84addcbb4ae3"},{"type":"dialog","ID":"37d27340-8344-44c6-a15e-84addcbb4ae3","delay":1.175,"actor":"andrea","content":["Yes?","Si?"],"next":"3ec669a1-f6c1-4386-ab29-6f898bcaffe3"},{"type":"dialog","ID":"3ec669a1-f6c1-4386-ab29-6f898bcaffe3","delay":2.925,"actor":"antonietta","content":["Soon or later it will land somewhere!","Prima o poi si posera' da qualche parte!"],"next":"fb46124b-ba49-4d83-9308-0248808980a7"},{"type":"dialog","ID":"fb46124b-ba49-4d83-9308-0248808980a7","delay":2.2,"actor":"antonietta","content":["At that point . . .","E proprio a quel punto  . . ."],"next":"277b9f49-7a21-4e80-bb73-6b0cb97b669b"},{"type":"dialog","ID":"277b9f49-7a21-4e80-bb73-6b0cb97b669b","delay":1.25,"actor":"antonietta","content":["SBAM!","SBAM!"],"next":"a38434d2-a1ba-48d8-a7d3-e7cc8e5eb453"},{"type":"dialog","ID":"a38434d2-a1ba-48d8-a7d3-e7cc8e5eb453","delay":2.125,"actor":"andrea","content":["I hate flies as well!","Anche io odio le mosche!"],"next":"fe166047-4426-4075-8f0b-d5edeb44bad8"},{"type":"dialog","ID":"fe166047-4426-4075-8f0b-d5edeb44bad8","delay":2.175,"actor":"antonietta","content":["Are you hitting on me?","Ma che, ci stai provando?"],"next":"8eb9ba09-aa77-4b09-bb69-3f5f2d6d2d4a"},{"type":"dialog","ID":"8eb9ba09-aa77-4b09-bb69-3f5f2d6d2d4a","delay":2.4000000000000004,"actor":"antonietta","content":["Don't you even think about it!","Ue, non ti permettere sai!"],"next":"b08d7630-a089-4df8-8d28-5fbda392e2f9"},{"type":"dialog","ID":"b08d7630-a089-4df8-8d28-5fbda392e2f9","delay":2.2,"actor":"antonietta","content":["You're too old for me!","Sei troppo vecchio per me!"],"next":"0431b6c7-a528-4b6a-a053-5c1157b0e920"},{"type":"dialog","ID":"0431b6c7-a528-4b6a-a053-5c1157b0e920","delay":2.55,"actor":"andrea","content":["I didn't get your name!","In tutto questo, mi sono perso il nome!"],"next":"040165ca-11c4-4c77-b470-851187405236"},{"type":"dialog","ID":"040165ca-11c4-4c77-b470-851187405236","delay":4.45,"actor":"antonietta","content":["Antonietta, same name of the famous D'Arco that burned to death in 1432.","Antonietta, come la famosa D'Arco che venne messa a rogo nel 1432."],"next":"db0d5a17-1212-4530-803d-e4608e42e844"},{"type":"dialog","ID":"db0d5a17-1212-4530-803d-e4608e42e844","delay":2.175,"actor":"andrea","content":["That's Giovanna!","Ma quella si chiamava Giovanna!"],"next":"3888d90f-ed92-49fe-9803-d58ef4459d7f"},{"type":"dialog","ID":"3888d90f-ed92-49fe-9803-d58ef4459d7f","delay":1.15,"actor":"antonietta","content":["No.","No."],"next":"e33765af-2ed7-4977-bbad-50c06ca11d62"},{"type":"dialog","ID":"e33765af-2ed7-4977-bbad-50c06ca11d62","delay":2.95,"actor":"antonietta","content":["Giovanna burned to death in 1431 . . .","Giovanna fu messa al rogo nel 1431 . . ."],"next":"a4081068-275a-41ec-bcff-23d3654d2944"},{"type":"dialog","ID":"a4081068-275a-41ec-bcff-23d3654d2944","delay":3.5500000000000003,"actor":"antonietta","content":[". . . whilst her sister, Antonietta, the year after.",". . . mentre sua sorella, Antonietta, l'anno dopo."],"next":"b6b8cef6-e3dc-4276-9d51-7a6e9ac33dcb"},{"type":"dialog","ID":"d114407f-8dfb-4d5a-b366-2d60cd0b0c3c","delay":2.75,"actor":"antonietta","content":["The person that manages this place!","Quella che gestisce la baracca qui!"],"next":"b824d0f9-9525-4fec-a0cf-4cf5a0fbca09"},{"type":"dialog","ID":"b824d0f9-9525-4fec-a0cf-4cf5a0fbca09","delay":3.875,"actor":"andrea","content":["This is the University for Foreigners of Perugia, isn't it?","Ma questa non e' l'Universita' per Stranieri di Perugia?"],"next":"dd7e49ff-11b2-4d99-acd8-9af26cc28277"},{"type":"dialog","ID":"dd7e49ff-11b2-4d99-acd8-9af26cc28277","delay":1.25,"actor":"antonietta","content":["So?","Quindi?"],"next":"bbf9b9d7-0005-4e27-a993-05497755cb10"},{"type":"dialog","ID":"bbf9b9d7-0005-4e27-a993-05497755cb10","delay":6.075,"actor":"antonietta","content":["If you are looking for a good way to say that I am a liar, you should hold your tongue my friend . . .","Se stai trovando un modo carino per dire che sparo cazzate ti conviene tenere a freno la lingua . . ."],"next":"2e0e3603-8c33-415a-b4b4-43804e2cc068"},{"type":"dialog","ID":"2e0e3603-8c33-415a-b4b4-43804e2cc068","delay":1.45,"actor":"andrea","content":["Ehm . . .","Ehm . . ."],"next":"6745c148-7385-4cda-a434-50f07c9f619d"},{"type":"dialog","ID":"b6b8cef6-e3dc-4276-9d51-7a6e9ac33dcb","delay":2.5,"actor":"andrea","content":["Famous Antonietta D'Arco . . .","Famosa Antonietta D'Arco . . ."],"next":"c01c1771-f217-4bbe-81cd-497b9e3ed9fd"},{"type":"dialog","ID":"c01c1771-f217-4bbe-81cd-497b9e3ed9fd","delay":1.725,"actor":"antonietta","content":["Very very famous!","Famosissima!"],"next":null},{"type":"dialog","ID":"6745c148-7385-4cda-a434-50f07c9f619d","delay":1.925,"actor":"andrea","content":["No no, I believe you.","No no, le credo."],"next":"0f3398f6-8859-4224-ab14-2abdadb10762"},{"type":"dialog","ID":"0f3398f6-8859-4224-ab14-2abdadb10762","delay":2.25,"actor":"andrea","content":["You have a trustworthy face!","Ha un viso affidabile!"],"next":"fe166047-4426-4075-8f0b-d5edeb44bad8"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "b4ac3569-8897-401b-8523-b66b615601c7",
+      "delay": 2.625,
+      "actor": "antonietta",
+      "content": [
+        "Can't you see I am busy?",
+        "Scusa, ma non vedi quanto sono impegnata?"
+      ],
+      "next": "7949a30a-c750-4697-a470-acb2c6ab7fd8"
+    },
+    {
+      "type": "dialog",
+      "ID": "7949a30a-c750-4697-a470-acb2c6ab7fd8",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "choices": [
+        "ab8bad03-c58e-4696-b956-e931111f9968",
+        "7459b0f9-768a-4261-8997-d8fec680cb51",
+        "96b1c919-1d46-4cac-8fce-d51171da24b0"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "ab8bad03-c58e-4696-b956-e931111f9968",
+      "title": "",
+      "content": [
+        "Busy doing what?",
+        "Impegnata nel fare cosa?"
+      ],
+      "next": "d75a24c6-6095-42eb-90fb-f68852f2ad47"
+    },
+    {
+      "type": "choice",
+      "ID": "7459b0f9-768a-4261-8997-d8fec680cb51",
+      "title": "",
+      "content": [
+        "New age haircut, uh?",
+        "Che taglio di capelli alla moda!"
+      ],
+      "next": "e83e3c74-4161-4a94-9115-bf9a8a612652"
+    },
+    {
+      "type": "choice",
+      "ID": "96b1c919-1d46-4cac-8fce-d51171da24b0",
+      "title": "",
+      "content": [
+        "Who are you?",
+        "Chi saresti?"
+      ],
+      "next": "2c470a9d-920a-405e-a655-e4b038a3cff4"
+    },
+    {
+      "type": "dialog",
+      "ID": "d75a24c6-6095-42eb-90fb-f68852f2ad47",
+      "delay": 2,
+      "actor": "andrea",
+      "content": [
+        "Busy doing what?",
+        "Impegnata nel fare cosa?"
+      ],
+      "next": "000cb55e-227e-43ae-981c-1ef652922741"
+    },
+    {
+      "type": "dialog",
+      "ID": "e83e3c74-4161-4a94-9115-bf9a8a612652",
+      "delay": 2.3,
+      "actor": "andrea",
+      "content": [
+        "New age haircut, uh?",
+        "Che taglio di capelli alla moda!"
+      ],
+      "next": "fe166047-4426-4075-8f0b-d5edeb44bad8"
+    },
+    {
+      "type": "dialog",
+      "ID": "2c470a9d-920a-405e-a655-e4b038a3cff4",
+      "delay": 1.6,
+      "actor": "andrea",
+      "content": [
+        "Who are you?",
+        "Chi saresti?"
+      ],
+      "next": "d114407f-8dfb-4d5a-b366-2d60cd0b0c3c"
+    },
+    {
+      "type": "dialog",
+      "ID": "000cb55e-227e-43ae-981c-1ef652922741",
+      "delay": 2.0250000000000004,
+      "actor": "antonietta",
+      "content": [
+        "Do you see that fly?",
+        "La vedi quella mosca?"
+      ],
+      "next": "37d27340-8344-44c6-a15e-84addcbb4ae3"
+    },
+    {
+      "type": "dialog",
+      "ID": "37d27340-8344-44c6-a15e-84addcbb4ae3",
+      "delay": 1.175,
+      "actor": "andrea",
+      "content": [
+        "Yes?",
+        "Si?"
+      ],
+      "next": "3ec669a1-f6c1-4386-ab29-6f898bcaffe3"
+    },
+    {
+      "type": "dialog",
+      "ID": "3ec669a1-f6c1-4386-ab29-6f898bcaffe3",
+      "delay": 2.925,
+      "actor": "antonietta",
+      "content": [
+        "Soon or later it will land somewhere!",
+        "Prima o poi si posera' da qualche parte!"
+      ],
+      "next": "fb46124b-ba49-4d83-9308-0248808980a7"
+    },
+    {
+      "type": "dialog",
+      "ID": "fb46124b-ba49-4d83-9308-0248808980a7",
+      "delay": 2.2,
+      "actor": "antonietta",
+      "content": [
+        "At that point . . .",
+        "E proprio a quel punto  . . ."
+      ],
+      "next": "277b9f49-7a21-4e80-bb73-6b0cb97b669b"
+    },
+    {
+      "type": "dialog",
+      "ID": "277b9f49-7a21-4e80-bb73-6b0cb97b669b",
+      "delay": 1.25,
+      "actor": "antonietta",
+      "content": [
+        "SBAM!",
+        "SBAM!"
+      ],
+      "next": "a38434d2-a1ba-48d8-a7d3-e7cc8e5eb453"
+    },
+    {
+      "type": "dialog",
+      "ID": "a38434d2-a1ba-48d8-a7d3-e7cc8e5eb453",
+      "delay": 2.125,
+      "actor": "andrea",
+      "content": [
+        "I hate flies as well!",
+        "Anche io odio le mosche!"
+      ],
+      "next": "fe166047-4426-4075-8f0b-d5edeb44bad8"
+    },
+    {
+      "type": "dialog",
+      "ID": "fe166047-4426-4075-8f0b-d5edeb44bad8",
+      "delay": 2.175,
+      "actor": "antonietta",
+      "content": [
+        "Are you hitting on me?",
+        "Ma che, ci stai provando?"
+      ],
+      "next": "8eb9ba09-aa77-4b09-bb69-3f5f2d6d2d4a"
+    },
+    {
+      "type": "dialog",
+      "ID": "8eb9ba09-aa77-4b09-bb69-3f5f2d6d2d4a",
+      "delay": 2.4000000000000004,
+      "actor": "antonietta",
+      "content": [
+        "Don't you even think about it!",
+        "Ue, non ti permettere sai!"
+      ],
+      "next": "b08d7630-a089-4df8-8d28-5fbda392e2f9"
+    },
+    {
+      "type": "dialog",
+      "ID": "b08d7630-a089-4df8-8d28-5fbda392e2f9",
+      "delay": 2.2,
+      "actor": "antonietta",
+      "content": [
+        "You're too old for me!",
+        "Sei troppo vecchio per me!"
+      ],
+      "next": "0431b6c7-a528-4b6a-a053-5c1157b0e920"
+    },
+    {
+      "type": "dialog",
+      "ID": "0431b6c7-a528-4b6a-a053-5c1157b0e920",
+      "delay": 2.55,
+      "actor": "andrea",
+      "content": [
+        "I didn't get your name!",
+        "In tutto questo, mi sono perso il nome!"
+      ],
+      "next": "040165ca-11c4-4c77-b470-851187405236"
+    },
+    {
+      "type": "dialog",
+      "ID": "040165ca-11c4-4c77-b470-851187405236",
+      "delay": 4.45,
+      "actor": "antonietta",
+      "content": [
+        "Antonietta, same name of the famous D'Arco that burned to death in 1432.",
+        "Antonietta, come la famosa D'Arco che venne messa a rogo nel 1432."
+      ],
+      "next": "db0d5a17-1212-4530-803d-e4608e42e844"
+    },
+    {
+      "type": "dialog",
+      "ID": "db0d5a17-1212-4530-803d-e4608e42e844",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "That's Giovanna!",
+        "Ma quella si chiamava Giovanna!"
+      ],
+      "next": "3888d90f-ed92-49fe-9803-d58ef4459d7f"
+    },
+    {
+      "type": "dialog",
+      "ID": "3888d90f-ed92-49fe-9803-d58ef4459d7f",
+      "delay": 1.15,
+      "actor": "antonietta",
+      "content": [
+        "No.",
+        "No."
+      ],
+      "next": "e33765af-2ed7-4977-bbad-50c06ca11d62"
+    },
+    {
+      "type": "dialog",
+      "ID": "e33765af-2ed7-4977-bbad-50c06ca11d62",
+      "delay": 2.95,
+      "actor": "antonietta",
+      "content": [
+        "Giovanna burned to death in 1431 . . .",
+        "Giovanna fu messa al rogo nel 1431 . . ."
+      ],
+      "next": "a4081068-275a-41ec-bcff-23d3654d2944"
+    },
+    {
+      "type": "dialog",
+      "ID": "a4081068-275a-41ec-bcff-23d3654d2944",
+      "delay": 3.5500000000000003,
+      "actor": "antonietta",
+      "content": [
+        ". . . whilst her sister, Antonietta, the year after.",
+        ". . . mentre sua sorella, Antonietta, l'anno dopo."
+      ],
+      "next": "b6b8cef6-e3dc-4276-9d51-7a6e9ac33dcb"
+    },
+    {
+      "type": "dialog",
+      "ID": "d114407f-8dfb-4d5a-b366-2d60cd0b0c3c",
+      "delay": 2.75,
+      "actor": "antonietta",
+      "content": [
+        "The person that manages this place!",
+        "Quella che gestisce la baracca qui!"
+      ],
+      "next": "b824d0f9-9525-4fec-a0cf-4cf5a0fbca09"
+    },
+    {
+      "type": "dialog",
+      "ID": "b824d0f9-9525-4fec-a0cf-4cf5a0fbca09",
+      "delay": 3.875,
+      "actor": "andrea",
+      "content": [
+        "This is the University for Foreigners of Perugia, isn't it?",
+        "Ma questa non e' l'Universita' per Stranieri di Perugia?"
+      ],
+      "next": "dd7e49ff-11b2-4d99-acd8-9af26cc28277"
+    },
+    {
+      "type": "dialog",
+      "ID": "dd7e49ff-11b2-4d99-acd8-9af26cc28277",
+      "delay": 1.25,
+      "actor": "antonietta",
+      "content": [
+        "So?",
+        "Quindi?"
+      ],
+      "next": "bbf9b9d7-0005-4e27-a993-05497755cb10"
+    },
+    {
+      "type": "dialog",
+      "ID": "bbf9b9d7-0005-4e27-a993-05497755cb10",
+      "delay": 6.075,
+      "actor": "antonietta",
+      "content": [
+        "If you are looking for a good way to say that I am a liar, you should hold your tongue my friend . . .",
+        "Se stai trovando un modo carino per dire che sparo cazzate ti conviene tenere a freno la lingua . . ."
+      ],
+      "next": "2e0e3603-8c33-415a-b4b4-43804e2cc068"
+    },
+    {
+      "type": "dialog",
+      "ID": "2e0e3603-8c33-415a-b4b4-43804e2cc068",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Ehm . . .",
+        "Ehm . . ."
+      ],
+      "next": "6745c148-7385-4cda-a434-50f07c9f619d"
+    },
+    {
+      "type": "dialog",
+      "ID": "b6b8cef6-e3dc-4276-9d51-7a6e9ac33dcb",
+      "delay": 2.5,
+      "actor": "andrea",
+      "content": [
+        "Famous Antonietta D'Arco . . .",
+        "Famosa Antonietta D'Arco . . ."
+      ],
+      "next": "c01c1771-f217-4bbe-81cd-497b9e3ed9fd"
+    },
+    {
+      "type": "dialog",
+      "ID": "c01c1771-f217-4bbe-81cd-497b9e3ed9fd",
+      "delay": 1.725,
+      "actor": "antonietta",
+      "content": [
+        "Very very famous!",
+        "Famosissima!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "6745c148-7385-4cda-a434-50f07c9f619d",
+      "delay": 1.925,
+      "actor": "andrea",
+      "content": [
+        "No no, I believe you.",
+        "No no, le credo."
+      ],
+      "next": "0f3398f6-8859-4224-ab14-2abdadb10762"
+    },
+    {
+      "type": "dialog",
+      "ID": "0f3398f6-8859-4224-ab14-2abdadb10762",
+      "delay": 2.25,
+      "actor": "andrea",
+      "content": [
+        "You have a trustworthy face!",
+        "Ha un viso affidabile!"
+      ],
+      "next": "fe166047-4426-4075-8f0b-d5edeb44bad8"
+    }
+  ]
+}

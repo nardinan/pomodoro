@@ -1,15 +1,46 @@
 {
-	"format":"animation",
-	"cycles":1,
-	"frames":[
-		{"drawable":"black_layer",  "time":0.1, 	"mask_A":0},
-		{"drawable":"black_layer",  "time":0.1, 	"mask_A":40},
-		{"drawable":"black_layer",  "time":0.1, 	"mask_A":80},
-		{"drawable":"black_layer",  "time":0.1, 	"mask_A":120},
-		{"drawable":"black_layer",  "time":0.1, 	"mask_A":160},
-		{"drawable":"black_layer",  "time":0.1, 	"mask_A":200},
-		{"drawable":"black_layer",  "time":0.1, 	"mask_A":240},
-		{"drawable":"black_layer",  "time":1.0, 	"mask_A":255}
-
-	]
+  "format": "animation",
+  "cycles": 1,
+  "frames": [
+    {
+      "drawable": "black_layer",
+      "time": 0.1,
+      "mask_A": 0
+    },
+    {
+      "drawable": "black_layer",
+      "time": 0.1,
+      "mask_A": 40
+    },
+    {
+      "drawable": "black_layer",
+      "time": 0.1,
+      "mask_A": 80
+    },
+    {
+      "drawable": "black_layer",
+      "time": 0.1,
+      "mask_A": 120
+    },
+    {
+      "drawable": "black_layer",
+      "time": 0.1,
+      "mask_A": 160
+    },
+    {
+      "drawable": "black_layer",
+      "time": 0.1,
+      "mask_A": 200
+    },
+    {
+      "drawable": "black_layer",
+      "time": 0.1,
+      "mask_A": 240
+    },
+    {
+      "drawable": "black_layer",
+      "time": 1.0,
+      "mask_A": 255
+    }
+  ]
 }

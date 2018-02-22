@@ -1,14 +1,8 @@
-*.o     # exclude object files
-*.bin   # exclude executable
-
-collector\.dump\.dat
-
 *.o
-
+*.so
+*.dat
 *.bin
-
-\.DS_Store
-
-*.out
-
-collector\.dump\.end\.game
+.DS_Store
+.idea/*
+cmake-build-debug/*
+cmake-build-release/*

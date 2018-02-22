@@ -265,7 +265,7 @@
       }
     },
     {
-      "label":"still_right",
+      "label": "still_right",
       "offset_x": -200,
       "flip_x": true,
       "head": {
@@ -341,7 +341,7 @@
       }
     },
     {
-      "label":"still_left",
+      "label": "still_left",
       "offset_x": -200,
       "head": {
         "drawable": "head_set_blank_side"

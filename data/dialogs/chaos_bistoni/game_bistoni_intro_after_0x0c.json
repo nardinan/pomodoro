@@ -1,1 +1,49 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"3fd82253-6361-4d5a-a467-84b7da105128","delay":1.725,"actor":"andrea","content":["Your highness!","Vostra altezza!"],"next":"bc44fd03-80d1-423b-a28b-d1f719aaa9af"},{"type":"dialog","ID":"bc44fd03-80d1-423b-a28b-d1f719aaa9af","delay":1.8,"actor":"andrea","content":["My overlord!","Mio signore supremo!"],"next":"7f5fc012-4e11-4d07-9c0b-0fddf0d801c7"},{"type":"dialog","ID":"7f5fc012-4e11-4d07-9c0b-0fddf0d801c7","delay":2.825,"actor":"bistoni","content":["Please, please, don't make a fuss . . .","Prego, prego, non esageriamo . . ."],"next":"4c4233e3-9cea-4903-b4f3-a69da2c77ce9"},{"type":"dialog","ID":"4c4233e3-9cea-4903-b4f3-a69da2c77ce9","delay":3.15,"actor":"bistoni","content":[". . . I'm just a plain Magnifico Rettore.",". . . sono solo un Magnifico Rettore normale."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "3fd82253-6361-4d5a-a467-84b7da105128",
+      "delay": 1.725,
+      "actor": "andrea",
+      "content": [
+        "Your highness!",
+        "Vostra altezza!"
+      ],
+      "next": "bc44fd03-80d1-423b-a28b-d1f719aaa9af"
+    },
+    {
+      "type": "dialog",
+      "ID": "bc44fd03-80d1-423b-a28b-d1f719aaa9af",
+      "delay": 1.8,
+      "actor": "andrea",
+      "content": [
+        "My overlord!",
+        "Mio signore supremo!"
+      ],
+      "next": "7f5fc012-4e11-4d07-9c0b-0fddf0d801c7"
+    },
+    {
+      "type": "dialog",
+      "ID": "7f5fc012-4e11-4d07-9c0b-0fddf0d801c7",
+      "delay": 2.825,
+      "actor": "bistoni",
+      "content": [
+        "Please, please, don't make a fuss . . .",
+        "Prego, prego, non esageriamo . . ."
+      ],
+      "next": "4c4233e3-9cea-4903-b4f3-a69da2c77ce9"
+    },
+    {
+      "type": "dialog",
+      "ID": "4c4233e3-9cea-4903-b4f3-a69da2c77ce9",
+      "delay": 3.15,
+      "actor": "bistoni",
+      "content": [
+        ". . . I'm just a plain Magnifico Rettore.",
+        ". . . sono solo un Magnifico Rettore normale."
+      ],
+      "next": null
+    }
+  ]
+}

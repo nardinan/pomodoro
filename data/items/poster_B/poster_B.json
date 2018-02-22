@@ -1,13 +1,15 @@
 {
-	"format":"item",
-	"ID":"notes_B",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still",
-			"layers":[
-				{"drawable":"poster_B_one_still"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "notes_B",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still",
+      "layers": [
+        {
+          "drawable": "poster_B_one_still"
+        }
+      ]
+    }
+  ]
 }

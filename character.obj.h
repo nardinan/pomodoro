@@ -24,35 +24,34 @@
 #define d_character_principal_point_offset 5
 #define d_character_principal_point_red 0
 #define d_character_principal_point_green 255
-#define d_character_principal_point_blue 0 
+#define d_character_principal_point_blue 0
 #define d_character_principal_point_alpha 255
 typedef enum e_character_components {
-    e_character_component_arms = 0,
-    e_character_component_cap,
-    e_character_component_eyes,
-    e_character_component_hair,
-    e_character_component_head,
-    e_character_component_legs,
-    e_character_component_body,
-    e_character_component_NULL
+  e_character_component_arms = 0,
+  e_character_component_cap,
+  e_character_component_eyes,
+  e_character_component_hair,
+  e_character_component_head,
+  e_character_component_legs,
+  e_character_component_body,
+  e_character_component_NULL
 } e_character_components;
-typedef enum e_character_directions { 
-    e_character_direction_left = 0,
-    e_character_direction_right,
-    e_character_direction_up,
-    e_character_direction_down,
-    e_character_direction_unknown,
-    e_character_direction_NULL
+typedef enum e_character_directions {
+  e_character_direction_left = 0,
+  e_character_direction_right,
+  e_character_direction_up,
+  e_character_direction_down,
+  e_character_direction_unknown,
+  e_character_direction_NULL
 } e_character_directions;
-extern const char *v_character_components_label[e_character_component_NULL],
-       *v_character_directions_label[e_character_direction_NULL];
+extern const char *v_character_components_label[e_character_component_NULL], *v_character_directions_label[e_character_direction_NULL];
 d_declare_class(character) {
-    struct s_attributes head;
-    enum e_character_directions direction;
-    struct s_object *bubble;
-    double bubble_offset_x, bubble_offset_y, destination_x, source_x;
-    t_boolean movement, set, action, collidable, running, sliding;
-    struct timeval last_stop;
+  struct s_attributes head;
+  enum e_character_directions direction;
+  struct s_object *bubble;
+  double bubble_offset_x, bubble_offset_y, destination_x, source_x;
+  t_boolean movement, set, action, collidable, running, sliding;
+  struct timeval last_stop;
 } d_declare_class_tail(character);
 struct s_character_attributes *p_character_alloc(struct s_object *self, const char *key, t_entity_validator validator);
 extern struct s_object *f_character_new(struct s_object *self, const char *key, t_entity_validator validator);

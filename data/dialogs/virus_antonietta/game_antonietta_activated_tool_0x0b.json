@@ -1,1 +1,568 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"d0b91a9d-9ac6-4f5f-95f8-1345049a852c","delay":3.125,"actor":"antonietta","content":["I hope you're not here to waste my time.","Spero tu non sia qui per farmi perdere tempo."],"next":"c3863c08-ad7d-4882-a511-95342819e12e"},{"type":"dialog","ID":"c3863c08-ad7d-4882-a511-95342819e12e","delay":1.475,"actor":"andrea","content":["Well . . .","Beh . . ."],"choices":["0112123f-5337-44a8-bea7-0b5e6b2c885a","d83a7bc7-7c6c-4db0-9e16-18625202a300","c134abf5-e537-4724-a625-52e1504a430c"]},{"type":"choice","ID":"0112123f-5337-44a8-bea7-0b5e6b2c885a","title":"","content":["Are you worried about the virus?","Preoccupata per il virus?"],"next":"d846ef5c-2ac1-4f2f-b1c3-bbb62110a721"},{"type":"dialog","ID":"d846ef5c-2ac1-4f2f-b1c3-bbb62110a721","delay":2.425,"actor":"andrea","content":["Are you worried about the virus?","Preoccupata per il virus?"],"next":"af3dfcfd-a5c0-4677-a6ac-807629650b88"},{"type":"dialog","ID":"af3dfcfd-a5c0-4677-a6ac-807629650b88","delay":3.325,"actor":"antonietta","content":["Are you talking about that stupid 'Solaris' thing?","Parli di quella stupidaggine del 'Solaris'?"],"next":"88ea9341-25a5-4f49-8091-4d73b62968d8"},{"type":"dialog","ID":"88ea9341-25a5-4f49-8091-4d73b62968d8","delay":3.4250000000000003,"actor":"antonietta","content":["Just an idiot could believe those bullshits.","Solo un idiota potrebbe credere a queste fanfaronate."],"next":"95faa28a-38a6-44dd-a242-94c4db07d6bf"},{"type":"dialog","ID":"95faa28a-38a6-44dd-a242-94c4db07d6bf","delay":3.2,"actor":"andrea","content":["So, do you think there is no need to worry about?","Quindi per te non c'e' da preoccuparsi?"],"next":"b25dc7a8-f956-4407-a972-d0ba9c954449"},{"type":"dialog","ID":"b25dc7a8-f956-4407-a972-d0ba9c954449","delay":1.5750000000000002,"actor":"antonietta","content":["Precisely.","Precisamente."],"next":"7a65b094-c93b-48d8-8cf0-9fe9f187bb7f"},{"type":"dialog","ID":"7a65b094-c93b-48d8-8cf0-9fe9f187bb7f","delay":1.5750000000000002,"actor":"andrea","content":["OK but . . .","OK ma . . ."],"choices":["adb0a9e1-06e7-4848-992a-fade7bb03a36","d83a7bc7-7c6c-4db0-9e16-18625202a300","e1712e12-5233-405e-9bb7-4129c415ab2d"]},{"type":"choice","ID":"d83a7bc7-7c6c-4db0-9e16-18625202a300","title":"","content":["I'm probably allergic to your perfume.","Credo d'essere allergico al tuo profumo."],"next":"9151db47-f24f-4465-8e1f-5cd18c53ab72"},{"type":"dialog","ID":"9151db47-f24f-4465-8e1f-5cd18c53ab72","delay":2.95,"actor":"andrea","content":["I'm probably allergic to your perfume.","Credo d'essere allergico al tuo profumo."],"next":"25e30868-f48f-443d-8bb5-a027703e4970"},{"type":"dialog","ID":"3c0e4f99-ec0b-4cad-b412-e56aba9c7f1f","delay":3.0500000000000003,"actor":"antonietta","content":["5 Euros for 15 liters from 'Acqua e Sapone'!","5 Euro per 15 litri da Acqua e Sapone!"],"next":"63629248-4cce-48e4-b5d5-11a9d77d691a"},{"type":"dialog","ID":"25e30868-f48f-443d-8bb5-a027703e4970","delay":1.475,"actor":"antonietta","content":["Nice, uh?","Buono, eh?"],"next":"3c0e4f99-ec0b-4cad-b412-e56aba9c7f1f"},{"type":"choice","ID":"adb0a9e1-06e7-4848-992a-fade7bb03a36","title":"","content":["How's your boyfriend feel about that?","Cosa ne pensa il tuo ragazzo?"],"next":"e7420986-49bd-4a4a-a854-0c063763f568"},{"type":"dialog","ID":"e7420986-49bd-4a4a-a854-0c063763f568","delay":2.6500000000000004,"actor":"andrea","content":["How's your boyfriend feel about that?","Cosa ne pensa il tuo ragazzo?"],"next":"f72e9652-bd4f-43e3-843f-3e6fa4d6b73d"},{"type":"dialog","ID":"63629248-4cce-48e4-b5d5-11a9d77d691a","delay":3,"actor":"antonietta","content":["It's called 'Summer's carrion' from Bigio!","Si chiama 'Carogna d'estate' di Bigio!"],"next":null},{"type":"dialog","ID":"f72e9652-bd4f-43e3-843f-3e6fa4d6b73d","delay":2.375,"actor":"antonietta","content":["He is a smart guy . . .","E' un ragazzo intelligente . . ."],"next":"0cced0a9-bbe0-4012-9b16-76b706a4d3df"},{"type":"dialog","ID":"0cced0a9-bbe0-4012-9b16-76b706a4d3df","delay":2.725,"actor":"antonietta","content":[". . . I am sure he agrees with me.",". . . la pensa sicuramente come me."],"next":"c47d097e-bceb-4de8-ae66-009251eccacd"},{"type":"choice","ID":"c134abf5-e537-4724-a625-52e1504a430c","title":"","content":["Did you see any contact lens?","Hai visto delle lenti a contatto?"],"next":"184e09bf-1875-4f88-ba59-0b9b2a6f0add"},{"type":"dialog","ID":"c47d097e-bceb-4de8-ae66-009251eccacd","delay":1.5,"actor":"andrea","content":["Are you sure?","Sicura?"],"next":"9aab8ea2-f9c3-4aff-9c2f-088d05b27547"},{"type":"dialog","ID":"9aab8ea2-f9c3-4aff-9c2f-088d05b27547","delay":3.125,"actor":"andrea","content":["Viruses, doomsday scenarios, zombies . . .","Virus, scenari apocalittici e zombies . . ."],"next":"032acd7e-f90f-45fc-a685-c5881ada71d3"},{"type":"dialog","ID":"032acd7e-f90f-45fc-a685-c5881ada71d3","delay":2.0250000000000004,"actor":"andrea","content":["He is still a nerd!","E' pur sempre un nerd!"],"next":"fed37ce8-5693-4f9c-b1a2-6b4f8a9c9b71"},{"type":"dialog","ID":"fed37ce8-5693-4f9c-b1a2-6b4f8a9c9b71","delay":2.675,"actor":"antonietta","content":["Don't worry, as I said . . .","Non ti preoccupare, come ho detto . . ."],"next":"ba81d1e9-d9fb-447d-8d3e-39ee6b90ebd9"},{"type":"dialog","ID":"ba81d1e9-d9fb-447d-8d3e-39ee6b90ebd9","delay":2.375,"actor":"antonietta","content":["He is a smart guy . . .","E' un ragazzo intelligente . . ."],"next":"7df59e5b-8b72-4f39-af45-8723ab61cc25"},{"type":"choice","ID":"e1712e12-5233-405e-9bb7-4129c415ab2d","title":"","content":["I think we should start being preoccupied","Io credo ci sia da preoccuparsi."],"next":"c4bb358d-fc6a-45b8-87c0-9d014f85dd7f"},{"type":"dialog","ID":"76a90258-9c25-4d97-a1dc-e71e2bd2cfc1","delay":2.85,"actor":"andrea","content":["I think we should start being preoccupied.","Io credo ci sia da preoccuparsi."],"next":"bbc1ac6c-18a5-41cd-96d7-dd78dd0a6c10"},{"type":"dialog","ID":"bbc1ac6c-18a5-41cd-96d7-dd78dd0a6c10","delay":2.1500000000000004,"actor":"antonietta","content":["Let's do in this way . . .","Facciamo cosi' . . ."],"next":"b227d3a6-f53a-4083-953a-9c9b1521486c"},{"type":"dialog","ID":"b227d3a6-f53a-4083-953a-9c9b1521486c","delay":4.6,"actor":"antonietta","content":[". . . the firs one between us that contracts the virus tells it to the other one!",". . . il primo che viene infettato corre a riferirlo all'altro!"],"next":"8f2d44e5-485a-4b66-863e-8fc2a62e8cb0"},{"type":"dialog","ID":"8f2d44e5-485a-4b66-863e-8fc2a62e8cb0","delay":1.45,"actor":"antonietta","content":["Deal?","Che ne pensi?"],"next":"0d204278-a1ad-4f6e-b893-27a2c16c6212"},{"type":"dialog","ID":"0d204278-a1ad-4f6e-b893-27a2c16c6212","delay":1.4,"actor":"andrea","content":["Perfect!","Geniale!"],"next":"c2957b9d-238b-468f-badb-a00d7f24ccac"},{"type":"dialog","ID":"c2957b9d-238b-468f-badb-a00d7f24ccac","delay":2.85,"actor":"andrea","content":["At least one of us will stay alive!","Almeno uno di noi riuscita' a salvarsi!"],"next":"5b344658-7ca5-4341-a87d-c23d2cdf63bd"},{"type":"dialog","ID":"7df59e5b-8b72-4f39-af45-8723ab61cc25","delay":2.725,"actor":"antonietta","content":[". . . I am sure he agrees with me.",". . . la pensa sicuramente come me."],"next":"593b95b8-9aed-4410-8db5-7d22a033d3f4"},{"type":"dialog","ID":"593b95b8-9aed-4410-8db5-7d22a033d3f4","delay":1.475,"actor":"andrea","content":["Creepy!","Inquietante!"],"next":null},{"type":"dialog","ID":"5b344658-7ca5-4341-a87d-c23d2cdf63bd","delay":2.7750000000000004,"actor":"antonietta","content":["Do you know who I call this kind of things?","Sai come chiamo questa cosa?"],"next":"fcdcc711-0ebb-45df-8eb6-54bb23110476"},{"type":"dialog","ID":"fcdcc711-0ebb-45df-8eb6-54bb23110476","delay":1.225,"actor":"andrea","content":["How?","Come?"],"next":"1179c2c5-6174-42c3-b6e4-d29e3f3447f7"},{"type":"dialog","ID":"1179c2c5-6174-42c3-b6e4-d29e3f3447f7","delay":1.475,"actor":"antonietta","content":["Disconfort.","Disagio."],"next":null},{"type":"set","ID":"c4bb358d-fc6a-45b8-87c0-9d014f85dd7f","variable":"virus_antonietta_deal","value":1,"next":"76a90258-9c25-4d97-a1dc-e71e2bd2cfc1"},{"type":"dialog","ID":"7082a360-32ec-4c3a-90b6-a8f2ca46ad68","delay":2.55,"actor":"andrea","content":["Did you see any contact lens?","Hai visto delle lenti a contatto?"],"next":"1b673871-2f2d-475b-8e47-68df02c489de"},{"type":"dialog","ID":"8113cd4d-ead1-430e-9770-1e5d2cd13570","delay":1.175,"actor":"antonietta","content":["Yes!","Si!"],"next":"b8821a43-c6b8-4963-bd75-cba5a2395a88"},{"type":"set","ID":"184e09bf-1875-4f88-ba59-0b9b2a6f0add","variable":"got_glasses","value":1,"next":"4ee75ec0-1dbc-4b47-b869-fa0a2d9e7184"},{"type":"set","ID":"4ee75ec0-1dbc-4b47-b869-fa0a2d9e7184","variable":"done_glasses","value":1,"next":"7082a360-32ec-4c3a-90b6-a8f2ca46ad68"},{"type":"dialog","ID":"b8821a43-c6b8-4963-bd75-cba5a2395a88","delay":3.8000000000000003,"actor":"antonietta","content":["He left them here when he passed by few hours ago.","Le ha lasciate qui quand'e' passato a trovarmi qualche ora fa."],"next":"edd58d9b-5b76-461e-8d83-c29bc73cd218"},{"type":"dialog","ID":"edd58d9b-5b76-461e-8d83-c29bc73cd218","delay":2.175,"actor":"andrea","content":["Is this thing normal?","Ma e' normale questa cosa?"],"next":"c04b12cf-2413-4e89-b71e-f122a4f95f43"},{"type":"dialog","ID":"c04b12cf-2413-4e89-b71e-f122a4f95f43","delay":4.65,"actor":"andrea","content":["I meant the fact that he has to wear glasses and contact lenses at the same time.","Il fatto che debba indossare lenti a contatto e occhiali intendo."],"next":"e55df8d3-dcc6-4534-a200-f4cb9eaa972d"},{"type":"dialog","ID":"e55df8d3-dcc6-4534-a200-f4cb9eaa972d","delay":1.8250000000000002,"actor":"antonietta","content":["You are shallow.","Sei superficiale."],"next":"058ef330-350a-4916-9b4f-8a63fb42c752"},{"type":"dialog","ID":"058ef330-350a-4916-9b4f-8a63fb42c752","delay":2.975,"actor":"antonietta","content":["Don't think you have no weak points.","E tu non pensare di esser privo di difetti."],"next":"4090ef37-7cdf-49fe-823a-668961eaf65a"},{"type":"dialog","ID":"4090ef37-7cdf-49fe-823a-668961eaf65a","delay":5.7,"actor":"antonietta","content":["I am sure that when you'll be thirty years old you'll have to fight in order to cover your receding hairline.","Sono sicura che a trentanni dovrai combattere per coprire stempiature e piazza."],"next":"3daeff0b-f065-44bd-8649-86c6542e1424"},{"type":"dialog","ID":"3daeff0b-f065-44bd-8649-86c6542e1424","delay":1.475,"actor":"andrea","content":["Came on!","Ma ti pare!"],"next":"fc9c6128-29bf-4ead-85af-2162b40f13e1"},{"type":"dialog","ID":"fc9c6128-29bf-4ead-85af-2162b40f13e1","delay":2.625,"actor":"andrea","content":[". . . look how many hairs I have!"," . . . guarda quanti capelli ho!"],"next":"2a838d6e-1075-4061-a80d-f980274a2706"},{"type":"dialog","ID":"2a838d6e-1075-4061-a80d-f980274a2706","delay":2.325,"actor":"antonietta","content":["I will have the last laugh.","Ride bene chi ride ultimo."],"next":"1c1bfbd7-8a44-411d-88ec-780750c91375"},{"type":"dialog","ID":"1b673871-2f2d-475b-8e47-68df02c489de","delay":2.3,"actor":"andrea","content":["Your boyfriend lost them!","Il tuo ragazzo le ha perse!"],"next":"8113cd4d-ead1-430e-9770-1e5d2cd13570"},{"type":"dialog","ID":"1c1bfbd7-8a44-411d-88ec-780750c91375","delay":3.875,"actor":"antonietta","content":["In the meanwhile please, give him back these optical lenses.","Nel frattempo fammi il favore di restituirgli le lenti."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "d0b91a9d-9ac6-4f5f-95f8-1345049a852c",
+      "delay": 3.125,
+      "actor": "antonietta",
+      "content": [
+        "I hope you're not here to waste my time.",
+        "Spero tu non sia qui per farmi perdere tempo."
+      ],
+      "next": "c3863c08-ad7d-4882-a511-95342819e12e"
+    },
+    {
+      "type": "dialog",
+      "ID": "c3863c08-ad7d-4882-a511-95342819e12e",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Beh . . ."
+      ],
+      "choices": [
+        "0112123f-5337-44a8-bea7-0b5e6b2c885a",
+        "d83a7bc7-7c6c-4db0-9e16-18625202a300",
+        "c134abf5-e537-4724-a625-52e1504a430c"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "0112123f-5337-44a8-bea7-0b5e6b2c885a",
+      "title": "",
+      "content": [
+        "Are you worried about the virus?",
+        "Preoccupata per il virus?"
+      ],
+      "next": "d846ef5c-2ac1-4f2f-b1c3-bbb62110a721"
+    },
+    {
+      "type": "dialog",
+      "ID": "d846ef5c-2ac1-4f2f-b1c3-bbb62110a721",
+      "delay": 2.425,
+      "actor": "andrea",
+      "content": [
+        "Are you worried about the virus?",
+        "Preoccupata per il virus?"
+      ],
+      "next": "af3dfcfd-a5c0-4677-a6ac-807629650b88"
+    },
+    {
+      "type": "dialog",
+      "ID": "af3dfcfd-a5c0-4677-a6ac-807629650b88",
+      "delay": 3.325,
+      "actor": "antonietta",
+      "content": [
+        "Are you talking about that stupid 'Solaris' thing?",
+        "Parli di quella stupidaggine del 'Solaris'?"
+      ],
+      "next": "88ea9341-25a5-4f49-8091-4d73b62968d8"
+    },
+    {
+      "type": "dialog",
+      "ID": "88ea9341-25a5-4f49-8091-4d73b62968d8",
+      "delay": 3.4250000000000003,
+      "actor": "antonietta",
+      "content": [
+        "Just an idiot could believe those bullshits.",
+        "Solo un idiota potrebbe credere a queste fanfaronate."
+      ],
+      "next": "95faa28a-38a6-44dd-a242-94c4db07d6bf"
+    },
+    {
+      "type": "dialog",
+      "ID": "95faa28a-38a6-44dd-a242-94c4db07d6bf",
+      "delay": 3.2,
+      "actor": "andrea",
+      "content": [
+        "So, do you think there is no need to worry about?",
+        "Quindi per te non c'e' da preoccuparsi?"
+      ],
+      "next": "b25dc7a8-f956-4407-a972-d0ba9c954449"
+    },
+    {
+      "type": "dialog",
+      "ID": "b25dc7a8-f956-4407-a972-d0ba9c954449",
+      "delay": 1.5750000000000002,
+      "actor": "antonietta",
+      "content": [
+        "Precisely.",
+        "Precisamente."
+      ],
+      "next": "7a65b094-c93b-48d8-8cf0-9fe9f187bb7f"
+    },
+    {
+      "type": "dialog",
+      "ID": "7a65b094-c93b-48d8-8cf0-9fe9f187bb7f",
+      "delay": 1.5750000000000002,
+      "actor": "andrea",
+      "content": [
+        "OK but . . .",
+        "OK ma . . ."
+      ],
+      "choices": [
+        "adb0a9e1-06e7-4848-992a-fade7bb03a36",
+        "d83a7bc7-7c6c-4db0-9e16-18625202a300",
+        "e1712e12-5233-405e-9bb7-4129c415ab2d"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "d83a7bc7-7c6c-4db0-9e16-18625202a300",
+      "title": "",
+      "content": [
+        "I'm probably allergic to your perfume.",
+        "Credo d'essere allergico al tuo profumo."
+      ],
+      "next": "9151db47-f24f-4465-8e1f-5cd18c53ab72"
+    },
+    {
+      "type": "dialog",
+      "ID": "9151db47-f24f-4465-8e1f-5cd18c53ab72",
+      "delay": 2.95,
+      "actor": "andrea",
+      "content": [
+        "I'm probably allergic to your perfume.",
+        "Credo d'essere allergico al tuo profumo."
+      ],
+      "next": "25e30868-f48f-443d-8bb5-a027703e4970"
+    },
+    {
+      "type": "dialog",
+      "ID": "3c0e4f99-ec0b-4cad-b412-e56aba9c7f1f",
+      "delay": 3.0500000000000003,
+      "actor": "antonietta",
+      "content": [
+        "5 Euros for 15 liters from 'Acqua e Sapone'!",
+        "5 Euro per 15 litri da Acqua e Sapone!"
+      ],
+      "next": "63629248-4cce-48e4-b5d5-11a9d77d691a"
+    },
+    {
+      "type": "dialog",
+      "ID": "25e30868-f48f-443d-8bb5-a027703e4970",
+      "delay": 1.475,
+      "actor": "antonietta",
+      "content": [
+        "Nice, uh?",
+        "Buono, eh?"
+      ],
+      "next": "3c0e4f99-ec0b-4cad-b412-e56aba9c7f1f"
+    },
+    {
+      "type": "choice",
+      "ID": "adb0a9e1-06e7-4848-992a-fade7bb03a36",
+      "title": "",
+      "content": [
+        "How's your boyfriend feel about that?",
+        "Cosa ne pensa il tuo ragazzo?"
+      ],
+      "next": "e7420986-49bd-4a4a-a854-0c063763f568"
+    },
+    {
+      "type": "dialog",
+      "ID": "e7420986-49bd-4a4a-a854-0c063763f568",
+      "delay": 2.6500000000000004,
+      "actor": "andrea",
+      "content": [
+        "How's your boyfriend feel about that?",
+        "Cosa ne pensa il tuo ragazzo?"
+      ],
+      "next": "f72e9652-bd4f-43e3-843f-3e6fa4d6b73d"
+    },
+    {
+      "type": "dialog",
+      "ID": "63629248-4cce-48e4-b5d5-11a9d77d691a",
+      "delay": 3,
+      "actor": "antonietta",
+      "content": [
+        "It's called 'Summer's carrion' from Bigio!",
+        "Si chiama 'Carogna d'estate' di Bigio!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "f72e9652-bd4f-43e3-843f-3e6fa4d6b73d",
+      "delay": 2.375,
+      "actor": "antonietta",
+      "content": [
+        "He is a smart guy . . .",
+        "E' un ragazzo intelligente . . ."
+      ],
+      "next": "0cced0a9-bbe0-4012-9b16-76b706a4d3df"
+    },
+    {
+      "type": "dialog",
+      "ID": "0cced0a9-bbe0-4012-9b16-76b706a4d3df",
+      "delay": 2.725,
+      "actor": "antonietta",
+      "content": [
+        ". . . I am sure he agrees with me.",
+        ". . . la pensa sicuramente come me."
+      ],
+      "next": "c47d097e-bceb-4de8-ae66-009251eccacd"
+    },
+    {
+      "type": "choice",
+      "ID": "c134abf5-e537-4724-a625-52e1504a430c",
+      "title": "",
+      "content": [
+        "Did you see any contact lens?",
+        "Hai visto delle lenti a contatto?"
+      ],
+      "next": "184e09bf-1875-4f88-ba59-0b9b2a6f0add"
+    },
+    {
+      "type": "dialog",
+      "ID": "c47d097e-bceb-4de8-ae66-009251eccacd",
+      "delay": 1.5,
+      "actor": "andrea",
+      "content": [
+        "Are you sure?",
+        "Sicura?"
+      ],
+      "next": "9aab8ea2-f9c3-4aff-9c2f-088d05b27547"
+    },
+    {
+      "type": "dialog",
+      "ID": "9aab8ea2-f9c3-4aff-9c2f-088d05b27547",
+      "delay": 3.125,
+      "actor": "andrea",
+      "content": [
+        "Viruses, doomsday scenarios, zombies . . .",
+        "Virus, scenari apocalittici e zombies . . ."
+      ],
+      "next": "032acd7e-f90f-45fc-a685-c5881ada71d3"
+    },
+    {
+      "type": "dialog",
+      "ID": "032acd7e-f90f-45fc-a685-c5881ada71d3",
+      "delay": 2.0250000000000004,
+      "actor": "andrea",
+      "content": [
+        "He is still a nerd!",
+        "E' pur sempre un nerd!"
+      ],
+      "next": "fed37ce8-5693-4f9c-b1a2-6b4f8a9c9b71"
+    },
+    {
+      "type": "dialog",
+      "ID": "fed37ce8-5693-4f9c-b1a2-6b4f8a9c9b71",
+      "delay": 2.675,
+      "actor": "antonietta",
+      "content": [
+        "Don't worry, as I said . . .",
+        "Non ti preoccupare, come ho detto . . ."
+      ],
+      "next": "ba81d1e9-d9fb-447d-8d3e-39ee6b90ebd9"
+    },
+    {
+      "type": "dialog",
+      "ID": "ba81d1e9-d9fb-447d-8d3e-39ee6b90ebd9",
+      "delay": 2.375,
+      "actor": "antonietta",
+      "content": [
+        "He is a smart guy . . .",
+        "E' un ragazzo intelligente . . ."
+      ],
+      "next": "7df59e5b-8b72-4f39-af45-8723ab61cc25"
+    },
+    {
+      "type": "choice",
+      "ID": "e1712e12-5233-405e-9bb7-4129c415ab2d",
+      "title": "",
+      "content": [
+        "I think we should start being preoccupied",
+        "Io credo ci sia da preoccuparsi."
+      ],
+      "next": "c4bb358d-fc6a-45b8-87c0-9d014f85dd7f"
+    },
+    {
+      "type": "dialog",
+      "ID": "76a90258-9c25-4d97-a1dc-e71e2bd2cfc1",
+      "delay": 2.85,
+      "actor": "andrea",
+      "content": [
+        "I think we should start being preoccupied.",
+        "Io credo ci sia da preoccuparsi."
+      ],
+      "next": "bbc1ac6c-18a5-41cd-96d7-dd78dd0a6c10"
+    },
+    {
+      "type": "dialog",
+      "ID": "bbc1ac6c-18a5-41cd-96d7-dd78dd0a6c10",
+      "delay": 2.1500000000000004,
+      "actor": "antonietta",
+      "content": [
+        "Let's do in this way . . .",
+        "Facciamo cosi' . . ."
+      ],
+      "next": "b227d3a6-f53a-4083-953a-9c9b1521486c"
+    },
+    {
+      "type": "dialog",
+      "ID": "b227d3a6-f53a-4083-953a-9c9b1521486c",
+      "delay": 4.6,
+      "actor": "antonietta",
+      "content": [
+        ". . . the firs one between us that contracts the virus tells it to the other one!",
+        ". . . il primo che viene infettato corre a riferirlo all'altro!"
+      ],
+      "next": "8f2d44e5-485a-4b66-863e-8fc2a62e8cb0"
+    },
+    {
+      "type": "dialog",
+      "ID": "8f2d44e5-485a-4b66-863e-8fc2a62e8cb0",
+      "delay": 1.45,
+      "actor": "antonietta",
+      "content": [
+        "Deal?",
+        "Che ne pensi?"
+      ],
+      "next": "0d204278-a1ad-4f6e-b893-27a2c16c6212"
+    },
+    {
+      "type": "dialog",
+      "ID": "0d204278-a1ad-4f6e-b893-27a2c16c6212",
+      "delay": 1.4,
+      "actor": "andrea",
+      "content": [
+        "Perfect!",
+        "Geniale!"
+      ],
+      "next": "c2957b9d-238b-468f-badb-a00d7f24ccac"
+    },
+    {
+      "type": "dialog",
+      "ID": "c2957b9d-238b-468f-badb-a00d7f24ccac",
+      "delay": 2.85,
+      "actor": "andrea",
+      "content": [
+        "At least one of us will stay alive!",
+        "Almeno uno di noi riuscita' a salvarsi!"
+      ],
+      "next": "5b344658-7ca5-4341-a87d-c23d2cdf63bd"
+    },
+    {
+      "type": "dialog",
+      "ID": "7df59e5b-8b72-4f39-af45-8723ab61cc25",
+      "delay": 2.725,
+      "actor": "antonietta",
+      "content": [
+        ". . . I am sure he agrees with me.",
+        ". . . la pensa sicuramente come me."
+      ],
+      "next": "593b95b8-9aed-4410-8db5-7d22a033d3f4"
+    },
+    {
+      "type": "dialog",
+      "ID": "593b95b8-9aed-4410-8db5-7d22a033d3f4",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Creepy!",
+        "Inquietante!"
+      ],
+      "next": null
+    },
+    {
+      "type": "dialog",
+      "ID": "5b344658-7ca5-4341-a87d-c23d2cdf63bd",
+      "delay": 2.7750000000000004,
+      "actor": "antonietta",
+      "content": [
+        "Do you know who I call this kind of things?",
+        "Sai come chiamo questa cosa?"
+      ],
+      "next": "fcdcc711-0ebb-45df-8eb6-54bb23110476"
+    },
+    {
+      "type": "dialog",
+      "ID": "fcdcc711-0ebb-45df-8eb6-54bb23110476",
+      "delay": 1.225,
+      "actor": "andrea",
+      "content": [
+        "How?",
+        "Come?"
+      ],
+      "next": "1179c2c5-6174-42c3-b6e4-d29e3f3447f7"
+    },
+    {
+      "type": "dialog",
+      "ID": "1179c2c5-6174-42c3-b6e4-d29e3f3447f7",
+      "delay": 1.475,
+      "actor": "antonietta",
+      "content": [
+        "Disconfort.",
+        "Disagio."
+      ],
+      "next": null
+    },
+    {
+      "type": "set",
+      "ID": "c4bb358d-fc6a-45b8-87c0-9d014f85dd7f",
+      "variable": "virus_antonietta_deal",
+      "value": 1,
+      "next": "76a90258-9c25-4d97-a1dc-e71e2bd2cfc1"
+    },
+    {
+      "type": "dialog",
+      "ID": "7082a360-32ec-4c3a-90b6-a8f2ca46ad68",
+      "delay": 2.55,
+      "actor": "andrea",
+      "content": [
+        "Did you see any contact lens?",
+        "Hai visto delle lenti a contatto?"
+      ],
+      "next": "1b673871-2f2d-475b-8e47-68df02c489de"
+    },
+    {
+      "type": "dialog",
+      "ID": "8113cd4d-ead1-430e-9770-1e5d2cd13570",
+      "delay": 1.175,
+      "actor": "antonietta",
+      "content": [
+        "Yes!",
+        "Si!"
+      ],
+      "next": "b8821a43-c6b8-4963-bd75-cba5a2395a88"
+    },
+    {
+      "type": "set",
+      "ID": "184e09bf-1875-4f88-ba59-0b9b2a6f0add",
+      "variable": "got_glasses",
+      "value": 1,
+      "next": "4ee75ec0-1dbc-4b47-b869-fa0a2d9e7184"
+    },
+    {
+      "type": "set",
+      "ID": "4ee75ec0-1dbc-4b47-b869-fa0a2d9e7184",
+      "variable": "done_glasses",
+      "value": 1,
+      "next": "7082a360-32ec-4c3a-90b6-a8f2ca46ad68"
+    },
+    {
+      "type": "dialog",
+      "ID": "b8821a43-c6b8-4963-bd75-cba5a2395a88",
+      "delay": 3.8000000000000003,
+      "actor": "antonietta",
+      "content": [
+        "He left them here when he passed by few hours ago.",
+        "Le ha lasciate qui quand'e' passato a trovarmi qualche ora fa."
+      ],
+      "next": "edd58d9b-5b76-461e-8d83-c29bc73cd218"
+    },
+    {
+      "type": "dialog",
+      "ID": "edd58d9b-5b76-461e-8d83-c29bc73cd218",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "Is this thing normal?",
+        "Ma e' normale questa cosa?"
+      ],
+      "next": "c04b12cf-2413-4e89-b71e-f122a4f95f43"
+    },
+    {
+      "type": "dialog",
+      "ID": "c04b12cf-2413-4e89-b71e-f122a4f95f43",
+      "delay": 4.65,
+      "actor": "andrea",
+      "content": [
+        "I meant the fact that he has to wear glasses and contact lenses at the same time.",
+        "Il fatto che debba indossare lenti a contatto e occhiali intendo."
+      ],
+      "next": "e55df8d3-dcc6-4534-a200-f4cb9eaa972d"
+    },
+    {
+      "type": "dialog",
+      "ID": "e55df8d3-dcc6-4534-a200-f4cb9eaa972d",
+      "delay": 1.8250000000000002,
+      "actor": "antonietta",
+      "content": [
+        "You are shallow.",
+        "Sei superficiale."
+      ],
+      "next": "058ef330-350a-4916-9b4f-8a63fb42c752"
+    },
+    {
+      "type": "dialog",
+      "ID": "058ef330-350a-4916-9b4f-8a63fb42c752",
+      "delay": 2.975,
+      "actor": "antonietta",
+      "content": [
+        "Don't think you have no weak points.",
+        "E tu non pensare di esser privo di difetti."
+      ],
+      "next": "4090ef37-7cdf-49fe-823a-668961eaf65a"
+    },
+    {
+      "type": "dialog",
+      "ID": "4090ef37-7cdf-49fe-823a-668961eaf65a",
+      "delay": 5.7,
+      "actor": "antonietta",
+      "content": [
+        "I am sure that when you'll be thirty years old you'll have to fight in order to cover your receding hairline.",
+        "Sono sicura che a trentanni dovrai combattere per coprire stempiature e piazza."
+      ],
+      "next": "3daeff0b-f065-44bd-8649-86c6542e1424"
+    },
+    {
+      "type": "dialog",
+      "ID": "3daeff0b-f065-44bd-8649-86c6542e1424",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Came on!",
+        "Ma ti pare!"
+      ],
+      "next": "fc9c6128-29bf-4ead-85af-2162b40f13e1"
+    },
+    {
+      "type": "dialog",
+      "ID": "fc9c6128-29bf-4ead-85af-2162b40f13e1",
+      "delay": 2.625,
+      "actor": "andrea",
+      "content": [
+        ". . . look how many hairs I have!",
+        " . . . guarda quanti capelli ho!"
+      ],
+      "next": "2a838d6e-1075-4061-a80d-f980274a2706"
+    },
+    {
+      "type": "dialog",
+      "ID": "2a838d6e-1075-4061-a80d-f980274a2706",
+      "delay": 2.325,
+      "actor": "antonietta",
+      "content": [
+        "I will have the last laugh.",
+        "Ride bene chi ride ultimo."
+      ],
+      "next": "1c1bfbd7-8a44-411d-88ec-780750c91375"
+    },
+    {
+      "type": "dialog",
+      "ID": "1b673871-2f2d-475b-8e47-68df02c489de",
+      "delay": 2.3,
+      "actor": "andrea",
+      "content": [
+        "Your boyfriend lost them!",
+        "Il tuo ragazzo le ha perse!"
+      ],
+      "next": "8113cd4d-ead1-430e-9770-1e5d2cd13570"
+    },
+    {
+      "type": "dialog",
+      "ID": "1c1bfbd7-8a44-411d-88ec-780750c91375",
+      "delay": 3.875,
+      "actor": "antonietta",
+      "content": [
+        "In the meanwhile please, give him back these optical lenses.",
+        "Nel frattempo fammi il favore di restituirgli le lenti."
+      ],
+      "next": null
+    }
+  ]
+}

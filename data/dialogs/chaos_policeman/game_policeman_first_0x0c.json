@@ -1,1 +1,426 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"904821f6-8a5d-48ab-aa25-8ac84f9166ec","delay":2.1500000000000004,"actor":"policeman","content":["Where do you think to go?","Dove credi di andare?"],"next":"31d52983-fbe6-4e33-b690-32e13d16fb9f"},{"type":"dialog","ID":"31d52983-fbe6-4e33-b690-32e13d16fb9f","delay":1.5,"actor":"andrea","content":["Uhm . . . ","Uhm . . . "],"choices":["d1085227-b2ea-44f9-8240-071a616eebf8","e6a11315-deb6-416b-8d00-60de321cb986","a38272ff-91c3-4f07-b717-f544f08580b7"]},{"type":"choice","ID":"d1085227-b2ea-44f9-8240-071a616eebf8","title":"","content":["I don't really know! ","Io proprio non lo so!"],"next":"b984709b-0255-4c3b-a241-c33656ceb066"},{"type":"choice","ID":"e6a11315-deb6-416b-8d00-60de321cb986","title":"","content":["Where I usually go!","Dove vado di solito!"],"next":"170d027d-f959-44c8-a271-85af560f3889"},{"type":"choice","ID":"a38272ff-91c3-4f07-b717-f544f08580b7","title":"","content":["Stop talking.","Basta parlare."],"next":"284cef66-7581-4fda-aa9b-481c565b3dc1"},{"type":"dialog","ID":"b984709b-0255-4c3b-a241-c33656ceb066","delay":2.0250000000000004,"actor":"andrea","content":["I don't really know!","Io proprio non lo so!"],"next":"650ef14e-199f-45a2-a39c-08fdab1fa47b"},{"type":"dialog","ID":"650ef14e-199f-45a2-a39c-08fdab1fa47b","delay":5.6000000000000005,"actor":"policeman","content":["I'd better if you clear your hea - pointless_conversation.bin[33]: segfault 42da12 error 8","Sara' meglio se ti schiarisci le ide - pointless_conversation.bin[33]: segfault 42da12 error 8"],"next":"89df2415-b7c5-4c17-8bce-19c90e82a239"},{"type":"dialog","ID":"89df2415-b7c5-4c17-8bce-19c90e82a239","delay":2.725,"actor":"andrea","content":["In case I can clear my history.","Al massimo posso schiarirmi i capelli."],"next":"92d057a4-190d-4f80-8675-f022fc2c7263"},{"type":"dialog","ID":"92d057a4-190d-4f80-8675-f022fc2c7263","delay":4.15,"actor":"policeman","content":["Those kind of funny people, as you are, are really making me feel nervous!","I tipi spiritosi come te mi danno proprio sui nervi!"],"next":"7f451643-d1b2-4ef2-a4c2-0bda4b1d47a4"},{"type":"dialog","ID":"170d027d-f959-44c8-a271-85af560f3889","delay":1.975,"actor":"andrea","content":["Where I usually go!","Dove vado di solito!"],"next":"133be1b6-3d5a-4142-b0c4-db67157ddb0c"},{"type":"dialog","ID":"133be1b6-3d5a-4142-b0c4-db67157ddb0c","delay":2.1500000000000004,"actor":"andrea","content":["Seeking for money . . .","In cerca di soldi . . ."],"next":"b8957b8f-084b-46b7-833a-6f24bd870fec"},{"type":"dialog","ID":"b8957b8f-084b-46b7-833a-6f24bd870fec","delay":2.625,"actor":"policeman","content":["Ah these youth without a job!","Ah questi giovani senza occupazione!"],"next":"1fc0bb8c-3f5b-4741-841f-5ef01d84d035"},{"type":"dialog","ID":"1fc0bb8c-3f5b-4741-841f-5ef01d84d035","delay":3.6750000000000003,"actor":"policeman","content":["When 'lvi' was here errno 19 ENODEV - lvi() not found.","Quando c'era 'lvi' errno 19 ENODEV - lvi() not found."],"next":"372ff7cb-ce6c-4826-8f66-a9cd3372595e"},{"type":"dialog","ID":"372ff7cb-ce6c-4826-8f66-a9cd3372595e","delay":2.425,"actor":"andrea","content":["Did you really said 'lvi'? ","Ma, hai veramente detto 'lvi'?"],"next":"e0166f6a-3800-4e68-ae34-6073d84ba15b"},{"type":"dialog","ID":"e0166f6a-3800-4e68-ae34-6073d84ba15b","delay":1.4,"actor":"policeman","content":["Of course!","Certo!"],"next":"861ad595-23c7-4cb7-87d8-c24d4abaec5e"},{"type":"dialog","ID":"861ad595-23c7-4cb7-87d8-c24d4abaec5e","delay":4.300000000000001,"actor":"policeman","content":["If 'lvi' was here, you would have expect more than just militars or virus!","Se 'lvi' fosse ancora qui ora, altro che militari o virus!"],"next":"62946d29-ad7d-44dd-93fb-d32e5ef61bed"},{"type":"dialog","ID":"07356a8f-59da-46b3-9bc4-50bc984ade69","delay":7.025,"actor":"policeman","content":["Now you would have a job and you would not be here hanging around as a junk - propaganda.bin[96]: segfault cd142a error 10","Adesso tu avresti un lavoro e non staresti qui a gironzolare come un tos - propaganda.bin[96]: segfault cd142a error 10"],"next":"05c27cd1-a302-48ed-9967-5d0b3eeff086"},{"type":"dialog","ID":"05c27cd1-a302-48ed-9967-5d0b3eeff086","delay":2.8,"actor":"andrea","content":["Sure sure, I was already dead.","Certo certo, sarei sicuramente gia' morto."],"next":"eadae000-16f5-4913-8a67-4fa141035c45"},{"type":"dialog","ID":"eadae000-16f5-4913-8a67-4fa141035c45","delay":3.025,"actor":"policeman","content":["In any case  it would have been a success!","In ogni caso sarebbe stato un successo!"],"next":"d2c2c06d-69ba-4bbe-b30e-d46ecce85ede"},{"type":"dialog","ID":"62946d29-ad7d-44dd-93fb-d32e5ef61bed","delay":3.225,"actor":"policeman","content":["A spoon of castor oil and everything is solved!","Un po' di olio di ricino e passa la paura!"],"next":"07356a8f-59da-46b3-9bc4-50bc984ade69"},{"type":"dialog","ID":"284cef66-7581-4fda-aa9b-481c565b3dc1","delay":1.675,"actor":"andrea","content":["Stop talking.","Basta parlare."],"next":"94c59eb8-64d2-4c40-84b2-614f798cd5e9"},{"type":"dialog","ID":"fa087ce7-2966-4fee-959a-48a3825426f8","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"choices":["26e5fc24-a974-4fe7-b7b3-c005a22bc005","dcb6c818-8021-47ea-a223-f278d7c7ddc7","a38272ff-91c3-4f07-b717-f544f08580b7"]},{"type":"dialog","ID":"d2c2c06d-69ba-4bbe-b30e-d46ecce85ede","delay":1.9,"actor":"andrea","content":["Come on, asshole!","Oh ma, che stronzo!"],"next":null},{"type":"choice","ID":"26e5fc24-a974-4fe7-b7b3-c005a22bc005","title":"","content":[" Aren't you being a little aggressive?","Ti vedo aggressivo amico mio."],"next":"4bbcaaec-0cbf-469c-8e0f-ea4a3ecee7ad"},{"type":"dialog","ID":"7f451643-d1b2-4ef2-a4c2-0bda4b1d47a4","delay":3.625,"actor":"policeman","content":["I could have you thrown off the Tarpeian rock.","Fosse per me saresti gia' stato lanciato dalla Rupe Tarpea."],"next":"fa087ce7-2966-4fee-959a-48a3825426f8"},{"type":"dialog","ID":"4bbcaaec-0cbf-469c-8e0f-ea4a3ecee7ad","delay":2.675,"actor":"andrea","content":[" Aren't you being a little aggressive?","Ti vedo aggressivo amico mio."],"next":"eac2a4b9-ddf3-40b8-90d0-f55d9a7e42f9"},{"type":"dialog","ID":"eac2a4b9-ddf3-40b8-90d0-f55d9a7e42f9","delay":3.725,"actor":"policeman","content":["I am working on my $projject[3] so leave me alone!","Sto lavorando alla mia $projjec[3] quindi lasciami in pace!"],"next":"428d5aaf-52f9-47df-a457-37e09d002a7d"},{"type":"dialog","ID":"428d5aaf-52f9-47df-a457-37e09d002a7d","delay":1.65,"actor":"andrea","content":["$projject[3]?","$projject[3]?"],"next":"61fba199-6973-47f3-8363-589a4db7e1d9"},{"type":"dialog","ID":"61fba199-6973-47f3-8363-589a4db7e1d9","delay":3,"actor":"policeman","content":["Symbol '$projject' has not been defined.","Symbol '$projject' has not been defined."],"next":"76cb5d42-26ab-4a91-a807-868d4b4c98ef"},{"type":"dialog","ID":"76cb5d42-26ab-4a91-a807-868d4b4c98ef","delay":1.45,"actor":"andrea","content":["Uhm . . .","Uhm . . ."],"next":"0a6913e8-b729-4e4e-bf98-f822aa192b2c"},{"type":"dialog","ID":"0a6913e8-b729-4e4e-bf98-f822aa192b2c","delay":1.85,"actor":"andrea","content":["echo $project[3]?","echo $project[3]?"],"next":"ce891902-e338-4d12-b0ed-deb81695f426"},{"type":"dialog","ID":"ce891902-e338-4d12-b0ed-deb81695f426","delay":1.725,"actor":"policeman","content":["March on Rome.","Marcia su Roma."],"next":"f71e05f0-8ecd-4011-b019-b76380728550"},{"type":"dialog","ID":"f71e05f0-8ecd-4011-b019-b76380728550","delay":1.35,"actor":"andrea","content":["Oooooh.","Oooooh."],"next":"de8d80e6-afea-4b4e-bdcc-fa4da879610b"},{"type":"dialog","ID":"de8d80e6-afea-4b4e-bdcc-fa4da879610b","delay":1.15,"actor":"andrea","content":["OK.","OK."],"next":null},{"type":"choice","ID":"dcb6c818-8021-47ea-a223-f278d7c7ddc7","title":"","content":["What is the Tarpeian rock?","Cos'e' la Rupe Tarpea?"],"next":"b271c5ad-da4b-44a4-8c2d-788758902726"},{"type":"dialog","ID":"b271c5ad-da4b-44a4-8c2d-788758902726","delay":2.2,"actor":"andrea","content":["What is the Tarpeian rock?","Cos'e' la Rupe Tarpea?"],"next":"e509a1b9-c6c0-4cd9-97c4-2f21f3d8fb96"},{"type":"dialog","ID":"e509a1b9-c6c0-4cd9-97c4-2f21f3d8fb96","delay":2.45,"actor":"policeman","content":["You live in blissful ignorance kid!","Quanta beata ignoranza!"],"next":"1fc0bb8c-3f5b-4741-841f-5ef01d84d035"},{"type":"dialog","ID":"94c59eb8-64d2-4c40-84b2-614f798cd5e9","delay":2.0250000000000004,"actor":"policeman","content":["Are you retarded?","Ma cosa vuoi, imbecille."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "904821f6-8a5d-48ab-aa25-8ac84f9166ec",
+      "delay": 2.1500000000000004,
+      "actor": "policeman",
+      "content": [
+        "Where do you think to go?",
+        "Dove credi di andare?"
+      ],
+      "next": "31d52983-fbe6-4e33-b690-32e13d16fb9f"
+    },
+    {
+      "type": "dialog",
+      "ID": "31d52983-fbe6-4e33-b690-32e13d16fb9f",
+      "delay": 1.5,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . . ",
+        "Uhm . . . "
+      ],
+      "choices": [
+        "d1085227-b2ea-44f9-8240-071a616eebf8",
+        "e6a11315-deb6-416b-8d00-60de321cb986",
+        "a38272ff-91c3-4f07-b717-f544f08580b7"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "d1085227-b2ea-44f9-8240-071a616eebf8",
+      "title": "",
+      "content": [
+        "I don't really know! ",
+        "Io proprio non lo so!"
+      ],
+      "next": "b984709b-0255-4c3b-a241-c33656ceb066"
+    },
+    {
+      "type": "choice",
+      "ID": "e6a11315-deb6-416b-8d00-60de321cb986",
+      "title": "",
+      "content": [
+        "Where I usually go!",
+        "Dove vado di solito!"
+      ],
+      "next": "170d027d-f959-44c8-a271-85af560f3889"
+    },
+    {
+      "type": "choice",
+      "ID": "a38272ff-91c3-4f07-b717-f544f08580b7",
+      "title": "",
+      "content": [
+        "Stop talking.",
+        "Basta parlare."
+      ],
+      "next": "284cef66-7581-4fda-aa9b-481c565b3dc1"
+    },
+    {
+      "type": "dialog",
+      "ID": "b984709b-0255-4c3b-a241-c33656ceb066",
+      "delay": 2.0250000000000004,
+      "actor": "andrea",
+      "content": [
+        "I don't really know!",
+        "Io proprio non lo so!"
+      ],
+      "next": "650ef14e-199f-45a2-a39c-08fdab1fa47b"
+    },
+    {
+      "type": "dialog",
+      "ID": "650ef14e-199f-45a2-a39c-08fdab1fa47b",
+      "delay": 5.6000000000000005,
+      "actor": "policeman",
+      "content": [
+        "I'd better if you clear your hea - pointless_conversation.bin[33]: segfault 42da12 error 8",
+        "Sara' meglio se ti schiarisci le ide - pointless_conversation.bin[33]: segfault 42da12 error 8"
+      ],
+      "next": "89df2415-b7c5-4c17-8bce-19c90e82a239"
+    },
+    {
+      "type": "dialog",
+      "ID": "89df2415-b7c5-4c17-8bce-19c90e82a239",
+      "delay": 2.725,
+      "actor": "andrea",
+      "content": [
+        "In case I can clear my history.",
+        "Al massimo posso schiarirmi i capelli."
+      ],
+      "next": "92d057a4-190d-4f80-8675-f022fc2c7263"
+    },
+    {
+      "type": "dialog",
+      "ID": "92d057a4-190d-4f80-8675-f022fc2c7263",
+      "delay": 4.15,
+      "actor": "policeman",
+      "content": [
+        "Those kind of funny people, as you are, are really making me feel nervous!",
+        "I tipi spiritosi come te mi danno proprio sui nervi!"
+      ],
+      "next": "7f451643-d1b2-4ef2-a4c2-0bda4b1d47a4"
+    },
+    {
+      "type": "dialog",
+      "ID": "170d027d-f959-44c8-a271-85af560f3889",
+      "delay": 1.975,
+      "actor": "andrea",
+      "content": [
+        "Where I usually go!",
+        "Dove vado di solito!"
+      ],
+      "next": "133be1b6-3d5a-4142-b0c4-db67157ddb0c"
+    },
+    {
+      "type": "dialog",
+      "ID": "133be1b6-3d5a-4142-b0c4-db67157ddb0c",
+      "delay": 2.1500000000000004,
+      "actor": "andrea",
+      "content": [
+        "Seeking for money . . .",
+        "In cerca di soldi . . ."
+      ],
+      "next": "b8957b8f-084b-46b7-833a-6f24bd870fec"
+    },
+    {
+      "type": "dialog",
+      "ID": "b8957b8f-084b-46b7-833a-6f24bd870fec",
+      "delay": 2.625,
+      "actor": "policeman",
+      "content": [
+        "Ah these youth without a job!",
+        "Ah questi giovani senza occupazione!"
+      ],
+      "next": "1fc0bb8c-3f5b-4741-841f-5ef01d84d035"
+    },
+    {
+      "type": "dialog",
+      "ID": "1fc0bb8c-3f5b-4741-841f-5ef01d84d035",
+      "delay": 3.6750000000000003,
+      "actor": "policeman",
+      "content": [
+        "When 'lvi' was here errno 19 ENODEV - lvi() not found.",
+        "Quando c'era 'lvi' errno 19 ENODEV - lvi() not found."
+      ],
+      "next": "372ff7cb-ce6c-4826-8f66-a9cd3372595e"
+    },
+    {
+      "type": "dialog",
+      "ID": "372ff7cb-ce6c-4826-8f66-a9cd3372595e",
+      "delay": 2.425,
+      "actor": "andrea",
+      "content": [
+        "Did you really said 'lvi'? ",
+        "Ma, hai veramente detto 'lvi'?"
+      ],
+      "next": "e0166f6a-3800-4e68-ae34-6073d84ba15b"
+    },
+    {
+      "type": "dialog",
+      "ID": "e0166f6a-3800-4e68-ae34-6073d84ba15b",
+      "delay": 1.4,
+      "actor": "policeman",
+      "content": [
+        "Of course!",
+        "Certo!"
+      ],
+      "next": "861ad595-23c7-4cb7-87d8-c24d4abaec5e"
+    },
+    {
+      "type": "dialog",
+      "ID": "861ad595-23c7-4cb7-87d8-c24d4abaec5e",
+      "delay": 4.300000000000001,
+      "actor": "policeman",
+      "content": [
+        "If 'lvi' was here, you would have expect more than just militars or virus!",
+        "Se 'lvi' fosse ancora qui ora, altro che militari o virus!"
+      ],
+      "next": "62946d29-ad7d-44dd-93fb-d32e5ef61bed"
+    },
+    {
+      "type": "dialog",
+      "ID": "07356a8f-59da-46b3-9bc4-50bc984ade69",
+      "delay": 7.025,
+      "actor": "policeman",
+      "content": [
+        "Now you would have a job and you would not be here hanging around as a junk - propaganda.bin[96]: segfault cd142a error 10",
+        "Adesso tu avresti un lavoro e non staresti qui a gironzolare come un tos - propaganda.bin[96]: segfault cd142a error 10"
+      ],
+      "next": "05c27cd1-a302-48ed-9967-5d0b3eeff086"
+    },
+    {
+      "type": "dialog",
+      "ID": "05c27cd1-a302-48ed-9967-5d0b3eeff086",
+      "delay": 2.8,
+      "actor": "andrea",
+      "content": [
+        "Sure sure, I was already dead.",
+        "Certo certo, sarei sicuramente gia' morto."
+      ],
+      "next": "eadae000-16f5-4913-8a67-4fa141035c45"
+    },
+    {
+      "type": "dialog",
+      "ID": "eadae000-16f5-4913-8a67-4fa141035c45",
+      "delay": 3.025,
+      "actor": "policeman",
+      "content": [
+        "In any case  it would have been a success!",
+        "In ogni caso sarebbe stato un successo!"
+      ],
+      "next": "d2c2c06d-69ba-4bbe-b30e-d46ecce85ede"
+    },
+    {
+      "type": "dialog",
+      "ID": "62946d29-ad7d-44dd-93fb-d32e5ef61bed",
+      "delay": 3.225,
+      "actor": "policeman",
+      "content": [
+        "A spoon of castor oil and everything is solved!",
+        "Un po' di olio di ricino e passa la paura!"
+      ],
+      "next": "07356a8f-59da-46b3-9bc4-50bc984ade69"
+    },
+    {
+      "type": "dialog",
+      "ID": "284cef66-7581-4fda-aa9b-481c565b3dc1",
+      "delay": 1.675,
+      "actor": "andrea",
+      "content": [
+        "Stop talking.",
+        "Basta parlare."
+      ],
+      "next": "94c59eb8-64d2-4c40-84b2-614f798cd5e9"
+    },
+    {
+      "type": "dialog",
+      "ID": "fa087ce7-2966-4fee-959a-48a3825426f8",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "26e5fc24-a974-4fe7-b7b3-c005a22bc005",
+        "dcb6c818-8021-47ea-a223-f278d7c7ddc7",
+        "a38272ff-91c3-4f07-b717-f544f08580b7"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "d2c2c06d-69ba-4bbe-b30e-d46ecce85ede",
+      "delay": 1.9,
+      "actor": "andrea",
+      "content": [
+        "Come on, asshole!",
+        "Oh ma, che stronzo!"
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "26e5fc24-a974-4fe7-b7b3-c005a22bc005",
+      "title": "",
+      "content": [
+        " Aren't you being a little aggressive?",
+        "Ti vedo aggressivo amico mio."
+      ],
+      "next": "4bbcaaec-0cbf-469c-8e0f-ea4a3ecee7ad"
+    },
+    {
+      "type": "dialog",
+      "ID": "7f451643-d1b2-4ef2-a4c2-0bda4b1d47a4",
+      "delay": 3.625,
+      "actor": "policeman",
+      "content": [
+        "I could have you thrown off the Tarpeian rock.",
+        "Fosse per me saresti gia' stato lanciato dalla Rupe Tarpea."
+      ],
+      "next": "fa087ce7-2966-4fee-959a-48a3825426f8"
+    },
+    {
+      "type": "dialog",
+      "ID": "4bbcaaec-0cbf-469c-8e0f-ea4a3ecee7ad",
+      "delay": 2.675,
+      "actor": "andrea",
+      "content": [
+        " Aren't you being a little aggressive?",
+        "Ti vedo aggressivo amico mio."
+      ],
+      "next": "eac2a4b9-ddf3-40b8-90d0-f55d9a7e42f9"
+    },
+    {
+      "type": "dialog",
+      "ID": "eac2a4b9-ddf3-40b8-90d0-f55d9a7e42f9",
+      "delay": 3.725,
+      "actor": "policeman",
+      "content": [
+        "I am working on my $projject[3] so leave me alone!",
+        "Sto lavorando alla mia $projjec[3] quindi lasciami in pace!"
+      ],
+      "next": "428d5aaf-52f9-47df-a457-37e09d002a7d"
+    },
+    {
+      "type": "dialog",
+      "ID": "428d5aaf-52f9-47df-a457-37e09d002a7d",
+      "delay": 1.65,
+      "actor": "andrea",
+      "content": [
+        "$projject[3]?",
+        "$projject[3]?"
+      ],
+      "next": "61fba199-6973-47f3-8363-589a4db7e1d9"
+    },
+    {
+      "type": "dialog",
+      "ID": "61fba199-6973-47f3-8363-589a4db7e1d9",
+      "delay": 3,
+      "actor": "policeman",
+      "content": [
+        "Symbol '$projject' has not been defined.",
+        "Symbol '$projject' has not been defined."
+      ],
+      "next": "76cb5d42-26ab-4a91-a807-868d4b4c98ef"
+    },
+    {
+      "type": "dialog",
+      "ID": "76cb5d42-26ab-4a91-a807-868d4b4c98ef",
+      "delay": 1.45,
+      "actor": "andrea",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "next": "0a6913e8-b729-4e4e-bf98-f822aa192b2c"
+    },
+    {
+      "type": "dialog",
+      "ID": "0a6913e8-b729-4e4e-bf98-f822aa192b2c",
+      "delay": 1.85,
+      "actor": "andrea",
+      "content": [
+        "echo $project[3]?",
+        "echo $project[3]?"
+      ],
+      "next": "ce891902-e338-4d12-b0ed-deb81695f426"
+    },
+    {
+      "type": "dialog",
+      "ID": "ce891902-e338-4d12-b0ed-deb81695f426",
+      "delay": 1.725,
+      "actor": "policeman",
+      "content": [
+        "March on Rome.",
+        "Marcia su Roma."
+      ],
+      "next": "f71e05f0-8ecd-4011-b019-b76380728550"
+    },
+    {
+      "type": "dialog",
+      "ID": "f71e05f0-8ecd-4011-b019-b76380728550",
+      "delay": 1.35,
+      "actor": "andrea",
+      "content": [
+        "Oooooh.",
+        "Oooooh."
+      ],
+      "next": "de8d80e6-afea-4b4e-bdcc-fa4da879610b"
+    },
+    {
+      "type": "dialog",
+      "ID": "de8d80e6-afea-4b4e-bdcc-fa4da879610b",
+      "delay": 1.15,
+      "actor": "andrea",
+      "content": [
+        "OK.",
+        "OK."
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "dcb6c818-8021-47ea-a223-f278d7c7ddc7",
+      "title": "",
+      "content": [
+        "What is the Tarpeian rock?",
+        "Cos'e' la Rupe Tarpea?"
+      ],
+      "next": "b271c5ad-da4b-44a4-8c2d-788758902726"
+    },
+    {
+      "type": "dialog",
+      "ID": "b271c5ad-da4b-44a4-8c2d-788758902726",
+      "delay": 2.2,
+      "actor": "andrea",
+      "content": [
+        "What is the Tarpeian rock?",
+        "Cos'e' la Rupe Tarpea?"
+      ],
+      "next": "e509a1b9-c6c0-4cd9-97c4-2f21f3d8fb96"
+    },
+    {
+      "type": "dialog",
+      "ID": "e509a1b9-c6c0-4cd9-97c4-2f21f3d8fb96",
+      "delay": 2.45,
+      "actor": "policeman",
+      "content": [
+        "You live in blissful ignorance kid!",
+        "Quanta beata ignoranza!"
+      ],
+      "next": "1fc0bb8c-3f5b-4741-841f-5ef01d84d035"
+    },
+    {
+      "type": "dialog",
+      "ID": "94c59eb8-64d2-4c40-84b2-614f798cd5e9",
+      "delay": 2.0250000000000004,
+      "actor": "policeman",
+      "content": [
+        "Are you retarded?",
+        "Ma cosa vuoi, imbecille."
+      ],
+      "next": null
+    }
+  ]
+}

@@ -1,1 +1,49 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"e5f2fee3-ba22-4915-81a6-e8064af66bdb","delay":3.075,"actor":"technician","content":["I would like to drink a cocktail right now.","Ora un cocktail me lo berrei volentieri."],"next":"3b03d09b-eb50-4134-959b-2f94b00ea6f6"},{"type":"dialog","ID":"3b03d09b-eb50-4134-959b-2f94b00ea6f6","delay":1.25,"actor":"andrea","content":[". . .",". . ."],"next":"be547069-6462-431d-85bc-33afc0ebb24c"},{"type":"dialog","ID":"be547069-6462-431d-85bc-33afc0ebb24c","delay":1.725,"actor":"andrea","content":["Go get it, then!","E allora vai!"],"next":"af64bc2a-5e0f-4941-abdc-9e285c3ff0ae"},{"type":"dialog","ID":"af64bc2a-5e0f-4941-abdc-9e285c3ff0ae","delay":3.6,"actor":"technician","content":["I told you already that I will stay here, in pole positon.","Ti ho gia' detto che resto qui, in prima fila."],"next":null}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "e5f2fee3-ba22-4915-81a6-e8064af66bdb",
+      "delay": 3.075,
+      "actor": "technician",
+      "content": [
+        "I would like to drink a cocktail right now.",
+        "Ora un cocktail me lo berrei volentieri."
+      ],
+      "next": "3b03d09b-eb50-4134-959b-2f94b00ea6f6"
+    },
+    {
+      "type": "dialog",
+      "ID": "3b03d09b-eb50-4134-959b-2f94b00ea6f6",
+      "delay": 1.25,
+      "actor": "andrea",
+      "content": [
+        ". . .",
+        ". . ."
+      ],
+      "next": "be547069-6462-431d-85bc-33afc0ebb24c"
+    },
+    {
+      "type": "dialog",
+      "ID": "be547069-6462-431d-85bc-33afc0ebb24c",
+      "delay": 1.725,
+      "actor": "andrea",
+      "content": [
+        "Go get it, then!",
+        "E allora vai!"
+      ],
+      "next": "af64bc2a-5e0f-4941-abdc-9e285c3ff0ae"
+    },
+    {
+      "type": "dialog",
+      "ID": "af64bc2a-5e0f-4941-abdc-9e285c3ff0ae",
+      "delay": 3.6,
+      "actor": "technician",
+      "content": [
+        "I told you already that I will stay here, in pole positon.",
+        "Ti ho gia' detto che resto qui, in prima fila."
+      ],
+      "next": null
+    }
+  ]
+}

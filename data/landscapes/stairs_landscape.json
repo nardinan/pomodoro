@@ -1,86 +1,145 @@
 {
-	"format":"landscape",
-	"ID":"stairs",
-	"zoom":10,
-	"position_x":0.0,
-	"position_y":0.0,
-	"intro_script":"intro_stairs",
-	"outro_script":"outro_stairs",
-	"floor":[{
-		"position_x":0.0,
-		"position_y":1960.0
-	},{
-		"position_x":200.0,
-		"position_y":1960.0
-	},{
-		"position_x":300.0,
-		"position_y":1960.0
-	},{
-		"position_x":320.0,
-		"position_y":1840.0
-	},{
-		"position_x":480.0,
-		"position_y":1840.0
-	},{
-		"position_x":500.0,
-		"position_y":1720.0
-	},{
-		"position_x":660.0,
-		"position_y":1720.0
-	},{
-		"position_x":680.0,
-		"position_y":1600.0
-	},{
-		"position_x":840.0,
-		"position_y":1600.0
-	},{
-		"position_x":860.0,
-		"position_y":1480.0
-	},{
-		"position_x":1260.0,
-		"position_y":1480.0
-	},{
-		"position_x":1430.0,
-		"position_y":1480.0
-	},{
-		"position_x":1450.0,
-		"position_y":1360.0
-	},{
-		"position_x":1610.0,
-		"position_y":1360.0
-	},{
-		"position_x":1630.0,
-		"position_y":1240.0
-	},{
-		"position_x":1790.0,
-		"position_y":1240.0
-	},{
-		"position_x":1810.0,
-		"position_y":1120.0
-	},{
-		"position_x":1970.0,
-		"position_y":1120.0
-	},{
-		"position_x":1990.0,
-		"position_y":1000.0
-	},{
-		"position_x":2000.0,
-		"position_y":1000.0
-	}	],
-	"surfaces":[{
-		"drawable":"stairs_background",
-		"layer":1,
-		"speed_ratio_x":1.0,
-		"reference":true
-	},{
-		"drawable":"stairs_lights_layer",
-		"layer":8,
-		"speed_ratio_x":1.0
-	}],
-	"items":[
-		{"label":"door_A",      "item":"arrow",		"status":"active_left", 			"position_x":150.0, 		"position_y":2000.0, "zoom":1.25, "solid":true, 	"active":true, "script":"move_stairs_lupattelli"},
-		{"label":"door_B",      "item":"arrow",		"status":"none", 							"position_x":2150.0, 		"position_y":1050.0, "zoom":1.25, "solid":true},
-		{"label":"door_C",      "item":"arrow",		"status":"active_up",       	"position_x":1120.0,    "position_y":1400.0, "zoom":1.25, "solid":false,	"active":true, "script":"move_stairs_canama"},
-		{"label":"real_door",   "item":"door",		"status":"still_B", 	       	"position_x":1120.0, 		"position_y":1330.0, "zoom":1.25}
-	]
+  "format": "landscape",
+  "ID": "stairs",
+  "zoom": 10,
+  "position_x": 0.0,
+  "position_y": 0.0,
+  "intro_script": "intro_stairs",
+  "outro_script": "outro_stairs",
+  "floor": [
+    {
+      "position_x": 0.0,
+      "position_y": 1960.0
+    },
+    {
+      "position_x": 200.0,
+      "position_y": 1960.0
+    },
+    {
+      "position_x": 300.0,
+      "position_y": 1960.0
+    },
+    {
+      "position_x": 320.0,
+      "position_y": 1840.0
+    },
+    {
+      "position_x": 480.0,
+      "position_y": 1840.0
+    },
+    {
+      "position_x": 500.0,
+      "position_y": 1720.0
+    },
+    {
+      "position_x": 660.0,
+      "position_y": 1720.0
+    },
+    {
+      "position_x": 680.0,
+      "position_y": 1600.0
+    },
+    {
+      "position_x": 840.0,
+      "position_y": 1600.0
+    },
+    {
+      "position_x": 860.0,
+      "position_y": 1480.0
+    },
+    {
+      "position_x": 1260.0,
+      "position_y": 1480.0
+    },
+    {
+      "position_x": 1430.0,
+      "position_y": 1480.0
+    },
+    {
+      "position_x": 1450.0,
+      "position_y": 1360.0
+    },
+    {
+      "position_x": 1610.0,
+      "position_y": 1360.0
+    },
+    {
+      "position_x": 1630.0,
+      "position_y": 1240.0
+    },
+    {
+      "position_x": 1790.0,
+      "position_y": 1240.0
+    },
+    {
+      "position_x": 1810.0,
+      "position_y": 1120.0
+    },
+    {
+      "position_x": 1970.0,
+      "position_y": 1120.0
+    },
+    {
+      "position_x": 1990.0,
+      "position_y": 1000.0
+    },
+    {
+      "position_x": 2000.0,
+      "position_y": 1000.0
+    }
+  ],
+  "surfaces": [
+    {
+      "drawable": "stairs_background",
+      "layer": 1,
+      "speed_ratio_x": 1.0,
+      "reference": true
+    },
+    {
+      "drawable": "stairs_lights_layer",
+      "layer": 8,
+      "speed_ratio_x": 1.0
+    }
+  ],
+  "items": [
+    {
+      "label": "door_A",
+      "item": "arrow",
+      "status": "active_left",
+      "position_x": 150.0,
+      "position_y": 2000.0,
+      "zoom": 1.25,
+      "solid": true,
+      "active": true,
+      "script": "move_stairs_lupattelli"
+    },
+    {
+      "label": "door_B",
+      "item": "arrow",
+      "status": "none",
+      "position_x": 2150.0,
+      "position_y": 1050.0,
+      "zoom": 1.25,
+      "solid": true
+    },
+    {
+      "label": "door_C",
+      "item": "arrow",
+      "status": "active_up",
+      "position_x": 1120.0,
+      "position_y": 1400.0,
+      "zoom": 1.25,
+      "solid": false,
+      "active": true,
+      "script": "move_stairs_canama"
+    },
+    {
+      "label": "real_door",
+      "item": "door",
+      "status": "still_B",
+      "position_x": 1120.0,
+      "position_y": 1330.0,
+      "zoom": 1.25
+    }
+  ]
 }

@@ -1,1 +1,396 @@
-{"format":"dialog","dialogs":[{"type":"dialog","ID":"ea81f442-fe38-40bf-9c77-8007400de2f6","delay":1.75,"actor":"mustafa","content":["What do you need?","Che ti serve?"],"next":"4021a6b3-2637-4fb6-aac4-c580491f28c0"},{"type":"choice","ID":"5b289960-6317-45a4-b8b7-36c9f04620e6","title":"","content":["Where are you from?","Da dove vieni?"],"next":"189fa4fc-81ce-444f-b1d2-e2717c0cd6d5"},{"type":"dialog","ID":"4021a6b3-2637-4fb6-aac4-c580491f28c0","delay":1.475,"actor":"andrea","content":["Well . . .","Beh . . ."],"choices":["5b289960-6317-45a4-b8b7-36c9f04620e6","e0d2f766-ed1a-4383-9e1d-7f61f61a027b","3e807f32-b322-4fcf-9c7e-446c22da9b48"]},{"type":"dialog","ID":"189fa4fc-81ce-444f-b1d2-e2717c0cd6d5","delay":1.8250000000000002,"actor":"andrea","content":["Where are you from?","Da dove vieni?"],"next":"abb57139-3443-45ec-9326-e693dac77d13"},{"type":"dialog","ID":"abb57139-3443-45ec-9326-e693dac77d13","delay":1.45,"actor":"mustafa","content":["From Rome.","Da Roma."],"next":"1ffd442e-f9af-4b28-8d57-32414d593594"},{"type":"dialog","ID":"1ffd442e-f9af-4b28-8d57-32414d593594","delay":2.25,"actor":"andrea","content":["Yes but, where were you born?","Si ma, dove sei nato?"],"next":"72f393d6-f9b5-4110-a1a6-f8f123c6aee4"},{"type":"dialog","ID":"72f393d6-f9b5-4110-a1a6-f8f123c6aee4","delay":1.45,"actor":"mustafa","content":["Rebibbia.","Rebibbia."],"next":"b7292b02-98c2-48b0-aaa7-e3f3dac2937d"},{"type":"dialog","ID":"b7292b02-98c2-48b0-aaa7-e3f3dac2937d","delay":2.2750000000000004,"actor":"andrea","content":["OK, what about your parents?","OK, ma i tuoi genitori?"],"next":"9db73197-d1f7-4aa0-b47c-8e198937fa4b"},{"type":"dialog","ID":"9db73197-d1f7-4aa0-b47c-8e198937fa4b","delay":1.55,"actor":"mustafa","content":["Laurentina.","Laurentina."],"next":"d7908c1d-58a1-40ac-a7e4-61a27109095e"},{"type":"dialog","ID":"d7908c1d-58a1-40ac-a7e4-61a27109095e","delay":1.525,"actor":"andrea","content":["Jesus . . .","Gesu . . ."],"next":"d06228cf-fdc8-4dcd-a28d-49796758bf0a"},{"type":"dialog","ID":"d06228cf-fdc8-4dcd-a28d-49796758bf0a","delay":2.55,"actor":"andrea","content":["Where is your family tree, mate?","Di dove sei originario, amico?"],"next":"5d4175e5-39b9-4b5a-8bd7-3ab63d8a5cf9"},{"type":"dialog","ID":"5d4175e5-39b9-4b5a-8bd7-3ab63d8a5cf9","delay":1.25,"actor":"mustafa","content":["Rome.","Roma."],"next":null},{"type":"choice","ID":"e0d2f766-ed1a-4383-9e1d-7f61f61a027b","title":"","content":["Can I have a Rose?","Posso avere una Rosa?"],"next":"6121e77f-2c33-4dd8-81c3-68327049a0a6"},{"type":"dialog","ID":"6121e77f-2c33-4dd8-81c3-68327049a0a6","delay":1.975,"actor":"andrea","content":["Can I have a Rose?","Posso avere una Rosa?"],"next":"6bd1aaff-b78b-482b-b981-8e534768cc89"},{"type":"dialog","ID":"6bd1aaff-b78b-482b-b981-8e534768cc89","delay":1.65,"actor":"mustafa","content":["Good choice!","Bravo ragazzo."],"next":"fdecbf65-9afd-422f-a713-e31d58d6a53b"},{"type":"dialog","ID":"fdecbf65-9afd-422f-a713-e31d58d6a53b","delay":2.175,"actor":"andrea","content":["Unfortunately I am very poor.","Ma io sono povero."],"next":"b6b6bbc6-0468-4514-adbe-0adc1690e06e"},{"type":"dialog","ID":"b6b6bbc6-0468-4514-adbe-0adc1690e06e","delay":2.425,"actor":"mustafa","content":["I don't give anything away for free.","Io non regalo niente."],"next":"4d5df6ed-a731-4d4d-9d7c-639b705a1366"},{"type":"dialog","ID":"4d5df6ed-a731-4d4d-9d7c-639b705a1366","delay":1.475,"actor":"andrea","content":["Well . . .","Uhm . . ."],"choices":["6d7785b6-9d84-4310-96cb-3ee26ec26f96","3e807f32-b322-4fcf-9c7e-446c22da9b48","bb6a9fe9-185c-4523-b8b9-820ff214c37c"]},{"type":"choice","ID":"6d7785b6-9d84-4310-96cb-3ee26ec26f96","title":"","content":["Something else?","Qualcos'altro?"],"next":"d1f36938-7bc1-4155-bac7-cb4d754432ba"},{"type":"dialog","ID":"a79eca39-8d32-4dea-af62-726b21254fe8","delay":1.725,"actor":"andrea","content":["Something else?","Qualcos'altro?"],"next":"330e4987-faac-4d06-bbb3-ce354efe05c3"},{"type":"dialog","ID":"330e4987-faac-4d06-bbb3-ce354efe05c3","delay":1.45,"actor":"mustafa","content":["Uhm . . .","Uhm . . ."],"next":"db13bd3f-8c74-4b06-82b7-aca057094e92"},{"type":"dialog","ID":"db13bd3f-8c74-4b06-82b7-aca057094e92","delay":2.325,"actor":"mustafa","content":["Give me a cigarette, mate.","Dammi una sigaretta, amico."],"next":"d3a61e61-3b1f-4d46-a8f7-d8a6ff199c28"},{"type":"dialog","ID":"9a70e6ba-61e9-415c-8f68-ea02b6a3e14f","delay":2.0250000000000004,"actor":"andrea","content":["I have no cigarettes.","Io non ho sigarette."],"next":"71cfb0d6-6937-4b85-ae32-8660ac2b950b"},{"type":"dialog","ID":"71cfb0d6-6937-4b85-ae32-8660ac2b950b","delay":2.5250000000000004,"actor":"mustafa","content":["Found a cigarette and bring it to me.","Trovane una e portamela!"],"next":null},{"type":"choice","ID":"3e807f32-b322-4fcf-9c7e-446c22da9b48","title":"","content":["I don't want anything.","Non voglio niente."],"next":"6bb6c810-de41-47f8-98a7-62151260c2bc"},{"type":"dialog","ID":"6bb6c810-de41-47f8-98a7-62151260c2bc","delay":2,"actor":"andrea","content":["I don't want anything.","Non voglio niente."],"next":"704f2d41-e903-41e2-8b4c-340d24b097a3"},{"type":"dialog","ID":"704f2d41-e903-41e2-8b4c-340d24b097a3","delay":2.35,"actor":"mustafa","content":["Give me some money, mate.","Dammi qualche soldino, amico."],"next":"45741eb0-2873-48bf-8793-d52aa2fe25ca"},{"type":"dialog","ID":"45741eb0-2873-48bf-8793-d52aa2fe25ca","delay":3.025,"actor":"andrea","content":["Exactly what I was going to ask you . . .","Stavo per chiederti la stessa cosa . . ."],"next":null},{"type":"choice","ID":"bb6a9fe9-185c-4523-b8b9-820ff214c37c","title":"","content":["Your Roses are disgusting.","Le tue Rose fanno schifo."],"next":"c52962b7-b0eb-405b-83b7-724af45ebd3e"},{"type":"set","ID":"d1f36938-7bc1-4155-bac7-cb4d754432ba","variable":"request_cigarette","value":1,"next":"a79eca39-8d32-4dea-af62-726b21254fe8"},{"type":"dialog","ID":"0d9610ed-abfe-484a-9154-c7d71ee94eb8","delay":2.2750000000000004,"actor":"andrea","content":["Your Roses are disgusting.","Le tue Rose fanno schifo."],"next":"3020a18e-db21-4148-8568-feedf637665a"},{"type":"dialog","ID":"3020a18e-db21-4148-8568-feedf637665a","delay":2.175,"actor":"mustafa","content":["My Roses are perfect!","Le mie Rose sono perfette!"],"next":"166346cc-de9d-4c9c-84ef-1b6c7c6fa84b"},{"type":"dialog","ID":"d3a61e61-3b1f-4d46-a8f7-d8a6ff199c28","delay":2.25,"actor":"mustafa","content":["A cigarette for a Rose.","Una sigaretta per una Rosa."],"next":"9a70e6ba-61e9-415c-8f68-ea02b6a3e14f"},{"type":"dialog","ID":"166346cc-de9d-4c9c-84ef-1b6c7c6fa84b","delay":2.5,"actor":"andrea","content":["They're dead, like your heart.","Sono morte, come il tuo cuore."],"next":"4de6be1f-c3b7-45b8-b204-2992783c3c6f"},{"type":"set","ID":"c52962b7-b0eb-405b-83b7-724af45ebd3e","variable":"request_cigarette","value":1,"next":"0d9610ed-abfe-484a-9154-c7d71ee94eb8"},{"type":"dialog","ID":"4de6be1f-c3b7-45b8-b204-2992783c3c6f","delay":2.45,"actor":"mustafa","content":["You're making it a big deal . . .","Quanto la fai lunga . . ."],"next":"db13bd3f-8c74-4b06-82b7-aca057094e92"}]}
+{
+  "format": "dialog",
+  "dialogs": [
+    {
+      "type": "dialog",
+      "ID": "ea81f442-fe38-40bf-9c77-8007400de2f6",
+      "delay": 1.75,
+      "actor": "mustafa",
+      "content": [
+        "What do you need?",
+        "Che ti serve?"
+      ],
+      "next": "4021a6b3-2637-4fb6-aac4-c580491f28c0"
+    },
+    {
+      "type": "choice",
+      "ID": "5b289960-6317-45a4-b8b7-36c9f04620e6",
+      "title": "",
+      "content": [
+        "Where are you from?",
+        "Da dove vieni?"
+      ],
+      "next": "189fa4fc-81ce-444f-b1d2-e2717c0cd6d5"
+    },
+    {
+      "type": "dialog",
+      "ID": "4021a6b3-2637-4fb6-aac4-c580491f28c0",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Beh . . ."
+      ],
+      "choices": [
+        "5b289960-6317-45a4-b8b7-36c9f04620e6",
+        "e0d2f766-ed1a-4383-9e1d-7f61f61a027b",
+        "3e807f32-b322-4fcf-9c7e-446c22da9b48"
+      ]
+    },
+    {
+      "type": "dialog",
+      "ID": "189fa4fc-81ce-444f-b1d2-e2717c0cd6d5",
+      "delay": 1.8250000000000002,
+      "actor": "andrea",
+      "content": [
+        "Where are you from?",
+        "Da dove vieni?"
+      ],
+      "next": "abb57139-3443-45ec-9326-e693dac77d13"
+    },
+    {
+      "type": "dialog",
+      "ID": "abb57139-3443-45ec-9326-e693dac77d13",
+      "delay": 1.45,
+      "actor": "mustafa",
+      "content": [
+        "From Rome.",
+        "Da Roma."
+      ],
+      "next": "1ffd442e-f9af-4b28-8d57-32414d593594"
+    },
+    {
+      "type": "dialog",
+      "ID": "1ffd442e-f9af-4b28-8d57-32414d593594",
+      "delay": 2.25,
+      "actor": "andrea",
+      "content": [
+        "Yes but, where were you born?",
+        "Si ma, dove sei nato?"
+      ],
+      "next": "72f393d6-f9b5-4110-a1a6-f8f123c6aee4"
+    },
+    {
+      "type": "dialog",
+      "ID": "72f393d6-f9b5-4110-a1a6-f8f123c6aee4",
+      "delay": 1.45,
+      "actor": "mustafa",
+      "content": [
+        "Rebibbia.",
+        "Rebibbia."
+      ],
+      "next": "b7292b02-98c2-48b0-aaa7-e3f3dac2937d"
+    },
+    {
+      "type": "dialog",
+      "ID": "b7292b02-98c2-48b0-aaa7-e3f3dac2937d",
+      "delay": 2.2750000000000004,
+      "actor": "andrea",
+      "content": [
+        "OK, what about your parents?",
+        "OK, ma i tuoi genitori?"
+      ],
+      "next": "9db73197-d1f7-4aa0-b47c-8e198937fa4b"
+    },
+    {
+      "type": "dialog",
+      "ID": "9db73197-d1f7-4aa0-b47c-8e198937fa4b",
+      "delay": 1.55,
+      "actor": "mustafa",
+      "content": [
+        "Laurentina.",
+        "Laurentina."
+      ],
+      "next": "d7908c1d-58a1-40ac-a7e4-61a27109095e"
+    },
+    {
+      "type": "dialog",
+      "ID": "d7908c1d-58a1-40ac-a7e4-61a27109095e",
+      "delay": 1.525,
+      "actor": "andrea",
+      "content": [
+        "Jesus . . .",
+        "Gesu . . ."
+      ],
+      "next": "d06228cf-fdc8-4dcd-a28d-49796758bf0a"
+    },
+    {
+      "type": "dialog",
+      "ID": "d06228cf-fdc8-4dcd-a28d-49796758bf0a",
+      "delay": 2.55,
+      "actor": "andrea",
+      "content": [
+        "Where is your family tree, mate?",
+        "Di dove sei originario, amico?"
+      ],
+      "next": "5d4175e5-39b9-4b5a-8bd7-3ab63d8a5cf9"
+    },
+    {
+      "type": "dialog",
+      "ID": "5d4175e5-39b9-4b5a-8bd7-3ab63d8a5cf9",
+      "delay": 1.25,
+      "actor": "mustafa",
+      "content": [
+        "Rome.",
+        "Roma."
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "e0d2f766-ed1a-4383-9e1d-7f61f61a027b",
+      "title": "",
+      "content": [
+        "Can I have a Rose?",
+        "Posso avere una Rosa?"
+      ],
+      "next": "6121e77f-2c33-4dd8-81c3-68327049a0a6"
+    },
+    {
+      "type": "dialog",
+      "ID": "6121e77f-2c33-4dd8-81c3-68327049a0a6",
+      "delay": 1.975,
+      "actor": "andrea",
+      "content": [
+        "Can I have a Rose?",
+        "Posso avere una Rosa?"
+      ],
+      "next": "6bd1aaff-b78b-482b-b981-8e534768cc89"
+    },
+    {
+      "type": "dialog",
+      "ID": "6bd1aaff-b78b-482b-b981-8e534768cc89",
+      "delay": 1.65,
+      "actor": "mustafa",
+      "content": [
+        "Good choice!",
+        "Bravo ragazzo."
+      ],
+      "next": "fdecbf65-9afd-422f-a713-e31d58d6a53b"
+    },
+    {
+      "type": "dialog",
+      "ID": "fdecbf65-9afd-422f-a713-e31d58d6a53b",
+      "delay": 2.175,
+      "actor": "andrea",
+      "content": [
+        "Unfortunately I am very poor.",
+        "Ma io sono povero."
+      ],
+      "next": "b6b6bbc6-0468-4514-adbe-0adc1690e06e"
+    },
+    {
+      "type": "dialog",
+      "ID": "b6b6bbc6-0468-4514-adbe-0adc1690e06e",
+      "delay": 2.425,
+      "actor": "mustafa",
+      "content": [
+        "I don't give anything away for free.",
+        "Io non regalo niente."
+      ],
+      "next": "4d5df6ed-a731-4d4d-9d7c-639b705a1366"
+    },
+    {
+      "type": "dialog",
+      "ID": "4d5df6ed-a731-4d4d-9d7c-639b705a1366",
+      "delay": 1.475,
+      "actor": "andrea",
+      "content": [
+        "Well . . .",
+        "Uhm . . ."
+      ],
+      "choices": [
+        "6d7785b6-9d84-4310-96cb-3ee26ec26f96",
+        "3e807f32-b322-4fcf-9c7e-446c22da9b48",
+        "bb6a9fe9-185c-4523-b8b9-820ff214c37c"
+      ]
+    },
+    {
+      "type": "choice",
+      "ID": "6d7785b6-9d84-4310-96cb-3ee26ec26f96",
+      "title": "",
+      "content": [
+        "Something else?",
+        "Qualcos'altro?"
+      ],
+      "next": "d1f36938-7bc1-4155-bac7-cb4d754432ba"
+    },
+    {
+      "type": "dialog",
+      "ID": "a79eca39-8d32-4dea-af62-726b21254fe8",
+      "delay": 1.725,
+      "actor": "andrea",
+      "content": [
+        "Something else?",
+        "Qualcos'altro?"
+      ],
+      "next": "330e4987-faac-4d06-bbb3-ce354efe05c3"
+    },
+    {
+      "type": "dialog",
+      "ID": "330e4987-faac-4d06-bbb3-ce354efe05c3",
+      "delay": 1.45,
+      "actor": "mustafa",
+      "content": [
+        "Uhm . . .",
+        "Uhm . . ."
+      ],
+      "next": "db13bd3f-8c74-4b06-82b7-aca057094e92"
+    },
+    {
+      "type": "dialog",
+      "ID": "db13bd3f-8c74-4b06-82b7-aca057094e92",
+      "delay": 2.325,
+      "actor": "mustafa",
+      "content": [
+        "Give me a cigarette, mate.",
+        "Dammi una sigaretta, amico."
+      ],
+      "next": "d3a61e61-3b1f-4d46-a8f7-d8a6ff199c28"
+    },
+    {
+      "type": "dialog",
+      "ID": "9a70e6ba-61e9-415c-8f68-ea02b6a3e14f",
+      "delay": 2.0250000000000004,
+      "actor": "andrea",
+      "content": [
+        "I have no cigarettes.",
+        "Io non ho sigarette."
+      ],
+      "next": "71cfb0d6-6937-4b85-ae32-8660ac2b950b"
+    },
+    {
+      "type": "dialog",
+      "ID": "71cfb0d6-6937-4b85-ae32-8660ac2b950b",
+      "delay": 2.5250000000000004,
+      "actor": "mustafa",
+      "content": [
+        "Found a cigarette and bring it to me.",
+        "Trovane una e portamela!"
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "3e807f32-b322-4fcf-9c7e-446c22da9b48",
+      "title": "",
+      "content": [
+        "I don't want anything.",
+        "Non voglio niente."
+      ],
+      "next": "6bb6c810-de41-47f8-98a7-62151260c2bc"
+    },
+    {
+      "type": "dialog",
+      "ID": "6bb6c810-de41-47f8-98a7-62151260c2bc",
+      "delay": 2,
+      "actor": "andrea",
+      "content": [
+        "I don't want anything.",
+        "Non voglio niente."
+      ],
+      "next": "704f2d41-e903-41e2-8b4c-340d24b097a3"
+    },
+    {
+      "type": "dialog",
+      "ID": "704f2d41-e903-41e2-8b4c-340d24b097a3",
+      "delay": 2.35,
+      "actor": "mustafa",
+      "content": [
+        "Give me some money, mate.",
+        "Dammi qualche soldino, amico."
+      ],
+      "next": "45741eb0-2873-48bf-8793-d52aa2fe25ca"
+    },
+    {
+      "type": "dialog",
+      "ID": "45741eb0-2873-48bf-8793-d52aa2fe25ca",
+      "delay": 3.025,
+      "actor": "andrea",
+      "content": [
+        "Exactly what I was going to ask you . . .",
+        "Stavo per chiederti la stessa cosa . . ."
+      ],
+      "next": null
+    },
+    {
+      "type": "choice",
+      "ID": "bb6a9fe9-185c-4523-b8b9-820ff214c37c",
+      "title": "",
+      "content": [
+        "Your Roses are disgusting.",
+        "Le tue Rose fanno schifo."
+      ],
+      "next": "c52962b7-b0eb-405b-83b7-724af45ebd3e"
+    },
+    {
+      "type": "set",
+      "ID": "d1f36938-7bc1-4155-bac7-cb4d754432ba",
+      "variable": "request_cigarette",
+      "value": 1,
+      "next": "a79eca39-8d32-4dea-af62-726b21254fe8"
+    },
+    {
+      "type": "dialog",
+      "ID": "0d9610ed-abfe-484a-9154-c7d71ee94eb8",
+      "delay": 2.2750000000000004,
+      "actor": "andrea",
+      "content": [
+        "Your Roses are disgusting.",
+        "Le tue Rose fanno schifo."
+      ],
+      "next": "3020a18e-db21-4148-8568-feedf637665a"
+    },
+    {
+      "type": "dialog",
+      "ID": "3020a18e-db21-4148-8568-feedf637665a",
+      "delay": 2.175,
+      "actor": "mustafa",
+      "content": [
+        "My Roses are perfect!",
+        "Le mie Rose sono perfette!"
+      ],
+      "next": "166346cc-de9d-4c9c-84ef-1b6c7c6fa84b"
+    },
+    {
+      "type": "dialog",
+      "ID": "d3a61e61-3b1f-4d46-a8f7-d8a6ff199c28",
+      "delay": 2.25,
+      "actor": "mustafa",
+      "content": [
+        "A cigarette for a Rose.",
+        "Una sigaretta per una Rosa."
+      ],
+      "next": "9a70e6ba-61e9-415c-8f68-ea02b6a3e14f"
+    },
+    {
+      "type": "dialog",
+      "ID": "166346cc-de9d-4c9c-84ef-1b6c7c6fa84b",
+      "delay": 2.5,
+      "actor": "andrea",
+      "content": [
+        "They're dead, like your heart.",
+        "Sono morte, come il tuo cuore."
+      ],
+      "next": "4de6be1f-c3b7-45b8-b204-2992783c3c6f"
+    },
+    {
+      "type": "set",
+      "ID": "c52962b7-b0eb-405b-83b7-724af45ebd3e",
+      "variable": "request_cigarette",
+      "value": 1,
+      "next": "0d9610ed-abfe-484a-9154-c7d71ee94eb8"
+    },
+    {
+      "type": "dialog",
+      "ID": "4de6be1f-c3b7-45b8-b204-2992783c3c6f",
+      "delay": 2.45,
+      "actor": "mustafa",
+      "content": [
+        "You're making it a big deal . . .",
+        "Quanto la fai lunga . . ."
+      ],
+      "next": "db13bd3f-8c74-4b06-82b7-aca057094e92"
+    }
+  ]
+}

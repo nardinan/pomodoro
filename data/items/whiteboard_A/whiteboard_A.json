@@ -1,23 +1,31 @@
 {
-	"format":"item",
-	"ID":"shelf_B",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"still",
-			"layers":[
-				{"drawable":"whiteboard_A_still"}
-			]
-		},{
-			"label":"note1",
-			"layers":[
-				{"drawable":"whiteboard_A_notes_1"}
-			]
-		},{
-			"label":"note2",
-			"layers":[
-				{"drawable":"whiteboard_A_notes_2"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "shelf_B",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "still",
+      "layers": [
+        {
+          "drawable": "whiteboard_A_still"
+        }
+      ]
+    },
+    {
+      "label": "note1",
+      "layers": [
+        {
+          "drawable": "whiteboard_A_notes_1"
+        }
+      ]
+    },
+    {
+      "label": "note2",
+      "layers": [
+        {
+          "drawable": "whiteboard_A_notes_2"
+        }
+      ]
+    }
+  ]
 }

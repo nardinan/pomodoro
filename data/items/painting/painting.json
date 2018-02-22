@@ -1,23 +1,31 @@
 {
-	"format":"item",
-	"ID":"painting",
-	"zoom":12,
-	"statuses":[
-		{
-			"label":"psychogames",
-			"layers":[
-				{"drawable":"painting_psychogames"}
-			]
-		},{
-			"label":"tatta",
-			"layers":[
-				{"drawable":"painting_tatta"}
-			]
-		},{
-			"label":"monnalisa",
-			"layers":[
-				{"drawable":"painting_monnalisa"}
-			]
-		}
-	]
+  "format": "item",
+  "ID": "painting",
+  "zoom": 12,
+  "statuses": [
+    {
+      "label": "psychogames",
+      "layers": [
+        {
+          "drawable": "painting_psychogames"
+        }
+      ]
+    },
+    {
+      "label": "tatta",
+      "layers": [
+        {
+          "drawable": "painting_tatta"
+        }
+      ]
+    },
+    {
+      "label": "monnalisa",
+      "layers": [
+        {
+          "drawable": "painting_monnalisa"
+        }
+      ]
+    }
+  ]
 }
