@@ -41,8 +41,8 @@ PKG_SEARCH_MODULE(SDL2MIXER REQUIRED SDL2_mixer)
 
 INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIRS} ${SDL2TTF_INCLUDE_DIRS} ${SDL2IMAGE_INCLUDE_DIRS} ${SDL2MIXER_INCLUDE_DIRS} /usr/include)
 
-TARGET_LINK_LIBRARIES(pomodoro ${SDL2_LIBRARIES} ${SDL2TTF_LIBRARIES} ${SDL2IMAGE_LIBRARIES} ${SDL2MIXER_LIBRARIES} miranda_ground miranda_objects
-        miranda_geometry miranda_io miranda_network miranda_media miranda_ui)
+TARGET_LINK_LIBRARIES(pomodoro ${SDL2_LIBRARIES} ${SDL2TTF_LIBRARIES} ${SDL2IMAGE_LIBRARIES} ${SDL2MIXER_LIBRARIES} pthread miranda_ground miranda_objects
+        miranda_geometry miranda_io miranda_network miranda_media miranda_ui m)
 
 # We need to transfer the 'data' directory into the executable file
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/data DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
