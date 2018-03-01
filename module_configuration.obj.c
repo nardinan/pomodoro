@@ -99,7 +99,7 @@ d_define_method(module_configuration, get_resolution)(struct s_object *self, dou
   d_assert(list_resolutions = d_call(module_configuration_attributes->ui_factory, m_ui_factory_get_component, resources_container, "resolution_list"));
   if ((selection = d_call(list_resolutions->uiable, m_list_get_selected_uiable, NULL))) {
     for (index = 0; index < d_list_max_selected; ++index)
-      if (selection[index] == d_list_selected_NULL)
+      if (selection[index] == d_list_selected_null)
         break;
     if (index > 0)
       if ((selected_element = d_call(list_resolutions->uiable, m_list_get_uiable, (unsigned int) selection[(index - 1)])))
@@ -124,7 +124,7 @@ d_define_method(module_configuration, get_language)(struct s_object *self, doubl
   d_assert(list_languages = d_call(module_configuration_attributes->ui_factory, m_ui_factory_get_component, resources_container, "language_list"));
   if ((selection = d_call(list_languages->uiable, m_list_get_selected_uiable, NULL))) {
     for (index = 0; index < d_list_max_selected; ++index)
-      if (selection[index] == d_list_selected_NULL)
+      if (selection[index] == d_list_selected_null)
         break;
     if (index > 0)
       *language = (double) selection[(index - 1)];
