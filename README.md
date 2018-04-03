@@ -21,7 +21,7 @@ The game has been sucessfully compiled on Windows (windows 10, using MinGW), Lin
 
 ### Dependencies
 The game depends on the following libraries:
- * libmiranda (https://github.com/nardinan/miranda)
+ * libmiranda (https://github.com/nardinan/miranda on branch 'release_0.1')
  * libSDL2
  * libSDL2_ttf
  * libSDL2_mixer
@@ -34,9 +34,9 @@ Open a terminal and install the SDL2 libraries using **apt**:
 $ sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
 ```
 
-Now that all the required SDL2 packages have been installed, it's time for Miranda:
+Now that all the required SDL2 packages have been installed, it's time for Miranda (pay attention, Pomodoro works with Miranda 0.1):
 ```bash
-$ git clone https://github.com/nardinan/miranda
+$ git clone -b release_0.1 https://github.com/nardinan/miranda
 $ cd miranda
 $ mkdir build
 $ cd build
