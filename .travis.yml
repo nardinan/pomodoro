@@ -11,7 +11,7 @@ before_install:
 
 install:
         - sudo apt-get install -qq libsdl2-dev libsdl2-ttf-dev libsdl2-mixer-dev libsdl2-image-dev
-        - git clone git://github.com/nardinan/miranda
+        - git clone -b release_0.1 git://github.com/nardinan/miranda
         - echo $(cd miranda && mkdir build && cd build && cmake .. && make && sudo make install)
 
 script:
