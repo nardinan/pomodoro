@@ -176,23 +176,24 @@ int f_extract_string(const char *file) {
                   *next_pointer = 0;
                 printf("%s|%s|", filtered_file_name, filtered_character_name);
               } else
-                printf("%s||", filtered_file_name);
+                printf("%s|default|", filtered_file_name);
               status = e_extract_status_read_english;
             }
             break;
           case e_extract_status_read_italian:
             filtered_string = f_extract_purge(buffer);
-            if (strlen(filtered_string) > 0) {
+            if (strlen(filtered_string) > 0)
               printf("%s\n", filtered_string);
-            } else
+            else
               printf("\n");
             status = e_extract_status_ignore;
             break;
           case e_extract_status_read_english:
             filtered_string = f_extract_purge(buffer);
-            if (strlen(filtered_string) > 0) {
+            if (strlen(filtered_string) > 0)
               printf("%s|", filtered_string);
-            }
+            else
+              printf("|");
             status = e_extract_status_read_italian;
         };
       }
