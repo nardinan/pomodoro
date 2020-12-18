@@ -9,17 +9,17 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Ah ah ah . . ."
-                    "Ah ah ah . . .")
-                  (cons ;2 andrea
-                    "Moron."
-                    "Deficiente.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Ah ah ah . . ."    
+			"Ah ah ah . . .")   
+		(cons ;2 andrea
+			"Moron."    
+			"Deficiente.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

@@ -9,80 +9,80 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 massimo
-                    "I am sorry, I cannot sell you anything . . ."
-                    "Mi dispiace ma non posso venderti nulla . . .")
-                  (cons ;2 massimo
-                    ". . . all these electric blackouts damages my cash register."
-                    ". . . tutti questi blackout m'hanno rotto il registratore.")
-                  (cons ;3 andrea
-                    "Let the electrical system checked."
-                    "Ma fallo controllare l'impianto!")
-                  (cons ;4 massimo
-                    "Pff, electrical system."
-                    "Ma che impianto!")
-                  (cons ;5 massimo
-                    "I called ENEL and apparently somebody is playing games . . ."
-                    "Ho gia' chiamato l'ENEL e m'hanno detto che qualcuno fa il furbo . . .")
-                  (cons ;6 andrea
-                    "What do you mean?"
-                    "Ma in che senso?")
-                  (cons ;7 massimo
-                    "Somebody is using all the electricity . . ."
-                    "Nel senso che qualcuno sta usando tutta l'elettricita' possibile . . .")
-                  (cons ;8 andrea
-                    "Some people . . ."
-                    "Che gente!")
-                  (cons ;9 massimo
-                    "Ah, we are raising some money for Profeta's funeral."
-                    "Ah stiamo facendo una raccolta fondi per il funerale del Profeta.")
-                  (cons ;10 andrea
-                    "Which one?"
-                    "Quale Profeta?")
-                  (cons ;11 massimo
-                    "The Profeta that has been killed in Piazza Quattro Novembre!"
-                    "Quello che e' stato ucciso a piazza Quattro Novembre!")
-                  (cons ;12 andrea
-                    "Which one?"
-                    "Ma quale?")
-                  (cons ;13 massimo
-                    "Seriously?"
-                    "Ma come quale?")
-                  (cons ;14 massimo
-                    "Are you deficient?"
-                    "Ma sei deficiente?")
-                  (cons ;15 massimo
-                    "The guy that has been killed!"
-                    "Quello che e' stato ammazzato!")
-                  (cons ;16 andrea
-                    "Ahhhh!"
-                    "Ahhhh!")
-                  (cons ;17 andrea
-                    "I see."
-                    "Ho capito.")
-                  (cons ;18 andrea
-                    "It happened like a hundred thousand years ago!"
-                    "Ma e' successo tipo centomila anni fa!")
-                  (cons ;19 massimo
-                    ". . ."
-                    ". . .")
-                  (cons ;20 massimo
-                    "It happened like five hours ago."
-                    "E' successo tipo cinque ore fa.")
-                  (cons ;21 andrea
-                    "Ah."
-                    "Ah.")
-                  (cons ;22 andrea
-                    "I have no money."
-                    "Non ho soldi.")
-                  (cons ;23 massimo
-                    "I am no surprised."
-                    "Non ne sono stupito.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 massimo
+			"I am sorry, I cannot sell you anything . . ."    
+			"Mi dispiace ma non posso venderti nulla . . .")   
+		(cons ;2 massimo
+			". . . all these electric blackouts damages my cash register."    
+			". . . tutti questi blackout m'hanno rotto il registratore.")   
+		(cons ;3 andrea
+			"Let the electrical system checked."    
+			"Ma fallo controllare l'impianto!")   
+		(cons ;4 massimo
+			"Pff, electrical system."    
+			"Ma che impianto!")   
+		(cons ;5 massimo
+			"I called ENEL and apparently somebody is playing games . . ."    
+			"Ho gia' chiamato l'ENEL e m'hanno detto che qualcuno fa il furbo . . .")   
+		(cons ;6 andrea
+			"What do you mean?"    
+			"Ma in che senso?")   
+		(cons ;7 massimo
+			"Somebody is using all the electricity . . ."    
+			"Nel senso che qualcuno sta usando tutta l'elettricita' possibile . . .")   
+		(cons ;8 andrea
+			"Some people . . ."    
+			"Che gente!")   
+		(cons ;9 massimo
+			"Ah, we are raising some money for Profeta's funeral."    
+			"Ah stiamo facendo una raccolta fondi per il funerale del Profeta.")   
+		(cons ;10 andrea
+			"Which one?"    
+			"Quale Profeta?")   
+		(cons ;11 massimo
+			"The Profeta that has been killed in Piazza Quattro Novembre!"    
+			"Quello che e' stato ucciso a piazza Quattro Novembre!")   
+		(cons ;12 andrea
+			"Which one?"    
+			"Ma quale?")   
+		(cons ;13 massimo
+			"Seriously?"    
+			"Ma come quale?")   
+		(cons ;14 massimo
+			"Are you deficient?"    
+			"Ma sei deficiente?")   
+		(cons ;15 massimo
+			"The guy that has been killed!"    
+			"Quello che e' stato ammazzato!")   
+		(cons ;16 andrea
+			"Ahhhh!"    
+			"Ahhhh!")   
+		(cons ;17 andrea
+			"I see."    
+			"Ho capito.")   
+		(cons ;18 andrea
+			"It happened like a hundred thousand years ago!"    
+			"Ma e' successo tipo centomila anni fa!")   
+		(cons ;19 massimo
+			". . ."    
+			". . .")   
+		(cons ;20 massimo
+			"It happened like five hours ago."    
+			"E' successo tipo cinque ore fa.")   
+		(cons ;21 andrea
+			"Ah."    
+			"Ah.")   
+		(cons ;22 andrea
+			"I have no money."    
+			"Non ho soldi.")   
+		(cons ;23 massimo
+			"I am no surprised."    
+			"Non ne sono stupito.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

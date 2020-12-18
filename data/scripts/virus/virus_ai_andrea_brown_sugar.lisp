@@ -9,173 +9,173 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 valerio
-                    "I told you that is not true!"
-                    "No, ti ho detto.")
-                  (cons ;2 luna
-                    "And I told you that is true true true!"
-                    "Si, ti dico.")
-                  (cons ;3 andrea
-                    "The guy, next to my girlfriend is Valerio."
-                    "Lui, vicino alla mia ragazza e' Valerio.")
-                  (cons ;4 andrea
-                    "We call him PD."
-                    "Chiamato PD da tutti noi.")
-                  (cons ;5 andrea
-                    "PD is nerd . . ."
-                    "PD e' un nerd . . .")
-                  (cons ;6 andrea
-                    ". . . is a little obsessed with parkour and League of Legends."
-                    ". . . un po' fissato con il parkour e con League of Legends.")
-                  (cons ;7 andrea
-                    "He study Computer Science with me."
-                    "Studia informatica con me.")
-                  (cons ;8 andrea
-                    "He lives in the same apartment with my girlfriend and Marta . . ."
-                    "Convive con la mia ragazza e Marta . . .")
-                  (cons ;9 andrea
-                    ". . that's slightly odd . . ."
-                    ". . . il che e' un po' strano . . .")
-                  (cons ;10 luna
-                    "The virus story is just a bunch of bullshits!"
-                    "Mi sta dicendo che la storia del virus e' una cazzata!")
-                  (cons ;11 valerio
-                    "I am sorry Luna, but the people that you call 'infected' are just normal people."
-                    "Scusa ma per me, quelli che chiami 'infetti', sono persone normalissime.")
-                  (cons ;12 luna
-                    "You have potatoes in your head!"
-                    "Questo perche' tu hai le patate nel cervello!")
-                  (cons ;13 valerio
-                    "Uff, OK."
-                    "Vabbe'.")
-                  (cons ;14 andrea
-                    "Are you still on break?"
-                    "Ma tu sei ancora in pausa?")
-                  (cons ;15 luna
-                    "So?"
-                    "Beh?")
-                  (cons ;16 andrea
-                    "Just asking."
-                    "No niente, chiedevo.")
-                  (cons ;17 andrea
-                    "Is this the very same coffee you were drinking before?"
-                    "Ma e' lo stesso caffe' che stavi bevendo prima?")
-                  (cons ;18 luna
-                    "Are you mad?"
-                    "Sei pazzo?")
-                  (cons ;19 andrea
-                    "I drank two other coffees between the one that you saw before and this one."
-                    "Tra quello che hai visto tu e questo ne ho bevuti altri due.")
-                  (cons ;20 valerio
-                    "Andrea I heard that some noobs feeder took advantage of an aggro on a champion, they raised badly and they killed a Baron."
-                    "Comunque Andrea ho sentito dire che dei noobs feeder hanno sfruttato l'aggro su un champion nemico, sono cresciuti di violenza e hanno ammazzato un Baron. ")
-                  (cons ;21 andrea
-                    "I . . ."
-                    "PD io . . .")
-                  (cons ;22 andrea
-                    ". . . I have no words."
-                    ". . . io non so che dire.")
-                  (cons ;23 valerio
-                    "Me neither!"
-                    "Nemmeno io.")
-                  (cons ;24 andrea
-                    "Totally incomprehensible."
-                    "Non ho capito niente.")
-                  (cons ;25 andrea
-                    "Are you scared for the infection?"
-                    "Ma non ti preoccupa per niente questa cosa del virus?")
-                  (cons ;26 valerio
-                    "The infection does not exist."
-                    "Questa cosa del virus non esiste.")
-                  (cons ;27 valerio
-                    "A virus would create a global panic and I don't see it . . ."
-                    "Un virus avrebbe creato un panico generale che io qui non vedo . . .")
-                  (cons ;28 valerio
-                    "A virus would draw attention of media and government . . ."
-                    "Avrebbe attirato l'attenzione dei media e del governo . . .")
-                  (cons ;29 valerio
-                    "The city would be under quarantine!"
-                    "La citta' sarebbe sotto quarantena!")
-                  (cons ;30 valerio
-                    "Whilst everybody here is free to leave and go wherever he wants."
-                    "A me sembra che qui chiunque sia libero di andarsene.")
-                  (cons ;31 andrea
-                    "I see."
-                    "Ho capito.")
-                  (cons ;32 andrea
-                    "This is an interesting position."
-                    "Posizione interessante.")
-                  (cons ;33 luna
-                    "You guys are just crazy!"
-                    "Secondo me siete impazziti!")
-                  (cons ;34 luna
-                    "This morning I saw a couple of infected guys that were talking in a strange way."
-                    "Stamattina sono venuti dei ragazzi, parlavano in modo strano.")
-                  (cons ;35 luna
-                    "They were crashing continously!"
-                    "Crashavano in continuazione!")
-                  (cons ;36 valerio
-                    "Do you think people crashes so easily?"
-                    "Ma ti pare che crashavano?")
-                  (cons ;37 valerio
-                    "Moreover I intensively debug them."
-                    "Poi con tutti i debug fatti, ci mancherebbe altro.")
-                  (cons ;38 andrea
-                    "What do you mean?"
-                    "In che senso?")
-                  (cons ;39 valerio
-                    ". . ."
-                    ". . .")
-                  (cons ;40 valerio
-                    "Just kidding."
-                    "Nel senso ironico.")
-                  (cons ;41 andrea
-                    "Oh OK."
-                    "Ah, certo.")
-                  (cons ;42 luna
-                    "People is crashing!"
-                    "La gente crasha, ti dico!")
-                  (cons ;43 valerio
-                    "Impossible!"
-                    "Impossibile!")
-                  (cons ;44 valerio
-                    "My skills with gdb and valgrind are incredible."
-                    "Uso gdb e valgrind con maestria assoluta.")
-                  (cons ;45 luna
-                    "Are you kidding me?"
-                    "Mi prendi in giro?")
-                  (cons ;46 valerio
-                    ". . ."
-                    ". . .")
-                  (cons ;47 valerio
-                    "Maybe?"
-                    "Forse?")
-                  (cons ;48 andrea
-                    "Did you put brown sugar on that coffee?"
-                    "Per caso metti zucchero di canna nel caffe'?")
-                  (cons ;49 luna
-                    "Yes."
-                    "Si.")
-                  (cons ;50 andrea
-                    "Do you have it?"
-                    "Ne hai?")
-                  (cons ;51 luna
-                    "Yes."
-                    "Si.")
-                  (cons ;52 andrea
-                    "Can I have some?"
-                    "Posso averne?")
-                  (cons ;53 luna
-                    "Yes."
-                    "Si.")
-                  (cons ;54 andrea
-                    "Thanks!"
-                    "Grazie.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 valerio
+			"I told you that is not true!"    
+			"No, ti ho detto.")   
+		(cons ;2 luna
+			"And I told you that is true true true!"    
+			"Si, ti dico.")   
+		(cons ;3 andrea
+			"The guy, next to my girlfriend is Valerio."    
+			"Lui, vicino alla mia ragazza e' Valerio.")   
+		(cons ;4 andrea
+			"We call him PD."    
+			"Chiamato PD da tutti noi.")   
+		(cons ;5 andrea
+			"PD is nerd . . ."    
+			"PD e' un nerd . . .")   
+		(cons ;6 andrea
+			". . . is a little obsessed with parkour and League of Legends."    
+			". . . un po' fissato con il parkour e con League of Legends.")   
+		(cons ;7 andrea
+			"He study Computer Science with me."    
+			"Studia informatica con me.")   
+		(cons ;8 andrea
+			"He lives in the same apartment with my girlfriend and Marta . . ."    
+			"Convive con la mia ragazza e Marta . . .")   
+		(cons ;9 andrea
+			". . that's slightly odd . . ."    
+			". . . il che e' un po' strano . . .")   
+		(cons ;10 luna
+			"The virus story is just a bunch of bullshits!"    
+			"Mi sta dicendo che la storia del virus e' una cazzata!")   
+		(cons ;11 valerio
+			"I am sorry Luna, but the people that you call 'infected' are just normal people."    
+			"Scusa ma per me, quelli che chiami 'infetti', sono persone normalissime.")   
+		(cons ;12 luna
+			"You have potatoes in your head!"    
+			"Questo perche' tu hai le patate nel cervello!")   
+		(cons ;13 valerio
+			"Uff, OK."    
+			"Vabbe'.")   
+		(cons ;14 andrea
+			"Are you still on break?"    
+			"Ma tu sei ancora in pausa?")   
+		(cons ;15 luna
+			"So?"    
+			"Beh?")   
+		(cons ;16 andrea
+			"Just asking."    
+			"No niente, chiedevo.")   
+		(cons ;17 andrea
+			"Is this the very same coffee you were drinking before?"    
+			"Ma e' lo stesso caffe' che stavi bevendo prima?")   
+		(cons ;18 luna
+			"Are you mad?"    
+			"Sei pazzo?")   
+		(cons ;19 andrea
+			"I drank two other coffees between the one that you saw before and this one."    
+			"Tra quello che hai visto tu e questo ne ho bevuti altri due.")   
+		(cons ;20 valerio
+			"Andrea I heard that some noobs feeder took advantage of an aggro on a champion, they raised badly and they killed a Baron."    
+			"Comunque Andrea ho sentito dire che dei noobs feeder hanno sfruttato l'aggro su un champion nemico, sono cresciuti di violenza e hanno ammazzato un Baron.")   
+		(cons ;21 andrea
+			"I . . ."    
+			"PD io . . .")   
+		(cons ;22 andrea
+			". . . I have no words."    
+			". . . io non so che dire.")   
+		(cons ;23 valerio
+			"Me neither!"    
+			"Nemmeno io.")   
+		(cons ;24 andrea
+			"Totally incomprehensible."    
+			"Non ho capito niente.")   
+		(cons ;25 andrea
+			"Are you scared for the infection?"    
+			"Ma non ti preoccupa per niente questa cosa del virus?")   
+		(cons ;26 valerio
+			"The infection does not exist."    
+			"Questa cosa del virus non esiste.")   
+		(cons ;27 valerio
+			"A virus would create a global panic and I don't see it . . ."    
+			"Un virus avrebbe creato un panico generale che io qui non vedo . . .")   
+		(cons ;28 valerio
+			"A virus would draw attention of media and government . . ."    
+			"Avrebbe attirato l'attenzione dei media e del governo . . .")   
+		(cons ;29 valerio
+			"The city would be under quarantine!"    
+			"La citta' sarebbe sotto quarantena!")   
+		(cons ;30 valerio
+			"Whilst everybody here is free to leave and go wherever he wants."    
+			"A me sembra che qui chiunque sia libero di andarsene.")   
+		(cons ;31 andrea
+			"I see."    
+			"Ho capito.")   
+		(cons ;32 andrea
+			"This is an interesting position."    
+			"Posizione interessante.")   
+		(cons ;33 luna
+			"You guys are just crazy!"    
+			"Secondo me siete impazziti!")   
+		(cons ;34 luna
+			"This morning I saw a couple of infected guys that were talking in a strange way."    
+			"Stamattina sono venuti dei ragazzi, parlavano in modo strano.")   
+		(cons ;35 luna
+			"They were crashing continously!"    
+			"Crashavano in continuazione!")   
+		(cons ;36 valerio
+			"Do you think people crashes so easily?"    
+			"Ma ti pare che crashavano?")   
+		(cons ;37 valerio
+			"Moreover I intensively debug them."    
+			"Poi con tutti i debug fatti, ci mancherebbe altro.")   
+		(cons ;38 andrea
+			"What do you mean?"    
+			"In che senso?")   
+		(cons ;39 valerio
+			". . ."    
+			". . .")   
+		(cons ;40 valerio
+			"Just kidding."    
+			"Nel senso ironico.")   
+		(cons ;41 andrea
+			"Oh OK."    
+			"Ah, certo.")   
+		(cons ;42 luna
+			"People is crashing!"    
+			"La gente crasha, ti dico!")   
+		(cons ;43 valerio
+			"Impossible!"    
+			"Impossibile!")   
+		(cons ;44 valerio
+			"My skills with gdb and valgrind are incredible."    
+			"Uso gdb e valgrind con maestria assoluta.")   
+		(cons ;45 luna
+			"Are you kidding me?"    
+			"Mi prendi in giro?")   
+		(cons ;46 valerio
+			". . ."    
+			". . .")   
+		(cons ;47 valerio
+			"Maybe?"    
+			"Forse?")   
+		(cons ;48 andrea
+			"Did you put brown sugar on that coffee?"    
+			"Per caso metti zucchero di canna nel caffe'?")   
+		(cons ;49 luna
+			"Yes."    
+			"Si.")   
+		(cons ;50 andrea
+			"Do you have it?"    
+			"Ne hai?")   
+		(cons ;51 luna
+			"Yes."    
+			"Si.")   
+		(cons ;52 andrea
+			"Can I have some?"    
+			"Posso averne?")   
+		(cons ;53 luna
+			"Yes."    
+			"Si.")   
+		(cons ;54 andrea
+			"Thanks!"    
+			"Grazie.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

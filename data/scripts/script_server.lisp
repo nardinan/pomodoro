@@ -9,44 +9,44 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Uhm . . ."
-                    "Uhm . . .")
-                  (cons ;2 andrea
-                    "I could try to shut it off!"
-                    "Potrei provare a spegnerlo!")
-                  (cons ;3 nerd
-                    "Ehy!"
-                    "Ehy!")
-                  (cons ;4 nerd
-                    "Don't even try to touch that thing, mate!"
-                    "Non ci provare a toccare quel coso!")
-                  (cons ;5 nerd
-                    "I'll explode your hands and I'll cut off your balls!"
-                    "Ti faccio saltare le mani e ti taglio le palle!")
-                  (cons ;6 andrea
-                    "Do you have an Oxford degree?"
-                    "Il signorino s'e' laureato a Oxford?")
-                  (cons ;7 nerd
-                    "Yes, I have it."
-                    "Anche li, si.")
-                  (cons ;8 andrea
-                    "Ah."
-                    "Ah.")
-                  (cons ;9 andrea
-                    "Well, it's not funny like this."
-                    "Beh cosi' non fa ridere.")
-                  (cons ;10 andrea
-                    "Done!"
-                    "Ecco fatto!")
-                  (cons ;11 andrea
-                    "It's off!"
-                    "E' spento")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Uhm . . ."    
+			"Uhm . . .")   
+		(cons ;2 andrea
+			"I could try to shut it off!"    
+			"Potrei provare a spegnerlo!")   
+		(cons ;3 nerd
+			"Ehy!"    
+			"Ehy!")   
+		(cons ;4 nerd
+			"Don't even try to touch that thing, mate!"    
+			"Non ci provare a toccare quel coso!")   
+		(cons ;5 nerd
+			"I'll explode your hands and I'll cut off your balls!"    
+			"Ti faccio saltare le mani e ti taglio le palle!")   
+		(cons ;6 andrea
+			"Do you have an Oxford degree?"    
+			"Il signorino s'e' laureato a Oxford?")   
+		(cons ;7 nerd
+			"Yes, I have it."    
+			"Anche li, si.")   
+		(cons ;8 andrea
+			"Ah."    
+			"Ah.")   
+		(cons ;9 andrea
+			"Well, it's not funny like this."    
+			"Beh cosi' non fa ridere.")   
+		(cons ;10 andrea
+			"Done!"    
+			"Ecco fatto!")   
+		(cons ;11 andrea
+			"It's off!"    
+			"E' spento")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

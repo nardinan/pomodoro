@@ -9,113 +9,113 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Oh, look!"
-                    "Oh ma tu guarda!")
-                  (cons ;2 andrea
-                    "Calculus 2"
-                    "Analisi Matematica 2")
-                  (cons ;3 andrea
-                    "These are the holy notes from Cug"
-                    "Questi sono i sacri appunti di Cug")
-                  (cons ;4 andrea
-                    "Let me take them ..."
-                    "Sara' il caso che li prenda io ...")
-                  (cons ;5 andrea
-                    "Ehm"
-                    "Ehm")
-                  (cons ;6 andrea
-                    "Hello Cug, how are you?"
-                    "Ciao Cug, come stai?")
-                  (cons ;7 andrea
-                    "He is Cug"
-                    "Lui e' Cug")
-                  (cons ;8 andrea
-                    "I woke up twenty minutes ago and I am ready for this amazing day"
-                    "Mi sono svegliato venti minuti fa e sono pronto per questa meravigliosa giornata")
-                  (cons ;9 luca
-                    "I am not here to judge you"
-                    "Io non sono qui per giudicarti")
-                  (cons ;10 luca
-                    "But I want you to know that it is three in the evening"
-                    "Voglio solo che tu sappia che sono le tre di pomeriggio")
-                  (cons ;11 andrea
-                    "Ah"
-                    "Ah")
-                  (cons ;12 luca
-                    "Listen very careful now. The electricity bill is arrived and we have to pay it as soon as possible"
-                    "Ascolta attentamente ora. E' arrivata la bolletta della luce e dobbiamo pagarla al piu' presto")
-                  (cons ;13 andrea
-                    "We have time"
-                    "Abbiamo tempo")
-                  (cons ;14 luca
-                    "No, idiot. Tomorrow I have to send them the receipt otherwise . . ."
-                    "No, idiota. Domani devo mandare il bollettino, altrimenti . . .")
-                  (cons ;15 luca
-                    "THEY WILL CUT US OUT!"
-                    "CI TAGLIERANNO LA CORRENTE!")
-                  (cons ;16 andrea
-                    "Wow! How did you do that?"
-                    "Wow! Ma come hai fatto a farlo?")
-                  (cons ;17 luca
-                    "Do what?"
-                    "Fare cosa?")
-                  (cons ;18 andrea
-                    "That thing with thunderbolt"
-                    "Quella cosa del fulmine")
-                  (cons ;19 luca
-                    "What thunderbolt thing?"
-                    "Quale cosa del fulmine?")
-                  (cons ;20 andrea
-                    "It is fine. Listen, how much do I have to give you?"
-                    "Fa niente. Ascolta, quanto ti devo dare?")
-                  (cons ;21 luca
-                    "One hundred twenty Euros and ninety five cents"
-                    "Centoventi Euro e novantasette centesimi")
-                  (cons ;22 luca
-                    "Cash"
-                    "In contanti")
-                  (cons ;23 luca
-                    "Before this evening, otherwise I will be pissed off"
-                    "Entro stasera, altrimenti mi incazzo")
-                  (cons ;24 andrea
-                    "I ..."
-                    "Io ...")
-                  (cons ;25 andrea
-                    "I hope you are aware about the fact that I have no idea where I could find those money"
-                    "Io spero che tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")
-                  (cons ;26 luca
-                    "You can start with these five Euros."
-                    "Puoi iniziare con questi cinque euri.")
-                  (cons ;27 luca
-                    "Now you have to find one hundred fifteen Euros and ninety five cents"
-                    "Ora ne mancano centoquindici Euro e novantasette centesimi.")
-                  (cons ;28 andrea
-                    "And where I can find them?"
-                    "E dove li trovo?")
-                  (cons ;29 luca
-                    "Why don't you go to 'Elfo' pub?"
-                    "Perche' non vai al pub 'Elfo'?")
-                  (cons ;30 luca
-                    "I know that Luca Caprini is there!"
-                    "So che Luca Caprini e' li!")
-                  (cons ;31 luca
-                    "Maybe he wants to help you with the rest of the money."
-                    "Magari lui te li presta.")
-                  (cons ;32 luca
-                    "And what if he doesn't want to help me?"
-                    "E se non dovesse prestarmeli?")
-                  (cons ;33 luca
-                    "I care less than a dog that pees in the desert"
-                    "Mi interessa meno di un cane che orina nel deserto")
-                  (cons ;34 andrea
-                    "We'd better get a move on"
-                    "Sara' il caso di darsi da fare")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Oh, look!"    
+			"Oh ma tu guarda!")   
+		(cons ;2 andrea
+			"Calculus 2"    
+			"Analisi Matematica 2")   
+		(cons ;3 andrea
+			"These are the holy notes from Cug"    
+			"Questi sono i sacri appunti di Cug")   
+		(cons ;4 andrea
+			"Let me take them ..."    
+			"Sara' il caso che li prenda io ...")   
+		(cons ;5 andrea
+			"Ehm"    
+			"Ehm")   
+		(cons ;6 andrea
+			"Hello Cug, how are you?"    
+			"Ciao Cug, come stai?")   
+		(cons ;7 andrea
+			"He is Cug"    
+			"Lui e' Cug")   
+		(cons ;8 andrea
+			"I woke up twenty minutes ago and I am ready for this amazing day"    
+			"Mi sono svegliato venti minuti fa e sono pronto per questa meravigliosa giornata")   
+		(cons ;9 luca
+			"I am not here to judge you"    
+			"Io non sono qui per giudicarti")   
+		(cons ;10 luca
+			"But I want you to know that it is three in the evening"    
+			"Voglio solo che tu sappia che sono le tre di pomeriggio")   
+		(cons ;11 andrea
+			"Ah"    
+			"Ah")   
+		(cons ;12 luca
+			"Listen very careful now. The electricity bill is arrived and we have to pay it as soon as possible"    
+			"Ascolta attentamente ora. E' arrivata la bolletta della luce e dobbiamo pagarla al piu' presto")   
+		(cons ;13 andrea
+			"We have time"    
+			"Abbiamo tempo")   
+		(cons ;14 luca
+			"No, idiot. Tomorrow I have to send them the receipt otherwise . . ."    
+			"No, idiota. Domani devo mandare il bollettino, altrimenti . . .")   
+		(cons ;15 luca
+			"THEY WILL CUT US OUT!"    
+			"CI TAGLIERANNO LA CORRENTE!")   
+		(cons ;16 andrea
+			"Wow! How did you do that?"    
+			"Wow! Ma come hai fatto a farlo?")   
+		(cons ;17 luca
+			"Do what?"    
+			"Fare cosa?")   
+		(cons ;18 andrea
+			"That thing with thunderbolt"    
+			"Quella cosa del fulmine")   
+		(cons ;19 luca
+			"What thunderbolt thing?"    
+			"Quale cosa del fulmine?")   
+		(cons ;20 andrea
+			"It is fine. Listen, how much do I have to give you?"    
+			"Fa niente. Ascolta, quanto ti devo dare?")   
+		(cons ;21 luca
+			"One hundred twenty Euros and ninety five cents"    
+			"Centoventi Euro e novantasette centesimi")   
+		(cons ;22 luca
+			"Cash"    
+			"In contanti")   
+		(cons ;23 luca
+			"Before this evening, otherwise I will be pissed off"    
+			"Entro stasera, altrimenti mi incazzo")   
+		(cons ;24 andrea
+			"I ..."    
+			"Io ...")   
+		(cons ;25 andrea
+			"I hope you are aware about the fact that I have no idea where I could find those money"    
+			"Io spero che tu ti renda conto che non ho la minima idea di dove recuperare tutti quei soldi")   
+		(cons ;26 luca
+			"You can start with these five Euros."    
+			"Puoi iniziare con questi cinque euri.")   
+		(cons ;27 luca
+			"Now you have to find one hundred fifteen Euros and ninety five cents"    
+			"Ora ne mancano centoquindici Euro e novantasette centesimi.")   
+		(cons ;28 andrea
+			"And where I can find them?"    
+			"E dove li trovo?")   
+		(cons ;29 luca
+			"Why don't you go to 'Elfo' pub?"    
+			"Perche' non vai al pub 'Elfo'?")   
+		(cons ;30 luca
+			"I know that Luca Caprini is there!"    
+			"So che Luca Caprini e' li!")   
+		(cons ;31 luca
+			"Maybe he wants to help you with the rest of the money."    
+			"Magari lui te li presta.")   
+		(cons ;32 luca
+			"And what if he doesn't want to help me?"    
+			"E se non dovesse prestarmeli?")   
+		(cons ;33 luca
+			"I care less than a dog that pees in the desert"    
+			"Mi interessa meno di un cane che orina nel deserto")   
+		(cons ;34 andrea
+			"We'd better get a move on"    
+			"Sara' il caso di darsi da fare")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

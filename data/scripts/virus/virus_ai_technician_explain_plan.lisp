@@ -9,38 +9,38 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Hey, do you really want to give him the cocktail in this way?"
-                    "Scusa, ma vuoi veramente dargli il cocktail cosi?")
-                  (cons ;2 andrea
-                    "Maybe is better if we find some kind of drugs to put in it so he will give us the key!"
-                    "Non e' meglio trovare un qualche tipo di droga da metterci dentro per farci dare la chiave?")
-                  (cons ;3 andrea
-                    "Just to say . . ."
-                    "Cosi' eh . . .")
-                  (cons ;4 andrea
-                    "I'm try to give you an idea of how this game works."
-                    "Giusto per darti un'idea di come funziona il gioco.")
-                  (cons ;5 andrea
-                    "Hey, do you really want to give him the pills in this way?"
-                    "Scusa ma vuoi veramente dargli le pillole cosi?")
-                  (cons ;6 andrea
-                    "Do you really think that he will accept these random pills?"
-                    "Credi che accettera' di prendere delle pillole a caso?")
-                  (cons ;7 andrea
-                    "Maybe is better if we find something tasty to mix with these pills!"
-                    "Non e' meglio trovare qualcosa in cui mettere le pillole?")
-                  (cons ;8 andrea
-                    "More or less the same approach when you have to give pills to the cat . . ."
-                    "Tipo quando dai al gatto il medicinale . . . ")
-                  (cons ;9 andrea
-                    ". . . and you hide those pills in a delicious piece of meat!"
-                    ". . . e per farglielo mangiare lo mischi con le crocchette!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Hey, do you really want to give him the cocktail in this way?"    
+			"Scusa, ma vuoi veramente dargli il cocktail cosi?")   
+		(cons ;2 andrea
+			"Maybe is better if we find some kind of drugs to put in it so he will give us the key!"    
+			"Non e' meglio trovare un qualche tipo di droga da metterci dentro per farci dare la chiave?")   
+		(cons ;3 andrea
+			"Just to say . . ."    
+			"Cosi' eh . . .")   
+		(cons ;4 andrea
+			"I'm try to give you an idea of how this game works."    
+			"Giusto per darti un'idea di come funziona il gioco.")   
+		(cons ;5 andrea
+			"Hey, do you really want to give him the pills in this way?"    
+			"Scusa ma vuoi veramente dargli le pillole cosi?")   
+		(cons ;6 andrea
+			"Do you really think that he will accept these random pills?"    
+			"Credi che accettera' di prendere delle pillole a caso?")   
+		(cons ;7 andrea
+			"Maybe is better if we find something tasty to mix with these pills!"    
+			"Non e' meglio trovare qualcosa in cui mettere le pillole?")   
+		(cons ;8 andrea
+			"More or less the same approach when you have to give pills to the cat . . ."    
+			"Tipo quando dai al gatto il medicinale . . .")   
+		(cons ;9 andrea
+			". . . and you hide those pills in a delicious piece of meat!"    
+			". . . e per farglielo mangiare lo mischi con le crocchette!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

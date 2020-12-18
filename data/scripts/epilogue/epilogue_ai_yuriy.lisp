@@ -9,26 +9,26 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Ehy, what are you doing?"
-                    "Ehy, che state facendo?")
-                  (cons ;2 yuriy
-                    "I am drinshking to the enshd of the woooooooorld."
-                    "Io festesshio la fine del mooooooondo.")
-                  (cons ;3 andrea
-                    "You're drinking a lot, aren't you?"
-                    "Si beve eh?")
-                  (cons ;4 yuriy
-                    "I shamh!"
-                    "Shi!")
-                  (cons ;5 andrea
-                    "Good job!"
-                    "Ma che bravi!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Ehy, what are you doing?"    
+			"Ehy, che state facendo?")   
+		(cons ;2 yuriy
+			"I am drinshking to the enshd of the woooooooorld."    
+			"Io festesshio la fine del mooooooondo.")   
+		(cons ;3 andrea
+			"You're drinking a lot, aren't you?"    
+			"Si beve eh?")   
+		(cons ;4 yuriy
+			"I shamh!"    
+			"Shi!")   
+		(cons ;5 andrea
+			"Good job!"    
+			"Ma che bravi!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

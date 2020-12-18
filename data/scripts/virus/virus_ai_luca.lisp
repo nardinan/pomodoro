@@ -9,62 +9,62 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 luca
-                    "I can't take it anymore!"
-                    "Non ce la faccio piu', diosanto!")
-                  (cons ;2 andrea
-                    "What is happening? "
-                    "Che succede? ")
-                  (cons ;3 luca
-                    "Well, what is happening!"
-                    "Eh, che succede!")
-                  (cons ;4 andrea
-                    "So? "
-                    "Bhe? ")
-                  (cons ;5 luca
-                    "There's the fact that I want to finish this Nip&Tuck episode"
-                    "C'e' che vorrei finire di guardare Nip&Tuck")
-                  (cons ;6 luca
-                    "But all these blackout . . ."
-                    "Ma questi blackout continui blackout . . .")
-                  (cons ;7 andrea
-                    "See?"
-                    "Vedi?")
-                  (cons ;8 andrea
-                    "Considering the so poor service, we shouldn't even pay the electric bill! "
-                    "Considerando il servizio scadente che offrono, non dovremmo nemmeno pagare la bolletta!")
-                  (cons ;9 luca
-                    ". . ."
-                    ". . .")
-                  (cons ;10 luca
-                    "Figure out a way to find the money, otherwise I'll break your legs!"
-                    "Tu vedi di trovare i soldi altrimenti ti sego le gambe!")
-                  (cons ;11 andrea
-                    "Wait wait . . ."
-                    "Aspetta aspetta . . .")
-                  (cons ;12 andrea
-                    "Are you watching Nip & Tuck without me? "
-                    "Stai guardando Nip & Tuck senza di me?")
-                  (cons ;13 luca
-                    "Well only one episode . . ."
-                    "Ma giusto una puntata . . .")
-                  (cons ;14 luca
-                    "And apparently neither that! "
-                    "E a quanto pare nemmeno quella!")
-                  (cons ;15 andrea
-                    "You deserve it!"
-                    "Ben ti sta!")
-                  (cons ;16 andrea
-                    "Watching Nip & Tuck without me . . . "
-                    "Guardare Nip & Tuck senza di me . . . ")
-                  (cons ;17 luca
-                    "All these blackouts are making me so flippin' angry"
-                    "Questi blackouts continui mi fanno girare le palle in un modo clamoroso!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 luca
+			"I can't take it anymore!"    
+			"Non ce la faccio piu', diosanto!")   
+		(cons ;2 andrea
+			"What is happening?"    
+			"Che succede?")   
+		(cons ;3 luca
+			"Well, what is happening!"    
+			"Eh, che succede!")   
+		(cons ;4 andrea
+			"So?"    
+			"Bhe?")   
+		(cons ;5 luca
+			"There's the fact that I want to finish this Nip&Tuck episode"    
+			"C'e' che vorrei finire di guardare Nip&Tuck")   
+		(cons ;6 luca
+			"But all these blackout . . ."    
+			"Ma questi blackout continui blackout . . .")   
+		(cons ;7 andrea
+			"See?"    
+			"Vedi?")   
+		(cons ;8 andrea
+			"Considering the so poor service, we shouldn't even pay the electric bill!"    
+			"Considerando il servizio scadente che offrono, non dovremmo nemmeno pagare la bolletta!")   
+		(cons ;9 luca
+			". . ."    
+			". . .")   
+		(cons ;10 luca
+			"Figure out a way to find the money, otherwise I'll break your legs!"    
+			"Tu vedi di trovare i soldi altrimenti ti sego le gambe!")   
+		(cons ;11 andrea
+			"Wait wait . . ."    
+			"Aspetta aspetta . . .")   
+		(cons ;12 andrea
+			"Are you watching Nip & Tuck without me?"    
+			"Stai guardando Nip & Tuck senza di me?")   
+		(cons ;13 luca
+			"Well only one episode . . ."    
+			"Ma giusto una puntata . . .")   
+		(cons ;14 luca
+			"And apparently neither that!"    
+			"E a quanto pare nemmeno quella!")   
+		(cons ;15 andrea
+			"You deserve it!"    
+			"Ben ti sta!")   
+		(cons ;16 andrea
+			"Watching Nip & Tuck without me . . ."    
+			"Guardare Nip & Tuck senza di me . . .")   
+		(cons ;17 luca
+			"All these blackouts are making me so flippin' angry"    
+			"Questi blackouts continui mi fanno girare le palle in un modo clamoroso!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

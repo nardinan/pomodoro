@@ -9,23 +9,23 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Here you can go to Mania . . ."
-                    "Di qui si va al Mania . . .")
-                  (cons ;2 andrea
-                    ". . . a bar, popular for his prices: 1 Europer shot."
-                    ". . . locale famoso per i suoi shortini a 1 euro.")
-                  (cons ;3 andrea
-                    "Now it's 1 Euroand half per shot."
-                    "Ora costano 1 Euro e cinquanta.")
-                  (cons ;4 andrea
-                    "Is closed right now."
-                    "E' ancora chiuso.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Here you can go to Mania . . ."    
+			"Di qui si va al Mania . . .")   
+		(cons ;2 andrea
+			". . . a bar, popular for his prices: 1 Europer shot."    
+			". . . locale famoso per i suoi shortini a 1 euro.")   
+		(cons ;3 andrea
+			"Now it's 1 Euroand half per shot."    
+			"Ora costano 1 Euro e cinquanta.")   
+		(cons ;4 andrea
+			"Is closed right now."    
+			"E' ancora chiuso.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

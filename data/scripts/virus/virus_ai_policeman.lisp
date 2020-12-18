@@ -9,68 +9,68 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 policeman
-                    "Boy, are you contagious? "
-                    "Ragazzo, sei contagioso? ")
-                  (cons ;2 andrea
-                    "Only my laugh is contagious."
-                    "Solo le mie risate sono contagiose.")
-                  (cons ;3 andrea
-                    "Do you want to listen me laughing? "
-                    "Vuole sentirmi ridere?")
-                  (cons ;4 policeman
-                    "I don't find anything funny in this situation!"
-                    "Non ci trovo nulla di divertente in questa situazione!")
-                  (cons ;5 andrea
-                    "What situation? "
-                    "Quale situazione?")
-                  (cons ;6 policeman
-                    "There's a virus in the city . . ."
-                    "C'e' un virus in citta' . . .")
-                  (cons ;7 policeman
-                    "Something dangerous"
-                    "Qualcosa di pericoloso")
-                  (cons ;8 andrea
-                    "Don't worry!"
-                    "Ma stai tranquillo! ")
-                  (cons ;9 andrea
-                    "For sure it's something less dangerous than how it looks!"
-                    "Sicuramente e' meno pericoloso di quello che sembra!")
-                  (cons ;10 policeman
-                    "Well, I don't think so!"
-                    "Bhe, non credo!")
-                  (cons ;11 policeman
-                    "I would prefer to be home instead of being around . . "
-                    "Preferirei starmene a casa piuttosto che in giro . . .")
-                  (cons ;12 andrea
-                    "Who will protect the city?"
-                    "Chi proteggera' la citta'?")
-                  (cons ;13 policeman
-                    "I'm not the only policeman around!"
-                    "Mica sono l'unico poliziotto in giro!")
-                  (cons ;14 andrea
-                    "Fair enough!"
-                    "Mi sembra giusto!")
-                  (cons ;15 andrea
-                    "I am infeeeeeeeeecteeeeeeeeeed!"
-                    "Sono infeeeeeeeettoooooooooooo!")
-                  (cons ;16 policeman
-                    "AAAAAAAAAAAH!"
-                    "AAAAAAAAAAAH!")
-                  (cons ;17 policeman
-                    "Go away, you daemon!"
-                    "Pussa via, demonio!")
-                  (cons ;18 andrea
-                    "Ahahaha . . ."
-                    "Ahahaha . . .")
-                  (cons ;19 andrea
-                    ". . . I am so facetious."
-                    ". . . come sono faceto.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 policeman
+			"Boy, are you contagious?"    
+			"Ragazzo, sei contagioso?")   
+		(cons ;2 andrea
+			"Only my laugh is contagious."    
+			"Solo le mie risate sono contagiose.")   
+		(cons ;3 andrea
+			"Do you want to listen me laughing?"    
+			"Vuole sentirmi ridere?")   
+		(cons ;4 policeman
+			"I don't find anything funny in this situation!"    
+			"Non ci trovo nulla di divertente in questa situazione!")   
+		(cons ;5 andrea
+			"What situation?"    
+			"Quale situazione?")   
+		(cons ;6 policeman
+			"There's a virus in the city . . ."    
+			"C'e' un virus in citta' . . .")   
+		(cons ;7 policeman
+			"Something dangerous"    
+			"Qualcosa di pericoloso")   
+		(cons ;8 andrea
+			"Don't worry!"    
+			"Ma stai tranquillo!")   
+		(cons ;9 andrea
+			"For sure it's something less dangerous than how it looks!"    
+			"Sicuramente e' meno pericoloso di quello che sembra!")   
+		(cons ;10 policeman
+			"Well, I don't think so!"    
+			"Bhe, non credo!")   
+		(cons ;11 policeman
+			"I would prefer to be home instead of being around . ."    
+			"Preferirei starmene a casa piuttosto che in giro . . .")   
+		(cons ;12 andrea
+			"Who will protect the city?"    
+			"Chi proteggera' la citta'?")   
+		(cons ;13 policeman
+			"I'm not the only policeman around!"    
+			"Mica sono l'unico poliziotto in giro!")   
+		(cons ;14 andrea
+			"Fair enough!"    
+			"Mi sembra giusto!")   
+		(cons ;15 andrea
+			"I am infeeeeeeeeecteeeeeeeeeed!"    
+			"Sono infeeeeeeeettoooooooooooo!")   
+		(cons ;16 policeman
+			"AAAAAAAAAAAH!"    
+			"AAAAAAAAAAAH!")   
+		(cons ;17 policeman
+			"Go away, you daemon!"    
+			"Pussa via, demonio!")   
+		(cons ;18 andrea
+			"Ahahaha . . ."    
+			"Ahahaha . . .")   
+		(cons ;19 andrea
+			". . . I am so facetious."    
+			". . . come sono faceto.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

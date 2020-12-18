@@ -9,53 +9,53 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 yuriy
-                    "There is something fishy going on in the fabric of space and time"
-                    "Sembra ci sia un disturbo nel tessuto spazio-tempo")
-                  (cons ;2 andrii
-                    "Really? I told you about the fabric of space and time and you told me I was a dork!"
-                    "Oh certo, se lo dico io sono scemo, ma quando lo dici tu va bene!")
-                  (cons ;3 yuriy
-                    "You said something completely different"
-                    "Tu avevi detto una cosa completamente diversa")
-                  (cons ;4 andrii
-                    "Came on!"
-                    "Ma va!")
-                  (cons ;5 yuriy
-                    "The lady in green is following the same path since this morning"
-                    "La signora vestita di verde sta facendo lo stesso percorso da stamattina")
-                  (cons ;6 yuriy
-                    "We suspect she got stuck in a time loop"
-                    "Crediamo sia bloccata in un loop temporale")
-                  (cons ;7 andrea
-                    "I . . ."
-                    "Io . . .")
-                  (cons ;8 andrea
-                    "I am not sure exactly what that means."
-                    "Io non credo di aver capito.")
-                  (cons ;9 andrea
-                    "Do you have some spare change, sir?"
-                    "Non e' che avete qualche euro?")
-                  (cons ;10 andrii
-                    "Yuriy"
-                    "Yuriy")
-                  (cons ;11 andrii
-                    "The disturbance in the Chronon particle is moving"
-                    "Il disturbo nelle particelle Chronon si sta spostando")
-                  (cons ;12 yuriy
-                    "Let's go then!"
-                    "Andiamo!")
-                  (cons ;13 andrea
-                    "Even two Euros would be great . . ."
-                    "Anche due Eurovanno bene . . .")
-                  (cons ;14 andrea
-                    "I have to pay the electric bill, you know . . ."
-                    "Sto cercando di pagare una bolletta, sapete . . .")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 yuriy
+			"There is something fishy going on in the fabric of space and time"    
+			"Sembra ci sia un disturbo nel tessuto spazio-tempo")   
+		(cons ;2 andrii
+			"Really? I told you about the fabric of space and time and you told me I was a dork!"    
+			"Oh certo, se lo dico io sono scemo, ma quando lo dici tu va bene!")   
+		(cons ;3 yuriy
+			"You said something completely different"    
+			"Tu avevi detto una cosa completamente diversa")   
+		(cons ;4 andrii
+			"Came on!"    
+			"Ma va!")   
+		(cons ;5 yuriy
+			"The lady in green is following the same path since this morning"    
+			"La signora vestita di verde sta facendo lo stesso percorso da stamattina")   
+		(cons ;6 yuriy
+			"We suspect she got stuck in a time loop"    
+			"Crediamo sia bloccata in un loop temporale")   
+		(cons ;7 andrea
+			"I . . ."    
+			"Io . . .")   
+		(cons ;8 andrea
+			"I am not sure exactly what that means."    
+			"Io non credo di aver capito.")   
+		(cons ;9 andrea
+			"Do you have some spare change, sir?"    
+			"Non e' che avete qualche euro?")   
+		(cons ;10 andrii
+			"Yuriy"    
+			"Yuriy")   
+		(cons ;11 andrii
+			"The disturbance in the Chronon particle is moving"    
+			"Il disturbo nelle particelle Chronon si sta spostando")   
+		(cons ;12 yuriy
+			"Let's go then!"    
+			"Andiamo!")   
+		(cons ;13 andrea
+			"Even two Euros would be great . . ."    
+			"Anche due Eurovanno bene . . .")   
+		(cons ;14 andrea
+			"I have to pay the electric bill, you know . . ."    
+			"Sto cercando di pagare una bolletta, sapete . . .")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

@@ -9,20 +9,20 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Excuse me, what time is it?"
-                    "Scusi, mi sa dire l'ora?")
-                  (cons ;2 jamal
-                    "Leave me alone, junkie!"
-                    "Mi lasci in pace, drogato!")
-                  (cons ;3 andrea
-                    "Nice guy!"
-                    "Che tipo!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Excuse me, what time is it?"    
+			"Scusi, mi sa dire l'ora?")   
+		(cons ;2 jamal
+			"Leave me alone, junkie!"    
+			"Mi lasci in pace, drogato!")   
+		(cons ;3 andrea
+			"Nice guy!"    
+			"Che tipo!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

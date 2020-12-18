@@ -9,71 +9,71 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Bruno!"
-                    "Bruno!")
-                  (cons ;2 andrea
-                    "Are you feeling any better?"
-                    "Ti senti meglio?")
-                  (cons ;3 andrea
-                    "How was the doctor visit?"
-                    "Sei stato dal dottore?")
-                  (cons ;4 bruno
-                    "I am not sick."
-                    "Io non sono malato.")
-                  (cons ;5 bruno
-                    "And I want to say something . . ."
-                    "E vorrei dire una cosa . . .")
-                  (cons ;6 andrea
-                    "Sure!"
-                    "Si?")
-                  (cons ;7 bruno
-                    ". . . the fact that you spend so much time here in the department is annoying me."
-                    ". . . il fatto che passi cosi' tanto spesso per il dipartimento inizia a darmi fastidio.")
-                  (cons ;8 bruno
-                    "You should go home and wait for the whole thing to be over."
-                    "Perche' non te ne torni a casa e aspetti che tutto sia finito?")
-                  (cons ;9 andrea
-                    "Ehm . . ."
-                    "Ehm . . .")
-                  (cons ;10 andrea
-                    "I beg your pardon?"
-                    "Prego?")
-                  (cons ;11 bruno
-                    "I said - - protect.bin[66]: segfault at 84ff98 error 7"
-                    "Ho detto - protect.bin[66]: segfault at 84ff98 error 7")
-                  (cons ;12 bruno
-                    ". . . and wait for the whole thing to be over."
-                    ". . . e aspetti che sia tutto finito?")
-                  (cons ;13 andrea
-                    "Brunetto, you are scaring me."
-                    "Brunetto, mi metti un po' di paura cosi'.")
-                  (cons ;14 andrea
-                    "What do I have to wait?"
-                    "Cosa devo aspettare?")
-                  (cons ;15 bruno
-                    "I am giving you a friendly advice."
-                    "Ti sto dando un consiglio da amico.")
-                  (cons ;16 bruno
-                    "Just disappear if you don't want me to - threat.bin[45]: segfault at 82ff1a error 6"
-                    "Vedi di sparire se non - threat.bin[45]: segfault at 82ff1a error 6")
-                  (cons ;17 andrea
-                    "You are really aggressive."
-                    "Sei troppo aggressivo.")
-                  (cons ;18 andrea
-                    "Where is Marta?"
-                    "Dov'e' Marta?")
-                  (cons ;19 bruno
-                    "You have to go."
-                    "Sparisci.")
-                  (cons ;20 bruno
-                    "<connection cannot be estabilished 0xffa231>"
-                    "<connection cannot be estabilished 0xffa231>")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Bruno!"    
+			"Bruno!")   
+		(cons ;2 andrea
+			"Are you feeling any better?"    
+			"Ti senti meglio?")   
+		(cons ;3 andrea
+			"How was the doctor visit?"    
+			"Sei stato dal dottore?")   
+		(cons ;4 bruno
+			"I am not sick."    
+			"Io non sono malato.")   
+		(cons ;5 bruno
+			"And I want to say something . . ."    
+			"E vorrei dire una cosa . . .")   
+		(cons ;6 andrea
+			"Sure!"    
+			"Si?")   
+		(cons ;7 bruno
+			". . . the fact that you spend so much time here in the department is annoying me."    
+			". . . il fatto che passi cosi' tanto spesso per il dipartimento inizia a darmi fastidio.")   
+		(cons ;8 bruno
+			"You should go home and wait for the whole thing to be over."    
+			"Perche' non te ne torni a casa e aspetti che tutto sia finito?")   
+		(cons ;9 andrea
+			"Ehm . . ."    
+			"Ehm . . .")   
+		(cons ;10 andrea
+			"I beg your pardon?"    
+			"Prego?")   
+		(cons ;11 bruno
+			"I said - - protect.bin[66]: segfault at 84ff98 error 7"    
+			"Ho detto - protect.bin[66]: segfault at 84ff98 error 7")   
+		(cons ;12 bruno
+			". . . and wait for the whole thing to be over."    
+			". . . e aspetti che sia tutto finito?")   
+		(cons ;13 andrea
+			"Brunetto, you are scaring me."    
+			"Brunetto, mi metti un po' di paura cosi'.")   
+		(cons ;14 andrea
+			"What do I have to wait?"    
+			"Cosa devo aspettare?")   
+		(cons ;15 bruno
+			"I am giving you a friendly advice."    
+			"Ti sto dando un consiglio da amico.")   
+		(cons ;16 bruno
+			"Just disappear if you don't want me to - threat.bin[45]: segfault at 82ff1a error 6"    
+			"Vedi di sparire se non - threat.bin[45]: segfault at 82ff1a error 6")   
+		(cons ;17 andrea
+			"You are really aggressive."    
+			"Sei troppo aggressivo.")   
+		(cons ;18 andrea
+			"Where is Marta?"    
+			"Dov'e' Marta?")   
+		(cons ;19 bruno
+			"You have to go."    
+			"Sparisci.")   
+		(cons ;20 bruno
+			"<connection cannot be estabilished 0xffa231>"    
+			"<connection cannot be estabilished 0xffa231>")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

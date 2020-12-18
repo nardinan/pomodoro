@@ -9,26 +9,26 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Ehy, what are you doing?"
-                    "Ehy, che state facendo?")
-                  (cons ;2 caprini
-                    "I don't know."
-                    "Guarda non lo so.")
-                  (cons ;3 caprini
-                    "The tall guy is buying me a lots of drinks."
-                    "Quello alto non ha smesso di offrire da bere da quando e' arrivato.")
-                  (cons ;4 caprini
-                    "I am drinking."
-                    "Io bevo.")
-                  (cons ;5 andrea
-                    "Amazing!"
-                    "Daje!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Ehy, what are you doing?"    
+			"Ehy, che state facendo?")   
+		(cons ;2 caprini
+			"I don't know."    
+			"Guarda non lo so.")   
+		(cons ;3 caprini
+			"The tall guy is buying me a lots of drinks."    
+			"Quello alto non ha smesso di offrire da bere da quando e' arrivato.")   
+		(cons ;4 caprini
+			"I am drinking."    
+			"Io bevo.")   
+		(cons ;5 andrea
+			"Amazing!"    
+			"Daje!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

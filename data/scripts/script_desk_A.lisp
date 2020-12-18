@@ -9,86 +9,86 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "My Mac . . ."
-                    "Il mio Mac . . .")
-                  (cons ;2 andrea
-                    "This is a fantastic computer!"
-                    "Questo si che e' un computer!")
-                  (cons ;3 andrea
-                    "With a fantastic operating system!"
-                    "Questo si che e' un sistema operativo!")
-                  (cons ;4 andrea
-                    "I would like to download 'I Soliti Idioti' for the Pallotta's ticket inspector!"
-                    "Mi piacerebbe mettere a scaricare il film de 'I Soliti Idioti' per il controllore della Pallotta!")
-                  (cons ;5 andrea
-                    "Unfortunately this kind of operation requires an Internet connection."
-                    "Sfortunatamente questo genere di cose richiede una connessione ad Internet.")
-                  (cons ;6 andrea
-                    "A Internet connection that I don't have, because of my poverty."
-                    "Connessione che non ho, per via della mia poverta'.")
-                  (cons ;7 andrea
-                    "A bad condition that is part of my life."
-                    "Una condizione straziante, parte della mia vita.")
-                  (cons ;8 andrea
-                    "Finally I have an Internet connection."
-                    "Finalmente ho internet!")
-                  (cons ;9 andrea
-                    "Really?"
-                    "Ma che, davvero?")
-                  (cons ;10 andrea
-                    "What year is this?"
-                    "Ma in che anno siamo?")
-                  (cons ;11 andrea
-                    "Diomatonne . . ."
-                    "Diomatonne pero' . . .")
-                  (cons ;12 andrea
-                    "Done!"
-                    "Fatto!")
-                  (cons ;13 andrea
-                    "Now, let me search for Torrent of the movie . . ."
-                    "Cerchiamo il Torrent del film . . .")
-                  (cons ;14 andrea
-                    "Here it is!"
-                    "Eccolo!")
-                  (cons ;15 andrea
-                    "So many feeds, the download will take just few minutes."
-                    "Ci sono cosi' tanti seeds che finira' in pochissimo tempo.")
-                  (cons ;16 andrea
-                    "And this is very, very sad, due to the nature of this movie."
-                    "Il che e' veramente triste, considerando il genere di film.")
-                  (cons ;17 andrea
-                    "10%"
-                    "10%")
-                  (cons ;18 andrea
-                    "40%"
-                    "40%")
-                  (cons ;19 andrea
-                    "80%"
-                    "80%")
-                  (cons ;20 andrea
-                    "Aaaaaand . . ."
-                    "Eeeeeeee . . .")
-                  (cons ;21 andrea
-                    "Done!"
-                    "Fatto!")
-                  (cons ;22 andrea
-                    "Let me copy it on my USB key . . ."
-                    "Lo copio su chiavetta . . .")
-                  (cons ;23 andrea
-                    "Done!"
-                    "Fatto!")
-                  (cons ;24
-                    "However . . ."
-                    "Comunque . . .")
-                  (cons ;25 andrea
-                    ". . . there is no point in download the movie without the USB key!"
-                    ". . . non c'e' ragione di scaricare il film senza una chiavetta USB!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"My Mac . . ."    
+			"Il mio Mac . . .")   
+		(cons ;2 andrea
+			"This is a fantastic computer!"    
+			"Questo si che e' un computer!")   
+		(cons ;3 andrea
+			"With a fantastic operating system!"    
+			"Questo si che e' un sistema operativo!")   
+		(cons ;4 andrea
+			"I would like to download 'I Soliti Idioti' for the Pallotta's ticket inspector!"    
+			"Mi piacerebbe mettere a scaricare il film de 'I Soliti Idioti' per il controllore della Pallotta!")   
+		(cons ;5 andrea
+			"Unfortunately this kind of operation requires an Internet connection."    
+			"Sfortunatamente questo genere di cose richiede una connessione ad Internet.")   
+		(cons ;6 andrea
+			"A Internet connection that I don't have, because of my poverty."    
+			"Connessione che non ho, per via della mia poverta'.")   
+		(cons ;7 andrea
+			"A bad condition that is part of my life."    
+			"Una condizione straziante, parte della mia vita.")   
+		(cons ;8 andrea
+			"Finally I have an Internet connection."    
+			"Finalmente ho internet!")   
+		(cons ;9 andrea
+			"Really?"    
+			"Ma che, davvero?")   
+		(cons ;10 andrea
+			"What year is this?"    
+			"Ma in che anno siamo?")   
+		(cons ;11 andrea
+			"Diomatonne . . ."    
+			"Diomatonne pero' . . .")   
+		(cons ;12 andrea
+			"Done!"    
+			"Fatto!")   
+		(cons ;13 andrea
+			"Now, let me search for Torrent of the movie . . ."    
+			"Cerchiamo il Torrent del film . . .")   
+		(cons ;14 andrea
+			"Here it is!"    
+			"Eccolo!")   
+		(cons ;15 andrea
+			"So many feeds, the download will take just few minutes."    
+			"Ci sono cosi' tanti seeds che finira' in pochissimo tempo.")   
+		(cons ;16 andrea
+			"And this is very, very sad, due to the nature of this movie."    
+			"Il che e' veramente triste, considerando il genere di film.")   
+		(cons ;17 andrea
+			"10%"    
+			"10%")   
+		(cons ;18 andrea
+			"40%"    
+			"40%")   
+		(cons ;19 andrea
+			"80%"    
+			"80%")   
+		(cons ;20 andrea
+			"Aaaaaand . . ."    
+			"Eeeeeeee . . .")   
+		(cons ;21 andrea
+			"Done!"    
+			"Fatto!")   
+		(cons ;22 andrea
+			"Let me copy it on my USB key . . ."    
+			"Lo copio su chiavetta . . .")   
+		(cons ;23 andrea
+			"Done!"    
+			"Fatto!")   
+		(cons ;24 
+			"However . . ."    
+			"Comunque . . .")   
+		(cons ;25 andrea
+			". . . there is no point in download the movie without the USB key!"    
+			". . . non c'e' ragione di scaricare il film senza una chiavetta USB!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

@@ -4,101 +4,101 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 PD
-                    "With the aim at passing the Artificial Intelligence test"
-                    "Nell'intento di passare l'esame di intelligenza artificiale")
-                  (cons ;2 PD
-                    "I was there, writing an algorithm in ML to beat"
-                    "ero li, a scrivere in ML un algoritmo per battere")
-                  (cons ;3 PD
-                    "the professor at 'connect four'"
-                    "il professore a forza quattro")
-                  (cons ;4 PD
-                    "But nothing, it was not working"
-                    "Ma niente, non funzionava")
-                  (cons ;5 PD
-                    "So I decided to take a cue from Pinterest!"
-                    "Cosi' ho deciso di prendere qualche spunto da Pinterest!")
-                  (cons ;6 PD
-                    "Among all the articles, I found a very interesting one"
-                    "Tra tutti gli articoli, ne ho trovato uno veramente interessante")
-                  (cons ;7 PD
-                    "The article, step by step, explained how to remove"
-                    "L'articolo, passo dopo passo, spiegava come rimuovere")
-                  (cons ;8 PD
-                    "a human brain in safety"
-                    "un cervello umano in tutta sicurezza")
-                  (cons ;9 PD
-                    "At that point I thought: why don't use a human brain"
-                    "A quel punto ho pensato: perche' non usare un cervello umano")
-                  (cons ;10 PD
-                    "to beat the professor and pass the test?"
-                    "per battere il professore e passare l'esame?")
-                  (cons ;11 PD
-                    "The plan was ther, but the guinea pig was still missing ... "
-                    "Il piano era li, ma mancava la vittima sacrificale ...")
-                  (cons ;12 PD
-                    "... The brain was not there!"
-                    "... mancava il cervello!")
-                  (cons ;13 PD
-                    "So I took advantage of the only available person"
-                    "Cosi' ho approfittato dell'unica persona disponibile")
-                  (cons ;14 PD
-                    "at that moment ..."
-                    "in quel momento ...")
-                  (cons ;15 PD
-                    "Bruno!"
-                    "Bruno!")
-                  (cons ;16 PD
-                    "A small hit to the head and, as the French say:"
-                    "Un lieve colpo alla testa e, come dicono i francesi:")
-                  (cons ;17 PD
-                    "Le Jeux sont faits!"
-                    "Le Jeux sont faits!")
-                  (cons ;18 PD
-                    "Following carefully the instruction I opened his head ..."
-                    "Seguendo con attenzione le istruzioni ho aperto la sua testa ...")
-                  (cons ;19 PD
-                    "... and I removed the brain"
-                    "... e ho estratto il cervello")
-                  (cons ;20 PD
-                    "However I could not risk to start a murder investigation, "
-                    "Non potevo pero' rischiare di far partire un indagine per omicidio,")
-                  (cons ;21 PD
-                    "so I had to put back Bruno on the road!"
-                    "cosi' dovevo rimettere Bruno in circolazione!")
-                  (cons ;22 PD
-                    "I quickly wrote an Artificial Intelligence in order to simulate"
-                    "Ho velocemente scritto un'intelligenza artificiale che simulasse il")
-                  (cons ;23 PD
-                    "Bruno's behavior"
-                    "comportamento di Bruno")
-                  (cons ;24 PD
-                    "And I installed it!"
-                    "E l'ho installata!")
-                  (cons ;25 PD
-                    "But my fill of brains was still up and running ..."
-                    "Ma la mia sete di cervelli non si si e' spenta ...")
-                  (cons ;26 PD
-                    "... even more ...."
-                    "... anzi ...")
-                  (cons ;27 PD
-                    "So, I ordered Bruno to bring here as much people as he can and,"
-                    "Cosi' ho ordinato a Bruno di recuperare tutte le persone possibili e,")
-                  (cons ;28 PD
-                    "with his help and the help of the fake ads that I attached around the city"
-                    "con il suo aiuto e quello dei finiti annunci sparsi per la citta'")
-                  (cons ;29 PD
-                    "I am becoming a supercomputer!"
-                    "sto diventando un super computer!")
-                  (cons ;30 PD
-                    "My goal: conquer the world"
-                    "Il mio obiettivo: conquistare il mondo!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 PD
+			"With the aim at passing the Artificial Intelligence test"    
+			"Nell'intento di passare l'esame di intelligenza artificiale")   
+		(cons ;2 PD
+			"I was there, writing an algorithm in ML to beat"    
+			"ero li, a scrivere in ML un algoritmo per battere")   
+		(cons ;3 PD
+			"the professor at 'connect four'"    
+			"il professore a forza quattro")   
+		(cons ;4 PD
+			"But nothing, it was not working"    
+			"Ma niente, non funzionava")   
+		(cons ;5 PD
+			"So I decided to take a cue from Pinterest!"    
+			"Cosi' ho deciso di prendere qualche spunto da Pinterest!")   
+		(cons ;6 PD
+			"Among all the articles, I found a very interesting one"    
+			"Tra tutti gli articoli, ne ho trovato uno veramente interessante")   
+		(cons ;7 PD
+			"The article, step by step, explained how to remove"    
+			"L'articolo, passo dopo passo, spiegava come rimuovere")   
+		(cons ;8 PD
+			"a human brain in safety"    
+			"un cervello umano in tutta sicurezza")   
+		(cons ;9 PD
+			"At that point I thought: why don't use a human brain"    
+			"A quel punto ho pensato: perche' non usare un cervello umano")   
+		(cons ;10 PD
+			"to beat the professor and pass the test?"    
+			"per battere il professore e passare l'esame?")   
+		(cons ;11 PD
+			"The plan was ther, but the guinea pig was still missing ..."    
+			"Il piano era li, ma mancava la vittima sacrificale ...")   
+		(cons ;12 PD
+			"... The brain was not there!"    
+			"... mancava il cervello!")   
+		(cons ;13 PD
+			"So I took advantage of the only available person"    
+			"Cosi' ho approfittato dell'unica persona disponibile")   
+		(cons ;14 PD
+			"at that moment ..."    
+			"in quel momento ...")   
+		(cons ;15 PD
+			"Bruno!"    
+			"Bruno!")   
+		(cons ;16 PD
+			"A small hit to the head and, as the French say:"    
+			"Un lieve colpo alla testa e, come dicono i francesi:")   
+		(cons ;17 PD
+			"Le Jeux sont faits!"    
+			"Le Jeux sont faits!")   
+		(cons ;18 PD
+			"Following carefully the instruction I opened his head ..."    
+			"Seguendo con attenzione le istruzioni ho aperto la sua testa ...")   
+		(cons ;19 PD
+			"... and I removed the brain"    
+			"... e ho estratto il cervello")   
+		(cons ;20 PD
+			"However I could not risk to start a murder investigation,"    
+			"Non potevo pero' rischiare di far partire un indagine per omicidio,")   
+		(cons ;21 PD
+			"so I had to put back Bruno on the road!"    
+			"cosi' dovevo rimettere Bruno in circolazione!")   
+		(cons ;22 PD
+			"I quickly wrote an Artificial Intelligence in order to simulate"    
+			"Ho velocemente scritto un'intelligenza artificiale che simulasse il")   
+		(cons ;23 PD
+			"Bruno's behavior"    
+			"comportamento di Bruno")   
+		(cons ;24 PD
+			"And I installed it!"    
+			"E l'ho installata!")   
+		(cons ;25 PD
+			"But my fill of brains was still up and running ..."    
+			"Ma la mia sete di cervelli non si si e' spenta ...")   
+		(cons ;26 PD
+			"... even more ...."    
+			"... anzi ...")   
+		(cons ;27 PD
+			"So, I ordered Bruno to bring here as much people as he can and,"    
+			"Cosi' ho ordinato a Bruno di recuperare tutte le persone possibili e,")   
+		(cons ;28 PD
+			"with his help and the help of the fake ads that I attached around the city"    
+			"con il suo aiuto e quello dei finiti annunci sparsi per la citta'")   
+		(cons ;29 PD
+			"I am becoming a supercomputer!"    
+			"sto diventando un super computer!")   
+		(cons ;30 PD
+			"My goal: conquer the world"    
+			"Il mio obiettivo: conquistare il mondo!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: subtitle <effect name> <line> <string>

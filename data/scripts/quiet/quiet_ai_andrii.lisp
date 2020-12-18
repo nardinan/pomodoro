@@ -9,26 +9,26 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrii
-                    "I can't be talking to you!"
-                    "Io e te non possiamo parlare!")
-                  (cons ;2 andrea
-                    "Excuse me?"
-                    "Come, scusa?")
-                  (cons ;3 andrii
-                    "We'll meet in the future and I don't want to generate any paradox."
-                    "Ci conosceremo in futuro, e non voglio generare un paradosso.")
-                  (cons ;4 andrea
-                    "Makes sense."
-                    "Ha senso.")
-                  (cons ;5 andrea
-                    "I should not push . . ."
-                    "Meglio non insistere . . .")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrii
+			"I can't be talking to you!"    
+			"Io e te non possiamo parlare!")   
+		(cons ;2 andrea
+			"Excuse me?"    
+			"Come, scusa?")   
+		(cons ;3 andrii
+			"We'll meet in the future and I don't want to generate any paradox."    
+			"Ci conosceremo in futuro, e non voglio generare un paradosso.")   
+		(cons ;4 andrea
+			"Makes sense."    
+			"Ha senso.")   
+		(cons ;5 andrea
+			"I should not push . . ."    
+			"Meglio non insistere . . .")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

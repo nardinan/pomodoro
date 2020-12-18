@@ -9,20 +9,20 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 technician
-                    "Oh god . . ."
-                    "Oddio . . .")
-                  (cons ;2 technician
-                    ". . . what did you put inside that . . ."
-                    ". . . ma che c'era in quel . . .")
-                  (cons ;3 technician
-                    ". . . COCKTAIL."
-                    ". . . COCKTAIL.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 technician
+			"Oh god . . ."    
+			"Oddio . . .")   
+		(cons ;2 technician
+			". . . what did you put inside that . . ."    
+			". . . ma che c'era in quel . . .")   
+		(cons ;3 technician
+			". . . COCKTAIL."    
+			". . . COCKTAIL.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

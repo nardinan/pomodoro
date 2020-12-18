@@ -9,20 +9,20 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Now that I've these pills and this Mojito, I can prepare my potion!"
-                    "Ora che ho questo Mojito e le pillole, posso prepare la mia pozione!")
-                  (cons ;2 andrea
-                    "AH AH AH!"
-                    "AH AH AH!")
-                  (cons ;3 andrea
-                    "It's ready!"
-                    "Fatto!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Now that I've these pills and this Mojito, I can prepare my potion!"    
+			"Ora che ho questo Mojito e le pillole, posso prepare la mia pozione!")   
+		(cons ;2 andrea
+			"AH AH AH!"    
+			"AH AH AH!")   
+		(cons ;3 andrea
+			"It's ready!"    
+			"Fatto!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

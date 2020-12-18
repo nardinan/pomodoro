@@ -9,23 +9,23 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 bruno
-                    "Upload application SLAVE.bin from the remote central node - the unit is offline: please wait."
-                    "Upload applicazione SLAVE.bin in corso dal nodo centrale - unita' offline: attendere prego.")
-                  (cons ;2 andrea
-                    "Good, load it!"
-                    "Bravo, carica carica!")
-                  (cons ;3 bruno
-                    "Connection lost - the unit is offline"
-                    "Connessione persa - unita' offline")
-                  (cons ;4 andrea
-                    "Cool"
-                    "Cool")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 bruno
+			"Upload application SLAVE.bin from the remote central node - the unit is offline: please wait."    
+			"Upload applicazione SLAVE.bin in corso dal nodo centrale - unita' offline: attendere prego.")   
+		(cons ;2 andrea
+			"Good, load it!"    
+			"Bravo, carica carica!")   
+		(cons ;3 bruno
+			"Connection lost - the unit is offline"    
+			"Connessione persa - unita' offline")   
+		(cons ;4 andrea
+			"Cool"    
+			"Cool")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>
