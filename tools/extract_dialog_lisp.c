@@ -63,7 +63,8 @@ int f_injector_string(const char *file) {
     e_scoped_extract_NULL
   } current_extraction;
   FILE *input_stream = fopen(file, "r"), *old_input_stream, *new_input_stream;
-  char buffer[MAXLEN], *text_block[e_scoped_extract_NULL], *current_pointer, *previous_pointer, selected_file[MAXLEN] = {0}, temporary_file[MAXLEN];
+  char buffer[MAXLEN], internal_buffer[MAXLEN], *text_block[e_scoped_extract_NULL], *current_pointer, *previous_pointer, selected_file[MAXLEN] = {0}, 
+       temporary_file[MAXLEN];
   unsigned int container_index = 0;
   int ignore_content = 0;
   if (input_stream) {
@@ -91,8 +92,7 @@ int f_injector_string(const char *file) {
             if ((current_pointer = strchr(current_pointer, '|'))) {
               *current_pointer = 0;
               ++current_pointer;
-            } else
-              break;
+            }
           } else 
             break;
         }
@@ -101,9 +101,9 @@ int f_injector_string(const char *file) {
           if ((old_input_stream = fopen(selected_file, "r")) && (new_input_stream = fopen(temporary_file, "w"))) {
             ignore_content = 0;
             while (!feof(old_input_stream)) {
-              memset(buffer, 0, MAXLEN);
-              if (fgets(buffer, MAXLEN, old_input_stream)) {
-                if (strstr(buffer, "(define dialogs (list")) {
+              memset(internal_buffer, 0, MAXLEN);
+              if (fgets(internal_buffer, MAXLEN, old_input_stream)) {
+                if (strstr(internal_buffer, "(define dialogs (list")) {
                   ignore_content = 1;
                   fprintf(new_input_stream, "(define dialogs (list\n");
                   for (unsigned int index = 0; index < container_index; ++index) {
@@ -115,16 +115,16 @@ int f_injector_string(const char *file) {
                   fprintf(new_input_stream, "\t\t))\n");
                 }
                 if (!ignore_content) {
-                  fprintf(new_input_stream, "%s", buffer);
+                  fprintf(new_input_stream, "%s", internal_buffer);
                 }
-                if (strstr(buffer, "))")) {
+                if (strstr(internal_buffer, "))")) {
                   ignore_content = 0;
                 }
               }
             }
             fclose(old_input_stream);
             fclose(new_input_stream);
-            printf("updating file %s\n", selected_file);
+            printf("file updated: %s\n", selected_file);
             rename(temporary_file, selected_file);
           }
           container_index = 0;
