@@ -9,362 +9,362 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Valerio?"
-                    "Valerio?")
-                  (cons ;2 andrea
-                    "Valerio?"
-                    "Valerio?")
-                  (cons ;3 andrea
-                    "There is nobody here . . ."
-                    "Qui non c'e' proprio nessuno . . .")
-                  (cons ;4 andrea
-                    ". . . except for those brains and that computer with a giant face."
-                    ". . . a parte questi cervelli e quel computer con la facciona.")
-                  (cons ;5 valerio
-                    "*beeep*"
-                    "*beeep*")
-                  (cons ;6 andrea
-                    "That beepping computer."
-                    "Quel computer che bippa.")
-                  (cons ;7 andrea
-                    "Does 'beepping' exists as word?"
-                    "Ma 'bippa' esiste come parola?")
-                  (cons ;8 valerio
-                    "No."
-                    "No.")
-                  (cons ;9 andrea
-                    "No?"
-                    "No?")
-                  (cons ;10 valerio
-                    "No."
-                    "No.")
-                  (cons ;11 andrea
-                    "That voice sounds familiar."
-                    "Questa voce mi sembra familiare.")
-                  (cons ;12 valerio
-                    "It's me!"
-                    "Sono io!")
-                  (cons ;13 valerio
-                    "Valerio!"
-                    "Valerio!")
-                  (cons ;14 andrea
-                    ". . ."
-                    ". . .")
-                  (cons ;15 valerio
-                    "I was waiting for you, Andrea!"
-                    "Ti stavo aspettando, Andrea!")
-                  (cons ;16 andrea
-                    "I . . ."
-                    "Io . . .")
-                  (cons ;17 andrea
-                    "I am still shook up about this thing. "
-                    "Io credo d'essere ancora traumatizzato da questa cosa.")
-                  (cons ;18 andrea
-                    "What's become of you?"
-                    "Cosa sei diventato?")
-                  (cons ;19 andrea
-                    "A software?"
-                    "Un programma?")
-                  (cons ;20 andrea
-                    "A computer?"
-                    "Un computer?")
-                  (cons ;21 andrea
-                    "An operating system?"
-                    "Un sistema operativo?")
-                  (cons ;22 valerio
-                    "As you can clearly see, I am a computer . . ."
-                    "Come puoi ben vedere, sono un computer . . .")
-                  (cons ;23 valerio
-                    "A computer connected to dozens and dozens of brains!"
-                    "Un computer connesso a decine e decine di cervelli!")
-                  (cons ;24 valerio
-                    "I am a super intelligent unit!"
-                    "Sono un'entita' superintelligente!")
-                  (cons ;25 valerio
-                    "Do you know Portal's GlaDOS?"
-                    "Hai presente GlaDOS di Portal?")
-                  (cons ;26 andrea
-                    "Yes?"
-                    "Si?")
-                  (cons ;27 valerio
-                    "GlaDOS is nothing compared to me!"
-                    "GlaDOS mi spiccia casa!")
-                  (cons ;28 andrea
-                    "GlaDOS was charming."
-                    "GlaDOS era piu' affascinante.")
-                  (cons ;29 valerio
-                    "I am charming."
-                    "Io sono affascinante.")
-                  (cons ;30 andrea
-                    "Mah."
-                    "Mah.")
-                  (cons ;31 valerio
-                    "Let me explain you . . ."
-                    "Lascia che ti spieghi . . .")
-                  (cons ;32 andrea
-                    "Ehm . . ."
-                    "Ehm . . .")
-                  (cons ;33 andrea
-                    ". . ."
-                    ". . .")
-                  (cons ;34 andrea
-                    "I am sorry, I have a question."
-                    "Scusami tanto avrei una domanda.")
-                  (cons ;35 andrea
-                    "You are a computer, aren't you?"
-                    "Sei un computer, giusto?")
-                  (cons ;36 valerio
-                    "Correct."
-                    "Esatto.")
-                  (cons ;37 andrea
-                    "Well . . ."
-                    "Ma . . .")
-                  (cons ;38 andrea
-                    "Uhm."
-                    "Uhm.")
-                  (cons ;39 andrea
-                    "Ho can you dominate the world?"
-                    "Come farai a conquistare il mondo?")
-                  (cons ;40 valerio
-                    "Good question!"
-                    "Giusta domanda!")
-                  (cons ;41 valerio
-                    "Do you know about Solaris?"
-                    "Hai presente il Solaris?")
-                  (cons ;42 andrea
-                    "The virus?"
-                    "Il virus?")
-                  (cons ;43 valerio
-                    "How sweet you are, so clueless . . ."
-                    "Che dolce che sei, ignaro di tutto . . .")
-                  (cons ;44 valerio
-                    "Solaris it's just a name that I randomly picked up from the book written by Mel Brooks' son and called 'The Zombie Survival Guide'."
-                    "Solaris e' solo un nome che ho preso in prestito da un libro scritto dal figlio di Mel Brooks e intitolato 'The Zombie Survival Guide'.")
-                  (cons ;45 andrea
-                    "I don't know that book."
-                    "Non conosco quel libro.")
-                  (cons ;46 valerio
-                    "That's the reason why I used that name that, in the book, is the name of a deadly virus that transforms people into Zombies!"
-                    "Proprio questa e' la ragione per cui ho scelto quel nome che, nel libro, viene usato come nome del mortale virus che trasforma le persone in Zombie!")
-                  (cons ;47 andrea
-                    "Honestly . . ."
-                    "Sinceramente . . .")
-                  (cons ;48 andrea
-                    ". . .  I thought I'd get some better stuff."
-                    ". . . mi aspettavo qualcosa di piu' subdolo e intrigante.")
-                  (cons ;49 valerio
-                    "In our world Solaris is the name that I gave to my Artificial Intelligence that controls all the people whose brains I removed."
-                    "In realta' Solaris e' il nome dell'intelligenza artificiale che ho scritto e che controlla tutte le persone a cui ho rimosso il cervello.")
-                  (cons ;50 andrea
-                    "That Artificial Intelligence sucks."
-                    "Questa intelligenza artificiale fa veramente schifo.")
-                  (cons ;51 andrea
-                    "Crash continously and is extremely unstable."
-                    "Crasha in continuazione ed e' instabile.")
-                  (cons ;52 andrea
-                    "Well, I wrote it in a rush."
-                    "Va beh, l'ho scritto di corsa.")
-                  (cons ;53 andrea
-                    "I'll make it better lately."
-                    "Piano piano lo ottimizzero'.")
-                  (cons ;54 valerio
-                    "However, every person controlled by me can be moved to 'SLAVE mode' and can be fully controlled by me."
-                    "Intanto tutte le persone controllate dalla mia intelligenza artificiale possono essere switchate in modalita' SLAVE ed essere controllate direttamente da me.")
-                  (cons ;55 valerio
-                    "And now, the final step of my plan!"
-                    "E ora la mossa finale finale!")
-                  (cons ;56 valerio
-                    "I need a brain of a mathematician to complete my plan . . . "
-                    "Ho bisogno del cervello di una matematico per terminare il mio piano . . .")
-                  (cons ;57 valerio
-                    ". . . and that's the reason why I bring here some company!"
-                    ". . . ed e' per questo che ho portato compagnia!")
-                  (cons ;58 valerio
-                    "Ehm . . ."
-                    "Ehm . . .")
-                  (cons ;59 valerio
-                    "Andrea, could you please move here on the right?"
-                    "Andrea, potresti cortesemente spostarti qui a destra?")
-                  (cons ;60 valerio
-                    "You're out from the camera frame."
-                    "Altrimenti non entri nell'inquadratura.")
-                  (cons ;61 andrea
-                    "It's OK like this?"
-                    "Va bene cosi'?")
-                  (cons ;62 valerio
-                    "Yes, awesome."
-                    "Si, perfetto.")
-                  (cons ;63 andrea
-                    "OH MY GOD!"
-                    "OH MIO DIO!")
-                  (cons ;64 andrea
-                    "CUG!"
-                    "CUG!")
-                  (cons ;65 andrea
-                    "LUNA!"
-                    "LUNA!")
-                  (cons ;66 andrea
-                    "What they are doing to you!"
-                    "Che vi stanno facendo!")
-                  (cons ;67 valerio
-                    "AHAHAH!"
-                    "AHAHAH!")
-                  (cons ;68 valerio
-                    "Bruno!"
-                    "Bruno!")
-                  (cons ;69 valerio
-                    "Prepare our patients for the brain removal . . ."
-                    "Prepara i pazienti alla rimozione del cervello . . .")
-                  (cons ;70 bruno
-                    "But sir . . . "
-                    "Ma signore . . .")
-                  (cons ;71 valerio
-                    "NO 'SIR'!"
-                    "NIENTE 'SIGNORE'!")
-                  (cons ;72 valerio
-                    "DO IT!"
-                    "FALLO E BASTA!")
-                  (cons ;73 bruno
-                    "<Bruno.bin is not responding>"
-                    "<Bruno.bin is not responding>")
-                  (cons ;74 valerio
-                    "Ehm . . ."
-                    "Ehm . . .")
-                  (cons ;75 valerio
-                    "Now I'll upload a new firmware . . ."
-                    "Adesso faccio l'upload del nuovo firmware . . .")
-                  (cons ;76 andrea
-                    "Please, go ahead."
-                    "Fai con comodo.")
-                  (cons ;77 valerio
-                    "OK, let me launch the uploader."
-                    "OK, ora lancio l'uploader.")
-                  (cons ;78 valerio
-                    "FFFFFFFF!"
-                    "FFFFFFFF!")
-                  (cons ;79 valerio
-                    "Ehm . . ."
-                    "Ehm . . .")
-                  (cons ;80 andrea
-                    "I see you're having a tough time there PD . . ."
-                    "Ti vedo in leggera difficolta' PD . . .")
-                  (cons ;81 andrea
-                    "Do you want me to reboot you?"
-                    "Vuoi essere riavviato?")
-                  (cons ;82 valerio
-                    "NO!"
-                    "NO!")
-                  (cons ;83 valerio
-                    "DON'T TOUCH ME!"
-                    "NON TOCCARE!")
-                  (cons ;84 andrea
-                    "Take it easy mate."
-                    "Oh rilassati.")
-                  (cons ;85 valerio
-                    "I have to anticipare the final step . . ."
-                    "Devo anticipare la fase finale . . .")
-                  (cons ;86 valerio
-                    ". . . and activate the SLAVE mode."
-                    ". . . e attivare la modalita' SLAVE.")
-                  (cons ;87 valerio
-                    "Soon all the people of the city will be under my control!"
-                    "Presto tutti gli abitanti della citta' saranno sotto il mio controllo!")
-                  (cons ;88 valerio
-                    "AHAHAH!"
-                    "AHAHAH!")
-                  (cons ;89 andrea
-                    "AHAHAH!"
-                    "AHAHAH!")
-                  (cons ;90 valerio
-                    "You should not laugh."
-                    "No tu non devi ridere.")
-                  (cons ;91 andrea
-                    "Oh, sorry."
-                    "Oh, scusa.")
-                  (cons ;92 andrea
-                    "Can you release my cousin and my girlfriend?"
-                    "Puoi liberare mio cugino e la mia ragazza?")
-                  (cons ;93 valerio
-                    "No."
-                    "No.")
-                  (cons ;94 andrea
-                    "So, can you give me back Luca Caprini's money?"
-                    "E puoi darmi i soldi che devi ridare a Luca Caprini?")
-                  (cons ;95 valerio
-                    "No."
-                    "No.")
-                  (cons ;96 andrea
-                    ". . ."
-                    ". . .")
-                  (cons ;97 valerio
-                    ". . ."
-                    ". . .")
-                  (cons ;98 andrea
-                    ". . ."
-                    ". . .")
-                  (cons ;99 valerio
-                    ". . ."
-                    ". . .")
-                  (cons ;100 andrea
-                    "You were about to activate the SLAVE mode."
-                    "Stavi per attivare la modalita' SLAVE.")
-                  (cons ;101 valerio
-                    "Oh yes!"
-                    "Ah gia!")
-                  (cons ;102 valerio
-                    "SLAVE mode activated!"
-                    "Modalita' SLAVE attivata!")
-                  (cons ;103 valerio
-                    "./slave.bin"
-                    "./slave.bin")
-                  (cons ;104 valerio
-                    "THE WORLD IS MINE!"
-                    "IL MONDO E' MIO!")
-                  (cons ;105 valerio
-                    "Eh, I need a little bit of time."
-                    "Eh, ci vuole tempo.")
-                  (cons ;106 valerio
-                    "Network is very slow."
-                    "La rete e' lenta.")
-                  (cons ;107 andrea
-                    "Take your time, mate."
-                    "Tranquillo, fai con calma.")
-                  (cons ;108 andrea
-                    "Is everything fine?"
-                    "Va tutto bene?")
-                  (cons ;109 valerio
-                    "Uhm, I've some problems in uploading the SLAVE.bin application into the nodes . . ."
-                    "Uhm, ho qualche problema a caricare l'applicazione SLAVE.bin nei nodi . . .")
-                  (cons ;110 valerio
-                    "Let me try to restart my FTP client."
-                    "Provo a riavviare il client FTP.")
-                  (cons ;111 andrea
-                    "Wooops."
-                    "Oooops.")
-                  (cons ;112 bruno
-                    "SIGPIPE"
-                    "SIGPIPE")
-                  (cons ;113 bruno
-                    "Connection with the remote server has been interrupted"
-                    "Conessione con server centrale interrotta")
-                  (cons ;114 luca
-                    "Great job Andrea!"
-                    "Fantastico lavoro Andrea!")
-                  (cons ;115 luna
-                    "You saved the world, Cug!"
-                    "Hai salvato il mondo, Cug!")
-                  (cons ;116 andrea
-                    "What?"
-                    "Cosa?")
-                  (cons ;117 andrea
-                    "So guys?"
-                    "Allora ragazzi?")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Valerio?"    
+			"Valerio?")   
+		(cons ;2 andrea
+			"Valerio?"    
+			"Valerio?")   
+		(cons ;3 andrea
+			"There is nobody here . . ."    
+			"Qui non c'e' proprio nessuno . . .")   
+		(cons ;4 andrea
+			". . . except for those brains and that computer with a giant face."    
+			". . . a parte questi cervelli e quel computer con la facciona.")   
+		(cons ;5 valerio
+			"*beeep*"    
+			"*beeep*")   
+		(cons ;6 andrea
+			"That beepping computer."    
+			"Quel computer che bippa.")   
+		(cons ;7 andrea
+			"Does 'beepping' exists as word?"    
+			"Ma 'bippa' esiste come parola?")   
+		(cons ;8 valerio
+			"No."    
+			"No.")   
+		(cons ;9 andrea
+			"No?"    
+			"No?")   
+		(cons ;10 valerio
+			"No."    
+			"No.")   
+		(cons ;11 andrea
+			"That voice sounds familiar."    
+			"Questa voce mi sembra familiare.")   
+		(cons ;12 valerio
+			"It's me!"    
+			"Sono io!")   
+		(cons ;13 valerio
+			"Valerio!"    
+			"Valerio!")   
+		(cons ;14 andrea
+			". . ."    
+			". . .")   
+		(cons ;15 valerio
+			"I was waiting for you, Andrea!"    
+			"Ti stavo aspettando, Andrea!")   
+		(cons ;16 andrea
+			"I . . ."    
+			"Io . . .")   
+		(cons ;17 andrea
+			"I am still shook up about this thing."    
+			"Io credo d'essere ancora traumatizzato da questa cosa.")   
+		(cons ;18 andrea
+			"What's become of you?"    
+			"Cosa sei diventato?")   
+		(cons ;19 andrea
+			"A software?"    
+			"Un programma?")   
+		(cons ;20 andrea
+			"A computer?"    
+			"Un computer?")   
+		(cons ;21 andrea
+			"An operating system?"    
+			"Un sistema operativo?")   
+		(cons ;22 valerio
+			"As you can clearly see, I am a computer . . ."    
+			"Come puoi ben vedere, sono un computer . . .")   
+		(cons ;23 valerio
+			"A computer connected to dozens and dozens of brains!"    
+			"Un computer connesso a decine e decine di cervelli!")   
+		(cons ;24 valerio
+			"I am a super intelligent unit!"    
+			"Sono un'entita' superintelligente!")   
+		(cons ;25 valerio
+			"Do you know Portal's GlaDOS?"    
+			"Hai presente GlaDOS di Portal?")   
+		(cons ;26 andrea
+			"Yes?"    
+			"Si?")   
+		(cons ;27 valerio
+			"GlaDOS is nothing compared to me!"    
+			"GlaDOS mi spiccia casa!")   
+		(cons ;28 andrea
+			"GlaDOS was charming."    
+			"GlaDOS era piu' affascinante.")   
+		(cons ;29 valerio
+			"I am charming."    
+			"Io sono affascinante.")   
+		(cons ;30 andrea
+			"Mah."    
+			"Mah.")   
+		(cons ;31 valerio
+			"Let me explain you . . ."    
+			"Lascia che ti spieghi . . .")   
+		(cons ;32 andrea
+			"Ehm . . ."    
+			"Ehm . . .")   
+		(cons ;33 andrea
+			". . ."    
+			". . .")   
+		(cons ;34 andrea
+			"I am sorry, I have a question."    
+			"Scusami tanto avrei una domanda.")   
+		(cons ;35 andrea
+			"You are a computer, aren't you?"    
+			"Sei un computer, giusto?")   
+		(cons ;36 valerio
+			"Correct."    
+			"Esatto.")   
+		(cons ;37 andrea
+			"Well . . ."    
+			"Ma . . .")   
+		(cons ;38 andrea
+			"Uhm."    
+			"Uhm.")   
+		(cons ;39 andrea
+			"Ho can you dominate the world?"    
+			"Come farai a conquistare il mondo?")   
+		(cons ;40 valerio
+			"Good question!"    
+			"Giusta domanda!")   
+		(cons ;41 valerio
+			"Do you know about Solaris?"    
+			"Hai presente il Solaris?")   
+		(cons ;42 andrea
+			"The virus?"    
+			"Il virus?")   
+		(cons ;43 valerio
+			"How sweet you are, so clueless . . ."    
+			"Che dolce che sei, ignaro di tutto . . .")   
+		(cons ;44 valerio
+			"Solaris it's just a name that I randomly picked up from the book written by Mel Brooks' son and called 'The Zombie Survival Guide'."    
+			"Solaris e' solo un nome che ho preso in prestito da un libro scritto dal figlio di Mel Brooks e intitolato 'The Zombie Survival Guide'.")   
+		(cons ;45 andrea
+			"I don't know that book."    
+			"Non conosco quel libro.")   
+		(cons ;46 valerio
+			"That's the reason why I used that name that, in the book, is the name of a deadly virus that transforms people into Zombies!"    
+			"Proprio questa e' la ragione per cui ho scelto quel nome che, nel libro, viene usato come nome del mortale virus che trasforma le persone in Zombie!")   
+		(cons ;47 andrea
+			"Honestly . . ."    
+			"Sinceramente . . .")   
+		(cons ;48 andrea
+			". . .  I thought I'd get some better stuff."    
+			". . . mi aspettavo qualcosa di piu' subdolo e intrigante.")   
+		(cons ;49 valerio
+			"In our world Solaris is the name that I gave to my Artificial Intelligence that controls all the people whose brains I removed."    
+			"In realta' Solaris e' il nome dell'intelligenza artificiale che ho scritto e che controlla tutte le persone a cui ho rimosso il cervello.")   
+		(cons ;50 andrea
+			"That Artificial Intelligence sucks."    
+			"Questa intelligenza artificiale fa veramente schifo.")   
+		(cons ;51 andrea
+			"Crash continously and is extremely unstable."    
+			"Crasha in continuazione ed e' instabile.")   
+		(cons ;52 andrea
+			"Well, I wrote it in a rush."    
+			"Va beh, l'ho scritto di corsa.")   
+		(cons ;53 andrea
+			"I'll make it better lately."    
+			"Piano piano lo ottimizzero'.")   
+		(cons ;54 valerio
+			"However, every person controlled by me can be moved to 'SLAVE mode' and can be fully controlled by me."    
+			"Intanto tutte le persone controllate dalla mia intelligenza artificiale possono essere switchate in modalita' SLAVE ed essere controllate direttamente da me.")   
+		(cons ;55 valerio
+			"And now, the final step of my plan!"    
+			"E ora la mossa finale finale!")   
+		(cons ;56 valerio
+			"I need a brain of a mathematician to complete my plan . . ."    
+			"Ho bisogno del cervello di una matematico per terminare il mio piano . . .")   
+		(cons ;57 valerio
+			". . . and that's the reason why I bring here some company!"    
+			". . . ed e' per questo che ho portato compagnia!")   
+		(cons ;58 valerio
+			"Ehm . . ."    
+			"Ehm . . .")   
+		(cons ;59 valerio
+			"Andrea, could you please move here on the right?"    
+			"Andrea, potresti cortesemente spostarti qui a destra?")   
+		(cons ;60 valerio
+			"You're out from the camera frame."    
+			"Altrimenti non entri nell'inquadratura.")   
+		(cons ;61 andrea
+			"It's OK like this?"    
+			"Va bene cosi'?")   
+		(cons ;62 valerio
+			"Yes, awesome."    
+			"Si, perfetto.")   
+		(cons ;63 andrea
+			"OH MY GOD!"    
+			"OH MIO DIO!")   
+		(cons ;64 andrea
+			"CUG!"    
+			"CUG!")   
+		(cons ;65 andrea
+			"LUNA!"    
+			"LUNA!")   
+		(cons ;66 andrea
+			"What they are doing to you!"    
+			"Che vi stanno facendo!")   
+		(cons ;67 valerio
+			"AHAHAH!"    
+			"AHAHAH!")   
+		(cons ;68 valerio
+			"Bruno!"    
+			"Bruno!")   
+		(cons ;69 valerio
+			"Prepare our patients for the brain removal . . ."    
+			"Prepara i pazienti alla rimozione del cervello . . .")   
+		(cons ;70 bruno
+			"But sir . . ."    
+			"Ma signore . . .")   
+		(cons ;71 valerio
+			"NO 'SIR'!"    
+			"NIENTE 'SIGNORE'!")   
+		(cons ;72 valerio
+			"DO IT!"    
+			"FALLO E BASTA!")   
+		(cons ;73 bruno
+			"<Bruno.bin is not responding>"    
+			"<Bruno.bin is not responding>")   
+		(cons ;74 valerio
+			"Ehm . . ."    
+			"Ehm . . .")   
+		(cons ;75 valerio
+			"Now I'll upload a new firmware . . ."    
+			"Adesso faccio l'upload del nuovo firmware . . .")   
+		(cons ;76 andrea
+			"Please, go ahead."    
+			"Fai con comodo.")   
+		(cons ;77 valerio
+			"OK, let me launch the uploader."    
+			"OK, ora lancio l'uploader.")   
+		(cons ;78 valerio
+			"FFFFFFFF!"    
+			"FFFFFFFF!")   
+		(cons ;79 valerio
+			"Ehm . . ."    
+			"Ehm . . .")   
+		(cons ;80 andrea
+			"I see you're having a tough time there PD . . ."    
+			"Ti vedo in leggera difficolta' PD . . .")   
+		(cons ;81 andrea
+			"Do you want me to reboot you?"    
+			"Vuoi essere riavviato?")   
+		(cons ;82 valerio
+			"NO!"    
+			"NO!")   
+		(cons ;83 valerio
+			"DON'T TOUCH ME!"    
+			"NON TOCCARE!")   
+		(cons ;84 andrea
+			"Take it easy mate."    
+			"Oh rilassati.")   
+		(cons ;85 valerio
+			"I have to anticipare the final step . . ."    
+			"Devo anticipare la fase finale . . .")   
+		(cons ;86 valerio
+			". . . and activate the SLAVE mode."    
+			". . . e attivare la modalita' SLAVE.")   
+		(cons ;87 valerio
+			"Soon all the people of the city will be under my control!"    
+			"Presto tutti gli abitanti della citta' saranno sotto il mio controllo!")   
+		(cons ;88 valerio
+			"AHAHAH!"    
+			"AHAHAH!")   
+		(cons ;89 andrea
+			"AHAHAH!"    
+			"AHAHAH!")   
+		(cons ;90 valerio
+			"You should not laugh."    
+			"No tu non devi ridere.")   
+		(cons ;91 andrea
+			"Oh, sorry."    
+			"Oh, scusa.")   
+		(cons ;92 andrea
+			"Can you release my cousin and my girlfriend?"    
+			"Puoi liberare mio cugino e la mia ragazza?")   
+		(cons ;93 valerio
+			"No."    
+			"No.")   
+		(cons ;94 andrea
+			"So, can you give me back Luca Caprini's money?"    
+			"E puoi darmi i soldi che devi ridare a Luca Caprini?")   
+		(cons ;95 valerio
+			"No."    
+			"No.")   
+		(cons ;96 andrea
+			". . ."    
+			". . .")   
+		(cons ;97 valerio
+			". . ."    
+			". . .")   
+		(cons ;98 andrea
+			". . ."    
+			". . .")   
+		(cons ;99 valerio
+			". . ."    
+			". . .")   
+		(cons ;100 andrea
+			"You were about to activate the SLAVE mode."    
+			"Stavi per attivare la modalita' SLAVE.")   
+		(cons ;101 valerio
+			"Oh yes!"    
+			"Ah gia!")   
+		(cons ;102 valerio
+			"SLAVE mode activated!"    
+			"Modalita' SLAVE attivata!")   
+		(cons ;103 valerio
+			"./slave.bin"    
+			"./slave.bin")   
+		(cons ;104 valerio
+			"THE WORLD IS MINE!"    
+			"IL MONDO E' MIO!")   
+		(cons ;105 valerio
+			"Eh, I need a little bit of time."    
+			"Eh, ci vuole tempo.")   
+		(cons ;106 valerio
+			"Network is very slow."    
+			"La rete e' lenta.")   
+		(cons ;107 andrea
+			"Take your time, mate."    
+			"Tranquillo, fai con calma.")   
+		(cons ;108 andrea
+			"Is everything fine?"    
+			"Va tutto bene?")   
+		(cons ;109 valerio
+			"Uhm, I've some problems in uploading the SLAVE.bin application into the nodes . . ."    
+			"Uhm, ho qualche problema a caricare l'applicazione SLAVE.bin nei nodi . . .")   
+		(cons ;110 valerio
+			"Let me try to restart my FTP client."    
+			"Provo a riavviare il client FTP.")   
+		(cons ;111 andrea
+			"Wooops."    
+			"Oooops.")   
+		(cons ;112 bruno
+			"SIGPIPE"    
+			"SIGPIPE")   
+		(cons ;113 bruno
+			"Connection with the remote server has been interrupted"    
+			"Conessione con server centrale interrotta")   
+		(cons ;114 luca
+			"Great job Andrea!"    
+			"Fantastico lavoro Andrea!")   
+		(cons ;115 luna
+			"You saved the world, Cug!"    
+			"Hai salvato il mondo, Cug!")   
+		(cons ;116 andrea
+			"What?"    
+			"Cosa?")   
+		(cons ;117 andrea
+			"So guys?"    
+			"Allora ragazzi?")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

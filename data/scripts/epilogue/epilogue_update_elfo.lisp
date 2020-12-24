@@ -9,158 +9,158 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrii
-                    "MA CHE CE FREGA"
-                    "MA CHE CE FREGA")
-                  (cons ;2 caprini
-                    "MA CHE CE FREGA"
-                    "MA CHE CE FREGA")
-                  (cons ;3 yuriy
-                    "MA CHE CE FREGA"
-                    "MA CHE CE FREGA")
-                  (cons ;4 andrii
-                    "MA CHE CE M'PORTA"
-                    "MA CHE CE M'PORTA")
-                  (cons ;5 caprini
-                    "MA CHE CE M'PORTA"
-                    "MA CHE CE M'PORTA")
-                  (cons ;6 yuriy
-                    "MA CHE CE M'PORTA"
-                    "MA CHE CE M'PORTA")
-                  (cons ;7 andrii
-                    "SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!"
-                    "SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!")
-                  (cons ;8 caprini
-                    "SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!"
-                    "SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!")
-                  (cons ;9 yuriy
-                    "SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!"
-                    "SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!")
-                  (cons ;10 andrii
-                    "E NOI JE DIMMO . . ."
-                    "E NOI JE DIMMO . . .")
-                  (cons ;11 caprini
-                    "E NOI JE DIMMO . . ."
-                    "E NOI JE DIMMO . . .")
-                  (cons ;12 yuriy
-                    "E NOI JE DIMMO . . ."
-                    "E NOI JE DIMMO . . .")
-                  (cons ;13 andrii
-                    "E NOI JE FAMMO . . ."
-                    "E NOI JE FAMMO . . .")
-                  (cons ;14 caprini
-                    "E NOI JE FAMMO . . ."
-                    "E NOI JE FAMMO . . .")
-                  (cons ;15 yuriy
-                    "E NOI JE FAMMO . . ."
-                    "E NOI JE FAMMO . . .")
-                  (cons ;16 andrii
-                    "C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'"
-                    "C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'")
-                  (cons ;17 caprini
-                    "C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'"
-                    "C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'")
-                  (cons ;18 yuriy
-                    "C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'"
-                    "C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'")
-                  (cons ;19 andrii
-                    "NOI SEMO QUELLI . . ."
-                    "NOI SEMO QUELLI . . .")
-                  (cons ;20 caprini
-                    "NOI SEMO QUELLI . . ."
-                    "NOI SEMO QUELLI . . .")
-                  (cons ;21 yuriy
-                    "NOI SEMO QUELLI . . ."
-                    "NOI SEMO QUELLI . . .")
-                  (cons ;22 andrii
-                    "CHE JE RISPONDEMO 'N COROOOOOOOO"
-                    "CHE JE RISPONDEMO 'N COROOOOOOOO")
-                  (cons ;23 caprini
-                    "CHE JE RISPONDEMO 'N COROOOOOOOO"
-                    "CHE JE RISPONDEMO 'N COROOOOOOOO")
-                  (cons ;24 yuriy
-                    "CHE JE RISPONDEMO 'N COROOOOOOOO"
-                    "CHE JE RISPONDEMO 'N COROOOOOOOO")
-                  (cons ;25 andrii
-                    "E' MEJO ER VINOOOOO"
-                    "E' MEJO ER VINOOOOO")
-                  (cons ;26 caprini
-                    "E' MEJO ER VINOOOOO"
-                    "E' MEJO ER VINOOOOO")
-                  (cons ;27 yuriy
-                    "E' MEJO ER VINOOOOO"
-                    "E' MEJO ER VINOOOOO")
-                  (cons ;28 andrii
-                    "DE LI CASTELLI!"
-                    "DE LI CASTELLI!")
-                  (cons ;29 caprini
-                    "DE LI CASTELLI!"
-                    "DE LI CASTELLI!")
-                  (cons ;30 yuriy
-                    "DE LI CASTELLI!"
-                    "DE LI CASTELLI!")
-                  (cons ;31 andrii
-                    "DE QUESTA ZOZZA SOCIETAAAAAAA!"
-                    "DE QUESTA ZOZZA SOCIETAAAAAAA!")
-                  (cons ;32 caprini
-                    "DE QUESTA ZOZZA SOCIETAAAAAAA!"
-                    "DE QUESTA ZOZZA SOCIETAAAAAAA!")
-                  (cons ;33 yuriy
-                    "DE QUESTA ZOZZA SOCIETAAAAAAA!"
-                    "DE QUESTA ZOZZA SOCIETAAAAAAA!")
-                  (cons ;34 andrea
-                    "Ehy, what are you doing?"
-                    "Ehy, che state facendo?")
-                  (cons ;35 andrii
-                    "Chieshieshe."
-                    "Coshieshieshe.")
-                  (cons ;36 andrea
-                    "What?"
-                    "Cosa?")
-                  (cons ;37 andrii
-                    "I am shaying . . ."
-                    "No dico . . .")
-                  (cons ;38 andrii
-                    ". . . we are having a pharshty."
-                    ". . . festesshiamo tutti inshieme.")
-                  (cons ;39 andrea
-                    "Are you drunk?"
-                    "Ah sei ubriaco?")
-                  (cons ;40 andrii
-                    "Yes."
-                    "Si.")
-                  (cons ;41 andrea
-                    "OK."
-                    "OK.")
-                  (cons ;42 yuriy
-                    "I am drinshking to the enshd of the woooorld."
-                    "Io festesshio la fine del mooooondo.")
-                  (cons ;43 andrea
-                    "You're drinking a lot, aren't you?"
-                    "Si beve eh?")
-                  (cons ;44 yuriy
-                    "I shamh!"
-                    "Shi!")
-                  (cons ;45 andrea
-                    "Good job!"
-                    "Ma che bravi!")
-                  (cons ;46 caprini
-                    "I don't know."
-                    "Guarda non lo so.")
-                  (cons ;47 caprini
-                    "The tall guy is buying me a lots of drinks."
-                    "Quello alto offre da bere.")
-                  (cons ;48 caprini
-                    "I am drinking."
-                    "Io bevo.")
-                  (cons ;49 andrea
-                    "Amazing!"
-                    "Daje!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrii
+			"MA CHE CE FREGA"    
+			"MA CHE CE FREGA")   
+		(cons ;2 caprini
+			"MA CHE CE FREGA"    
+			"MA CHE CE FREGA")   
+		(cons ;3 yuriy
+			"MA CHE CE FREGA"    
+			"MA CHE CE FREGA")   
+		(cons ;4 andrii
+			"MA CHE CE M'PORTA"    
+			"MA CHE CE M'PORTA")   
+		(cons ;5 caprini
+			"MA CHE CE M'PORTA"    
+			"MA CHE CE M'PORTA")   
+		(cons ;6 yuriy
+			"MA CHE CE M'PORTA"    
+			"MA CHE CE M'PORTA")   
+		(cons ;7 andrii
+			"SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!"    
+			"SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!")   
+		(cons ;8 caprini
+			"SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!"    
+			"SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!")   
+		(cons ;9 yuriy
+			"SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!"    
+			"SE L'OSTE NEL VINO C'HA MESSO L'ACQUA!")   
+		(cons ;10 andrii
+			"E NOI JE DIMMO . . ."    
+			"E NOI JE DIMMO . . .")   
+		(cons ;11 caprini
+			"E NOI JE DIMMO . . ."    
+			"E NOI JE DIMMO . . .")   
+		(cons ;12 yuriy
+			"E NOI JE DIMMO . . ."    
+			"E NOI JE DIMMO . . .")   
+		(cons ;13 andrii
+			"E NOI JE FAMMO . . ."    
+			"E NOI JE FAMMO . . .")   
+		(cons ;14 caprini
+			"E NOI JE FAMMO . . ."    
+			"E NOI JE FAMMO . . .")   
+		(cons ;15 yuriy
+			"E NOI JE FAMMO . . ."    
+			"E NOI JE FAMMO . . .")   
+		(cons ;16 andrii
+			"C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'"    
+			"C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'")   
+		(cons ;17 caprini
+			"C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'"    
+			"C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'")   
+		(cons ;18 yuriy
+			"C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'"    
+			"C'HAI MESSO L'ACQUA E NUN TE PAGAMO MA PERO'")   
+		(cons ;19 andrii
+			"NOI SEMO QUELLI . . ."    
+			"NOI SEMO QUELLI . . .")   
+		(cons ;20 caprini
+			"NOI SEMO QUELLI . . ."    
+			"NOI SEMO QUELLI . . .")   
+		(cons ;21 yuriy
+			"NOI SEMO QUELLI . . ."    
+			"NOI SEMO QUELLI . . .")   
+		(cons ;22 andrii
+			"CHE JE RISPONDEMO 'N COROOOOOOOO"    
+			"CHE JE RISPONDEMO 'N COROOOOOOOO")   
+		(cons ;23 caprini
+			"CHE JE RISPONDEMO 'N COROOOOOOOO"    
+			"CHE JE RISPONDEMO 'N COROOOOOOOO")   
+		(cons ;24 yuriy
+			"CHE JE RISPONDEMO 'N COROOOOOOOO"    
+			"CHE JE RISPONDEMO 'N COROOOOOOOO")   
+		(cons ;25 andrii
+			"E' MEJO ER VINOOOOO"    
+			"E' MEJO ER VINOOOOO")   
+		(cons ;26 caprini
+			"E' MEJO ER VINOOOOO"    
+			"E' MEJO ER VINOOOOO")   
+		(cons ;27 yuriy
+			"E' MEJO ER VINOOOOO"    
+			"E' MEJO ER VINOOOOO")   
+		(cons ;28 andrii
+			"DE LI CASTELLI!"    
+			"DE LI CASTELLI!")   
+		(cons ;29 caprini
+			"DE LI CASTELLI!"    
+			"DE LI CASTELLI!")   
+		(cons ;30 yuriy
+			"DE LI CASTELLI!"    
+			"DE LI CASTELLI!")   
+		(cons ;31 andrii
+			"DE QUESTA ZOZZA SOCIETAAAAAAA!"    
+			"DE QUESTA ZOZZA SOCIETAAAAAAA!")   
+		(cons ;32 caprini
+			"DE QUESTA ZOZZA SOCIETAAAAAAA!"    
+			"DE QUESTA ZOZZA SOCIETAAAAAAA!")   
+		(cons ;33 yuriy
+			"DE QUESTA ZOZZA SOCIETAAAAAAA!"    
+			"DE QUESTA ZOZZA SOCIETAAAAAAA!")   
+		(cons ;34 andrea
+			"Ehy, what are you doing?"    
+			"Ehy, che state facendo?")   
+		(cons ;35 andrii
+			"Chieshieshe."    
+			"Coshieshieshe.")   
+		(cons ;36 andrea
+			"What?"    
+			"Cosa?")   
+		(cons ;37 andrii
+			"I am shaying . . ."    
+			"No dico . . .")   
+		(cons ;38 andrii
+			". . . we are having a pharshty."    
+			". . . festesshiamo tutti inshieme.")   
+		(cons ;39 andrea
+			"Are you drunk?"    
+			"Ah sei ubriaco?")   
+		(cons ;40 andrii
+			"Yes."    
+			"Si.")   
+		(cons ;41 andrea
+			"OK."    
+			"OK.")   
+		(cons ;42 yuriy
+			"I am drinshking to the enshd of the woooorld."    
+			"Io festesshio la fine del mooooondo.")   
+		(cons ;43 andrea
+			"You're drinking a lot, aren't you?"    
+			"Si beve eh?")   
+		(cons ;44 yuriy
+			"I shamh!"    
+			"Shi!")   
+		(cons ;45 andrea
+			"Good job!"    
+			"Ma che bravi!")   
+		(cons ;46 caprini
+			"I don't know."    
+			"Guarda non lo so.")   
+		(cons ;47 caprini
+			"The tall guy is buying me a lots of drinks."    
+			"Quello alto offre da bere.")   
+		(cons ;48 caprini
+			"I am drinking."    
+			"Io bevo.")   
+		(cons ;49 andrea
+			"Amazing!"    
+			"Daje!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

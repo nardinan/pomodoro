@@ -9,35 +9,35 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 gianni
-                    "This year I will run for mayor"
-                    "Quest'anno mi candido sindaco")
-                  (cons ;2 gianni
-                    "We need to clean the city from all these junkies"
-                    "Bisogna ripulire la citta' da questa gentaccia!")
-                  (cons ;3 gianni
-                    "Vote for Gianni! "
-                    "Vota Gianni!")
-                  (cons ;4 andrea
-                    "Who is Gianni?"
-                    "E chi e' Gianni?")
-                  (cons ;5 gianni
-                    "I am Gianni!"
-                    "Io sono Gianni!")
-                  (cons ;6 andrea
-                    "And is enough to write 'Gianni' on the voting card?"
-                    "E basta scrivere 'Gianni' sulla scheda?")
-                  (cons ;7 gianni
-                    "Sure!"
-                    "Certo!")
-                  (cons ;8 gianni
-                    "Everybody in town knows about me!"
-                    "Tutti mi conoscono!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 gianni
+			"This year I will run for mayor"    
+			"Quest'anno mi candido sindaco")   
+		(cons ;2 gianni
+			"We need to clean the city from all these junkies"    
+			"Bisogna ripulire la citta' da questa gentaccia!")   
+		(cons ;3 gianni
+			"Vote for Gianni!"    
+			"Vota Gianni!")   
+		(cons ;4 andrea
+			"Who is Gianni?"    
+			"E chi e' Gianni?")   
+		(cons ;5 gianni
+			"I am Gianni!"    
+			"Io sono Gianni!")   
+		(cons ;6 andrea
+			"And is enough to write 'Gianni' on the voting card?"    
+			"E basta scrivere 'Gianni' sulla scheda?")   
+		(cons ;7 gianni
+			"Sure!"    
+			"Certo!")   
+		(cons ;8 gianni
+			"Everybody in town knows about me!"    
+			"Tutti mi conoscono!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

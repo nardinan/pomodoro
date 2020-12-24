@@ -6,11 +6,11 @@
 ; Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 andrea
-                    "I need a good reason to leave the safety of my apartment"
-                    "Ho bisogno della giusta motivazione per lasciare il mio appartamento")
-                  nil
-                  ))
+		(cons ;0 andrea
+			"I need a good reason to leave the safety of my apartment"    
+			"Ho bisogno della giusta motivazione per lasciare il mio appartamento")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

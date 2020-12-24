@@ -10,35 +10,35 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Ehy, what are you doing?"
-                    "Ehy, che state facendo?")
-                  (cons ;2 andrii
-                    "Chieshieshe."
-                    "Coshieshieshe.")
-                  (cons ;3 andrea
-                    "What?"
-                    "Cosa?")
-                  (cons ;4 andrii
-                    "I am shaying . . ."
-                    "No dico . . .")
-                  (cons ;5 andrii
-                    ". . . we are having a pharshty."
-                    ". . . festesshiamo tutti inshieme.")
-                  (cons ;6 andrea
-                    "Are you drunk?"
-                    "Ah sei ubriaco?")
-                  (cons ;7 andrii
-                    "Yes."
-                    "Si.")
-                  (cons ;8 andrea
-                    "OK."
-                    "OK.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Ehy, what are you doing?"    
+			"Ehy, che state facendo?")   
+		(cons ;2 andrii
+			"Chieshieshe."    
+			"Coshieshieshe.")   
+		(cons ;3 andrea
+			"What?"    
+			"Cosa?")   
+		(cons ;4 andrii
+			"I am shaying . . ."    
+			"No dico . . .")   
+		(cons ;5 andrii
+			". . . we are having a pharshty."    
+			". . . festesshiamo tutti inshieme.")   
+		(cons ;6 andrea
+			"Are you drunk?"    
+			"Ah sei ubriaco?")   
+		(cons ;7 andrii
+			"Yes."    
+			"Si.")   
+		(cons ;8 andrea
+			"OK."    
+			"OK.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

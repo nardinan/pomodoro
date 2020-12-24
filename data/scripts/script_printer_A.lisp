@@ -9,32 +9,32 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "A printer . . ."
-                    "Una stampante . . .")
-                  (cons ;2 andrea
-                    "The old kind of printer that works with a kind of toner that if is removed from the printer without taking the necessary precautions . . ."
-                    "Vecchio modello, di quelle che se il toner dovessere essere rimosso senza le dovute precauzioni . . .")
-                  (cons ;3 andrea
-                    ". . . it will be easier to destroy the building and rebuild it up from scratch than clean it."
-                    ". . . si fa prima a far saltare in aria l'edificio e a ricostruirlo da zero piuttosto che a pulirlo.")
-                  (cons ;4 andrea
-                    "Uhm . . ."
-                    "Uhm . . .")
-                  (cons ;5 andrea
-                    "I could use it to print the authorization from the Magnifico Rettore's computer!"
-                    "Potrei usarla per stampare l'autorizzazione dal computer del magnifico rettore!")
-                  (cons ;6 andrea
-                    "Eheheh . . ."
-                    "Eheheh . . .")
-                  (cons ;7 andrea
-                    "I'm a genius!"
-                    "Sono un genio!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"A printer . . ."    
+			"Una stampante . . .")   
+		(cons ;2 andrea
+			"The old kind of printer that works with a kind of toner that if is removed from the printer without taking the necessary precautions . . ."    
+			"Vecchio modello, di quelle che se il toner dovessere essere rimosso senza le dovute precauzioni . . .")   
+		(cons ;3 andrea
+			". . . it will be easier to destroy the building and rebuild it up from scratch than clean it."    
+			". . . si fa prima a far saltare in aria l'edificio e a ricostruirlo da zero piuttosto che a pulirlo.")   
+		(cons ;4 andrea
+			"Uhm . . ."    
+			"Uhm . . .")   
+		(cons ;5 andrea
+			"I could use it to print the authorization from the Magnifico Rettore's computer!"    
+			"Potrei usarla per stampare l'autorizzazione dal computer del magnifico rettore!")   
+		(cons ;6 andrea
+			"Eheheh . . ."    
+			"Eheheh . . .")   
+		(cons ;7 andrea
+			"I'm a genius!"    
+			"Sono un genio!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

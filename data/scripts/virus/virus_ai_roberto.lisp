@@ -9,98 +9,98 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 roberto
-                    "Oh Andrea . . ."
-                    "Oh Andrea . . .")
-                  (cons ;2 roberto
-                    ". . . are you always hanging around?"
-                    ". . . ma tu sei sempre in giro?")
-                  (cons ;3 andrea
-                    "Mah!"
-                    "Mah!")
-                  (cons ;4 andrea
-                    "You know Roberto . . ."
-                    "Ti diro' Roberto . . .")
-                  (cons ;5 andrea
-                    ". . . sometimes I just spend my time minding my own business."
-                    ". . . ogni tanto mi piace farmi i cazzi miei.")
-                  (cons ;6 andrea
-                    "You should try!"
-                    "Dovresti provarlo!")
-                  (cons ;7 roberto
-                    "You are a kidder, mate!"
-                    "Che burlone!")
-                  (cons ;8 andrea
-                    "Kidder?"
-                    "Che burlone?")
-                  (cons ;9 andrea
-                    "This sound something that Roberto would never say!"
-                    "Non e' una cosa che Roberto avrebbe detto!")
-                  (cons ;10 andrea
-                    "What is going on?"
-                    "Che succede?")
-                  (cons ;11 roberto
-                    "Are you cra - pick_answer.bin[44]: segfault at fa223b error 12"
-                    "Sei matt - pick_answer.bin[44]: segfault at fa223b error 12")
-                  (cons ;12 roberto
-                    "I am Rob - introduce.bin[44]: segfault at ba654a error 23"
-                    "Sono Ro - introduce.bin[44]: segfault at ba654a error 23")
-                  (cons ;13 andrea
-                    "Oh, you are infected, aren't you?"
-                    "Oh, sei infetto, vero?")
-                  (cons ;14 roberto
-                    "No, I am not."
-                    "No, non lo sono.")
-                  (cons ;15 andrea
-                    "Uhm, I think you are."
-                    "Uhm, credo che tu lo sia.")
-                  (cons ;16 andrea
-                    ". . ."
-                    ". . .")
-                  (cons ;17 roberto
-                    ". . ."
-                    ". . .")
-                  (cons ;18 andrea
-                    "So?"
-                    "Beh?")
-                  (cons ;19 roberto
-                    "<Roberto.bin is not responding err 0x000b>"
-                    "<Roberto.bin is not responding err 0x000b>")
-                  (cons ;20 andrea
-                    "Intriguing discussion."
-                    "Converazione intrigante . . .")
-                  (cons ;21 andrea
-                    "If I were you, I would get it checked, Roberto!"
-                    "Ma fossi in te mi farei vedere da un dottore, Roberto.")
-                  (cons ;22 roberto
-                    "Unable to compute, available data insufficient."
-                    "Impossible computare, dati disponibili insufficienti.")
-                  (cons ;23 andrea
-                    "What?"
-                    "Cosa?")
-                  (cons ;24 roberto
-                    "Does not compute."
-                    "Non computa.")
-                  (cons ;25 andrea
-                    "You are quoting Alien, aren't you?"
-                    "Ma cosa fai, citi Alien?")
-                  (cons ;26 andrea
-                    ". . ."
-                    ". . .")
-                  (cons ;27 roberto
-                    ". . ."
-                    ". . .")
-                  (cons ;28 roberto
-                    "<Roberto.bin is not responding err 0x000b>"
-                    "<Roberto.bin is not responding err 0x000b>")
-                  (cons ;29 andrea
-                    "Oh, he really does not compute."
-                    "Oh, non computa veramente.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 roberto
+			"Oh Andrea . . ."    
+			"Oh Andrea . . .")   
+		(cons ;2 roberto
+			". . . are you always hanging around?"    
+			". . . ma tu sei sempre in giro?")   
+		(cons ;3 andrea
+			"Mah!"    
+			"Mah!")   
+		(cons ;4 andrea
+			"You know Roberto . . ."    
+			"Ti diro' Roberto . . .")   
+		(cons ;5 andrea
+			". . . sometimes I just spend my time minding my own business."    
+			". . . ogni tanto mi piace farmi i cazzi miei.")   
+		(cons ;6 andrea
+			"You should try!"    
+			"Dovresti provarlo!")   
+		(cons ;7 roberto
+			"You are a kidder, mate!"    
+			"Che burlone!")   
+		(cons ;8 andrea
+			"Kidder?"    
+			"Che burlone?")   
+		(cons ;9 andrea
+			"This sound something that Roberto would never say!"    
+			"Non e' una cosa che Roberto avrebbe detto!")   
+		(cons ;10 andrea
+			"What is going on?"    
+			"Che succede?")   
+		(cons ;11 roberto
+			"Are you cra - pick_answer.bin[44]: segfault at fa223b error 12"    
+			"Sei matt - pick_answer.bin[44]: segfault at fa223b error 12")   
+		(cons ;12 roberto
+			"I am Rob - introduce.bin[44]: segfault at ba654a error 23"    
+			"Sono Ro - introduce.bin[44]: segfault at ba654a error 23")   
+		(cons ;13 andrea
+			"Oh, you are infected, aren't you?"    
+			"Oh, sei infetto, vero?")   
+		(cons ;14 roberto
+			"No, I am not."    
+			"No, non lo sono.")   
+		(cons ;15 andrea
+			"Uhm, I think you are."    
+			"Uhm, credo che tu lo sia.")   
+		(cons ;16 andrea
+			". . ."    
+			". . .")   
+		(cons ;17 roberto
+			". . ."    
+			". . .")   
+		(cons ;18 andrea
+			"So?"    
+			"Beh?")   
+		(cons ;19 roberto
+			"<Roberto.bin is not responding err 0x000b>"    
+			"<Roberto.bin is not responding err 0x000b>")   
+		(cons ;20 andrea
+			"Intriguing discussion."    
+			"Converazione intrigante . . .")   
+		(cons ;21 andrea
+			"If I were you, I would get it checked, Roberto!"    
+			"Ma fossi in te mi farei vedere da un dottore, Roberto.")   
+		(cons ;22 roberto
+			"Unable to compute, available data insufficient."    
+			"Impossible computare, dati disponibili insufficienti.")   
+		(cons ;23 andrea
+			"What?"    
+			"Cosa?")   
+		(cons ;24 roberto
+			"Does not compute."    
+			"Non computa.")   
+		(cons ;25 andrea
+			"You are quoting Alien, aren't you?"    
+			"Ma cosa fai, citi Alien?")   
+		(cons ;26 andrea
+			". . ."    
+			". . .")   
+		(cons ;27 roberto
+			". . ."    
+			". . .")   
+		(cons ;28 roberto
+			"<Roberto.bin is not responding err 0x000b>"    
+			"<Roberto.bin is not responding err 0x000b>")   
+		(cons ;29 andrea
+			"Oh, he really does not compute."    
+			"Oh, non computa veramente.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

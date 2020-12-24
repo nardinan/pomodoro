@@ -9,20 +9,20 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "My bed is unmade"
-                    "Il mio letto e' disfatto")
-                  (cons ;2 andrea
-                    "As usual"
-                    "Come al solito")
-                  (cons ;3 andrea
-                    "And I love it in this way"
-                    "E va bene cosi'")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"My bed is unmade"    
+			"Il mio letto e' disfatto")   
+		(cons ;2 andrea
+			"As usual"    
+			"Come al solito")   
+		(cons ;3 andrea
+			"And I love it in this way"    
+			"E va bene cosi'")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

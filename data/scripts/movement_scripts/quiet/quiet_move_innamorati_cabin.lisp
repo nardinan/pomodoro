@@ -5,17 +5,17 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "It's locked!"
-                    "Chiuso a chiave!")
-                  (cons ;2 andrea
-                    "I wonder what's in there!"
-                    "Mi chiedo cosa ci sia li dentro!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"It's locked!"    
+			"Chiuso a chiave!")   
+		(cons ;2 andrea
+			"I wonder what's in there!"    
+			"Mi chiedo cosa ci sia li dentro!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

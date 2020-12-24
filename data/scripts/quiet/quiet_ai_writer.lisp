@@ -9,26 +9,26 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 writer
-                    "Leave me alone!"
-                    "Lasciami in pace!")
-                  (cons ;2 writer
-                    "I am not a junkie!"
-                    "Non sono un drogato!")
-                  (cons ;3 writer
-                    "I'm just trying to create something."
-                    "Sto solo cercando di creare qualcosa.")
-                  (cons ;4 andrea
-                    "Everyone is so touchy in this city . . ."
-                    "Tutti permalosi . . .")
-                  (cons ;5 andrea
-                    "Who knows what piece of art he will draw here!"
-                    "Chissa' che capolavoro tirera' fuori!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 writer
+			"Leave me alone!"    
+			"Lasciami in pace!")   
+		(cons ;2 writer
+			"I am not a junkie!"    
+			"Non sono un drogato!")   
+		(cons ;3 writer
+			"I'm just trying to create something."    
+			"Sto solo cercando di creare qualcosa.")   
+		(cons ;4 andrea
+			"Everyone is so touchy in this city . . ."    
+			"Tutti permalosi . . .")   
+		(cons ;5 andrea
+			"Who knows what piece of art he will draw here!"    
+			"Chissa' che capolavoro tirera' fuori!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

@@ -9,20 +9,20 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 valerio
-                    "Eh, I need a little bit of time."
-                    "Eh, ci vuole tempo.")
-                  (cons ;2 valerio
-                    "Network is very slow."
-                    "La rete e' lenta.")
-                  (cons ;3 andrea
-                    "Take your time, mate."
-                    "Tranquillo, fai con calma.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 valerio
+			"Eh, I need a little bit of time."    
+			"Eh, ci vuole tempo.")   
+		(cons ;2 valerio
+			"Network is very slow."    
+			"La rete e' lenta.")   
+		(cons ;3 andrea
+			"Take your time, mate."    
+			"Tranquillo, fai con calma.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

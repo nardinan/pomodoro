@@ -9,128 +9,128 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrii
-                    "There's nothing better to look at the people! "
-                    "Non c'e' nulla di meglio che guardare la gente!")
-                  (cons ;2 yuriy
-                    "Maybe eating while you look at the people!"
-                    "Forse mangiare mentre guardi la gente!")
-                  (cons ;3 andrea
-                    "Coding at home, no?"
-                    "Stare a casa a programmare no?")
-                  (cons ;4 andrea
-                    "Considering the current situation, stay home is always positive!"
-                    "Considerando la situazione attuale poi, stare a casa e' sempre meglio!")
-                  (cons ;5 andrii
-                    "A bad situation that could have been avoided . . ."
-                    "Una situazione che magari si sarebbe potuta evitare . . .")
-                  (cons ;6 andrii
-                    ". . . right, Yuriy?"
-                    ". . . vero Yuriy?")
-                  (cons ;7 andrii
-                    "Ahahah!"
-                    "Ahahah!")
-                  (cons ;8 yuriy
-                    "Ahahah!"
-                    "Ahahah!")
-                  (cons ;9 andrea
-                    "What are you laughing? "
-                    "Ma che ridete?")
-                  (cons ;10 andrii
-                    "If only someone had done things in a better way, maybe today could have been a day like the others . . ."
-                    "Se qualcuno avesse fatto le cose con criterio magari oggi sarebbe potuto essere un giorno come gli altri . . .")
-                  (cons ;11 andrii
-                    ". . . right, Yuriy?"
-                    ". . . vero Yuriy?")
-                  (cons ;12 andrii
-                    "Ahahah!"
-                    "Ahahah!")
-                  (cons ;13 yuriy
-                    "Ahahah!"
-                    "Ahahah!")
-                  (cons ;14 yuriy
-                    "Wait, are you implying I am responsible for this?"
-                    "Aspetta, stai dicendo che sono stato io?")
-                  (cons ;15 andrea
-                    "I beg your pardon?"
-                    "Scusate, ma che e' 'sta storia?")
-                  (cons ;16 andrii
-                    "Just pretend that nothing happened."
-                    "Niente niente, facciamo finta di niente.")
-                  (cons ;17 yuriy
-                    "Now you have to talk!"
-                    "Eh no, ora parli!")
-                  (cons ;18 yuriy
-                    "If you have a problem with me, just say it!"
-                    "Se hai un problema con me, me lo dici subito!")
-                  (cons ;19 andrea
-                    "What's up, guys?"
-                    "Ma che state dicendo?")
-                  (cons ;20 andrea
-                    "Are you drunk?"
-                    "Avete bevuto?")
-                  (cons ;21 andrii
-                    "I will be short . . . "
-                    "Saro' breve . . .")
-                  (cons ;22 andrii
-                    "Somebody generated an hole in the fabric of space and time . . ."
-                    "Qualcuno potrebbe aver generato un buco nel tessuto spazio temporale . . .")
-                  (cons ;23 andrii
-                    ". . . changing the natural course of history."
-                    ". . . cambiando il naturale corso della storia.")
-                  (cons ;24 andrea
-                    "So, you are telling me that if the history wasn't modified . . ."
-                    "Quindi mi stai dicendo che se la storia non fosse stata modificata . . .")
-                  (cons ;25 andrea
-                    ". . . today could have been a day like the others?"
-                    ". . . oggi sarebbe un giorno come gli altri?")
-                  (cons ;26 andrii
-                    "Possible."
-                    "Possibile.")
-                  (cons ;27 andrea
-                    "Who changed it?"
-                    "E chi l'ha cambiata?")
-                  (cons ;28 andrii
-                    "I have no idea . . ."
-                    "Io proprio non saprei . . .")
-                  (cons ;29 andrii
-                    "Yuriy, who changed it?"
-                    "Yuriy, chi ha cambiato la storia?")
-                  (cons ;30 yuriy
-                    "Asshole!"
-                    "Bastardo!")
-                  (cons ;31 yuriy
-                    "It's your fault if we are in this mess!"
-                    "E' solo colpa tua se siamo in questo casino!")
-                  (cons ;32 andrii
-                    "You fucker!"
-                    "Ma che dici?")
-                  (cons ;33 andrii
-                    "You begged me to disable the security grids . . ."
-                    "Tu mi hai pregato di disabilitare le griglie di sicurezza . . ")
-                  (cons ;34 yuriy
-                    "I asked only if you knew how to do it!"
-                    "Io ti ho solo chiesto se sapevi come farlo!")
-                  (cons ;35 andrii
-                    ". . . and you increased the energy of the LHC to 14TeV!"
-                    ". . . e poi hai tirato su il LHC a 14TeV!")
-                  (cons ;36 yuriy
-                    "You were the one that wanted to change the history!"
-                    "Tu eri quello che voleva cambiare le storia!")
-                  (cons ;37 andrii
-                    "I was talking metaphorically, arsehole!"
-                    "Nel senso metaforico del termine stupido ritardato!")
-                  (cons ;38 yuriy
-                    "Is impossible to understand you . . ."
-                    "Non si capisce niente di quello che dici . . .")
-                  (cons ;39 yuriy
-                    ". . . and you were responsible for the experiment!"
-                    ". . . eri tu a dover tenere sotto controllo l'esperimento!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrii
+			"There's nothing better to look at the people!"    
+			"Non c'e' nulla di meglio che guardare la gente!")   
+		(cons ;2 yuriy
+			"Maybe eating while you look at the people!"    
+			"Forse mangiare mentre guardi la gente!")   
+		(cons ;3 andrea
+			"Coding at home, no?"    
+			"Stare a casa a programmare no?")   
+		(cons ;4 andrea
+			"Considering the current situation, stay home is always positive!"    
+			"Considerando la situazione attuale poi, stare a casa e' sempre meglio!")   
+		(cons ;5 andrii
+			"A bad situation that could have been avoided . . ."    
+			"Una situazione che magari si sarebbe potuta evitare . . .")   
+		(cons ;6 andrii
+			". . . right, Yuriy?"    
+			". . . vero Yuriy?")   
+		(cons ;7 andrii
+			"Ahahah!"    
+			"Ahahah!")   
+		(cons ;8 yuriy
+			"Ahahah!"    
+			"Ahahah!")   
+		(cons ;9 andrea
+			"What are you laughing?"    
+			"Ma che ridete?")   
+		(cons ;10 andrii
+			"If only someone had done things in a better way, maybe today could have been a day like the others . . ."    
+			"Se qualcuno avesse fatto le cose con criterio magari oggi sarebbe potuto essere un giorno come gli altri . . .")   
+		(cons ;11 andrii
+			". . . right, Yuriy?"    
+			". . . vero Yuriy?")   
+		(cons ;12 andrii
+			"Ahahah!"    
+			"Ahahah!")   
+		(cons ;13 yuriy
+			"Ahahah!"    
+			"Ahahah!")   
+		(cons ;14 yuriy
+			"Wait, are you implying I am responsible for this?"    
+			"Aspetta, stai dicendo che sono stato io?")   
+		(cons ;15 andrea
+			"I beg your pardon?"    
+			"Scusate, ma che e' 'sta storia?")   
+		(cons ;16 andrii
+			"Just pretend that nothing happened."    
+			"Niente niente, facciamo finta di niente.")   
+		(cons ;17 yuriy
+			"Now you have to talk!"    
+			"Eh no, ora parli!")   
+		(cons ;18 yuriy
+			"If you have a problem with me, just say it!"    
+			"Se hai un problema con me, me lo dici subito!")   
+		(cons ;19 andrea
+			"What's up, guys?"    
+			"Ma che state dicendo?")   
+		(cons ;20 andrea
+			"Are you drunk?"    
+			"Avete bevuto?")   
+		(cons ;21 andrii
+			"I will be short . . ."    
+			"Saro' breve . . .")   
+		(cons ;22 andrii
+			"Somebody generated an hole in the fabric of space and time . . ."    
+			"Qualcuno potrebbe aver generato un buco nel tessuto spazio temporale . . .")   
+		(cons ;23 andrii
+			". . . changing the natural course of history."    
+			". . . cambiando il naturale corso della storia.")   
+		(cons ;24 andrea
+			"So, you are telling me that if the history wasn't modified . . ."    
+			"Quindi mi stai dicendo che se la storia non fosse stata modificata . . .")   
+		(cons ;25 andrea
+			". . . today could have been a day like the others?"    
+			". . . oggi sarebbe un giorno come gli altri?")   
+		(cons ;26 andrii
+			"Possible."    
+			"Possibile.")   
+		(cons ;27 andrea
+			"Who changed it?"    
+			"E chi l'ha cambiata?")   
+		(cons ;28 andrii
+			"I have no idea . . ."    
+			"Io proprio non saprei . . .")   
+		(cons ;29 andrii
+			"Yuriy, who changed it?"    
+			"Yuriy, chi ha cambiato la storia?")   
+		(cons ;30 yuriy
+			"Asshole!"    
+			"Bastardo!")   
+		(cons ;31 yuriy
+			"It's your fault if we are in this mess!"    
+			"E' solo colpa tua se siamo in questo casino!")   
+		(cons ;32 andrii
+			"You fucker!"    
+			"Ma che dici?")   
+		(cons ;33 andrii
+			"You begged me to disable the security grids . . ."    
+			"Tu mi hai pregato di disabilitare le griglie di sicurezza . .")   
+		(cons ;34 yuriy
+			"I asked only if you knew how to do it!"    
+			"Io ti ho solo chiesto se sapevi come farlo!")   
+		(cons ;35 andrii
+			". . . and you increased the energy of the LHC to 14TeV!"    
+			". . . e poi hai tirato su il LHC a 14TeV!")   
+		(cons ;36 yuriy
+			"You were the one that wanted to change the history!"    
+			"Tu eri quello che voleva cambiare le storia!")   
+		(cons ;37 andrii
+			"I was talking metaphorically, arsehole!"    
+			"Nel senso metaforico del termine stupido ritardato!")   
+		(cons ;38 yuriy
+			"Is impossible to understand you . . ."    
+			"Non si capisce niente di quello che dici . . .")   
+		(cons ;39 yuriy
+			". . . and you were responsible for the experiment!"    
+			". . . eri tu a dover tenere sotto controllo l'esperimento!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

@@ -9,71 +9,71 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 technician
-                    "Oh god . . ."
-                    "Oddio . . .")
-                  (cons ;2 technician
-                    ". . . what did you put inside that . . ."
-                    ". . . ma che c'era in quel . . .")
-                  (cons ;3 technician
-                    ". . . COCKTAIL."
-                    ". . . COCKTAIL.")
-                  (cons ;4 technician
-                    "I . . ."
-                    "Io . . .")
-                  (cons ;5 technician
-                    "Everything is so strange."
-                    "Io vedo tutto strano.")
-                  (cons ;6 technician
-                    "Everything is so bad!"
-                    "Io vedo tutto male!")
-                  (cons ;7 technician
-                    "What what what?"
-                    "Cosa cosa cosa?!")
-                  (cons ;8 andrea
-                    "Uh?"
-                    "Eh?")
-                  (cons ;9 technician
-                    "What did you just say?"
-                    "Cosa hai detto?")
-                  (cons ;10 andrea
-                    "I didn't say anything!"
-                    "Io non ho detto niente!")
-                  (cons ;11 technician
-                    "Eeeeeeeh, come on!"
-                    "Eeeeeeh, come no!")
-                  (cons ;12 technician
-                    "You said a lot of stuff."
-                    "Tu hai detto un sacco di cose.")
-                  (cons ;13 technician
-                    "You're a funny person!"
-                    "Sei una persona simpatica!")
-                  (cons ;14 andrea
-                    "Hey, thanks!"
-                    "Hey grazie!")
-                  (cons ;15 andrea
-                    "Can I have the key of the ENEL's cabin in Viale Innamorati now?"
-                    "Mi daresti la chiave della cabina ENEL di Viale Innamorati ora?")
-                  (cons ;16 technician
-                    "Sure, I'll put them into your beard."
-                    "Certo, te l'appendo sulla barba.")
-                  (cons ;17 andrea
-                    "Eh?"
-                    "Eh?")
-                  (cons ;18 technician
-                    "Your scruffy beard from years of . . ."
-                    "Sulla barba incolta da anni di . . .")
-                  (cons ;19 technician
-                    ". . . missed shaving."
-                    ". . . rasature mancate.")
-                  (cons ;20 andrea
-                    "Thankfully they were only expired sleeping pills."
-                    "Per fortuna erano solo sonniferi scaduti . . .")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 technician
+			"Oh god . . ."    
+			"Oddio . . .")   
+		(cons ;2 technician
+			". . . what did you put inside that . . ."    
+			". . . ma che c'era in quel . . .")   
+		(cons ;3 technician
+			". . . COCKTAIL."    
+			". . . COCKTAIL.")   
+		(cons ;4 technician
+			"I . . ."    
+			"Io . . .")   
+		(cons ;5 technician
+			"Everything is so strange."    
+			"Io vedo tutto strano.")   
+		(cons ;6 technician
+			"Everything is so bad!"    
+			"Io vedo tutto male!")   
+		(cons ;7 technician
+			"What what what?"    
+			"Cosa cosa cosa?!")   
+		(cons ;8 andrea
+			"Uh?"    
+			"Eh?")   
+		(cons ;9 technician
+			"What did you just say?"    
+			"Cosa hai detto?")   
+		(cons ;10 andrea
+			"I didn't say anything!"    
+			"Io non ho detto niente!")   
+		(cons ;11 technician
+			"Eeeeeeeh, come on!"    
+			"Eeeeeeh, come no!")   
+		(cons ;12 technician
+			"You said a lot of stuff."    
+			"Tu hai detto un sacco di cose.")   
+		(cons ;13 technician
+			"You're a funny person!"    
+			"Sei una persona simpatica!")   
+		(cons ;14 andrea
+			"Hey, thanks!"    
+			"Hey grazie!")   
+		(cons ;15 andrea
+			"Can I have the key of the ENEL's cabin in Viale Innamorati now?"    
+			"Mi daresti la chiave della cabina ENEL di Viale Innamorati ora?")   
+		(cons ;16 technician
+			"Sure, I'll put them into your beard."    
+			"Certo, te l'appendo sulla barba.")   
+		(cons ;17 andrea
+			"Eh?"    
+			"Eh?")   
+		(cons ;18 technician
+			"Your scruffy beard from years of . . ."    
+			"Sulla barba incolta da anni di . . .")   
+		(cons ;19 technician
+			". . . missed shaving."    
+			". . . rasature mancate.")   
+		(cons ;20 andrea
+			"Thankfully they were only expired sleeping pills."    
+			"Per fortuna erano solo sonniferi scaduti . . .")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

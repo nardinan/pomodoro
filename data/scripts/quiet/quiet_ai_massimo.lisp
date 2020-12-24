@@ -9,20 +9,20 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 massimo
-                    "People like you should be locked up in a Community Center!"
-                    "Gente come te, dovrebbe essere rinchiusa in un centro sociale!")
-                  (cons ;2 andrea
-                    "I am just slightly addicted to pizza . . ."
-                    "Ho solo una lieve dipendenza da pizza . . .")
-                  (cons ;3 andrea
-                    "But I am working on it!"
-                    "Ma ci sto lavorando!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 massimo
+			"People like you should be locked up in a Community Center!"    
+			"Gente come te, dovrebbe essere rinchiusa in un centro sociale!")   
+		(cons ;2 andrea
+			"I am just slightly addicted to pizza . . ."    
+			"Ho solo una lieve dipendenza da pizza . . .")   
+		(cons ;3 andrea
+			"But I am working on it!"    
+			"Ma ci sto lavorando!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

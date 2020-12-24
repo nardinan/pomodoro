@@ -9,17 +9,17 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 bistoni
-                    "*beep*"
-                    "*beep*")
-                  (cons ;2 andrea
-                    "Unrecoverable."
-                    "Irrecuperabile.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 bistoni
+			"*beep*"    
+			"*beep*")   
+		(cons ;2 andrea
+			"Unrecoverable."    
+			"Irrecuperabile.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

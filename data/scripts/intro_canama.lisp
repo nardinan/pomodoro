@@ -9,41 +9,41 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "Hello, my name is Andrea and I am a student here, at the University of Perugia"
-                    "Ciao! Io mi chiamo Andrea e sono uno studente dell'Unversita' degli studi di Perugia")
-                  (cons ;2 andrea
-                    "This is my apartment"
-                    "Questo e' l'appartamento dove vivo")
-                  (cons ;3 andrea
-                    "I will get my master degree in Computer Science very soon!"
-                    "Frequento il corso di informatica e sono prossimo alla mia laurea magistrale!")
-                  (cons ;4 andrea
-                    "I live here with my cousin, Luca"
-                    "Vivo qui con mio cugino, Luca")
-                  (cons ;5 andrea
-                    "We call him 'Cug'"
-                    "Lo chiamiamo 'Cug'")
-                  (cons ;6 andrea
-                    "Because he is my cousin, you know"
-                    "Perche' e' mio cugino, sapete")
-                  (cons ;7 andrea
-                    "He is a student at UniPG's Department of Mathematics"
-                    "E' uno studente del Dipartimento di Matematica dell'UniPG")
-                  (cons ;8 andrea
-                    "He is even one of the two reasons why I was able to survive so far"
-                    "E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")
-                  (cons ;9 andrea
-                    "This is his room"
-                    "Questa e' la sua stanza")
-                  (cons ;10 andrea
-                    "And you know what? It's clean."
-                    "E sapete cosa? E' pulita.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"Hello, my name is Andrea and I am a student here, at the University of Perugia"    
+			"Ciao! Io mi chiamo Andrea e sono uno studente dell'Unversita' degli studi di Perugia")   
+		(cons ;2 andrea
+			"This is my apartment"    
+			"Questo e' l'appartamento dove vivo")   
+		(cons ;3 andrea
+			"I will get my master degree in Computer Science very soon!"    
+			"Frequento il corso di informatica e sono prossimo alla mia laurea magistrale!")   
+		(cons ;4 andrea
+			"I live here with my cousin, Luca"    
+			"Vivo qui con mio cugino, Luca")   
+		(cons ;5 andrea
+			"We call him 'Cug'"    
+			"Lo chiamiamo 'Cug'")   
+		(cons ;6 andrea
+			"Because he is my cousin, you know"    
+			"Perche' e' mio cugino, sapete")   
+		(cons ;7 andrea
+			"He is a student at UniPG's Department of Mathematics"    
+			"E' uno studente del Dipartimento di Matematica dell'UniPG")   
+		(cons ;8 andrea
+			"He is even one of the two reasons why I was able to survive so far"    
+			"E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")   
+		(cons ;9 andrea
+			"This is his room"    
+			"Questa e' la sua stanza")   
+		(cons ;10 andrea
+			"And you know what? It's clean."    
+			"E sapete cosa? E' pulita.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

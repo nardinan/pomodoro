@@ -9,32 +9,32 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrii
-                    "You begged me to disable the security grids . . ."
-                    "Tu mi hai pregato di disabilitare le griglie di sicurezza . . ")
-                  (cons ;2 yuriy
-                    "I asked only if you knew how to do it!"
-                    "Io ti ho solo chiesto se sapevi come farlo!")
-                  (cons ;3 andrii
-                    ". . . and you increased the energy of the LHC to 14TeV!"
-                    ". . . e poi hai tirato su il LHC a 14TeV!")
-                  (cons ;4 yuriy
-                    "You were the one that wanted to change the history!"
-                    "Tu eri quello che voleva cambiare le storia!")
-                  (cons ;5 andrii
-                    "I was talking metaphorically, arsehole!"
-                    "Nel senso metaforico del termine stupido ritardato!")
-                  (cons ;6 yuriy
-                    "Is impossible to understand you . . ."
-                    "Non si capisce niente di quello che dici . . .")
-                  (cons ;7 yuriy
-                    ". . . and you were responsible for the experiment!"
-                    ". . . eri tu a dover tenere sotto controllo l'esperimento!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrii
+			"You begged me to disable the security grids . . ."    
+			"Tu mi hai pregato di disabilitare le griglie di sicurezza . .")   
+		(cons ;2 yuriy
+			"I asked only if you knew how to do it!"    
+			"Io ti ho solo chiesto se sapevi come farlo!")   
+		(cons ;3 andrii
+			". . . and you increased the energy of the LHC to 14TeV!"    
+			". . . e poi hai tirato su il LHC a 14TeV!")   
+		(cons ;4 yuriy
+			"You were the one that wanted to change the history!"    
+			"Tu eri quello che voleva cambiare le storia!")   
+		(cons ;5 andrii
+			"I was talking metaphorically, arsehole!"    
+			"Nel senso metaforico del termine stupido ritardato!")   
+		(cons ;6 yuriy
+			"Is impossible to understand you . . ."    
+			"Non si capisce niente di quello che dici . . .")   
+		(cons ;7 yuriy
+			". . . and you were responsible for the experiment!"    
+			". . . eri tu a dover tenere sotto controllo l'esperimento!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

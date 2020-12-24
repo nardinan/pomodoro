@@ -9,50 +9,50 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 ticket_inspector
-                    "Ticket and arm, please."
-                    "Biglietto e braccio, per favore.")
-                  (cons ;2 andrea
-                    "Again?"
-                    "Ancora?")
-                  (cons ;3 ticket_inspector
-                    "Again?"
-                    "Ancora?")
-                  (cons ;4 andrea
-                    "Again, what?"
-                    "Ancora cosa?")
-                  (cons ;5 ticket_inspector
-                    "Ticket and arm, please."
-                    "Biglietto e braccio, per favore.")
-                  (cons ;6 ticket_inspector
-                    "Ticket and ar - introduction.bin[26]: segfault at 82ff1a error 5"
-                    "Biglietto e brac - introduction.bin[26]: segfault at 82ff1a error 5")
-                  (cons ;7 andrea
-                    "Oh no . . ."
-                    "Oh no . . .")
-                  (cons ;8 andrea
-                    ". . . you're infected!"
-                    ". . . sei infetto!")
-                  (cons ;9 ticket_inspector
-                    "Are you kidding?"
-                    "Stai scherzando?")
-                  (cons ;10 ticket_inspector
-                    "I am not infected!"
-                    "Non sono infetto!")
-                  (cons ;11 ticket_inspector
-                    "I am healthy."
-                    "Sono perfettamente sano.")
-                  (cons ;12 andrea
-                    "Sure, sure."
-                    "Certo, certo.")
-                  (cons ;13 ticket_inspector
-                    "<Giaffro.bin is not responding err 0x011c>"
-                    "<Giaffro.bin is not responding err 0x011c>")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 ticket_inspector
+			"Ticket and arm, please."    
+			"Biglietto e braccio, per favore.")   
+		(cons ;2 andrea
+			"Again?"    
+			"Ancora?")   
+		(cons ;3 ticket_inspector
+			"Again?"    
+			"Ancora?")   
+		(cons ;4 andrea
+			"Again, what?"    
+			"Ancora cosa?")   
+		(cons ;5 ticket_inspector
+			"Ticket and arm, please."    
+			"Biglietto e braccio, per favore.")   
+		(cons ;6 ticket_inspector
+			"Ticket and ar - introduction.bin[26]: segfault at 82ff1a error 5"    
+			"Biglietto e brac - introduction.bin[26]: segfault at 82ff1a error 5")   
+		(cons ;7 andrea
+			"Oh no . . ."    
+			"Oh no . . .")   
+		(cons ;8 andrea
+			". . . you're infected!"    
+			". . . sei infetto!")   
+		(cons ;9 ticket_inspector
+			"Are you kidding?"    
+			"Stai scherzando?")   
+		(cons ;10 ticket_inspector
+			"I am not infected!"    
+			"Non sono infetto!")   
+		(cons ;11 ticket_inspector
+			"I am healthy."    
+			"Sono perfettamente sano.")   
+		(cons ;12 andrea
+			"Sure, sure."    
+			"Certo, certo.")   
+		(cons ;13 ticket_inspector
+			"<Giaffro.bin is not responding err 0x011c>"    
+			"<Giaffro.bin is not responding err 0x011c>")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

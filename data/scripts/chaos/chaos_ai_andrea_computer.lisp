@@ -9,212 +9,212 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrii
-                    "Guys . . ."
-                    "Signori . . .")
-                  (cons ;2 andrii
-                    ". . . I would like to propose a toast for the end of the world!"
-                    ". . . vorrei proporre un brindisi alla fine del mondo!")
-                  (cons ;3 caprini
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;4 yuriy
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;5 andrii
-                    "I would then thank our friend 'il Profeta' for his attempt to warn us . . ."
-                    "E ringraziare il nostro amico 'il Profeta' per aver provato ad avvertirci . . .")
-                  (cons ;6 andrii
-                    ". . . and for his sacrifice!"
-                    ". . . ed essere morto nel tentativo!")
-                  (cons ;7 caprini
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;8 yuriy
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;9 andrii
-                    "I would then thank . . ."
-                    "E vorrei poi ringraziare . . .")
-                  (cons ;10 caprini
-                    "Yes, we've enough of your shit."
-                    "Si ma ora hai rotto il cazzo!")
-                  (cons ;11 yuriy
-                    "True, let's drink!"
-                    "E' vero, beviamo su!")
-                  (cons ;12 andrii
-                    "What a bunch of cyka blyat!"
-                    "Che branco di cyka blyat!")
-                  (cons ;13 andrea
-                    "What's the occasion?"
-                    "Scusate, ma cosa si festeggia?")
-                  (cons ;14 andrii
-                    "We are celebrating the end of the world!"
-                    "Si festeggia la fine del mondo!")
-                  (cons ;15 andrea
-                    "The end of the world?"
-                    "Ma come la fine del mondo?")
-                  (cons ;16 caprini
-                    "What do you mean by 'the end of the world'?"
-                    "Si infatti, in che senso?")
-                  (cons ;17 andrii
-                    "You were partying with us!"
-                    "Ma tu stavi brindando con noi!")
-                  (cons ;18 caprini
-                    "No, you told me 'I'll offer you a beer' and I said yes . . ."
-                    "No, tu mi hai detto 'ti offro una birra' e io ho accettato . . .")
-                  (cons ;19 caprini
-                    ". . . but you never told me why!"
-                    ". . . ma non mi hai mai spiegato di cosa stavi parlando!")
-                  (cons ;20 andrii
-                    "Ah."
-                    "Ah.")
-                  (cons ;21 yuriy
-                    "Is it not clear for me as well . . ."
-                    "Neanche io ne sono proprio certo . . .")
-                  (cons ;22 andrii
-                    ". . ."
-                    ". . .")
-                  (cons ;23 andrii
-                    "Seems that 'il Profeta' was a resident in Perugia 2017 . . ."
-                    "Beh sembrerebbe che 'il Profeta' fosse un cittadino della Perugia del 2017 . . .")
-                  (cons ;24 andrii
-                    ". . . and he was back in time, like us, to warn us about the incoming end of the world."
-                    ". . . e che sia tornato indietro nel tempo, come noi, per avvertirci della fine del mondo.")
-                  (cons ;25 caprini
-                    "Wait wait wait . . ."
-                    "Aspetta aspetta aspetta . . .")
-                  (cons ;26 caprini
-                    "Are you from the future?"
-                    "Voi venite dal futuro?")
-                  (cons ;27 andrii
-                    "Yes."
-                    "Si.")
-                  (cons ;28 yuriy
-                    "Yes."
-                    "Si.")
-                  (cons ;29 andrea
-                    "Yes."
-                    "Si.")
-                  (cons ;30 andrii
-                    "No, you are not!"
-                    "No tu no!")
-                  (cons ;31 andrea
-                    "Oh, no I am not."
-                    "Ah no, io no.")
-                  (cons ;32 caprini
-                    "From when?"
-                    "E da che anno?")
-                  (cons ;33 andrii
-                    "From 2017."
-                    "Dal 2017.")
-                  (cons ;34 caprini
-                    "What's about 2017 Perugia?"
-                    "E che ne sara' di Perugia nel 2017?")
-                  (cons ;35 andrii
-                    "I have no idea . . ."
-                    "Non lo so . . .")
-                  (cons ;36 andrii
-                    ". . . we are from Geneva!"
-                    ". . . noi veniamo da Ginevra!")
-                  (cons ;37 andrea
-                    "I am sorry but aren't you tearing the fabric of space and time telling us these things?"
-                    "Scusate ma tipo non si rischia un collasso dello spazio tempo a raccontare 'ste cose?")
-                  (cons ;38 andrii
-                    "It doesn't matter anymore . . ."
-                    "A questo punto non importa piu' . . .")
-                  (cons ;39 andrii
-                    ". . . 'il Profeta' has been killed before he could help us . . ."
-                    ". . . 'il Profeta' e' stato ucciso prima d'avvertirci del male in arrivo . . .")
-                  (cons ;40 andrii
-                    ". . . so whatever is going on right now, cannot be stopped anymore."
-                    ". . . quindi qualsiasi cosa stia accadendo ora, non puo' essere piu' fermata.")
-                  (cons ;41 andrii
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;42 yuriy
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;43 caprini
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;44 andrea
-                    "Came on . . ."
-                    "Su su . . .")
-                  (cons ;45 andrea
-                    ". . . let's not get discouraged, okay?"
-                    ". . . non scoraggiamoci!")
-                  (cons ;46 andrea
-                    "We just need to find enough money for the electric bill!"
-                    "Si tratta solo di trovare i soldi per una bolletta.")
-                  (cons ;47 andrii
-                    ". . ."
-                    ". . .")
-                  (cons ;48 yuriy
-                    ". . ."
-                    ". . .")
-                  (cons ;49 andrea
-                    "I am sorry, do you have Magnifico Rettore's MacBook?"
-                    "Piuttosto, non e' che avete il MacBook pro del magnifico rettore?")
-                  (cons ;50 andrii
-                    "I have not . . ."
-                    "No io no . . .")
-                  (cons ;51 yuriy
-                    "Me neither . . ."
-                    "Nemmeno io . . .")
-                  (cons ;52 caprini
-                    ". . ."
-                    ". . .")
-                  (cons ;53 andrea
-                    "So?"
-                    "Beh?")
-                  (cons ;54 caprini
-                    "Well, you know . . ."
-                    "Beh, insomma . . .")
-                  (cons ;55 caprini
-                    ". . . was here, on the table of the pub and I would like to watch a video!"
-                    ". . . l'ho trovato appoggiato su un tavolino qui al pub e volevo vedere un video!")
-                  (cons ;56 andrea
-                    "OK then, can you please give it to me?"
-                    "Va bene, ora puoi restituirmelo?")
-                  (cons ;57 caprini
-                    "I was watching the video of the yelling goaths!"
-                    "Ma stavo guardando il video delle capre che urlano!")
-                  (cons ;58 andrii
-                    "Ahahah!"
-                    "Ahahah!")
-                  (cons ;59 yuriy
-                    "Ahahah!"
-                    "Ahahah!")
-                  (cons ;60 caprini
-                    "Take it!"
-                    "Toh, prenditelo.")
-                  (cons ;61 caprini
-                    "I don't like it."
-                    "Tanto non mi piace.")
-                  (cons ;62 andrea
-                    "OK Thanks."
-                    "OK grazie.")
-                  (cons ;63 andrii
-                    "A toss to the end of the world!"
-                    "Alla fine del mondo!")
-                  (cons ;64 andrii
-                    "To an uncertain future!"
-                    "Ad un futuro incerto!")
-                  (cons ;65 andrii
-                    "To a destiny that surely could have been avoided!"
-                    "Ad un destino che poteva essere evitato!")
-                  (cons ;66 andrii
-                    "To a friend, 'il Profeta', that sacrificed himself for us!"
-                    "Ad un amico, 'il profeta', che si e' sacrificato per aiutarci!")
-                  (cons ;67 andrii
-                    "To whatever is going on that will drive the humanity to the extinction!"
-                    "A qualsiasi cosa stia succedendo che portera' all'estinzione la razza umana!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrii
+			"Guys . . ."    
+			"Signori . . .")   
+		(cons ;2 andrii
+			". . . I would like to propose a toast for the end of the world!"    
+			". . . vorrei proporre un brindisi alla fine del mondo!")   
+		(cons ;3 caprini
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;4 yuriy
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;5 andrii
+			"I would then thank our friend 'il Profeta' for his attempt to warn us . . ."    
+			"E ringraziare il nostro amico 'il Profeta' per aver provato ad avvertirci . . .")   
+		(cons ;6 andrii
+			". . . and for his sacrifice!"    
+			". . . ed essere morto nel tentativo!")   
+		(cons ;7 caprini
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;8 yuriy
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;9 andrii
+			"I would then thank . . ."    
+			"E vorrei poi ringraziare . . .")   
+		(cons ;10 caprini
+			"Yes, we've enough of your shit."    
+			"Si ma ora hai rotto il cazzo!")   
+		(cons ;11 yuriy
+			"True, let's drink!"    
+			"E' vero, beviamo su!")   
+		(cons ;12 andrii
+			"What a bunch of cyka blyat!"    
+			"Che branco di cyka blyat!")   
+		(cons ;13 andrea
+			"What's the occasion?"    
+			"Scusate, ma cosa si festeggia?")   
+		(cons ;14 andrii
+			"We are celebrating the end of the world!"    
+			"Si festeggia la fine del mondo!")   
+		(cons ;15 andrea
+			"The end of the world?"    
+			"Ma come la fine del mondo?")   
+		(cons ;16 caprini
+			"What do you mean by 'the end of the world'?"    
+			"Si infatti, in che senso?")   
+		(cons ;17 andrii
+			"You were partying with us!"    
+			"Ma tu stavi brindando con noi!")   
+		(cons ;18 caprini
+			"No, you told me 'I'll offer you a beer' and I said yes . . ."    
+			"No, tu mi hai detto 'ti offro una birra' e io ho accettato . . .")   
+		(cons ;19 caprini
+			". . . but you never told me why!"    
+			". . . ma non mi hai mai spiegato di cosa stavi parlando!")   
+		(cons ;20 andrii
+			"Ah."    
+			"Ah.")   
+		(cons ;21 yuriy
+			"Is it not clear for me as well . . ."    
+			"Neanche io ne sono proprio certo . . .")   
+		(cons ;22 andrii
+			". . ."    
+			". . .")   
+		(cons ;23 andrii
+			"Seems that 'il Profeta' was a resident in Perugia 2017 . . ."    
+			"Beh sembrerebbe che 'il Profeta' fosse un cittadino della Perugia del 2017 . . .")   
+		(cons ;24 andrii
+			". . . and he was back in time, like us, to warn us about the incoming end of the world."    
+			". . . e che sia tornato indietro nel tempo, come noi, per avvertirci della fine del mondo.")   
+		(cons ;25 caprini
+			"Wait wait wait . . ."    
+			"Aspetta aspetta aspetta . . .")   
+		(cons ;26 caprini
+			"Are you from the future?"    
+			"Voi venite dal futuro?")   
+		(cons ;27 andrii
+			"Yes."    
+			"Si.")   
+		(cons ;28 yuriy
+			"Yes."    
+			"Si.")   
+		(cons ;29 andrea
+			"Yes."    
+			"Si.")   
+		(cons ;30 andrii
+			"No, you are not!"    
+			"No tu no!")   
+		(cons ;31 andrea
+			"Oh, no I am not."    
+			"Ah no, io no.")   
+		(cons ;32 caprini
+			"From when?"    
+			"E da che anno?")   
+		(cons ;33 andrii
+			"From 2017."    
+			"Dal 2017.")   
+		(cons ;34 caprini
+			"What's about 2017 Perugia?"    
+			"E che ne sara' di Perugia nel 2017?")   
+		(cons ;35 andrii
+			"I have no idea . . ."    
+			"Non lo so . . .")   
+		(cons ;36 andrii
+			". . . we are from Geneva!"    
+			". . . noi veniamo da Ginevra!")   
+		(cons ;37 andrea
+			"I am sorry but aren't you tearing the fabric of space and time telling us these things?"    
+			"Scusate ma tipo non si rischia un collasso dello spazio tempo a raccontare 'ste cose?")   
+		(cons ;38 andrii
+			"It doesn't matter anymore . . ."    
+			"A questo punto non importa piu' . . .")   
+		(cons ;39 andrii
+			". . . 'il Profeta' has been killed before he could help us . . ."    
+			". . . 'il Profeta' e' stato ucciso prima d'avvertirci del male in arrivo . . .")   
+		(cons ;40 andrii
+			". . . so whatever is going on right now, cannot be stopped anymore."    
+			". . . quindi qualsiasi cosa stia accadendo ora, non puo' essere piu' fermata.")   
+		(cons ;41 andrii
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;42 yuriy
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;43 caprini
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;44 andrea
+			"Came on . . ."    
+			"Su su . . .")   
+		(cons ;45 andrea
+			". . . let's not get discouraged, okay?"    
+			". . . non scoraggiamoci!")   
+		(cons ;46 andrea
+			"We just need to find enough money for the electric bill!"    
+			"Si tratta solo di trovare i soldi per una bolletta.")   
+		(cons ;47 andrii
+			". . ."    
+			". . .")   
+		(cons ;48 yuriy
+			". . ."    
+			". . .")   
+		(cons ;49 andrea
+			"I am sorry, do you have Magnifico Rettore's MacBook?"    
+			"Piuttosto, non e' che avete il MacBook pro del magnifico rettore?")   
+		(cons ;50 andrii
+			"I have not . . ."    
+			"No io no . . .")   
+		(cons ;51 yuriy
+			"Me neither . . ."    
+			"Nemmeno io . . .")   
+		(cons ;52 caprini
+			". . ."    
+			". . .")   
+		(cons ;53 andrea
+			"So?"    
+			"Beh?")   
+		(cons ;54 caprini
+			"Well, you know . . ."    
+			"Beh, insomma . . .")   
+		(cons ;55 caprini
+			". . . was here, on the table of the pub and I would like to watch a video!"    
+			". . . l'ho trovato appoggiato su un tavolino qui al pub e volevo vedere un video!")   
+		(cons ;56 andrea
+			"OK then, can you please give it to me?"    
+			"Va bene, ora puoi restituirmelo?")   
+		(cons ;57 caprini
+			"I was watching the video of the yelling goaths!"    
+			"Ma stavo guardando il video delle capre che urlano!")   
+		(cons ;58 andrii
+			"Ahahah!"    
+			"Ahahah!")   
+		(cons ;59 yuriy
+			"Ahahah!"    
+			"Ahahah!")   
+		(cons ;60 caprini
+			"Take it!"    
+			"Toh, prenditelo.")   
+		(cons ;61 caprini
+			"I don't like it."    
+			"Tanto non mi piace.")   
+		(cons ;62 andrea
+			"OK Thanks."    
+			"OK grazie.")   
+		(cons ;63 andrii
+			"A toss to the end of the world!"    
+			"Alla fine del mondo!")   
+		(cons ;64 andrii
+			"To an uncertain future!"    
+			"Ad un futuro incerto!")   
+		(cons ;65 andrii
+			"To a destiny that surely could have been avoided!"    
+			"Ad un destino che poteva essere evitato!")   
+		(cons ;66 andrii
+			"To a friend, 'il Profeta', that sacrificed himself for us!"    
+			"Ad un amico, 'il profeta', che si e' sacrificato per aiutarci!")   
+		(cons ;67 andrii
+			"To whatever is going on that will drive the humanity to the extinction!"    
+			"A qualsiasi cosa stia succedendo che portera' all'estinzione la razza umana!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

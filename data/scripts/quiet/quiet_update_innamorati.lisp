@@ -5,23 +5,23 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 marta
-                    "Look, what is this about?"
-                    "Ma si puo' sapere che ti prende?")
-                  (cons ;2 marta
-                    "I will show you 'Lost' again from the beginning to the end, eh!"
-                    "Guarda che ti faccio vedere di nuovo Lost dall'inizio alla fine, eh?")
-                  (cons ;3 marta
-                    "Please, talk to me!"
-                    "Parla, ti prego!")
-                  (cons ;4 marta
-                    "Tell me what is going on!"
-                    "Dimmi che succede!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 marta
+			"Look, what is this about?"    
+			"Ma si puo' sapere che ti prende?")   
+		(cons ;2 marta
+			"I will show you 'Lost' again from the beginning to the end, eh!"    
+			"Guarda che ti faccio vedere di nuovo Lost dall'inizio alla fine, eh?")   
+		(cons ;3 marta
+			"Please, talk to me!"    
+			"Parla, ti prego!")   
+		(cons ;4 marta
+			"Tell me what is going on!"    
+			"Dimmi che succede!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

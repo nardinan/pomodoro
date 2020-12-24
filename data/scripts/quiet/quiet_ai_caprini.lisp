@@ -9,152 +9,152 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 caprini
-                    "Stop!"
-                    "Fermati!")
-                  (cons ;2 caprini
-                    "I bet you want some money, didn't you?"
-                    "Scommetto che sei qui per i soldi.")
-                  (cons ;3 andrea
-                    "He is Luca!"
-                    "Lui e' Luca!")
-                  (cons ;4 andrea
-                    "A friend of mine and one of the game artists in Psycho Games!"
-                    "Amico e uno dei grafici storici della Psycho Games!")
-                  (cons ;5 andrea
-                    "Just like me, he is a student in the Department of Computer Science of the University of Perugia."
-                    "Anche lui studente del dipartimento di informatica dell'Universita' di Perugia.")
-                  (cons ;6 andrea
-                    "His nickname is 'Masterplan' but we call him 'Masturchief'."
-                    "Il suo nickname e' 'Masterplan' ma noi lo chiamiamo 'Masterchief'.")
-                  (cons ;7 caprini
-                    "You are the only one that call me in that way . . ."
-                    "Solo tu mi chiami cosi, stupido idiota . . .")
-                  (cons ;8 caprini
-                    ". . . and I hate that name!"
-                    ". . . e io odio quel nome!")
-                  (cons ;9 andrea
-                    "No, you like it!"
-                    "Ma no, ti piace!")
-                  (cons ;10 andrea
-                    "If I recall correctly, I met him the first time while I was . . ."
-                    "La prima volta che ci siamo conosciuti credo fosse . . .")
-                  (cons ;11 caprini
-                    "Are you crazy?"
-                    "Sei impazzito?")
-                  (cons ;12 caprini
-                    "Who you talking to?"
-                    "Con chi stai parlando?")
-                  (cons ;13 andrea
-                    "I . . ."
-                    "Io . . .")
-                  (cons ;14 andrea
-                    "Nobody."
-                    "Nessuno.")
-                  (cons ;15 caprini
-                    "Listen tuna head, did you hear what is going on?"
-                    "Senti testa di tonno, hai sentito la novita'?")
-                  (cons ;16 andrea
-                    "Uhm . . ."
-                    "Uhm . . .")
-                  (cons ;17 andrea
-                    "Are you talking about the guy that has been killed in Piazza IV Novembre?"
-                    "Parli del morto in piazza IV Novembre?")
-                  (cons ;18 caprini
-                    "No, I am talking about your apocalyptic dream that is coming true . . ."
-                    "No, parlo del tuo sogno apocalittico che sembra stia diventando realta' . . .")
-                  (cons ;19 caprini
-                    ". . . I am talking about Solaris!"
-                    ". . . Parlo di Solaris!")
-                  (cons ;20 andrea
-                    "What?!"
-                    "Cosa?!")
-                  (cons ;21 caprini
-                    "Seems that a virus has been released in the air and is contaminating the entire city of Perugia."
-                    "Sembrerebbe che un virus sia stato rilasciato nell'aria e stia lentamente contaminando tutta la citta'.")
-                  (cons ;22 caprini
-                    "They call it Solaris."
-                    "Solaris, cosi' lo chiamano.")
-                  (cons ;23 caprini
-                    "It makes people crazy!"
-                    "Rende la gente completamente pazza!")
-                  (cons ;24 andrea
-                    "WOW!"
-                    "WOW!")
-                  (cons ;25 andrea
-                    "A zombie apocalypse here?"
-                    "Un'apocalisse zombie proprio qui?")
-                  (cons ;26 caprini
-                    "Now you can finally let zombies eat your face, happy?"
-                    "Finalmente potrai farti mangiare la faccia da uno zombie, contento?")
-                  (cons ;27 andrea
-                    "That's great, but now listen . . ."
-                    "Fantastico, ma ora ascolta . . .")
-                  (cons ;28 andrea
-                    ". . . I need one hundred twenty Euros and ninety five cents."
-                    ". . . avrei bisogno di centoventi Euro e novantasette centesimi.")
-                  (cons ;29 caprini
-                    "I was right then."
-                    "Avevo ragione allora.")
-                  (cons ;30 caprini
-                    "You are looking for money, as always."
-                    "Sempre alla ricerca di soldi.")
-                  (cons ;31 caprini
-                    "You're so embarrassing."
-                    "Sei imbarazzante.")
-                  (cons ;32 caprini
-                    "However I have no money with me and I don't want to leave this place!"
-                    "Comunque non ho soldi con me e non ho intenzione di uscire da questo posto!")
-                  (cons ;33 andrea
-                    "Yes but, why?"
-                    "Perche'?")
-                  (cons ;34 caprini
-                    "Because I don't want to be infected!"
-                    "Perche' non vorrei che il virus infettasse anche me!")
-                  (cons ;35 andrea
-                    "I can go to grab your money if you want . . ."
-                    "Posso andare io a prenderti i soldi se vuoi . . .")
-                  (cons ;36 andrea
-                    ". . . so you can lend me some of them!"
-                    ". . . cosi' poi puoi prestarmeli!")
-                  (cons ;37 caprini
-                    "No pride at all, uh?"
-                    "Senza un briciolo di orgoglio eh?")
-                  (cons ;38 andrea
-                    "Pride is totally useless when they're threating to cut your power out!"
-                    "A che serve l'orgoglio quando minacciano di staccarti la corrente?")
-                  (cons ;39 caprini
-                    "Listen, I hidden the last of my cash into the ENEL's cabin in Viale Innamorati."
-                    "Senti, ho nascosto gli unici soldi che mi sono rimasti dentro la cabina dell'ENEL in viale Innamorati.")
-                  (cons ;40 caprini
-                    "If you want, you can go there an take them."
-                    "Se vuoi, puoi andare li e prenderli.")
-                  (cons ;41 caprini
-                    "For all I care, I'll grab off that money from your cold, dead and contaminated by Solaris hands."
-                    "Per quel che mi riguarda, li strappero' dal tuo freddo cadavere contaminato dal Solaris quando sarai morto.")
-                  (cons ;42 andrea
-                    "OK!"
-                    "OK!")
-                  (cons ;43 andrea
-                    "It's the greatest plan I've ever heard!"
-                    "E' un piano fantastico!")
-                  (cons ;44 andrea
-                    "Where this cabin is?"
-                    "Dov'e' questa cabina dell'ENEL?")
-                  (cons ;45 caprini
-                    "Is a green door in Viale Innamorati."
-                    "E' una porta verde in viale Innamorati.")
-                  (cons ;46 caprini
-                    "Probably, is the only green door in Viale Innamorati."
-                    "Probabilmente e' l'unica porta verde in tutto viale Innamorati.")
-                  (cons ;47 andrea
-                    "It's time to go!"
-                    "Meglio Andare!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 caprini
+			"Stop!"    
+			"Fermati!")   
+		(cons ;2 caprini
+			"I bet you want some money, didn't you?"    
+			"Scommetto che sei qui per i soldi.")   
+		(cons ;3 andrea
+			"He is Luca!"    
+			"Lui e' Luca!")   
+		(cons ;4 andrea
+			"A friend of mine and one of the game artists in Psycho Games!"    
+			"Amico e uno dei grafici storici della Psycho Games!")   
+		(cons ;5 andrea
+			"Just like me, he is a student in the Department of Computer Science of the University of Perugia."    
+			"Anche lui studente del dipartimento di informatica dell'Universita' di Perugia.")   
+		(cons ;6 andrea
+			"His nickname is 'Masterplan' but we call him 'Masturchief'."    
+			"Il suo nickname e' 'Masterplan' ma noi lo chiamiamo 'Masterchief'.")   
+		(cons ;7 caprini
+			"You are the only one that call me in that way . . ."    
+			"Solo tu mi chiami cosi, stupido idiota . . .")   
+		(cons ;8 caprini
+			". . . and I hate that name!"    
+			". . . e io odio quel nome!")   
+		(cons ;9 andrea
+			"No, you like it!"    
+			"Ma no, ti piace!")   
+		(cons ;10 andrea
+			"If I recall correctly, I met him the first time while I was . . ."    
+			"La prima volta che ci siamo conosciuti credo fosse . . .")   
+		(cons ;11 caprini
+			"Are you crazy?"    
+			"Sei impazzito?")   
+		(cons ;12 caprini
+			"Who you talking to?"    
+			"Con chi stai parlando?")   
+		(cons ;13 andrea
+			"I . . ."    
+			"Io . . .")   
+		(cons ;14 andrea
+			"Nobody."    
+			"Nessuno.")   
+		(cons ;15 caprini
+			"Listen tuna head, did you hear what is going on?"    
+			"Senti testa di tonno, hai sentito la novita'?")   
+		(cons ;16 andrea
+			"Uhm . . ."    
+			"Uhm . . .")   
+		(cons ;17 andrea
+			"Are you talking about the guy that has been killed in Piazza IV Novembre?"    
+			"Parli del morto in piazza IV Novembre?")   
+		(cons ;18 caprini
+			"No, I am talking about your apocalyptic dream that is coming true . . ."    
+			"No, parlo del tuo sogno apocalittico che sembra stia diventando realta' . . .")   
+		(cons ;19 caprini
+			". . . I am talking about Solaris!"    
+			". . . Parlo di Solaris!")   
+		(cons ;20 andrea
+			"What?!"    
+			"Cosa?!")   
+		(cons ;21 caprini
+			"Seems that a virus has been released in the air and is contaminating the entire city of Perugia."    
+			"Sembrerebbe che un virus sia stato rilasciato nell'aria e stia lentamente contaminando tutta la citta'.")   
+		(cons ;22 caprini
+			"They call it Solaris."    
+			"Solaris, cosi' lo chiamano.")   
+		(cons ;23 caprini
+			"It makes people crazy!"    
+			"Rende la gente completamente pazza!")   
+		(cons ;24 andrea
+			"WOW!"    
+			"WOW!")   
+		(cons ;25 andrea
+			"A zombie apocalypse here?"    
+			"Un'apocalisse zombie proprio qui?")   
+		(cons ;26 caprini
+			"Now you can finally let zombies eat your face, happy?"    
+			"Finalmente potrai farti mangiare la faccia da uno zombie, contento?")   
+		(cons ;27 andrea
+			"That's great, but now listen . . ."    
+			"Fantastico, ma ora ascolta . . .")   
+		(cons ;28 andrea
+			". . . I need one hundred twenty Euros and ninety five cents."    
+			". . . avrei bisogno di centoventi Euro e novantasette centesimi.")   
+		(cons ;29 caprini
+			"I was right then."    
+			"Avevo ragione allora.")   
+		(cons ;30 caprini
+			"You are looking for money, as always."    
+			"Sempre alla ricerca di soldi.")   
+		(cons ;31 caprini
+			"You're so embarrassing."    
+			"Sei imbarazzante.")   
+		(cons ;32 caprini
+			"However I have no money with me and I don't want to leave this place!"    
+			"Comunque non ho soldi con me e non ho intenzione di uscire da questo posto!")   
+		(cons ;33 andrea
+			"Yes but, why?"    
+			"Perche'?")   
+		(cons ;34 caprini
+			"Because I don't want to be infected!"    
+			"Perche' non vorrei che il virus infettasse anche me!")   
+		(cons ;35 andrea
+			"I can go to grab your money if you want . . ."    
+			"Posso andare io a prenderti i soldi se vuoi . . .")   
+		(cons ;36 andrea
+			". . . so you can lend me some of them!"    
+			". . . cosi' poi puoi prestarmeli!")   
+		(cons ;37 caprini
+			"No pride at all, uh?"    
+			"Senza un briciolo di orgoglio eh?")   
+		(cons ;38 andrea
+			"Pride is totally useless when they're threating to cut your power out!"    
+			"A che serve l'orgoglio quando minacciano di staccarti la corrente?")   
+		(cons ;39 caprini
+			"Listen, I hidden the last of my cash into the ENEL's cabin in Viale Innamorati."    
+			"Senti, ho nascosto gli unici soldi che mi sono rimasti dentro la cabina dell'ENEL in viale Innamorati.")   
+		(cons ;40 caprini
+			"If you want, you can go there an take them."    
+			"Se vuoi, puoi andare li e prenderli.")   
+		(cons ;41 caprini
+			"For all I care, I'll grab off that money from your cold, dead and contaminated by Solaris hands."    
+			"Per quel che mi riguarda, li strappero' dal tuo freddo cadavere contaminato dal Solaris quando sarai morto.")   
+		(cons ;42 andrea
+			"OK!"    
+			"OK!")   
+		(cons ;43 andrea
+			"It's the greatest plan I've ever heard!"    
+			"E' un piano fantastico!")   
+		(cons ;44 andrea
+			"Where this cabin is?"    
+			"Dov'e' questa cabina dell'ENEL?")   
+		(cons ;45 caprini
+			"Is a green door in Viale Innamorati."    
+			"E' una porta verde in viale Innamorati.")   
+		(cons ;46 caprini
+			"Probably, is the only green door in Viale Innamorati."    
+			"Probabilmente e' l'unica porta verde in tutto viale Innamorati.")   
+		(cons ;47 andrea
+			"It's time to go!"    
+			"Meglio Andare!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

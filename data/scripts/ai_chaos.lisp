@@ -7,14 +7,14 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 chaos
-                    "You should go. Backstage is not the right place for the main character"
-                    "Dovresti andare. Il retroscena non e' il posto giusto per il protagonista")
-                  )
-  )
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 chaos
+			"You should go. Backstage is not the right place for the main character"    
+			"Dovresti andare. Il retroscena non e' il posto giusto per il protagonista")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

@@ -9,59 +9,59 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 andrea
-                    "The holy remote control . . ."
-                    "Il sacro telecomando . . .")
-                  (cons ;2 andrea
-                    "Is still working, incredible!"
-                    "Incredibile che funzioni ancora.")
-                  (cons ;3 andrea
-                    "Maybe I could take the batteries for Federico from this remote control . . ."
-                    "Forse potrei prendere le batterie per Federico da questo telecomando . . .")
-                  (cons ;4 andrea
-                    ". . . but I need a screwdriver."
-                    ". . . ma ho bisogno di un cacciavite.")
-                  (cons ;5 andrea
-                    "Cug has wisely decided to protect the batteries with a screw!"
-                    "Cug ha saggiamente protetto le pile con una vite!")
-                  (cons ;6 andrea
-                    "Ah-ha!"
-                    "Ah-ha!")
-                  (cons ;7 andrea
-                    "With two shots of screwdriver . . ."
-                    "Con due semplici colpi di cacciavite . . .")
-                  (cons ;8 andrea
-                    "Maybe tree . . ."
-                    "Forse tre . . .")
-                  (cons ;9 andrea
-                    "Or four . . ."
-                    "Facciamo quattro . . .")
-                  (cons ;10 andrea
-                    "Here we go!"
-                    "Ecco!")
-                  (cons ;11 luca
-                    "You stole the remote control batteries, didn't you?"
-                    "Hai rubato le pile del telecomando?")
-                  (cons ;12 andrea
-                    ". . ."
-                    ". . .")
-                  (cons ;13 andrea
-                    "No?"
-                    "No?")
-                  (cons ;14 luca
-                    "You'd better not!"
-                    "Lo spero per te!")
-                  (cons ;15 andrea
-                    "I should go before he sees that the batteries are not there anymore."
-                    "Meglio andare via prima che se ne accorga.")
-                  (cons ;16 andrea
-                    "Is not working anymore, obviously."
-                    "Senza pile, ovviamente.")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 andrea
+			"The holy remote control . . ."    
+			"Il sacro telecomando . . .")   
+		(cons ;2 andrea
+			"Is still working, incredible!"    
+			"Incredibile che funzioni ancora.")   
+		(cons ;3 andrea
+			"Maybe I could take the batteries for Federico from this remote control . . ."    
+			"Forse potrei prendere le batterie per Federico da questo telecomando . . .")   
+		(cons ;4 andrea
+			". . . but I need a screwdriver."    
+			". . . ma ho bisogno di un cacciavite.")   
+		(cons ;5 andrea
+			"Cug has wisely decided to protect the batteries with a screw!"    
+			"Cug ha saggiamente protetto le pile con una vite!")   
+		(cons ;6 andrea
+			"Ah-ha!"    
+			"Ah-ha!")   
+		(cons ;7 andrea
+			"With two shots of screwdriver . . ."    
+			"Con due semplici colpi di cacciavite . . .")   
+		(cons ;8 andrea
+			"Maybe tree . . ."    
+			"Forse tre . . .")   
+		(cons ;9 andrea
+			"Or four . . ."    
+			"Facciamo quattro . . .")   
+		(cons ;10 andrea
+			"Here we go!"    
+			"Ecco!")   
+		(cons ;11 luca
+			"You stole the remote control batteries, didn't you?"    
+			"Hai rubato le pile del telecomando?")   
+		(cons ;12 andrea
+			". . ."    
+			". . .")   
+		(cons ;13 andrea
+			"No?"    
+			"No?")   
+		(cons ;14 luca
+			"You'd better not!"    
+			"Lo spero per te!")   
+		(cons ;15 andrea
+			"I should go before he sees that the batteries are not there anymore."    
+			"Meglio andare via prima che se ne accorga.")   
+		(cons ;16 andrea
+			"Is not working anymore, obviously."    
+			"Senza pile, ovviamente.")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

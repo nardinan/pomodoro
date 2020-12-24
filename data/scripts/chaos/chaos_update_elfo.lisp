@@ -9,32 +9,32 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 caprini
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;2 yuriy
-                    "Nazdarovya!"
-                    "Nazdarovya!")
-                  (cons ;3 andrii
-                    "A toss to the end of the world!"
-                    "Alla fine del mondo!")
-                  (cons ;4 andrii
-                    "To an uncertain future!"
-                    "Ad un futuro incerto!")
-                  (cons ;5 andrii
-                    "To a destiny that surely could have been avoided!"
-                    "Ad un destino che poteva essere evitato!")
-                  (cons ;6 andrii
-                    "To a friend, 'il Profeta', that sacrificed himself for us!"
-                    "Ad un amico, 'il profeta', che si e' sacrificato per aiutarci!")
-                  (cons ;7 andrii
-                    "To whatever is going on that will drive the humanity to the extinction!"
-                    "A qualsiasi cosa stia succedendo che portera' all'estinzione la razza umana!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 caprini
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;2 yuriy
+			"Nazdarovya!"    
+			"Nazdarovya!")   
+		(cons ;3 andrii
+			"A toss to the end of the world!"    
+			"Alla fine del mondo!")   
+		(cons ;4 andrii
+			"To an uncertain future!"    
+			"Ad un futuro incerto!")   
+		(cons ;5 andrii
+			"To a destiny that surely could have been avoided!"    
+			"Ad un destino che poteva essere evitato!")   
+		(cons ;6 andrii
+			"To a friend, 'il Profeta', that sacrificed himself for us!"    
+			"Ad un amico, 'il profeta', che si e' sacrificato per aiutarci!")   
+		(cons ;7 andrii
+			"To whatever is going on that will drive the humanity to the extinction!"    
+			"A qualsiasi cosa stia succedendo che portera' all'estinzione la razza umana!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

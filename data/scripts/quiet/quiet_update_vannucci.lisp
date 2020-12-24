@@ -9,29 +9,29 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 gianni
-                    "It's drug business and petty crime."
-                    "Tutto un problema di droga e microcriminalita'.")
-                  (cons ;2 mariano
-                    "It is impossible to go around, safely."
-                    "Adesso e' impossibile circolare in tranquillita'.")
-                  (cons ;3 gianni
-                    "The police should take care of this situation!"
-                    "La polizia qui dovrebbe impegnarsi di piu'!")
-                  (cons ;4 mariano
-                    "They should close pubs at eight in the evening!"
-                    "Dovrebbero chiudere i locali alle otto di sera!")
-                  (cons ;5 gianni
-                    "The major is not doing his job!"
-                    "Il sindaco non si sta impegnando come dovrebbe!")
-                  (cons ;6 mariano
-                    "Bad people!"
-                    "Brutta gente!")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 gianni
+			"It's drug business and petty crime."    
+			"Tutto un problema di droga e microcriminalita'.")   
+		(cons ;2 mariano
+			"It is impossible to go around, safely."    
+			"Adesso e' impossibile circolare in tranquillita'.")   
+		(cons ;3 gianni
+			"The police should take care of this situation!"    
+			"La polizia qui dovrebbe impegnarsi di piu'!")   
+		(cons ;4 mariano
+			"They should close pubs at eight in the evening!"    
+			"Dovrebbero chiudere i locali alle otto di sera!")   
+		(cons ;5 gianni
+			"The major is not doing his job!"    
+			"Il sindaco non si sta impegnando come dovrebbe!")   
+		(cons ;6 mariano
+			"Bad people!"    
+			"Brutta gente!")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

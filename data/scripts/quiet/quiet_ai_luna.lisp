@@ -9,89 +9,89 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 luna
-                    "What do you do here?"
-                    "Che ci fai da queste parti?")
-                  (cons ;2 andrea
-                    "I'm looking for some stuff"
-                    "Sto cercando cose")
-                  (cons ;3 luna
-                    "Money for a bill, I suppose!"
-                    "Soldi per una bolletta, suppongo!")
-                  (cons ;4 andrea
-                    "Don't be so melodramatic"
-                    "Non essere cosi' melodrammatica")
-                  (cons ;5 andrea
-                    "She is Luna"
-                    "Lei e' Luna")
-                  (cons ;6 andrea
-                    "She is my girlfriend"
-                    "E' la mia ragazza")
-                  (cons ;7 andrea
-                    "She is even one of the two reasons why I was able to survive so far"
-                    "E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")
-                  (cons ;8 andrea
-                    "In this precise moment of her life, she is studying and working here, at University for Foreigners of Perugia"
-                    "In questo momento della sua vita, studia e lavora part-time qui all'Universita' per Stranieri di Perugia")
-                  (cons ;9 andrea
-                    "By the way, why you're not working?"
-                    "Piuttosto, perche' non stai lavorando?")
-                  (cons ;10 luna
-                    "I need a break, too much stress and chaos in the office!"
-                    "Ho bisogno di fare un break, troppo stress e confusione!")
-                  (cons ;11 andrea
-                    "Chaos, for what?"
-                    "Confusione? Perche'? ")
-                  (cons ;12 luna
-                    "I don't know exactly, I heard something happened downtown"
-                    "Non so di preciso ma ho sentito dire che e' successo qualcosa in centro. ")
-                  (cons ;13 luna
-                    "Maybe you could go to have a look!"
-                    "Magari potresti andare a dare un'occhiata!")
-                  (cons ;14 andrea
-                    "Free pizza?"
-                    "Pizza gratis?")
-                  (cons ;15 luna
-                    "I . . ."
-                    "Io . . .")
-                  (cons ;16 luna
-                    "Are you actually asking me that?"
-                    "Ma me lo stai chiedendo seriamente?")
-                  (cons ;17 andrea
-                    "No?"
-                    "No?")
-                  (cons ;18 luna
-                    "Why don't you go instead of wasting time?"
-                    "Perche' invece di perdere tempo non vai a vedere?")
-                  (cons ;19 andrea
-                    "And why don't you go back to work?"
-                    "E perche' tu non rientri a lavoro?")
-                  (cons ;20 luna
-                    "Touche'!"
-                    "Touche'! ")
-                  (cons ;21 luna
-                    "I'm just taking a break and you are wasting my time"
-                    "Sono in pausa e tu mi stai facendo perdere tempo")
-                  (cons ;22 luna
-                    "Get off my ass!"
-                    "Via dalle palle!")
-                  (cons ;23 andrea
-                    "A reference point in my life!"
-                    "Un punto di riferimento nella mia vita!")
-                  (cons ;24 andrea
-                    "My inspiration"
-                    "La mia musa ispiratrice")
-                  (cons ;25 andrea
-                    "My reason for being"
-                    "La mia ragione d'essere")
-                  (cons ;26 andrea
-                    "Irritating"
-                    "Fastidio")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 luna
+			"What do you do here?"    
+			"Che ci fai da queste parti?")   
+		(cons ;2 andrea
+			"I'm looking for some stuff"    
+			"Sto cercando cose")   
+		(cons ;3 luna
+			"Money for a bill, I suppose!"    
+			"Soldi per una bolletta, suppongo!")   
+		(cons ;4 andrea
+			"Don't be so melodramatic"    
+			"Non essere cosi' melodrammatica")   
+		(cons ;5 andrea
+			"She is Luna"    
+			"Lei e' Luna")   
+		(cons ;6 andrea
+			"She is my girlfriend"    
+			"E' la mia ragazza")   
+		(cons ;7 andrea
+			"She is even one of the two reasons why I was able to survive so far"    
+			"E' anche uno dei due motivi per cui sono sopravvissuto fino ad ora")   
+		(cons ;8 andrea
+			"In this precise moment of her life, she is studying and working here, at University for Foreigners of Perugia"    
+			"In questo momento della sua vita, studia e lavora part-time qui all'Universita' per Stranieri di Perugia")   
+		(cons ;9 andrea
+			"By the way, why you're not working?"    
+			"Piuttosto, perche' non stai lavorando?")   
+		(cons ;10 luna
+			"I need a break, too much stress and chaos in the office!"    
+			"Ho bisogno di fare un break, troppo stress e confusione!")   
+		(cons ;11 andrea
+			"Chaos, for what?"    
+			"Confusione? Perche'?")   
+		(cons ;12 luna
+			"I don't know exactly, I heard something happened downtown"    
+			"Non so di preciso ma ho sentito dire che e' successo qualcosa in centro.")   
+		(cons ;13 luna
+			"Maybe you could go to have a look!"    
+			"Magari potresti andare a dare un'occhiata!")   
+		(cons ;14 andrea
+			"Free pizza?"    
+			"Pizza gratis?")   
+		(cons ;15 luna
+			"I . . ."    
+			"Io . . .")   
+		(cons ;16 luna
+			"Are you actually asking me that?"    
+			"Ma me lo stai chiedendo seriamente?")   
+		(cons ;17 andrea
+			"No?"    
+			"No?")   
+		(cons ;18 luna
+			"Why don't you go instead of wasting time?"    
+			"Perche' invece di perdere tempo non vai a vedere?")   
+		(cons ;19 andrea
+			"And why don't you go back to work?"    
+			"E perche' tu non rientri a lavoro?")   
+		(cons ;20 luna
+			"Touche'!"    
+			"Touche'!")   
+		(cons ;21 luna
+			"I'm just taking a break and you are wasting my time"    
+			"Sono in pausa e tu mi stai facendo perdere tempo")   
+		(cons ;22 luna
+			"Get off my ass!"    
+			"Via dalle palle!")   
+		(cons ;23 andrea
+			"A reference point in my life!"    
+			"Un punto di riferimento nella mia vita!")   
+		(cons ;24 andrea
+			"My inspiration"    
+			"La mia musa ispiratrice")   
+		(cons ;25 andrea
+			"My reason for being"    
+			"La mia ragione d'essere")   
+		(cons ;26 andrea
+			"Irritating"    
+			"Fastidio")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>

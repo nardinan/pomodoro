@@ -9,38 +9,38 @@
 ;Dialogs
 (define language (collector_get "language"))
 (define dialogs (list
-                  (cons ;0 default
-                    ""
-                    "")
-                  (cons ;1 luca
-                    "Do you need something?"
-                    "Hai bisogno di qualcosa?")
-                  (cons ;2 andrea
-                    "What do you want to eat for dinner?"
-                    "Cosa mangiamo stasera a cena?")
-                  (cons ;3 luca
-                    "Well, I was thinking about a . . ."
-                    "Pensavo a una . . .")
-                  (cons ;4 andrea
-                    "Uhm, what about a . . ."
-                    "Che ne dici di . . .")
-                  (cons ;5 andrea
-                    "Pizza?"
-                    "Pizza?")
-                  (cons ;6 luca
-                    "Pizza?"
-                    "Pizza?")
-                  (cons ;7 andrea
-                    "Can you tell me again where Luca Caprini is?"
-                    "Puoi dirmi di nuovo dove trovo Luca Caprini?")
-                  (cons ;8 luca
-                    "At 'Elfo' pub, in Priori street"
-                    "Al pub 'Elfo', in via dei Priori")
-                  (cons ;9 andrea
-                    "OK"
-                    "OK")
-                  nil
-                  ))
+		(cons ;0 default
+			""    
+			"")   
+		(cons ;1 luca
+			"Do you need something?"    
+			"Hai bisogno di qualcosa?")   
+		(cons ;2 andrea
+			"What do you want to eat for dinner?"    
+			"Cosa mangiamo stasera a cena?")   
+		(cons ;3 luca
+			"Well, I was thinking about a . . ."    
+			"Pensavo a una . . .")   
+		(cons ;4 andrea
+			"Uhm, what about a . . ."    
+			"Che ne dici di . . .")   
+		(cons ;5 andrea
+			"Pizza?"    
+			"Pizza?")   
+		(cons ;6 luca
+			"Pizza?"    
+			"Pizza?")   
+		(cons ;7 andrea
+			"Can you tell me again where Luca Caprini is?"    
+			"Puoi dirmi di nuovo dove trovo Luca Caprini?")   
+		(cons ;8 luca
+			"At 'Elfo' pub, in Priori street"    
+			"Al pub 'Elfo', in via dei Priori")   
+		(cons ;9 andrea
+			"OK"    
+			"OK")   
+		nil
+		))
 
 ;High level functions
 ;@brief: say <character> <message>
