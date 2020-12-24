@@ -11,7 +11,8 @@
 typedef enum e_extract_statuses {
   e_extract_status_read_italian,
   e_extract_status_read_english,
-  e_extract_status_ignore
+  e_extract_status_ignore,
+  e_extract_status_dump
 } e_extract_statuses;
 char *f_extract_purge(char *buffer) {
   char *result = buffer, *pointer;
@@ -160,24 +161,30 @@ int f_injector_string(const char *file) {
 }
 int f_extract_string(const char *file) {
   FILE *stream = fopen(file, "r");
-  char buffer[MAXLEN], *filtered_string, *filtered_file_name = (char *) file, *next_pointer, *filtered_character_name;
+  char buffer[MAXLEN], *filtered_string, *filtered_file_name = (char *) file, *next_pointer, *filtered_dialog_ID, *filtered_dialog_type;
   enum e_extract_statuses status = e_extract_status_ignore;
   if (stream) {
     while (!feof(stream)) {
       memset(buffer, 0, MAXLEN);
       if (fgets(buffer, MAXLEN, stream)) {
         switch (status) {
+          case e_extract_status_dump:
+            if (strstr(buffer, "},")) {
+              status = e_extract_status_ignore;
+            }
+            break;
           case e_extract_status_ignore:
-            if (strstr(buffer, "cons")) {
-              if ((filtered_character_name = strchr(buffer, ';'))) {
-                ++filtered_character_name;
-                while ((*filtered_character_name == ' ') || (isdigit(*filtered_character_name)))
-                  ++filtered_character_name;
-                if ((next_pointer = strchr(filtered_character_name, '\n')))
-                  *next_pointer = 0;
-                printf("%s|%s|", filtered_file_name, filtered_character_name);
-              } else
-                printf("%s|default|", filtered_file_name);
+            if ((strstr(buffer, "\"type\"")) && (strstr(buffer, "\"set\""))) {
+              status = e_extract_status_dump;
+            } else if (strstr(buffer, "\"ID\"")) {
+              if ((filtered_dialog_ID = strchr(buffer, ':'))) {
+                ++filtered_dialog_ID;
+                while (*filtered_dialog_ID == ' ')
+                  ++filtered_dialog_ID;
+                filtered_dialog_ID = f_extract_purge(filtered_dialog_ID);
+                printf("%s|%s|", filtered_file_name, filtered_dialog_ID);
+              }
+            } else if (strstr(buffer, "\"content\"")) {
               status = e_extract_status_read_english;
             }
             break;
